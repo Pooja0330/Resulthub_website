@@ -3,11 +3,11 @@
     "SSC official": []
   },
   "fails": {
-    "IBPS official announcements": 2,
-    "RRB Secunderabad official": 2,
-    "RRB Bhubaneswar official": 2,
-    "UPSC written results": 2,
+    "IBPS official announcements": 3,
+    "RRB Secunderabad official": 3,
+    "RRB Bhubaneswar official": 3,
+    "UPSC written results": 3,
     "SSC official": 0
   },
-  "last_run": "2026-10-14T14:34:02.897297+00:00"
+  "last_run": "2026-10-14T14:52:26.772862+00:00"
 }
