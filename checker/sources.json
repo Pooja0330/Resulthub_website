@@ -1,0 +1,87 @@
+[
+ {
+  "name": "UPSC (IAS, IPS, NDA, CDS)",
+  "cat": "Civil Services",
+  "url": "https://upsc.gov.in/"
+ },
+ {
+  "name": "SSC",
+  "cat": "SSC & Railways",
+  "url": "https://ssc.gov.in/"
+ },
+ {
+  "name": "IBPS",
+  "cat": "Banking",
+  "url": "https://www.ibps.in/"
+ },
+ {
+  "name": "RRB",
+  "cat": "SSC & Railways",
+  "url": "https://www.rrbcdg.gov.in/"
+ },
+ {
+  "name": "NTA",
+  "cat": "Entrance",
+  "url": "https://nta.ac.in/"
+ },
+ {
+  "name": "NEET UG",
+  "cat": "Entrance",
+  "url": "https://neet.nta.nic.in/"
+ },
+ {
+  "name": "JEE Main",
+  "cat": "Engineering",
+  "url": "https://jeemain.nta.nic.in/"
+ },
+ {
+  "name": "GATE",
+  "cat": "Engineering",
+  "url": "https://gate2027.iitm.ac.in/"
+ },
+ {
+  "name": "CAT",
+  "cat": "Management & Law",
+  "url": "https://iimcat.ac.in/"
+ },
+ {
+  "name": "CLAT",
+  "cat": "Management & Law",
+  "url": "https://consortiumofnlus.ac.in/"
+ },
+ {
+  "name": "ICAI (CA)",
+  "cat": "CA / CS",
+  "url": "https://www.icai.org/"
+ },
+ {
+  "name": "ICSI (CS)",
+  "cat": "CA / CS",
+  "url": "https://www.icsi.edu/"
+ },
+ {
+  "name": "RBI",
+  "cat": "Other Govt Jobs",
+  "url": "https://opportunities.rbi.org.in/"
+ },
+ {
+  "name": "UPPSC",
+  "cat": "State PSC",
+  "url": "https://uppsc.up.nic.in/"
+ },
+ {
+  "name": "BPSC",
+  "cat": "State PSC",
+  "url": "https://www.bpsc.bihar.gov.in/"
+ },
+ {
+  "name": "MPSC",
+  "cat": "State PSC",
+  "url": "https://mpsc.gov.in/"
+ },
+ {
+  "name": "RPSC",
+  "cat": "State PSC",
+  "url": "https://rpsc.rajasthan.gov.in/"
+ }
+]

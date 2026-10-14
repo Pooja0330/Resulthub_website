@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>ResultHub Post Helper</title>
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--text:#1a1f36;--mute:#5b6478;--line:#d9dded;--brand:#1d4ed8;--warn:#8a5a00;--warnbg:#fff4d6;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1220;--card:#181c30;--text:#eef0fa;--mute:#a1a8c2;--line:#2a3050;--brand:#7aa2ff;--warn:#f1c76b;--warnbg:#3a2f12}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.w{max-width:640px;margin:0 auto;padding:16px}
+h1{font-size:24px;margin:8px 0}
+.c{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-top:14px}
+label{display:block;font-weight:600;margin:12px 0 4px;font-size:14px}
+input,select,textarea{width:100%;padding:12px;font-size:16px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--text);font-family:inherit}
+textarea{min-height:96px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 16px;margin-top:8px;border:0;border-radius:10px;background:var(--brand);color:#fff;font-size:15px;font-weight:600;text-decoration:none;cursor:pointer}
+.m{color:var(--mute);font-size:13px}
+.warn{background:var(--warnbg);color:var(--warn);border-radius:10px;padding:10px 12px;font-size:13px;margin-top:10px;display:none}
+</style>
+</head>
+<body>
+<div class="w">
+<h1>ResultHub Post Helper</h1>
+<p class="m">Fill in the result details. Copy the line it creates, then paste it at the top of <b>site/results.json</b> in GitHub.</p>
+
+<div class="c">
+<label for="t">Exam / result name</label><input id="t" placeholder="IBPS PO Prelims Result 2026">
+<label for="c">Category</label><select id="c"></select>
+<label for="d">Date declared</label><input id="d">
+<label for="u">Direct official result or login link</label><input id="u" inputmode="url" placeholder="https://...">
+<label for="b">Backup official link (optional)</label><input id="b" inputmode="url" placeholder="https://...">
+<label for="n">Short note for students</label><input id="n" value="Open the official page to check your result.">
+<div class="warn" id="warn"></div>
+</div>
+
+<div class="c">
+<b>1. Line for results.json</b>
+<textarea id="line" readonly></textarea>
+<button class="btn" id="cl">Copy line</button>
+<p class="m">Paste it right after the first [ in results.json. Keep the comma at the end.</p>
+<label for="repo">Your GitHub repository (username/repo)</label>
+<input id="repo" placeholder="yourname/resulthub">
+<a class="btn" id="gh" href="#" target="_blank" rel="noopener">Open results.json in GitHub</a>
+</div>
+
+<div class="c">
+<b>2. Message for your Telegram channel</b>
+<textarea id="tg" readonly></textarea>
+<button class="btn" id="ct">Copy message</button>
+</div>
+</div>
+<script>
+var CATS=["Civil Services","Banking","SSC & Railways","CA / CS","Entrance","Engineering","Abroad Exams","State PSC","Defence","Teaching & NET","Management & Law","Other Govt Jobs","Boards"];
+function $(i){return document.getElementById(i)}
+$("c").innerHTML=CATS.map(function(x){return "<option>"+x.replace(/&/g,"&amp;")+"</option>"}).join("");
+$("d").value=new Date().toLocaleDateString("en-GB",{day:"2-digit",month:"short",year:"numeric"});
+try{$("repo").value=localStorage.getItem("repo")||""}catch(e){}
+function build(){
+ var t=$("t").value.trim(),u=$("u").value.trim(),b=$("b").value.trim(),w=[];
+ if(u){
+  if(!/^https?:\/\//i.test(u))w.push("The link must start with https://");
+  else{try{if(new URL(u).pathname.length<=1)w.push("This is a homepage link. If the official notice has an exact result or login link, paste that one so students get there faster.")}catch(e){w.push("This link does not look valid.")}}
+ }
+ var wb=$("warn");wb.style.display=w.length?"block":"none";wb.textContent=w.join(" ");
+ if(!t||!u){$("line").value="";$("tg").value="";return}
+ var o={t:t,c:$("c").value,d:$("d").value.trim(),u:u};
+ if(b)o.b=b;
+ o.info=$("n").value.trim()||"Open the official page to check your result.";
+ $("line").value=JSON.stringify(o)+",";
+ $("tg").value="Result declared: "+t+"\nCheck here: "+u+"\nPlease verify on the official website.";
+}
+["t","c","d","u","b","n"].forEach(function(i){$(i).addEventListener("input",build)});
+function copy(id,btn){var el=$(id);if(!el.value)return;el.select();el.setSelectionRange(0,99999);
+ try{navigator.clipboard.writeText(el.value)}catch(e){document.execCommand("copy")}
+ var old=btn.textContent;btn.textContent="Copied";setTimeout(function(){btn.textContent=old},1500)}
+$("cl").onclick=function(){copy("line",this)};
+$("ct").onclick=function(){copy("tg",this)};
+function gh(){var r=$("repo").value.trim();try{localStorage.setItem("repo",r)}catch(e){}
+ $("gh").href=r?"https://github.com/"+r+"/edit/main/site/results.json":"#"}
+$("repo").addEventListener("input",gh);gh();build();
+</script>
+</body>
+</html>
