@@ -1,0 +1,43 @@
+[
+  {
+    "name": "IBPS official announcements",
+    "url": "https://www.ibps.in/",
+    "cat": "Banking & Insurance",
+    "allowed_hosts": [
+      "ibps.in",
+      "ibpsreg.ibps.in"
+    ]
+  },
+  {
+    "name": "RRB Secunderabad official",
+    "url": "https://rrbsecunderabad.gov.in/",
+    "cat": "Railways",
+    "allowed_hosts": [
+      "rrbsecunderabad.gov.in"
+    ]
+  },
+  {
+    "name": "RRB Bhubaneswar official",
+    "url": "https://www.rrbbbs.gov.in/",
+    "cat": "Railways",
+    "allowed_hosts": [
+      "rrbbbs.gov.in"
+    ]
+  },
+  {
+    "name": "UPSC written results",
+    "url": "https://upsc.gov.in/exams-related-info/written-result",
+    "cat": "Civil Services & Defence",
+    "allowed_hosts": [
+      "upsc.gov.in"
+    ]
+  },
+  {
+    "name": "SSC official",
+    "url": "https://ssc.gov.in/",
+    "cat": "Government Jobs",
+    "allowed_hosts": [
+      "ssc.gov.in"
+    ]
+  }
+]
