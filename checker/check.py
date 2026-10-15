@@ -106,7 +106,10 @@ def extract_title_date(text):
     return None
 
 def classify(title):
-    if not title or SKIP.search(title) or not EXAM_CONTEXT.search(title):
+    # Sources are registered official exam/recruitment portals. Match notice titles
+    # by announcement type rather than requiring every title to repeat an exam keyword.
+    # Public messages are labelled as potential updates and link back to the official source.
+    if not title or SKIP.search(title):
         return None
     for category, pattern in RULES:
         if pattern.search(title):
