@@ -8,6 +8,8 @@ from urllib.parse import urlparse, urljoin
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 import feedparser
 from bs4 import BeautifulSoup
 
@@ -75,6 +77,23 @@ DATE_PATTERNS = [
 ]
 MONTHS = {"jan":1,"feb":2,"mar":3,"apr":4,"may":5,"jun":6,"jul":7,"aug":8,"sep":9,"oct":10,"nov":11,"dec":12}
 
+def build_session():
+    session = requests.Session()
+    retry = Retry(
+        total=2, connect=2, read=1, status=2,
+        backoff_factor=0.4,
+        status_forcelist=(429, 500, 502, 503, 504),
+        allowed_methods=frozenset(["GET", "HEAD"]),
+        raise_on_status=False,
+    )
+    adapter = HTTPAdapter(max_retries=retry, pool_connections=WORKERS, pool_maxsize=WORKERS)
+    session.mount("https://", adapter)
+    session.mount("http://", adapter)
+    session.headers.update(HEADERS)
+    return session
+
+SESSION = build_session()
+
 def host_allowed(url, allowed_hosts):
     try:
         parsed = urlparse(url)
@@ -105,12 +124,39 @@ def extract_title_date(text):
             continue
     return None
 
-def classify(title):
-    if not title or SKIP.search(title) or not EXAM_CONTEXT.search(title):
+def classify(title, source=None, link=""):
+    """
+    Broad discovery classifier. These are private review candidates, not verified
+    announcements; therefore prefer recall over precision and require human review.
+    """
+    text = " ".join(str(part or "") for part in (title, link)).replace("_", " ").replace("-", " ")
+    if not title or SKIP.search(title):
         return None
     for category, pattern in RULES:
-        if pattern.search(title):
+        if pattern.search(text):
             return category
+    # Official authority pages often use short labels such as "What's New",
+    # "Latest Updates", "Recruitment", or "Notice". Use the registry categories
+    # only as a fallback and keep all matches private for human review.
+    low = text.lower()
+    fallback = [
+        ("result", r"\b(results?|score ?card|marks|rank|score)\b"),
+        ("merit_list", r"\b(merit|selection|selected|qualified|allotment|provisional|final panel)\b"),
+        ("admit_card", r"\b(admit|hall ticket|call letter|exam city|intimation slip)\b"),
+        ("answer_key", r"\b(answer key|response sheet|objection)\b"),
+        ("exam_schedule", r"\b(schedule|date sheet|exam calendar|postponed|rescheduled|examination date)\b"),
+        ("notification", r"\b(notification|notices?|recruitment|advertisement|vacanc(?:y|ies)|apply online|application|what.s new|latest updates?)\b"),
+    ]
+    source_categories = set((source or {}).get("categories", []))
+    for category, expression in fallback:
+        if category in source_categories and re.search(expression, low, re.I):
+            return category
+    # Short titles need exam/recruitment context unless their source is an
+    # exam authority and the link itself names a recognizable update type.
+    if EXAM_CONTEXT.search(text):
+        for category, pattern in RULES:
+            if pattern.search(text):
+                return category
     return None
 
 def telegram_send(chat_id, message):
@@ -121,7 +167,7 @@ def telegram_send(chat_id, message):
         response = requests.post(
             f"https://api.telegram.org/bot{TOKEN}/sendMessage",
             json={"chat_id": chat_id, "text": message[:3900], "disable_web_page_preview": True},
-            timeout=(4, 12),
+            timeout=(6, 15),
         )
         try:
             body = response.json()
@@ -142,7 +188,7 @@ def fetch_source(source):
     hosts = source.get("allowed_hosts", [])
     if not url or not hosts or not host_allowed(url, hosts):
         raise RuntimeError("Missing URL/allowed_hosts or URL host is not allowlisted")
-    response = requests.get(url, headers=HEADERS, timeout=(4, TIMEOUT), allow_redirects=True)
+    response = SESSION.get(url, timeout=(min(8, TIMEOUT), TIMEOUT), allow_redirects=True)
     response.raise_for_status()
     if not host_allowed(response.url, hosts):
         raise RuntimeError("Redirected outside allowlisted HTTPS hosts")
@@ -164,7 +210,7 @@ def fetch_source(source):
         link = link.split("#")[0].strip()
         if len(title) < 8 or not host_allowed(link, hosts):
             continue
-        category = classify(title)
+        category = classify(title, source, link)
         if not category:
             continue
         # Avoid old items if an explicit date is present. Undated links are kept for review,
