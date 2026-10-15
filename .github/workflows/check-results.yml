@@ -1,4 +1,3 @@
-
 name: Check Exam Results
 
 on:
@@ -25,7 +24,7 @@ concurrency:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
 
     steps:
       - name: Checkout repository
@@ -44,36 +43,6 @@ jobs:
           python -m pip install -r requirements.txt
           python -m pip install feedparser
 
-     
-      # - name: Test channel posting
-      #   env:
-      #     TG_TOKEN: ${{ secrets.TG_TOKEN }}
-      #     TG_CHANNEL: ${{ secrets.TG_CHANNEL }}
-      #   run: |
-      #     python - <<'PY'
-      #     import os
-      #     import requests
-
-      #     token = os.environ["TG_TOKEN"].strip()
-      #     channel = os.environ["TG_CHANNEL"].strip()
-
-      #     response = requests.post(
-      #         f"https://api.telegram.org/bot{token}/sendMessage",
-      #         json={
-      #             "chat_id": channel,
-      #             "text": "GoResultHub channel test: posting is working."
-      #         },
-      #         timeout=20
-      #     )
-
-      #     print("HTTP status:", response.status_code)
-      #     result = response.json()
-      #     print("Telegram ok:", result.get("ok"))
-      #     if not result.get("ok"):
-      #         print("Telegram error:", result.get("description"))
-      #         raise SystemExit(1)
-      #     PY
-
       - name: Run result checker
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
@@ -81,20 +50,19 @@ jobs:
           TG_CHANNEL: ${{ secrets.TG_CHANNEL }}
           AUTO_PUBLISH: ${{ vars.AUTO_PUBLISH || '0' }}
           MAX_NEW_PER_SOURCE: "5"
+          SOURCE_TIMEOUT_SECONDS: "12"
+          SOURCE_WORKERS: "4"
         run: python checker/check.py
 
-      
-     
-      - name: Commit updated checker state
+      - name: Commit updated checker state, results, and approval queue
         if: success()
         run: |
-          if git diff --quiet -- checker/state.json site/data/results.json; then
-            echo "No state or results changes to commit."
+          if git diff --quiet -- checker/state.json site/data/results.json checker/approved.json; then
+            echo "No checker state, results, or approval queue changes to commit."
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add checker/state.json site/data/results.json
-            git commit -m "Update checker state and results"
+            git add checker/state.json site/data/results.json checker/approved.json
+            git commit -m "Update checker state, results, and approval queue"
             git push
           fi
-
