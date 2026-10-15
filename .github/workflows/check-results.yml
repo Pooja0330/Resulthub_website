@@ -44,51 +44,34 @@ jobs:
           python -m pip install -r requirements.txt
           python -m pip install feedparser
 
-      - name: Test Telegram delivery
+     
+      - name: Test channel posting
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
-          TG_ADMIN: ${{ secrets.TG_ADMIN }}
+          TG_CHANNEL: ${{ secrets.TG_CHANNEL }}
         run: |
           python - <<'PY'
           import os
-          import sys
           import requests
 
-          token = os.environ.get("TG_TOKEN", "").strip()
-          chat = os.environ.get("TG_ADMIN", "").strip()
+          token = os.environ["TG_TOKEN"].strip()
+          channel = os.environ["TG_CHANNEL"].strip()
 
-          if not token:
-              sys.exit("ERROR: TG_TOKEN secret is missing or empty.")
-          if not chat:
-              sys.exit("ERROR: TG_ADMIN secret is missing or empty.")
+          response = requests.post(
+              f"https://api.telegram.org/bot{token}/sendMessage",
+              json={
+                  "chat_id": channel,
+                  "text": "GoResultHub channel test: posting is working."
+              },
+              timeout=20
+          )
 
-          try:
-              response = requests.post(
-                  f"https://api.telegram.org/bot{token}/sendMessage",
-                  data={
-                      "chat_id": chat,
-                      "text": "GoResultHub: Telegram connection test successful."
-                  },
-                  timeout=20
-              )
-
-              print("HTTP status:", response.status_code)
-
-              try:
-                  result = response.json()
-              except ValueError:
-                  sys.exit("ERROR: Telegram returned a non-JSON response.")
-
-              print("Telegram ok:", result.get("ok"))
-              if not result.get("ok"):
-                  print("Telegram error:", result.get("description", "Unknown error"))
-                  sys.exit(1)
-
-              print("SUCCESS: Telegram accepted the test message.")
-
-          except requests.RequestException as exc:
-              print("ERROR: Telegram request failed:", type(exc).__name__, str(exc))
-              sys.exit(1)
+          print("HTTP status:", response.status_code)
+          result = response.json()
+          print("Telegram ok:", result.get("ok"))
+          if not result.get("ok"):
+              print("Telegram error:", result.get("description"))
+              raise SystemExit(1)
           PY
 
       - name: Run result checker
