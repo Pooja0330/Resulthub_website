@@ -1,34 +1,37 @@
-name: check-results
+
+name: Check Exam Results
 
 on:
-  # Run at minute 17 and 47 to avoid the busiest top-of-hour window.
-  schedule:
-    - cron: "17,47 * * * *"
   workflow_dispatch:
     inputs:
-      publish_mode:
-        description: "Publish detected links to website and Telegram? Use review mode unless tested."
-        required: false
+      mode:
+        description: "Choose review or auto mode"
+        required: true
+        default: review
         type: choice
         options:
           - review
           - auto
-        default: review
+  schedule:
+    - cron: "*/30 * * * *"
 
 permissions:
   contents: write
 
 concurrency:
-  group: result-checker-${{ github.ref }}
+  group: check-results
   cancel-in-progress: false
 
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 10
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -36,25 +39,75 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: python -m pip install --upgrade pip requests beautifulsoup4
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install requests beautifulsoup4
 
-      - name: Run official-source checker
+      - name: Test Telegram delivery
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
-          TG_CHANNEL: ${{ secrets.TG_CHANNEL }}
           TG_ADMIN: ${{ secrets.TG_ADMIN }}
-          # Scheduled runs respect the repository variable. Manual run can explicitly choose review/auto.
-          AUTO_PUBLISH: ${{ github.event_name == 'workflow_dispatch' && inputs.publish_mode == 'auto' && '1' || vars.AUTO_PUBLISH || '0' }}
+        run: |
+          python - <<'PY'
+          import os
+          import sys
+          import requests
+
+          token = os.environ.get("TG_TOKEN", "").strip()
+          chat = os.environ.get("TG_ADMIN", "").strip()
+
+          if not token:
+              sys.exit("ERROR: TG_TOKEN secret is missing or empty.")
+          if not chat:
+              sys.exit("ERROR: TG_ADMIN secret is missing or empty.")
+
+          try:
+              response = requests.post(
+                  f"https://api.telegram.org/bot{token}/sendMessage",
+                  data={
+                      "chat_id": chat,
+                      "text": "GoResultHub: Telegram connection test successful."
+                  },
+                  timeout=20
+              )
+
+              print("HTTP status:", response.status_code)
+
+              try:
+                  result = response.json()
+              except ValueError:
+                  sys.exit("ERROR: Telegram returned a non-JSON response.")
+
+              print("Telegram ok:", result.get("ok"))
+              if not result.get("ok"):
+                  print("Telegram error:", result.get("description", "Unknown error"))
+                  sys.exit(1)
+
+              print("SUCCESS: Telegram accepted the test message.")
+
+          except requests.RequestException as exc:
+              print("ERROR: Telegram request failed:", type(exc).__name__, str(exc))
+              sys.exit(1)
+          PY
+
+      - name: Run result checker
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_ADMIN: ${{ secrets.TG_ADMIN }}
+          TG_CHANNEL: ${{ secrets.TG_CHANNEL }}
+          AUTO_PUBLISH: ${{ vars.AUTO_PUBLISH || '0' }}
+          MAX_NEW_PER_SOURCE: "5"
         run: python checker/check.py
 
-      - name: Commit state/results only when changed
+      - name: Commit updated checker state
+        if: success()
         run: |
-          git config user.name "resulthub-bot"
-          git config user.email "bot@users.noreply.github.com"
-          git add checker/state.json site/results.json
-          if git diff --cached --quiet; then
-            echo "No state or result changes to commit."
+          if git diff --quiet -- checker/state.json site/results.json; then
+            echo "No state or results changes to commit."
           else
-            git commit -m "chore: update result checker state"
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add checker/state.json site/results.json
+            git commit -m "Update result checker state"
             git push
           fi
