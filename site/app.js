@@ -32,5 +32,12 @@ async function init(){
 }
 $("#searchForm").addEventListener("submit",e=>{e.preventDefault();render()});
 ["q","category","examCategory","region","sort"].forEach(id=>$("#"+id).addEventListener(id==="q"?"input":"change",render));
+document.querySelectorAll(".pills [data-family]").forEach(button => {
+  button.addEventListener("click", () => {
+    $("#examCategory").value = button.dataset.family;
+    $("#updates").scrollIntoView({ behavior: "smooth" });
+    render();
+  });
+});
 $("#supportBtn").addEventListener("click",()=>{$("#supportNote").textContent="Secure support payments are not configured yet. We will enable this after a payment provider and checkout URL are set up.";});
 init();
