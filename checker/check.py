@@ -8,8 +8,6 @@ from urllib.parse import urlparse, urljoin
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import requests
-from requests.adapters import HTTPAdapter
-from urllib3.util.retry import Retry
 import feedparser
 from bs4 import BeautifulSoup
 
@@ -77,23 +75,6 @@ DATE_PATTERNS = [
 ]
 MONTHS = {"jan":1,"feb":2,"mar":3,"apr":4,"may":5,"jun":6,"jul":7,"aug":8,"sep":9,"oct":10,"nov":11,"dec":12}
 
-def build_session():
-    session = requests.Session()
-    retry = Retry(
-        total=1, connect=1, read=0, status=1,
-        backoff_factor=0.2,
-        status_forcelist=(429, 500, 502, 503, 504),
-        allowed_methods=frozenset(["GET", "HEAD"]),
-        raise_on_status=False,
-    )
-    adapter = HTTPAdapter(max_retries=retry, pool_connections=WORKERS, pool_maxsize=WORKERS)
-    session.mount("https://", adapter)
-    session.mount("http://", adapter)
-    session.headers.update(HEADERS)
-    return session
-
-SESSION = build_session()
-
 def host_allowed(url, allowed_hosts):
     try:
         parsed = urlparse(url)
@@ -124,39 +105,12 @@ def extract_title_date(text):
             continue
     return None
 
-def classify(title, source=None, link=""):
-    """
-    Broad discovery classifier. These are private review candidates, not verified
-    announcements; therefore prefer recall over precision and require human review.
-    """
-    text = " ".join(str(part or "") for part in (title, link)).replace("_", " ").replace("-", " ")
-    if not title or SKIP.search(title):
+def classify(title):
+    if not title or SKIP.search(title) or not EXAM_CONTEXT.search(title):
         return None
     for category, pattern in RULES:
-        if pattern.search(text):
+        if pattern.search(title):
             return category
-    # Official authority pages often use short labels such as "What's New",
-    # "Latest Updates", "Recruitment", or "Notice". Use the registry categories
-    # only as a fallback and keep all matches private for human review.
-    low = text.lower()
-    fallback = [
-        ("result", r"\b(results?|score ?card|marks|rank|score)\b"),
-        ("merit_list", r"\b(merit|selection|selected|qualified|allotment|provisional|final panel)\b"),
-        ("admit_card", r"\b(admit|hall ticket|call letter|exam city|intimation slip)\b"),
-        ("answer_key", r"\b(answer key|response sheet|objection)\b"),
-        ("exam_schedule", r"\b(schedule|date sheet|exam calendar|postponed|rescheduled|examination date)\b"),
-        ("notification", r"\b(notification|notices?|recruitment|advertisement|vacanc(?:y|ies)|apply online|application|what.s new|latest updates?)\b"),
-    ]
-    source_categories = set((source or {}).get("categories", []))
-    for category, expression in fallback:
-        if category in source_categories and re.search(expression, low, re.I):
-            return category
-    # Short titles need exam/recruitment context unless their source is an
-    # exam authority and the link itself names a recognizable update type.
-    if EXAM_CONTEXT.search(text):
-        for category, pattern in RULES:
-            if pattern.search(text):
-                return category
     return None
 
 def telegram_send(chat_id, message):
@@ -167,7 +121,7 @@ def telegram_send(chat_id, message):
         response = requests.post(
             f"https://api.telegram.org/bot{TOKEN}/sendMessage",
             json={"chat_id": chat_id, "text": message[:3900], "disable_web_page_preview": True},
-            timeout=(6, 15),
+            timeout=(4, 12),
         )
         try:
             body = response.json()
@@ -188,7 +142,7 @@ def fetch_source(source):
     hosts = source.get("allowed_hosts", [])
     if not url or not hosts or not host_allowed(url, hosts):
         raise RuntimeError("Missing URL/allowed_hosts or URL host is not allowlisted")
-    response = SESSION.get(url, timeout=(min(8, TIMEOUT), TIMEOUT), allow_redirects=True)
+    response = requests.get(url, headers=HEADERS, timeout=(4, TIMEOUT), allow_redirects=True)
     response.raise_for_status()
     if not host_allowed(response.url, hosts):
         raise RuntimeError("Redirected outside allowlisted HTTPS hosts")
@@ -210,7 +164,7 @@ def fetch_source(source):
         link = link.split("#")[0].strip()
         if len(title) < 8 or not host_allowed(link, hosts):
             continue
-        category = classify(title, source, link)
+        category = classify(title)
         if not category:
             continue
         # Avoid old items if an explicit date is present. Undated links are kept for review,
@@ -260,51 +214,7 @@ def main():
     state.update({"last_run": now, "last_run_failures": failures, "last_run_successful_sources": successful, "last_run_new_candidates": len(candidates), "source_registry_count": len(sources)})
     save_json("checker/state.json", state)
 
-    # Publish detected official-source links into the website feed as UNVERIFIED
-    # discoveries. This makes the site update automatically without falsely
-    # claiming the checker has confirmed a result declaration.
-    results = load_json("site/data/results.json", [])
-    if not isinstance(results, list):
-        print("WARNING: site/data/results.json is not a list; skipping website feed update")
-        results = []
-    existing_urls = {str(x.get("url") or x.get("official_url") or "").split("#")[0] for x in results if isinstance(x, dict)}
-    published_to_site = 0
-    for item in candidates:
-        item_url = str(item.get("url", "")).split("#")[0]
-        if not item_url or item_url in existing_urls:
-            continue
-        source = next((s for s in sources if s.get("name") == item.get("source_name")), {})
-        categories = source.get("categories", []) if isinstance(source, dict) else []
-        exam_family = str(source.get("exam_category") or source.get("family") or "Central / State Exam Updates")
-        region = str(source.get("region") or "All India")
-        entry = {
-            "id": "live-" + item.get("id", hashlib.sha256(item_url.encode("utf-8")).hexdigest()[:24]),
-            "title": item.get("title", "Official exam update"),
-            "exam": item.get("title", "Official exam update"),
-            "exam_category": exam_family,
-            "category": item.get("category", "notification"),
-            "source_name": item.get("source_name", "Official authority"),
-            "authority": item.get("source_name", "Official authority"),
-            "url": item_url,
-            "official_url": item_url,
-            "region": region,
-            "state": "",
-            "description": "Automatically detected link from an official authority page. Check the authority website to confirm the notice, exam, and applicable date.",
-            "detected_at": now,
-            "verified": False,
-            "archive": False,
-            "auto_detected": True
-        }
-        results.append(entry)
-        existing_urls.add(item_url)
-        published_to_site += 1
-    if published_to_site:
-        # Keep the feed manageable while retaining the latest discoveries first.
-        results.sort(key=lambda x: str(x.get("detected_at", "")), reverse=True)
-        save_json("site/data/results.json", results[:1000])
-    print(f"Website feed: {published_to_site} new unverified official-source links added")
-
-    # Candidate links are also sent to Telegram for private review.
+    # Candidate links are private review items, not verified announcements.
     if candidates:
         print(f"Found {len(candidates)} new candidate links for private review")
     else:
