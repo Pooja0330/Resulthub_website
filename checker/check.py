@@ -379,7 +379,19 @@ def main():
 
     # Send newly detected links to the main channel, retrying undelivered alerts.
     public_sent = 0
+    # Avoid flooding the public Telegram channel during the first run or after
+    # a backlog. Leave the remaining alerts queued for later runs.
+    max_public_alerts_per_run = max(
+        1, min(int(os.getenv("MAX_PUBLIC_ALERTS_PER_RUN", "5")), 10)
+    )
     for key in list(pending.keys()):
+        if public_sent >= max_public_alerts_per_run:
+            print(
+                f"Public alert limit reached ({max_public_alerts_per_run}); "
+                f"{len(pending)} alerts remain queued"
+            )
+            break
+
         record = pending.get(key, {})
         item = record.get("item", {})
         if not item:
