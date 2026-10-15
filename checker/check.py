@@ -214,9 +214,26 @@ def main():
     state.update({"last_run": now, "last_run_failures": failures, "last_run_successful_sources": successful, "last_run_new_candidates": len(candidates), "source_registry_count": len(sources)})
     save_json("checker/state.json", state)
 
-    # Candidate links are private review items, not verified announcements.
-    if candidates:
-        print(f"Found {len(candidates)} new candidate links for private review")
+    # Publish newly detected official-source links as clearly labelled alerts.
+    # These are candidate notices, not a claim that a candidate-specific result is verified.
+    public_posts = 0
+    if candidates and CHANNEL:
+        for item in candidates:
+            message = (
+                "🔔 GoResultHub | Potential Exam Update\n\n"
+                f"Authority: {item['source_name']}\n"
+                f"Update type: {item['category'].replace('_', ' ').title()}\n\n"
+                f"{item['title']}\n\n"
+                f"Official source link:\n{item['url']}\n\n"
+                "Please open the official source and verify the notice before relying on it."
+            )
+            if telegram_send(CHANNEL, message):
+                public_posts += 1
+                print("Published candidate alert:", item["title"])
+            else:
+                print("Candidate alert delivery failed:", item["title"])
+    elif candidates:
+        print("TG_CHANNEL missing; candidate alerts were not published")
     else:
         print("No new candidates passed the filters")
 
@@ -226,7 +243,7 @@ def main():
     pending = approval_data.get("pending", []) if isinstance(approval_data, dict) else []
     if not isinstance(pending, list):
         sys.exit("ERROR: checker/approved.json must contain a pending list")
-    remaining, public_posts = [], 0
+    remaining = []
     for item in pending:
         if not isinstance(item, dict):
             continue
@@ -261,7 +278,7 @@ def main():
         f"Successful sources: {successful}\n"
         f"Failed sources: {failures}\n"
         f"New candidate links: {len(candidates)}\n"
-        f"Public posts from approved queue: {public_posts}\n\n"
+        f"Public posts to channel: {public_posts}\n\n"
     )
     if candidates:
         summary += "New candidates need manual review; they have not been verified or published automatically.\n\n"
