@@ -3,6 +3,10 @@ name: Check Exam Results
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "checker/check.py"
   schedule:
     - cron: "17 */2 * * *"
 
