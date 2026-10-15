@@ -1,3 +1,4 @@
+
 [
   {
     "name": "IBPS official announcements",
@@ -9,16 +10,16 @@
     ]
   },
   {
-    "name": "RRB Secunderabad official",
-    "url": "https://rrbsecunderabad.gov.in/",
+    "name": "RRB Secunderabad official notices",
+    "url": "https://rrbsecunderabad.gov.in/notices/",
     "cat": "Railways",
     "allowed_hosts": [
       "rrbsecunderabad.gov.in"
     ]
   },
   {
-    "name": "RRB Bhubaneswar official",
-    "url": "https://www.rrbbbs.gov.in/",
+    "name": "RRB Bhubaneswar official results",
+    "url": "https://rrbbbs.gov.in/results.php",
     "cat": "Railways",
     "allowed_hosts": [
       "rrbbbs.gov.in"
@@ -26,7 +27,7 @@
   },
   {
     "name": "UPSC written results",
-    "url": "https://upsc.gov.in/exams-related-info/written-result",
+    "url": "https://www.upsc.gov.in/exams-related-info/written-result",
     "cat": "Civil Services & Defence",
     "allowed_hosts": [
       "upsc.gov.in"
