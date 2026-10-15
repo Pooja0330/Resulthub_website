@@ -11,6 +11,9 @@ on:
         options:
           - review
           - auto
+  push:
+    branches:
+      - main
   schedule:
     - cron: "*/30 * * * *"
 
