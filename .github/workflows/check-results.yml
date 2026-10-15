@@ -65,6 +65,11 @@ jobs:
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            # Sync with newer commits from other workflows before committing.
+            git stash push --include-untracked -m "checker-generated changes"
+            git fetch origin "${GITHUB_REF_NAME}"
+            git rebase "origin/${GITHUB_REF_NAME}"
+            git stash pop
             git add checker/state.json site/data/results.json checker/approved.json
             git commit -m "Update checker state, results, and approval queue"
             git push
