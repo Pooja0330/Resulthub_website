@@ -260,7 +260,51 @@ def main():
     state.update({"last_run": now, "last_run_failures": failures, "last_run_successful_sources": successful, "last_run_new_candidates": len(candidates), "source_registry_count": len(sources)})
     save_json("checker/state.json", state)
 
-    # Candidate links are private review items, not verified announcements.
+    # Publish detected official-source links into the website feed as UNVERIFIED
+    # discoveries. This makes the site update automatically without falsely
+    # claiming the checker has confirmed a result declaration.
+    results = load_json("site/data/results.json", [])
+    if not isinstance(results, list):
+        print("WARNING: site/data/results.json is not a list; skipping website feed update")
+        results = []
+    existing_urls = {str(x.get("url") or x.get("official_url") or "").split("#")[0] for x in results if isinstance(x, dict)}
+    published_to_site = 0
+    for item in candidates:
+        item_url = str(item.get("url", "")).split("#")[0]
+        if not item_url or item_url in existing_urls:
+            continue
+        source = next((s for s in sources if s.get("name") == item.get("source_name")), {})
+        categories = source.get("categories", []) if isinstance(source, dict) else []
+        exam_family = str(source.get("exam_category") or source.get("family") or "Central / State Exam Updates")
+        region = str(source.get("region") or "All India")
+        entry = {
+            "id": "live-" + item.get("id", hashlib.sha256(item_url.encode("utf-8")).hexdigest()[:24]),
+            "title": item.get("title", "Official exam update"),
+            "exam": item.get("title", "Official exam update"),
+            "exam_category": exam_family,
+            "category": item.get("category", "notification"),
+            "source_name": item.get("source_name", "Official authority"),
+            "authority": item.get("source_name", "Official authority"),
+            "url": item_url,
+            "official_url": item_url,
+            "region": region,
+            "state": "",
+            "description": "Automatically detected link from an official authority page. Check the authority website to confirm the notice, exam, and applicable date.",
+            "detected_at": now,
+            "verified": False,
+            "archive": False,
+            "auto_detected": True
+        }
+        results.append(entry)
+        existing_urls.add(item_url)
+        published_to_site += 1
+    if published_to_site:
+        # Keep the feed manageable while retaining the latest discoveries first.
+        results.sort(key=lambda x: str(x.get("detected_at", "")), reverse=True)
+        save_json("site/data/results.json", results[:1000])
+    print(f"Website feed: {published_to_site} new unverified official-source links added")
+
+    # Candidate links are also sent to Telegram for private review.
     if candidates:
         print(f"Found {len(candidates)} new candidate links for private review")
     else:
