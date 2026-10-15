@@ -80,8 +80,8 @@ MONTHS = {"jan":1,"feb":2,"mar":3,"apr":4,"may":5,"jun":6,"jul":7,"aug":8,"sep":
 def build_session():
     session = requests.Session()
     retry = Retry(
-        total=2, connect=2, read=1, status=2,
-        backoff_factor=0.4,
+        total=1, connect=1, read=0, status=1,
+        backoff_factor=0.2,
         status_forcelist=(429, 500, 502, 503, 504),
         allowed_methods=frozenset(["GET", "HEAD"]),
         raise_on_status=False,
