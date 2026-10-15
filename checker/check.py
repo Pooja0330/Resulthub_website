@@ -1,3 +1,4 @@
+# GoResultHub checker: direct notice links plus official authority-page links.
 
 import os
 import re
