@@ -45,34 +45,34 @@ jobs:
           python -m pip install feedparser
 
      
-      - name: Test channel posting
-        env:
-          TG_TOKEN: ${{ secrets.TG_TOKEN }}
-          TG_CHANNEL: ${{ secrets.TG_CHANNEL }}
-        run: |
-          python - <<'PY'
-          import os
-          import requests
+      # - name: Test channel posting
+      #   env:
+      #     TG_TOKEN: ${{ secrets.TG_TOKEN }}
+      #     TG_CHANNEL: ${{ secrets.TG_CHANNEL }}
+      #   run: |
+      #     python - <<'PY'
+      #     import os
+      #     import requests
 
-          token = os.environ["TG_TOKEN"].strip()
-          channel = os.environ["TG_CHANNEL"].strip()
+      #     token = os.environ["TG_TOKEN"].strip()
+      #     channel = os.environ["TG_CHANNEL"].strip()
 
-          response = requests.post(
-              f"https://api.telegram.org/bot{token}/sendMessage",
-              json={
-                  "chat_id": channel,
-                  "text": "GoResultHub channel test: posting is working."
-              },
-              timeout=20
-          )
+      #     response = requests.post(
+      #         f"https://api.telegram.org/bot{token}/sendMessage",
+      #         json={
+      #             "chat_id": channel,
+      #             "text": "GoResultHub channel test: posting is working."
+      #         },
+      #         timeout=20
+      #     )
 
-          print("HTTP status:", response.status_code)
-          result = response.json()
-          print("Telegram ok:", result.get("ok"))
-          if not result.get("ok"):
-              print("Telegram error:", result.get("description"))
-              raise SystemExit(1)
-          PY
+      #     print("HTTP status:", response.status_code)
+      #     result = response.json()
+      #     print("Telegram ok:", result.get("ok"))
+      #     if not result.get("ok"):
+      #         print("Telegram error:", result.get("description"))
+      #         raise SystemExit(1)
+      #     PY
 
       - name: Run result checker
         env:
