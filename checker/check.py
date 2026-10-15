@@ -18,8 +18,8 @@ TOKEN = os.getenv("TG_TOKEN", "").strip()
 ADMIN = os.getenv("TG_ADMIN", "").strip()
 CHANNEL = os.getenv("TG_CHANNEL", "").strip()
 
-TIMEOUT = max(5, min(int(os.getenv("SOURCE_TIMEOUT_SECONDS", "15")), 30))
-WORKERS = max(1, min(int(os.getenv("SOURCE_WORKERS", "3")), 8))
+TIMEOUT = max(4, min(int(os.getenv("SOURCE_TIMEOUT_SECONDS", "6")), 10))
+WORKERS = max(1, min(int(os.getenv("SOURCE_WORKERS", "8")), 12))
 MAX_NEW_PER_SOURCE = max(1, min(int(os.getenv("MAX_NEW_PER_SOURCE", "5")), 20))
 MAX_AGE_DAYS = 90
 
@@ -116,18 +116,20 @@ def classify(title):
 def get_with_retries(url, headers=None):
     last_error = None
 
-    for attempt in range(3):
+    # Keep a failed source from delaying the entire scheduled run.
+    # Two attempts are enough for transient errors; never disable TLS verification.
+    for attempt in range(2):
         try:
             response = requests.get(
                 url,
                 headers=headers or HEADERS,
-                timeout=(5, TIMEOUT),
+                timeout=(3, TIMEOUT),
                 allow_redirects=True,
             )
 
             if response.status_code in (408, 425, 429, 500, 502, 503, 504):
-                if attempt < 2:
-                    time.sleep(2 * (attempt + 1))
+                if attempt == 0:
+                    time.sleep(1)
                     continue
 
             response.raise_for_status()
@@ -135,8 +137,8 @@ def get_with_retries(url, headers=None):
 
         except (requests.Timeout, requests.ConnectionError) as exc:
             last_error = exc
-            if attempt < 2:
-                time.sleep(2 * (attempt + 1))
+            if attempt == 0:
+                time.sleep(1)
                 continue
             raise
 
