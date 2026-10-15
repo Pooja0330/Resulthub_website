@@ -1,21 +1,19 @@
+
 name: Check Exam Results
 
 on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "Choose review or auto mode"
+        description: "Publishing mode"
         required: true
-        default: review
+        default: auto
         type: choice
         options:
-          - review
           - auto
-  push:
-    branches:
-      - main
+          - review
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "17 */2 * * *"
 
 permissions:
   contents: write
@@ -27,13 +25,14 @@ concurrency:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
 
     steps:
-      - name: Checkout repository
+      - name: Checkout latest main
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.ref_name }}
+          ref: main
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -46,31 +45,34 @@ jobs:
           python -m pip install -r requirements.txt
           python -m pip install feedparser
 
-      - name: Run result checker
+      - name: Run official exam checker
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_ADMIN: ${{ secrets.TG_ADMIN }}
           TG_CHANNEL: ${{ secrets.TG_CHANNEL }}
           AUTO_PUBLISH: ${{ vars.AUTO_PUBLISH || '0' }}
+          SOURCE_TIMEOUT_SECONDS: "15"
+          SOURCE_WORKERS: "3"
           MAX_NEW_PER_SOURCE: "5"
-          SOURCE_TIMEOUT_SECONDS: "12"
-          SOURCE_WORKERS: "4"
         run: python checker/check.py
 
-      - name: Commit updated checker state, results, and approval queue
+      - name: Commit checker data safely
         if: success()
         run: |
-          if git diff --quiet -- checker/state.json site/data/results.json checker/approved.json; then
-            echo "No checker state, results, or approval queue changes to commit."
-          else
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            # Sync with newer commits from other workflows before committing.
-            git stash push --include-untracked -m "checker-generated changes"
-            git fetch origin "${GITHUB_REF_NAME}"
-            git rebase "origin/${GITHUB_REF_NAME}"
-            git stash pop
-            git add checker/state.json site/data/results.json checker/approved.json
-            git commit -m "Update checker state, results, and approval queue"
-            git push
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add checker/state.json checker/approved.json site/data/results.json
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
           fi
+
+          git commit -m "Update exam checker data"
+
+          # Rebase the generated commit on the latest main.
+          git fetch origin main
+          git rebase origin/main
+
+          git push origin HEAD:main
