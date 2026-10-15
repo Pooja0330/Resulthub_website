@@ -15,8 +15,9 @@ function render(){
  $("#count").textContent=`${list.length} update${list.length===1?"":"s"}`;
  $("#updatesList").innerHTML=list.map(x=>{
   const url=safeUrl(x.url||x.official_url);
+  const sourcePage=safeUrl(x.source_url);
   const sourceBadge=x.verified===true?"✓ Verified official source":(x.archive?"Official archive / portal":"Official website link");
-  return `<article class="card"><div class="meta"><span class="tag">${esc(label(x.category))}</span><span class="unverified">${esc(sourceBadge)}</span></div><h3>${esc(x.title||x.exam||"Exam update")}</h3><p>${esc(x.description||x.source_name||"View the official website for full details and eligibility.")}</p><div class="source">${esc(x.source_name||x.authority||"Issuing authority")} · ${esc(dateText(x.detected_at||x.date))}</div>${url?`<a class="link" href="${esc(url)}" target="_blank" rel="noopener noreferrer">Open official source ↗</a>`:`<span>Official link unavailable</span>`}</article>`;
+  return `<article class="card"><div class="meta"><span class="tag">${esc(label(x.category))}</span><span class="unverified">${esc(sourceBadge)}</span></div><h3>${esc(x.title||x.exam||"Exam update")}</h3><p>${esc(x.description||x.source_name||"View the official website for full details and eligibility.")}</p><div class="source">${esc(x.source_name||x.authority||"Issuing authority")} · ${esc(dateText(x.detected_at||x.date))}</div>${url?`<a class="link" href="${esc(url)}" target="_blank" rel="noopener noreferrer">Open official source ↗</a>`:`<span>Official link unavailable</span>`}${sourcePage&&sourcePage!==url?` <a class="link secondary" href="${esc(sourcePage)}" target="_blank" rel="noopener noreferrer">Browse authority website ↗</a>`:""}</article>`;
  }).join("");
  $("#empty").classList.toggle("hidden",list.length>0);
  if(!list.length) $("#updatesList").innerHTML="";
