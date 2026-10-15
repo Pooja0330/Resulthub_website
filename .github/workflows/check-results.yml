@@ -100,15 +100,18 @@ jobs:
           MAX_NEW_PER_SOURCE: "5"
         run: python checker/check.py
 
+      
+     
       - name: Commit updated checker state
         if: success()
         run: |
-          if git diff --quiet -- checker/state.json site/results.json; then
+          if git diff --quiet -- checker/state.json site/data/results.json; then
             echo "No state or results changes to commit."
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add checker/state.json site/results.json
-            git commit -m "Update result checker state"
+            git add checker/state.json site/data/results.json
+            git commit -m "Update checker state and results"
             git push
           fi
+
