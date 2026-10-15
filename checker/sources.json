@@ -1,4 +1,6 @@
 {
+  "schema_version": 2,
+  "description": "Broad starter registry of Indian official exam/recruitment authorities. Not a guarantee of exhaustive live coverage; each source needs reachability validation and some authorities publish on separate portals.",
   "sources": [
     {
       "id": "upsc",
@@ -13,7 +15,8 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "ssc",
@@ -30,7 +33,8 @@
         "answer_key"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "ibps",
@@ -48,7 +52,8 @@
         "answer_key"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "sbi-careers",
@@ -63,7 +68,8 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "rbi-opportunities",
@@ -78,7 +84,8 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "nta",
@@ -95,7 +102,8 @@
         "answer_key"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "jeemain",
@@ -112,7 +120,8 @@
         "answer_key"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "neet",
@@ -129,7 +138,8 @@
         "answer_key"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "cuet",
@@ -146,7 +156,8 @@
         "answer_key"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "ugcnet",
@@ -163,7 +174,8 @@
         "answer_key"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "gate",
@@ -179,7 +191,8 @@
         "admit_card"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "upsc-results",
@@ -194,7 +207,8 @@
         "merit_list"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "rrb-bbs",
@@ -210,7 +224,8 @@
         "admit_card"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "rrb-sec",
@@ -226,7 +241,8 @@
         "admit_card"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "cbse",
@@ -241,7 +257,8 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "cisce",
@@ -256,7 +273,8 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "nios",
@@ -271,7 +289,8 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "up-board",
@@ -286,7 +305,8 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "mpbse",
@@ -301,7 +321,8 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "cgbse",
@@ -316,7 +337,8 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "bseb",
@@ -331,7 +353,8 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "rajeduboard",
@@ -346,7 +369,8 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "gseb",
@@ -361,7 +385,8 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "mahresult",
@@ -375,7 +400,8 @@
         "result"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "tnresults",
@@ -389,7 +415,8 @@
         "result"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "keralaresults",
@@ -403,7 +430,8 @@
         "result"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "wbresults",
@@ -417,7 +445,8 @@
         "result"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "odisha-board",
@@ -432,7 +461,8 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "karnataka-board",
@@ -447,7 +477,8 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "telangana-board",
@@ -462,7 +493,8 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "andhra-board",
@@ -477,7 +509,8 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "haryana-board",
@@ -492,7 +525,8 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "punjab-board",
@@ -507,7 +541,8 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "assam-board",
@@ -522,7 +557,8 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "jkbose",
@@ -537,7 +573,8 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "upsssc",
@@ -553,7 +590,8 @@
         "admit_card"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "mppsc",
@@ -568,7 +606,8 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "cgpsc",
@@ -583,7 +622,8 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "bpsc",
@@ -598,7 +638,8 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "rpsc",
@@ -613,7 +654,8 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "gpsc",
@@ -628,7 +670,8 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "tnpsc",
@@ -643,7 +686,8 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "keralapsc",
@@ -658,7 +702,8 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "mpsc",
@@ -673,7 +718,8 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "wbpsc",
@@ -688,7 +734,8 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "appsc",
@@ -703,7 +750,8 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "tspsc",
@@ -718,7 +766,8 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "opsc",
@@ -733,7 +782,8 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "hpsc",
@@ -748,7 +798,8 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
     },
     {
       "id": "uppsc",
@@ -763,7 +814,2136 @@
         "notification"
       ],
       "enabled": true,
-      "last_reviewed": null
+      "last_reviewed": null,
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+    },
+    {
+      "id": "ibps-calendar",
+      "name": "IBPS examination and recruitment",
+      "url": "https://www.ibps.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "ibps.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "rbi-careers",
+      "name": "RBI Opportunities and Recruitment",
+      "url": "https://opportunities.rbi.org.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "opportunities.rbi.org.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "nabard",
+      "name": "NABARD recruitment",
+      "url": "https://www.nabard.org/",
+      "kind": "html",
+      "allowed_hosts": [
+        "nabard.org"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "lic-careers",
+      "name": "LIC careers",
+      "url": "https://licindia.in/Bottom-Links/Careers",
+      "kind": "html",
+      "allowed_hosts": [
+        "licindia.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "niacl",
+      "name": "New India Assurance recruitment",
+      "url": "https://www.newindia.co.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "newindia.co.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "epfindia",
+      "name": "EPFO recruitment",
+      "url": "https://www.epfindia.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "epfindia.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "upsc-recruitment",
+      "name": "UPSC recruitment notices",
+      "url": "https://upsc.gov.in/recruitment/recruitment-permanent",
+      "kind": "html",
+      "allowed_hosts": [
+        "upsc.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "nta-results",
+      "name": "NTA exam notices and results",
+      "url": "https://www.nta.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "nta.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "nta-exams",
+      "name": "NTA examination portal",
+      "url": "https://exams.nta.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "exams.nta.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "nta-cuetpg",
+      "name": "CUET PG",
+      "url": "https://exams.nta.ac.in/CUET-PG/",
+      "kind": "html",
+      "allowed_hosts": [
+        "exams.nta.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "nta-ugcnet",
+      "name": "UGC NET",
+      "url": "https://ugcnet.nta.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "ugcnet.nta.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "nta-csirnet",
+      "name": "CSIR UGC NET",
+      "url": "https://csirnet.nta.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "csirnet.nta.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "jeeadv",
+      "name": "JEE Advanced",
+      "url": "https://jeeadv.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "jeeadv.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "gate-iitg",
+      "name": "GATE official portal (current-year URL changes annually)",
+      "url": "https://gate2026.iisc.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "gate2026.iisc.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "ctet",
+      "name": "CTET",
+      "url": "https://ctet.nic.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "ctet.nic.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "kvs",
+      "name": "Kendriya Vidyalaya Sangathan recruitment",
+      "url": "https://kvsangathan.nic.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "kvsangathan.nic.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "nvs",
+      "name": "Navodaya Vidyalaya Samiti recruitment",
+      "url": "https://navodaya.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "navodaya.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "nta-nchm",
+      "name": "NCHM JEE",
+      "url": "https://exams.nta.ac.in/NCHM/",
+      "kind": "html",
+      "allowed_hosts": [
+        "exams.nta.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "rrb-ahmedabad",
+      "name": "RRB Ahmedabad",
+      "url": "https://www.rrbahmedabad.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "rrbahmedabad.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "rrb-ajmer",
+      "name": "RRB Ajmer",
+      "url": "https://rrbajmer.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "rrbajmer.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "rrb-allahabad",
+      "name": "RRB Prayagraj",
+      "url": "https://rrbald.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "rrbald.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "rrb-bangalore",
+      "name": "RRB Bengaluru",
+      "url": "https://rrbbnc.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "rrbbnc.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "rrb-bhopal",
+      "name": "RRB Bhopal",
+      "url": "https://rrbbhopal.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "rrbbhopal.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "rrb-bilaspur",
+      "name": "RRB Bilaspur",
+      "url": "https://rrbbilaspur.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "rrbbilaspur.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "rrb-chandigarh",
+      "name": "RRB Chandigarh",
+      "url": "https://www.rrbcdg.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "rrbcdg.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "rrb-chennai",
+      "name": "RRB Chennai",
+      "url": "https://www.rrbchennai.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "rrbchennai.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "rrb-gorakhpur",
+      "name": "RRB Gorakhpur",
+      "url": "https://rrbgkp.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "rrbgkp.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "rrb-guwahati",
+      "name": "RRB Guwahati",
+      "url": "https://rrbguwahati.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "rrbguwahati.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "rrb-jammu",
+      "name": "RRB Jammu-Srinagar",
+      "url": "https://www.rrbjammu.nic.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "rrbjammu.nic.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "rrb-kolkata",
+      "name": "RRB Kolkata",
+      "url": "https://www.rrbkolkata.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "rrbkolkata.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "rrb-malabar",
+      "name": "RRB Thiruvananthapuram",
+      "url": "https://www.rrbthiruvananthapuram.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "rrbthiruvananthapuram.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "rrb-mumbai",
+      "name": "RRB Mumbai",
+      "url": "https://www.rrbmumbai.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "rrbmumbai.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "rrb-muzaffarpur",
+      "name": "RRB Muzaffarpur",
+      "url": "https://rrbmuzaffarpur.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "rrbmuzaffarpur.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "rrb-patna",
+      "name": "RRB Patna",
+      "url": "https://rrbpatna.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "rrbpatna.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "rrb-ranchi",
+      "name": "RRB Ranchi",
+      "url": "https://rrbranchi.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "rrbranchi.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "rrb-siliguri",
+      "name": "RRB Siliguri",
+      "url": "https://rrbsiliguri.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "rrbsiliguri.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "rrb-trivandrum",
+      "name": "RRB Thiruvananthapuram",
+      "url": "https://www.rrbthiruvananthapuram.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "rrbthiruvananthapuram.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "rrb-jammu-old",
+      "name": "RRB Jammu",
+      "url": "https://www.rrbjammu.nic.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "rrbjammu.nic.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "rrc-central",
+      "name": "Railway Recruitment Cell Central Railway",
+      "url": "https://rrccr.com/",
+      "kind": "html",
+      "allowed_hosts": [
+        "rrccr.com"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "rrc-northern",
+      "name": "Railway Recruitment Cell Northern Railway",
+      "url": "https://rrcnr.org/",
+      "kind": "html",
+      "allowed_hosts": [
+        "rrcnr.org"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "rrc-western",
+      "name": "Railway Recruitment Cell Western Railway",
+      "url": "https://www.rrc-wr.com/",
+      "kind": "html",
+      "allowed_hosts": [
+        "rrc-wr.com"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "rrc-eastern",
+      "name": "Railway Recruitment Cell Eastern Railway",
+      "url": "https://rrcer.org/",
+      "kind": "html",
+      "allowed_hosts": [
+        "rrcer.org"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "rrc-south-central",
+      "name": "Railway Recruitment Cell South Central Railway",
+      "url": "https://scr.indianrailways.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "scr.indianrailways.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "apsc",
+      "name": "Assam Public Service Commission",
+      "url": "https://apsc.nic.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "apsc.nic.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "arunachal-psc",
+      "name": "Arunachal Pradesh Public Service Commission",
+      "url": "https://appsc.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "appsc.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "manipur-psc",
+      "name": "Manipur Public Service Commission",
+      "url": "https://mpscmanipur.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "mpscmanipur.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "meghalaya-psc",
+      "name": "Meghalaya Public Service Commission",
+      "url": "https://mpsc.meghalaya.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "mpsc.meghalaya.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "mizoram-psc",
+      "name": "Mizoram Public Service Commission",
+      "url": "https://mpsc.mizoram.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "mpsc.mizoram.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "nagaland-psc",
+      "name": "Nagaland Public Service Commission",
+      "url": "https://npsc.nagaland.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "npsc.nagaland.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "sikkim-psc",
+      "name": "Sikkim Public Service Commission",
+      "url": "https://spsc.sikkim.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "spsc.sikkim.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "tripura-psc",
+      "name": "Tripura Public Service Commission",
+      "url": "https://tpsc.tripura.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "tpsc.tripura.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "jharkhand-psc",
+      "name": "Jharkhand Public Service Commission",
+      "url": "https://www.jpsc.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "jpsc.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "uttarakhand-psc",
+      "name": "Uttarakhand Public Service Commission",
+      "url": "https://psc.uk.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "psc.uk.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "hpssc",
+      "name": "Himachal Pradesh recruitment portal (verify current authority)",
+      "url": "https://hprca.hp.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "hprca.hp.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "jkssb",
+      "name": "Jammu and Kashmir Services Selection Board",
+      "url": "https://jkssb.nic.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "jkssb.nic.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "jkpsc",
+      "name": "Jammu and Kashmir Public Service Commission",
+      "url": "https://jkpsc.nic.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "jkpsc.nic.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "dsssb",
+      "name": "Delhi Subordinate Services Selection Board",
+      "url": "https://dsssb.delhi.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "dsssb.delhi.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "bssc",
+      "name": "Bihar Staff Selection Commission",
+      "url": "https://bssc.bihar.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "bssc.bihar.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "btsc",
+      "name": "Bihar Technical Service Commission",
+      "url": "https://btsc.bihar.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "btsc.bihar.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "hssc",
+      "name": "Haryana Staff Selection Commission",
+      "url": "https://www.hssc.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "hssc.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "hprca",
+      "name": "Himachal Pradesh Rajya Chayan Aayog",
+      "url": "https://hprca.hp.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "hprca.hp.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "osssc",
+      "name": "Odisha Sub-ordinate Staff Selection Commission",
+      "url": "https://www.osssc.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "osssc.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "ossc",
+      "name": "Odisha Staff Selection Commission",
+      "url": "https://www.ossc.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "ossc.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "kerala-psc-thulasi",
+      "name": "Kerala PSC candidate portal landing page",
+      "url": "https://www.keralapsc.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "keralapsc.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "maha-rojgar",
+      "name": "Maharashtra government recruitment/rojgar portal",
+      "url": "https://rojgar.mahaswayam.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "rojgar.mahaswayam.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "mpsc-maha",
+      "name": "Maharashtra Public Service Commission",
+      "url": "https://mpsc.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "mpsc.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "up-police",
+      "name": "Uttar Pradesh Police Recruitment and Promotion Board",
+      "url": "https://uppbpb.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "uppbpb.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "bihar-police",
+      "name": "Central Selection Board of Constable Bihar",
+      "url": "https://csbc.bihar.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "csbc.bihar.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "bihar-daroga",
+      "name": "Bihar Police Subordinate Services Commission",
+      "url": "https://bpssc.bihar.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "bpssc.bihar.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "mpesb",
+      "name": "Madhya Pradesh Employees Selection Board",
+      "url": "https://esb.mp.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "esb.mp.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "vyapam-cg",
+      "name": "Chhattisgarh Vyapam",
+      "url": "https://vyapam.cgstate.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "vyapam.cgstate.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "cg-vyapam",
+      "name": "Chhattisgarh Professional Examination Board",
+      "url": "https://vyapam.cgstate.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "vyapam.cgstate.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "rajasthan-rssb",
+      "name": "Rajasthan Staff Selection Board",
+      "url": "https://rssb.rajasthan.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "rssb.rajasthan.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "rajasthan-police",
+      "name": "Rajasthan Police",
+      "url": "https://police.rajasthan.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "police.rajasthan.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "gujarat-ojas",
+      "name": "Gujarat OJAS recruitment portal",
+      "url": "https://ojas.gujarat.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "ojas.gujarat.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "gujarat-gsssb",
+      "name": "Gujarat Subordinate Service Selection Board",
+      "url": "https://gsssb.gujarat.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "gsssb.gujarat.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "tnusrb",
+      "name": "Tamil Nadu Uniformed Services Recruitment Board",
+      "url": "https://www.tnusrb.tn.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "tnusrb.tn.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "tntrb",
+      "name": "Tamil Nadu Teachers Recruitment Board",
+      "url": "https://www.trb.tn.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "trb.tn.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "tnmrbrecruit",
+      "name": "Tamil Nadu Medical Services Recruitment Board",
+      "url": "https://www.mrb.tn.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "mrb.tn.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "kerala-devaswom",
+      "name": "Kerala Devaswom Recruitment Board",
+      "url": "https://kdrb.kerala.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "kdrb.kerala.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "karnataka-kea",
+      "name": "Karnataka Examinations Authority",
+      "url": "https://cetonline.karnataka.gov.in/kea/",
+      "kind": "html",
+      "allowed_hosts": [
+        "cetonline.karnataka.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "karnataka-kpsc",
+      "name": "Karnataka Public Service Commission",
+      "url": "https://kpsc.kar.nic.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "kpsc.kar.nic.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "karnataka-police",
+      "name": "Karnataka State Police recruitment",
+      "url": "https://ksp-recruitment.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "ksp-recruitment.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "telangana-tslprb",
+      "name": "Telangana Police Recruitment Board",
+      "url": "https://www.tslprb.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "tslprb.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "ap-police",
+      "name": "Andhra Pradesh State Level Police Recruitment Board",
+      "url": "https://slprb.ap.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "slprb.ap.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "ap-psc",
+      "name": "Andhra Pradesh Public Service Commission",
+      "url": "https://psc.ap.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "psc.ap.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "westbengal-psc",
+      "name": "West Bengal Public Service Commission",
+      "url": "https://psc.wb.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "psc.wb.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "wbssc",
+      "name": "West Bengal School Service Commission",
+      "url": "https://www.westbengalssc.com/",
+      "kind": "html",
+      "allowed_hosts": [
+        "westbengalssc.com"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "wb-police",
+      "name": "West Bengal Police Recruitment Board",
+      "url": "https://prb.wb.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "prb.wb.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "punjab-psc",
+      "name": "Punjab Public Service Commission",
+      "url": "https://ppsc.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "ppsc.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "punjab-sssb",
+      "name": "Punjab Subordinate Services Selection Board",
+      "url": "https://sssb.punjab.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "sssb.punjab.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "haryana-psc",
+      "name": "Haryana Public Service Commission",
+      "url": "https://hpsc.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "hpsc.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "odisha-psc",
+      "name": "Odisha Public Service Commission",
+      "url": "https://opsc.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "opsc.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "assam-direct",
+      "name": "Assam Direct Recruitment Commission/SLRC notices via state portal",
+      "url": "https://assam.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "assam.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "nios-results",
+      "name": "National Institute of Open Schooling",
+      "url": "https://results.nios.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "results.nios.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "maharashtra-board",
+      "name": "Maharashtra State Board",
+      "url": "https://mahahsscboard.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "mahahsscboard.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "karnataka-results",
+      "name": "Karnataka examination results",
+      "url": "https://karresults.nic.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "karresults.nic.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "odisha-results",
+      "name": "Odisha results portal",
+      "url": "https://results.odisha.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "results.odisha.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "ap-results",
+      "name": "Andhra Pradesh results portal",
+      "url": "https://results.bse.ap.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "results.bse.ap.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "telangana-results",
+      "name": "Telangana results portal",
+      "url": "https://results.cgg.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "results.cgg.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "jkbose-results",
+      "name": "JKBOSE results",
+      "url": "https://jkbose.nic.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "jkbose.nic.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "ipu",
+      "name": "Guru Gobind Singh Indraprastha University examinations",
+      "url": "https://ipu.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "ipu.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "ignou",
+      "name": "IGNOU results",
+      "url": "https://www.ignou.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "ignou.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "du",
+      "name": "University of Delhi examinations",
+      "url": "https://www.du.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "du.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "bhu",
+      "name": "Banaras Hindu University admissions/examinations",
+      "url": "https://www.bhu.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "bhu.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "cuet-pg",
+      "name": "CUET PG portal",
+      "url": "https://exams.nta.ac.in/CUET-PG/",
+      "kind": "html",
+      "allowed_hosts": [
+        "exams.nta.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "neet-pg",
+      "name": "NEET PG/NBEMS",
+      "url": "https://natboard.edu.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "natboard.edu.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "nbems",
+      "name": "National Board of Examinations in Medical Sciences",
+      "url": "https://natboard.edu.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "natboard.edu.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "nmc",
+      "name": "National Medical Commission notices",
+      "url": "https://www.nmc.org.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "nmc.org.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "icai",
+      "name": "Institute of Chartered Accountants of India exams",
+      "url": "https://www.icai.org/",
+      "kind": "html",
+      "allowed_hosts": [
+        "icai.org"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "icsi",
+      "name": "Institute of Company Secretaries of India exams",
+      "url": "https://www.icsi.edu/",
+      "kind": "html",
+      "allowed_hosts": [
+        "icsi.edu"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "icmai",
+      "name": "Institute of Cost Accountants of India exams",
+      "url": "https://icmai.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "icmai.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
     }
   ]
 }
