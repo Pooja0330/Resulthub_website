@@ -423,9 +423,9 @@ def main():
             f"Authority: {item.get('source_name', 'Official authority')}\n"
             f"Type: {str(item.get('category', 'update')).replace('_', ' ').title()}\n\n"
             f"{item.get('title', 'New official link')}\n\n"
-            f"📄 Direct notice/result (may open a PDF):\n{direct_url}\n"
-            + (f"🌐 Browse the authority website for related notices:\n{source_page}\n" if source_page and source_page != direct_url else "")
-            + "\nThe checker detected this link on an official website. It has not independently verified the notice date or whether applications/results are still active. Please read the official notice."
+            + (f"🌐 OFFICIAL AUTHORITY WEBSITE — start here:\n{source_page}\n\n" if source_page and source_page != direct_url else "")
+            + f"📄 Direct notice/result (may open a PDF):\n{direct_url}\n"
+            + "\nThis is an automatically detected link, not confirmation that a result or application is currently active. Check the official notice."
         )
 
         if not CHANNEL:
@@ -487,8 +487,8 @@ def main():
             f"Authority: {item['source_name']}\n"
             f"Type: {str(item.get('category', 'update')).replace('_', ' ').title()}\n\n"
             f"{item.get('title', '')}\n\n"
-            f"📄 Direct notice/result (may open a PDF):\n{url}\n"
-            + (f"🌐 Browse the authority website for related notices:\n{source_page}\n" if source_page and source_page != url else "")
+            + (f"🌐 OFFICIAL AUTHORITY WEBSITE — start here:\n{source_page}\n\n" if source_page and source_page != url else "")
+            + f"📄 Direct notice/result (may open a PDF):\n{url}\n"
             + "\nPlease confirm the notice date, eligibility and current status on the official portal."
         )
 
