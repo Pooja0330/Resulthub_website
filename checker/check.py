@@ -324,6 +324,22 @@ def fetch_source(source):
 
     return candidates
 
+def test_channel():
+    if not CHANNEL:
+        print("ERROR: TG_CHANNEL is empty")
+        sys.exit(1)
+
+    ok = telegram_send(
+        CHANNEL,
+        "GoResultHub channel delivery test. No exam result is being announced."
+    )
+
+    if not ok:
+        print("ERROR: Channel test failed. Check TG_CHANNEL and bot permissions.")
+        sys.exit(1)
+
+    print("SUCCESS: Test message posted to the channel.")
+    
 def main():
     registry = load_json("checker/sources.json", {"sources": []})
     state = load_json("checker/state.json", {
