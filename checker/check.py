@@ -423,9 +423,8 @@ def main():
             f"Authority: {item.get('source_name', 'Official authority')}\n"
             f"Type: {str(item.get('category', 'update')).replace('_', ' ').title()}\n\n"
             f"{item.get('title', 'New official link')}\n\n"
-            + (f"🌐 OFFICIAL AUTHORITY WEBSITE — start here:\n{source_page}\n\n" if source_page and source_page != direct_url else "")
-            + f"📄 Direct notice/result (may open a PDF):\n{direct_url}\n"
-            + "\nThis is an automatically detected link, not confirmation that a result or application is currently active. Check the official notice."
+            + f"🌐 OFFICIAL AUTHORITY WEBSITE — open this link to browse notices:\n{source_page or 'Official website link unavailable; use the authority name to find its official portal.'}\n"
+            + "\nThe direct document link is intentionally omitted from this channel message because it may open a PDF. Visit the official website to locate and confirm the notice."
         )
 
         if not CHANNEL:
@@ -487,9 +486,8 @@ def main():
             f"Authority: {item['source_name']}\n"
             f"Type: {str(item.get('category', 'update')).replace('_', ' ').title()}\n\n"
             f"{item.get('title', '')}\n\n"
-            + (f"🌐 OFFICIAL AUTHORITY WEBSITE — start here:\n{source_page}\n\n" if source_page and source_page != url else "")
-            + f"📄 Direct notice/result (may open a PDF):\n{url}\n"
-            + "\nPlease confirm the notice date, eligibility and current status on the official portal."
+            + f"🌐 OFFICIAL AUTHORITY WEBSITE — open this link to browse notices:\n{source_page or 'Official website link unavailable; use the authority name to find its official portal.'}\n"
+            + "\nThe direct document link is intentionally omitted from this channel message because it may open a PDF. Visit the official website to locate and confirm the notice."
         )
 
         if not telegram_send(CHANNEL, message):
