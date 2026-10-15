@@ -379,15 +379,16 @@ def main():
 
     # Send newly detected links to the main channel, retrying undelivered alerts.
     public_sent = 0
-    # Avoid flooding the public Telegram channel during the first run or after
-    # a backlog. Leave the remaining alerts queued for later runs.
+    public_attempts = 0
+    # Limit attempts as well as successful deliveries. A Telegram 429 must not
+    # cause the checker to hammer the API for every queued alert.
     max_public_alerts_per_run = max(
-        1, min(int(os.getenv("MAX_PUBLIC_ALERTS_PER_RUN", "5")), 10)
+        1, min(int(os.getenv("MAX_PUBLIC_ALERTS_PER_RUN", "5")), 5)
     )
     for key in list(pending.keys()):
-        if public_sent >= max_public_alerts_per_run:
+        if public_attempts >= max_public_alerts_per_run:
             print(
-                f"Public alert limit reached ({max_public_alerts_per_run}); "
+                f"Public alert attempt limit reached ({max_public_alerts_per_run}); "
                 f"{len(pending)} alerts remain queued"
             )
             break
@@ -412,7 +413,10 @@ def main():
             print("TG_CHANNEL is missing; public alert remains pending")
             break
 
+        public_attempts += 1
         if telegram_send(CHANNEL, message):
+            # Stay comfortably below Telegram's per-chat send rate.
+            time.sleep(1.1)
             seen[key] = {
                 "first_seen": record.get("detected_at", checked_at),
                 "source_id": item.get("source_id", ""),
