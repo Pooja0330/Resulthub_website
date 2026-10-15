@@ -281,6 +281,7 @@ def build_result(item, detected_at):
         "authority": item["source_name"],
         "url": item["url"],
         "official_url": item["url"],
+        "source_url": item.get("source_url", ""),
         "region": item.get("region", "Central"),
         "state": item.get("state", ""),
         "description": (
@@ -413,14 +414,16 @@ def main():
             pending.pop(key, None)
             continue
 
+        direct_url = str(item.get("url", "")).strip()
+        source_page = str(item.get("source_url", "")).strip()
         message = (
             "🔔 GoResultHub | Potential Exam Update\n\n"
             f"Authority: {item.get('source_name', 'Official authority')}\n"
             f"Type: {str(item.get('category', 'update')).replace('_', ' ').title()}\n\n"
             f"{item.get('title', 'New official link')}\n\n"
-            f"Official source:\n{item.get('url', '')}\n\n"
-            "This is an automatically detected link, not confirmation that a "
-            "result or application is currently active. Check the official notice."
+            f"📄 Direct notice/result (may open a PDF):\n{direct_url}\n"
+            + (f"🌐 Browse the authority website for related notices:\n{source_page}\n" if source_page and source_page != direct_url else "")
+            + "\nThe checker detected this link on an official website. It has not independently verified the notice date or whether applications/results are still active. Please read the official notice."
         )
 
         if not CHANNEL:
@@ -448,8 +451,11 @@ def main():
     approved_items = approval.get("pending", []) if isinstance(approval, dict) else []
     remaining_approved = []
 
-    for item in approved_items:
+    for approved_index, item in enumerate(approved_items):
         if TG_RATE_LIMITED:
+            # Preserve this item and every later item; never lose queued alerts
+            # just because Telegram temporarily rate-limited this run.
+            remaining_approved.extend(approved_items[approved_index:])
             break
         if not isinstance(item, dict):
             continue
@@ -473,12 +479,15 @@ def main():
             remaining_approved.append(item)
             continue
 
+        source_page = str(source.get("url", "")).strip()
         message = (
             "📢 GoResultHub | Exam Update\n\n"
             f"Authority: {item['source_name']}\n"
             f"Type: {str(item.get('category', 'update')).replace('_', ' ').title()}\n\n"
-            f"{item.get('title', '')}\n\nOfficial source:\n{url}\n\n"
-            "Please confirm dates and eligibility on the official portal."
+            f"{item.get('title', '')}\n\n"
+            f"📄 Direct notice/result (may open a PDF):\n{url}\n"
+            + (f"🌐 Browse the authority website for related notices:\n{source_page}\n" if source_page and source_page != url else "")
+            + "\nPlease confirm the notice date, eligibility and current status on the official portal."
         )
 
         if not telegram_send(CHANNEL, message):
