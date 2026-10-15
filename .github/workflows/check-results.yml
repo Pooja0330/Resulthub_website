@@ -16,7 +16,7 @@ concurrency:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 12
 
     steps:
       - name: Checkout repository
@@ -40,8 +40,8 @@ jobs:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_ADMIN: ${{ secrets.TG_ADMIN }}
           TG_CHANNEL: ${{ secrets.TG_CHANNEL }}
-          SOURCE_TIMEOUT_SECONDS: "15"
-          SOURCE_WORKERS: "3"
+          SOURCE_TIMEOUT_SECONDS: "6"
+          SOURCE_WORKERS: "8"
           MAX_NEW_PER_SOURCE: "5"
         run: python checker/check.py
 
@@ -49,7 +49,7 @@ jobs:
         if: success()
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+users.noreply.github.com"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add checker/state.json
           git add checker/approved.json
