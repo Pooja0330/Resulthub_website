@@ -17,6 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 TOKEN = os.getenv("TG_TOKEN", "").strip()
 ADMIN = os.getenv("TG_ADMIN", "").strip()
 CHANNEL = os.getenv("TG_CHANNEL", "").strip()
+TG_RATE_LIMITED = False
 
 TIMEOUT = max(4, min(int(os.getenv("SOURCE_TIMEOUT_SECONDS", "6")), 10))
 WORKERS = max(1, min(int(os.getenv("SOURCE_WORKERS", "8")), 12))
@@ -149,6 +150,10 @@ def get_with_retries(url, headers=None):
 
 
 def telegram_send(chat_id, message):
+    global TG_RATE_LIMITED
+    if TG_RATE_LIMITED:
+        print('Telegram is rate-limited; skipping further sends this run')
+        return False
     if not TOKEN or not chat_id:
         print("Telegram delivery skipped: token or destination missing")
         return False
@@ -168,6 +173,12 @@ def telegram_send(chat_id, message):
             result = response.json()
         except ValueError:
             print("Telegram returned an invalid response:", response.status_code)
+            return False
+
+        if response.status_code == 429 or result.get("error_code") == 429:
+            retry_after = result.get("parameters", {}).get("retry_after", 0)
+            TG_RATE_LIMITED = True
+            print("Telegram rate limit reached (429); retry_after=" + str(retry_after) + "s. Stopping sends; alerts remain queued.")
             return False
 
         if response.status_code >= 400 or not result.get("ok"):
@@ -386,6 +397,9 @@ def main():
         1, min(int(os.getenv("MAX_PUBLIC_ALERTS_PER_RUN", "5")), 5)
     )
     for key in list(pending.keys()):
+        if TG_RATE_LIMITED:
+            print('Telegram rate limited; alerts remain queued')
+            break
         if public_attempts >= max_public_alerts_per_run:
             print(
                 f"Public alert attempt limit reached ({max_public_alerts_per_run}); "
@@ -435,6 +449,8 @@ def main():
     remaining_approved = []
 
     for item in approved_items:
+        if TG_RATE_LIMITED:
+            break
         if not isinstance(item, dict):
             continue
 
@@ -497,8 +513,10 @@ def main():
     if failures:
         summary += "\nSome sources failed. Check the GitHub Actions logs.\n"
 
-    if ADMIN:
+    if ADMIN and not TG_RATE_LIMITED:
         telegram_send(ADMIN, summary)
+    elif ADMIN and TG_RATE_LIMITED:
+        print('Telegram summary skipped because Telegram rate-limited this run')
     else:
         print("TG_ADMIN missing; private summary not sent")
 
