@@ -1,44 +1,769 @@
-
-[
-  {
-    "name": "IBPS official announcements",
-    "url": "https://www.ibps.in/",
-    "cat": "Banking & Insurance",
-    "allowed_hosts": [
-      "ibps.in",
-      "ibpsreg.ibps.in"
-    ]
-  },
-  {
-    "name": "RRB Secunderabad official notices",
-    "url": "https://rrbsecunderabad.gov.in/notices/",
-    "cat": "Railways",
-    "allowed_hosts": [
-      "rrbsecunderabad.gov.in"
-    ]
-  },
-  {
-    "name": "RRB Bhubaneswar official results",
-    "url": "https://rrbbbs.gov.in/results.php",
-    "cat": "Railways",
-    "allowed_hosts": [
-      "rrbbbs.gov.in"
-    ]
-  },
-  {
-    "name": "UPSC written results",
-    "url": "https://www.upsc.gov.in/exams-related-info/written-result",
-    "cat": "Civil Services & Defence",
-    "allowed_hosts": [
-      "upsc.gov.in"
-    ]
-  },
-  {
-    "name": "SSC official",
-    "url": "https://ssc.gov.in/",
-    "cat": "Government Jobs",
-    "allowed_hosts": [
-      "ssc.gov.in"
-    ]
-  }
-]
+{
+  "sources": [
+    {
+      "id": "upsc",
+      "name": "UPSC",
+      "url": "https://upsc.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "upsc.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "ssc",
+      "name": "Staff Selection Commission",
+      "url": "https://ssc.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "ssc.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "ibps",
+      "name": "Institute of Banking Personnel Selection",
+      "url": "https://www.ibps.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "ibps.in",
+        "ibpsreg.ibps.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "sbi-careers",
+      "name": "State Bank of India Careers",
+      "url": "https://sbi.co.in/web/careers",
+      "kind": "html",
+      "allowed_hosts": [
+        "sbi.co.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "rbi-opportunities",
+      "name": "Reserve Bank of India Opportunities",
+      "url": "https://opportunities.rbi.org.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "rbi.org.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "nta",
+      "name": "National Testing Agency",
+      "url": "https://www.nta.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "nta.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "jeemain",
+      "name": "JEE Main",
+      "url": "https://jeemain.nta.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "nta.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "neet",
+      "name": "NEET UG",
+      "url": "https://exams.nta.ac.in/NEET/",
+      "kind": "html",
+      "allowed_hosts": [
+        "nta.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "cuet",
+      "name": "CUET",
+      "url": "https://exams.nta.ac.in/CUET-UG/",
+      "kind": "html",
+      "allowed_hosts": [
+        "nta.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "ugcnet",
+      "name": "UGC NET",
+      "url": "https://ugcnet.nta.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "nta.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "gate",
+      "name": "GATE",
+      "url": "https://gate2026.iisc.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "iisc.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "upsc-results",
+      "name": "UPSC written results",
+      "url": "https://upsc.gov.in/exams-related-info/written-result",
+      "kind": "html",
+      "allowed_hosts": [
+        "upsc.gov.in"
+      ],
+      "categories": [
+        "result",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "rrb-bbs",
+      "name": "RRB Bhubaneswar",
+      "url": "https://rrbbbs.gov.in/results.php",
+      "kind": "html",
+      "allowed_hosts": [
+        "rrbbbs.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "rrb-sec",
+      "name": "RRB Secunderabad",
+      "url": "https://rrbsecunderabad.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "rrbsecunderabad.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "cbse",
+      "name": "CBSE",
+      "url": "https://www.cbse.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "cbse.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "cisce",
+      "name": "CISCE",
+      "url": "https://cisce.org/",
+      "kind": "html",
+      "allowed_hosts": [
+        "cisce.org"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "nios",
+      "name": "NIOS",
+      "url": "https://www.nios.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "nios.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "up-board",
+      "name": "UP Board",
+      "url": "https://upmsp.edu.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "upmsp.edu.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "mpbse",
+      "name": "MP Board",
+      "url": "https://mpbse.nic.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "mpbse.nic.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "cgbse",
+      "name": "Chhattisgarh Board",
+      "url": "https://cgbse.nic.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "cgbse.nic.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "bseb",
+      "name": "Bihar School Examination Board",
+      "url": "https://biharboardonline.bihar.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "biharboardonline.bihar.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "rajeduboard",
+      "name": "Rajasthan Board",
+      "url": "https://rajeduboard.rajasthan.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "rajasthan.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "gseb",
+      "name": "Gujarat Board",
+      "url": "https://www.gseb.org/",
+      "kind": "html",
+      "allowed_hosts": [
+        "gseb.org"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "mahresult",
+      "name": "Maharashtra Results",
+      "url": "https://mahresult.nic.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "mahresult.nic.in"
+      ],
+      "categories": [
+        "result"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "tnresults",
+      "name": "Tamil Nadu Results",
+      "url": "https://tnresults.nic.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "tnresults.nic.in"
+      ],
+      "categories": [
+        "result"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "keralaresults",
+      "name": "Kerala Results",
+      "url": "https://results.kerala.nic.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "kerala.nic.in"
+      ],
+      "categories": [
+        "result"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "wbresults",
+      "name": "West Bengal Results",
+      "url": "https://wbresults.nic.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "wbresults.nic.in"
+      ],
+      "categories": [
+        "result"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "odisha-board",
+      "name": "Odisha Board",
+      "url": "https://bseodisha.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "bseodisha.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "karnataka-board",
+      "name": "Karnataka School Examination and Assessment Board",
+      "url": "https://kseab.karnataka.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "karnataka.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "telangana-board",
+      "name": "Telangana Board",
+      "url": "https://bse.telangana.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "telangana.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "andhra-board",
+      "name": "Andhra Pradesh Board",
+      "url": "https://bse.ap.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "ap.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "haryana-board",
+      "name": "Haryana Board",
+      "url": "https://bseh.org.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "bseh.org.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "punjab-board",
+      "name": "Punjab School Education Board",
+      "url": "https://www.pseb.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "pseb.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "assam-board",
+      "name": "Assam Board",
+      "url": "https://sebaonline.org/",
+      "kind": "html",
+      "allowed_hosts": [
+        "sebaonline.org"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "jkbose",
+      "name": "Jammu and Kashmir Board",
+      "url": "https://jkbose.nic.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "jkbose.nic.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "upsssc",
+      "name": "UP Subordinate Services Selection Commission",
+      "url": "https://upsssc.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "upsssc.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "mppsc",
+      "name": "Madhya Pradesh Public Service Commission",
+      "url": "https://mppsc.mp.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "mppsc.mp.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "cgpsc",
+      "name": "Chhattisgarh Public Service Commission",
+      "url": "https://psc.cg.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "psc.cg.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "bpsc",
+      "name": "Bihar Public Service Commission",
+      "url": "https://bpsc.bihar.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "bpsc.bihar.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "rpsc",
+      "name": "Rajasthan Public Service Commission",
+      "url": "https://rpsc.rajasthan.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "rpsc.rajasthan.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "gpsc",
+      "name": "Gujarat Public Service Commission",
+      "url": "https://gpsc.gujarat.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "gpsc.gujarat.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "tnpsc",
+      "name": "Tamil Nadu Public Service Commission",
+      "url": "https://www.tnpsc.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "tnpsc.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "keralapsc",
+      "name": "Kerala Public Service Commission",
+      "url": "https://www.keralapsc.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "keralapsc.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "mpsc",
+      "name": "Maharashtra Public Service Commission",
+      "url": "https://mpsc.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "mpsc.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "wbpsc",
+      "name": "West Bengal Public Service Commission",
+      "url": "https://psc.wb.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "psc.wb.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "appsc",
+      "name": "Andhra Pradesh Public Service Commission",
+      "url": "https://psc.ap.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "psc.ap.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "tspsc",
+      "name": "Telangana Public Service Commission",
+      "url": "https://www.tspsc.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "tspsc.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "opsc",
+      "name": "Odisha Public Service Commission",
+      "url": "https://opsc.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "opsc.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "hpsc",
+      "name": "Haryana Public Service Commission",
+      "url": "https://hpsc.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "hpsc.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    },
+    {
+      "id": "uppsc",
+      "name": "Uttar Pradesh Public Service Commission",
+      "url": "https://uppsc.up.nic.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "uppsc.up.nic.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null
+    }
+  ]
+}

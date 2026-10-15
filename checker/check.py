@@ -1,207 +1,107 @@
-"""Safer ResultHub checker.
-
-Reads checker/sources.json, detects new result-like links, writes site/results.json
-when AUTO_PUBLISH=1, and sends Telegram alerts. This is a heuristic, not a guarantee
-that an exam result has been declared; review sources and keep auto-publish disabled
-until the source list has been tested.
-"""
-import datetime as dt
-import json
-import os
-import re
-import sys
-import time
-from pathlib import Path
+import os, json, re, hashlib, sys
+from datetime import datetime, timezone
 from urllib.parse import urljoin, urlparse
-
-import requests
+import requests, feedparser
 from bs4 import BeautifulSoup
 
-ROOT = Path(__file__).resolve().parent.parent
-SRC = ROOT / "checker" / "sources.json"
-STATE = ROOT / "checker" / "state.json"
-RES = ROOT / "site" / "results.json"
-
-AUTO = os.getenv("AUTO_PUBLISH", "0").strip() == "1"
-TOKEN = os.getenv("TG_TOKEN", "").strip()
-CHANNEL = os.getenv("TG_CHANNEL", "").strip()
-ADMIN = os.getenv("TG_ADMIN", "").strip()
-TIMEOUT = (8, 20)
-MAX_NEW_PER_SOURCE = int(os.getenv("MAX_NEW_PER_SOURCE", "5"))
-USER_AGENT = "GoResultHubBot/1.0 (+https://goresulthub.com; official-result-link-monitor)"
-WANT = re.compile(r"\b(result|merit list|score.?card|final selection|cut.?off|declar|qualified candidates|selected candidates)\b", re.I)
-SKIP = re.compile(r"\b(admit card|answer key|syllabus|apply online|application form|vacanc(?:y|ies)|exam city|hall ticket|corrigendum|tender|recruitment notice)\b", re.I)
-CATEGORY_RULES = [
-    (r"UPSC|IAS|IPS|NDA|CDS|AFCAT|agniveer|army|navy", "Civil Services & Defence"),
-    (r"NEET|JEE|CUET|CAT|CLAT|JIPMAT|CMAT|BITSAT|AIIMS", "Entrance"),
-    (r"UGC|CSIR|NET|TET|teacher|CTET", "Teaching & NET"),
-    (r"IBPS|SBI PO|SBI Clerk|RBI|bank", "Banking"),
-    (r"SSC|RRB|railway", "SSC & Railways"),
-    (r"CA Final|CA Inter|ICAI|ICSI|CS Executive|CMA", "CA / CS"),
-    (r"GATE|engineering", "Engineering"),
-    (r"GRE|GMAT|TOEFL|IELTS|SAT", "Abroad Exams"),
-    (r"board|CBSE|ICSE|ISC|class 10|class 12", "Boards"),
-    (r"PSC|UPPSC|BPSC|MPSC|RPSC|MPPSC|CGPSC|TNPSC|OPSC|JPSC", "State PSC"),
-]
-
-SESSION = requests.Session()
-SESSION.headers.update({"User-Agent": USER_AGENT, "Accept": "text/html,application/xhtml+xml"})
-
-
-def load_json(path, default):
+ROOT=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+def path(p): return os.path.join(ROOT,p)
+def load(p, default):
     try:
-        with path.open("r", encoding="utf-8") as f:
-            return json.load(f)
-    except (OSError, json.JSONDecodeError):
-        return default
-
-
-def save_json(path, data):
-    path.parent.mkdir(parents=True, exist_ok=True)
-    tmp = path.with_suffix(path.suffix + ".tmp")
-    with tmp.open("w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
-        f.write("\n")
-    tmp.replace(path)
-
-
-def telegram(chat, message):
-    if not TOKEN or not chat:
-        print("Telegram skipped (TG_TOKEN or chat target missing).")
-        return False
+        with open(path(p),encoding="utf-8") as f: return json.load(f)
+    except (FileNotFoundError,json.JSONDecodeError): return default
+def save(p,data):
+    os.makedirs(os.path.dirname(path(p)),exist_ok=True)
+    tmp=path(p)+".tmp"
+    with open(tmp,"w",encoding="utf-8") as f: json.dump(data,f,indent=2,ensure_ascii=False)
+    os.replace(tmp,path(p))
+TOKEN=os.getenv("TG_TOKEN","").strip(); ADMIN=os.getenv("TG_ADMIN","").strip(); CHANNEL=os.getenv("TG_CHANNEL","").strip()
+AUTO=os.getenv("AUTO_PUBLISH","0").strip()=="1"
+TIMEOUT=int(os.getenv("SOURCE_TIMEOUT_SECONDS","20"))
+S=requests.Session()
+S.headers.update({"User-Agent":"GoResultHubBot/1.0 (+official source monitor; respect source terms)","Accept":"text/html,application/rss+xml,application/xml;q=0.9,*/*;q=0.8"})
+RULES=[
+("result",r"\b(result|results|scorecard|score card|marks list|result declared)\b"),
+("merit_list",r"\b(merit list|selection list|selected candidates|final selection|qualified candidates|provisional selection)\b"),
+("cutoff",r"\b(cut.?off|cutoff)\b"),
+("admit_card",r"\b(admit card|hall ticket|call letter|e.?admit card)\b"),
+("answer_key",r"\b(answer key|response sheet|answer sheet)\b"),
+("notification",r"\b(notification|advertisement|recruitment|exam calendar|examination notice|exam notice|vacancy|apply online|registration open|application form|application dates)\b")]
+SKIP=re.compile(r"\b(tender|quotation|vendor|procurement|press release|media advisory|syllabus|annual report|privacy policy)\b",re.I)
+def allowed(url,hosts):
     try:
-        response = requests.post(
-            f"https://api.telegram.org/bot{TOKEN}/sendMessage",
-            data={"chat_id": chat, "text": message[:4000], "disable_web_page_preview": True},
-            timeout=TIMEOUT,
-        )
-        response.raise_for_status()
-        payload = response.json()
-        if not payload.get("ok"):
-            raise RuntimeError(payload.get("description", "Telegram API returned ok=false"))
+        p=urlparse(url); h=(p.hostname or "").lower()
+        return p.scheme=="https" and any(h==x.lower() or h.endswith("."+x.lower()) for x in hosts)
+    except Exception:return False
+def cat(text):
+    if not text or SKIP.search(text): return None
+    for c,pat in RULES:
+        if re.search(pat,text,re.I): return c
+    return None
+def send(chat,msg):
+    if not TOKEN or not chat: print("Telegram skipped: missing token/destination"); return False
+    try:
+        r=S.post("https://api.telegram.org/bot"+TOKEN+"/sendMessage",json={"chat_id":chat,"text":msg[:3900],"disable_web_page_preview":True},timeout=15)
+        r.raise_for_status()
+        if not r.json().get("ok"): print("Telegram API failure",r.text[:300]); return False
         return True
-    except Exception as exc:
-        print(f"Telegram send failed: {type(exc).__name__}: {exc}", file=sys.stderr)
-        return False
-
-
-def category(text, default):
-    for pattern, label in CATEGORY_RULES:
-        if re.search(pattern, text, re.I):
-            return label
-    return default or "Other Govt Jobs"
-
-
-def extract_links(html, base_url, allowed_hosts):
-    soup = BeautifulSoup(html, "html.parser")
-    found = {}
-    for a in soup.find_all("a", href=True):
-        title = " ".join(a.get_text(" ", strip=True).split())
-        href = a.get("href", "").strip()
-        if len(title) < 12 or len(title) > 200 or not WANT.search(title) or SKIP.search(title):
-            continue
-        url = urljoin(base_url, href)
-        parsed = urlparse(url)
-        if parsed.scheme != "https" or not parsed.hostname:
-            continue
-        # Prevent a source page from making the checker publish unrelated third-party links.
-        if not any(parsed.hostname == host or parsed.hostname.endswith("." + host) for host in allowed_hosts):
-            continue
-        if parsed.hostname.lower() in {"facebook.com", "x.com", "twitter.com", "youtube.com"}:
-            continue
-        found[url] = title
-    return found
-
-
+    except Exception as e: print("Telegram error",type(e).__name__,str(e)[:300]); return False
+def collect(src):
+    if src.get("kind")=="rss":
+        feed=feedparser.parse(src["url"])
+        if not feed.entries and getattr(feed,"bozo",False): raise RuntimeError("RSS parse failed")
+        raw=[(e.get("title",""),e.get("link","")) for e in feed.entries]
+    else:
+        r=S.get(src["url"],timeout=TIMEOUT); r.raise_for_status()
+        if not allowed(r.url,src["allowed_hosts"]): raise RuntimeError("Redirected outside allowlisted official hosts: "+r.url)
+        if "html" not in r.headers.get("content-type","").lower() and "xml" not in r.headers.get("content-type","").lower():
+            raise RuntimeError("Non-HTML page needs a dedicated PDF/API adapter")
+        soup=BeautifulSoup(r.text,"html.parser")
+        raw=[(" ".join(a.get_text(" ",strip=True).split()),urljoin(r.url,a.get("href",""))) for a in soup.select("a[href]")]
+    out=[]
+    for title,url in raw:
+        title=" ".join(str(title).split()); url=str(url).split("#")[0]
+        category=cat(title)
+        if title and category and allowed(url,src["allowed_hosts"]):
+            out.append({"title":title[:280],"url":url,"category":category})
+    return out
 def main():
-    sources = load_json(SRC, [])
-    state = load_json(STATE, {"seen": {}, "fails": {}, "last_run": None})
-    results = load_json(RES, [])
-    if not isinstance(sources, list):
-        raise SystemExit("checker/sources.json must contain a JSON array.")
-    if not isinstance(results, list):
-        raise SystemExit("site/results.json must contain a JSON array.")
-
-    today = dt.datetime.now(dt.timezone.utc).strftime("%d %b %Y")
-    discovered = []
-    for source in sources:
-        name = source.get("name", "Unnamed source")
-        source_url = source.get("url", "")
-        parsed = urlparse(source_url)
-        if parsed.scheme != "https" or not parsed.hostname:
-            print(f"SKIP invalid/non-HTTPS source: {name}")
-            continue
-        allowed_hosts = set(source.get("allowed_hosts", [])) | {parsed.hostname.lower()}
+    registry=load("checker/sources.json",{"sources":[]})
+    state=load("checker/state.json",{"seen":{},"last_run":None,"source_health":{}})
+    seen=state.setdefault("seen",{}); health=state.setdefault("source_health",{})
+    results=load("site/data/results.json",[])
+    if not isinstance(results,list): print("ERROR: site/data/results.json must be an array"); sys.exit(2)
+    now=datetime.now(timezone.utc).isoformat(); found=[]; fails=0
+    for src in registry.get("sources",[]):
+        if not src.get("enabled",True): continue
         try:
-            response = SESSION.get(source_url, timeout=TIMEOUT)
-            response.raise_for_status()
-            if "text/html" not in response.headers.get("Content-Type", "text/html").lower():
-                print(f"SKIP non-HTML source: {name}")
-                continue
-            found = extract_links(response.text, response.url, allowed_hosts)
-            state.setdefault("fails", {})[name] = 0
-        except Exception as exc:
-            count = state.setdefault("fails", {}).get(name, 0) + 1
-            state["fails"][name] = count
-            print(f"FAIL {name}: {type(exc).__name__}: {exc}", file=sys.stderr)
-            if count == 3:
-                telegram(ADMIN, f"GoResultHub checker warning: {name} failed 3 consecutive checks. Please review the source URL.")
-            continue
-
-        old = set(state.setdefault("seen", {}).get(name, []))
-        # On first run, baseline current links rather than blasting old links as new results.
-        if name not in state["seen"]:
-            state["seen"][name] = sorted(found)
-            print(f"BASELINE {name}: recorded {len(found)} existing result-like links; no alerts.")
-            continue
-
-        fresh = [(url, title) for url, title in found.items() if url not in old]
-        if len(fresh) > MAX_NEW_PER_SOURCE:
-            telegram(ADMIN, f"GoResultHub review needed: {name} produced {len(fresh)} new result-like links. Nothing from this source was auto-published; check for a website layout change.")
-            print(f"REVIEW {name}: {len(fresh)} new links exceeds limit {MAX_NEW_PER_SOURCE}")
-            # Do not mark these as seen, so the owner can inspect and run again after review.
-            continue
-
-        for url, title in fresh:
-            discovered.append({
-                "t": title,
-                "c": category(title + " " + name, source.get("cat")),
-                "d": today,
-                "u": url,
-                "info": f"New result-related link detected on the official {name} source. Verify the notice before relying on it.",
-                "source": name,
-                "verified": False,
-            })
-        state["seen"][name] = sorted(old | set(found.keys()))
-        print(f"OK {name}: {len(found)} matching links; {len(fresh)} new.")
-
-    # Avoid duplicate URLs already on the website, even if sources overlap.
-    existing_urls = {item.get("u") for item in results if isinstance(item, dict)}
-    unique = []
-    for item in discovered:
-        if item["u"] not in existing_urls:
-            unique.append(item)
-            existing_urls.add(item["u"])
-
-    for item in unique:
-        title = item["t"]
-        url = item["u"]
-        if AUTO:
-            # The item is still explicitly labelled as detected/unverified.
-            results.insert(0, item)
-            telegram(CHANNEL, f"Possible result update — verify before sharing\n{title}\nOfficial source: {url}\nDetected: {today}\nGoResultHub does not collect candidate credentials.")
-        else:
-            telegram(ADMIN, f"DRAFT — review before publishing\n{title}\n{url}\nDetected: {today}\nAdd only after confirming the official notice.")
-
-    if AUTO and unique:
-        save_json(RES, results[:250])
-
-    state["last_run"] = dt.datetime.now(dt.timezone.utc).isoformat()
-    save_json(STATE, state)
-    print(f"Finished: {len(unique)} new unique links; AUTO_PUBLISH={AUTO}.")
-    if not TOKEN:
-        print("NOTICE: TG_TOKEN is not configured; Telegram alerts are disabled.")
-
-
-if __name__ == "__main__":
-    main()
+            items=collect(src); fresh=[]
+            for x in items:
+                key=hashlib.sha256(x["url"].encode()).hexdigest()[:20]
+                if key in seen: continue
+                seen[key]={"source":src["id"],"first_seen":now,"url":x["url"]}
+                x.update({"id":key,"source_id":src["id"],"source_name":src["name"],"source_url":src["url"],"detected_at":now,"verified":False,"status":"published" if AUTO else "review"})
+                fresh.append(x)
+            found.extend(fresh); health[src["id"]]={"status":"ok","checked_at":now,"matches":len(items),"new":len(fresh)}
+            print(f"OK {src['name']}: {len(items)} matching links, {len(fresh)} new")
+        except Exception as e:
+            fails+=1; health[src["id"]]={"status":"failed","checked_at":now,"error":f"{type(e).__name__}: {e}"[:500]}
+            print(f"FAIL {src['name']}: {type(e).__name__}: {e}")
+    if found and AUTO:
+        existing={x.get("url") for x in results if isinstance(x,dict)}
+        add=[x for x in found if x["url"] not in existing]
+        save("site/data/results.json",add+results)
+        for x in add:
+            msg=f"GoResultHub new candidate ({x['category']})\n{x['title']}\nOfficial source: {x['url']}\nPlease verify on the authority website."
+            if CHANNEL: send(CHANNEL,msg)
+            if ADMIN: send(ADMIN,"AUTO-PUBLISHED; unverified detection:\n"+msg)
+        print("AUTO: added",len(add))
+    elif found:
+        for x in found:
+            send(ADMIN,f"REVIEW DRAFT — not published\n{x['source_name']} | {x['category']}\n{x['title']}\n{x['url']}")
+        print("REVIEW: candidate links sent to admin; not published")
+    else: print("No new candidate links")
+    state["last_run"]=now; state["last_run_failures"]=fails; state["last_run_new_candidates"]=len(found)
+    save("checker/state.json",state)
+    print(f"Finished; AUTO_PUBLISH={AUTO}; failures={fails}; new={len(found)}")
+if __name__=="__main__": main()

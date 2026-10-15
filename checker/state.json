@@ -1,15 +1,5 @@
 {
-  "seen": {
-    "SSC official": []
-  },
-  "fails": {
-    "IBPS official announcements": 14,
-    "RRB Secunderabad official": 13,
-    "RRB Bhubaneswar official": 13,
-    "UPSC written results": 14,
-    "SSC official": 0,
-    "RRB Secunderabad official notices": 1,
-    "RRB Bhubaneswar official results": 1
-  },
-  "last_run": "2026-10-15T06:40:39.751311+00:00"
+  "seen": {},
+  "last_run": null,
+  "source_health": {}
 }

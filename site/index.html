@@ -2,42 +2,21 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#071a33">
-<meta name="description" content="Find exam result announcements, admit cards, answer keys and official exam links across India and international exams.">
-<title>GoResultHub — Exam Results, Updates & Official Links</title>
-<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css">
+<meta name="description" content="GoResultHub helps students discover exam notifications, admit cards, answer keys and results with links to official sources.">
+<meta name="theme-color" content="#123c75">
+<title>GoResultHub — Exam Notifications & Results</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="header"><div class="container nav">
-<a class="brand" href="#"><span class="brand-icon">G</span><span>GoResult<span class="blue">Hub</span></span></a>
-<button id="menuBtn" class="menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
-<nav id="navLinks"><a href="#updates">Latest updates</a><a href="#results">Results</a><a href="#categories">Categories</a><a href="#official">Official portals</a><a href="#about">About</a></nav>
-</div></header>
-<main id="main">
-<section class="hero"><div class="container hero-inner"><div class="hero-copy">
-<p class="eyebrow">EXAM RESULTS · ADMISSIONS · RECRUITMENT</p>
-<h1>Every exam update.<br><span>One trusted hub.</span></h1>
-<p class="lead">Find result announcements, exam notices and official result portals — without searching dozens of websites.</p>
-<form id="searchForm" class="search" role="search"><label class="sr-only" for="searchInput">Search exam or authority</label><input id="searchInput" type="search" placeholder="Search UPSC, IBPS, NEET, GRE, CA, state exams…"><button>Search</button></form>
-<div class="hero-points"><span>✓ Official-source links</span><span>✓ Mobile friendly</span><span>✓ Free to browse</span></div>
-</div><div class="hero-visual" aria-hidden="true"><div class="circle c1"></div><div class="circle c2"></div><div class="grad-cap">🎓</div><div class="book b1"></div><div class="book b2"></div><div class="star s1">✦</div><div class="star s2">✦</div></div></div></section>
-<section class="updates-band" id="updates"><div class="container"><div class="section-head"><div><p class="eyebrow">FRESH FROM OFFICIAL SOURCES</p><h2>Latest exam notifications</h2></div><a id="telegramTop" class="telegram-btn" href="https://t.me/+syZNzwGOHGc0YTBl" target="_blank" rel="noopener noreferrer">Join Telegram updates ↗</a></div><p class="updates-warning">We link to official sources. Always verify deadlines, result status and login availability on the authority website.</p><div id="notificationList" class="notification-grid"></div></div></section>
-<section class="container section" id="categories"><div class="section-head"><div><p class="eyebrow dark">BROWSE EXAMS</p><h2>Find your exam category</h2></div><p class="muted">Choose a category to filter the directory.</p></div><div class="category-grid" id="categoryGrid"></div></section>
-<section class="container directory-layout" id="results"><div class="main-col">
-<div class="section-head"><div><p class="eyebrow dark">SEARCHABLE DIRECTORY</p><h2>Exam result & official portals</h2></div><span id="count" class="count"></span></div>
-<div class="notice"><b>Important:</b> This directory links to official authorities. A listing is not confirmation that a result has been declared. Always check the authority's latest notice.</div>
-<div class="filter-row"><label for="statusFilter">Show</label><select id="statusFilter"><option value="all">All listings</option><option value="results">Result portals</option><option value="admissions">Admissions & entrance</option><option value="recruitment">Recruitment</option><option value="international">International tests</option></select><label for="sortFilter">Sort</label><select id="sortFilter"><option value="az">A–Z</option><option value="category">Category</option></select></div>
-<div id="examList" class="exam-list" aria-live="polite"></div><p id="empty" class="empty" hidden>No matches. Try another search or category.</p>
-</div><aside class="side-col">
-<div class="side-card"><p class="eyebrow dark">RESULT DAY CHECKLIST</p><h3>Before checking your result</h3><ul><li>Confirm the announcement on the official authority website.</li><li>Keep your roll number or registration details ready.</li><li>Check the website address before entering personal information.</li><li>Never share your password with GoResultHub or anyone else.</li></ul></div>
-<div class="side-card blue-card"><span class="info-icon">ⓘ</span><h3>Why use GoResultHub?</h3><p>One searchable directory to help you find the right official portal faster. We do not store candidate passwords or claim to be a government website.</p></div>
-<div class="side-card"><h3>Suggest an exam</h3><p class="muted small">Want another exam listed? Send a request to the site owner.</p><a class="outline-btn" href="contact.html">Contact us →</a></div>
-</aside></section>
-<section class="popular"><div class="container"><div class="section-head"><div><p class="eyebrow dark">QUICK ACCESS</p><h2>Frequently searched</h2></div></div><div id="popularGrid" class="popular-grid"></div></div></section>
-<section class="container social-strip"><div><p class="eyebrow dark">NEVER MISS AN UPDATE</p><h2>Results and notifications, wherever you are.</h2><p class="muted">Follow the Telegram channel for new posts. The channel link is configurable in <code>data.js</code>.</p></div><div class="social-actions"><a id="telegramBottom" class="telegram-btn" href="https://t.me/+syZNzwGOHGc0YTBl" target="_blank" rel="noopener noreferrer">Join Telegram ↗</a><a id="githubLink" class="outline-btn" href="https://github.com/Pooja0330/Resulthub_website" target="_blank" rel="noopener noreferrer">View GitHub repository ↗</a></div></section>
-<section class="container about-strip" id="about"><div><p class="eyebrow dark">ABOUT GORESULT HUB</p><h2>Built to make exam updates easier to find.</h2><p class="muted">Our goal is to organize result notices and official links in one place. Result dates and statuses should be verified against the relevant exam authority before publication.</p></div><div class="about-note"><b>Independent information portal</b><p>GoResultHub is not affiliated with any government department, examination board, university or testing organization.</p></div></section>
+<header class="top"><a class="brand" href="./"><span class="logo">GR</span><span>GoResultHub<small>Exam updates made easier</small></span></a><nav><a href="#updates">Latest updates</a><a href="about.html">About</a><a href="disclaimer.html">Disclaimer</a><a href="#support">Support us</a></nav></header>
+<main>
+<section class="hero"><p class="eyebrow">INDIA-WIDE EXAM TRACKER</p><h1>Every exam update.<br><span>One place to check.</span></h1><p class="lede">Discover official notifications, admit cards, answer keys, merit lists and results. Always verify important information on the issuing authority's website.</p><form id="searchForm" class="search"><label class="sr" for="q">Search exams</label><input id="q" type="search" placeholder="Search exam, board, state or authority…"><button>Search</button></form><div class="pills"><span>Central exams</span><span>State boards</span><span>PSC & recruitment</span><span>Entrance exams</span></div></section>
+<section class="content" id="updates"><div class="sectionhead"><div><p class="eyebrow">UPDATED FROM MONITORING SOURCES</p><h2>Latest exam updates</h2></div><span id="count" class="count">Loading…</span></div>
+<div class="filters"><label>Category<select id="category"><option value="">All categories</option><option value="notification">Notifications</option><option value="result">Results</option><option value="admit_card">Admit cards</option><option value="answer_key">Answer keys</option><option value="merit_list">Merit lists</option><option value="cutoff">Cutoffs</option></select></label><label>State / region<select id="region"><option value="">All India</option><option>Central</option><option>Andhra Pradesh</option><option>Assam</option><option>Bihar</option><option>Chhattisgarh</option><option>Gujarat</option><option>Haryana</option><option>Karnataka</option><option>Kerala</option><option>Madhya Pradesh</option><option>Maharashtra</option><option>Odisha</option><option>Punjab</option><option>Rajasthan</option><option>Tamil Nadu</option><option>Telangana</option><option>Uttar Pradesh</option><option>West Bengal</option></select></label><label>Sort<select id="sort"><option value="new">Newest first</option><option value="title">Exam name</option></select></label></div>
+<div id="updatesList" class="cards"><div class="empty">Loading updates…</div></div><p id="empty" class="empty hidden">No matching updates yet. Try another search or category.</p>
+</section>
+<section class="support" id="support"><div><p class="eyebrow">INDEPENDENT STUDENT RESOURCE</p><h2>Find this useful?</h2><p>Help us maintain and improve GoResultHub. Supporter payments will be enabled after a secure payment provider is configured.</p></div><button id="supportBtn" class="secondary">Support GoResultHub</button><p id="supportNote" class="note" aria-live="polite"></p></section>
 </main>
-<footer class="footer"><div class="container footer-grid"><div><a class="brand light" href="#"><span class="brand-icon">G</span><span>GoResult<span class="blue">Hub</span></span></a><p class="footer-text">Exam results, notifications and official links in one place.</p></div><div><h3>Directory</h3><a href="#updates">Latest updates</a><a href="#results">Exam portals</a><a href="#categories">Categories</a><a href="admin.html">Site owner tools</a></div><div id="official"><h3>Information</h3><a href="about.html">About us</a><a href="editorial-policy.html">Editorial policy</a><a href="contact.html">Contact</a></div><div><h3>Legal</h3><a href="privacy-policy.html">Privacy policy</a><a href="disclaimer.html">Disclaimer</a><a href="terms.html">Terms of use</a></div></div><div class="container footer-bottom"><span>© <span id="year"></span> GoResultHub</span><span>Always verify dates and results on official websites.</span></div></footer>
-<script src="data.js"></script><script src="script.js"></script>
+<footer><div><a class="brand footbrand" href="./"><span class="logo">GR</span><span>GoResultHub<small>Independent exam information portal</small></span></a><p>GoResultHub is an independent information service and is not affiliated with any government agency, examination board or university.</p></div><div class="footlinks"><a href="about.html">About</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="disclaimer.html">Disclaimer</a><a href="contact.html">Contact</a></div><p class="copyright">© <span id="year"></span> GoResultHub</p></footer>
+<script src="app.js" defer></script>
 </body></html>
