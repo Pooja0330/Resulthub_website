@@ -312,6 +312,7 @@ def main():
     seen = state.setdefault("seen", {})
     health = state.setdefault("source_health", {})
     pending = state.setdefault("pending_alerts", {})
+    held = state.setdefault("held_alerts", {})
 
     if not isinstance(pending, dict):
         pending = {}
@@ -346,7 +347,7 @@ def main():
                         item["url"].encode("utf-8")
                     ).hexdigest()[:24]
 
-                    if key in seen or key in pending:
+                    if key in seen or key in pending or key in held:
                         continue
 
                     item["id"] = key
@@ -501,6 +502,7 @@ def main():
         "last_run_new_candidates": len(candidates),
         "last_run_public_posts": public_sent,
         "pending_alert_count": len(pending),
+        "held_for_review_count": len(held),
         "source_registry_count": len(sources),
     })
 
@@ -517,6 +519,7 @@ def main():
         f"New candidates: {len(candidates)}\n"
         f"Main-channel alerts sent: {public_sent}\n"
         f"Alerts pending delivery: {len(pending)}\n"
+        f"Older alerts held for review: {len(held)}\n"
     )
 
     if failures:
