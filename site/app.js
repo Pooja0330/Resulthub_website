@@ -247,6 +247,7 @@ function filteredItems(){
  return list;
 }
 function render(){
+ try{
  renderStateSidebar();
   const list=filteredItems(), pages=Math.max(1,Math.ceil(list.length/PAGE_SIZE));
   renderStateResources();
@@ -270,6 +271,7 @@ function render(){
   $("#nextPage")?.addEventListener("click",()=>{page++;render();$("#updates").scrollIntoView({behavior:"smooth"});});
  }
  renderFeatured();
+ }catch(error){console.error("GoResultHub render failed:",error);const count=$("#count"),list=$("#updatesList");if(count)count.textContent="Display error";if(list)list.innerHTML='<div class="empty">Updates were downloaded but could not be displayed. Please refresh the page or use Retry loading updates.</div>';}
 }
 async function loadStatus(){
  if(statusRequest)return statusRequest;
@@ -295,7 +297,7 @@ async function loadResults(){
  if(resultsRequest)return resultsRequest;
  resultsRequest=(async()=>{
   try{
-   const r=await fetch("data/results.json");
+   const r=await fetch("data/results.json?fresh="+Date.now(),{cache:"no-store"});
    if(!r.ok) throw new Error("Data not available");
    const data=await r.json();
    if(!Array.isArray(data))throw new Error("Invalid data format");
@@ -306,7 +308,7 @@ async function loadResults(){
    if(!allItems.length){
     try{const cached=JSON.parse(localStorage.getItem("goresult-results-cache")||"null");if(Array.isArray(cached?.items)){allItems=cached.items;render();$("#monitorDetail").textContent="Showing the last saved updates because the live feed is temporarily unavailable."}}catch(ignore){}
    }
-   if(!allItems.length){$("#count").textContent="Updates unavailable";$("#updatesList").innerHTML='<div class="empty">Updates are temporarily unavailable. Please try again later.</div>';}
+   console.error("GoResultHub results load/render failed:",e);$("#count").textContent=allItems.length?"Updates need a refresh":"Updates unavailable";$("#updatesList").innerHTML='<div class="empty">Updates could not finish loading. <button type="button" id="retryUpdates">Retry loading updates</button></div>';$("#retryUpdates")?.addEventListener("click",()=>{allItems=[];loadResults()});
   }finally{resultsRequest=null}
  })();
  return resultsRequest;
@@ -314,6 +316,7 @@ async function loadResults(){
 async function refresh(){if(document.visibilityState==="visible")await Promise.all([loadResults(),loadStatus()])}
 function init(){
  $("#year").textContent=new Date().getFullYear();
+ $("#region").value="";$("#examYear").value="";$("#category").value="";$("#examCategory").value="";selectedState="";selectedRegion="";selectedBrowse="";
  const sharedQuery=new URLSearchParams(window.location.search).get("q");
  if(sharedQuery){$("#q").value=sharedQuery;page=1;}
  try{const cached=JSON.parse(localStorage.getItem("goresult-results-cache")||"null");if(Array.isArray(cached?.items)){allItems=cached.items;render()}}catch(e){}
@@ -323,14 +326,24 @@ function init(){
  document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")refresh()});
  if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});
 }
-$("#searchForm").addEventListener("submit",e=>{e.preventDefault();const term=$("#q").value.trim();$("#category").value="";$("#examCategory").value="";$("#region").value="";$("#examYear").value="";selectedState="";selectedRegion="";selectedBrowse="";if(quickSearch)quickSearch.value=term;const shortcutCount=filterQuickExams(term);page=1;render();const target=term&&shortcutCount?$("#find-exams"):$("#updates");target.scrollIntoView({behavior:"smooth",block:"start"});});
-["q","category","examCategory","region","sort","examYear"].forEach(id=>$("#"+id).addEventListener(id==="q"?"input":"change",()=>{if(id==="region"){const v=$("#region").value;selectedState=STATE_NAMES.includes(v)?v:"";selectedRegion=v==="Central"?"Central":"";}page=1;render()}));
+function clearUpdateFilters(){
+ $("#category").value="";$("#examCategory").value="";$("#region").value="";$("#examYear").value="";
+ selectedState="";selectedRegion="";selectedBrowse="";
+}
+function runSearch(scroll=true){
+ const term=$("#q").value.trim();clearUpdateFilters();
+ if(quickSearch)quickSearch.value=term;
+ const shortcutCount=filterQuickExams(term);page=1;render();
+ if(scroll){const target=term&&shortcutCount?$("#find-exams"):$("#updates");target.scrollIntoView({behavior:"smooth",block:"start"});}
+}
+$("#searchForm").addEventListener("submit",e=>{e.preventDefault();runSearch(true)});
+$("#q").addEventListener("input",()=>{clearUpdateFilters();if(quickSearch)quickSearch.value=$("#q").value;filterQuickExams($("#q").value);page=1;render()});
+["category","examCategory","region","sort","examYear"].forEach(id=>$("#"+id).addEventListener("change",()=>{if(id==="region"){const v=$("#region").value;selectedState=STATE_NAMES.includes(v)?v:"";selectedRegion=v==="Central"?"Central":"";}page=1;render()}));
 document.querySelectorAll(".pills [data-family]").forEach(button=>button.addEventListener("click",()=>{$("#examCategory").value=button.dataset.family;page=1;$("#updates").scrollIntoView({behavior:"smooth"});render()}));
 document.querySelectorAll("[data-quick-search]").forEach(button=>button.addEventListener("click",()=>{const term=button.dataset.quickSearch||"";$("#q").value=term;if(quickSearch)quickSearch.value=term;filterQuickExams(term);$("#category").value="";$("#examCategory").value="";$("#region").value="";$("#examYear").value="";selectedState="";selectedRegion="";selectedBrowse="";page=1;render();$("#updates").scrollIntoView({behavior:"smooth",block:"start"});}));
 const quickSearch=$("#quickExamSearch");
 function filterQuickExams(value){const term=(value||"").trim().toLowerCase();let shown=0;document.querySelectorAll(".quick-exam-card").forEach(card=>{const match=!term||(card.dataset.keywords+" "+card.innerText).toLowerCase().includes(term);card.classList.toggle("hidden",!match);if(match)shown++;});document.querySelectorAll(".quick-exam-group").forEach(group=>group.classList.toggle("hidden",!group.querySelector(".quick-exam-card:not(.hidden)")));$("#quickExamEmpty")?.classList.toggle("hidden",shown>0);return shown;}
  quickSearch?.addEventListener("input",()=>filterQuickExams(quickSearch.value));
- $("#q").addEventListener("input",()=>filterQuickExams($("#q").value));
 
 document.querySelectorAll("[data-browse]").forEach(button=>button.addEventListener("click",()=>{
  selectedBrowse=button.dataset.browse||"";
