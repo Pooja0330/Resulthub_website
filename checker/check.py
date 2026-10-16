@@ -72,7 +72,7 @@ SKIP = re.compile(
     r"expression of interest|vendor registration|agency appointment|"
     r"public relations|social media agency|media agency|privacy policy|"
     r"photo gallery|annual report|media advisory|holiday list|meeting notice|"
-    r"investor presentation|press release|corporate announcement|"
+    r"investor presentation|corporate announcement|"
     r"conference|workshop|symposium|seminar|research proposal|research grant|"
     r"inter college migration|inter-college migration|printing and supply|"
     r"purchase of books|faculty research programme|faculty research program|"
