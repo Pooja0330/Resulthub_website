@@ -31,7 +31,7 @@ async function loadStatus(){
   const checked=lastStatus.last_checked_at?new Date(lastStatus.last_checked_at):null;
   const when=checked&&!Number.isNaN(checked.getTime())?checked.toLocaleString("en-IN",{dateStyle:"medium",timeStyle:"short",timeZone:"Asia/Kolkata"}):"Not available";
   const healthy=lastStatus.status==="healthy";
-  $("#monitorStatus").textContent=healthy?"Automatic monitoring active":(lastStatus.status==="partial"?"Monitoring partially available":"Monitoring status unavailable");
+  $("#monitorStatus").textContent=healthy?"Automatic monitoring active":(lastStatus.status==="partial"?"Monitoring partially available":(lastStatus.status==="pending"?"Initial scan pending":"Monitoring status unavailable"));
   $("#monitorDetail").textContent="Last checked "+when+" IST · "+(lastStatus.sources_succeeded||0)+"/"+(lastStatus.sources_enabled||0)+" sources reachable · "+(lastStatus.sources_failed||0)+" failed · checks run about every 2 hours";
  }catch(e){
   $("#monitorStatus").textContent="Monitoring status unavailable";
