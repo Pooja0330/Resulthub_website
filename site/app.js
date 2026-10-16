@@ -6,6 +6,7 @@ const PAGE_SIZE = 30;
 
 let selectedState = "";
 let selectedRegion = "";
+let selectedBrowse = "";
 const STATE_NAMES = [
  "Andhra Pradesh","Arunachal Pradesh","Assam","Bihar","Chhattisgarh","Goa","Gujarat","Haryana",
  "Himachal Pradesh","Jharkhand","Karnataka","Kerala","Madhya Pradesh","Maharashtra","Manipur",
@@ -168,6 +169,45 @@ function inferredFamily(x){
  if(/icai|icsi|icmai|chartered accountant|company secretary|national medical commission/.test(t)) return "Professional Exams";
  return x.exam_category||"UPSC / Central Recruitment";
 }
+function browseMatches(x, view){
+ if(!view)return true;
+ const family=inferredFamily(x);
+ const title=[x.title,x.exam,x.source_name,x.authority,x.source_id].join(" ").toLowerCase();
+ if(view==="latest-results")return x.category==="result"||x.category==="merit_list"||x.category==="cutoff";
+ if(view==="upcoming-results")return /upcoming results?|results? expected|expected result|result declaration date|result date announced|result will be declared|result to be declared|tentative result date/.test(title);
+ if(view==="boards")return family==="School Board Results"||/school board|board of secondary education|board of school education|class 10|class 12|sslc|hsc|madhyamik|cbse|cisce|nios/.test(title);
+ if(view==="competitive")return ["UPSC / Central Recruitment","SSC / Central Recruitment","Banking","Railways","Entrance & Eligibility","JEE Main","JEE Advanced","NEET UG","NEET PG","UPSC Prelims","UPSC Mains","State PSC Prelims","State PSC Mains","State PSC / Recruitment","State Recruitment / Police","Teaching / Eligibility","Defence"].includes(family);
+ if(view==="recruitments")return x.category==="notification"&&(/recruit|vacanc|application|apply online|selection|post of|appointment|constable|police|staff|officer|assistant|teacher|faculty|careers|career/.test(title)||["State PSC / Recruitment","State Recruitment / Police","Teaching / Eligibility","Defence","UPSC / Central Recruitment","SSC / Central Recruitment","Banking","Railways"].includes(family));
+ if(view==="universities")return /university|universit|college|deemed institute|academic council/.test(title);
+ if(view==="admissions")return /admission|admissions|counselling|counseling|seat allotment|allotment|entrance application|registration form|application form|prospectus|cuet|jee main|neet ug/.test(title);
+ if(view==="admit-cards")return x.category==="admit_card";
+ if(view==="answer-keys")return x.category==="answer_key";
+ if(view==="exam-calendar")return x.category==="exam_schedule";
+ if(view==="notifications")return x.category==="notification";
+ return true;
+}
+function renderFeatured(){
+ const sortLatest=(a,b)=>new Date(b.detected_at||b.published||b.date||0)-new Date(a.detected_at||a.published||a.date||0);
+ const makeList=(items,emptyText)=>items.length?items.slice(0,5).map(x=>{
+  const url=safeUrl(x.url||x.official_url)||safeUrl(x.source_url);
+  const date=x.published||x.detected_at||"Date not supplied";
+  return '<article class="featured-item"><div><span class="tag">'+esc(label(x.category))+'</span><h3>'+esc(x.title||x.exam||"Exam update")+'</h3><p>'+esc(x.source_name||x.authority||"Official source")+' · '+esc(date)+'</p></div>'+(url?'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">Open ↗</a>':'')+'</article>';
+ }).join(""):'<p class="empty">'+esc(emptyText)+'</p>';
+ const resultBox=$("#featuredResults"), scheduleBox=$("#featuredSchedules"), upcomingBox=$("#featuredUpcoming");
+ if(resultBox){
+  const rows=allItems.filter(x=>!x.archive&&(x.category==="result"||x.category==="merit_list"||x.category==="cutoff")).sort(sortLatest);
+  resultBox.innerHTML=makeList(rows,"No recent result notices are indexed yet. Check the official state and exam portals below.");
+ }
+ if(scheduleBox){
+  const rows=allItems.filter(x=>!x.archive&&x.category==="exam_schedule").sort(sortLatest);
+  scheduleBox.innerHTML=makeList(rows,"No exam schedule notices are currently indexed. Official calendars and schedules appear here when detected.");
+ }
+ if(upcomingBox){
+  const rows=allItems.filter(x=>/upcoming results?|results? expected|expected result|result declaration date|result date announced|result will be declared|result to be declared|tentative result date/i.test([x.title,x.exam,x.description].join(" "))).sort(sortLatest);
+  upcomingBox.innerHTML=makeList(rows,"No authority has explicitly published an upcoming-result notice in the indexed feed yet. We will list one here when detected.");
+ }
+ document.querySelectorAll("[data-browse]").forEach(button=>button.classList.toggle("active",button.dataset.browse===selectedBrowse));
+}
 function filteredItems(){
  const q=$("#q").value.trim().toLowerCase(), c=$("#category").value, ec=$("#examCategory").value, r=$("#region").value;
  const list=allItems.filter(x=>{
@@ -175,7 +215,7 @@ function filteredItems(){
   const hay=[x.title,x.exam,x.source_name,x.state,x.region,x.category,family].join(" ").toLowerCase();
   const itemState=stateForItem(x);
    const stateFilter=selectedState||selectedRegion||r;
-   return (!q||hay.includes(q))&&(!c||x.category===c)&&(!ec||family===ec)&&(!stateFilter||itemState===stateFilter);
+   return (!q||hay.includes(q))&&(!c||x.category===c)&&(!ec||family===ec)&&(!stateFilter||itemState===stateFilter)&&browseMatches(x,selectedBrowse);
  });
  if($("#sort").value==="title") list.sort((a,b)=>(a.title||"").localeCompare(b.title||""));
  else list.sort((a,b)=>new Date(b.detected_at||b.date||0)-new Date(a.detected_at||a.date||0));
@@ -204,6 +244,7 @@ function render(){
   $("#prevPage")?.addEventListener("click",()=>{page--;render();$("#updates").scrollIntoView({behavior:"smooth"});});
   $("#nextPage")?.addEventListener("click",()=>{page++;render();$("#updates").scrollIntoView({behavior:"smooth"});});
  }
+ renderFeatured();
 }
 async function loadStatus(){
  if(statusRequest)return statusRequest;
@@ -258,5 +299,12 @@ function init(){
 $("#searchForm").addEventListener("submit",e=>{e.preventDefault();page=1;render()});
 ["q","category","examCategory","region","sort"].forEach(id=>$("#"+id).addEventListener(id==="q"?"input":"change",()=>{if(id==="region"){const v=$("#region").value;selectedState=STATE_NAMES.includes(v)?v:"";selectedRegion=v==="Central"?"Central":"";}page=1;render()}));
 document.querySelectorAll(".pills [data-family]").forEach(button=>button.addEventListener("click",()=>{$("#examCategory").value=button.dataset.family;page=1;$("#updates").scrollIntoView({behavior:"smooth"});render()}));
+document.querySelectorAll("[data-browse]").forEach(button=>button.addEventListener("click",()=>{
+ selectedBrowse=button.dataset.browse||"";
+ selectedState="";selectedRegion="";
+ $("#region").value="";$("#q").value="";$("#category").value="";$("#examCategory").value="";
+ page=1;render();
+ $("#updates").scrollIntoView({behavior:"smooth",block:"start"});
+}));
 $("#supportBtn").addEventListener("click",()=>{$("#supportNote").textContent="Secure support payments are not configured yet. We will enable this after a payment provider and checkout URL are set up.";});
 init();
