@@ -237,6 +237,17 @@ function renderYearArchiveHelp(){
 }
 function isPibItem(x){return /pib|press information bureau|press releases|government & pib/i.test([x.source_id,x.source_name,x.authority,x.exam_category].filter(Boolean).join(" "));}
 function mainPriority(x){if(isPibItem(x))return 2;if(x.archive===true)return 3;if(x.verified===true&&!/archive/i.test(String(x.title||"")))return 0;return 1;}
+function isNavigationNoise(item){
+ const title=String(item?.title||item?.exam||"").toLowerCase().replace(/[^a-z0-9]/g,"");
+ const blocked=new Set([
+  "skiptocontent","accessibilitystatement","screenreaderaccess",
+  "pressinformationbureau","aboutus","mainfunctions","sitemap",
+  "contactus","termsofuse","accessibilityoptions","skipnavigation",
+  "backtotop","privacy_policy".replace(/[^a-z0-9]/g,"")
+ ]);
+ return blocked.has(title);
+}
+function cleanResults(items){return Array.isArray(items)?items.filter(item=>!isNavigationNoise(item)):[];}
 function displayTitle(x){return String(x.title||x.exam||"Exam update");}
 function filteredItems(){
  const q=$("#q").value.trim().toLowerCase(), terms=q.split(/\s+/).filter(Boolean), c=$("#category").value, ec=$("#examCategory").value, r=$("#region").value, y=$("#examYear").value;
@@ -314,7 +325,7 @@ async function loadResults(){
    page=1;render();
   }catch(e){
    if(!allItems.length){
-    try{const cached=JSON.parse(localStorage.getItem("goresult-results-cache")||"null");if(Array.isArray(cached?.items)){allItems=cached.items;render();$("#monitorDetail").textContent="Showing the last saved updates because the live feed is temporarily unavailable."}}catch(ignore){}
+    try{const cached=JSON.parse(localStorage.getItem("goresult-results-cache")||"null");if(Array.isArray(cached?.items)){allItems=cleanResults(cached.items);try{localStorage.setItem("goresult-results-cache",JSON.stringify({savedAt:Date.now(),items:allItems}))}catch(ignore){}render();$("#monitorDetail").textContent="Showing the last saved updates because the live feed is temporarily unavailable."}}catch(ignore){}
    }
    console.error("GoResultHub results load/render failed:",e);$("#count").textContent=allItems.length?"Updates need a refresh":"Updates unavailable";$("#updatesList").innerHTML='<div class="empty">Updates could not finish loading. <button type="button" id="retryUpdates">Retry loading updates</button></div>';$("#retryUpdates")?.addEventListener("click",()=>{allItems=[];loadResults()});
   }finally{resultsRequest=null}
