@@ -15,6 +15,11 @@
     merit_list:"Merit list",cutoff:"Cutoff",exam_schedule:"Exam schedule"
   }[value] || "Official update");
 
+  const isPib = item => /pib|press information bureau|government & pib/i.test([item.source_id,item.source_name,item.authority,item.exam_category].filter(Boolean).join(" "));
+  const isExamPriority = item => !isPib(item) && /result|notification|admit_card|answer_key|merit_list|cutoff|exam_schedule/i.test(String(item.category||""));
+  const priorityScore = item => isExamPriority(item) ? 0 : isPib(item) ? 2 : 1;
+  const itemKindLabel = item => isPib(item) ? "GOVERNMENT & PIB" : isExamPriority(item) ? "EXAM ALERT" : "OFFICIAL UPDATE";
+  const itemKindClass = item => isPib(item) ? "is-pib" : isExamPriority(item) ? "is-exam" : "is-general";
   const cleanTitle = item => String(item.title || item.exam || "Official exam update").replace(/\s+/g," ").replace(/\s*[|·•].*$/,"").trim();
   const normalizedTitle = item => cleanTitle(item).toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
   const isNoise = item => {
@@ -60,16 +65,16 @@
       const date=item.published || item.detected_at || "";
       const description=String(item.description || item.exam || "Open this update for full details.").replace(/\s+/g," ").trim();
       const shortDescription=description.length>125?description.slice(0,122).trimEnd()+"…":description;
-      return '<article class="grh-alert-item"><span class="grh-alert-type">'+esc(categoryName(item.category))+'</span><strong>'+esc(cleanTitle(item))+'</strong><p class="grh-alert-description">'+esc(shortDescription)+'</p><small>'+esc(item.source_name || item.authority || "Official source")+(date?' · '+esc(date):'')+'</small>'+(url?'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">View on GoResultHub ↗</a>':'<span class="grh-no-link">Official link not available in feed</span>')+'</article>';
+      return '<article class="grh-alert-item '+itemKindClass(item)+'"><span class="grh-alert-type">'+esc(categoryName(item.category))+'</span><span class="grh-alert-kind">'+itemKindLabel(item)+'</span><strong>'+esc(cleanTitle(item))+'</strong><p class="grh-alert-description">'+esc(shortDescription)+'</p><small>'+esc(item.source_name || item.authority || "Official source")+(date?' · '+esc(date):'')+'</small>'+(url?'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">View on GoResultHub ↗</a>':'<span class="grh-no-link">Official link not available in feed</span>')+'</article>';
     }).join("") : '<p class="grh-alert-empty">No updates have been indexed yet. Keep this page open; the panel checks the published feed periodically.</p>';
   }
   function toast(item) {
     const url="https://goresulthub.com/notice.html?id="+encodeURIComponent(item.id||"")+"&q="+encodeURIComponent(item.title || item.exam || "");
     const node=document.createElement("article");
-    node.className="grh-toast";
+    node.className="grh-toast "+itemKindClass(item);
     const description=String(item.description || item.exam || "Open this update for full details.").replace(/\s+/g," ").trim();
     const shortDescription=description.length>95?description.slice(0,92).trimEnd()+"…":description;
-    node.innerHTML='<div class="grh-toast-top"><span>NEW OFFICIAL UPDATE</span><button type="button" aria-label="Dismiss">×</button></div><strong>'+esc(cleanTitle(item))+'</strong><small>'+esc(shortDescription)+'</small><small>'+esc(item.source_name || item.authority || "Official source")+' · '+esc(categoryName(item.category))+'</small>'+(url?'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">View update ↗</a>':'');
+    node.innerHTML='<div class="grh-toast-top"><span>'+itemKindLabel(item)+'</span><button type="button" aria-label="Dismiss">×</button></div><strong>'+esc(cleanTitle(item))+'</strong><small>'+esc(shortDescription)+'</small><small>'+esc(item.source_name || item.authority || "Official source")+' · '+esc(categoryName(item.category))+'</small>'+(url?'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">View update ↗</a>':'');
     node.querySelector("button").addEventListener("click",()=>node.remove());
     stack.prepend(node);
     while(stack.children.length>3)stack.lastElementChild.remove();
@@ -82,7 +87,7 @@
       if(!response.ok)throw new Error("Feed request failed ("+response.status+")");
       const data=await response.json();
       if(!Array.isArray(data))throw new Error("Feed format was not recognised");
-      const sorted=uniqueItems(data).sort((a,b)=>String(b.detected_at||b.published||b.date||"").localeCompare(String(a.detected_at||a.published||a.date||"")));
+      const sorted=uniqueItems(data).sort((a,b)=>priorityScore(a)-priorityScore(b)||String(b.detected_at||b.published||b.date||"").localeCompare(String(a.detected_at||a.published||a.date||"")));
       allItems.splice(0,allItems.length,...sorted);
       renderPanel(allItems);
       status.textContent=data.length+" indexed updates · last checked "+new Date().toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"});
