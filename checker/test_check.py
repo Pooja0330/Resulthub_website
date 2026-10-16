@@ -88,6 +88,8 @@ class CheckerSafetyTests(unittest.TestCase):
             "About Us",
             "Main Functions",
             "Press Information Bureau",
+            "RTI Policy Information RTI Officers JPSC Resolution Public Notice RTI Related Case Decisions",
+            "Information RTI Officers JPSC Resolution Public Notice",
         ):
             with self.subTest(title=title):
                 self.assertIsNone(
