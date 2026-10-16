@@ -36,11 +36,11 @@
     list.innerHTML = current.length ? current.map(item => {
       const url="https://goresulthub.com/?q="+encodeURIComponent(item.title || item.exam || "");
       const date=item.published || item.detected_at || "";
-      return '<article class="grh-alert-item"><span class="grh-alert-type">'+esc(categoryName(item.category))+'</span><strong>'+esc(item.title || item.exam || "Official exam update")+'</strong><small>'+esc(item.source_name || item.authority || "Official source")+(date?' · '+esc(date):'')+'</small>'+(url?'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">Open official link ↗</a>':'<span class="grh-no-link">Official link not available in feed</span>')+'</article>';
+      return '<article class="grh-alert-item"><span class="grh-alert-type">'+esc(categoryName(item.category))+'</span><strong>'+esc(item.title || item.exam || "Official exam update")+'</strong><small>'+esc(item.source_name || item.authority || "Official source")+(date?' · '+esc(date):'')+'</small>'+(url?'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">View on GoResultHub ↗</a>':'<span class="grh-no-link">Official link not available in feed</span>')+'</article>';
     }).join("") : '<p class="grh-alert-empty">No updates have been indexed yet. Keep this page open; the panel checks the published feed periodically.</p>';
   }
   function toast(item) {
-    const url=safeUrl(item.url || item.official_url) || safeUrl(item.source_url);
+    const url="https://goresulthub.com/?q="+encodeURIComponent(item.title || item.exam || "");
     const node=document.createElement("article");
     node.className="grh-toast";
     node.innerHTML='<div class="grh-toast-top"><span>NEW OFFICIAL UPDATE</span><button type="button" aria-label="Dismiss">×</button></div><strong>'+esc(item.title || item.exam || "New exam update")+'</strong><small>'+esc(item.source_name || item.authority || "Official source")+' · '+esc(categoryName(item.category))+'</small>'+(url?'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">View update ↗</a>':'');
