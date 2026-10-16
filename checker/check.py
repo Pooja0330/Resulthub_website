@@ -56,7 +56,7 @@ RULES = [
         r"recruitment advertisement|vacancy notification|information bulletin|"
         r"application dates|registration opens|apply online|online application|"
         r"application notice|vacancies|recruitment|careers|advertisement|"
-        r"advertisements|applications invited|invites applications|invited applications)\\b", re.I)),
+        r"advertisements|applications invited|invites applications|invited applications)\b", re.I)),
 ]
 
 SKIP = re.compile(
