@@ -12,6 +12,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import requests
 import certifi
+from xml.sax.saxutils import escape as xml_escape
 import feedparser
 from bs4 import BeautifulSoup
 
@@ -113,6 +114,56 @@ def save_json(name, value):
         json.dumps(value, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
+    os.replace(temporary, target)
+
+
+def write_rss_feed(items):
+    """Publish an RSS feed from the same official-source items as the website."""
+    def safe_text(value):
+        return xml_escape(" ".join(str(value or "").split()), {'"': "&quot;", "'": "&apos;"})
+
+    def item_time(item):
+        raw = str(item.get("detected_at") or item.get("published") or item.get("date") or "")
+        try:
+            parsed = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+            if parsed.tzinfo is None:
+                parsed = parsed.replace(tzinfo=timezone.utc)
+            return parsed.astimezone(timezone.utc)
+        except (ValueError, TypeError):
+            return datetime.min.replace(tzinfo=timezone.utc)
+
+    latest = sorted(
+        (x for x in items if isinstance(x, dict) and (x.get("url") or x.get("official_url"))),
+        key=item_time, reverse=True,
+    )[:100]
+    rows = []
+    for item in latest:
+        link = str(item.get("url") or item.get("official_url") or "").strip()
+        if not link.startswith("https://"):
+            continue
+        title = safe_text(item.get("title") or item.get("exam") or "Official exam update")
+        description = safe_text(item.get("description") or item.get("source_name") or "Open the official authority website to confirm details.")
+        source = safe_text(item.get("source_name") or item.get("authority") or "Official source")
+        category = safe_text(str(item.get("category") or "update").replace("_", " ").title())
+        pub = item_time(item)
+        pub_tag = "" if pub == datetime.min.replace(tzinfo=timezone.utc) else f"<pubDate>{pub.strftime('%a, %d %b %Y %H:%M:%S GMT')}</pubDate>"
+        rows.append(
+            "<item><title>" + title + "</title><link>" + safe_text(link) +
+            "</link><guid isPermaLink=\"false\">" + safe_text(item.get("id") or link) +
+            "</guid><description>" + description + " | " + source + " | " + category +
+            "</description>" + pub_tag + "</item>"
+        )
+    feed = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<rss version="2.0"><channel><title>GoResultHub — Latest Exam Updates</title>'
+        '<link>https://goresulthub.com/</link>'
+        '<description>Latest exam results, recruitment notices, admit cards, answer keys and exam schedules. Confirm every update on the issuing authority website.</description>'
+        '<language>en-IN</language>' + "".join(rows) + '</channel></rss>\n'
+    )
+    target = path("site/feed.xml")
+    target.parent.mkdir(parents=True, exist_ok=True)
+    temporary = target.with_suffix(target.suffix + ".tmp")
+    temporary.write_text(feed, encoding="utf-8")
     os.replace(temporary, target)
 
 
@@ -884,6 +935,7 @@ def main():
     save_json("checker/state.json", state)
     save_json("checker/approved.json", {"pending": remaining_approved})
     save_json("site/data/results.json", results)
+    write_rss_feed(results)
 
     failure_types = {}
     for source_health in health.values():
