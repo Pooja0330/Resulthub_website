@@ -26,6 +26,7 @@ TIMEOUT = max(6, min(int(os.getenv("SOURCE_TIMEOUT_SECONDS", "12")), 20))
 # Lower concurrency reduces connection pressure against slow government portals.
 WORKERS = max(1, min(int(os.getenv("SOURCE_WORKERS", "8")), 8))
 MAX_NEW_PER_SOURCE = max(1, min(int(os.getenv("MAX_NEW_PER_SOURCE", "5")), 20))
+MAX_ARCHIVE_PER_SOURCE = max(20, min(int(os.getenv("MAX_ARCHIVE_PER_SOURCE", "250")), 500))
 MAX_AGE_DAYS = 90
 
 HEADERS = {
@@ -506,7 +507,7 @@ def fetch_source(source):
         category = classify(title)
         if not category or link in seen_urls:
             continue
-        if is_stale_notice(title, published):
+        if is_stale_notice(title, published) and not source.get("historical_archive", False):
             continue
 
         seen_urls.add(link)
@@ -519,12 +520,13 @@ def fetch_source(source):
             "source_id": source.get("id", name),
             "source_url": url,
             "published": published[:100],
+            "archive": bool(source.get("historical_archive", False)),
         })
 
     # Official portals often list years of archived notices. Keep only a
     # bounded set of the first matching links (normally newest-first) per source.
     # This cap is also used to limit stale backlog and Telegram alert pressure.
-    return found[:MAX_NEW_PER_SOURCE]
+    return found[:MAX_ARCHIVE_PER_SOURCE] if source.get("historical_archive", False) else found[:MAX_NEW_PER_SOURCE]
 
 
 def build_result(item, detected_at):
@@ -548,11 +550,12 @@ def build_result(item, detected_at):
         "region": item.get("region", "Central"),
         "state": item.get("state", ""),
         "description": (
-            "Potential update detected on an allowlisted official website. "
-            "Open the source to confirm the notice, dates and eligibility."
+            "Historical entry discovered on an official archive listing. Open the issuing authority link to confirm the year, notice details and availability."
+            if item.get("archive") else
+            "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility."
         ),
         "verified": False,
-        "archive": False,
+        "archive": bool(item.get("archive", False)),
         "detected_at": detected_at,
     }
 
@@ -628,6 +631,7 @@ def main():
 
     sources = [s for s in registry["sources"] if s.get("enabled", True)]
     candidates = []
+    historical_candidates = []
     successful = 0
     failures = 0
     checked_at = now_utc()
@@ -658,6 +662,20 @@ def main():
                     key = hashlib.sha256(
                         normalized_url.encode("utf-8")
                     ).hexdigest()[:24]
+
+                    # Historical archive entries are indexed as archive records,
+                    # never placed in the live alert queue.
+                    if source.get("historical_archive", False):
+                        if normalized_url in published_urls:
+                            continue
+                        item["id"] = key
+                        item["region"] = source.get("region", "Central")
+                        item["state"] = source.get("state", "")
+                        item["exam_category"] = source.get("exam_category", "University Results")
+                        item["archive"] = True
+                        item["detected_at"] = checked_at
+                        historical_candidates.append(item)
+                        continue
 
                     # Never create a fresh alert for a notice already published
                     # on the site, even if persistent checker state is missing.
@@ -714,7 +732,7 @@ def main():
         for item in results if isinstance(item, dict)
     }
     published_urls.discard("")
-    for item in candidates:
+    for item in historical_candidates + candidates:
         normalized_url = normalize_notice_url(item.get("url", ""))
         if item["id"] not in existing_ids and normalized_url not in published_urls:
             results.append(build_result(item, item["detected_at"]))
