@@ -1995,7 +1995,7 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "UPSC / Central Recruitment"
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "hssc",
@@ -2455,7 +2455,7 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "UPSC / Central Recruitment"
+      "exam_category": "Teaching / Eligibility"
     },
     {
       "id": "wb-police",
