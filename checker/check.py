@@ -91,7 +91,7 @@ SKIP = re.compile(
     r"skip to content|accessibility statement|accessibilitystatement|screen reader access|"
     r"about us|main functions|press information bureau|site map|contact us|"
     r"terms of use|feedback|login|log in|register|search|help|"
-    r"accessibility options|skip navigation|back to top)\b", re.I
+    r"accessibility options|skip navigation|back to top|rti|policy information|rti officers|case decisions)\b", re.I
 )
 
 NAV_TITLE = re.compile(
