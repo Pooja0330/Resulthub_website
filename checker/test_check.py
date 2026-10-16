@@ -43,6 +43,9 @@ class CheckerSafetyTests(unittest.TestCase):
     def test_railway_sources_use_railways_filter_family(self):
         self.assertEqual(infer_exam_category("NTPC result", "Railway Recruitment Board", "rrb-bilaspur"), "Railways")
 
+    def test_source_id_preserves_teaching_family_for_kvs(self):
+        self.assertEqual(infer_exam_category("Recruitment notification", "Kendriya Vidyalaya Sangathan", "kvs"), "Teaching / Eligibility")
+
     def test_generic_call_letters_landing_page_is_not_a_notice(self):
         self.assertIsNone(classify("Call Letters"))
 
