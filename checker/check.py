@@ -35,11 +35,7 @@ HEADERS = {
 
 RULES = [
     ("result", re.compile(
-        r"\b(result declared|result declaration|results of|result of|result for|final result|"
-        r"provisional result|result published|result notification|exam results?|"
-        r"examination results?|board exam results?|board results?|class 10 results?|class 12 results?|"
-        r"ssc results?|hsc results?|scorecards?|score cards?|marks list|rank list|"
-        r"rank card|result announcement)\b", re.I)),
+        r"\b(result|results|scorecards?|score cards?|marks list|rank list|rank card)\b", re.I)),
     ("merit_list", re.compile(
         r"\b(merit list|final selection|selected candidates|qualified candidates|"
         r"provisional selection|selection list|final panel|allotment list|"
@@ -72,8 +68,11 @@ RULES = [
 
 
 SKIP = re.compile(
-    r"\b(tender|quotation|procurement|vendor registration|privacy policy|"
-    r"photo gallery|annual report|media advisory|holiday list|meeting notice)\b", re.I
+    r"\b(tender|quotation|procurement|request for proposal|request for quotation|"
+    r"expression of interest|vendor registration|agency appointment|"
+    r"public relations|social media agency|media agency|privacy policy|"
+    r"photo gallery|annual report|media advisory|holiday list|meeting notice|"
+    r"investor presentation|press release|corporate announcement)\b", re.I
 )
 
 NAV_TITLE = re.compile(
