@@ -182,8 +182,25 @@ def get_with_retries(url, headers=None):
 
         except (requests.Timeout, requests.ConnectionError) as exc:
             last_error = exc
-            if attempt < 2:
-                time.sleep(1.5 * (attempt + 1))
+
+            # Fail fast on errors that a retry cannot fix. Several official portals
+            # return persistent DNS/TLS failures from hosted runners; retrying those
+            # three times wastes the run budget needed to scan other authorities.
+            error_text = f"{type(exc).__name__}: {exc}"
+            permanent_network_error = (
+                isinstance(exc, requests.exceptions.SSLError)
+                or "NameResolutionError" in error_text
+                or "Temporary failure in name resolution" in error_text
+                or "CERTIFICATE_VERIFY_FAILED" in error_text
+                or "Failed to establish a new connection" in error_text
+            )
+            if permanent_network_error:
+                raise
+
+            # Timeouts and connection resets can be transient. Use two attempts
+            # total so a small set of slow sites cannot stall the whole registry.
+            if attempt < 1:
+                time.sleep(1.0)
                 continue
             raise
 
