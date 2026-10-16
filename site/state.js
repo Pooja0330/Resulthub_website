@@ -206,6 +206,7 @@ async function init(){
  $("#examFamily").addEventListener("change",()=>{selectedFamily=$("#examFamily").value;page=1;render()});
  $("#updateType").addEventListener("change",()=>{selectedCategory=$("#updateType").value;page=1;render()});
  $("#stateExamYear").addEventListener("change",()=>{page=1;render()});
+ $("#clearStateFilters")?.addEventListener("click",()=>{$("#examFamily").value="";$("#stateExamYear").value="";$("#updateType").value="";selectedFamily="";selectedCategory="";page=1;render();$("#stateUpdates").scrollIntoView({behavior:"smooth",block:"start"});});
  $("#allIndiaLink").href="index.html";
 }
 init();
