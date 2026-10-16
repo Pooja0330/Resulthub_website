@@ -59,7 +59,7 @@
       const sorted=data.slice().sort((a,b)=>String(b.detected_at||b.published||"").localeCompare(String(a.detected_at||a.published||"")));
       allItems.splice(0,allItems.length,...sorted);
       renderPanel(allItems);
-      status.textContent="Last checked "+new Date().toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"})+" · "+data.length+" indexed updates";
+      status.textContent=data.length+" indexed updates · last checked "+new Date().toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"});
       if(!initialized) {
         data.forEach(item=>seen.add(identity(item)));
         writeSeen(seen);
