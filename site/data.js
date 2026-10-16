@@ -29,7 +29,15 @@ window.EXAM_DATA = [
 {name:"CUET — NTA",category:"Entrance & Eligibility",type:"admissions",description:"Official CUET examination and admission notices; select the relevant CUET portal.",url:"https://www.nta.ac.in/",icon:"🎓"},
 {name:"State Public Service Commissions",category:"State & University Exams",type:"recruitment",description:"Find the official state commission site for the relevant state and examination.",url:"https://www.india.gov.in/",icon:"🏢"},
 {name:"National Portal of India — Government services",category:"State & University Exams",type:"recruitment",description:"Starting point for official government portals; verify the responsible authority.",url:"https://www.india.gov.in/",icon:"🇮🇳"}
-{"name":"MHT-CET — Maharashtra CET Cell","category":"Engineering & Technology","type":"admissions","description":"Official Maharashtra CET application, hall ticket, answer key and result portal.","url":"https://cetcell.mahacet.org/","icon":"🎓"}
+{"name":"MHT-CET — Maharashtra CET Cell","category":"Engineering & Technology","type":"admissions","description":"Official Maharashtra CET application, hall ticket, answer key and result portal.","url":"https://cetcell.mahacet.org/","icon":"🎓"},
+{"name":"CAT — Common Admission Test","category":"Management Entrance","type":"admissions","description":"Official CAT application, admit-card, answer-key, response-sheet and result portal.","url":"https://iimcat.ac.in/","icon":"🎓"},
+{"name":"XAT — Xavier Aptitude Test","category":"Management Entrance","type":"admissions","description":"Official XAT registration, admit-card and scorecard portal.","url":"https://xatonline.in/","icon":"🎓"},
+{"name":"AFCAT — Indian Air Force","category":"Defence & Armed Forces","type":"recruitment","description":"Official AFCAT recruitment, admit-card and result portal.","url":"https://afcat.edcil.co.in/","icon":"✈"},
+{"name":"NDA & CDS — UPSC","category":"Defence & Armed Forces","type":"recruitment","description":"Official UPSC notices, e-admit cards and results for NDA and CDS.","url":"https://upsc.gov.in/","icon":"🛡"},
+{"name":"GATE 2027 — IIT Madras","category":"Engineering & Technology","type":"admissions","description":"Official GATE 2027 notices, application, admit card and result updates.","url":"https://gate2027.iitm.ac.in/","icon":"⚙"},
+{"name":"CLAT — Consortium of NLUs","category":"Law Entrance","type":"admissions","description":"Official CLAT UG/PG notices, admit cards, answer keys and results.","url":"https://consortiumofnlus.ac.in/","icon":"⚖"},
+{"name":"CA — ICAI Examination Portal","category":"Professional Qualifications","type":"results","description":"Official CA Foundation, Intermediate and Final examination services.","url":"https://icaiexam.icai.org/","icon":"📊"},
+{"name":"CSIR-UGC NET — NTA","category":"Entrance & Eligibility","type":"admissions","description":"Official CSIR-UGC NET application, admit card, answer key and result portal.","url":"https://csirnet.nta.ac.in/","icon":"🎓"}
 ];
 
 /* Direct candidate scorecard pages: these are exam/session-specific official endpoints.
