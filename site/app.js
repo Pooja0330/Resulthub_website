@@ -1,5 +1,6 @@
 const $ = s => document.querySelector(s);
 let allItems = [];
+let lastStatus = null;
 const label = s => String(s||"update").replace(/_/g," ").replace(/\b\w/g,c=>c.toUpperCase());
 function safeUrl(u){try{const x=new URL(u);return x.protocol==="https:"?x.href:null}catch{return null}}
 function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
@@ -22,14 +23,35 @@ function render(){
  $("#empty").classList.toggle("hidden",list.length>0);
  if(!list.length) $("#updatesList").innerHTML="";
 }
-async function init(){
- $("#year").textContent=new Date().getFullYear();
+async function loadStatus(){
  try{
-  const r=await fetch("data/results.json",{cache:"no-store"});
+  const r=await fetch("data/status.json?t="+Date.now(),{cache:"no-store"});
+  if(!r.ok) throw new Error("Status unavailable");
+  lastStatus=await r.json();
+  const checked=lastStatus.last_checked_at?new Date(lastStatus.last_checked_at):null;
+  const when=checked&&!Number.isNaN(checked.getTime())?checked.toLocaleString("en-IN",{dateStyle:"medium",timeStyle:"short",timeZone:"Asia/Kolkata"}):"Not available";
+  const healthy=lastStatus.status==="healthy";
+  $("#monitorStatus").textContent=healthy?"Automatic monitoring active":(lastStatus.status==="partial"?"Monitoring partially available":"Monitoring status unavailable");
+  $("#monitorDetail").textContent="Last checked "+when+" IST · "+(lastStatus.sources_succeeded||0)+"/"+(lastStatus.sources_enabled||0)+" sources reachable · "+(lastStatus.sources_failed||0)+" failed · checks run about every 2 hours";
+ }catch(e){
+  $("#monitorStatus").textContent="Monitoring status unavailable";
+  $("#monitorDetail").textContent="The website is online, but the latest checker status could not be loaded.";
+ }
+}
+async function loadResults(){
+ try{
+  const r=await fetch("data/results.json?t="+Date.now(),{cache:"no-store"});
   if(!r.ok) throw new Error("Data not available");
   const data=await r.json(); allItems=Array.isArray(data)?data:[];
   render();
- }catch(e){allItems=[];$("#count").textContent="Updates unavailable";$("#updatesList").innerHTML='<div class="empty">Updates are temporarily unavailable. Please try again later.</div>';}
+ }catch(e){
+  if(!allItems.length){$("#count").textContent="Updates unavailable";$("#updatesList").innerHTML='<div class="empty">Updates are temporarily unavailable. Please try again later.</div>';}
+ }
+}
+async function init(){
+ $("#year").textContent=new Date().getFullYear();
+ await Promise.all([loadResults(),loadStatus()]);
+ window.setInterval(()=>{loadResults();loadStatus();},5*60*1000);
 }
 $("#searchForm").addEventListener("submit",e=>{e.preventDefault();render()});
 ["q","category","examCategory","region","sort"].forEach(id=>$("#"+id).addEventListener(id==="q"?"input":"change",render));
