@@ -165,6 +165,7 @@ async function init(){
   if(!r.ok)throw new Error("Feed unavailable");
   const data=await r.json(); if(!Array.isArray(data))throw new Error("Invalid feed");
   allItems=data;
+  renderStateLinks();
  }catch(e){
   $("#noStateUpdates").textContent="The updates feed is temporarily unavailable. Please retry later or use the official portals listed above.";
   $("#noStateUpdates").classList.remove("hidden");
