@@ -403,12 +403,16 @@ def fetch_source(source):
                 # Use only the nearest compact row/card. Never use whole-page or
                 # large section text as a title; that creates hundreds of false positives.
                 context = ""
-                for parent in list(a.parents)[:5]:
-                    if getattr(parent, "name", None) in ("tr", "li", "article"):
+                for parent in list(a.parents)[:7]:
+                    if getattr(parent, "name", None) in ("tr", "li", "article", "div"):
                         candidate_context = " ".join(parent.get_text(" ", strip=True).split())
-                        if 20 <= len(candidate_context) <= 500:
+                        # Government portals often put the notice heading and a
+                        # generic Download/View link in compact div-based cards.
+                        # Skip tiny wrappers and oversized sections that could
+                        # accidentally combine several unrelated notices.
+                        if 20 <= len(candidate_context) <= 350:
                             context = candidate_context
-                        break
+                            break
                 if context and classify(context):
                     if title.lower() not in context.lower():
                         title = (context + " — " + title).strip(" —")
