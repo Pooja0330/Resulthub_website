@@ -25,6 +25,9 @@ class CheckerSafetyTests(unittest.TestCase):
     def test_ignores_unrelated_cultural_event(self):
         self.assertIsNone(classify("Annual Cultural Festival 2026"))
 
+    def test_keeps_exam_results_in_official_press_releases(self):
+        self.assertEqual(classify("Press Release: CBSE Declares Class X Result 2026"), "result")
+
     def test_old_explicit_feed_date_is_stale(self):
         self.assertTrue(is_stale_notice("Recruitment Result", "Mon, 01 Jan 2024 00:00:00 GMT"))
 
