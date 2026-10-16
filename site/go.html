@@ -32,7 +32,7 @@ try{
  link.href=destination.href;
  link.target="_blank";
  link.rel="noopener noreferrer";
- link.textContent="Official Update ↗";
+ link.textContent=/login|candidate-login|score.?display|result.?status/i.test(destination.pathname)?"Open official result / candidate login ↗":"Official Update ↗";
  link.addEventListener("click",()=>{try{sessionStorage.setItem("grh_last_exam",JSON.stringify({title,url:destination.href,source,at:Date.now()}))}catch(e){}});
 }catch(e){link.hidden=true;authority.textContent="No verified official destination was provided.";error.hidden=false;}
 document.getElementById("return-link").href="./#find-exams";
