@@ -652,6 +652,20 @@ def main():
         for kind, count in sorted(failure_types.items(), key=lambda pair: (-pair[1], pair[0]))[:5]
     ) or "none"
 
+    # Public, non-sensitive health snapshot for the website live status panel.
+    save_json("site/data/status.json", {
+        "last_checked_at": checked_at,
+        "sources_enabled": len(sources),
+        "sources_succeeded": successful,
+        "sources_failed": failures,
+        "new_candidates": len(candidates),
+        "telegram_posts_sent": public_sent,
+        "alerts_pending": len(pending),
+        "status": "healthy" if successful > 0 and failures == 0 else ("partial" if successful > 0 else "unavailable"),
+        "failure_types": failure_breakdown,
+        "note": "Some sources may be unavailable or use formats automated scanning cannot read."
+    })
+
     summary = (
         "GoResultHub | CHECKER SUMMARY\n\n"
         f"Checked (UTC): {checked_at}\n"
