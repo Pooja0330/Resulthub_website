@@ -135,6 +135,21 @@ def classify(title):
             return category
     return None
 
+def normalize_notice_url(url):
+    """Normalize official notice URLs for cross-run duplicate prevention."""
+    try:
+        parsed = urlparse(str(url).strip())
+        if parsed.scheme.lower() != "https" or not parsed.hostname:
+            return ""
+        host = parsed.hostname.lower()
+        if host.startswith("www."):
+            host = host[4:]
+        path_value = re.sub(r"/+", "/", parsed.path or "/").rstrip("/") or "/"
+        # Query strings are commonly tracking parameters, so ignore them for dedupe.
+        return f"https://{host}{path_value}"
+    except Exception:
+        return ""
+
 
 def get_with_retries(url, headers=None):
     last_error = None
@@ -378,6 +393,13 @@ def main():
     health = state.setdefault("source_health", {})
     pending = state.setdefault("pending_alerts", {})
     held = state.setdefault("held_alerts", {})
+    # Existing website entries are authoritative for dedupe too. This protects
+    # against repeated alerts if state.json is reset, missing, or not readable.
+    published_urls = {
+        normalize_notice_url(item.get("url") or item.get("official_url") or "")
+        for item in results if isinstance(item, dict)
+    }
+    published_urls.discard("")
     # Hold existing queued items for review once; only discoveries from this run
     # can be sent automatically, preventing a large stale backlog from flooding Telegram.
     preexisting_pending_keys = set(pending.keys()) if isinstance(pending, dict) else set()
@@ -411,9 +433,24 @@ def main():
                 }
 
                 for item in items:
+                    normalized_url = normalize_notice_url(item.get("url", ""))
+                    if not normalized_url:
+                        continue
+
                     key = hashlib.sha256(
-                        item["url"].encode("utf-8")
+                        normalized_url.encode("utf-8")
                     ).hexdigest()[:24]
+
+                    # Never create a fresh alert for a notice already published
+                    # on the site, even if persistent checker state is missing.
+                    if normalized_url in published_urls:
+                        seen.setdefault(key, {
+                            "first_seen": checked_at,
+                            "source_id": item.get("source_id", ""),
+                            "url": item.get("url", ""),
+                            "dedupe_reason": "already_present_on_website",
+                        })
+                        continue
 
                     if key in seen or key in pending or key in held:
                         continue
@@ -453,10 +490,17 @@ def main():
         if isinstance(item, dict) and item.get("id")
     }
 
+    published_urls = {
+        normalize_notice_url(item.get("url") or item.get("official_url") or "")
+        for item in results if isinstance(item, dict)
+    }
+    published_urls.discard("")
     for item in candidates:
-        if item["id"] not in existing_ids:
+        normalized_url = normalize_notice_url(item.get("url", ""))
+        if item["id"] not in existing_ids and normalized_url not in published_urls:
             results.append(build_result(item, item["detected_at"]))
             existing_ids.add(item["id"])
+            published_urls.add(normalized_url)
 
     # Keep the old backlog for review instead of automatically drip-feeding it.
     for key in list(preexisting_pending_keys):
