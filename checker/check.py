@@ -260,14 +260,32 @@ def fetch_source(source):
             raise ValueError("Source did not return HTML or XML")
 
         soup = BeautifulSoup(response.text, "html.parser")
-        links = [
-            (
-                " ".join(a.get_text(" ", strip=True).split()),
+        links = []
+        for a in soup.select("a[href]"):
+            title = " ".join(a.get_text(" ", strip=True).split())
+
+            # Many official exam portals use generic anchor labels such as
+            # "View", "Download", or "Click here". Include nearby row/card
+            # context so the actual exam/notice title can be classified.
+            if len(title) < 12 or not classify(title):
+                context_parts = []
+                for parent in list(a.parents)[:4]:
+                    if getattr(parent, "name", None) in ("tr", "li", "article", "section"):
+                        context = " ".join(parent.get_text(" ", strip=True).split())
+                        if context and context not in context_parts:
+                            context_parts.append(context)
+                        if len(context) >= 20:
+                            break
+                if context_parts:
+                    context = max(context_parts, key=len)
+                    if context and context.lower() not in title.lower():
+                        title = (context + " — " + title).strip(" —")
+
+            links.append((
+                title,
                 urljoin(response.url, a.get("href", "")),
                 "",
-            )
-            for a in soup.select("a[href]")
-        ]
+            ))
 
     found = []
     seen_urls = set()
@@ -276,7 +294,6 @@ def fetch_source(source):
         title = " ".join(title.split())
         link = link.split("#")[0].strip()
 
-        # Official portals often use short labels such as "Result".
         if len(title) < 4 or not host_allowed(link, hosts):
             continue
 
