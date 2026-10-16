@@ -771,7 +771,9 @@ def main():
         message = (
             "📢 GoResultHub | Approved Exam Update\n\n"
             f"Authority: {item['source_name']}\n"
-            f"Type: {str(item.get('category', 'update')).replace('_', ' ').title()}\n\n"
+            f"Type: {str(item.get('category', 'update')).replace('_', ' ').title()}\n"
+            f"Exam year: {exam_year_from_title(item.get('title', '')) or 'Not stated in title'}\n"
+            f"Notice date: {format_notice_date(item.get('published', '')) or 'Not shown on source listing'}\n\n"
             f"{item.get('title', '')}\n\n"
             + f"📄 OPEN NOTICE / RESULT:\n{direct_url}\n\n"
             + f"🌐 OFFICIAL AUTHORITY WEBSITE:\n{source_page or 'Official website link unavailable; search the authority name on its official portal.'}\n"
