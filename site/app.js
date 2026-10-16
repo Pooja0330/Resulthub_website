@@ -50,7 +50,7 @@ async function loadStatus(){
    const when=checked&&!Number.isNaN(checked.getTime())?checked.toLocaleString("en-IN",{dateStyle:"medium",timeStyle:"short",timeZone:"Asia/Kolkata"}):"Not available";
    const healthy=lastStatus.status==="healthy";
    $("#monitorStatus").textContent=healthy?"Automatic monitoring active":(lastStatus.status==="partial"?"Monitoring partially available":(lastStatus.status==="pending"?"Initial scan pending":"Monitoring status unavailable"));
-   $("#monitorDetail").textContent="Last checked "+when+" IST · "+(lastStatus.sources_succeeded||0)+"/"+(lastStatus.sources_enabled||0)+" sources reachable · "+(lastStatus.sources_failed||0)+" failed · checks run about every 2 hours";
+   $("#monitorDetail").textContent="Last checked "+when+" IST · "+(lastStatus.sources_succeeded||0)+"/"+(lastStatus.sources_enabled||0)+" sources reachable · "+(lastStatus.sources_failed||0)+" failed · "+(lastStatus.alerts_pending||0)+" alerts pending delivery · checks run about every 2 hours";
   }catch(e){
    $("#monitorStatus").textContent="Monitoring status unavailable";
    $("#monitorDetail").textContent="The website is online, but the latest checker status could not be loaded.";
