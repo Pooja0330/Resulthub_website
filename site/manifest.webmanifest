@@ -1,0 +1,18 @@
+{
+  "name": "GoResultHub — Exam Notifications & Results",
+  "short_name": "GoResultHub",
+  "description": "Find Indian exam notifications, admit cards, answer keys and results with links to official authorities.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f8fc",
+  "theme_color": "#123c75",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
