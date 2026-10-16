@@ -16,7 +16,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: goresult-hub-checker
+  group: goresult-hub-checker-v2
   cancel-in-progress: true
 
 jobs:
