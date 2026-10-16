@@ -492,7 +492,7 @@ def fetch_source(source):
                 len(title) < 45
                 or bool(NAV_TITLE.fullmatch(title.strip()))
                 or bool(re.fullmatch(
-                    r"(?:preliminary|main|mains|final)?\\s*(?:examination\\s+)?"
+                    r"(?:preliminary|main|mains|final)?\s*(?:examination\s+)?"
                     r"(?:result|results|result status|merit list|admit card|answer key|"
                     r"cut.?off|shortlisted candidates)",
                     title.strip(), re.I
