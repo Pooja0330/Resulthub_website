@@ -52,7 +52,7 @@
     if (busy) return;
     busy = true;
     try {
-      const response=await fetch(FEED_URL+"?live_check="+Date.now(),{cache:"no-store"});
+      const response=await fetch(FEED_URL,{cache:"no-cache"});
       if(!response.ok)throw new Error("Feed request failed ("+response.status+")");
       const data=await response.json();
       if(!Array.isArray(data))throw new Error("Feed format was not recognised");
@@ -105,10 +105,23 @@
     } finally { busy=false; }
   }
   bell.addEventListener("click",()=>{
-    const opening=panel.hidden;
-    panel.hidden=!opening;
-    bell.setAttribute("aria-expanded",String(opening));
-    if(opening){unread=0;updateBadge();renderPanel(allItems);}
+    // The floating button doubles as a "dismiss all" control whenever
+    // the panel or toast popups are visible. Never reveal another toast
+    // as a side effect of dismissing the current notifications.
+    const hasVisibleNotifications=!panel.hidden||stack.children.length>0;
+    if(hasVisibleNotifications){
+      panel.hidden=true;
+      stack.replaceChildren();
+      bell.setAttribute("aria-expanded","false");
+      unread=0;
+      updateBadge();
+      return;
+    }
+    panel.hidden=false;
+    bell.setAttribute("aria-expanded","true");
+    unread=0;
+    updateBadge();
+    renderPanel(allItems);
   });
   $(".grh-enable-notifications").addEventListener("click",async()=>{
     const button=$(".grh-enable-notifications");
