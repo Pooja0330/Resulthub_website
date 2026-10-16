@@ -20,10 +20,6 @@
   const priorityScore = item => isExamPriority(item) ? 0 : isPib(item) ? 2 : 1;
   const itemKindLabel = item => isPib(item) ? "GOVERNMENT & PIB" : isExamPriority(item) ? "EXAM ALERT" : "OFFICIAL UPDATE";
   const itemKindClass = item => isPib(item) ? "is-pib" : isExamPriority(item) ? "is-exam" : "is-general";
-  const isExamPriority = item => !isPib(item) && /result|notification|admit_card|answer_key|merit_list|cutoff|exam_schedule/i.test(String(item.category||""));
-  const priorityScore = item => isExamPriority(item) ? 0 : isPib(item) ? 2 : 1;
-  const itemKindLabel = item => isPib(item) ? "GOVERNMENT & PIB" : isExamPriority(item) ? "EXAM ALERT" : "OFFICIAL UPDATE";
-  const itemKindClass = item => isPib(item) ? "is-pib" : isExamPriority(item) ? "is-exam" : "is-general";
   const cleanTitle = item => String(item.title || item.exam || "Official exam update").replace(/\s+/g," ").replace(/\s*[|·•].*$/,"").trim();
   const normalizedTitle = item => cleanTitle(item).toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
   const isNoise = item => {
@@ -103,6 +99,8 @@
         // Older archive records stay in the panel but are not presented as new.
         const cutoff=Date.now()-7*24*60*60*1000;
         const recent=sorted.filter(item=>{
+          if(item.archive===true || /archive|historical|annual results old/i.test(String(item.title||""))) return false;
+          if(!isPib(item) && !isExamPriority(item)) return false;
           const stamp=new Date(item.detected_at||item.published||item.date||0).getTime();
           return Number.isFinite(stamp)&&stamp>=cutoff;
         }).slice(0,5);
@@ -117,6 +115,7 @@
         const fresh=[];
         for(const item of sorted) {
           const id=identity(item);
+          if(item.archive===true || isNoise(item)) continue;
           if(!seen.has(id))fresh.push(item);
         }
         fresh.slice(0,5).reverse().forEach(toast);
