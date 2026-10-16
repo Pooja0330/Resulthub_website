@@ -19,8 +19,8 @@ function inferredFamily(x){
  if(/national testing agency|\bnta\b|\bjee\b|\bneet\b|\bcuet\b|\bgate\b|ugc net|csir net/.test(t)) return "Entrance & Eligibility";
  if(/school board|board of school education|school education board|\bboard\b|\bcbse\b|\bcisce\b|\bnios\b|class 10|class 12|sslc|hsc|madhyamik/.test(t)) return "School Board Results";
  if(/police|constable|slprb/.test(t)) return "State Recruitment / Police";
- if(/public service commission|subordinate services selection commission|staff selection commission|state service commission|\bpsc\b|\bselection commission\b/.test(t)) return "State PSC / Recruitment";
- if(/ctet|\btet\b|teacher|teaching|kvs|nvs/.test(t)) return "Teaching / Eligibility";
+ if(/public service commission|technical service commission|direct recruitment commission|subordinate services selection commission|staff selection commission|state service commission|\bpsc\b|\bselection commission\b/.test(t)) return "State PSC / Recruitment";
+ if(/ctet|\btet\b|teacher|teaching|kvs|nvs|school service commission/.test(t)) return "Teaching / Eligibility";
  if(/defence|defense|army|navy|air force|agniveer|crpf|bsf|cisf|itbp|ssb/.test(t)) return "Defence";
  if(/icai|icsi|icmai|chartered accountant|company secretary|national medical commission/.test(t)) return "Professional Exams";
  return x.exam_category||"UPSC / Central Recruitment";
