@@ -55,6 +55,48 @@ jobs:
           MAX_NEW_PER_SOURCE: "5"
         run: python checker/check.py
 
+      - name: Validate generated website data
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from urllib.parse import urlparse, parse_qsl, urlencode, urlunparse
+
+          results = json.loads(Path("site/data/results.json").read_text(encoding="utf-8"))
+          status = json.loads(Path("site/data/status.json").read_text(encoding="utf-8"))
+          if not isinstance(results, list):
+              raise SystemExit("results.json must contain a JSON array")
+          seen_ids, seen_urls = set(), set()
+          for index, item in enumerate(results):
+              if not isinstance(item, dict) or not str(item.get("title", "")).strip():
+                  raise SystemExit(f"Invalid or title-less result at index {index}")
+              url = str(item.get("url") or item.get("official_url") or "").strip()
+              parsed = urlparse(url)
+              if parsed.scheme != "https" or not parsed.hostname:
+                  raise SystemExit(f"Invalid HTTPS notice URL at index {index}")
+              item_id = str(item.get("id", "")).strip()
+              if not item_id or item_id in seen_ids:
+                  raise SystemExit(f"Missing or duplicate result id at index {index}")
+              seen_ids.add(item_id)
+              host = parsed.hostname.lower()
+              if host.startswith("www."):
+                  host = host[4:]
+              path = parsed.path.rstrip("/") or "/"
+              tracking = {"fbclid", "gclid", "dclid", "msclkid", "yclid", "ref_src"}
+              query = sorted((k, v) for k, v in parse_qsl(parsed.query, keep_blank_values=True)
+                             if not k.lower().startswith("utm_") and k.lower() not in tracking)
+              normalized = urlunparse(("https", host, path, "", urlencode(query), ""))
+              if normalized in seen_urls:
+                  raise SystemExit(f"Duplicate normalized notice URL: {normalized}")
+              seen_urls.add(normalized)
+          enabled = int(status.get("sources_enabled", -1))
+          succeeded = int(status.get("sources_succeeded", -1))
+          failed = int(status.get("sources_failed", -1))
+          if enabled < 1 or succeeded < 0 or failed < 0 or succeeded + failed != enabled:
+              raise SystemExit("Source health counts are inconsistent in status.json")
+          print(f"Validated {len(results)} results; {enabled} sources accounted for ({succeeded} reachable, {failed} failed).")
+          PY
+
       - name: Commit updated data
         if: success()
         run: |
