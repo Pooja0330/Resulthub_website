@@ -1,12 +1,12 @@
 {
-  "last_checked_at": "2026-10-16T11:41:21.636375+00:00",
+  "last_checked_at": "2026-10-16T11:51:00.278163+00:00",
   "sources_enabled": 263,
-  "sources_succeeded": 137,
-  "sources_failed": 126,
+  "sources_succeeded": 136,
+  "sources_failed": 127,
   "new_candidates": 0,
   "telegram_posts_sent": 5,
-  "alerts_pending": 26,
+  "alerts_pending": 21,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 86, SSLError: 27, ConnectionError: 22, HTTPError: 12, ReadTimeout: 1",
+  "failure_types": "ConnectTimeout: 87, SSLError: 27, ConnectionError: 21, HTTPError: 12, ReadTimeout: 2",
   "note": "Some sources may be unavailable or use formats automated scanning cannot read."
 }
