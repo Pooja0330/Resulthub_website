@@ -113,6 +113,8 @@ function renderStateSidebar(){
  $("#allStatesBtn").classList.toggle("active",!selectedState&&!selectedRegion);
  $("#stateList").innerHTML=STATE_NAMES.map(name=>'<button type="button" class="state-link'+(selectedState===name?' active':'')+'" data-state="'+esc(name)+'"><span>'+esc(name)+'</span><span class="state-count">'+stateCount(name)+'</span></button>').join("");
  $("#stateList").querySelectorAll("[data-state]").forEach(button=>button.addEventListener("click",()=>{
+  window.location.href="state.html?state="+encodeURIComponent(button.dataset.state);
+  return;
   selectedState=button.dataset.state;
   selectedRegion="";
   $("#region").value=selectedState;
