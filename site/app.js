@@ -208,13 +208,22 @@ function renderFeatured(){
  }
  document.querySelectorAll("[data-browse]").forEach(button=>button.classList.toggle("active",button.dataset.browse===selectedBrowse));
 }
+const ARCHIVE_LINKS = [["UPSC written results archive","https://www.upsc.gov.in/exams-related-info/written-result/archives"],["CBSE previous results archive","https://resultsarchives.nic.in/cbseresults/"],["DSSSB old results","https://dsssb.delhi.gov.in/doit/tab-content/old-result?page=0"],["Delhi University exam results","https://exam.du.ac.in/index1.html"],["Maharashtra results portal","https://mahresult.nic.in/"],["Rajasthan University old results","https://result.uniraj.ac.in/index1.php?rid=4132"],["Pondicherry University old results","https://exam.pondiuni.edu.in/oasis/mainpageold.html"],["West Bengal PSC results","https://psc.wb.gov.in/results.jsp"],["University of Lucknow old results","https://www.lkouniv.ac.in/en/article/annual-results-old"],["Kurukshetra University results","https://kuk.ac.in/results/"]];
 function recordYear(x){
- const explicit=String(x.exam_year||"").match(/(?:19|20)\d{2}/);
- if(explicit)return explicit[0];
- const titleYear=String([x.title,x.exam].join(" ")).match(/(?:19|20)\d{2}/);
- if(titleYear)return titleYear[0];
- const date=String(x.published||x.date||"").match(/(?:19|20)\d{2}/);
- return date?date[0]:"";
+ const explicit=String(x.exam_year||"").match(/(?:19|20)\d{2}/);if(explicit)return explicit[0];
+ const titleYear=String([x.title,x.exam].join(" ")).match(/(?:19|20)\d{2}/);if(titleYear)return titleYear[0];
+ const date=String(x.published||x.date||"").match(/(?:19|20)\d{2}/);return date?date[0]:"";
+}
+function renderYearBrowser(){
+ const box=$("#yearBrowser");if(!box)return;const selected=$("#examYear").value,counts={};
+ allItems.forEach(item=>{const year=recordYear(item);if(year)counts[year]=(counts[year]||0)+1;});
+ box.innerHTML=Array.from({length:27},(_,i)=>2026-i).map(year=>'<button type="button" class="year-chip'+(selected===String(year)?' active':'')+'" data-year="'+year+'" aria-pressed="'+(selected===String(year)?'true':'false')+'"><span>'+year+'</span><small>'+(counts[String(year)]||0)+'</small></button>').join('')+'<button type="button" class="year-chip'+(!selected?' active':'')+'" data-year="" aria-pressed="'+(!selected?'true':'false')+'"><span>All years</span><small>'+allItems.length+'</small></button>';
+ box.querySelectorAll("[data-year]").forEach(button=>button.addEventListener("click",()=>{$("#examYear").value=button.dataset.year;page=1;render();$("#updates").scrollIntoView({behavior:"smooth",block:"start"});}));
+}
+function renderYearArchiveHelp(){
+ const box=$("#yearArchiveHelp");if(!box)return;const year=$("#examYear").value,list=filteredItems();
+ if(!year||year==="unknown"||list.length){box.classList.add("hidden");box.innerHTML="";return;}
+ box.classList.remove("hidden");box.innerHTML='<h3>No individual records indexed for '+esc(year)+' yet</h3><p>This means GoResultHub has not indexed matching year-specific entries; it does not mean no exams or results existed in '+esc(year)+'. Check these official archive starting points while historical coverage is expanded.</p><div class="archive-help-links">'+ARCHIVE_LINKS.map(([label,url])=>'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(label)+' ↗</a>').join("")+'</div>';
 }
 function filteredItems(){
  const q=$("#q").value.trim().toLowerCase(), c=$("#category").value, ec=$("#examCategory").value, r=$("#region").value, y=$("#examYear").value;
@@ -232,6 +241,7 @@ function filteredItems(){
 }
 function render(){
  renderStateSidebar();
+ renderYearBrowser();
   const list=filteredItems(), pages=Math.max(1,Math.ceil(list.length/PAGE_SIZE));
   renderStateResources();
  page=Math.min(page,pages);
@@ -247,6 +257,7 @@ function render(){
   }).join("");
  $("#empty").classList.toggle("hidden",list.length>0);
  if(!list.length) $("#updatesList").innerHTML="";
+ renderYearArchiveHelp();
  const pager=$("#pagination");
  if(pager){
   pager.innerHTML=list.length>PAGE_SIZE?`<button type="button" id="prevPage" class="secondary" ${page===1?"disabled":""}>Previous</button><span>Page ${page} of ${pages}</span><button type="button" id="nextPage" class="secondary" ${page===pages?"disabled":""}>Next</button>`:"";
