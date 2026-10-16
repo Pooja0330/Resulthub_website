@@ -8,6 +8,7 @@ on:
     paths:
       - "checker/check.py"
       - "checker/sources.json"
+      - ".github/workflows/check-results.yml"
   schedule:
     - cron: "17 */2 * * *"
 
