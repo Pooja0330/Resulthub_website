@@ -35,36 +35,52 @@ HEADERS = {
 
 RULES = [
     ("result", re.compile(
-        r"\b(result|results|result declared|result declaration|declared result|"
-        r"exam results?|examination results?|board results?|class 10 results?|"
-        r"class 12 results?|ssc results?|hsc results?|scorecards?|score cards?|"
-        r"marks list|rank list|rank card|result of)\b", re.I)),
+        r"\b(result declared|result declaration|results of|result for|final result|"
+        r"provisional result|result published|result notification|exam results?|"
+        r"examination results?|board results?|class 10 results?|class 12 results?|"
+        r"ssc results?|hsc results?|scorecards?|score cards?|marks list|rank list|"
+        r"rank card|result announcement)\b", re.I)),
     ("merit_list", re.compile(
         r"\b(merit list|final selection|selected candidates|qualified candidates|"
-        r"provisional selection|selection list|final panel|allotment list)\b", re.I)),
+        r"provisional selection|selection list|final panel|allotment list|"
+        r"provisional panel|shortlisted candidates)\b", re.I)),
     ("cutoff", re.compile(
         r"\b(cut.?off marks?|qualifying marks?)\b", re.I)),
     ("admit_card", re.compile(
         r"\b(admit cards?|hall tickets?|call letters?|exam city intimation|"
-        r"city intimation slip)\b", re.I)),
+        r"city intimation slip|download your admit card)\b", re.I)),
     ("answer_key", re.compile(
-        r"\b(answer keys?|response sheets?|objection tracker)\b", re.I)),
+        r"\b(answer keys?|response sheets?|objection tracker|challenge answer key)\b", re.I)),
     ("exam_schedule", re.compile(
         r"\b(exam date|examination date|exam schedule|examination schedule|"
         r"date sheet|exam calendar|exam postponement|exam rescheduled|"
-        r"examination postponed|examination rescheduled)\b", re.I)),
+        r"examination postponed|examination rescheduled|interview schedule|"
+        r"written examination schedule|revised exam date)\b", re.I)),
     ("notification", re.compile(
         r"\b(exam notification|examination notification|recruitment notification|"
         r"recruitment advertisement|vacancy notification|information bulletin|"
         r"application dates|registration opens|apply online|online application|"
-        r"application notice|vacancies|recruitment|careers|advertisement|"
-        r"advertisements|applications invited|invites applications|invited applications)\b", re.I)),
+        r"application notice|applications invited|invites applications|"
+        r"invited applications|application invited|inviting online application|"
+        r"recruitment of|recruitment to|recruitment for|recruitment drive|"
+        r"recruitment process|notification for recruitment|advertisement no\.?|"
+        r"advertisement for|advertisement dated|recruitment notice|"
+        r"vacancies for|vacancy for|last date to apply|application deadline|"
+        r"corrigendum|addendum|extension of last date|revised vacancy|"
+        r"additional vacancies|selection process for|selection list for recruitment)\b", re.I)),
 ]
+
 
 SKIP = re.compile(
     r"\b(tender|quotation|procurement|vendor registration|privacy policy|"
-    r"photo gallery|annual report|press release|media advisory|"
-    r"holiday list|meeting notice)\b", re.I
+    r"photo gallery|annual report|media advisory|holiday list|meeting notice)\b", re.I
+)
+
+NAV_TITLE = re.compile(
+    r"^(home|result|results|recruitment|careers?|advertisements?|"
+    r"notifications?|notices?|latest news|read more|click here|"
+    r"view all|view more|recruitment calendar|stages of recruitment|"
+    r"reporting vacancies|detailed advertisement)$", re.I
 )
 
 
@@ -113,7 +129,7 @@ def host_allowed(url, hosts):
 
 
 def classify(title):
-    if not title or SKIP.search(title):
+    if not title or SKIP.search(title) or NAV_TITLE.fullmatch(title.strip()):
         return None
     for category, pattern in RULES:
         if pattern.search(title):
@@ -322,6 +338,9 @@ def main():
     health = state.setdefault("source_health", {})
     pending = state.setdefault("pending_alerts", {})
     held = state.setdefault("held_alerts", {})
+    # Hold existing queued items for review once; only discoveries from this run
+    # can be sent automatically, preventing a large stale backlog from flooding Telegram.
+    preexisting_pending_keys = set(pending.keys()) if isinstance(pending, dict) else set()
 
     if not isinstance(pending, dict):
         pending = {}
@@ -399,7 +418,24 @@ def main():
             results.append(build_result(item, item["detected_at"]))
             existing_ids.add(item["id"])
 
-    # Send newly detected links to the main channel, retrying undelivered alerts.
+    # Keep the old backlog for review instead of automatically drip-feeding it.
+    for key in list(preexisting_pending_keys):
+        record = pending.pop(key, None)
+        if not record:
+            continue
+        item = record.get("item", {})
+        title = str(item.get("title", ""))
+        reason = "Existing backlog held for review after stricter filtering."
+        if not classify(title):
+            reason = "Generic navigation or irrelevant title; held for review."
+        held[key] = {
+            "item": item,
+            "detected_at": record.get("detected_at", checked_at),
+            "held_at": checked_at,
+            "hold_reason": reason,
+        }
+
+    # Only fresh discoveries from this run can be automatically sent.
     public_sent = 0
     public_attempts = 0
     # Limit attempts as well as successful deliveries. A Telegram 429 must not
@@ -407,7 +443,10 @@ def main():
     max_public_alerts_per_run = max(
         1, min(int(os.getenv("MAX_PUBLIC_ALERTS_PER_RUN", "5")), 5)
     )
+    fresh_candidate_keys = {item.get("id") for item in candidates}
     for key in list(pending.keys()):
+        if key not in fresh_candidate_keys:
+            continue
         if TG_RATE_LIMITED:
             print('Telegram rate limited; alerts remain queued')
             break
