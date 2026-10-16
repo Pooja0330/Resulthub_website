@@ -220,9 +220,9 @@ function renderFeatured(){
 const ARCHIVE_LINKS = [["UPSC written results archive","https://www.upsc.gov.in/exams-related-info/written-result/archives"],["CBSE previous results archive","https://resultsarchives.nic.in/cbseresults/"],["DSSSB old results","https://dsssb.delhi.gov.in/doit/tab-content/old-result?page=0"],["Delhi University exam results","https://exam.du.ac.in/index1.html"],["Maharashtra results portal","https://mahresult.nic.in/"],["Rajasthan University old results","https://result.uniraj.ac.in/index1.php?rid=4132"],["Pondicherry University old results","https://exam.pondiuni.edu.in/oasis/mainpageold.html"],["West Bengal PSC results","https://psc.wb.gov.in/results.jsp"],["University of Lucknow old results","https://www.lkouniv.ac.in/en/article/annual-results-old"],["Kurukshetra University results","https://kuk.ac.in/results/"]];
 function recordYear(x){
  // Prefer the actual publication year for the year filter; exam-cycle year is fallback only.
- const date=String(x.published||"").match(/(?:19|20)\\d{2}/);if(date)return date[0];
- const explicit=String(x.exam_year||"").match(/(?:19|20)\\d{2}/);if(explicit)return explicit[0];
- const titleYear=String([x.title,x.exam].join(" ")).match(/(?:19|20)\\d{2}/);return titleYear?titleYear[0]:"";
+ const date=String(x.published||"").match(/(?:19|20)\d{2}/);if(date)return date[0];
+ const explicit=String(x.exam_year||"").match(/(?:19|20)\d{2}/);if(explicit)return explicit[0];
+ const titleYear=String([x.title,x.exam].join(" ")).match(/(?:19|20)\d{2}/);return titleYear?titleYear[0]:"";
 }
 function renderYearBrowser(){
  const box=$("#yearBrowser");if(!box)return;const selected=$("#examYear").value,counts={};
