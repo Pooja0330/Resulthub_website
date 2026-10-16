@@ -647,12 +647,17 @@ def main():
         title = str(item.get("title", "")).strip() if isinstance(item, dict) else ""
         url = str(item.get("url", "")).strip() if isinstance(item, dict) else ""
         source = source_by_name.get(str(item.get("source_name", ""))) if isinstance(item, dict) else None
-        if not isinstance(item, dict) or not classify(title):
+        stale_pending = isinstance(item, dict) and is_stale_notice(title, item.get("published", ""))
+        if not isinstance(item, dict) or not classify(title) or stale_pending:
             held[key] = {
                 "item": item if isinstance(item, dict) else {},
                 "detected_at": record.get("detected_at", checked_at) if isinstance(record, dict) else checked_at,
                 "held_at": checked_at,
-                "hold_reason": "Generic, irrelevant, or unclassifiable title; held for review.",
+                "hold_reason": (
+                    "Explicitly dated notice is outside the live 90-day window; held for review."
+                    if stale_pending else
+                    "Generic, irrelevant, or unclassifiable title; held for review."
+                ),
             }
             pending.pop(key, None)
             continue
