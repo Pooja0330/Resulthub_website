@@ -22,13 +22,15 @@ CHANNEL = os.getenv("TG_CHANNEL", "").strip()
 TG_RATE_LIMITED = False
 
 TIMEOUT = max(6, min(int(os.getenv("SOURCE_TIMEOUT_SECONDS", "12")), 20))
-WORKERS = max(1, min(int(os.getenv("SOURCE_WORKERS", "8")), 12))
+# Lower concurrency reduces connection pressure against slow government portals.
+WORKERS = max(1, min(int(os.getenv("SOURCE_WORKERS", "5")), 8))
 MAX_NEW_PER_SOURCE = max(1, min(int(os.getenv("MAX_NEW_PER_SOURCE", "5")), 20))
 MAX_AGE_DAYS = 90
 
 HEADERS = {
-    "User-Agent": "GoResultHubExamMonitor/3.0",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 GoResultHubMonitor/3.1",
     "Accept": "text/html,application/rss+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9,hi;q=0.7",
 }
 
 RULES = [
@@ -126,7 +128,7 @@ def get_with_retries(url, headers=None):
             response = requests.get(
                 url,
                 headers=headers or HEADERS,
-                timeout=(8, TIMEOUT),
+                timeout=(12, TIMEOUT),
                 allow_redirects=True,
                 verify=certifi.where(),
             )
