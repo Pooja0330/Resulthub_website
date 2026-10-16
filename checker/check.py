@@ -205,6 +205,14 @@ def classify(title):
     return None
 
 
+def classify_source_title(title, source):
+    """Classify normal exam notices; optionally index every entry from an official news feed."""
+    category = classify(title)
+    if source.get("include_all_items", False) and title and not NAV_TITLE.fullmatch(title.strip()):
+        return category or "notification"
+    return category
+
+
 def infer_exam_category(title="", source_name="", source_id="", state=""):
     """Map notices to stable website filters instead of source-name labels."""
     text_value = " ".join(str(v or "") for v in (source_id, source_name, title, state)).lower()
@@ -520,7 +528,7 @@ def fetch_source(source):
         if len(title) < 4 or not host_allowed(link, hosts):
             continue
 
-        category = classify(title)
+        category = classify_source_title(title, source)
         if not category or link in seen_urls:
             continue
         if is_stale_notice(title, published) and not source.get("historical_archive", False):
@@ -542,7 +550,8 @@ def fetch_source(source):
     # Official portals often list years of archived notices. Keep only a
     # bounded set of the first matching links (normally newest-first) per source.
     # This cap is also used to limit stale backlog and Telegram alert pressure.
-    return found[:MAX_ARCHIVE_PER_SOURCE] if source.get("historical_archive", False) else found[:MAX_NEW_PER_SOURCE]
+    source_limit = int(source.get("max_new", MAX_ARCHIVE_PER_SOURCE if source.get("historical_archive", False) else MAX_NEW_PER_SOURCE))
+    return found[:max(1, min(source_limit, 100))]
 
 
 def build_result(item, detected_at):
@@ -611,7 +620,7 @@ def main():
         if registered_state:
             item["state"] = registered_state
             item["region"] = str(source_meta.get("region") or registered_state)
-        category = classify(title)
+        category = classify_source_title(title, source_meta)
         # Keep curated archive landing pages, but remove dated non-archive
         # notices outside the live 90-day window.
         if not category or (not item.get("archive", False) and is_stale_notice(title, item.get("published", ""))):
