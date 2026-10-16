@@ -321,9 +321,14 @@ async function loadResults(){
  return resultsRequest;
 }
 async function refresh(){if(document.visibilityState==="visible")await Promise.all([loadResults(),loadStatus()])}
+function resetUpdateFilters(){
+ $("#category").value="";$("#examCategory").value="";$("#region").value="";$("#examYear").value="";$("#sort").value="new";
+ selectedState="";selectedRegion="";selectedBrowse="";page=1;
+ document.querySelectorAll("[data-browse]").forEach(button=>button.classList.remove("active"));
+}
 function init(){
  $("#year").textContent=new Date().getFullYear();
- $("#region").value="";$("#examYear").value="";$("#category").value="";$("#examCategory").value="";selectedState="";selectedRegion="";selectedBrowse="";
+ resetUpdateFilters();
  const sharedQuery=new URLSearchParams(window.location.search).get("q");
  if(sharedQuery){$("#q").value=sharedQuery;page=1;}
  try{const cached=JSON.parse(localStorage.getItem("goresult-results-cache")||"null");if(Array.isArray(cached?.items)){allItems=cached.items;render()}}catch(e){}
@@ -331,6 +336,8 @@ function init(){
  if(refreshTimer)clearInterval(refreshTimer);
  refreshTimer=setInterval(refresh,15*60*1000);
  document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")refresh()});
+  // Clear stale filter UI when browsers restore the page from the back-forward cache.
+  window.addEventListener("pageshow",event=>{if(event.persisted){resetUpdateFilters();render();}});
  if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});
 }
 function clearUpdateFilters(){
