@@ -157,7 +157,7 @@ def infer_exam_category(title="", source_name="", source_id="", state=""):
         return "UPSC / Central Recruitment"
     if source.startswith(("nta", "jee", "neet", "cuet", "ugcnet", "gate")) or re.search(r"\b(nta|jee|neet|cuet|gate|ugc net|csir net|entrance exam)\b", text_value):
         return "Entrance & Eligibility"
-    if re.search(r"\b(board|board of school education|school education board|cbse|cisce|nios|class 10|class 12|sslc|hsc|madhyamik)\b", text_value):
+    if re.search(r"\b(school board|board of school education|school education board|board of secondary education|secondary education board|cbse|cisce|nios|class 10|class 12|sslc|hsc|madhyamik)\b", text_value):
         return "School Board Results"
     if re.search(r"\b(police|constable|slprb|prpb)\b", text_value):
         return "State Recruitment / Police"
