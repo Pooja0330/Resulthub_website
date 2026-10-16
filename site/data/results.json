@@ -8499,21 +8499,22 @@
   },
   {
     "id": "6b4bb0864740fc084d770afd",
-    "title": "PRELIMINARY EXAMINATION RESULT",
-    "exam": "PRELIMINARY EXAMINATION RESULT",
-    "exam_category": "UPSC / Central Recruitment",
+    "title": "SBI PO Prelims Result 2026 — Shortlisted Roll Numbers for Main Examination",
+    "exam": "State Bank of India Probationary Officers (PO) 2026-27 Prelims Result",
+    "exam_category": "Banking",
     "category": "result",
     "source_name": "SBI Recruitment Results",
-    "authority": "SBI Recruitment Results",
+    "authority": "State Bank of India",
     "url": "https://sbi.bank.in/webfiles/uploads/files_2627/08/SBIPO2026-Prelims-WTRESULT-15_columns.pdf",
     "official_url": "https://sbi.bank.in/webfiles/uploads/files_2627/08/SBIPO2026-Prelims-WTRESULT-15_columns.pdf",
     "source_url": "https://sbi.bank.in/en/web/careers/recruitment-results",
     "region": "Central",
     "state": "",
-    "description": "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility.",
+    "description": "Official SBI PO preliminary examination result: shortlisted roll numbers for the Main Examination. Check the SBI careers page for any later notice, marks link or revised information. This result is specific to SBI PO, not IBPS SO or other exams.",
     "verified": false,
     "archive": false,
-    "detected_at": "2026-10-16T09:46:21.079535+00:00"
+    "detected_at": "2026-10-16T09:46:21.079535+00:00",
+    "source_id": "sbi-recruitment-results"
   },
   {
     "id": "6ba8bc39d583e93a24298fb4",
