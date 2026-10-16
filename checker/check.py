@@ -400,7 +400,10 @@ def fetch_source(source):
             "published": published[:100],
         })
 
-    return found
+    # Official portals often list years of archived notices. Keep only a
+    # bounded set of the first matching links (normally newest-first) per source.
+    # This cap is also used to limit stale backlog and Telegram alert pressure.
+    return found[:MAX_NEW_PER_SOURCE]
 
 
 def build_result(item, detected_at):
