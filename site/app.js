@@ -53,7 +53,7 @@ const STATE_PORTALS = {
 };
 const STATE_PATTERNS = [
  ["Andhra Pradesh",/andhra pradesh|andhra-board|ap-results|appsc|psc\.ap\.gov\.in|bse\.ap\.gov\.in|slprb\.ap\.gov\.in/],
- ["Arunachal Pradesh",/arunachal|arunachal-psc|appsc\.gov\.in/],
+ ["Arunachal Pradesh",/arunachal|appsc\.gov\.in/],
  ["Assam",/assam|apsc|sebaonline|assam-board/],
  ["Bihar",/bihar|bpsc|bseb|csbc|bpssc|bssc|btsc/],
  ["Chhattisgarh",/chhattisgarh|cgbse|cgpsc|vyapam\.cgstate/],
@@ -65,7 +65,7 @@ const STATE_PATTERNS = [
  ["Karnataka",/karnataka|kseab|kpsc\.kar|karnataka-kpsc|karnataka-police/],
  ["Kerala",/kerala|keralapsc|pareekshabhavan/],
  ["Madhya Pradesh",/madhya pradesh|mpbse|mppsc|esb\.mp|mpesb/],
- ["Maharashtra",/maharashtra|mpsc|mahahsscboard|mahresult|mahaswayam|maha-rojgar/],
+ ["Maharashtra",/maharashtra|mahahsscboard|mahresult|mahaswayam|maha-rojgar|mpsc\.gov\.in/],
  ["Manipur",/manipur|mpscmanipur|bsem\.nic/],
  ["Meghalaya",/meghalaya|mpsc\.meghalaya|mbose/],
  ["Mizoram",/mizoram|mpsc\.mizoram|mbse\.edu/],
