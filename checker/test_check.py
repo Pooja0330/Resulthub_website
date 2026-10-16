@@ -1,6 +1,6 @@
 import unittest
 
-from check import classify, host_allowed, infer_exam_category, is_stale_notice, normalize_notice_url
+from check import classify, exam_year_from_title, extract_notice_date, host_allowed, infer_exam_category, is_stale_notice, normalize_notice_url
 
 
 class CheckerSafetyTests(unittest.TestCase):
@@ -45,6 +45,16 @@ class CheckerSafetyTests(unittest.TestCase):
 
     def test_source_id_preserves_teaching_family_for_kvs(self):
         self.assertEqual(infer_exam_category("Recruitment notification", "Kendriya Vidyalaya Sangathan", "kvs"), "Teaching / Eligibility")
+
+    def test_extracts_explicit_official_upload_date(self):
+        self.assertEqual(extract_notice_date("Notice ABC Date of Upload: 01/10/2026 Download PDF"), "01 Oct 2026")
+
+    def test_does_not_guess_date_when_listing_has_no_labelled_date(self):
+        self.assertEqual(extract_notice_date("SSC CGL 2026 Apply Online"), "")
+
+    def test_exam_year_is_only_returned_when_explicit(self):
+        self.assertEqual(exam_year_from_title("SSC CGL Tier-I Result 2026"), "2026")
+        self.assertEqual(exam_year_from_title("Recruitment Result"), "")
 
     def test_generic_call_letters_landing_page_is_not_a_notice(self):
         self.assertIsNone(classify("Call Letters"))
