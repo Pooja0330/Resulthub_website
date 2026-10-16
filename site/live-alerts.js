@@ -108,21 +108,10 @@
       if(!initialized) {
         data.forEach(item=>seen.add(identity(item)));
         writeSeen(seen);
-        // On first visit, surface a small set of genuinely recent indexed items.
-        // Older archive records stay in the panel but are not presented as new.
-        const cutoff=Date.now()-7*24*60*60*1000;
-        const recent=sorted.filter(item=>{
-          if(item.archive===true || /archive|historical|annual results old/i.test(String(item.title||""))) return false;
-          if(!isPib(item) && !isExamPriority(item)) return false;
-          const stamp=new Date(item.detected_at||item.published||item.date||0).getTime();
-          return Number.isFinite(stamp)&&stamp>=cutoff;
-        }).slice(0,5);
-        recent.slice().reverse().forEach(toast);
-        if(recent.length){
-          unread=recent.length;
-          updateBadge();
-          status.textContent="Latest "+recent.length+" recent update"+(recent.length===1?"":"s")+" shown · "+new Date().toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"});
-        }
+        // First page load should not replay old alerts as floating popups.
+        // Mark current feed items as seen; new items detected by later polls can toast.
+        unread=0;
+        updateBadge();
         initialized=true;
       } else {
         const fresh=[];
