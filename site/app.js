@@ -339,7 +339,7 @@ document.querySelectorAll("[data-browse]").forEach(button=>button.addEventListen
  page=1;render();
  $("#updates").scrollIntoView({behavior:"smooth",block:"start"});
 }));
-$("#supportBtn").addEventListener("click",()=>{$("#supportNote").textContent="Secure support payments are not configured yet. We will enable this after a payment provider and checkout URL are set up.";});
+
 document.addEventListener("click",async event=>{
  const button=event.target.closest("[data-share-url]");
  if(!button)return;
