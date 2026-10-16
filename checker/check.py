@@ -11,6 +11,7 @@ from urllib.parse import urlparse, urljoin
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import requests
+import certifi
 import feedparser
 from bs4 import BeautifulSoup
 
@@ -119,7 +120,7 @@ def get_with_retries(url, headers=None):
     last_error = None
 
     # Keep a failed source from delaying the entire scheduled run.
-    # Two attempts are enough for transient errors; never disable TLS verification.
+    # Retry transient errors; use certifi's current CA bundle and never disable TLS verification.
     for attempt in range(3):
         try:
             response = requests.get(
@@ -127,6 +128,7 @@ def get_with_retries(url, headers=None):
                 headers=headers or HEADERS,
                 timeout=(8, TIMEOUT),
                 allow_redirects=True,
+                verify=certifi.where(),
             )
 
             if response.status_code in (408, 425, 429, 500, 502, 503, 504):
