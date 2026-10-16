@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "description": "Deduplicated registry of official Indian exam-result and recruitment authorities. Source URLs are unique; actual availability and notice detection still require runtime validation.",
+  "description": "Official Indian exam result, recruitment and historical archive source registry. Historical archive sources are indexed separately from live notices to avoid treating old notices as new alerts.",
   "sources": [
     {
       "id": "upsc",
@@ -5550,6 +5550,126 @@
       "region": "Arunachal Pradesh",
       "exam_category": "University Results",
       "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "du-exam-results-archive",
+      "name": "University of Delhi Examination Branch — Results Archive",
+      "url": "https://exam.du.ac.in/index1.html",
+      "kind": "html",
+      "allowed_hosts": [
+        "exam.du.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Delhi",
+      "region": "Delhi",
+      "exam_category": "University Results",
+      "historical_archive": true,
+      "coverage_note": "Official historical/archive listing. Indexes only entries actually linked by the authority; does not guarantee complete records back to 2000."
+    },
+    {
+      "id": "lucknow-university-old-results",
+      "name": "University of Lucknow — Annual Results Old Archive",
+      "url": "https://www.lkouniv.ac.in/en/article/annual-results-old",
+      "kind": "html",
+      "allowed_hosts": [
+        "www.lkouniv.ac.in",
+        "lkouniv.ac.in"
+      ],
+      "categories": [
+        "result",
+        "merit_list"
+      ],
+      "enabled": true,
+      "state": "Uttar Pradesh",
+      "region": "Uttar Pradesh",
+      "exam_category": "University Results",
+      "historical_archive": true,
+      "coverage_note": "Official historical/archive listing. Indexes only entries actually linked by the authority; does not guarantee complete records back to 2000."
+    },
+    {
+      "id": "kurukshetra-university-results-archive",
+      "name": "Kurukshetra University — Results and Old Result Archive",
+      "url": "https://kuk.ac.in/results/",
+      "kind": "html",
+      "allowed_hosts": [
+        "kuk.ac.in",
+        "www.kuk.ac.in"
+      ],
+      "categories": [
+        "result",
+        "merit_list"
+      ],
+      "enabled": true,
+      "state": "Haryana",
+      "region": "Haryana",
+      "exam_category": "University Results",
+      "historical_archive": true,
+      "coverage_note": "Official historical/archive listing. Indexes only entries actually linked by the authority; does not guarantee complete records back to 2000."
+    },
+    {
+      "id": "wbpsc-results-archive",
+      "name": "West Bengal Public Service Commission — Results Archive",
+      "url": "https://psc.wb.gov.in/results.jsp",
+      "kind": "html",
+      "allowed_hosts": [
+        "psc.wb.gov.in"
+      ],
+      "categories": [
+        "result",
+        "merit_list",
+        "cutoff",
+        "notification"
+      ],
+      "enabled": true,
+      "state": "West Bengal",
+      "region": "West Bengal",
+      "exam_category": "State PSC / Recruitment",
+      "historical_archive": true,
+      "coverage_note": "Official historical/archive listing. Indexes only entries actually linked by the authority; does not guarantee complete records back to 2000."
+    },
+    {
+      "id": "pondicherry-university-old-results",
+      "name": "Pondicherry University — Examination Old Results Portal",
+      "url": "https://exam.pondiuni.edu.in/oasis/mainpageold.html",
+      "kind": "html",
+      "allowed_hosts": [
+        "exam.pondiuni.edu.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Puducherry",
+      "region": "Puducherry",
+      "exam_category": "University Results",
+      "historical_archive": true,
+      "coverage_note": "Official historical/archive listing. Indexes only entries actually linked by the authority; does not guarantee complete records back to 2000."
+    },
+    {
+      "id": "rajasthan-university-old-results",
+      "name": "University of Rajasthan — Old Results Portal",
+      "url": "https://result.uniraj.ac.in/index1.php?rid=4132",
+      "kind": "html",
+      "allowed_hosts": [
+        "result.uniraj.ac.in"
+      ],
+      "categories": [
+        "result",
+        "merit_list"
+      ],
+      "enabled": true,
+      "state": "Rajasthan",
+      "region": "Rajasthan",
+      "exam_category": "University Results",
+      "historical_archive": true,
+      "coverage_note": "Official historical/archive listing. Indexes only entries actually linked by the authority; does not guarantee complete records back to 2000."
     }
   ]
 }
