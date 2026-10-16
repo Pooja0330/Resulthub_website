@@ -40,7 +40,7 @@
     }).join("") : '<p class="grh-alert-empty">No updates have been indexed yet. Keep this page open; the panel checks the published feed periodically.</p>';
   }
   function toast(item) {
-    const url="https://goresulthub.com/?q="+encodeURIComponent(item.title || item.exam || "");
+    const url="https://goresulthub.com/notice.html?id="+encodeURIComponent(item.id||"")+"&q="+encodeURIComponent(item.title || item.exam || "");
     const node=document.createElement("article");
     node.className="grh-toast";
     node.innerHTML='<div class="grh-toast-top"><span>NEW OFFICIAL UPDATE</span><button type="button" aria-label="Dismiss">×</button></div><strong>'+esc(item.title || item.exam || "New exam update")+'</strong><small>'+esc(item.source_name || item.authority || "Official source")+' · '+esc(categoryName(item.category))+'</small>'+(url?'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">View update ↗</a>':'');
