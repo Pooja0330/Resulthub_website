@@ -153,6 +153,9 @@ function refreshRelativeTimes(){document.querySelectorAll("time.relative-detecti
 function inferredFamily(x){
  const t=[x.source_id,x.source_name,x.title,x.exam,x.state].join(" ").toLowerCase();
  if(/\bjee\s*advanced\b/.test(t)) return "JEE Advanced";
+ if(/cg\s*vyapam|cgpeb|chhattisgarh professional examination board/.test(t)) return "CG Vyapam / CGPEB";
+ if(/cuet\s*pg/.test(t)) return "CUET PG";
+ if(/cuet\s*ug/.test(t)) return "CUET UG";
  if(/\bjee\s*(main|mains)\b/.test(t)) return "JEE Main";
  if(/\bneet\s*(pg|post.?graduate)\b/.test(t)||/natboard\.edu/.test(t)) return "NEET PG";
  if(/\bneet\s*(ug|under.?graduate)\b/.test(t)||String(x.source_id||"")==="neet") return "NEET UG";
@@ -323,6 +326,10 @@ function init(){
 $("#searchForm").addEventListener("submit",e=>{e.preventDefault();page=1;render()});
 ["q","category","examCategory","region","sort","examYear"].forEach(id=>$("#"+id).addEventListener(id==="q"?"input":"change",()=>{if(id==="region"){const v=$("#region").value;selectedState=STATE_NAMES.includes(v)?v:"";selectedRegion=v==="Central"?"Central":"";}page=1;render()}));
 document.querySelectorAll(".pills [data-family]").forEach(button=>button.addEventListener("click",()=>{$("#examCategory").value=button.dataset.family;page=1;$("#updates").scrollIntoView({behavior:"smooth"});render()}));
+document.querySelectorAll("[data-quick-search]").forEach(button=>button.addEventListener("click",()=>{const term=button.dataset.quickSearch||"";$("#q").value=term;$("#category").value="";$("#examCategory").value="";$("#region").value="";$("#examYear").value="";selectedState="";selectedRegion="";selectedBrowse="";page=1;render();$("#updates").scrollIntoView({behavior:"smooth",block:"start"});}));
+const quickSearch=$("#quickExamSearch");
+quickSearch?.addEventListener("input",()=>{const term=quickSearch.value.trim().toLowerCase();let shown=0;document.querySelectorAll(".quick-exam-card").forEach(card=>{const match=!term||(card.dataset.keywords+" "+card.innerText).toLowerCase().includes(term);card.classList.toggle("hidden",!match);if(match)shown++;});document.querySelectorAll(".quick-exam-group").forEach(group=>group.classList.toggle("hidden",!group.querySelector(".quick-exam-card:not(.hidden)")));$("#quickExamEmpty")?.classList.toggle("hidden",shown>0);});
+
 document.querySelectorAll("[data-browse]").forEach(button=>button.addEventListener("click",()=>{
  selectedBrowse=button.dataset.browse||"";
  selectedState="";selectedRegion="";
