@@ -1,5 +1,5 @@
-const CACHE_NAME = "goresult-hub-v2";
-const DATA_PATHS = ["/Resulthub_website/data/results.json", "/Resulthub_website/data/status.json"];
+const CACHE_NAME = "goresult-hub-v3";
+const DATA_PATHS = ["data/results.json", "data/status.json"];
 self.addEventListener("install", event => { self.skipWaiting(); });
 self.addEventListener("activate", event => {
   event.waitUntil((async () => {
@@ -13,7 +13,8 @@ self.addEventListener("fetch", event => {
   if (request.method !== "GET") return;
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
-  if (!url.pathname.startsWith("/Resulthub_website/")) return;
+  const scopePath = new URL(self.registration.scope).pathname;
+  if (!url.pathname.startsWith(scopePath)) return;
   event.respondWith((async () => {
     const cache = await caches.open(CACHE_NAME);
     const isData = DATA_PATHS.some(path => url.pathname.endsWith(path.split("/").pop()));
