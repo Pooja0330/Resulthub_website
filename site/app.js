@@ -245,7 +245,7 @@ function isNavigationNoise(item){
   "contactus","termsofuse","accessibilityoptions","skipnavigation",
   "backtotop","privacy_policy".replace(/[^a-z0-9]/g,"")
  ]);
- return blocked.has(title);
+ return blocked.has(title) || title.includes("rtipolicyinformation") || title.includes("informationrtiofficers") || title.includes("rtirelatedcasedecisions");
 }
 function cleanResults(items){return Array.isArray(items)?items.filter(item=>!isNavigationNoise(item)):[];}
 function displayTitle(x){return String(x.title||x.exam||"Exam update");}
