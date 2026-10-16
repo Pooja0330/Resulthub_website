@@ -92,7 +92,7 @@ const STATE_PATTERNS = [
 ];
 function stateForItem(x){
  const sourceLabel=[x.source_id,x.source_name].join(" ").toLowerCase();
- if((!x.state||x.state==="Central")&&(/\\brrb\\b|\\brrc\\b|railway recruitment/.test(sourceLabel)))return "Central";
+ if((!x.state||x.state==="Central")&&(/\brrb\b|\brrc\b|railway recruitment/.test(sourceLabel)))return "Central";
  const raw=String(x.state||"").trim();
  if(STATE_NAMES.includes(raw))return raw;
  const region=String(x.region||"").trim();
