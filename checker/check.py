@@ -475,10 +475,8 @@ def main():
         for item in results if isinstance(item, dict)
     }
     published_urls.discard("")
-    # Hold existing queued items for review once; only discoveries from this run
-    # can be sent automatically, preventing a large stale backlog from flooding Telegram.
-    preexisting_pending_keys = set(pending.keys()) if isinstance(pending, dict) else set()
-
+    # Keep a persistent delivery queue. Pending alerts must survive failed sends and
+    # be retried on later scheduled runs; only a small batch is attempted per run.
     if not isinstance(pending, dict):
         pending = {}
         state["pending_alerts"] = pending
@@ -577,24 +575,33 @@ def main():
             existing_ids.add(item["id"])
             published_urls.add(normalized_url)
 
-    # Keep the old backlog for review instead of automatically drip-feeding it.
-    for key in list(preexisting_pending_keys):
-        record = pending.pop(key, None)
-        if not record:
+    # Review the persistent queue before sending. Invalid or irrelevant legacy
+    # items are held for review, while valid failed deliveries remain retryable.
+    source_by_name = {str(s.get("name", "")): s for s in sources}
+    for key in list(pending.keys()):
+        record = pending.get(key, {})
+        item = record.get("item", {}) if isinstance(record, dict) else {}
+        title = str(item.get("title", "")).strip() if isinstance(item, dict) else ""
+        url = str(item.get("url", "")).strip() if isinstance(item, dict) else ""
+        source = source_by_name.get(str(item.get("source_name", ""))) if isinstance(item, dict) else None
+        if not isinstance(item, dict) or not classify(title):
+            held[key] = {
+                "item": item if isinstance(item, dict) else {},
+                "detected_at": record.get("detected_at", checked_at) if isinstance(record, dict) else checked_at,
+                "held_at": checked_at,
+                "hold_reason": "Generic, irrelevant, or unclassifiable title; held for review.",
+            }
+            pending.pop(key, None)
             continue
-        item = record.get("item", {})
-        title = str(item.get("title", ""))
-        reason = "Existing backlog held for review after stricter filtering."
-        if not classify(title):
-            reason = "Generic navigation or irrelevant title; held for review."
-        held[key] = {
-            "item": item,
-            "detected_at": record.get("detected_at", checked_at),
-            "held_at": checked_at,
-            "hold_reason": reason,
-        }
+        if not source or not host_allowed(url, source.get("allowed_hosts", [])):
+            held[key] = {
+                "item": item,
+                "detected_at": record.get("detected_at", checked_at),
+                "held_at": checked_at,
+                "hold_reason": "Notice URL could not be validated against its official source allowlist.",
+            }
+            pending.pop(key, None)
 
-    # Only fresh discoveries from this run can be automatically sent.
     public_sent = 0
     public_attempts = 0
     # Limit attempts as well as successful deliveries. A Telegram 429 must not
@@ -602,10 +609,9 @@ def main():
     max_public_alerts_per_run = max(
         1, min(int(os.getenv("MAX_PUBLIC_ALERTS_PER_RUN", "5")), 5)
     )
-    fresh_candidate_keys = {item.get("id") for item in candidates}
+    # Retry valid pending alerts from previous runs as well as newly discovered
+    # alerts. Failed sends therefore remain queued instead of being stranded.
     for key in list(pending.keys()):
-        if key not in fresh_candidate_keys:
-            continue
         if TG_RATE_LIMITED:
             print('Telegram rate limited; alerts remain queued')
             break
@@ -629,8 +635,8 @@ def main():
             f"Authority: {item.get('source_name', 'Official authority')}\n"
             f"Type: {str(item.get('category', 'update')).replace('_', ' ').title()}\n\n"
             f"{item.get('title', 'New official link')}\n\n"
-            + f"🌐 OFFICIAL AUTHORITY WEBSITE — open this link to browse notices:\n{source_page or 'Official website link unavailable; use the authority name to find its official portal.'}\n"
-
+            + f"📄 OPEN NOTICE / RESULT:\n{direct_url}\n\n"
+            + f"🌐 OFFICIAL AUTHORITY WEBSITE:\n{source_page or 'Official website link unavailable; search the authority name on its official portal.'}\n"
         )
 
         if not CHANNEL:
