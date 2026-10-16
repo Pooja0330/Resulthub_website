@@ -16,12 +16,12 @@ permissions:
 
 concurrency:
   group: goresult-hub-checker
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 12
 
     steps:
       - name: Checkout repository
