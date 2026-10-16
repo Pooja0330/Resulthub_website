@@ -57,6 +57,23 @@
       card.appendChild(box);
     });
   }
+  function renderSidebarLinks(items) {
+    document.querySelectorAll(".sidebar-exams > a").forEach(anchor => {
+      if (anchor.nextElementSibling?.classList.contains("sidebar-shortcut-notices")) return;
+      const label = anchor.textContent.replace(/[↗→]/g, "").trim();
+      const terms = label.toLowerCase().split(/[^a-z0-9]+/).filter(t => t.length > 2 && !["official","exam","exams","careers","quick","links","prelims","mains"].includes(t));
+      const matches = items.filter(item => {
+        const hay = [item.title,item.exam,item.source_name,item.authority,item.source_id].join(" ").toLowerCase();
+        return terms.some(term => hay.includes(term));
+      }).slice(0,1);
+      const preview = document.createElement("div");
+      preview.className = "sidebar-shortcut-notices";
+      preview.innerHTML = matches.length
+        ? linkFor(matches[0]) + '<small>' + esc(matches[0].source_name || matches[0].authority || "Official source") + '</small>'
+        : '<a href="./?q=' + encodeURIComponent(label) + '#updates">Latest indexed updates ↗</a>';
+      anchor.insertAdjacentElement("afterend", preview);
+    });
+  }
   function renderStatePortals(items) {
     const box = document.querySelector("#officialPortals");
     const chosen = stateName();
@@ -95,6 +112,7 @@
       if (!Array.isArray(data)) throw new Error("Invalid feed");
       const items = sorted(data);
       renderHomepage(items);
+      renderSidebarLinks(items);
       renderStatePortals(items);
       const portalBox = document.querySelector("#officialPortals");
       if (portalBox) {
