@@ -702,11 +702,11 @@ def main():
         direct_url = url
         message = (
             "📢 GoResultHub | Approved Exam Update\n\n"
-            f"Authority: \${item['source_name']}\n"
-            f"Type: \${str(item.get('category', 'update')).replace('_', ' ').title()}\n\n"
-            f"\${item.get('title', '')}\n\n"
-            + f"📄 OPEN NOTICE / RESULT:\n\${direct_url}\n\n"
-            + f"🌐 OFFICIAL AUTHORITY WEBSITE:\n\${source_page or 'Official website link unavailable; search the authority name on its official portal.'}\n"
+            f"Authority: ${item['source_name']}\n"
+            f"Type: ${str(item.get('category', 'update')).replace('_', ' ').title()}\n\n"
+            f"${item.get('title', '')}\n\n"
+            + f"📄 OPEN NOTICE / RESULT:\n${direct_url}\n\n"
+            + f"🌐 OFFICIAL AUTHORITY WEBSITE:\n${source_page or 'Official website link unavailable; search the authority name on its official portal.'}\n"
         )
 
         approved_attempts += 1
