@@ -799,7 +799,7 @@ def main():
             pending.pop(key, None)
             continue
 
-        website_url = "https://goresulthub.com/?q=" + quote_plus(str(item.get("title", "")).strip()) + "&utm_source=telegram&utm_medium=channel&utm_campaign=exam_alert"
+        website_url = "https://goresulthub.com/notice.html?id=" + quote_plus(str(item.get("id", "")).strip()) + "&q=" + quote_plus(str(item.get("title", "")).strip()) + "&utm_source=telegram&utm_medium=channel&utm_campaign=exam_alert"
         message = (
             "🔔 GoResultHub | Exam Update\n\n"
             f"Authority: {item.get('source_name', 'Official authority')}\n"
@@ -871,7 +871,7 @@ def main():
             remaining_approved.append(item)
             continue
 
-        website_url = "https://goresulthub.com/?q=" + quote_plus(str(item.get("title", "")).strip()) + "&utm_source=telegram&utm_medium=channel&utm_campaign=exam_alert"
+        website_url = "https://goresulthub.com/notice.html?id=" + quote_plus(str(item.get("id", "")).strip()) + "&q=" + quote_plus(str(item.get("title", "")).strip()) + "&utm_source=telegram&utm_medium=channel&utm_campaign=exam_alert"
         message = (
             "📢 GoResultHub | Exam Update\n\n"
             f"Authority: {item['source_name']}\n"
