@@ -5747,6 +5747,28 @@
       "exam_category": "School Board Results",
       "historical_archive": true,
       "coverage_note": "Official historical/archive listing. Indexes only entries actually linked by the authority; it does not guarantee complete records back to 2000."
+    },
+    {
+      "id": "pib-press-releases",
+      "name": "Press Information Bureau (PIB) — Press Releases",
+      "url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=1",
+      "kind": "rss",
+      "allowed_hosts": [
+        "pib.gov.in"
+      ],
+      "categories": [
+        "notification",
+        "result",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "state": "",
+      "region": "Central",
+      "exam_category": "Government & PIB Updates",
+      "include_all_items": true,
+      "max_new": 50,
+      "coverage_note": "Official PIB English press-release RSS feed. Checks recent feed entries on each scheduled scan; includes general press releases as well as exam/recruitment-related releases. Feed retention and upstream availability limit historical completeness."
     }
   ]
 }
