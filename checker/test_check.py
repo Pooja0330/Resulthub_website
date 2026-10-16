@@ -1,6 +1,6 @@
 import unittest
 
-from check import classify, host_allowed, is_stale_notice, normalize_notice_url
+from check import classify, host_allowed, infer_exam_category, is_stale_notice, normalize_notice_url
 
 
 class CheckerSafetyTests(unittest.TestCase):
@@ -33,6 +33,18 @@ class CheckerSafetyTests(unittest.TestCase):
 
     def test_current_feed_date_is_not_stale(self):
         self.assertFalse(is_stale_notice("Recruitment Result", "Fri, 16 Oct 2026 09:00:00 GMT"))
+
+    def test_old_uploaded_date_in_notice_title_is_stale(self):
+        self.assertTrue(is_stale_notice("Result uploaded on 13/02/2024", ""))
+
+    def test_banking_sources_use_banking_filter_family(self):
+        self.assertEqual(infer_exam_category("IBPS PO result", "Institute of Banking Personnel Selection", "ibps"), "Banking")
+
+    def test_railway_sources_use_railways_filter_family(self):
+        self.assertEqual(infer_exam_category("NTPC result", "Railway Recruitment Board", "rrb-bilaspur"), "Railways")
+
+    def test_generic_call_letters_landing_page_is_not_a_notice(self):
+        self.assertIsNone(classify("Call Letters"))
 
 
 if __name__ == "__main__":
