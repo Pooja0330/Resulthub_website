@@ -11,7 +11,7 @@ const STATE_PORTALS = {
  "Arunachal Pradesh":[["Arunachal Pradesh PSC","https://appsc.gov.in/"],["Rajiv Gandhi University","https://rgu.ac.in/"]],
  "Assam":[["Assam PSC","https://apsc.nic.in/"],["Assam Board","https://site.sebaonline.org/"],["Assam Government","https://assam.gov.in/"],["Gauhati University","https://gauhati.ac.in/"],["Dibrugarh University","https://dibru.ac.in/"]],
  "Bihar":[["Bihar State Health Society results archive","https://shs.bihar.gov.in/result"],["Bihar PSC","https://bpsc.bihar.gov.in/"],["Bihar School Board","https://biharboardonline.bihar.gov.in/"],["Constable Recruitment","https://csbc.bihar.gov.in/"],["Police Subordinate Services","https://bpssc.bihar.gov.in/"],["Bihar Technical Service Commission","https://btsc.bihar.gov.in/"],["Patna University","https://patnauniversity.ac.in/"],["Magadh University","https://www.magadhuniversity.ac.in/"]],
- "Chhattisgarh":[["Chhattisgarh PSC","https://psc.cg.gov.in/"],["Chhattisgarh Board","https://cgbse.nic.in/"],["CG Vyapam","https://vyapam.cgstate.gov.in/"]],
+ "Chhattisgarh":[["CG Vyapam / CGPEB — exams, admit cards, model answers and results","https://vyapam.cgstate.gov.in/"],["Chhattisgarh PSC — prelims, mains, recruitment and results","https://psc.cg.gov.in/"],["Chhattisgarh Board of Secondary Education — Class 10 and 12","https://cgbse.nic.in/"],["Pt. Ravishankar Shukla University — university examinations","https://www.prsu.ac.in/"],["Atal Bihari Vajpayee Vishwavidyalaya — university examinations","https://www.bilaspuruniversity.ac.in/"]],
  "Goa":[["Goa technical education old results","https://www.dte.goa.gov.in/board-of-technical-education/old-results"],["Goa Board of Secondary and Higher Secondary Education","https://www.gbshse.in/"],["Goa Government","https://www.goa.gov.in/"],["Goa University","https://www.unigoa.ac.in/"]],
  "Gujarat":[["Gujarat PSC","https://gpsc.gujarat.gov.in/"],["Gujarat Board","https://www.gseb.org/"],["OJAS Recruitment","https://ojas.gujarat.gov.in/"],["Gujarat University","https://www.gujaratuniversity.ac.in/"]],
  "Haryana":[["Kurukshetra University old results archive","https://kuk.ac.in/results/"],["Haryana PSC","https://hpsc.gov.in/"],["Haryana Staff Selection Commission","https://www.hssc.gov.in/"],["Haryana Board","https://bseh.org.in/"],["Kurukshetra University","https://www.kuk.ac.in/"]],
@@ -107,6 +107,9 @@ const categories = [["","All updates"],["notification","Notifications"],["result
 function inferredFamily(x){
  const t=[x.source_id,x.source_name,x.title,x.exam,x.state].join(" ").toLowerCase();
  if(/\bjee\s*advanced\b/.test(t)) return "JEE Advanced";
+ if(/cg\s*vyapam|cgpeb|chhattisgarh professional examination board/.test(t)) return "CG Vyapam / CGPEB";
+ if(/cuet\s*pg/.test(t)) return "CUET PG";
+ if(/cuet\s*ug/.test(t)) return "CUET UG";
  if(/\bjee\s*(main|mains)\b/.test(t)) return "JEE Main";
  if(/\bneet\s*(pg|post.?graduate)\b/.test(t)||/natboard\.edu/.test(t)) return "NEET PG";
  if(/\bneet\s*(ug|under.?graduate)\b/.test(t)||String(x.source_id||"")==="neet") return "NEET UG";
