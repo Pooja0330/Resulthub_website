@@ -799,22 +799,18 @@ def main():
             pending.pop(key, None)
             continue
 
-        direct_url = str(item.get("url", "")).strip()
-        source_page = str(item.get("source_url", "")).strip()
-        website_url = "https://goresulthub.com/?q=" + quote_plus(str(item.get("title", "")).strip())
+        website_url = "https://goresulthub.com/?q=" + quote_plus(str(item.get("title", "")).strip()) + "&utm_source=telegram&utm_medium=channel&utm_campaign=exam_alert"
         message = (
-            "🔔 GoResultHub | Potential Exam Update\n\n"
+            "🔔 GoResultHub | Exam Update\n\n"
             f"Authority: {item.get('source_name', 'Official authority')}\n"
             f"Type: {str(item.get('category', 'update')).replace('_', ' ').title()}\n"
             f"Exam year: {exam_year_from_title(item.get('title', '')) or 'Not stated in title'}\n"
             f"Notice date: {format_notice_date(item.get('published', '')) or 'Not shown on source listing'}\n\n"
-            f"{item.get('title', 'New official link')}\n\n"
-            + f"🌐 VIEW THIS UPDATE ON GORESULTHUB:\n{website_url}\n\n"
-            + f"📄 Official-source link (confirm details on the authority site):\n{direct_url}\n"
+            f"{item.get('title', 'New exam update')}\n\n"
+            "Open GoResultHub to view the update and continue to the relevant authority website:\n"
+            f"{website_url}"
         )
         keyboard = {"inline_keyboard": [[{"text": "🔎 View on GoResultHub", "url": website_url}]]}
-        if direct_url.startswith("https://"):
-            keyboard["inline_keyboard"].append([{"text": "📄 Open official source", "url": direct_url}])
 
         if not CHANNEL:
             print("TG_CHANNEL is missing; public alert remains pending")
@@ -879,27 +875,19 @@ def main():
         direct_url = url
         website_url = "https://goresulthub.com/?q=" + quote_plus(str(item.get("title", "")).strip())
         message = (
-            "📢 GoResultHub | Approved Exam Update\n\n"
+            "📢 GoResultHub | Approved Exam Updat        website_url = "https://goresulthub.com/?q=" + quote_plus(str(item.get("title", "")).strip()) + "&utm_source=telegram&utm_medium=channel&utm_campaign=exam_alert"
+        message = (
+            "📢 GoResultHub | Exam Update\n\n"
             f"Authority: {item['source_name']}\n"
             f"Type: {str(item.get('category', 'update')).replace('_', ' ').title()}\n"
             f"Exam year: {exam_year_from_title(item.get('title', '')) or 'Not stated in title'}\n"
             f"Notice date: {format_notice_date(item.get('published', '')) or 'Not shown on source listing'}\n\n"
             f"{item.get('title', '')}\n\n"
-            + f"🌐 VIEW THIS UPDATE ON GORESULTHUB:\n{website_url}\n\n"
-            + f"📄 Official-source link (confirm details on the authority site):\n{direct_url}\n"
+            "Open GoResultHub to view the update and continue to the relevant authority website:\n"
+            f"{website_url}"
         )
         keyboard = {"inline_keyboard": [[{"text": "🔎 View on GoResultHub", "url": website_url}]]}
-        if direct_url.startswith("https://"):
-            keyboard["inline_keyboard"].append([{"text": "📄 Open official source", "url": direct_url}])
-
-        approved_attempts += 1
-        if not telegram_send(CHANNEL, message, reply_markup=keyboard):
-            remaining_approved.append(item)
-        else:
-            time.sleep(1.1)
-
-    # Save data only after the run's work is complete.
-    state.update({
+te.update({
         "last_run": checked_at,
         "last_run_failures": failures,
         "last_run_successful_sources": successful,
