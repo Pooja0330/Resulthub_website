@@ -342,6 +342,20 @@ document.querySelectorAll("[data-browse]").forEach(button=>button.addEventListen
  $("#updates").scrollIntoView({behavior:"smooth",block:"start"});
 }));
 
+document.addEventListener("click",event=>{
+ const anchor=event.target.closest(".quick-exam-card a, .sidebar-exams a");
+ if(!anchor||!anchor.href)return;
+ const raw=anchor.getAttribute("href")||"";
+ if(!raw.startsWith("https://"))return;
+ let destination; try{destination=new URL(raw,location.href)}catch(e){return}
+ if(destination.hostname==="goresulthub.com"||destination.hostname.endsWith(".goresulthub.com"))return;
+ event.preventDefault();
+ const card=anchor.closest(".quick-exam-card");
+ const title=(card&&card.querySelector("h4")&&card.querySelector("h4").textContent.trim())||anchor.textContent.replace(/[↗→]/g,"").trim()||"Exam information";
+ const description=(card&&card.querySelector("p")&&card.querySelector("p").textContent.trim())||"Find official notifications, applications, admit cards, answer keys, result notices and candidate login options from the issuing authority.";
+ const source=destination.hostname.replace(/^www[.]/,"");
+ location.href="go.html?title="+encodeURIComponent(title)+"&description="+encodeURIComponent(description)+"&url="+encodeURIComponent(destination.href)+"&source="+encodeURIComponent(source);
+});
 document.addEventListener("click",async event=>{
  const button=event.target.closest("[data-share-url]");
  if(!button)return;
