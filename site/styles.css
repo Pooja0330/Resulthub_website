@@ -189,3 +189,7 @@
 .state-portal-notices .shortcut-notice-list{margin-top:7px}
 .state-portal-notices .shortcut-notice-list a{font-size:.75rem}
 @media(max-width:620px){.state-portal-links{grid-template-columns:1fr}}
+
+.sidebar-shortcut-notices{padding:0 0 8px 10px;margin:-5px 0 7px 2px;border-left:2px solid #dce8f8;display:grid;gap:2px}
+.sidebar-shortcut-notices a{font-size:.7rem;line-height:1.35;overflow-wrap:anywhere}
+.sidebar-shortcut-notices small{font-size:.65rem;color:#7b8798}
