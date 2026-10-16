@@ -7,7 +7,7 @@
 
 /* State and union-territory navigation */
 .state-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:0;align-items:start;max-width:1600px;margin:0 auto;padding:0 20px}
-.state-sidebar{position:static;top:auto;margin:20px 0 0;background:#fff;border:1px solid #dce6f2;border-radius:16px;box-shadow:0 5px 20px #14315c0b;overflow:hidden;max-height:none;display:flex;flex-direction:column}
+.state-sidebar{position:static;top:auto;width:calc(100% - 40px);max-width:1560px;margin:24px auto 0;background:#fff;border:1px solid #dce6f2;border-radius:16px;box-shadow:0 5px 20px #14315c0b;overflow:hidden;max-height:none;display:flex;flex-direction:column}
 .state-sidebar-head{padding:18px 16px 12px;border-bottom:1px solid #e7edf5}
 .state-sidebar-head .eyebrow{margin-bottom:5px;color:#5279ad}
 .state-sidebar-head h2{font-size:1.2rem;margin:0 0 6px;color:#183354}
