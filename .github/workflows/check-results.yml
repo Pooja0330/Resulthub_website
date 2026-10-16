@@ -70,5 +70,7 @@ jobs:
           git commit -m "Update exam notification data"
 
           git fetch origin main
-          git rebase origin/main
+          # Prefer this run's freshly generated scan snapshot if an overlapping
+          # status-file update creates a rebase conflict.
+          git rebase -X theirs origin/main
           git push origin HEAD:main
