@@ -171,3 +171,21 @@
 
 /* Polished national quick-exam directory */
 .exam-directory{max-width:1440px;margin:0 auto;padding:36px max(5vw,20px) 26px}.directory-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:20px}.directory-heading h2{font-size:clamp(1.65rem,3vw,2.2rem);letter-spacing:-.035em;margin:0 0 8px;color:#142e53}.directory-heading p:not(.eyebrow){margin:0;color:#61718a;max-width:720px}.directory-all-states{white-space:nowrap;font-weight:800;background:#edf4ff;border:1px solid #d6e5fb;padding:10px 14px;border-radius:12px}.directory-search{display:flex;align-items:center;gap:10px;max-width:620px;margin:20px 0 24px;padding:5px 14px;background:white;border:1px solid #dbe5f2;border-radius:12px;box-shadow:0 5px 18px #123c750a}.directory-search input{width:100%;min-width:0;border:0;outline:0;padding:11px 2px;font:inherit}.quick-exam-groups{display:grid;gap:24px}.quick-exam-group h3{font-size:1.03rem;color:#334866;margin:0 0 12px}.quick-exam-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.quick-exam-card{min-width:0;display:flex;flex-direction:column;gap:8px;background:linear-gradient(180deg,#fff,#f9fbff);border:1px solid #dce6f3;border-radius:16px;padding:17px;box-shadow:0 5px 18px #18375a0a;transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}.quick-exam-card:hover{transform:translateY(-2px);border-color:#a9c8f3;box-shadow:0 10px 24px #18375a12}.quick-exam-tag{align-self:flex-start;font-size:.68rem;font-weight:850;letter-spacing:.07em;text-transform:uppercase;background:#eaf2ff;color:#24599d;border-radius:6px;padding:4px 7px}.quick-exam-card h4{font-size:1.05rem;margin:1px 0;color:#17345b}.quick-exam-card p{margin:0 0 6px;color:#66758b;font-size:.84rem;min-height:3.8em}.quick-exam-card>a{font-weight:800;font-size:.85rem;margin-top:auto}.quick-exam-card button{align-self:flex-start;border:1px solid #d7e4f5;border-radius:9px;padding:8px 10px;background:#f0f6ff;color:#174f9c;font:inherit;font-size:.8rem;font-weight:800;cursor:pointer}.quick-exam-card button:hover{background:#dceaff}.directory-note{font-size:.8rem;color:#6c7a90;margin-top:20px}.sidebar-exams{margin:18px 12px 0;padding:15px;background:#f7faff;border:1px solid #e0e9f5;border-radius:14px;display:grid;gap:7px}.sidebar-exams h3{margin:0 0 4px;font-size:1rem}.sidebar-exams a{display:block;padding:8px 9px;border-radius:8px;background:white;border:1px solid #e3ebf6;color:#174f9c;font-size:.8rem;font-weight:700}.sidebar-exams a:hover{background:#eaf3ff;text-decoration:none}.sidebar-search-all{padding:10px;border:0;border-radius:9px;background:#174f9c;color:white;font-weight:800;cursor:pointer}@media(max-width:950px){.quick-exam-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.directory-heading{align-items:flex-start;flex-direction:column}}@media(max-width:580px){.quick-exam-grid{grid-template-columns:1fr}.exam-directory{padding:28px 16px}.quick-exam-card p{min-height:0}.directory-all-states{white-space:normal}}
+
+
+/* Latest notifications beneath each exam shortcut and state portal */
+.shortcut-notices{margin-top:14px;padding-top:12px;border-top:1px solid #e3ebf6;text-align:left}
+.shortcut-notices h5{margin:0 0 8px;color:#24466f;font-size:.78rem;font-weight:850}
+.shortcut-notice-list{list-style:none;padding:0;margin:0;display:grid;gap:9px}
+.shortcut-notice-list li{display:grid;gap:3px;min-width:0}
+.shortcut-notice-link{font-size:.78rem;line-height:1.4;font-weight:750;overflow-wrap:anywhere}
+.shortcut-notice-list small{font-size:.7rem;color:#748198;line-height:1.35}
+.shortcut-notice-empty{font-size:.75rem!important;line-height:1.4;color:#7b8798!important;margin:0!important}
+.state-portal-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.state-portal-card{background:#fff;border:1px solid #dfe8f4;border-radius:13px;padding:14px;min-width:0;display:flex;flex-direction:column;gap:10px}
+.state-portal-main-link{font-weight:800;overflow-wrap:anywhere}
+.state-portal-notices{padding-top:10px;border-top:1px solid #e8eef6}
+.state-portal-notices>strong{font-size:.76rem;color:#24466f}
+.state-portal-notices .shortcut-notice-list{margin-top:7px}
+.state-portal-notices .shortcut-notice-list a{font-size:.75rem}
+@media(max-width:620px){.state-portal-links{grid-template-columns:1fr}}
