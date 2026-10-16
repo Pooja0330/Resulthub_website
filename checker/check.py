@@ -552,7 +552,7 @@ def main():
             f"Type: {str(item.get('category', 'update')).replace('_', ' ').title()}\n\n"
             f"{item.get('title', '')}\n\n"
             + f"🌐 OFFICIAL AUTHORITY WEBSITE — open this link to browse notices:\n{source_page or 'Official website link unavailable; use the authority name to find its official portal.'}\n"
-            + "\nThe direct document link is intentionally omitted from this channel message because it may open a PDF. Visit the official website to locate and confirm the notice."
+
         )
 
         if not telegram_send(CHANNEL, message):
