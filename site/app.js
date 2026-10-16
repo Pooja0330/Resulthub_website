@@ -208,14 +208,23 @@ function renderFeatured(){
  }
  document.querySelectorAll("[data-browse]").forEach(button=>button.classList.toggle("active",button.dataset.browse===selectedBrowse));
 }
+function recordYear(x){
+ const explicit=String(x.exam_year||"").match(/(?:19|20)\d{2}/);
+ if(explicit)return explicit[0];
+ const titleYear=String([x.title,x.exam].join(" ")).match(/(?:19|20)\d{2}/);
+ if(titleYear)return titleYear[0];
+ const date=String(x.published||x.date||"").match(/(?:19|20)\d{2}/);
+ return date?date[0]:"";
+}
 function filteredItems(){
- const q=$("#q").value.trim().toLowerCase(), c=$("#category").value, ec=$("#examCategory").value, r=$("#region").value;
+ const q=$("#q").value.trim().toLowerCase(), c=$("#category").value, ec=$("#examCategory").value, r=$("#region").value, y=$("#examYear").value;
  const list=allItems.filter(x=>{
   const family=inferredFamily(x);
   const hay=[x.title,x.exam,x.source_name,x.state,x.region,x.category,family].join(" ").toLowerCase();
   const itemState=stateForItem(x);
    const stateFilter=selectedState||selectedRegion||r;
-   return (!q||hay.includes(q))&&(!c||x.category===c)&&(!ec||family===ec)&&(!stateFilter||itemState===stateFilter)&&browseMatches(x,selectedBrowse);
+   const year=recordYear(x);
+   return (!q||hay.includes(q))&&(!c||x.category===c)&&(!ec||family===ec)&&(!stateFilter||itemState===stateFilter)&&(!y||(y==="unknown"?!year:year===y))&&browseMatches(x,selectedBrowse);
  });
  if($("#sort").value==="title") list.sort((a,b)=>(a.title||"").localeCompare(b.title||""));
  else list.sort((a,b)=>new Date(b.detected_at||b.date||0)-new Date(a.detected_at||a.date||0));
@@ -297,7 +306,7 @@ function init(){
  if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});
 }
 $("#searchForm").addEventListener("submit",e=>{e.preventDefault();page=1;render()});
-["q","category","examCategory","region","sort"].forEach(id=>$("#"+id).addEventListener(id==="q"?"input":"change",()=>{if(id==="region"){const v=$("#region").value;selectedState=STATE_NAMES.includes(v)?v:"";selectedRegion=v==="Central"?"Central":"";}page=1;render()}));
+["q","category","examCategory","region","sort","examYear"].forEach(id=>$("#"+id).addEventListener(id==="q"?"input":"change",()=>{if(id==="region"){const v=$("#region").value;selectedState=STATE_NAMES.includes(v)?v:"";selectedRegion=v==="Central"?"Central":"";}page=1;render()}));
 document.querySelectorAll(".pills [data-family]").forEach(button=>button.addEventListener("click",()=>{$("#examCategory").value=button.dataset.family;page=1;$("#updates").scrollIntoView({behavior:"smooth"});render()}));
 document.querySelectorAll("[data-browse]").forEach(button=>button.addEventListener("click",()=>{
  selectedBrowse=button.dataset.browse||"";
