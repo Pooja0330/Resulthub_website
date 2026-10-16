@@ -193,7 +193,7 @@ async function init(){
  }
  renderStateLinks();
  try{
-  const r=await fetch("data/results.json");
+  const r=await fetch("data/results.json",{cache:"no-cache"});
   if(!r.ok)throw new Error("Feed unavailable");
   const data=await r.json(); if(!Array.isArray(data))throw new Error("Invalid feed");
   allItems=data;
