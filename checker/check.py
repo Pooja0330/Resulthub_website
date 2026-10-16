@@ -268,17 +268,17 @@ def fetch_source(source):
             # "View", "Download", or "Click here". Include nearby row/card
             # context so the actual exam/notice title can be classified.
             if len(title) < 12 or not classify(title):
-                context_parts = []
-                for parent in list(a.parents)[:4]:
-                    if getattr(parent, "name", None) in ("tr", "li", "article", "section"):
-                        context = " ".join(parent.get_text(" ", strip=True).split())
-                        if context and context not in context_parts:
-                            context_parts.append(context)
-                        if len(context) >= 20:
-                            break
-                if context_parts:
-                    context = max(context_parts, key=len)
-                    if context and context.lower() not in title.lower():
+                # Use only the nearest compact row/card. Never use whole-page or
+                # large section text as a title; that creates hundreds of false positives.
+                context = ""
+                for parent in list(a.parents)[:5]:
+                    if getattr(parent, "name", None) in ("tr", "li", "article"):
+                        candidate_context = " ".join(parent.get_text(" ", strip=True).split())
+                        if 20 <= len(candidate_context) <= 500:
+                            context = candidate_context
+                        break
+                if context and classify(context):
+                    if title.lower() not in context.lower():
                         title = (context + " — " + title).strip(" —")
 
             links.append((
