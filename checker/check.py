@@ -147,25 +147,25 @@ def infer_exam_category(title="", source_name="", source_id="", state=""):
     text_value = " ".join(str(v or "") for v in (source_id, source_name, title, state)).lower()
     source = str(source_id or "").lower()
     name = str(source_name or "").lower()
-    if source.startswith(("rrb-", "rrc-", "rrcb")) or "railway recruitment" in name or re.search(r"\\b(rrb|rrc|ntpc|group d|assistant loco pilot|alp)\\b", text_value):
+    if source.startswith(("rrb-", "rrc-", "rrcb")) or "railway recruitment" in name or re.search(r"\b(rrb|rrc|ntpc|group d|assistant loco pilot|alp)\b", text_value):
         return "Railways"
-    if source in {"ibps", "ibps-recent-updates", "ibps-po-mt", "sbi-careers", "sbi-current-openings", "sbi-recruitment-results", "rbi-opportunities"} or re.search(r"\\b(ibps|state bank of india|sbi careers|reserve bank of india|rbi|banking|lic|insurance regulatory|niacl|uiic|pfrda)\\b", text_value):
+    if source in {"ibps", "ibps-recent-updates", "ibps-po-mt", "sbi-careers", "sbi-current-openings", "sbi-recruitment-results", "rbi-opportunities"} or re.search(r"\b(ibps|state bank of india|sbi careers|reserve bank of india|rbi|banking|lic|insurance regulatory|niacl|uiic|pfrda)\b", text_value):
         return "Banking"
-    if source.startswith("ssc") or "staff selection commission" in name or re.search(r"\\bssc (cgl|chsl|mts|gd|stenographer)\\b", text_value):
+    if source.startswith("ssc") or "staff selection commission" in name or re.search(r"\bssc (cgl|chsl|mts|gd|stenographer)\b", text_value):
         return "SSC / Central Recruitment"
-    if source.startswith("upsc") or "union public service commission" in name or re.search(r"\\bupsc\\b", text_value):
+    if source.startswith("upsc") or "union public service commission" in name or re.search(r"\bupsc\b", text_value):
         return "UPSC / Central Recruitment"
-    if source.startswith(("nta", "jee", "neet", "cuet", "ugcnet", "gate")) or re.search(r"\\b(nta|jee|neet|cuet|gate|ugc net|csir net|entrance exam)\\b", text_value):
+    if source.startswith(("nta", "jee", "neet", "cuet", "ugcnet", "gate")) or re.search(r"\b(nta|jee|neet|cuet|gate|ugc net|csir net|entrance exam)\b", text_value):
         return "Entrance & Eligibility"
-    if re.search(r"\\b(board|cbse|cisce|nios|class 10|class 12|sslc|hsc|madhyamik)\\b", text_value):
+    if re.search(r"\b(board|board of school education|school education board|cbse|cisce|nios|class 10|class 12|sslc|hsc|madhyamik)\b", text_value):
         return "School Board Results"
-    if re.search(r"\\b(police|constable|slprb|prpb)\\b", text_value):
+    if re.search(r"\b(police|constable|slprb|prpb)\b", text_value):
         return "State Recruitment / Police"
-    if re.search(r"\\b(ctet|tet|teacher|teaching|kvs|nvs)\\b", text_value):
+    if re.search(r"\b(ctet|tet|teacher|teaching|kvs|nvs)\b", text_value):
         return "Teaching / Eligibility"
-    if re.search(r"\\b(defence|defense|army|navy|air force|agniveer|coast guard|crpf|bsf|cisf|itbp|ssb)\\b", text_value):
+    if re.search(r"\b(defence|defense|army|navy|air force|agniveer|coast guard|crpf|bsf|cisf|itbp|ssb)\b", text_value):
         return "Defence"
-    if re.search(r"\\b(psc|public service commission|state service commission|staff selection commission|subordinate services selection commission|recruitment board)\\b", text_value):
+    if re.search(r"\b(psc|public service commission|state service commission|staff selection commission|subordinate services selection commission|recruitment board)\b", text_value):
         return "State PSC / Recruitment"
     if state:
         return "State PSC / Recruitment"
@@ -311,10 +311,10 @@ def is_stale_notice(title, published=""):
     candidates = []
     text_value = str(title or "")
     for match in re.finditer(
-        r"\\b(?:(?:posted|published|updated|uploaded|issued|dated)\\s+(?:on\\s+)?)"
-        r"(\\d{1,2}[./-]\\d{1,2}[./-]\\d{4}|"
-        r"[A-Za-z]{3,9}\\s+\\d{1,2},?\\s+\\d{4}|"
-        r"\\d{1,2}\\s+[A-Za-z]{3,9},?\\s+\\d{4})",
+        r"\b(?:(?:posted|published|updated|uploaded|issued|dated)\s+(?:on\s+)?)"
+        r"(\d{1,2}[./-]\d{1,2}[./-]\d{4}|"
+        r"[A-Za-z]{3,9}\s+\d{1,2},?\s+\d{4}|"
+        r"\d{1,2}\s+[A-Za-z]{3,9},?\s+\d{4})",
         text_value,
         re.I,
     ):
