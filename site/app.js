@@ -248,7 +248,6 @@ function filteredItems(){
 }
 function render(){
  renderStateSidebar();
- renderYearBrowser();
   const list=filteredItems(), pages=Math.max(1,Math.ceil(list.length/PAGE_SIZE));
   renderStateResources();
  page=Math.min(page,pages);
@@ -264,7 +263,6 @@ function render(){
   }).join("");
  $("#empty").classList.toggle("hidden",list.length>0);
  if(!list.length) $("#updatesList").innerHTML="";
- renderYearArchiveHelp();
  const pager=$("#pagination");
  if(pager){
   pager.innerHTML=list.length>PAGE_SIZE?`<button type="button" id="prevPage" class="secondary" ${page===1?"disabled":""}>Previous</button><span>Page ${page} of ${pages}</span><button type="button" id="nextPage" class="secondary" ${page===pages?"disabled":""}>Next</button>`:"";
