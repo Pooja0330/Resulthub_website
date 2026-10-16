@@ -2789,5 +2789,41 @@
     "archive": false,
     "detected_at": "2026-10-15T13:55:22.398165+00:00",
     "source_url": "https://www.du.ac.in/"
+  },
+  {
+    "id": "2d12820bd786013ec1d39b6e",
+    "title": "Answer Key Challenge for CUET(PG) – 2026",
+    "exam": "Answer Key Challenge for CUET(PG) – 2026",
+    "exam_category": "CUET PG portal",
+    "category": "answer_key",
+    "source_name": "CUET PG portal",
+    "authority": "CUET PG portal",
+    "url": "https://exams.nta.nic.in/answer-key-challenge-for-cuetpg-2026/",
+    "official_url": "https://exams.nta.nic.in/answer-key-challenge-for-cuetpg-2026/",
+    "source_url": "https://exams.nta.nic.in/cuet-pg/",
+    "region": "Central",
+    "state": "",
+    "description": "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility.",
+    "verified": false,
+    "archive": false,
+    "detected_at": "2026-10-16T06:22:31.685314+00:00"
+  },
+  {
+    "id": "7b8df765a4d2822957ed5622",
+    "title": "Release of Admit Card of CUET (PG)-2026 examination, to the Applicants scheduled to appear on 06, 07, 08, 09, 10, 11, 12, 13, 16, 17, 18, 19, 24, 25 & 27 March 2026",
+    "exam": "Release of Admit Card of CUET (PG)-2026 examination, to the Applicants scheduled to appear on 06, 07, 08, 09, 10, 11, 12, 13, 16, 17, 18, 19, 24, 25 & 27 March 2026",
+    "exam_category": "CUET PG portal",
+    "category": "admit_card",
+    "source_name": "CUET PG portal",
+    "authority": "CUET PG portal",
+    "url": "https://exams.nta.nic.in/admit-card-of-cuet-pg-2026-examination-to-the-applicants-scheduled-to-appear-on-06-07-08-09-10-march-2026/",
+    "official_url": "https://exams.nta.nic.in/admit-card-of-cuet-pg-2026-examination-to-the-applicants-scheduled-to-appear-on-06-07-08-09-10-march-2026/",
+    "source_url": "https://exams.nta.nic.in/cuet-pg/",
+    "region": "Central",
+    "state": "",
+    "description": "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility.",
+    "verified": false,
+    "archive": false,
+    "detected_at": "2026-10-16T06:22:31.685314+00:00"
   }
 ]
