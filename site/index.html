@@ -9,12 +9,18 @@
 <meta property="og:title" content="GoResultHub — Indian Exam Notifications & Results">
 <meta property="og:description" content="Search exam updates across India with links to official authorities.">
 <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GoResultHub — Exam Notifications & Results">
+<meta name="twitter:description" content="Search exam updates across India with links to official authorities.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"GoResultHub","url":"https://goresulthub.com/","description":"Independent directory of Indian exam notifications and results linking to official authorities.","potentialAction":{"@type":"SearchAction","target":"https://goresulthub.com/?q={search_term_string}","query-input":"required name=search_term_string"}}
+</script>
 <meta property="og:url" content="https://goresulthub.com/">
 <title>GoResultHub — Exam Notifications & Results</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="top"><a class="brand" href="./"><span class="logo">GR</span><span>GoResultHub<small>Exam updates with links to official websites</small></span></a><nav><a href="#updates">Latest updates</a><a href="state.html">Browse states</a><a href="about.html">About</a><a href="disclaimer.html">Disclaimer</a><a href="#support">Support us</a></nav></header>
+<header class="top"><a class="brand" href="./"><span class="logo">GR</span><span>GoResultHub<small>Exam updates with links to official websites</small></span></a><nav><a href="#updates">Latest updates</a><a href="state.html">Browse states</a><a href="about.html">About</a><a href="disclaimer.html">Disclaimer</a><a href="#support">Support us</a><button type="button" id="shareWebsite" class="nav-share">Share website</button></nav></header>
 <main>
 <section class="hero"><p class="eyebrow">INDIA-WIDE EXAM TRACKER</p><h1>Every exam update.<br><span>One place to check.</span></h1><p class="lede">Find exam notifications, admit cards, answer keys, merit lists and results, with links to the relevant official websites.</p><form id="searchForm" class="search"><label class="sr" for="q">Search exams</label><input id="q" type="search" placeholder="Search exam, board, state or authority…"><button>Search</button></form><div class="pills">
   <button type="button" data-family="UPSC / Central Recruitment">Central exams</button>
@@ -61,4 +67,14 @@
 <footer><div><a class="brand footbrand" href="./"><span class="logo">GR</span><span>GoResultHub<small>Exam updates with links to official websites</small></span></a><p>Find exam updates and links to relevant official government, examination board, university and recruitment websites in one place.</p></div><div class="footlinks"><a href="about.html">About</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="disclaimer.html">Disclaimer</a><a href="contact.html">Contact</a></div><p class="copyright">© <span id="year"></span> GoResultHub</p></footer>
 <script src="app.js" defer></script>
 <script src="live-alerts.js" defer></script>
+<script>
+document.querySelector("#shareWebsite")?.addEventListener("click",async()=>{
+ const button=document.querySelector("#shareWebsite");
+ try{
+  if(navigator.share)await navigator.share({title:"GoResultHub — Exam Updates",text:"Find exam updates and official result links on GoResultHub.",url:"https://goresulthub.com/"});
+  else if(navigator.clipboard?.writeText){await navigator.clipboard.writeText("https://goresulthub.com/");button.textContent="Link copied ✓";setTimeout(()=>button.textContent="Share website",1800);}
+  else window.prompt("Copy the GoResultHub link:","https://goresulthub.com/");
+ }catch(error){if(error?.name!=="AbortError")console.warn("Share was not completed",error);}
+});
+</script>
 </body></html>
