@@ -229,3 +229,9 @@
 /* Keep the live-updates control above page widgets and overlays. */
 #grh-live-alerts{z-index:2147483000!important;visibility:visible!important;opacity:1!important}
 #grh-live-alerts .grh-bell{display:flex!important;visibility:visible!important;opacity:1!important}
+
+/* Draggable language selector: independent of the Live updates button. */
+#grh-language-control{left:16px;right:auto;bottom:76px;top:auto;z-index:2147482000;max-width:calc(100vw - 24px);touch-action:pan-y}
+#grh-language-control .grh-language-drag{border:0;background:#eaf2ff;color:#174f9c;border-radius:6px;min-width:26px;min-height:26px;font-size:18px;line-height:1;cursor:grab;touch-action:none}
+#grh-language-control .grh-language-drag:active{cursor:grabbing}
+@media(max-width:680px){#grh-language-control{left:8px;right:auto;bottom:72px;top:auto;max-width:calc(100vw - 16px)}}
