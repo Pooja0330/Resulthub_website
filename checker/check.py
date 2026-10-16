@@ -484,10 +484,24 @@ def fetch_source(source):
                         context = candidate_context
                         break
 
-            # Include compact card/row text when a link label is generic.
-            if len(title) < 12 or not classify(title):
-                if context and classify(context) and title.lower() not in context.lower():
-                    title = (context + " — " + title).strip(" —")
+            # Enrich short but technically classifiable labels (for example,
+            # "PRELIMINARY EXAMINATION RESULT") with the exam/recruitment name
+            # from the official row/card. Otherwise unrelated exams look like
+            # they have the same generic result title in the public feed.
+            generic_label = (
+                len(title) < 45
+                or bool(NAV_TITLE.fullmatch(title.strip()))
+                or bool(re.fullmatch(
+                    r"(?:preliminary|main|mains|final)?\\s*(?:examination\\s+)?"
+                    r"(?:result|results|result status|merit list|admit card|answer key|"
+                    r"cut.?off|shortlisted candidates)",
+                    title.strip(), re.I
+                ))
+            )
+            if context and classify(context) and generic_label and len(context) > len(title) + 10:
+                title = context
+            elif context and classify(context) and not classify(title) and title.lower() not in context.lower():
+                title = (context + " — " + title).strip(" —")
 
             published = extract_notice_date(context) or extract_notice_date(title)
             links.append((
