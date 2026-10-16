@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,follow"><meta name="theme-color" content="#123c75">
+<title>GoResultHub | Exam Update</title><link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="stylesheet" href="styles.css">
+<style>
+.go-wrap{max-width:850px;margin:48px auto;padding:0 20px}.go-card{background:#fff;border:1px solid #dce6f2;border-radius:22px;padding:clamp(22px,5vw,42px);box-shadow:0 12px 35px #153b6b10}.go-mark{display:inline-flex;align-items:center;gap:10px;color:#16345b;font-weight:900}.go-kicker{color:#5279ad;font-size:.72rem;font-weight:900;letter-spacing:.13em}.go-card h1{font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.12;margin:12px 0;color:#17345b}.go-card p{color:#63728a}.go-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.go-actions a{display:inline-flex;align-items:center;justify-content:center;padding:13px 17px;border-radius:11px;font-weight:850}.go-primary{background:#174f9c;color:#fff}.go-secondary{background:#edf4ff;color:#174f9c;border:1px solid #d6e5fb}.go-url{overflow-wrap:anywhere;background:#f6f9fe;border:1px solid #e0e8f3;border-radius:10px;padding:12px;font-size:.82rem}.go-notice{font-size:.8rem!important}.go-error{color:#9c2c2c!important}
+</style>
+</head>
+<body>
+<header class="top"><a class="brand" href="./"><span class="logo">GR</span><span>GoResultHub<small>Exam updates with links to official websites</small></span></a><nav><a href="./#updates">Latest updates</a><a href="./#find-exams">Find exams</a></nav></header>
+<main class="go-wrap"><section class="go-card" aria-live="polite"><p class="go-kicker">GORESULTHUB EXAM LINK</p><h1 id="go-title">Opening exam update…</h1><p id="go-description">Use this page to continue to the official issuing authority, while keeping your GoResultHub update page easy to return to.</p><div class="go-url" id="go-authority"></div><div class="go-actions"><a class="go-primary" id="official-link" href="./">Continue to official website ↗</a><a class="go-secondary" id="return-link" href="./">Back to GoResultHub updates</a></div><p class="go-notice">GoResultHub is an independent exam-information directory and is not a government website. Personal scorecards may require the official portal's login or CAPTCHA.</p><p class="go-error" id="go-error" hidden>This destination could not be validated. Return to GoResultHub and choose another link.</p></section></main>
+<footer><div><a class="brand footbrand" href="./"><span class="logo">GR</span><span>GoResultHub<small>Exam updates with links to official websites</small></span></a><p>Exam updates and links to issuing authorities.</p></div><div class="footlinks"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="disclaimer.html">Disclaimer</a></div><p class="copyright">© GoResultHub</p></footer>
+<script>
+(()=>{"use strict";
+const params=new URLSearchParams(location.search);
+const title=params.get("title")||"Exam update";
+const raw=params.get("url")||"";
+const source=params.get("source")||"Official issuing authority";
+const titleNode=document.getElementById("go-title"), authority=document.getElementById("go-authority"), link=document.getElementById("official-link"), error=document.getElementById("go-error");
+titleNode.textContent=title;
+document.title=title+" | GoResultHub";
+try{
+ const destination=new URL(raw);
+ if(destination.protocol!=="https:"||!destination.hostname||destination.hostname==="goresulthub.com"||destination.hostname.endsWith(".goresulthub.com"))throw new Error("invalid destination");
+ authority.textContent="Official destination: "+source+" · "+destination.hostname;
+ link.href=destination.href;
+ link.target="_blank";
+ link.rel="noopener noreferrer";
+ link.addEventListener("click",()=>{try{sessionStorage.setItem("grh_last_exam",JSON.stringify({title,url:destination.href,source,at:Date.now()}))}catch(e){}});
+}catch(e){link.hidden=true;authority.textContent="No verified official destination was provided.";error.hidden=false;}
+document.getElementById("return-link").href="./?q="+encodeURIComponent(title);
+})();
+</script>
+</body></html>
