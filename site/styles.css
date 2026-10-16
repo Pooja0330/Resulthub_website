@@ -181,3 +181,9 @@
 .state-list{flex:1 1 auto;min-height:220px;max-height:calc(100vh - 290px);overscroll-behavior:contain}
 .sidebar-exams{flex:0 0 auto;max-height:210px;overflow:auto}
 @media(max-width:760px){.state-list{flex:0 1 auto;min-height:150px;max-height:220px}.sidebar-exams{max-height:180px}}
+
+/* Compact live-alert summaries: headline + short description, with readable spacing. */
+.grh-alert-description{font-size:.76rem;line-height:1.45;color:#536780;margin:0;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.grh-alert-item strong{overflow-wrap:anywhere}
+.grh-toast strong{overflow-wrap:anywhere}
+.grh-toast small{line-height:1.4}
