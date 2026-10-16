@@ -5670,6 +5670,83 @@
       "exam_category": "University Results",
       "historical_archive": true,
       "coverage_note": "Official historical/archive listing. Indexes only entries actually linked by the authority; does not guarantee complete records back to 2000."
+    },
+    {
+      "id": "dsssb-old-results-archive",
+      "name": "Delhi Subordinate Services Selection Board — Old Results",
+      "url": "https://dsssb.delhi.gov.in/doit/tab-content/old-result?page=0",
+      "kind": "html",
+      "allowed_hosts": [
+        "dsssb.delhi.gov.in"
+      ],
+      "categories": [
+        "result",
+        "merit_list",
+        "cutoff"
+      ],
+      "enabled": true,
+      "state": "Delhi",
+      "region": "Delhi",
+      "exam_category": "State PSC / Recruitment",
+      "historical_archive": true,
+      "coverage_note": "Official historical/archive listing. Indexes only entries actually linked by the authority; it does not guarantee complete records back to 2000."
+    },
+    {
+      "id": "goa-technical-education-old-results",
+      "name": "Goa Directorate of Technical Education — Old Results",
+      "url": "https://www.dte.goa.gov.in/board-of-technical-education/old-results",
+      "kind": "html",
+      "allowed_hosts": [
+        "www.dte.goa.gov.in",
+        "dte.goa.gov.in"
+      ],
+      "categories": [
+        "result"
+      ],
+      "enabled": true,
+      "state": "Goa",
+      "region": "Goa",
+      "exam_category": "University Results",
+      "historical_archive": true,
+      "coverage_note": "Official historical/archive listing. Indexes only entries actually linked by the authority; it does not guarantee complete records back to 2000."
+    },
+    {
+      "id": "bihar-state-health-society-results-archive",
+      "name": "Bihar State Health Society — Results Archive",
+      "url": "https://shs.bihar.gov.in/result",
+      "kind": "html",
+      "allowed_hosts": [
+        "shs.bihar.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "merit_list"
+      ],
+      "enabled": true,
+      "state": "Bihar",
+      "region": "Bihar",
+      "exam_category": "State Recruitment / Police",
+      "historical_archive": true,
+      "coverage_note": "Official historical/archive listing. Indexes only entries actually linked by the authority; it does not guarantee complete records back to 2000."
+    },
+    {
+      "id": "cbse-previous-years-results",
+      "name": "CBSE Previous Years Results Archive",
+      "url": "https://resultsarchives.nic.in/cbseresults/",
+      "kind": "html",
+      "allowed_hosts": [
+        "resultsarchives.nic.in"
+      ],
+      "categories": [
+        "result"
+      ],
+      "enabled": true,
+      "state": "",
+      "region": "Central",
+      "exam_category": "School Board Results",
+      "historical_archive": true,
+      "coverage_note": "Official historical/archive listing. Indexes only entries actually linked by the authority; it does not guarantee complete records back to 2000."
     }
   ]
 }
