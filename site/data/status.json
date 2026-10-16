@@ -1,12 +1,12 @@
 {
-  "status": "pending",
-  "last_checked_at": null,
+  "last_checked_at": "2026-10-16T09:19:01.937342+00:00",
   "sources_enabled": 186,
-  "sources_succeeded": 0,
-  "sources_failed": 0,
-  "new_candidates": 0,
-  "telegram_posts_sent": 0,
-  "alerts_pending": 0,
-  "failure_types": "not yet available",
-  "note": "Initial status placeholder. The automated checker will replace this after a completed scan."
+  "sources_succeeded": 78,
+  "sources_failed": 108,
+  "new_candidates": 31,
+  "telegram_posts_sent": 5,
+  "alerts_pending": 26,
+  "status": "partial",
+  "failure_types": "ConnectTimeout: 80, ConnectionError: 19, SSLError: 17, HTTPError: 9, ValueError: 3",
+  "note": "Some sources may be unavailable or use formats automated scanning cannot read."
 }
