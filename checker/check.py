@@ -139,9 +139,10 @@ def classify(title):
 def get_with_retries(url, headers=None):
     last_error = None
 
-    # Keep a failed source from delaying the entire scheduled run.
-    # Retry transient errors; use certifi's current CA bundle and never disable TLS verification.
-    for attempt in range(2):
+    # Retry transient failures with bounded backoff. Keep TLS verification enabled:
+    # certificate errors should be diagnosed, never hidden by disabling verification.
+    # Three bounded attempts improve resilience to intermittent government-portal outages.
+    for attempt in range(3):
         try:
             response = requests.get(
                 url,
@@ -152,8 +153,13 @@ def get_with_retries(url, headers=None):
             )
 
             if response.status_code in (408, 425, 429, 500, 502, 503, 504):
-                if attempt < 1:
-                    time.sleep(1.5 * (attempt + 1))
+                if attempt < 2:
+                    retry_after = response.headers.get("Retry-After", "").strip()
+                    try:
+                        delay = min(max(float(retry_after), 1.0), 10.0) if retry_after else 1.5 * (attempt + 1)
+                    except ValueError:
+                        delay = 1.5 * (attempt + 1)
+                    time.sleep(delay)
                     continue
 
             response.raise_for_status()
