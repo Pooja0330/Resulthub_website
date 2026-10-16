@@ -63,7 +63,11 @@ RULES = [
         r"advertisement for|advertisement dated|recruitment notice|"
         r"vacancies for|vacancy for|last date to apply|application deadline|"
         r"corrigendum|addendum|extension of last date|revised vacancy|"
-        r"additional vacancies|selection process for|selection list for recruitment)\b", re.I)),
+        r"additional vacancies|selection process for|selection list for recruitment|"
+        r"preliminary examination|prelims examination|main examination|mains examination|"
+        r"preliminary test|preliminary exam|mains exam|main written examination|"
+        r"civil services \(preliminary\)|civil services \(main\)|state services \(preliminary\)|"
+        r"state services \(main\))\b", re.I)),
 ]
 
 
@@ -211,6 +215,23 @@ def infer_exam_category(title="", source_name="", source_id="", state=""):
         return "SSC / Central Recruitment"
     if source.startswith("upsc") or "union public service commission" in name or re.search(r"\bupsc\b", text_value):
         return "UPSC / Central Recruitment"
+    # Split high-demand exam families and preliminary/main stages.
+    if re.search(r"\bjee\s*advanced\b", text_value) or source.startswith("jeeadv"):
+        return "JEE Advanced"
+    if re.search(r"\bjee\s*(main|mains)\b", text_value) or source.startswith("jeemain"):
+        return "JEE Main"
+    if re.search(r"\bneet\s*(pg|post.?graduate)\b", text_value) or source.startswith("neet-pg"):
+        return "NEET PG"
+    if re.search(r"\bneet\s*(ug|under.?graduate)\b", text_value) or source == "neet":
+        return "NEET UG"
+    if ("upsc" in text_value or source.startswith("upsc")) and re.search(r"\b(main|mains)\b", text_value):
+        return "UPSC Mains"
+    if ("upsc" in text_value or source.startswith("upsc")) and re.search(r"\b(preliminary|prelims)\b", text_value):
+        return "UPSC Prelims"
+    if re.search(r"\b(psc|public service commission|state services|state service|mpsc|uppsc|bpsc|rpsc|kpsc|tnpsc|opsc|gpsc|hpsc|jpsc|wbpsc)\b", text_value) and re.search(r"\b(main|mains)\b", text_value):
+        return "State PSC Mains"
+    if re.search(r"\b(psc|public service commission|state services|state service|mpsc|uppsc|bpsc|rpsc|kpsc|tnpsc|opsc|gpsc|hpsc|jpsc|wbpsc)\b", text_value) and re.search(r"\b(preliminary|prelims)\b", text_value):
+        return "State PSC Prelims"
     if source.startswith(("nta", "jee", "neet", "cuet", "ugcnet", "gate")) or re.search(r"\b(nta|jee|neet|cuet|gate|ugc net|csir net|entrance exam)\b", text_value):
         return "Entrance & Eligibility"
     if re.search(r"\b(school board|board of school education|school education board|board of secondary education|secondary education board|cbse|cisce|nios|class 10|class 12|sslc|hsc|madhyamik)\b", text_value):
