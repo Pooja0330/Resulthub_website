@@ -135,8 +135,17 @@ function renderPortals(){
  const links=STATE_PORTALS[state]||[];
  $("#officialPortals").innerHTML=links.length?links.map(([label,url])=>'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(label)+' ↗</a>').join(""):'<p>No portal links have been configured yet.</p>';
 }
+function recordYear(x){
+ const explicit=String(x.exam_year||"").match(/(?:19|20)\d{2}/);
+ if(explicit)return explicit[0];
+ const titleYear=String([x.title,x.exam].join(" ")).match(/(?:19|20)\d{2}/);
+ if(titleYear)return titleYear[0];
+ const date=String(x.published||x.date||"").match(/(?:19|20)\d{2}/);
+ return date?date[0]:"";
+}
 function render(){
- const filtered=allItems.filter(x=>stateForItem(x)===state&&(!selectedCategory||x.category===selectedCategory)&&(!selectedFamily||inferredFamily(x)===selectedFamily));
+ const selectedYear=$("#stateExamYear").value;
+ const filtered=allItems.filter(x=>stateForItem(x)===state&&(!selectedCategory||x.category===selectedCategory)&&(!selectedFamily||inferredFamily(x)===selectedFamily)&&(!selectedYear||(selectedYear==="unknown"?!recordYear(x):recordYear(x)===selectedYear)));
  filtered.sort((a,b)=>new Date(b.detected_at||b.date||0)-new Date(a.detected_at||a.date||0));
  const pages=Math.max(1,Math.ceil(filtered.length/pageSize)); page=Math.min(page,pages);
  $("#stateCount").textContent=filtered.length+" update"+(filtered.length===1?"":"s");
@@ -181,6 +190,7 @@ async function init(){
  if(valid)render();
  $("#examFamily").addEventListener("change",()=>{selectedFamily=$("#examFamily").value;page=1;render()});
  $("#updateType").addEventListener("change",()=>{selectedCategory=$("#updateType").value;page=1;render()});
+ $("#stateExamYear").addEventListener("change",()=>{page=1;render()});
  $("#allIndiaLink").href="index.html";
 }
 init();
