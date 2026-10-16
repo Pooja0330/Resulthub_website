@@ -206,3 +206,22 @@
 #grh-language-control .goog-te-gadget a{color:#173b70!important;text-decoration:none}
 .grh-language-fallback{font-weight:500;color:#536780}
 @media(max-width:680px){#grh-language-control{right:8px;bottom:52px;padding:6px 8px}#grh-cookie-consent .grh-cookie-manage{bottom:8px}}
+
+
+/* Priority styling for exam alerts versus government/PIB news */
+.grh-alert-item{position:relative;border:1px solid #e0e8f3;border-left:4px solid #64748b;border-radius:12px;padding:13px 14px;margin:0 0 10px;background:#fff;box-shadow:0 2px 8px rgba(18,45,82,.04)}
+.grh-alert-item.is-exam{border-color:#c8dcff;border-left-color:#1768d2;background:linear-gradient(110deg,#f2f7ff 0%,#fff 68%)}
+.grh-alert-item.is-pib{border-color:#f2d6b2;border-left-color:#c77721;background:linear-gradient(110deg,#fff7ed 0%,#fff 68%)}
+.grh-alert-item.is-general{border-left-color:#64748b}
+.grh-alert-kind{display:inline-flex;align-items:center;font-size:.62rem;font-weight:850;letter-spacing:.045em;border-radius:999px;padding:4px 7px;margin:0 0 7px 5px;vertical-align:middle;color:#475569;background:#eef2f7}
+.grh-alert-item.is-exam .grh-alert-kind{color:#1552a3;background:#dceaff}
+.grh-alert-item.is-pib .grh-alert-kind{color:#99500d;background:#ffebd2}
+.grh-alert-item.is-exam .grh-alert-type{background:#1768d2;color:#fff}
+.grh-alert-item.is-pib .grh-alert-type{background:#b96818;color:#fff}
+.grh-toast.is-exam{border-top:4px solid #1768d2}
+.grh-toast.is-pib{border-top:4px solid #c77721}
+.grh-toast.is-exam .grh-toast-top>span{color:#1552a3}
+.grh-toast.is-pib .grh-toast-top>span{color:#99500d}
+.grh-toast.is-exam .grh-toast-top>span::before{content:"● ";color:#1768d2}
+.grh-toast.is-pib .grh-toast-top>span::before{content:"● ";color:#c77721}
+@media(prefers-reduced-motion:no-preference){.grh-alert-item.is-exam{transition:box-shadow .18s ease,transform .18s ease}.grh-alert-item.is-exam:hover{box-shadow:0 5px 16px rgba(23,104,210,.12);transform:translateY(-1px)}}
