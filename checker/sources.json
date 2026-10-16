@@ -291,9 +291,9 @@
         "result",
         "notification"
       ],
-      "enabled": true,
+      "enabled": false,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Temporarily disabled because automated requests from the hosted runner are blocked (HTTP 403). Do not bypass the site's access controls; restore only when an approved feed or permitted access method is available."
     },
     {
       "id": "nios",
@@ -3139,7 +3139,7 @@
     {
       "id": "cbse-results-official",
       "name": "CBSE Examination Results",
-      "url": "https://www.cbseresults.nic.in/",
+      "url": "https://cbseresults.nic.in/",
       "kind": "html",
       "allowed_hosts": [
         "cbseresults.nic.in"
@@ -3155,7 +3155,7 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official CBSE results portal hosted by NIC; scheduled checks confirm current reachability."
+      "coverage_note": "Official CBSE/NIC result portal; use the non-www hostname to avoid the observed www DNS failure."
     },
     {
       "id": "cisce-results",
