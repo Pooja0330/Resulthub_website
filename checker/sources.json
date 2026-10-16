@@ -4630,6 +4630,926 @@
       "region": "Delhi",
       "exam_category": "State PSC / Recruitment",
       "coverage_note": "Official state portal added to improve exam-notice coverage; scan results still depend on the portal's public page structure."
+    },
+    {
+      "id": "du-exam-branch",
+      "name": "University of Delhi Examination Branch",
+      "url": "https://exam.du.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "exam.du.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Delhi",
+      "region": "Delhi",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "jnu",
+      "name": "Jawaharlal Nehru University",
+      "url": "https://jnu.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "jnu.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Delhi",
+      "region": "Delhi",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "amu",
+      "name": "Aligarh Muslim University",
+      "url": "https://www.amu.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "www.amu.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Uttar Pradesh",
+      "region": "Uttar Pradesh",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "jamia",
+      "name": "Jamia Millia Islamia",
+      "url": "https://www.jmi.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "www.jmi.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Delhi",
+      "region": "Delhi",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "mumbai-university",
+      "name": "University of Mumbai",
+      "url": "https://mu.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "mu.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Maharashtra",
+      "region": "Maharashtra",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "sppu",
+      "name": "Savitribai Phule Pune University",
+      "url": "https://unipune.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "unipune.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Maharashtra",
+      "region": "Maharashtra",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "calcutta-university",
+      "name": "University of Calcutta",
+      "url": "https://www.caluniv.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "www.caluniv.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "West Bengal",
+      "region": "West Bengal",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "jadavpur-university",
+      "name": "Jadavpur University",
+      "url": "https://jadavpuruniversity.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "jadavpuruniversity.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "West Bengal",
+      "region": "West Bengal",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "gauhati-university",
+      "name": "Gauhati University",
+      "url": "https://gauhati.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "gauhati.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Assam",
+      "region": "Assam",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "dibrugarh-university",
+      "name": "Dibrugarh University",
+      "url": "https://dibru.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "dibru.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Assam",
+      "region": "Assam",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "rajasthan-university",
+      "name": "University of Rajasthan",
+      "url": "https://www.uniraj.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "www.uniraj.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Rajasthan",
+      "region": "Rajasthan",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "vtu",
+      "name": "Visvesvaraya Technological University",
+      "url": "https://vtu.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "vtu.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Karnataka",
+      "region": "Karnataka",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "anna-university",
+      "name": "Anna University",
+      "url": "https://www.annauniv.edu/",
+      "kind": "html",
+      "allowed_hosts": [
+        "www.annauniv.edu"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Tamil Nadu",
+      "region": "Tamil Nadu",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "calicut-university",
+      "name": "University of Calicut",
+      "url": "https://uoc.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "uoc.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Kerala",
+      "region": "Kerala",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "kerala-university",
+      "name": "University of Kerala",
+      "url": "https://www.keralauniversity.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "www.keralauniversity.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Kerala",
+      "region": "Kerala",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "osmania-university",
+      "name": "Osmania University",
+      "url": "https://www.osmania.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "www.osmania.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Telangana",
+      "region": "Telangana",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "utkal-university",
+      "name": "Utkal University",
+      "url": "https://utkaluniversity.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "utkaluniversity.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Odisha",
+      "region": "Odisha",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "patna-university",
+      "name": "Patna University",
+      "url": "https://patnauniversity.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "patnauniversity.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Bihar",
+      "region": "Bihar",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "ranchi-university",
+      "name": "Ranchi University",
+      "url": "https://www.ranchiuniversity.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "www.ranchiuniversity.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Jharkhand",
+      "region": "Jharkhand",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "panjab-university",
+      "name": "Panjab University",
+      "url": "https://puchd.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "puchd.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Chandigarh",
+      "region": "Chandigarh",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "jammu-university",
+      "name": "University of Jammu",
+      "url": "https://www.jammuuniversity.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "www.jammuuniversity.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Jammu and Kashmir",
+      "region": "Jammu and Kashmir",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "kashmir-university",
+      "name": "University of Kashmir",
+      "url": "https://www.kashmiruniversity.net/",
+      "kind": "html",
+      "allowed_hosts": [
+        "www.kashmiruniversity.net"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Jammu and Kashmir",
+      "region": "Jammu and Kashmir",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "hp-university",
+      "name": "Himachal Pradesh University",
+      "url": "https://hpuniv.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "hpuniv.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Himachal Pradesh",
+      "region": "Himachal Pradesh",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "goa-university",
+      "name": "Goa University",
+      "url": "https://www.unigoa.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "www.unigoa.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Goa",
+      "region": "Goa",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "andhra-university",
+      "name": "Andhra University",
+      "url": "https://www.andhrauniversity.edu.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "www.andhrauniversity.edu.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Andhra Pradesh",
+      "region": "Andhra Pradesh",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "jntuh",
+      "name": "Jawaharlal Nehru Technological University Hyderabad",
+      "url": "https://jntuh.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "jntuh.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Telangana",
+      "region": "Telangana",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "jntua",
+      "name": "Jawaharlal Nehru Technological University Anantapur",
+      "url": "https://jntua.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "jntua.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Andhra Pradesh",
+      "region": "Andhra Pradesh",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "gujarat-university",
+      "name": "Gujarat University",
+      "url": "https://www.gujaratuniversity.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "www.gujaratuniversity.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Gujarat",
+      "region": "Gujarat",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "hptu",
+      "name": "Himachal Pradesh Technical University",
+      "url": "https://www.himtu.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "www.himtu.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Himachal Pradesh",
+      "region": "Himachal Pradesh",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "sambalpur-university",
+      "name": "Sambalpur University",
+      "url": "https://www.suniv.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "www.suniv.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Odisha",
+      "region": "Odisha",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "magadh-university",
+      "name": "Magadh University",
+      "url": "https://www.magadhuniversity.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "www.magadhuniversity.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Bihar",
+      "region": "Bihar",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "kurukshetra-university",
+      "name": "Kurukshetra University",
+      "url": "https://www.kuk.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "www.kuk.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Haryana",
+      "region": "Haryana",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "kumaun-university",
+      "name": "Kumaun University",
+      "url": "https://www.kunainital.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "www.kunainital.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Uttarakhand",
+      "region": "Uttarakhand",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "tripura-university",
+      "name": "Tripura University",
+      "url": "https://www.tripurauniv.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "www.tripurauniv.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Tripura",
+      "region": "Tripura",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "nehu",
+      "name": "North-Eastern Hill University",
+      "url": "https://nehu.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "nehu.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Meghalaya",
+      "region": "Meghalaya",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "manipur-university",
+      "name": "Manipur University",
+      "url": "https://www.manipuruniv.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "www.manipuruniv.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Manipur",
+      "region": "Manipur",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "mizoram-university",
+      "name": "Mizoram University",
+      "url": "https://mzu.edu.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "mzu.edu.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Mizoram",
+      "region": "Mizoram",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "nagaland-university",
+      "name": "Nagaland University",
+      "url": "https://nagalanduniversity.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "nagalanduniversity.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Nagaland",
+      "region": "Nagaland",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "sikkim-university",
+      "name": "Sikkim University",
+      "url": "https://cus.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "cus.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Sikkim",
+      "region": "Sikkim",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+    },
+    {
+      "id": "rajiv-gandhi-university",
+      "name": "Rajiv Gandhi University",
+      "url": "https://rgu.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "rgu.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Arunachal Pradesh",
+      "region": "Arunachal Pradesh",
+      "exam_category": "University Results",
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
     }
   ]
 }
