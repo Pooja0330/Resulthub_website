@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "description": "Broad starter registry of Indian official exam/recruitment authorities. Not a guarantee of exhaustive live coverage; each source needs reachability validation and some authorities publish on separate portals.",
+  "description": "Broad starter registry of Indian official exam-result, recruitment, admit-card, answer-key, and school-board authorities. Coverage is not exhaustive; validate reachability and individual result portals.",
   "sources": [
     {
       "id": "upsc",
@@ -3389,6 +3389,846 @@
       "enabled": true,
       "last_reviewed": "2026-10-16",
       "coverage_note": "Official BARC recruitment portal."
+    },
+    {
+      "id": "cbse-results-official",
+      "name": "CBSE Examination Results",
+      "url": "https://results.cbse.nic.in/results/",
+      "kind": "html",
+      "allowed_hosts": [
+        "results.cbse.nic.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "cbse-main",
+      "name": "CBSE Main Website and Examination Notices",
+      "url": "https://www.cbse.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "cbse.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "cisce-results",
+      "name": "CISCE ICSE/ISC Results",
+      "url": "https://results.cisce.org/Results/Result/Launcher",
+      "kind": "html",
+      "allowed_hosts": [
+        "results.cisce.org"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "crpf-results",
+      "name": "CRPF Recruitment and Results",
+      "url": "https://crpf.gov.in/Results",
+      "kind": "html",
+      "allowed_hosts": [
+        "crpf.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "crpf-recruitment",
+      "name": "CRPF Recruitment Details",
+      "url": "https://crpf.gov.in/Recruitments/Recruitment-Details",
+      "kind": "html",
+      "allowed_hosts": [
+        "crpf.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "ssb-recruitment",
+      "name": "Sashastra Seema Bal Recruitment Portal",
+      "url": "https://recruitment.ssb.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "recruitment.ssb.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "coast-guard-recruitment",
+      "name": "Indian Coast Guard Recruitment",
+      "url": "https://indiancoastguard.gov.in/recruitment",
+      "kind": "html",
+      "allowed_hosts": [
+        "indiancoastguard.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "coast-guard-home",
+      "name": "Indian Coast Guard Official Notices",
+      "url": "https://indiancoastguard.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "indiancoastguard.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "ibps-rrb",
+      "name": "IBPS RRB / Regional Rural Banks",
+      "url": "https://www.ibps.in/index.html",
+      "kind": "html",
+      "allowed_hosts": [
+        "ibps.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "rrb-central-recruitment",
+      "name": "Railway Recruitment Boards Central Directory",
+      "url": "https://www.rrcb.gov.in/recruitment.html",
+      "kind": "html",
+      "allowed_hosts": [
+        "rrcb.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "indiapost-gds-results",
+      "name": "India Post GDS Engagement",
+      "url": "https://www.indiapost.gov.in/gdsonlineengagement",
+      "kind": "html",
+      "allowed_hosts": [
+        "indiapost.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "indian-navy-careers",
+      "name": "Indian Navy Recruitment",
+      "url": "https://www.joinindiannavy.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "joinindiannavy.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "indian-army-recruitment",
+      "name": "Indian Army Recruitment",
+      "url": "https://joinindianarmy.nic.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "joinindianarmy.nic.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "airforce-afcat",
+      "name": "Indian Air Force AFCAT",
+      "url": "https://afcat.cdac.in/AFCAT/",
+      "kind": "html",
+      "allowed_hosts": [
+        "afcat.cdac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "airforce-careers",
+      "name": "Indian Air Force Recruitment",
+      "url": "https://careerindianairforce.cdac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "careerindianairforce.cdac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "merchant-navy-imu",
+      "name": "Indian Maritime University Admissions and Notices",
+      "url": "https://www.imu.edu.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "imu.edu.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "naval-coastguard-jobs",
+      "name": "Indian Coast Guard and maritime recruitment notices",
+      "url": "https://indiancoastguard.gov.in/recruitment",
+      "kind": "html",
+      "allowed_hosts": [
+        "indiancoastguard.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "bse-ap",
+      "name": "Andhra Pradesh Board of Secondary Education",
+      "url": "https://bse.ap.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "bse.ap.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "bse-telangana",
+      "name": "Telangana Board of Secondary Education",
+      "url": "https://bse.telangana.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "bse.telangana.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "pseb-results",
+      "name": "Punjab School Education Board Results",
+      "url": "https://www.pseb.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "pseb.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "hpbose-results",
+      "name": "Himachal Pradesh Board of School Education",
+      "url": "https://hpbose.org/",
+      "kind": "html",
+      "allowed_hosts": [
+        "hpbose.org"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "ubse-results",
+      "name": "Uttarakhand Board of School Education",
+      "url": "https://ubse.uk.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "ubse.uk.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "cgbse-results",
+      "name": "Chhattisgarh Board of Secondary Education Results",
+      "url": "https://cgbse.nic.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "cgbse.nic.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "bseh-results",
+      "name": "Board of School Education Haryana",
+      "url": "https://bseh.org.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "bseh.org.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "rajasthan-board-results",
+      "name": "Rajasthan Board of Secondary Education",
+      "url": "https://rajeduboard.rajasthan.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "rajeduboard.rajasthan.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "manipur-board",
+      "name": "Board of Secondary Education Manipur",
+      "url": "https://bsem.nic.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "bsem.nic.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "tripura-board",
+      "name": "Tripura Board of Secondary Education",
+      "url": "https://tbse.tripura.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "tbse.tripura.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "meghalaya-board",
+      "name": "Meghalaya Board of School Education",
+      "url": "https://mbose.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "mbose.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "mizoram-board",
+      "name": "Mizoram Board of School Education",
+      "url": "https://mbse.edu.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "mbse.edu.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "nagaland-board",
+      "name": "Nagaland Board of School Education",
+      "url": "https://nbsenl.edu.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "nbsenl.edu.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "sikkim-board",
+      "name": "Board of Secondary Education Sikkim",
+      "url": "https://sikkimhrdd.org/",
+      "kind": "html",
+      "allowed_hosts": [
+        "sikkimhrdd.org"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "goa-board",
+      "name": "Goa Board of Secondary and Higher Secondary Education",
+      "url": "https://gbshse.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "gbshse.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "maharashtra-board-official",
+      "name": "Maharashtra State Board",
+      "url": "https://mahahsscboard.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "mahahsscboard.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "gujarat-board",
+      "name": "Gujarat Secondary and Higher Secondary Education Board",
+      "url": "https://www.gseb.org/",
+      "kind": "html",
+      "allowed_hosts": [
+        "gseb.org"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "kerala-board-official",
+      "name": "Kerala Board of Public Examinations",
+      "url": "https://pareekshabhavan.kerala.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "pareekshabhavan.kerala.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "odisha-board-official",
+      "name": "Board of Secondary Education Odisha",
+      "url": "https://bseodisha.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "bseodisha.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "assam-board-official",
+      "name": "Assam State School Education Board",
+      "url": "https://site.sebaonline.org/",
+      "kind": "html",
+      "allowed_hosts": [
+        "sebaonline.org"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "westbengal-board-official",
+      "name": "West Bengal Board of Secondary Education",
+      "url": "https://wbbse.wb.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "wbbse.wb.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "tamilnadu-board-official",
+      "name": "Tamil Nadu Directorate of Government Examinations",
+      "url": "https://www.dge.tn.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "dge.tn.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+    },
+    {
+      "id": "karnataka-board-official",
+      "name": "Karnataka School Examination and Assessment Board",
+      "url": "https://kseab.karnataka.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "karnataka.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
     }
   ]
 }
