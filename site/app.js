@@ -12,15 +12,15 @@ function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&l
 function dateText(v){if(!v)return "Date not supplied";const d=new Date(v);return Number.isNaN(d.getTime())?"Date not supplied":d.toLocaleDateString("en-IN",{day:"numeric",month:"short",year:"numeric"})}
 function inferredFamily(x){
  const t=[x.source_id,x.source_name,x.title,x.exam,x.state].join(" ").toLowerCase();
- if(/railway recruitment|\\brrb\\b|\\brrc\\b|ntpc|group d|assistant loco pilot|\\balp\\b/.test(t)) return "Railways";
- if(/\\bibps\\b|state bank of india|\\bsbi\\b|reserve bank of india|\\brbi\\b|banking|\\blic\\b|insurance regulatory|niacl|uiic|pfrda/.test(t)) return "Banking";
- if(/staff selection commission|\\bssc (cgl|chsl|mts|gd|stenographer)\\b/.test(t)) return "SSC / Central Recruitment";
- if(/union public service commission|\\bupsc\\b/.test(t)) return "UPSC / Central Recruitment";
- if(/national testing agency|\\bnta\\b|\\bjee\\b|\\bneet\\b|\\bcuet\\b|\\bgate\\b|ugc net|csir net/.test(t)) return "Entrance & Eligibility";
- if(/school board|\\bcbse\\b|\\bcisce\\b|\\bnios\\b|class 10|class 12|sslc|hsc|madhyamik/.test(t)) return "School Board Results";
+ if(/railway recruitment|\brrb\b|\brrc\b|ntpc|group d|assistant loco pilot|\balp\b/.test(t)) return "Railways";
+ if(/\bibps\b|state bank of india|\bsbi\b|reserve bank of india|\brbi\b|banking|\blic\b|insurance regulatory|niacl|uiic|pfrda/.test(t)) return "Banking";
+ if(/staff selection commission|\bssc (cgl|chsl|mts|gd|stenographer)\b/.test(t)) return "SSC / Central Recruitment";
+ if(/union public service commission|\bupsc\b/.test(t)) return "UPSC / Central Recruitment";
+ if(/national testing agency|\bnta\b|\bjee\b|\bneet\b|\bcuet\b|\bgate\b|ugc net|csir net/.test(t)) return "Entrance & Eligibility";
+ if(/school board|board of school education|school education board|\bboard\b|\bcbse\b|\bcisce\b|\bnios\b|class 10|class 12|sslc|hsc|madhyamik/.test(t)) return "School Board Results";
  if(/police|constable|slprb/.test(t)) return "State Recruitment / Police";
- if(/psc|public service commission|subordinate services selection commission|staff selection commission|recruitment board/.test(t)) return "State PSC / Recruitment";
- if(/ctet|\\btet\\b|teacher|teaching/.test(t)) return "Teaching / Eligibility";
+ if(/public service commission|subordinate services selection commission|staff selection commission|state service commission|\bpsc\b|\bselection commission\b/.test(t)) return "State PSC / Recruitment";
+ if(/ctet|\btet\b|teacher|teaching/.test(t)) return "Teaching / Eligibility";
  if(/defence|defense|army|navy|air force|agniveer|crpf|bsf|cisf|itbp|ssb/.test(t)) return "Defence";
  return x.exam_category||"UPSC / Central Recruitment";
 }
