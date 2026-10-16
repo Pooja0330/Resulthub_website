@@ -177,7 +177,7 @@ def get_with_retries(url, headers=None):
             response = requests.get(
                 url,
                 headers=headers or HEADERS,
-                timeout=(min(TIMEOUT, 8), min(TIMEOUT, 12)),
+                timeout=(min(TIMEOUT, 10), min(TIMEOUT, 12)),
                 allow_redirects=True,
                 verify=certifi.where(),
             )
