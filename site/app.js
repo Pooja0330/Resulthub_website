@@ -146,6 +146,10 @@ const label = s => String(s||"update").replace(/_/g," ").replace(/\b\w/g,c=>c.to
 function safeUrl(u){try{const x=new URL(u);return x.protocol==="https:"?x.href:null}catch{return null}}
 function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
 function dateText(v){if(!v)return "Date not supplied";const d=new Date(v);return Number.isNaN(d.getTime())?"Date not supplied":d.toLocaleDateString("en-IN",{day:"numeric",month:"short",year:"numeric"})}
+function absoluteTimeText(v){if(!v)return "Exact detection time unavailable";const d=new Date(v);if(Number.isNaN(d.getTime()))return "Exact detection time unavailable";return d.toLocaleString("en-IN",{day:"numeric",month:"short",year:"numeric",hour:"numeric",minute:"2-digit",second:"2-digit",hour12:true,timeZone:"Asia/Kolkata"})+" IST"}
+function relativeTimeText(v){if(!v)return "time unavailable";const d=new Date(v),ms=Date.now()-d.getTime();if(Number.isNaN(d.getTime()))return "time unavailable";if(ms<60_000)return "just now";if(ms<3_600_000){const n=Math.floor(ms/60_000);return n+" minute"+(n===1?"":"s")+" ago"}if(ms<86_400_000){const n=Math.floor(ms/3_600_000);return n+" hour"+(n===1?"":"s")+" ago"}const n=Math.floor(ms/86_400_000);return n===1?"yesterday":n+" days ago"}
+function detectedTimeMarkup(v){if(!v)return "Detection time not available";const d=new Date(v);if(Number.isNaN(d.getTime()))return "Detection time not available";return '<time class="relative-detection-time" datetime="'+esc(d.toISOString())+'" title="'+esc(absoluteTimeText(v))+'">'+esc(relativeTimeText(v))+'</time><span class="exact-detection-time"> · '+esc(absoluteTimeText(v))+'</span>'}
+function refreshRelativeTimes(){document.querySelectorAll("time.relative-detection-time").forEach(el=>{el.textContent=relativeTimeText(el.dateTime);el.title=absoluteTimeText(el.dateTime);});}
 function inferredFamily(x){
  const t=[x.source_id,x.source_name,x.title,x.exam,x.state].join(" ").toLowerCase();
  if(/\bjee\s*advanced\b/.test(t)) return "JEE Advanced";
@@ -252,7 +256,7 @@ function render(){
    const sourceBadge=x.archive?"Historical archive":(x.verified===true?"✓ Verified official source":"Official website link");
    const explicitYear=x.exam_year||((String(x.title||x.exam||"").match(/\b20\d{2}\b/)||[])[0]||"");
    const noticeDate=x.published||"";
-   const dateDetails=(explicitYear?`Exam year: ${esc(explicitYear)} · `:"")+(noticeDate?`Notice date: ${esc(noticeDate)} · `:"Notice date not shown by authority · ")+`Detected: ${esc(dateText(x.detected_at||x.date))}`;
+   const dateDetails=(explicitYear?`Exam year: ${esc(explicitYear)} · `:"")+(noticeDate?`Notice date: ${esc(noticeDate)} · `:"Notice date not shown by authority · ")+`Detected by GoResultHub: ${detectedTimeMarkup(x.detected_at||x.date)}`;
    return `<article class="card"><div class="meta"><span class="tag">${esc(label(x.category))}</span><span class="unverified">${esc(sourceBadge)}</span></div><h3>${esc(x.title||x.exam||"Exam update")}</h3><p>${esc(x.description||x.source_name||"View the official website for full details and eligibility.")}</p><div class="source">${esc(x.source_name||x.authority||"Issuing authority")} · ${dateDetails}</div>${sourcePage&&sourcePage!==url?`<a class="link" href="${esc(sourcePage)}" target="_blank" rel="noopener noreferrer">Start at official authority website ↗</a>`:""}${url?` <a class="link secondary" href="${esc(url)}" target="_blank" rel="noopener noreferrer">Open direct notice/result (may be PDF) ↗</a>`:`<span>Official link unavailable</span>`}</article>`;
   }).join("");
  $("#empty").classList.toggle("hidden",list.length>0);
@@ -328,3 +332,4 @@ document.querySelectorAll("[data-browse]").forEach(button=>button.addEventListen
 }));
 $("#supportBtn").addEventListener("click",()=>{$("#supportNote").textContent="Secure support payments are not configured yet. We will enable this after a payment provider and checkout URL are set up.";});
 init();
+setInterval(refreshRelativeTimes,30000);
