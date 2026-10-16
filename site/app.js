@@ -112,7 +112,9 @@ function renderStateSidebar(){
  }
  $("#allIndiaCount").textContent=allItems.length;
  $("#allStatesBtn").classList.toggle("active",!selectedState&&!selectedRegion);
- $("#stateList").innerHTML=STATE_NAMES.map(name=>'<button type="button" class="state-link'+(selectedState===name?' active':'')+'" data-state="'+esc(name)+'"><span>'+esc(name)+'</span><span class="state-count">'+stateCount(name)+'</span></button>').join("");
+ const stateQuery=($("#stateQuickSearch")?.value||"").trim().toLowerCase();
+  const visibleStates=STATE_NAMES.filter(name=>!stateQuery||name.toLowerCase().includes(stateQuery));
+  $("#stateList").innerHTML=visibleStates.map(name=>'<button type="button" class="state-link'+(selectedState===name?' active':'')+'" data-state="'+esc(name)+'"><span>'+esc(name)+'</span><span class="state-count">'+stateCount(name)+'</span></button>').join("");
  $("#stateList").querySelectorAll("[data-state]").forEach(button=>button.addEventListener("click",()=>{
   window.location.href="state.html?state="+encodeURIComponent(button.dataset.state);
   return;
@@ -240,7 +242,9 @@ function filteredItems(){
   const itemState=stateForItem(x);
    const stateFilter=selectedState||selectedRegion||r;
    const year=recordYear(x);
-   return (!terms.length||terms.every(term=>hay.includes(term)))&&(!c||x.category===c)&&(!ec||family===ec)&&(!stateFilter||itemState===stateFilter)&&(!y||(y==="unknown"?!year:year===y))&&browseMatches(x,selectedBrowse);
+   const queryMatch=!terms.length||terms.every(term=>hay.includes(term))||terms.some(term=>hay.includes(term));
+    const effectiveStateFilter=stateFilter==="All India"?"":stateFilter;
+    return queryMatch&&(!c||x.category===c)&&(!ec||family===ec)&&(!effectiveStateFilter||itemState===effectiveStateFilter)&&(!y||(y==="unknown"?!year:year===y))&&browseMatches(x,selectedBrowse);
  });
  if($("#sort").value==="title") list.sort((a,b)=>(a.title||"").localeCompare(b.title||""));
  else list.sort((a,b)=>new Date(b.detected_at||b.date||0)-new Date(a.detected_at||a.date||0));
@@ -297,7 +301,7 @@ async function loadResults(){
  if(resultsRequest)return resultsRequest;
  resultsRequest=(async()=>{
   try{
-   const r=await fetch("data/results.json?fresh="+Date.now(),{cache:"no-store"});
+   const r=await fetch("data/results.json",{cache:"no-cache"});
    if(!r.ok) throw new Error("Data not available");
    const data=await r.json();
    if(!Array.isArray(data))throw new Error("Invalid data format");
@@ -341,6 +345,7 @@ $("#q").addEventListener("input",()=>{clearUpdateFilters();if(quickSearch)quickS
 ["category","examCategory","region","sort","examYear"].forEach(id=>$("#"+id).addEventListener("change",()=>{if(id==="region"){const v=$("#region").value;selectedState=STATE_NAMES.includes(v)?v:"";selectedRegion=v==="Central"?"Central":"";}page=1;render()}));
 document.querySelectorAll(".pills [data-family]").forEach(button=>button.addEventListener("click",()=>{$("#examCategory").value=button.dataset.family;page=1;$("#updates").scrollIntoView({behavior:"smooth"});render()}));
 document.querySelectorAll("[data-quick-search]").forEach(button=>button.addEventListener("click",()=>{const term=button.dataset.quickSearch||"";$("#q").value=term;if(quickSearch)quickSearch.value=term;filterQuickExams(term);$("#category").value="";$("#examCategory").value="";$("#region").value="";$("#examYear").value="";selectedState="";selectedRegion="";selectedBrowse="";page=1;render();$("#updates").scrollIntoView({behavior:"smooth",block:"start"});}));
+$("#stateQuickSearch")?.addEventListener("input",()=>renderStateSidebar());
 const quickSearch=$("#quickExamSearch");
 function filterQuickExams(value){const term=(value||"").trim().toLowerCase();let shown=0;document.querySelectorAll(".quick-exam-card").forEach(card=>{const match=!term||(card.dataset.keywords+" "+card.innerText).toLowerCase().includes(term);card.classList.toggle("hidden",!match);if(match)shown++;});document.querySelectorAll(".quick-exam-group").forEach(group=>group.classList.toggle("hidden",!group.querySelector(".quick-exam-card:not(.hidden)")));$("#quickExamEmpty")?.classList.toggle("hidden",shown>0);return shown;}
  quickSearch?.addEventListener("input",()=>filterQuickExams(quickSearch.value));
