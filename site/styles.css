@@ -150,3 +150,19 @@
 
 /* Opt-in browser alerts in the live-update panel */
 .grh-enable-notifications{border:1px solid #c9d9ef;background:#edf4ff;color:#174f9c;border-radius:8px;padding:7px 10px;font:inherit;font-size:.75rem;font-weight:800;cursor:pointer}.grh-enable-notifications:disabled{opacity:.6;cursor:wait}.grh-enable-notifications:focus-visible{outline:3px solid #ffce65;outline-offset:2px}
+
+
+/* Revenue placements: hidden until real approved IDs are configured. */
+.ad-slot{box-sizing:border-box;width:min(100% - 28px,1100px);margin:18px auto 24px;padding:8px 12px;border:1px solid #e2e8f1;border-radius:12px;background:#fbfcfe;min-height:0;overflow:hidden}
+.ad-slot[hidden],.sponsor-resources[hidden]{display:none!important}
+.ad-slot:not([hidden])::before{content:"Advertisement";display:block;margin:0 0 8px;color:#718096;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.ad-slot .adsbygoogle{display:block;min-height:90px}
+.sponsor-resources{width:min(100% - 28px,1100px);margin:24px auto;padding:24px;border:1px solid #dbe5f1;border-radius:14px;background:#f8fbff}
+.sponsor-resources h2{margin:0 0 8px;font-size:1.5rem}
+.sponsor-disclosure{color:#52647b;font-size:.85rem;max-width:800px}
+.sponsor-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:16px}
+.sponsor-card{display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:16px;border:1px solid #dbe5f1;border-radius:12px;background:#fff}
+.sponsor-label{font-size:.7rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:#79510c}
+.sponsor-card h3{margin:0;font-size:1rem}
+.sponsor-card p{margin:0;color:#5d6c81;font-size:.88rem}
+.sponsor-card a{margin-top:auto;font-weight:800;color:#174f9c}
