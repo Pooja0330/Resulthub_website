@@ -59,6 +59,12 @@ class CheckerSafetyTests(unittest.TestCase):
     def test_generic_call_letters_landing_page_is_not_a_notice(self):
         self.assertIsNone(classify("Call Letters"))
 
+    def test_classifies_public_exam_notice(self):
+        self.assertEqual(classify("Public Notice: Revised Examination Schedule 2026"), "exam_schedule")
+
+    def test_classifies_admission_notice(self):
+        self.assertEqual(classify("Admission Notice for Entrance Examination 2026"), "notification")
+
     def test_pib_feed_indexes_general_press_releases(self):
         from check import classify_source_title
         source = {"include_all_items": True}
