@@ -260,7 +260,7 @@ function render(){
    const explicitYear=x.exam_year||((String(x.title||x.exam||"").match(/\b20\d{2}\b/)||[])[0]||"");
    const noticeDate=x.published||"";
    const dateDetails=(explicitYear?`Exam year: ${esc(explicitYear)} · `:"")+(noticeDate?`Notice date: ${esc(noticeDate)} · `:"Notice date not shown by authority · ")+`Detected by GoResultHub: ${detectedTimeMarkup(x.detected_at||x.date)}`;
-   return `<article class="card"><div class="meta"><span class="tag">${esc(label(x.category))}</span><span class="unverified">${esc(sourceBadge)}</span></div><h3>${esc(x.title||x.exam||"Exam update")}</h3><p>${esc(x.description||x.source_name||"View the official website for full details and eligibility.")}</p><div class="source">${esc(x.source_name||x.authority||"Issuing authority")} · ${dateDetails}</div>${sourcePage&&sourcePage!==url?`<a class="link" href="${esc(sourcePage)}" target="_blank" rel="noopener noreferrer">Start at official authority website ↗</a>`:""}${url?` <a class="link secondary" href="${esc(url)}" target="_blank" rel="noopener noreferrer">Open direct notice/result (may be PDF) ↗</a>`:`<span>Official link unavailable</span>`}</article>`;
+   return `<article class="card"><div class="meta"><span class="tag">${esc(label(x.category))}</span><span class="unverified">${esc(sourceBadge)}</span></div><h3>${esc(x.title||x.exam||"Exam update")}</h3><p>${esc(x.description||x.source_name||"View the official website for full details and eligibility.")}</p><div class="source">${esc(x.source_name||x.authority||"Issuing authority")} · ${dateDetails}</div>${sourcePage&&sourcePage!==url?`<a class="link" href="${esc(sourcePage)}" target="_blank" rel="noopener noreferrer">Start at official authority website ↗</a>`:""}${url?` <a class="link secondary" href="${esc(url)}" target="_blank" rel="noopener noreferrer">Open direct notice/result (may be PDF) ↗</a>`:`<span>Official link unavailable</span>`}<button type="button" class="share-update" data-share-title="${esc(x.title||x.exam||"Exam update")}" data-share-url="${esc("https://goresulthub.com/?q="+encodeURIComponent(x.title||x.exam||""))}">Share this update ↗</button></article>`;
   }).join("");
  $("#empty").classList.toggle("hidden",list.length>0);
  if(!list.length) $("#updatesList").innerHTML="";
@@ -340,5 +340,16 @@ document.querySelectorAll("[data-browse]").forEach(button=>button.addEventListen
  $("#updates").scrollIntoView({behavior:"smooth",block:"start"});
 }));
 $("#supportBtn").addEventListener("click",()=>{$("#supportNote").textContent="Secure support payments are not configured yet. We will enable this after a payment provider and checkout URL are set up.";});
+document.addEventListener("click",async event=>{
+ const button=event.target.closest("[data-share-url]");
+ if(!button)return;
+ const shareUrl=button.dataset.shareUrl||"https://goresulthub.com/";
+ const shareTitle=button.dataset.shareTitle||"GoResultHub exam update";
+ try{
+  if(navigator.share)await navigator.share({title:shareTitle,text:"Check this exam update on GoResultHub:",url:shareUrl});
+  else if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(shareUrl);button.textContent="Link copied ✓";setTimeout(()=>{button.textContent="Share this update ↗"},1800);}
+  else window.prompt("Copy this GoResultHub link:",shareUrl);
+ }catch(error){if(error?.name!=="AbortError")console.warn("Share was not completed",error);}
+});
 init();
 setInterval(refreshRelativeTimes,30000);
