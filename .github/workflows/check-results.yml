@@ -17,7 +17,7 @@ permissions:
 
 concurrency:
   group: goresult-hub-checker
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   check:
@@ -60,6 +60,7 @@ jobs:
           git add checker/state.json
           git add checker/approved.json
           git add site/data/results.json
+          git add site/data/status.json
 
           if git diff --cached --quiet; then
             echo "No data changes to commit"
