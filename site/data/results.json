@@ -9187,5 +9187,41 @@
     "verified": false,
     "archive": false,
     "detected_at": "2026-10-16T09:31:10.053581+00:00"
+  },
+  {
+    "id": "2cadbb14b789440f3bb44fbc",
+    "title": "Recruitment Results",
+    "exam": "Recruitment Results",
+    "exam_category": "State Bank of India Careers",
+    "category": "result",
+    "source_name": "State Bank of India Careers",
+    "authority": "State Bank of India Careers",
+    "url": "https://sbi.bank.in/web/careers/recruitment-results",
+    "official_url": "https://sbi.bank.in/web/careers/recruitment-results",
+    "source_url": "https://bank.sbi/web/careers/",
+    "region": "Central",
+    "state": "",
+    "description": "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility.",
+    "verified": false,
+    "archive": false,
+    "detected_at": "2026-10-16T09:35:03.260346+00:00"
+  },
+  {
+    "id": "dae19c3a660af5235c5fae50",
+    "title": "Recruitment Results & Archive",
+    "exam": "Recruitment Results & Archive",
+    "exam_category": "State Bank of India Careers",
+    "category": "result",
+    "source_name": "State Bank of India Careers",
+    "authority": "State Bank of India Careers",
+    "url": "https://sbi.bank.in/web/careers/recruitment-results-archive",
+    "official_url": "https://sbi.bank.in/web/careers/recruitment-results-archive",
+    "source_url": "https://bank.sbi/web/careers/",
+    "region": "Central",
+    "state": "",
+    "description": "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility.",
+    "verified": false,
+    "archive": false,
+    "detected_at": "2026-10-16T09:35:03.260346+00:00"
   }
 ]
