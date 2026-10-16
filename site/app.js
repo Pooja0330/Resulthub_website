@@ -237,7 +237,7 @@ function renderYearArchiveHelp(){
 }
 function isPibItem(x){return /pib|press information bureau|press releases|government & pib/i.test([x.source_id,x.source_name,x.authority,x.exam_category].filter(Boolean).join(" "));}
 function mainPriority(x){if(isPibItem(x))return 2;if(x.archive===true)return 3;if(x.verified===true&&!/archive/i.test(String(x.title||"")))return 0;return 1;}
-function displayTitle(x){const title=String(x.title||x.exam||"Exam update");if(isPibItem(x)&&/[\\u0900-\\u097F]/.test(title))return "Government & PIB update (Hindi-language release)";return title;}
+function displayTitle(x){return String(x.title||x.exam||"Exam update");}
 function filteredItems(){
  const q=$("#q").value.trim().toLowerCase(), terms=q.split(/\s+/).filter(Boolean), c=$("#category").value, ec=$("#examCategory").value, r=$("#region").value, y=$("#examYear").value;
  const list=allItems.filter(x=>{
