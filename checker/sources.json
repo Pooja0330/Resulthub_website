@@ -5751,7 +5751,7 @@
     {
       "id": "pib-press-releases",
       "name": "Press Information Bureau (PIB) — Press Releases",
-      "url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3",
+      "url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=1",
       "kind": "rss",
       "allowed_hosts": [
         "pib.gov.in"
@@ -5768,7 +5768,7 @@
       "exam_category": "Government & PIB Updates",
       "include_all_items": true,
       "max_new": 50,
-      "coverage_note": "Official PIB English press-release RSS feed for the national headquarters feed (Regid=3). Checks recent feed entries each scheduled scan; feed retention and upstream availability limit historical completeness."
+      "coverage_note": "Official PIB English press-release RSS feed listed by PIB's own RSS directory (Regid=1). Checks recent feed entries each scheduled scan; feed retention and upstream availability limit historical completeness."
     }
   ]
 }
