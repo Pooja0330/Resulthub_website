@@ -1,4 +1,4 @@
-# GoResultHub checker: direct notice links plus official authority-page links.
+# GoResultHub checker: official exam notices, controlled alert delivery, and source health diagnostics.
 
 import os
 import re
