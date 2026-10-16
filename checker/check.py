@@ -663,8 +663,14 @@ def main():
     # Process explicitly approved queue items, if configured.
     approved_items = approval.get("pending", []) if isinstance(approval, dict) else []
     remaining_approved = []
+    approved_attempts = 0
+    max_approved_alerts_per_run = 5
 
     for approved_index, item in enumerate(approved_items):
+        if approved_attempts >= max_approved_alerts_per_run:
+            remaining_approved.extend(approved_items[approved_index:])
+            print(f"Approved alert attempt limit reached ({max_approved_alerts_per_run}); remaining items stay queued")
+            break
         if TG_RATE_LIMITED:
             # Preserve this item and every later item; never lose queued alerts
             # just because Telegram temporarily rate-limited this run.
@@ -693,17 +699,21 @@ def main():
             continue
 
         source_page = str(source.get("url", "")).strip()
+        direct_url = url
         message = (
-            "📢 GoResultHub | Exam Update\n\n"
-            f"Authority: {item['source_name']}\n"
-            f"Type: {str(item.get('category', 'update')).replace('_', ' ').title()}\n\n"
-            f"{item.get('title', '')}\n\n"
-            + f"🌐 OFFICIAL AUTHORITY WEBSITE — open this link to browse notices:\n{source_page or 'Official website link unavailable; use the authority name to find its official portal.'}\n"
-
+            "📢 GoResultHub | Approved Exam Update\n\n"
+            f"Authority: \${item['source_name']}\n"
+            f"Type: \${str(item.get('category', 'update')).replace('_', ' ').title()}\n\n"
+            f"\${item.get('title', '')}\n\n"
+            + f"📄 OPEN NOTICE / RESULT:\n\${direct_url}\n\n"
+            + f"🌐 OFFICIAL AUTHORITY WEBSITE:\n\${source_page or 'Official website link unavailable; search the authority name on its official portal.'}\n"
         )
 
+        approved_attempts += 1
         if not telegram_send(CHANNEL, message):
             remaining_approved.append(item)
+        else:
+            time.sleep(1.1)
 
     # Save data only after the run's work is complete.
     state.update({
