@@ -1895,7 +1895,7 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages. Also covers duplicate registry entries: Himachal Pradesh Rajya Chayan Aayog.",
-      "exam_category": "UPSC / Central Recruitment"
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "jkssb",
@@ -3146,7 +3146,7 @@
       "enabled": true,
       "last_reviewed": "2026-10-16",
       "coverage_note": "Official ESIC recruitment and examination notices.",
-      "exam_category": "Banking"
+      "exam_category": "UPSC / Central Recruitment"
     },
     {
       "id": "nielit-recruitment",
