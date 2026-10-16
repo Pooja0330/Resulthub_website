@@ -234,6 +234,9 @@ function renderYearArchiveHelp(){
  if(!year||year==="unknown"||list.length){box.classList.add("hidden");box.innerHTML="";return;}
  box.classList.remove("hidden");box.innerHTML='<h3>No individual records indexed for '+esc(year)+' yet</h3><p>This means GoResultHub has not indexed matching year-specific entries; it does not mean no exams or results existed in '+esc(year)+'. Check these official archive starting points while historical coverage is expanded.</p><div class="archive-help-links">'+ARCHIVE_LINKS.map(([label,url])=>'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(label)+' ↗</a>').join("")+'</div>';
 }
+function isPibItem(x){return /pib|press information bureau|press releases|government & pib/i.test([x.source_id,x.source_name,x.authority,x.exam_category].filter(Boolean).join(" "));}
+function mainPriority(x){if(isPibItem(x))return 2;if(x.archive===true)return 3;if(x.verified===true&&!/archive/i.test(String(x.title||"")))return 0;return 1;}
+function displayTitle(x){const title=String(x.title||x.exam||"Exam update");if(isPibItem(x)&&/[\\u0900-\\u097F]/.test(title))return "Government & PIB update (Hindi-language release)";return title;}
 function filteredItems(){
  const q=$("#q").value.trim().toLowerCase(), terms=q.split(/\s+/).filter(Boolean), c=$("#category").value, ec=$("#examCategory").value, r=$("#region").value, y=$("#examYear").value;
  const list=allItems.filter(x=>{
@@ -247,7 +250,7 @@ function filteredItems(){
     return queryMatch&&(!c||x.category===c)&&(!ec||family===ec)&&(!effectiveStateFilter||itemState===effectiveStateFilter)&&(!y||(y==="unknown"?!year:year===y))&&browseMatches(x,selectedBrowse);
  });
  if($("#sort").value==="title") list.sort((a,b)=>(a.title||"").localeCompare(b.title||""));
- else list.sort((a,b)=>new Date(b.detected_at||b.date||0)-new Date(a.detected_at||a.date||0));
+ else list.sort((a,b)=>mainPriority(a)-mainPriority(b)||new Date(b.detected_at||b.published||b.date||0)-new Date(a.detected_at||a.published||a.date||0));
  return list;
 }
 function render(){
@@ -264,7 +267,7 @@ function render(){
    const explicitYear=x.exam_year||((String(x.title||x.exam||"").match(/\b20\d{2}\b/)||[])[0]||"");
    const noticeDate=x.published||"";
    const dateDetails=(explicitYear?`Exam year: ${esc(explicitYear)} · `:"")+(noticeDate?`Notice date: ${esc(noticeDate)} · `:"Notice date not shown by authority · ")+`Detected by GoResultHub: ${detectedTimeMarkup(x.detected_at||x.date)}`;
-   return `<article class="card"><div class="meta"><span class="tag">${esc(label(x.category))}</span><span class="unverified">${esc(sourceBadge)}</span></div><h3>${esc(x.title||x.exam||"Exam update")}</h3><p>${esc(x.description||x.source_name||"View the official website for full details and eligibility.")}</p><div class="source">${esc(x.source_name||x.authority||"Issuing authority")} · ${dateDetails}</div>${url?(x.direct===true||/\/(?:login|candidate-login|candidatelogin|score.?display|result.?status)(?:[/?#]|$)/i.test(new URL(url).pathname)?` <a class="link secondary" href="${esc(url)}" target="_blank" rel="noopener noreferrer">Open official login ↗</a>`:` <a class="link secondary" href="${esc("notice.html?id="+encodeURIComponent(x.id||"")+"&q="+encodeURIComponent(x.title||x.exam||"Exam update"))}" rel="noopener">View update on GoResultHub ↗</a>`):`<span>Official link unavailable</span>`}<button type="button" class="share-update" data-share-title="${esc(x.title||x.exam||"Exam update")}" data-share-url="${esc("https://goresulthub.com/notice.html?id="+encodeURIComponent(x.id||"")+"&q="+encodeURIComponent(x.title||x.exam||""))}">Share this update ↗</button></article>`;
+   return `<article class="card"><div class="meta"><span class="tag">${esc(label(x.category))}</span><span class="unverified">${esc(sourceBadge)}</span></div><h3>${esc(displayTitle(x))}</h3><p>${esc(x.description||x.source_name||"View the official website for full details and eligibility.")}</p><div class="source">${esc(x.source_name||x.authority||"Issuing authority")} · ${dateDetails}</div>${url?(x.direct===true||/\/(?:login|candidate-login|candidatelogin|score.?display|result.?status)(?:[/?#]|$)/i.test(new URL(url).pathname)?` <a class="link secondary" href="${esc(url)}" target="_blank" rel="noopener noreferrer">Open official login ↗</a>`:` <a class="link secondary" href="${esc("notice.html?id="+encodeURIComponent(x.id||"")+"&q="+encodeURIComponent(x.title||x.exam||"Exam update"))}" rel="noopener">View update on GoResultHub ↗</a>`):`<span>Official link unavailable</span>`}<button type="button" class="share-update" data-share-title="${esc(x.title||x.exam||"Exam update")}" data-share-url="${esc("https://goresulthub.com/notice.html?id="+encodeURIComponent(x.id||"")+"&q="+encodeURIComponent(x.title||x.exam||""))}">Share this update ↗</button></article>`;
   }).join("");
  $("#empty").classList.toggle("hidden",list.length>0);
  if(!list.length) $("#updatesList").innerHTML="";
