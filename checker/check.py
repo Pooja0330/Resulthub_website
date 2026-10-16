@@ -120,7 +120,7 @@ def get_with_retries(url, headers=None):
 
     # Keep a failed source from delaying the entire scheduled run.
     # Two attempts are enough for transient errors; never disable TLS verification.
-    for attempt in range(2):
+    for attempt in range(3):
         try:
             response = requests.get(
                 url,
@@ -130,8 +130,8 @@ def get_with_retries(url, headers=None):
             )
 
             if response.status_code in (408, 425, 429, 500, 502, 503, 504):
-                if attempt == 0:
-                    time.sleep(1)
+                if attempt < 2:
+                    time.sleep(1.5 * (attempt + 1))
                     continue
 
             response.raise_for_status()
@@ -139,8 +139,8 @@ def get_with_retries(url, headers=None):
 
         except (requests.Timeout, requests.ConnectionError) as exc:
             last_error = exc
-            if attempt == 0:
-                time.sleep(1)
+            if attempt < 2:
+                time.sleep(1.5 * (attempt + 1))
                 continue
             raise
 
