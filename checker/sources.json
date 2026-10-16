@@ -4049,6 +4049,146 @@
       "enabled": true,
       "last_reviewed": "2026-10-16",
       "coverage_note": "Dedicated official SBI recruitment-results page."
+    },
+    {
+      "id": "goa-government",
+      "name": "Goa Government recruitment and education notices",
+      "url": "https://www.goa.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "goa.gov.in",
+        "www.goa.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official Goa Government portal; scanner accepts only links whose titles resemble exam, result, or recruitment notices.",
+      "exam_category": "State PSC / Recruitment",
+      "state": "Goa",
+      "region": "Goa"
+    },
+    {
+      "id": "andaman-administration",
+      "name": "Andaman and Nicobar Administration notices",
+      "url": "https://andaman.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "andaman.gov.in",
+        "www.andaman.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official Union Territory administration portal; relevant exam and recruitment links may be listed here.",
+      "exam_category": "State PSC / Recruitment",
+      "state": "Andaman and Nicobar Islands",
+      "region": "Andaman and Nicobar Islands"
+    },
+    {
+      "id": "chandigarh-administration",
+      "name": "Chandigarh Administration notices",
+      "url": "https://chandigarh.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "chandigarh.gov.in",
+        "www.chandigarh.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official Union Territory administration portal; relevant recruitment notices may be listed here.",
+      "exam_category": "State PSC / Recruitment",
+      "state": "Chandigarh",
+      "region": "Chandigarh"
+    },
+    {
+      "id": "dnh-dd-administration",
+      "name": "Dadra and Nagar Haveli and Daman and Diu Administration notices",
+      "url": "https://ddd.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "ddd.gov.in",
+        "www.ddd.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official Union Territory administration portal; relevant recruitment notices may be listed here.",
+      "exam_category": "State PSC / Recruitment",
+      "state": "Dadra and Nagar Haveli and Daman and Diu",
+      "region": "Dadra and Nagar Haveli and Daman and Diu"
+    },
+    {
+      "id": "ladakh-administration",
+      "name": "Ladakh Administration notices",
+      "url": "https://ladakh.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "ladakh.gov.in",
+        "www.ladakh.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official Union Territory administration portal; relevant recruitment notices may be listed here.",
+      "exam_category": "State PSC / Recruitment",
+      "state": "Ladakh",
+      "region": "Ladakh"
+    },
+    {
+      "id": "lakshadweep-administration",
+      "name": "Lakshadweep Administration notices",
+      "url": "https://lakshadweep.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "lakshadweep.gov.in",
+        "www.lakshadweep.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official Union Territory administration portal; relevant recruitment notices may be listed here.",
+      "exam_category": "State PSC / Recruitment",
+      "state": "Lakshadweep",
+      "region": "Lakshadweep"
+    },
+    {
+      "id": "puducherry-government",
+      "name": "Puducherry Government notices",
+      "url": "https://py.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "py.gov.in",
+        "www.py.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official Union Territory government portal; relevant recruitment notices may be listed here.",
+      "exam_category": "State PSC / Recruitment",
+      "state": "Puducherry",
+      "region": "Puducherry"
     }
   ]
 }
