@@ -10,11 +10,26 @@ const label = s => String(s||"update").replace(/_/g," ").replace(/\b\w/g,c=>c.to
 function safeUrl(u){try{const x=new URL(u);return x.protocol==="https:"?x.href:null}catch{return null}}
 function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
 function dateText(v){if(!v)return "Date not supplied";const d=new Date(v);return Number.isNaN(d.getTime())?"Date not supplied":d.toLocaleDateString("en-IN",{day:"numeric",month:"short",year:"numeric"})}
+function inferredFamily(x){
+ const t=[x.source_id,x.source_name,x.title,x.exam,x.state].join(" ").toLowerCase();
+ if(/railway recruitment|\\brrb\\b|\\brrc\\b|ntpc|group d|assistant loco pilot|\\balp\\b/.test(t)) return "Railways";
+ if(/\\bibps\\b|state bank of india|\\bsbi\\b|reserve bank of india|\\brbi\\b|banking|\\blic\\b|insurance regulatory|niacl|uiic|pfrda/.test(t)) return "Banking";
+ if(/staff selection commission|\\bssc (cgl|chsl|mts|gd|stenographer)\\b/.test(t)) return "SSC / Central Recruitment";
+ if(/union public service commission|\\bupsc\\b/.test(t)) return "UPSC / Central Recruitment";
+ if(/national testing agency|\\bnta\\b|\\bjee\\b|\\bneet\\b|\\bcuet\\b|\\bgate\\b|ugc net|csir net/.test(t)) return "Entrance & Eligibility";
+ if(/school board|\\bcbse\\b|\\bcisce\\b|\\bnios\\b|class 10|class 12|sslc|hsc|madhyamik/.test(t)) return "School Board Results";
+ if(/police|constable|slprb/.test(t)) return "State Recruitment / Police";
+ if(/psc|public service commission|subordinate services selection commission|staff selection commission|recruitment board/.test(t)) return "State PSC / Recruitment";
+ if(/ctet|\\btet\\b|teacher|teaching/.test(t)) return "Teaching / Eligibility";
+ if(/defence|defense|army|navy|air force|agniveer|crpf|bsf|cisf|itbp|ssb/.test(t)) return "Defence";
+ return x.exam_category||"UPSC / Central Recruitment";
+}
 function filteredItems(){
  const q=$("#q").value.trim().toLowerCase(), c=$("#category").value, ec=$("#examCategory").value, r=$("#region").value;
  const list=allItems.filter(x=>{
-  const hay=[x.title,x.exam,x.source_name,x.state,x.region,x.category,x.exam_category].join(" ").toLowerCase();
-  return (!q||hay.includes(q))&&(!c||x.category===c)&&(!ec||x.exam_category===ec)&&(!r||r==="All India"||((x.region||x.state||"Central")===r));
+  const family=inferredFamily(x);
+  const hay=[x.title,x.exam,x.source_name,x.state,x.region,x.category,family].join(" ").toLowerCase();
+  return (!q||hay.includes(q))&&(!c||x.category===c)&&(!ec||family===ec)&&(!r||r==="All India"||((x.region||x.state||"Central")===r));
  });
  if($("#sort").value==="title") list.sort((a,b)=>(a.title||"").localeCompare(b.title||""));
  else list.sort((a,b)=>new Date(b.detected_at||b.date||0)-new Date(a.detected_at||a.date||0));
