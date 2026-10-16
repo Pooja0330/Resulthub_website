@@ -23,7 +23,7 @@ TG_RATE_LIMITED = False
 
 TIMEOUT = max(6, min(int(os.getenv("SOURCE_TIMEOUT_SECONDS", "12")), 20))
 # Lower concurrency reduces connection pressure against slow government portals.
-WORKERS = max(1, min(int(os.getenv("SOURCE_WORKERS", "5")), 8))
+WORKERS = max(1, min(int(os.getenv("SOURCE_WORKERS", "8")), 8))
 MAX_NEW_PER_SOURCE = max(1, min(int(os.getenv("MAX_NEW_PER_SOURCE", "5")), 20))
 MAX_AGE_DAYS = 90
 
@@ -142,18 +142,18 @@ def get_with_retries(url, headers=None):
 
     # Keep a failed source from delaying the entire scheduled run.
     # Retry transient errors; use certifi's current CA bundle and never disable TLS verification.
-    for attempt in range(3):
+    for attempt in range(2):
         try:
             response = requests.get(
                 url,
                 headers=headers or HEADERS,
-                timeout=(12, TIMEOUT),
+                timeout=(5, min(TIMEOUT, 8)),
                 allow_redirects=True,
                 verify=certifi.where(),
             )
 
             if response.status_code in (408, 425, 429, 500, 502, 503, 504):
-                if attempt < 2:
+                if attempt < 1:
                     time.sleep(1.5 * (attempt + 1))
                     continue
 
