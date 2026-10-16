@@ -120,13 +120,13 @@ def extract_notice_date(text):
     """Return a date only when the official listing labels it as a notice/upload date."""
     value = " ".join(str(text or "").split())
     date_pattern = (
-        r"(\\d{1,2}[./-]\\d{1,2}[./-]\\d{4}|"
-        r"[A-Za-z]{3,9}\\s+\\d{1,2},?\\s+\\d{4}|"
-        r"\\d{1,2}\\s+[A-Za-z]{3,9},?\\s+\\d{4})"
+        r"(\d{1,2}[./-]\d{1,2}[./-]\d{4}|"
+        r"[A-Za-z]{3,9}\s+\d{1,2},?\s+\d{4}|"
+        r"\d{1,2}\s+[A-Za-z]{3,9},?\s+\d{4})"
     )
     match = re.search(
-        r"\\b(?:date of upload|upload date|notice date|notification date|"
-        r"published on|posted on|updated on|uploaded on|issued on|dated)\\s*[:\\-]?\\s*"
+        r"\b(?:date of upload|upload date|notice date|notification date|"
+        r"published on|posted on|updated on|uploaded on|issued on|dated)\s*[:\-]?\s*"
         + date_pattern, value, re.I,
     )
     if not match:
@@ -146,7 +146,7 @@ def extract_notice_date(text):
 
 def exam_year_from_title(title):
     """Return a year only when explicitly present in the notice title."""
-    match = re.search(r"\\b(20\\d{2})\\b", str(title or ""))
+    match = re.search(r"\b(20\d{2})\b", str(title or ""))
     return match.group(1) if match else ""
 
 
