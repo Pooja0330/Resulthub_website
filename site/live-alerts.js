@@ -34,7 +34,7 @@
   function renderPanel(items) {
     const current = items.slice(0, 12);
     list.innerHTML = current.length ? current.map(item => {
-      const url="https://goresulthub.com/?q="+encodeURIComponent(item.title || item.exam || "");
+      const url="https://goresulthub.com/notice.html?id="+encodeURIComponent(item.id||"")+"&q="+encodeURIComponent(item.title || item.exam || "");
       const date=item.published || item.detected_at || "";
       return '<article class="grh-alert-item"><span class="grh-alert-type">'+esc(categoryName(item.category))+'</span><strong>'+esc(item.title || item.exam || "Official exam update")+'</strong><small>'+esc(item.source_name || item.authority || "Official source")+(date?' · '+esc(date):'')+'</small>'+(url?'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">View on GoResultHub ↗</a>':'<span class="grh-no-link">Official link not available in feed</span>')+'</article>';
     }).join("") : '<p class="grh-alert-empty">No updates have been indexed yet. Keep this page open; the panel checks the published feed periodically.</p>';
@@ -63,6 +63,19 @@
       if(!initialized) {
         data.forEach(item=>seen.add(identity(item)));
         writeSeen(seen);
+        // On first visit, surface a small set of genuinely recent indexed items.
+        // Older archive records stay in the panel but are not presented as new.
+        const cutoff=Date.now()-7*24*60*60*1000;
+        const recent=sorted.filter(item=>{
+          const stamp=new Date(item.detected_at||item.published||item.date||0).getTime();
+          return Number.isFinite(stamp)&&stamp>=cutoff;
+        }).slice(0,3);
+        recent.slice().reverse().forEach(toast);
+        if(recent.length){
+          unread=recent.length;
+          updateBadge();
+          status.textContent="Latest "+recent.length+" recent update"+(recent.length===1?"":"s")+" shown · "+new Date().toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"});
+        }
         initialized=true;
       } else {
         const fresh=[];
@@ -80,7 +93,7 @@
             fresh.slice(0,3).forEach(item=>{
               try {
                 const n=new Notification("GoResultHub: "+categoryName(item.category),{body:item.title||"A new official exam update was detected.",icon:"favicon.ico"});
-                n.onclick=()=>{window.focus();const url="https://goresulthub.com/?q="+encodeURIComponent(item.title||item.exam||"");window.open(url,"_blank","noopener");n.close();};
+                n.onclick=()=>{window.focus();const url="https://goresulthub.com/notice.html?id="+encodeURIComponent(item.id||"")+"&q="+encodeURIComponent(item.title||item.exam||"");window.open(url,"_blank","noopener");n.close();};
               } catch (_) {}
             });
           }
