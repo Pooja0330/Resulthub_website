@@ -2397,10 +2397,10 @@
     {
       "id": "telangana-tslprb",
       "name": "Telangana Police Recruitment Board",
-      "url": "https://www.tslprb.in/",
+      "url": "https://www.tgprb.in/",
       "kind": "html",
       "allowed_hosts": [
-        "tslprb.in"
+        "tgprb.in"
       ],
       "categories": [
         "result",
@@ -2411,7 +2411,7 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Official Telangana Police Recruitment Board website, confirmed as tgprb.in; monitor this canonical domain."
     },
     {
       "id": "ap-police",
@@ -2815,10 +2815,10 @@
     {
       "id": "cuet-pg",
       "name": "CUET PG portal",
-      "url": "https://exams.nta.ac.in/CUET-PG/",
+      "url": "https://exams.nta.nic.in/cuet-pg/",
       "kind": "html",
       "allowed_hosts": [
-        "exams.nta.ac.in"
+        "exams.nta.nic.in"
       ],
       "categories": [
         "result",
@@ -2829,7 +2829,7 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Official NTA CUET PG portal; canonical portal path confirmed from NTA sources."
     },
     {
       "id": "neet-pg",
