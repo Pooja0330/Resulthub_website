@@ -7,6 +7,7 @@ on:
     branches: [main]
     paths:
       - "checker/check.py"
+      - "checker/test_check.py"
       - "checker/sources.json"
       - ".github/workflows/check-results.yml"
   schedule:
@@ -41,13 +42,16 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install --upgrade requests certifi urllib3 beautifulsoup4 feedparser
 
+      - name: Run offline checker regression tests
+        run: python -m unittest discover -s checker -p "test_*.py" -v
+
       - name: Run exam checker
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_ADMIN: ${{ secrets.TG_ADMIN }}
           TG_CHANNEL: ${{ secrets.TG_CHANNEL }}
-          SOURCE_TIMEOUT_SECONDS: "10"
-          SOURCE_WORKERS: "12"
+          SOURCE_TIMEOUT_SECONDS: "12"
+          SOURCE_WORKERS: "8"
           MAX_NEW_PER_SOURCE: "5"
         run: python checker/check.py
 
