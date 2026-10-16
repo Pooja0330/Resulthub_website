@@ -54,7 +54,7 @@ const STATE_PORTALS = {
 const STATE_PATTERNS = [
  ["Andhra Pradesh",/andhra pradesh|andhra-board|ap-results|appsc|psc\.ap\.gov\.in|bse\.ap\.gov\.in|slprb\.ap\.gov\.in/],
  ["Arunachal Pradesh",/arunachal|appsc\.gov\.in/],
- ["Assam",/assam|apsc|sebaonline|assam-board/],
+ ["Assam",/assam|apsc\.nic\.in|sebaonline|assam-board/],
  ["Bihar",/bihar|bpsc|bseb|csbc|bpssc|bssc|btsc/],
  ["Chhattisgarh",/chhattisgarh|cgbse|cgpsc|vyapam\.cgstate/],
  ["Goa",/goa board|gbshse|goa-board/],
@@ -71,7 +71,7 @@ const STATE_PATTERNS = [
  ["Mizoram",/mizoram|mpsc\.mizoram|mbse\.edu/],
  ["Nagaland",/nagaland|npsc\.nagaland|nbsenl/],
  ["Odisha",/odisha|opsc|ossc|osssc|bseodisha|results\.odisha/],
- ["Punjab",/punjab|ppsc|pseb|sssb\.punjab/],
+ ["Punjab",/punjab|ppsc\.gov\.in|punjab public service commission|pseb|sssb\.punjab/],
  ["Rajasthan",/rajasthan|rpsc|rssb|rajeduboard/],
  ["Sikkim",/sikkim|spsc\.sikkim|sikkimhrdd/],
  ["Tamil Nadu",/tamil nadu|tnpsc|tnresults|dge\.tn|trb\.tn|tnusrb|tnmrbrecruit/],
@@ -81,15 +81,17 @@ const STATE_PATTERNS = [
  ["Uttarakhand",/uttarakhand|uttarakhand-psc|psc\.uk\.gov|ubse/],
  ["West Bengal",/west bengal|wbpsc|wbbse|wbssc|prb\.wb|wbresults/],
  ["Andaman and Nicobar Islands",/andaman|nicobar/],
- ["Chandigarh",/chandigarh|rrb-chandigarh/],
+ ["Chandigarh",/chandigarh/],
  ["Dadra and Nagar Haveli and Daman and Diu",/dadra|daman and diu|ddd\.gov/],
  ["Delhi",/delhi|dsssb|delhi\.gov/],
- ["Jammu and Kashmir",/jammu and kashmir|jkbose|jkssb|jkpsc|rrb-jammu/],
+ ["Jammu and Kashmir",/jammu and kashmir|jkbose|jkssb|jkpsc/],
  ["Ladakh",/ladakh/],
  ["Lakshadweep",/lakshadweep/],
  ["Puducherry",/puducherry|pondicherry|py\.gov/]
 ];
 function stateForItem(x){
+ const sourceLabel=[x.source_id,x.source_name].join(" ").toLowerCase();
+ if((!x.state||x.state==="Central")&&(/\\brrb\\b|\\brrc\\b|railway recruitment/.test(sourceLabel)))return "Central";
  const raw=String(x.state||"").trim();
  if(STATE_NAMES.includes(raw))return raw;
  const region=String(x.region||"").trim();
