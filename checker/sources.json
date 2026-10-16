@@ -2712,10 +2712,11 @@
     {
       "id": "maharashtra-board",
       "name": "Maharashtra State Board",
-      "url": "https://mahahsscboard.in/",
+      "url": "https://www.mahahsscboard.in/en/result/SSC",
       "kind": "html",
       "allowed_hosts": [
-        "mahahsscboard.in"
+        "mahahsscboard.in",
+        "www.mahahsscboard.in"
       ],
       "categories": [
         "result",
@@ -2728,10 +2729,10 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "coverage_note": "Official Maharashtra State Board portal; SSC/HSC results have dedicated pages.",
       "exam_category": "School Board Results",
-      "state": "Haryana",
-      "region": "Haryana"
+      "state": "Maharashtra",
+      "region": "Maharashtra"
     },
     {
       "id": "karnataka-results",
@@ -4189,6 +4190,330 @@
       "exam_category": "State PSC / Recruitment",
       "state": "Puducherry",
       "region": "Puducherry"
+    },
+    {
+      "id": "upsc-exam-calendar",
+      "name": "UPSC Annual Examination Calendar",
+      "url": "https://upsc.gov.in/examinations/exam-calendar",
+      "kind": "html",
+      "allowed_hosts": [
+        "upsc.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Official UPSC annual exam calendar; covers Civil Services Preliminary and Main, NDA, CDS, CAPF, Engineering Services and other scheduled examinations.",
+      "exam_category": "UPSC / Central Recruitment"
+    },
+    {
+      "id": "upsc-active-examinations",
+      "name": "UPSC Active Examinations and notices",
+      "url": "https://upsc.gov.in/examinations/active-exams",
+      "kind": "html",
+      "allowed_hosts": [
+        "upsc.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Official active examination listing; use alongside the UPSC home page and written-result archive.",
+      "exam_category": "UPSC / Central Recruitment"
+    },
+    {
+      "id": "upsc-written-results-archive",
+      "name": "UPSC Written Results and Examination Stages",
+      "url": "https://upsc.gov.in/exams-related-info/written-result",
+      "kind": "html",
+      "allowed_hosts": [
+        "upsc.gov.in"
+      ],
+      "categories": [
+        "result",
+        "merit_list",
+        "notification",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Official UPSC written-result index for preliminary, main and other written examination stages.",
+      "exam_category": "UPSC / Central Recruitment"
+    },
+    {
+      "id": "jeemain-public-notices",
+      "name": "JEE Main public notices and results",
+      "url": "https://jeemain.nta.nic.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "jeemain.nta.nic.in",
+        "nta.nic.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Official JEE Main portal covering both sessions, Paper 1, Paper 2, applications, admit cards, answer keys and scorecards.",
+      "exam_category": "Entrance & Eligibility"
+    },
+    {
+      "id": "jeeadv-official",
+      "name": "JEE Advanced",
+      "url": "https://jeeadv.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "jeeadv.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Official JEE Advanced examination, registration, admit card, answer key and result portal.",
+      "exam_category": "Entrance & Eligibility"
+    },
+    {
+      "id": "neet-ug-public-notices",
+      "name": "NEET UG public notices and results",
+      "url": "https://neet.nta.nic.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "neet.nta.nic.in",
+        "nta.nic.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Official NEET UG notices, application, city intimation, admit card, answer key, OMR and result portal.",
+      "exam_category": "Entrance & Eligibility"
+    },
+    {
+      "id": "neet-pg-nbems",
+      "name": "NEET PG and NBEMS examinations",
+      "url": "https://natboard.edu.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "natboard.edu.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Official NBEMS portal for NEET PG and other postgraduate medical examinations, notices, admit cards and results.",
+      "exam_category": "Entrance & Eligibility"
+    },
+    {
+      "id": "mpsc-announcements",
+      "name": "Maharashtra PSC announcements and circulars",
+      "url": "https://mpsc.gov.in/announcement_and_circular/4",
+      "kind": "html",
+      "allowed_hosts": [
+        "mpsc.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Dedicated official MPSC announcements/circulars page; covers State Services prelims and mains, Group B/C and other recruitment notices.",
+      "exam_category": "State PSC / Recruitment",
+      "state": "Maharashtra",
+      "region": "Maharashtra"
+    },
+    {
+      "id": "mpsc-merit-lists",
+      "name": "Maharashtra PSC results and merit lists",
+      "url": "https://mpsc.gov.in/results_merit_list/14",
+      "kind": "html",
+      "allowed_hosts": [
+        "mpsc.gov.in"
+      ],
+      "categories": [
+        "result",
+        "merit_list",
+        "cutoff",
+        "answer_key"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Dedicated official MPSC merit-list/results index.",
+      "exam_category": "State PSC / Recruitment",
+      "state": "Maharashtra",
+      "region": "Maharashtra"
+    },
+    {
+      "id": "mpsc-final-recommendations",
+      "name": "Maharashtra PSC final recommendation lists",
+      "url": "https://mpsc.gov.in/results_final_recomm_list/15",
+      "kind": "html",
+      "allowed_hosts": [
+        "mpsc.gov.in"
+      ],
+      "categories": [
+        "result",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Dedicated official MPSC final recommendation/result index.",
+      "exam_category": "State PSC / Recruitment",
+      "state": "Maharashtra",
+      "region": "Maharashtra"
+    },
+    {
+      "id": "mpsc-answer-keys",
+      "name": "Maharashtra PSC answer keys",
+      "url": "https://mpsc.gov.in/answer_keys_of_examinations/45",
+      "kind": "html",
+      "allowed_hosts": [
+        "mpsc.gov.in"
+      ],
+      "categories": [
+        "answer_key",
+        "notification",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Dedicated official MPSC examination answer-key index.",
+      "exam_category": "State PSC / Recruitment",
+      "state": "Maharashtra",
+      "region": "Maharashtra"
+    },
+    {
+      "id": "mpsc-interview-schedules",
+      "name": "Maharashtra PSC interview schedules",
+      "url": "https://mpsc.gov.in/schedule_interviews/21",
+      "kind": "html",
+      "allowed_hosts": [
+        "mpsc.gov.in"
+      ],
+      "categories": [
+        "exam_schedule",
+        "notification",
+        "result"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Dedicated official MPSC interview-schedule index.",
+      "exam_category": "State PSC / Recruitment",
+      "state": "Maharashtra",
+      "region": "Maharashtra"
+    },
+    {
+      "id": "maharashtra-cet-cell",
+      "name": "Maharashtra State CET Cell",
+      "url": "https://cetcell.mahacet.org/",
+      "kind": "html",
+      "allowed_hosts": [
+        "cetcell.mahacet.org",
+        "mahacet.org"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Official Maharashtra CET Cell portal for MHT-CET and state professional-course entrance examinations.",
+      "exam_category": "Entrance & Eligibility",
+      "state": "Maharashtra",
+      "region": "Maharashtra"
+    },
+    {
+      "id": "maharashtra-ssc-results",
+      "name": "Maharashtra Board SSC results",
+      "url": "https://www.mahahsscboard.in/en/result/SSC",
+      "kind": "html",
+      "allowed_hosts": [
+        "mahahsscboard.in",
+        "www.mahahsscboard.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Official Maharashtra Board SSC results page. If the official site is under maintenance, use the board's main site.",
+      "exam_category": "School Board Results",
+      "state": "Maharashtra",
+      "region": "Maharashtra"
+    },
+    {
+      "id": "maharashtra-hsc-results",
+      "name": "Maharashtra Board HSC results",
+      "url": "https://www.mahahsscboard.in/en/result/HSC",
+      "kind": "html",
+      "allowed_hosts": [
+        "mahahsscboard.in",
+        "www.mahahsscboard.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Official Maharashtra Board HSC results page. If the official site is under maintenance, use the board's main site.",
+      "exam_category": "School Board Results",
+      "state": "Maharashtra",
+      "region": "Maharashtra"
     }
   ]
 }
