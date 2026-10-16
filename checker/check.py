@@ -468,6 +468,7 @@ def build_result(item, detected_at):
             item.get("state", "")),
         "category": item["category"],
         "source_name": item["source_name"],
+        "source_id": item.get("source_id", ""),
         "authority": item["source_name"],
         "url": item["url"],
         "official_url": item["url"],
@@ -517,7 +518,7 @@ def main():
         item["title"] = title
         item["exam"] = str(item.get("exam") or title)
         item["category"] = category
-        item["exam_category"] = infer_exam_category(
+        item["exam_category"] = item.get("exam_category") or infer_exam_category(
             title, item.get("source_name") or item.get("authority", ""),
             item.get("source_id", ""), item.get("state", ""),
         )
