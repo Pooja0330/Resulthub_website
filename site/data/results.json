@@ -18967,5 +18967,26 @@
     "verified": false,
     "archive": false,
     "detected_at": "2026-10-16T15:58:24.758285+00:00"
+  },
+  {
+    "id": "2e3f15b3afb62910f538b07e",
+    "title": "Recruitment Notifications Exam Schedule Interview Schedule Postwise Syllabus Physical Efficiency Tests Practical Test Status of Posts OTV Schedule and Driving Test",
+    "exam": "Recruitment Notifications Exam Schedule Interview Schedule Postwise Syllabus Physical Efficiency Tests Practical Test Status of Posts OTV Schedule and Driving Test",
+    "exam_category": "State PSC / Recruitment",
+    "category": "exam_schedule",
+    "source_name": "Kerala Public Service Commission",
+    "source_id": "keralapsc",
+    "authority": "Kerala Public Service Commission",
+    "url": "https://www.keralapsc.gov.in/notifications",
+    "official_url": "https://www.keralapsc.gov.in/notifications",
+    "source_url": "https://www.keralapsc.gov.in/",
+    "published": "",
+    "exam_year": "",
+    "region": "Kerala",
+    "state": "Kerala",
+    "description": "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility.",
+    "verified": false,
+    "archive": false,
+    "detected_at": "2026-10-16T16:12:48.214934+00:00"
   }
 ]
