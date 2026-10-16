@@ -23,7 +23,7 @@ const STATE_PORTALS = {
  "Chhattisgarh":[["Chhattisgarh PSC","https://psc.cg.gov.in/"],["Chhattisgarh Board","https://cgbse.nic.in/"],["CG Vyapam","https://vyapam.cgstate.gov.in/"]],
  "Goa":[["Goa Board of Secondary and Higher Secondary Education","https://www.gbshse.in/"],["Goa Government","https://www.goa.gov.in/"],["Goa University","https://www.unigoa.ac.in/"]],
  "Gujarat":[["Gujarat PSC","https://gpsc.gujarat.gov.in/"],["Gujarat Board","https://www.gseb.org/"],["OJAS Recruitment","https://ojas.gujarat.gov.in/"],["Gujarat University","https://www.gujaratuniversity.ac.in/"]],
- "Haryana":[["Haryana PSC","https://hpsc.gov.in/"],["Haryana Staff Selection Commission","https://www.hssc.gov.in/"],["Haryana Board","https://bseh.org.in/"],["Kurukshetra University","https://www.kuk.ac.in/"]],
+ "Haryana":[["Kurukshetra University old results archive","https://kuk.ac.in/results/"],["Haryana PSC","https://hpsc.gov.in/"],["Haryana Staff Selection Commission","https://www.hssc.gov.in/"],["Haryana Board","https://bseh.org.in/"],["Kurukshetra University","https://www.kuk.ac.in/"]],
  "Himachal Pradesh":[["Himachal Pradesh Recruitment Authority","https://hprca.hp.gov.in/"],["HP Board of School Education","https://hpbose.org/"],["Himachal Pradesh University","https://hpuniv.ac.in/"],["Himachal Pradesh Technical University","https://www.himtu.ac.in/"]],
  "Jharkhand":[["Jharkhand PSC","https://www.jpsc.gov.in/"],["Ranchi University","https://www.ranchiuniversity.ac.in/"]],
  "Karnataka":[["Karnataka PSC","https://kpsc.kar.nic.in/"],["Karnataka School Examination and Assessment Board","https://kseab.karnataka.gov.in/"],["Visvesvaraya Technological University","https://vtu.ac.in/"]],
@@ -36,22 +36,22 @@ const STATE_PORTALS = {
  "Nagaland":[["Nagaland PSC","https://npsc.nagaland.gov.in/"],["Nagaland Board of School Education","https://nbsenl.edu.in/"],["Nagaland University","https://nagalanduniversity.ac.in/"]],
  "Odisha":[["Odisha PSC","https://opsc.gov.in/"],["Odisha Staff Selection Commission","https://www.ossc.gov.in/"],["Odisha Sub-ordinate Staff Selection Commission","https://www.osssc.gov.in/"],["Odisha Board","https://bseodisha.ac.in/"],["Odisha Results Portal","https://results.odisha.gov.in/"],["Utkal University","https://utkaluniversity.ac.in/"],["Sambalpur University","https://www.suniv.ac.in/"]],
  "Punjab":[["Punjab PSC","https://ppsc.gov.in/"],["Punjab School Education Board","https://www.pseb.ac.in/"],["Punjab Subordinate Services Selection Board","https://sssb.punjab.gov.in/"]],
- "Rajasthan":[["Rajasthan PSC","https://rpsc.rajasthan.gov.in/"],["Rajasthan Staff Selection Board","https://rssb.rajasthan.gov.in/"],["Rajasthan Board","https://rajeduboard.rajasthan.gov.in/"],["University of Rajasthan","https://www.uniraj.ac.in/"]],
+ "Rajasthan":[["Rajasthan University old results","https://result.uniraj.ac.in/index1.php?rid=4132"],["Rajasthan PSC","https://rpsc.rajasthan.gov.in/"],["Rajasthan Staff Selection Board","https://rssb.rajasthan.gov.in/"],["Rajasthan Board","https://rajeduboard.rajasthan.gov.in/"],["University of Rajasthan","https://www.uniraj.ac.in/"]],
  "Sikkim":[["Sikkim PSC","https://spsc.sikkim.gov.in/"],["Sikkim Human Resource Development Department","https://sikkimhrdd.org/"],["Sikkim University","https://cus.ac.in/"]],
  "Tamil Nadu":[["Tamil Nadu PSC","https://www.tnpsc.gov.in/"],["Tamil Nadu Directorate of Government Examinations","https://dge.tn.gov.in/"],["Teachers Recruitment Board","https://www.trb.tn.gov.in/"],["Uniformed Services Recruitment Board","https://www.tnusrb.tn.gov.in/"],["Anna University","https://www.annauniv.edu/"]],
  "Telangana":[["Telangana PSC","https://www.tspsc.gov.in/"],["Telangana Board","https://bse.telangana.gov.in/"],["Telangana Results","https://results.cgg.gov.in/"],["Telangana Police Recruitment","https://www.tgprb.in/"],["Osmania University","https://www.osmania.ac.in/"],["Jawaharlal Nehru Technological University Hyderabad","https://jntuh.ac.in/"]],
  "Tripura":[["Tripura PSC","https://tpsc.tripura.gov.in/"],["Tripura Board of Secondary Education","https://tbse.tripura.gov.in/"],["Tripura University","https://www.tripurauniv.ac.in/"]],
- "Uttar Pradesh":[["UP PSC","https://uppsc.up.nic.in/"],["UP Subordinate Services Selection Commission","https://upsssc.gov.in/"],["UP Board","https://upmsp.edu.in/"],["UP Police Recruitment","https://uppbpb.gov.in/"],["Banaras Hindu University","https://www.bhu.ac.in/"],["Aligarh Muslim University","https://www.amu.ac.in/"]],
+ "Uttar Pradesh":[["Lucknow University old results archive","https://www.lkouniv.ac.in/en/article/annual-results-old"],["UP PSC","https://uppsc.up.nic.in/"],["UP Subordinate Services Selection Commission","https://upsssc.gov.in/"],["UP Board","https://upmsp.edu.in/"],["UP Police Recruitment","https://uppbpb.gov.in/"],["Banaras Hindu University","https://www.bhu.ac.in/"],["Aligarh Muslim University","https://www.amu.ac.in/"]],
  "Uttarakhand":[["Uttarakhand PSC","https://psc.uk.gov.in/"],["Uttarakhand Board of School Education","https://ubse.uk.gov.in/"],["Kumaun University","https://www.kunainital.ac.in/"]],
- "West Bengal":[["West Bengal PSC","https://psc.wb.gov.in/"],["West Bengal Board of Secondary Education","https://wbbse.wb.gov.in/"],["West Bengal School Service Commission","https://www.westbengalssc.com/"],["West Bengal Police Recruitment Board","https://prb.wb.gov.in/"],["University of Calcutta","https://www.caluniv.ac.in/"],["Jadavpur University","https://jadavpuruniversity.in/"]],
+ "West Bengal":[["WBPSC results archive","https://psc.wb.gov.in/results.jsp"],["West Bengal PSC","https://psc.wb.gov.in/"],["West Bengal Board of Secondary Education","https://wbbse.wb.gov.in/"],["West Bengal School Service Commission","https://www.westbengalssc.com/"],["West Bengal Police Recruitment Board","https://prb.wb.gov.in/"],["University of Calcutta","https://www.caluniv.ac.in/"],["Jadavpur University","https://jadavpuruniversity.in/"]],
  "Andaman and Nicobar Islands":[["Andaman and Nicobar Administration","https://andaman.gov.in/"]],
  "Chandigarh":[["Chandigarh Administration","https://chandigarh.gov.in/"],["Panjab University","https://puchd.ac.in/"]],
  "Dadra and Nagar Haveli and Daman and Diu":[["Dadra and Nagar Haveli and Daman and Diu Administration","https://ddd.gov.in/"]],
- "Delhi":[["Delhi Subordinate Services Selection Board","https://dsssb.delhi.gov.in/"],["Delhi Government","https://delhi.gov.in/"],["University of Delhi Examination Branch","https://exam.du.ac.in/"],["Jawaharlal Nehru University","https://jnu.ac.in/"],["Jamia Millia Islamia","https://www.jmi.ac.in/"],["Indira Gandhi National Open University","https://www.ignou.ac.in/"]],
+ "Delhi":[["Delhi University historical results archive","https://exam.du.ac.in/index1.html"],["Delhi Subordinate Services Selection Board","https://dsssb.delhi.gov.in/"],["Delhi Government","https://delhi.gov.in/"],["University of Delhi Examination Branch","https://exam.du.ac.in/"],["Jawaharlal Nehru University","https://jnu.ac.in/"],["Jamia Millia Islamia","https://www.jmi.ac.in/"],["Indira Gandhi National Open University","https://www.ignou.ac.in/"]],
  "Jammu and Kashmir":[["Jammu and Kashmir PSC","https://jkpsc.nic.in/"],["Jammu and Kashmir Services Selection Board","https://jkssb.nic.in/"],["J&K Board of School Education","https://jkbose.nic.in/"],["University of Jammu","https://www.jammuuniversity.ac.in/"],["University of Kashmir","https://www.kashmiruniversity.net/"]],
  "Ladakh":[["Ladakh Administration","https://ladakh.gov.in/"]],
  "Lakshadweep":[["Lakshadweep Administration","https://lakshadweep.gov.in/"]],
- "Puducherry":[["Puducherry Government","https://py.gov.in/"]]
+ "Puducherry":[["Pondicherry University old results","https://exam.pondiuni.edu.in/oasis/mainpageold.html"],["Puducherry Government","https://py.gov.in/"]]
 };
 const STATE_PATTERNS = [
  ["Andhra Pradesh",/andhra pradesh|andhra-board|ap-results|appsc|psc\.ap\.gov\.in|bse\.ap\.gov\.in|slprb\.ap\.gov\.in/],
@@ -239,7 +239,7 @@ function render(){
  $("#count").textContent=`${list.length} update${list.length===1?"":"s"}`;
   $("#updatesList").innerHTML=visible.map(x=>{
    const url=safeUrl(x.url||x.official_url), sourcePage=safeUrl(x.source_url);
-   const sourceBadge=x.verified===true?"✓ Verified official source":(x.archive?"Official archive / portal":"Official website link");
+   const sourceBadge=x.archive?"Historical archive":(x.verified===true?"✓ Verified official source":"Official website link");
    const explicitYear=x.exam_year||((String(x.title||x.exam||"").match(/\b20\d{2}\b/)||[])[0]||"");
    const noticeDate=x.published||"";
    const dateDetails=(explicitYear?`Exam year: ${esc(explicitYear)} · `:"")+(noticeDate?`Notice date: ${esc(noticeDate)} · `:"Notice date not shown by authority · ")+`Detected: ${esc(dateText(x.detected_at||x.date))}`;
