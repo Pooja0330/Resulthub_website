@@ -108,3 +108,6 @@
 .text-action:hover{text-decoration:underline}
 @media(max-width:1050px){.browse-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.featured-sections{grid-template-columns:1fr}}
 @media(max-width:650px){.browse-heading{align-items:flex-start;flex-direction:column}.browse-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.browse-card{min-height:135px;padding:13px}.featured-sections{padding-left:14px;padding-right:14px}.browse-hub{padding-left:14px;padding-right:14px}.featured-item{gap:8px}.featured-item>a{font-size:.72rem}}
+
+/* Historical year filter */
+.year-note{margin:0 0 16px;color:#68778d;font-size:.82rem;line-height:1.5}.filters select{max-width:100%}
