@@ -49,3 +49,30 @@
 .state-page-content .pagination{display:flex;align-items:center;justify-content:center;gap:16px;margin:24px 0}.state-page-content .pagination button{cursor:pointer}.state-page-content .pagination button:disabled{opacity:.5;cursor:not-allowed}
 @media(max-width:900px){.state-page-layout{grid-template-columns:220px minmax(0,1fr);gap:16px}.state-page-content .cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.state-page-layout{grid-template-columns:1fr;padding:16px}.state-directory{position:static;max-height:360px}.state-directory-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3px}.state-page-content .cards{grid-template-columns:1fr}.state-hero{padding:32px 18px}.state-section-head{align-items:flex-start;flex-direction:column}}
+
+/* Floating live updates and new-notice popups */
+#grh-live-alerts{position:fixed;right:18px;bottom:18px;z-index:9999;font-family:inherit;color:#172033}
+.grh-bell{display:flex;align-items:center;gap:8px;border:0;border-radius:999px;background:#123f7a;color:#fff;padding:12px 16px;box-shadow:0 8px 30px #10294c44;font:inherit;font-weight:800;cursor:pointer}
+.grh-bell:focus-visible,.grh-close:focus-visible,.grh-toast button:focus-visible{outline:3px solid #ffce65;outline-offset:3px}
+.grh-bell-label{font-size:.86rem}.grh-badge{display:inline-grid;place-items:center;min-width:20px;height:20px;border-radius:999px;background:#ffce65;color:#173050;font-size:.72rem;padding:0 5px}
+.grh-alert-panel{position:absolute;right:0;bottom:58px;width:min(390px,calc(100vw - 28px));max-height:min(72vh,640px);overflow:hidden;background:#fff;border:1px solid #dce6f2;border-radius:16px;box-shadow:0 16px 50px #0d254455;display:flex;flex-direction:column}
+.grh-alert-panel[hidden]{display:none}
+.grh-alert-panel>header{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:16px;border-bottom:1px solid #e5ebf3;background:#f6f9fd}
+.grh-alert-panel>header strong{display:block;font-size:1rem}.grh-alert-panel>header small{display:block;font-size:.72rem;color:#65748a;margin-top:3px}
+.grh-close{border:0;background:transparent;font-size:1.6rem;color:#51627a;cursor:pointer;line-height:1}
+.grh-alert-status{font-size:.75rem;color:#607089;margin:0;padding:10px 16px;border-bottom:1px solid #edf1f6}
+.grh-alert-list{overflow:auto;padding:8px 12px;min-height:90px}
+.grh-alert-item{display:flex;flex-direction:column;gap:5px;padding:12px 6px;border-bottom:1px solid #edf1f6}
+.grh-alert-item:last-child{border-bottom:0}.grh-alert-type{align-self:flex-start;background:#e8f2ff;color:#1d5798;border-radius:5px;padding:3px 7px;font-size:.66rem;font-weight:850;text-transform:uppercase}
+.grh-alert-item strong{font-size:.84rem;line-height:1.35}.grh-alert-item small{font-size:.72rem;color:#68778d}
+.grh-alert-item a,.grh-toast a{font-size:.78rem;font-weight:850;color:#1756a9;margin-top:3px}
+.grh-no-link{font-size:.75rem;color:#80642b}.grh-alert-empty{font-size:.82rem;color:#68778d;padding:10px}
+.grh-alert-panel>footer{display:block;padding:10px 14px;background:#f6f9fd;border-top:1px solid #e5ebf3;font-size:.68rem;line-height:1.45;color:#69788c}
+.grh-toast-stack{position:absolute;right:0;bottom:64px;display:flex;flex-direction:column;gap:10px;width:min(360px,calc(100vw - 28px));pointer-events:none}
+.grh-toast{pointer-events:auto;background:#fff;border:1px solid #cbdcf1;border-left:4px solid #1d65b5;border-radius:12px;box-shadow:0 12px 34px #10294c2e;padding:12px 14px;display:flex;flex-direction:column;gap:5px;animation:grh-slide-in .25s ease-out}
+.grh-toast-top{display:flex;justify-content:space-between;align-items:center;color:#1d5798;font-size:.65rem;letter-spacing:.06em;font-weight:900}
+.grh-toast button{border:0;background:transparent;color:#64748b;font-size:1.2rem;cursor:pointer}
+.grh-toast strong{font-size:.86rem;line-height:1.35}.grh-toast small{font-size:.73rem;color:#68778d}.grh-toast a{align-self:flex-start}
+@keyframes grh-slide-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:520px){#grh-live-alerts{right:12px;bottom:12px}.grh-bell{padding:11px 13px}.grh-toast-stack{bottom:58px}.grh-alert-panel{bottom:54px}}
+@media(prefers-reduced-motion:reduce){.grh-toast{animation:none}}
