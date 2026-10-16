@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "description": "Broad starter registry of Indian official exam-result, recruitment, admit-card, answer-key, and school-board authorities. Coverage is not exhaustive; validate reachability and individual result portals.",
+  "description": "Deduplicated registry of official Indian exam-result and recruitment authorities. Source URLs are unique; actual availability and notice detection still require runtime validation.",
   "sources": [
     {
       "id": "upsc",
@@ -49,11 +49,14 @@
         "result",
         "notification",
         "admit_card",
-        "answer_key"
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official IBPS home page; the legacy root URL showed inconsistent TLS behavior in the runner."
+      "coverage_note": "Official IBPS home page; the legacy root URL showed inconsistent TLS behavior in the runner. Also covers duplicate registry entries: IBPS examination and recruitment; IBPS RRB / Regional Rural Banks."
     },
     {
       "id": "sbi-careers",
@@ -78,15 +81,19 @@
       "url": "https://opportunities.rbi.org.in/",
       "kind": "html",
       "allowed_hosts": [
-        "rbi.org.in"
+        "rbi.org.in",
+        "opportunities.rbi.org.in"
       ],
       "categories": [
         "result",
-        "notification"
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: RBI Opportunities and Recruitment."
     },
     {
       "id": "nta",
@@ -100,11 +107,12 @@
         "result",
         "notification",
         "admit_card",
-        "answer_key"
+        "answer_key",
+        "merit_list"
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: NTA exam notices and results."
     },
     {
       "id": "jeemain",
@@ -166,13 +174,15 @@
       "url": "https://ugcnet.nta.ac.in/",
       "kind": "html",
       "allowed_hosts": [
-        "nta.ac.in"
+        "nta.ac.in",
+        "ugcnet.nta.ac.in"
       ],
       "categories": [
         "result",
         "notification",
         "admit_card",
-        "answer_key"
+        "answer_key",
+        "merit_list"
       ],
       "enabled": true,
       "last_reviewed": null,
@@ -184,16 +194,19 @@
       "url": "https://gate2026.iitg.ac.in/",
       "kind": "html",
       "allowed_hosts": [
-        "iitg.ac.in"
+        "iitg.ac.in",
+        "gate2026.iitg.ac.in"
       ],
       "categories": [
         "result",
         "notification",
-        "admit_card"
+        "admit_card",
+        "answer_key",
+        "merit_list"
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: GATE official portal (current-year URL changes annually)."
     },
     {
       "id": "upsc-results",
@@ -255,11 +268,16 @@
       ],
       "categories": [
         "result",
-        "notification"
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: CBSE Main Website and Examination Notices."
     },
     {
       "id": "cisce",
@@ -335,11 +353,16 @@
       ],
       "categories": [
         "result",
-        "notification"
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Chhattisgarh Board of Secondary Education Results."
     },
     {
       "id": "bseb",
@@ -363,15 +386,21 @@
       "url": "https://rajeduboard.rajasthan.gov.in/",
       "kind": "html",
       "allowed_hosts": [
-        "rajasthan.gov.in"
+        "rajasthan.gov.in",
+        "rajeduboard.rajasthan.gov.in"
       ],
       "categories": [
         "result",
-        "notification"
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Rajasthan Board of Secondary Education."
     },
     {
       "id": "gseb",
@@ -383,11 +412,16 @@
       ],
       "categories": [
         "result",
-        "notification"
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Gujarat Secondary and Higher Secondary Education Board."
     },
     {
       "id": "mahresult",
@@ -459,11 +493,16 @@
       ],
       "categories": [
         "result",
-        "notification"
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Board of Secondary Education Odisha."
     },
     {
       "id": "karnataka-board",
@@ -475,7 +514,12 @@
       ],
       "categories": [
         "result",
-        "notification"
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
       ],
       "enabled": true,
       "last_reviewed": null,
@@ -487,15 +531,21 @@
       "url": "https://bse.telangana.gov.in/",
       "kind": "html",
       "allowed_hosts": [
-        "telangana.gov.in"
+        "telangana.gov.in",
+        "bse.telangana.gov.in"
       ],
       "categories": [
         "result",
-        "notification"
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Telangana Board of Secondary Education."
     },
     {
       "id": "andhra-board",
@@ -503,15 +553,21 @@
       "url": "https://bse.ap.gov.in/",
       "kind": "html",
       "allowed_hosts": [
-        "ap.gov.in"
+        "ap.gov.in",
+        "bse.ap.gov.in"
       ],
       "categories": [
         "result",
-        "notification"
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Andhra Pradesh Board of Secondary Education."
     },
     {
       "id": "haryana-board",
@@ -523,11 +579,16 @@
       ],
       "categories": [
         "result",
-        "notification"
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Board of School Education Haryana."
     },
     {
       "id": "punjab-board",
@@ -539,11 +600,16 @@
       ],
       "categories": [
         "result",
-        "notification"
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Punjab School Education Board Results."
     },
     {
       "id": "assam-board",
@@ -571,11 +637,14 @@
       ],
       "categories": [
         "result",
-        "notification"
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: JKBOSE results."
     },
     {
       "id": "upsssc",
@@ -700,11 +769,14 @@
       ],
       "categories": [
         "result",
-        "notification"
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Kerala PSC candidate portal landing page."
     },
     {
       "id": "mpsc",
@@ -716,7 +788,10 @@
       ],
       "categories": [
         "result",
-        "notification"
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
       ],
       "enabled": true,
       "last_reviewed": null,
@@ -732,7 +807,10 @@
       ],
       "categories": [
         "result",
-        "notification"
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
       ],
       "enabled": true,
       "last_reviewed": null,
@@ -748,7 +826,10 @@
       ],
       "categories": [
         "result",
-        "notification"
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
       ],
       "enabled": true,
       "last_reviewed": null,
@@ -780,7 +861,10 @@
       ],
       "categories": [
         "result",
-        "notification"
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
       ],
       "enabled": true,
       "last_reviewed": null,
@@ -796,7 +880,10 @@
       ],
       "categories": [
         "result",
-        "notification"
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list"
       ],
       "enabled": true,
       "last_reviewed": null,
@@ -817,45 +904,6 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
-    },
-    {
-      "id": "ibps-calendar",
-      "name": "IBPS examination and recruitment",
-      "url": "https://www.ibps.in/index.html",
-      "kind": "html",
-      "allowed_hosts": [
-        "ibps.in",
-        "ibpsreg.ibps.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Official IBPS home page; the legacy root URL showed inconsistent TLS behavior in the runner."
-    },
-    {
-      "id": "rbi-careers",
-      "name": "RBI Opportunities and Recruitment",
-      "url": "https://opportunities.rbi.org.in/",
-      "kind": "html",
-      "allowed_hosts": [
-        "opportunities.rbi.org.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
     },
     {
       "id": "nabard",
@@ -954,25 +1002,6 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
     },
     {
-      "id": "nta-results",
-      "name": "NTA exam notices and results",
-      "url": "https://www.nta.ac.in/",
-      "kind": "html",
-      "allowed_hosts": [
-        "nta.ac.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
-    },
-    {
       "id": "nta-exams",
       "name": "NTA examination portal",
       "url": "https://exams.nta.ac.in/",
@@ -1008,26 +1037,7 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
-    },
-    {
-      "id": "nta-ugcnet",
-      "name": "UGC NET",
-      "url": "https://ugcnet.nta.ac.in/",
-      "kind": "html",
-      "allowed_hosts": [
-        "ugcnet.nta.ac.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages. Also covers duplicate registry entries: CUET PG portal."
     },
     {
       "id": "nta-csirnet",
@@ -1055,25 +1065,6 @@
       "kind": "html",
       "allowed_hosts": [
         "jeeadv.ac.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
-    },
-    {
-      "id": "gate-iitg",
-      "name": "GATE official portal (current-year URL changes annually)",
-      "url": "https://gate2026.iitg.ac.in/",
-      "kind": "html",
-      "allowed_hosts": [
-        "gate2026.iitg.ac.in"
       ],
       "categories": [
         "result",
@@ -1369,7 +1360,7 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages. Also covers duplicate registry entries: RRB Jammu."
     },
     {
       "id": "rrb-kolkata",
@@ -1492,44 +1483,6 @@
       "kind": "html",
       "allowed_hosts": [
         "rrbsiliguri.gov.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
-    },
-    {
-      "id": "rrb-trivandrum",
-      "name": "RRB Thiruvananthapuram",
-      "url": "https://www.rrbthiruvananthapuram.gov.in/",
-      "kind": "html",
-      "allowed_hosts": [
-        "rrbthiruvananthapuram.gov.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
-    },
-    {
-      "id": "rrb-jammu-old",
-      "name": "RRB Jammu",
-      "url": "https://www.rrbjammu.nic.in/",
-      "kind": "html",
-      "allowed_hosts": [
-        "rrbjammu.nic.in"
       ],
       "categories": [
         "result",
@@ -1844,7 +1797,7 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages. Also covers duplicate registry entries: Himachal Pradesh Rajya Chayan Aayog."
     },
     {
       "id": "jkssb",
@@ -1961,25 +1914,6 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
     },
     {
-      "id": "hprca",
-      "name": "Himachal Pradesh Rajya Chayan Aayog",
-      "url": "https://hprca.hp.gov.in/",
-      "kind": "html",
-      "allowed_hosts": [
-        "hprca.hp.gov.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
-    },
-    {
       "id": "osssc",
       "name": "Odisha Sub-ordinate Staff Selection Commission",
       "url": "https://www.osssc.gov.in/",
@@ -2018,50 +1952,12 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
     },
     {
-      "id": "kerala-psc-thulasi",
-      "name": "Kerala PSC candidate portal landing page",
-      "url": "https://www.keralapsc.gov.in/",
-      "kind": "html",
-      "allowed_hosts": [
-        "keralapsc.gov.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
-    },
-    {
       "id": "maha-rojgar",
       "name": "Maharashtra government recruitment/rojgar portal",
       "url": "https://rojgar.mahaswayam.gov.in/",
       "kind": "html",
       "allowed_hosts": [
         "rojgar.mahaswayam.gov.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
-    },
-    {
-      "id": "mpsc-maha",
-      "name": "Maharashtra Public Service Commission",
-      "url": "https://mpsc.gov.in/",
-      "kind": "html",
-      "allowed_hosts": [
-        "mpsc.gov.in"
       ],
       "categories": [
         "result",
@@ -2167,26 +2063,7 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
-    },
-    {
-      "id": "cg-vyapam",
-      "name": "Chhattisgarh Professional Examination Board",
-      "url": "https://vyapam.cgstate.gov.in/",
-      "kind": "html",
-      "allowed_hosts": [
-        "vyapam.cgstate.gov.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages. Also covers duplicate registry entries: Chhattisgarh Professional Examination Board."
     },
     {
       "id": "rajasthan-rssb",
@@ -2436,44 +2313,6 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
     },
     {
-      "id": "ap-psc",
-      "name": "Andhra Pradesh Public Service Commission",
-      "url": "https://psc.ap.gov.in/",
-      "kind": "html",
-      "allowed_hosts": [
-        "psc.ap.gov.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
-    },
-    {
-      "id": "westbengal-psc",
-      "name": "West Bengal Public Service Commission",
-      "url": "https://psc.wb.gov.in/",
-      "kind": "html",
-      "allowed_hosts": [
-        "psc.wb.gov.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
-    },
-    {
       "id": "wbssc",
       "name": "West Bengal School Service Commission",
       "url": "https://www.westbengalssc.com/",
@@ -2550,44 +2389,6 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
     },
     {
-      "id": "haryana-psc",
-      "name": "Haryana Public Service Commission",
-      "url": "https://hpsc.gov.in/",
-      "kind": "html",
-      "allowed_hosts": [
-        "hpsc.gov.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
-    },
-    {
-      "id": "odisha-psc",
-      "name": "Odisha Public Service Commission",
-      "url": "https://opsc.gov.in/",
-      "kind": "html",
-      "allowed_hosts": [
-        "opsc.gov.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
-    },
-    {
       "id": "assam-direct",
       "name": "Assam Direct Recruitment Commission/SLRC notices via state portal",
       "url": "https://assam.gov.in/",
@@ -2638,7 +2439,9 @@
         "notification",
         "admit_card",
         "answer_key",
-        "merit_list"
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
       ],
       "enabled": true,
       "last_reviewed": null,
@@ -2708,25 +2511,6 @@
       "kind": "html",
       "allowed_hosts": [
         "results.cgg.gov.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
-    },
-    {
-      "id": "jkbose-results",
-      "name": "JKBOSE results",
-      "url": "https://jkbose.nic.in/",
-      "kind": "html",
-      "allowed_hosts": [
-        "jkbose.nic.in"
       ],
       "categories": [
         "result",
@@ -2816,25 +2600,6 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
     },
     {
-      "id": "cuet-pg",
-      "name": "CUET PG portal",
-      "url": "https://exams.nta.nic.in/cuet-pg/",
-      "kind": "html",
-      "allowed_hosts": [
-        "nta.nic.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Official NTA CUET PG portal; canonical portal path confirmed from NTA sources."
-    },
-    {
       "id": "neet-pg",
       "name": "NEET PG/NBEMS",
       "url": "https://natboard.edu.in/",
@@ -2851,26 +2616,7 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
-    },
-    {
-      "id": "nbems",
-      "name": "National Board of Examinations in Medical Sciences",
-      "url": "https://natboard.edu.in/",
-      "kind": "html",
-      "allowed_hosts": [
-        "natboard.edu.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages. Also covers duplicate registry entries: National Board of Examinations in Medical Sciences."
     },
     {
       "id": "nmc",
@@ -3009,7 +2755,7 @@
       ],
       "enabled": true,
       "last_reviewed": "2026-10-16",
-      "coverage_note": "Central RRB recruitment, notification and result status information."
+      "coverage_note": "Central RRB recruitment, notification and result status information. Also covers duplicate registry entries: Railway Recruitment Boards Central Directory."
     },
     {
       "id": "indiapost-recruitment",
@@ -3052,7 +2798,7 @@
       ],
       "enabled": true,
       "last_reviewed": "2026-10-16",
-      "coverage_note": "Official GDS engagement schedule, notices and shortlisted candidates."
+      "coverage_note": "Official GDS engagement schedule, notices and shortlisted candidates. Also covers duplicate registry entries: India Post GDS Engagement."
     },
     {
       "id": "indian-navy",
@@ -3073,7 +2819,7 @@
       ],
       "enabled": true,
       "last_reviewed": "2026-10-16",
-      "coverage_note": "Official Navy officer and Agniveer recruitment updates."
+      "coverage_note": "Official Navy officer and Agniveer recruitment updates. Also covers duplicate registry entries: Indian Navy Recruitment."
     },
     {
       "id": "indian-army",
@@ -3094,7 +2840,7 @@
       ],
       "enabled": true,
       "last_reviewed": "2026-10-16",
-      "coverage_note": "Official Army recruitment and Agniveer notices."
+      "coverage_note": "Official Army recruitment and Agniveer notices. Also covers duplicate registry entries: Indian Army Recruitment."
     },
     {
       "id": "indian-airforce-afcat",
@@ -3136,7 +2882,7 @@
       ],
       "enabled": true,
       "last_reviewed": "2026-10-16",
-      "coverage_note": "Official Indian Air Force recruitment/career portal."
+      "coverage_note": "Official Indian Air Force recruitment/career portal. Also covers duplicate registry entries: Indian Air Force Recruitment."
     },
     {
       "id": "fci-recruitment",
@@ -3412,27 +3158,6 @@
       "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
     },
     {
-      "id": "cbse-main",
-      "name": "CBSE Main Website and Examination Notices",
-      "url": "https://www.cbse.gov.in/",
-      "kind": "html",
-      "allowed_hosts": [
-        "cbse.gov.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list",
-        "cutoff",
-        "exam_schedule"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
-    },
-    {
       "id": "cisce-results",
       "name": "CISCE ICSE/ISC Results",
       "url": "https://results.cisce.org/Results/Result/Launcher",
@@ -3535,7 +3260,7 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites. Also covers duplicate registry entries: Indian Coast Guard and maritime recruitment notices."
     },
     {
       "id": "coast-guard-home",
@@ -3559,243 +3284,12 @@
       "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
     },
     {
-      "id": "ibps-rrb",
-      "name": "IBPS RRB / Regional Rural Banks",
-      "url": "https://www.ibps.in/index.html",
-      "kind": "html",
-      "allowed_hosts": [
-        "ibps.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list",
-        "cutoff",
-        "exam_schedule"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
-    },
-    {
-      "id": "rrb-central-recruitment",
-      "name": "Railway Recruitment Boards Central Directory",
-      "url": "https://www.rrcb.gov.in/recruitment.html",
-      "kind": "html",
-      "allowed_hosts": [
-        "rrcb.gov.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list",
-        "cutoff",
-        "exam_schedule"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
-    },
-    {
-      "id": "indiapost-gds-results",
-      "name": "India Post GDS Engagement",
-      "url": "https://www.indiapost.gov.in/gdsonlineengagement",
-      "kind": "html",
-      "allowed_hosts": [
-        "indiapost.gov.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list",
-        "cutoff",
-        "exam_schedule"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
-    },
-    {
-      "id": "indian-navy-careers",
-      "name": "Indian Navy Recruitment",
-      "url": "https://www.joinindiannavy.gov.in/",
-      "kind": "html",
-      "allowed_hosts": [
-        "joinindiannavy.gov.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list",
-        "cutoff",
-        "exam_schedule"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
-    },
-    {
-      "id": "indian-army-recruitment",
-      "name": "Indian Army Recruitment",
-      "url": "https://joinindianarmy.nic.in/",
-      "kind": "html",
-      "allowed_hosts": [
-        "joinindianarmy.nic.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list",
-        "cutoff",
-        "exam_schedule"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
-    },
-    {
-      "id": "airforce-afcat",
-      "name": "Indian Air Force AFCAT",
-      "url": "https://afcat.cdac.in/AFCAT/",
-      "kind": "html",
-      "allowed_hosts": [
-        "afcat.cdac.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list",
-        "cutoff",
-        "exam_schedule"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
-    },
-    {
-      "id": "airforce-careers",
-      "name": "Indian Air Force Recruitment",
-      "url": "https://careerindianairforce.cdac.in/",
-      "kind": "html",
-      "allowed_hosts": [
-        "careerindianairforce.cdac.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list",
-        "cutoff",
-        "exam_schedule"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
-    },
-    {
       "id": "merchant-navy-imu",
       "name": "Indian Maritime University Admissions and Notices",
       "url": "https://www.imu.edu.in/",
       "kind": "html",
       "allowed_hosts": [
         "imu.edu.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list",
-        "cutoff",
-        "exam_schedule"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
-    },
-    {
-      "id": "naval-coastguard-jobs",
-      "name": "Indian Coast Guard and maritime recruitment notices",
-      "url": "https://indiancoastguard.gov.in/recruitment",
-      "kind": "html",
-      "allowed_hosts": [
-        "indiancoastguard.gov.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list",
-        "cutoff",
-        "exam_schedule"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
-    },
-    {
-      "id": "bse-ap",
-      "name": "Andhra Pradesh Board of Secondary Education",
-      "url": "https://bse.ap.gov.in/",
-      "kind": "html",
-      "allowed_hosts": [
-        "bse.ap.gov.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list",
-        "cutoff",
-        "exam_schedule"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
-    },
-    {
-      "id": "bse-telangana",
-      "name": "Telangana Board of Secondary Education",
-      "url": "https://bse.telangana.gov.in/",
-      "kind": "html",
-      "allowed_hosts": [
-        "bse.telangana.gov.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list",
-        "cutoff",
-        "exam_schedule"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
-    },
-    {
-      "id": "pseb-results",
-      "name": "Punjab School Education Board Results",
-      "url": "https://www.pseb.ac.in/",
-      "kind": "html",
-      "allowed_hosts": [
-        "pseb.ac.in"
       ],
       "categories": [
         "result",
@@ -3838,69 +3332,6 @@
       "kind": "html",
       "allowed_hosts": [
         "ubse.uk.gov.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list",
-        "cutoff",
-        "exam_schedule"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
-    },
-    {
-      "id": "cgbse-results",
-      "name": "Chhattisgarh Board of Secondary Education Results",
-      "url": "https://cgbse.nic.in/",
-      "kind": "html",
-      "allowed_hosts": [
-        "cgbse.nic.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list",
-        "cutoff",
-        "exam_schedule"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
-    },
-    {
-      "id": "bseh-results",
-      "name": "Board of School Education Haryana",
-      "url": "https://bseh.org.in/",
-      "kind": "html",
-      "allowed_hosts": [
-        "bseh.org.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list",
-        "cutoff",
-        "exam_schedule"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
-    },
-    {
-      "id": "rajasthan-board-results",
-      "name": "Rajasthan Board of Secondary Education",
-      "url": "https://rajeduboard.rajasthan.gov.in/",
-      "kind": "html",
-      "allowed_hosts": [
-        "rajeduboard.rajasthan.gov.in"
       ],
       "categories": [
         "result",
@@ -4063,75 +3494,12 @@
       "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
     },
     {
-      "id": "maharashtra-board-official",
-      "name": "Maharashtra State Board",
-      "url": "https://mahahsscboard.in/",
-      "kind": "html",
-      "allowed_hosts": [
-        "mahahsscboard.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list",
-        "cutoff",
-        "exam_schedule"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
-    },
-    {
-      "id": "gujarat-board",
-      "name": "Gujarat Secondary and Higher Secondary Education Board",
-      "url": "https://www.gseb.org/",
-      "kind": "html",
-      "allowed_hosts": [
-        "gseb.org"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list",
-        "cutoff",
-        "exam_schedule"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
-    },
-    {
       "id": "kerala-board-official",
       "name": "Kerala Board of Public Examinations",
       "url": "https://pareekshabhavan.kerala.gov.in/",
       "kind": "html",
       "allowed_hosts": [
         "pareekshabhavan.kerala.gov.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list",
-        "cutoff",
-        "exam_schedule"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
-    },
-    {
-      "id": "odisha-board-official",
-      "name": "Board of Secondary Education Odisha",
-      "url": "https://bseodisha.ac.in/",
-      "kind": "html",
-      "allowed_hosts": [
-        "bseodisha.ac.in"
       ],
       "categories": [
         "result",
@@ -4195,27 +3563,6 @@
       "kind": "html",
       "allowed_hosts": [
         "dge.tn.gov.in"
-      ],
-      "categories": [
-        "result",
-        "notification",
-        "admit_card",
-        "answer_key",
-        "merit_list",
-        "cutoff",
-        "exam_schedule"
-      ],
-      "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
-    },
-    {
-      "id": "karnataka-board-official",
-      "name": "Karnataka School Examination and Assessment Board",
-      "url": "https://kseab.karnataka.gov.in/",
-      "kind": "html",
-      "allowed_hosts": [
-        "karnataka.gov.in"
       ],
       "categories": [
         "result",
