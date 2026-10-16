@@ -571,6 +571,9 @@ def main():
     if not isinstance(results, list):
         raise SystemExit("Invalid site/data/results.json: expected a JSON list")
 
+    source_by_id = {str(s.get("id", "")): s for s in registry["sources"] if s.get("id")}
+    source_by_name = {str(s.get("name", "")).strip().lower(): s for s in registry["sources"] if s.get("name")}
+
     # Clean old low-quality navigation links from the public website and keep
     # category labels aligned with the stricter title classifier.
     cleaned_results = []
@@ -580,6 +583,14 @@ def main():
             removed_result_rows += 1
             continue
         title = str(item.get("title") or item.get("exam") or "").strip()
+        # Repair stale/mislabelled state metadata from the authoritative source registry.
+        source_meta = source_by_id.get(str(item.get("source_id", ""))) or source_by_name.get(
+            str(item.get("source_name") or item.get("authority") or "").strip().lower(), {}
+        )
+        registered_state = str(source_meta.get("state") or "").strip()
+        if registered_state:
+            item["state"] = registered_state
+            item["region"] = str(source_meta.get("region") or registered_state)
         category = classify(title)
         # Keep curated archive landing pages, but remove dated non-archive
         # notices outside the live 90-day window.
