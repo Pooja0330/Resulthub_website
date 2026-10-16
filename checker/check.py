@@ -35,7 +35,9 @@ HEADERS = {
 
 RULES = [
     ("result", re.compile(
-        r"\b(result declared|exam results?|examination results?|scorecards?|"
+        r"\b(result|results|result declared|result declaration|declared result|"
+        r"exam results?|examination results?|board results?|class 10 results?|"
+        r"class 12 results?|ssc results?|hsc results?|scorecards?|score cards?|"
         r"marks list|rank list|rank card|result of)\b", re.I)),
     ("merit_list", re.compile(
         r"\b(merit list|final selection|selected candidates|qualified candidates|"
@@ -253,7 +255,8 @@ def fetch_source(source):
         title = " ".join(title.split())
         link = link.split("#")[0].strip()
 
-        if len(title) < 8 or not host_allowed(link, hosts):
+        # Official portals often use short labels such as "Result".
+        if len(title) < 4 or not host_allowed(link, hosts):
             continue
 
         category = classify(title)
