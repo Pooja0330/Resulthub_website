@@ -116,6 +116,62 @@ def now_utc():
     return datetime.now(timezone.utc).isoformat()
 
 
+def extract_notice_date(text):
+    """Return a date only when the official listing labels it as a notice/upload date."""
+    value = " ".join(str(text or "").split())
+    date_pattern = (
+        r"(\\d{1,2}[./-]\\d{1,2}[./-]\\d{4}|"
+        r"[A-Za-z]{3,9}\\s+\\d{1,2},?\\s+\\d{4}|"
+        r"\\d{1,2}\\s+[A-Za-z]{3,9},?\\s+\\d{4})"
+    )
+    match = re.search(
+        r"\\b(?:date of upload|upload date|notice date|notification date|"
+        r"published on|posted on|updated on|uploaded on|issued on|dated)\\s*[:\\-]?\\s*"
+        + date_pattern, value, re.I,
+    )
+    if not match:
+        return ""
+    raw = match.group(1).strip()
+    for fmt in (
+        "%d/%m/%Y", "%d-%m-%Y", "%d.%m.%Y", "%m/%d/%Y", "%m-%d-%Y",
+        "%b %d, %Y", "%B %d, %Y", "%b %d %Y", "%B %d %Y",
+        "%d %b %Y", "%d %B %Y", "%d %b, %Y", "%d %B, %Y",
+    ):
+        try:
+            return datetime.strptime(raw, fmt).strftime("%d %b %Y")
+        except ValueError:
+            continue
+    return raw
+
+
+def exam_year_from_title(title):
+    """Return a year only when explicitly present in the notice title."""
+    match = re.search(r"\\b(20\\d{2})\\b", str(title or ""))
+    return match.group(1) if match else ""
+
+
+def format_notice_date(value):
+    """Normalize a known source date; never substitute today's date."""
+    raw = str(value or "").strip()
+    if not raw:
+        return ""
+    for fmt in (
+        "%d %b %Y", "%d %B %Y", "%d/%m/%Y", "%d-%m-%Y", "%d.%m.%Y",
+        "%b %d, %Y", "%B %d, %Y", "%b %d %Y", "%B %d %Y",
+        "%d %b, %Y", "%d %B, %Y",
+    ):
+        try:
+            return datetime.strptime(raw, fmt).strftime("%d %b %Y")
+        except ValueError:
+            continue
+    try:
+        from email.utils import parsedate_to_datetime
+        parsed = parsedate_to_datetime(raw)
+        return parsed.strftime("%d %b %Y") if parsed else ""
+    except (TypeError, ValueError, OverflowError):
+        return ""
+
+
 def host_allowed(url, hosts):
     try:
         parsed = urlparse(url)
@@ -395,32 +451,24 @@ def fetch_source(source):
         links = []
         for a in soup.select("a[href]"):
             title = " ".join(a.get_text(" ", strip=True).split())
+            context = ""
+            for parent in list(a.parents)[:7]:
+                if getattr(parent, "name", None) in ("tr", "li", "article", "div"):
+                    candidate_context = " ".join(parent.get_text(" ", strip=True).split())
+                    if 20 <= len(candidate_context) <= 350:
+                        context = candidate_context
+                        break
 
-            # Many official exam portals use generic anchor labels such as
-            # "View", "Download", or "Click here". Include nearby row/card
-            # context so the actual exam/notice title can be classified.
+            # Include compact card/row text when a link label is generic.
             if len(title) < 12 or not classify(title):
-                # Use only the nearest compact row/card. Never use whole-page or
-                # large section text as a title; that creates hundreds of false positives.
-                context = ""
-                for parent in list(a.parents)[:7]:
-                    if getattr(parent, "name", None) in ("tr", "li", "article", "div"):
-                        candidate_context = " ".join(parent.get_text(" ", strip=True).split())
-                        # Government portals often put the notice heading and a
-                        # generic Download/View link in compact div-based cards.
-                        # Skip tiny wrappers and oversized sections that could
-                        # accidentally combine several unrelated notices.
-                        if 20 <= len(candidate_context) <= 350:
-                            context = candidate_context
-                            break
-                if context and classify(context):
-                    if title.lower() not in context.lower():
-                        title = (context + " — " + title).strip(" —")
+                if context and classify(context) and title.lower() not in context.lower():
+                    title = (context + " — " + title).strip(" —")
 
+            published = extract_notice_date(context) or extract_notice_date(title)
             links.append((
                 title,
                 urljoin(response.url, a.get("href", "")),
-                "",
+                published,
             ))
 
     found = []
@@ -473,6 +521,8 @@ def build_result(item, detected_at):
         "url": item["url"],
         "official_url": item["url"],
         "source_url": item.get("source_url", ""),
+        "published": format_notice_date(item.get("published", "")),
+        "exam_year": exam_year_from_title(item.get("title", "")),
         "region": item.get("region", "Central"),
         "state": item.get("state", ""),
         "description": (
@@ -701,7 +751,9 @@ def main():
         message = (
             "🔔 GoResultHub | Potential Exam Update\n\n"
             f"Authority: {item.get('source_name', 'Official authority')}\n"
-            f"Type: {str(item.get('category', 'update')).replace('_', ' ').title()}\n\n"
+            f"Type: {str(item.get('category', 'update')).replace('_', ' ').title()}\n"
+            f"Exam year: {exam_year_from_title(item.get('title', '')) or 'Not stated in title'}\n"
+            f"Notice date: {format_notice_date(item.get('published', '')) or 'Not shown on source listing'}\n\n"
             f"{item.get('title', 'New official link')}\n\n"
             + f"📄 OPEN NOTICE / RESULT:\n{direct_url}\n\n"
             + f"🌐 OFFICIAL AUTHORITY WEBSITE:\n{source_page or 'Official website link unavailable; search the authority name on its official portal.'}\n"
