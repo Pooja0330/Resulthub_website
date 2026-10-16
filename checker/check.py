@@ -35,9 +35,9 @@ HEADERS = {
 
 RULES = [
     ("result", re.compile(
-        r"\b(result declared|result declaration|results of|result for|final result|"
+        r"\b(result declared|result declaration|results of|result of|result for|final result|"
         r"provisional result|result published|result notification|exam results?|"
-        r"examination results?|board results?|class 10 results?|class 12 results?|"
+        r"examination results?|board exam results?|board results?|class 10 results?|class 12 results?|"
         r"ssc results?|hsc results?|scorecards?|score cards?|marks list|rank list|"
         r"rank card|result announcement)\b", re.I)),
     ("merit_list", re.compile(
@@ -333,6 +333,24 @@ def main():
 
     if not isinstance(results, list):
         raise SystemExit("Invalid site/data/results.json: expected a JSON list")
+
+    # Clean old low-quality navigation links from the public website and keep
+    # category labels aligned with the stricter title classifier.
+    cleaned_results = []
+    removed_result_rows = 0
+    for item in results:
+        if not isinstance(item, dict):
+            removed_result_rows += 1
+            continue
+        title = str(item.get("title") or item.get("exam") or "").strip()
+        category = classify(title)
+        if not category:
+            removed_result_rows += 1
+            continue
+        item["category"] = category
+        cleaned_results.append(item)
+    results = cleaned_results
+    print(f"Website data cleanup: removed {removed_result_rows} generic/irrelevant rows; {len(results)} remain")
 
     seen = state.setdefault("seen", {})
     health = state.setdefault("source_health", {})
