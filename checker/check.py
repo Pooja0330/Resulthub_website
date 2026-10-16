@@ -167,6 +167,16 @@ def infer_exam_category(title="", source_name="", source_id="", state=""):
         return "Defence"
     if re.search(r"\b(psc|public service commission|state service commission|staff selection commission|subordinate services selection commission|recruitment board)\b", text_value):
         return "State PSC / Recruitment"
+    if source.startswith(("icai", "icsi", "icmai", "nmc")) or re.search(r"\b(icai|icsi|icmai|chartered accountant|company secretary|medical commission)\b", text_value):
+        return "Professional Exams"
+    if source.startswith(("kvs", "nvs", "ctet")) or re.search(r"\b(kvs|nvs|ctet|tet|teacher|teaching)\b", text_value):
+        return "Teaching / Eligibility"
+    if source.startswith(("mahresult", "tnresults", "keralaresults", "wbresults", "karnataka-results", "odisha-results", "ap-results", "telangana-results")):
+        return "School Board Results"
+    if source.startswith(("nabard", "niacl", "uiic", "lic", "pfrda")) or re.search(r"\b(nabard|new india assurance|uiic|lic|pfrda)\b", text_value):
+        return "Banking"
+    if source.startswith(("epfindia", "indiapost")):
+        return "UPSC / Central Recruitment"
     if state:
         return "State PSC / Recruitment"
     return "UPSC / Central Recruitment"
