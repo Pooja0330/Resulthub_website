@@ -120,3 +120,40 @@ jobs:
           # status-file update creates a rebase conflict.
           git rebase -X theirs origin/main
           git push origin HEAD:main
+
+      - name: Notify admin if the checker workflow fails
+        if: failure()
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_ADMIN: ${{ secrets.TG_ADMIN }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from urllib.request import Request, urlopen
+
+          token = os.environ.get("TG_TOKEN", "").strip()
+          admin = os.environ.get("TG_ADMIN", "").strip()
+          if not token or not admin:
+              print("Failure notification skipped: TG_TOKEN or TG_ADMIN is not configured.")
+              raise SystemExit(0)
+          payload = {
+              "chat_id": admin,
+              "text": "⚠️ GoResultHub checker workflow failed. Review the run logs: " + os.environ.get("RUN_URL", ""),
+              "disable_web_page_preview": True,
+          }
+          request = Request(
+              "https://api.telegram.org/bot" + token + "/sendMessage",
+              data=json.dumps(payload).encode("utf-8"),
+              headers={"Content-Type": "application/json"},
+              method="POST",
+          )
+          try:
+              with urlopen(request, timeout=10) as response:
+                  result = json.loads(response.read().decode("utf-8"))
+                  if not result.get("ok"):
+                      print("Telegram failure notification was not accepted.")
+          except Exception as exc:
+              print("Could not send checker failure notification:", type(exc).__name__)
+          PY
