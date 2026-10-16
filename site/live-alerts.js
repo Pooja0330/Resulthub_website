@@ -21,7 +21,7 @@
   const itemKindLabel = item => isPib(item) ? "GOVERNMENT & PIB" : isExamPriority(item) ? "EXAM ALERT" : "OFFICIAL UPDATE";
   const itemKindClass = item => isPib(item) ? "is-pib" : isExamPriority(item) ? "is-exam" : "is-general";
   const cleanTitle = item => String(item.title || item.exam || "Official exam update").replace(/\s+/g," ").replace(/\s*[|·•].*$/,"").trim();
-  const normalizedTitle = item => cleanTitle(item).toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
+  const normalizedTitle = item => cleanTitle(item).toLocaleLowerCase().normalize("NFKC").replace(/[^\\p{L}\\p{N}]+/gu," ").trim();
   const isNoise = item => {
     const title=normalizedTitle(item);
     const url=String(item.url||item.official_url||item.source_url||"").toLowerCase();
