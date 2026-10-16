@@ -166,3 +166,5 @@
 .sponsor-card h3{margin:0;font-size:1rem}
 .sponsor-card p{margin:0;color:#5d6c81;font-size:.88rem}
 .sponsor-card a{margin-top:auto;font-weight:800;color:#174f9c}
+
+.sidebar-exams{margin:18px 12px 0;padding:16px;background:#fff;border:1px solid #dfe8f4;border-radius:14px;display:grid;gap:8px}.sidebar-exams h3{margin:0 0 5px;font-size:1rem}.sidebar-exams a{display:block;padding:7px 9px;border-radius:8px;background:#f4f8ff;color:#174f9c;font-size:.82rem;font-weight:650}.sidebar-exams a:hover{background:#e6f0ff;text-decoration:none}.sidebar-search-all{margin-top:5px;padding:10px;border:0;border-radius:9px;background:#174f9c;color:white;font-weight:750;cursor:pointer}@media(max-width:760px){.state-layout{display:block}.state-sidebar{width:100%;position:static}.state-list{max-height:250px;overflow:auto}.quick-exam-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:480px){.quick-exam-grid{grid-template-columns:1fr}.sidebar-exams{margin:14px 0}}
