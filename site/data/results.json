@@ -1,5 +1,24 @@
 [
   {
+    "id": "curated-ibps-po-mains-status-2026",
+    "title": "IBPS PO/MT-XVI Mains Result 2026 — Awaiting Official Update",
+    "exam": "IBPS Probationary Officer / Management Trainee (CRP PO/MT-XVI) 2026",
+    "exam_year": "2026",
+    "exam_category": "Banking",
+    "category": "notification",
+    "source_name": "Institute of Banking Personnel Selection (IBPS)",
+    "authority": "Institute of Banking Personnel Selection (IBPS)",
+    "url": "https://www.ibps.in/index.php/management-trainees-xvi/",
+    "official_url": "https://www.ibps.in/index.php/management-trainees-xvi/",
+    "source_url": "https://www.ibps.in/index.php/crp-updates/",
+    "region": "Central",
+    "state": "",
+    "description": "Status check only — this is not a result declaration. As of 16 October 2026, the official IBPS PO/MT-XVI page does not list a Mains result notice. Check the official IBPS page for the announcement; the site will replace this status with a result notice when one is detected and verified.",
+    "published": "2026-10-16",
+    "verified": false,
+    "archive": false
+  },
+  {
     "id": "curated-ibps-so-prelims-result-2026",
     "title": "IBPS SO Prelims Result 2026 — Scorecard / Qualifying Status",
     "exam": "IBPS Specialist Officer (CRP SPL-XVI) Prelims 2026",
