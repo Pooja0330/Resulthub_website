@@ -187,3 +187,11 @@
 .grh-alert-item strong{overflow-wrap:anywhere}
 .grh-toast strong{overflow-wrap:anywhere}
 .grh-toast small{line-height:1.4}
+
+
+/* Cookie preference controls */
+#grh-cookie-consent{position:relative;z-index:10000}
+.grh-cookie-banner{position:fixed;z-index:10000;left:18px;right:18px;bottom:18px;max-width:920px;margin-inline:auto;display:flex;gap:22px;align-items:flex-end;justify-content:space-between;padding:20px 22px;background:#fff;color:#172b49;border:1px solid #d6e0ed;border-radius:16px;box-shadow:0 14px 48px rgba(15,38,70,.24)}
+.grh-cookie-banner[hidden],.grh-cookie-options[hidden],.grh-cookie-actions [hidden]{display:none!important}
+.grh-cookie-copy{min-width:0;flex:1}.grh-cookie-copy strong{display:block;font-size:1rem;margin-bottom:6px}.grh-cookie-copy p{font-size:.86rem;line-height:1.55;color:#536780;margin:0}.grh-cookie-copy a{color:#175fc1;font-weight:700}.grh-cookie-options{display:grid;gap:9px;margin-top:13px;font-size:.83rem}.grh-cookie-options label{display:flex;align-items:center;gap:8px}.grh-cookie-options input{accent-color:#175fc1}.grh-cookie-copy .grh-cookie-note{font-size:.76rem;margin-top:8px}.grh-cookie-actions{display:flex;gap:8px;align-items:center;justify-content:flex-end;flex-wrap:wrap;flex-shrink:0}.grh-cookie-actions button,.grh-cookie-manage{border:1px solid #cbd8e9;border-radius:9px;padding:10px 12px;font:inherit;font-size:.8rem;font-weight:750;cursor:pointer;background:#fff;color:#173b70}.grh-cookie-actions .grh-cookie-accept{background:#175fc1;border-color:#175fc1;color:#fff}.grh-cookie-manage{position:fixed;z-index:9998;left:12px;bottom:12px;padding:7px 10px;font-size:.72rem;opacity:.92;box-shadow:0 2px 12px rgba(15,38,70,.12)}
+@media(max-width:680px){.grh-cookie-banner{left:10px;right:10px;bottom:10px;display:block;padding:16px;max-height:82vh;overflow:auto}.grh-cookie-actions{margin-top:14px;justify-content:stretch}.grh-cookie-actions button{flex:1}.grh-cookie-manage{left:8px;bottom:8px}}
