@@ -871,11 +871,7 @@ def main():
             remaining_approved.append(item)
             continue
 
-        source_page = str(source.get("url", "")).strip()
-        direct_url = url
-        website_url = "https://goresulthub.com/?q=" + quote_plus(str(item.get("title", "")).strip())
-        message = (
-            "📢 GoResultHub | Approved Exam Updat        website_url = "https://goresulthub.com/?q=" + quote_plus(str(item.get("title", "")).strip()) + "&utm_source=telegram&utm_medium=channel&utm_campaign=exam_alert"
+        website_url = "https://goresulthub.com/?q=" + quote_plus(str(item.get("title", "")).strip()) + "&utm_source=telegram&utm_medium=channel&utm_campaign=exam_alert"
         message = (
             "📢 GoResultHub | Exam Update\n\n"
             f"Authority: {item['source_name']}\n"
@@ -887,7 +883,15 @@ def main():
             f"{website_url}"
         )
         keyboard = {"inline_keyboard": [[{"text": "🔎 View on GoResultHub", "url": website_url}]]}
-te.update({
+
+        approved_attempts += 1
+        if not telegram_send(CHANNEL, message, reply_markup=keyboard):
+            remaining_approved.append(item)
+        else:
+            time.sleep(1.1)
+
+    # Save data only after the run's work is complete.
+    state.update({
         "last_run": checked_at,
         "last_run_failures": failures,
         "last_run_successful_sources": successful,
