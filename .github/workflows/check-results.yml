@@ -10,6 +10,8 @@ on:
       - "checker/test_check.py"
       - "checker/sources.json"
       - ".github/workflows/check-results.yml"
+      - "site/app.js"
+      - "site/sw.js"
   schedule:
     - cron: "17 * * * *"
 
