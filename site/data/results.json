@@ -14119,5 +14119,26 @@
     "verified": false,
     "archive": false,
     "detected_at": "2026-10-16T11:27:38.778172+00:00"
+  },
+  {
+    "id": "f1a5d3d6cd7079654ef9d80d",
+    "title": "Date sheet of Minor Class Test of USBT (October-November 2026)",
+    "exam": "Date sheet of Minor Class Test of USBT (October-November 2026)",
+    "exam_category": "Entrance & Eligibility",
+    "category": "exam_schedule",
+    "source_name": "Guru Gobind Singh Indraprastha University examinations",
+    "source_id": "ipu",
+    "authority": "Guru Gobind Singh Indraprastha University examinations",
+    "url": "https://ipu.ac.in/Pubinfo2026/nt161020260504.pdf",
+    "official_url": "https://ipu.ac.in/Pubinfo2026/nt161020260504.pdf",
+    "source_url": "https://ipu.ac.in/",
+    "published": "",
+    "exam_year": "2026",
+    "region": "Central",
+    "state": "",
+    "description": "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility.",
+    "verified": false,
+    "archive": false,
+    "detected_at": "2026-10-16T11:32:56.496111+00:00"
   }
 ]
