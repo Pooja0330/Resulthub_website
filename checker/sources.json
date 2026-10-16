@@ -3174,9 +3174,9 @@
         "cutoff",
         "exam_schedule"
       ],
-      "enabled": true,
+      "enabled": false,
       "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+      "coverage_note": "Disabled because the official results portal terms expressly prohibit automated scraping; monitor CISCE's official main website for public notices instead."
     },
     {
       "id": "crpf-results",
