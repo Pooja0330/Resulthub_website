@@ -127,6 +127,10 @@ function inferredFamily(x){
  if(/icai|icsi|icmai|chartered accountant|company secretary|national medical commission/.test(t))return "Professional Exams";
  return x.exam_category||"UPSC / Central Recruitment";
 }
+function absoluteTimeText(v){if(!v)return "Exact detection time unavailable";const d=new Date(v);if(Number.isNaN(d.getTime()))return "Exact detection time unavailable";return d.toLocaleString("en-IN",{day:"numeric",month:"short",year:"numeric",hour:"numeric",minute:"2-digit",second:"2-digit",hour12:true,timeZone:"Asia/Kolkata"})+" IST"}
+function relativeTimeText(v){if(!v)return "time unavailable";const d=new Date(v),ms=Date.now()-d.getTime();if(Number.isNaN(d.getTime()))return "time unavailable";if(ms<60_000)return "just now";if(ms<3_600_000){const n=Math.floor(ms/60_000);return n+" minute"+(n===1?"":"s")+" ago"}if(ms<86_400_000){const n=Math.floor(ms/3_600_000);return n+" hour"+(n===1?"":"s")+" ago"}const n=Math.floor(ms/86_400_000);return n===1?"yesterday":n+" days ago"}
+function detectedTimeMarkup(v){if(!v)return "Detection time not available";const d=new Date(v);if(Number.isNaN(d.getTime()))return "Detection time not available";return '<time class="relative-detection-time" datetime="'+esc(d.toISOString())+'" title="'+esc(absoluteTimeText(v))+'">'+esc(relativeTimeText(v))+'</time><span class="exact-detection-time"> · '+esc(absoluteTimeText(v))+'</span>'}
+function refreshRelativeTimes(){document.querySelectorAll("time.relative-detection-time").forEach(el=>{el.textContent=relativeTimeText(el.dateTime);el.title=absoluteTimeText(el.dateTime);});}
 function stateCount(name){return allItems.filter(x=>stateForItem(x)===name).length}
 function renderStateLinks(){
  $("#stateDirectory").innerHTML=STATE_NAMES.map(n=>'<a class="state-directory-link'+(n===state?' active':'')+'" href="state.html?state='+encodeURIComponent(n)+'">'+esc(n)+' <span>'+stateCount(n)+'</span></a>').join("");
@@ -158,10 +162,11 @@ function render(){
  $("#stateCount").textContent=filtered.length+" update"+(filtered.length===1?"":"s");
  $("#stateUpdates").innerHTML=filtered.slice((page-1)*pageSize,page*pageSize).map(x=>{
   const url=safeUrl(x.url||x.official_url), source=safeUrl(x.source_url);
-  const date=x.published||x.detected_at||x.date;
-  const dateText=date&&!Number.isNaN(new Date(date).getTime())?new Date(date).toLocaleDateString("en-IN",{day:"numeric",month:"short",year:"numeric"}):"Date not supplied";
+  const date=x.published||x.date;
+  const dateText=date&&!Number.isNaN(new Date(date).getTime())?new Date(date).toLocaleDateString("en-IN",{day:"numeric",month:"short",year:"numeric"}):"Notice date not supplied";
+  const detectedAt=detectedTimeMarkup(x.detected_at);
   const tag=titleCase(x.category);
-  return '<article class="card"><div class="meta"><span class="tag">'+esc(tag)+'</span><span class="unverified">'+(x.archive?'Historical archive':(x.verified===true?'✓ Verified official source':'Official source link'))+'</span></div><h3>'+esc(x.title||x.exam||"Exam update")+'</h3><p>'+esc(x.description||x.source_name||"Open the official authority link for full details.")+'</p><div class="source">'+esc(x.source_name||x.authority||"Issuing authority")+' · '+esc(dateText)+'</div>'+(source&&source!==url?'<a class="link" href="'+esc(source)+'" target="_blank" rel="noopener noreferrer">Official authority ↗</a>':'')+(url?'<a class="link secondary" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">Open notice / result ↗</a>':'<span>Direct notice link not available; use the official portals above.</span>')+'</article>';
+  return '<article class="card"><div class="meta"><span class="tag">'+esc(tag)+'</span><span class="unverified">'+(x.archive?'Historical archive':(x.verified===true?'✓ Verified official source':'Official source link'))+'</span></div><h3>'+esc(x.title||x.exam||"Exam update")+'</h3><p>'+esc(x.description||x.source_name||"Open the official authority link for full details.")+'</p><div class="source">'+esc(x.source_name||x.authority||"Issuing authority")+' · '+esc(dateText)+' · Detected by GoResultHub: '+detectedAt+'</div>'+(source&&source!==url?'<a class="link" href="'+esc(source)+'" target="_blank" rel="noopener noreferrer">Official authority ↗</a>':'')+(url?'<a class="link secondary" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">Open notice / result ↗</a>':'<span>Direct notice link not available; use the official portals above.</span>')+'</article>';
  }).join("");
  $("#noStateUpdates").classList.toggle("hidden",filtered.length>0);
  $("#statePagination").innerHTML=filtered.length>pageSize?'<button id="previous" class="secondary" '+(page===1?'disabled':'')+'>Previous</button><span>Page '+page+' of '+pages+'</span><button id="next" class="secondary" '+(page===pages?'disabled':'')+'>Next</button>':'';
@@ -201,3 +206,4 @@ async function init(){
  $("#allIndiaLink").href="index.html";
 }
 init();
+setInterval(refreshRelativeTimes,30000);
