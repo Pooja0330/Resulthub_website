@@ -120,3 +120,8 @@
 .year-archive-help{border:1px solid var(--line,#d7dfeb);border-radius:12px;padding:16px;margin:12px 0 18px;background:var(--surface,#fff)}
 .year-archive-help h3{margin:0 0 8px;font-size:1rem}.year-archive-help p{margin:0 0 12px;line-height:1.5}
 .archive-help-links{display:flex;flex-wrap:wrap;gap:8px}.archive-help-links a{display:inline-block;border:1px solid var(--line,#d7dfeb);border-radius:8px;padding:8px 10px;text-decoration:none}
+
+/* Precise notice detection time and live relative labels */
+.relative-detection-time{font-weight:800;color:#1458a6;white-space:nowrap}
+.exact-detection-time{display:inline-block;font-variant-numeric:tabular-nums;color:#52657e}
+@media(max-width:640px){.exact-detection-time{display:block;margin-top:3px}.relative-detection-time{white-space:normal}}
