@@ -83,7 +83,9 @@ NAV_TITLE = re.compile(
     r"^(home|result|results|recruitment|careers?|advertisements?|"
     r"notifications?|notices?|latest news|read more|click here|"
     r"view all|view more|recruitment calendar|stages of recruitment|"
-    r"reporting vacancies|detailed advertisement)$", re.I
+    r"reporting vacancies|detailed advertisement|call letters?|admit cards?|"
+    r"answer keys?|cut.?off marks?|current openings|recruitment results|"
+    r"recruitment archives|latest updates)$", re.I
 )
 
 
@@ -138,6 +140,37 @@ def classify(title):
         if pattern.search(title):
             return category
     return None
+
+
+def infer_exam_category(title="", source_name="", source_id="", state=""):
+    """Map notices to stable website filters instead of source-name labels."""
+    text_value = " ".join(str(v or "") for v in (source_id, source_name, title, state)).lower()
+    source = str(source_id or "").lower()
+    name = str(source_name or "").lower()
+    if source.startswith(("rrb-", "rrc-", "rrcb")) or "railway recruitment" in name or re.search(r"\\b(rrb|rrc|ntpc|group d|assistant loco pilot|alp)\\b", text_value):
+        return "Railways"
+    if source in {"ibps", "ibps-recent-updates", "ibps-po-mt", "sbi-careers", "sbi-current-openings", "sbi-recruitment-results", "rbi-opportunities"} or re.search(r"\\b(ibps|state bank of india|sbi careers|reserve bank of india|rbi|banking|lic|insurance regulatory|niacl|uiic|pfrda)\\b", text_value):
+        return "Banking"
+    if source.startswith("ssc") or "staff selection commission" in name or re.search(r"\\bssc (cgl|chsl|mts|gd|stenographer)\\b", text_value):
+        return "SSC / Central Recruitment"
+    if source.startswith("upsc") or "union public service commission" in name or re.search(r"\\bupsc\\b", text_value):
+        return "UPSC / Central Recruitment"
+    if source.startswith(("nta", "jee", "neet", "cuet", "ugcnet", "gate")) or re.search(r"\\b(nta|jee|neet|cuet|gate|ugc net|csir net|entrance exam)\\b", text_value):
+        return "Entrance & Eligibility"
+    if re.search(r"\\b(board|cbse|cisce|nios|class 10|class 12|sslc|hsc|madhyamik)\\b", text_value):
+        return "School Board Results"
+    if re.search(r"\\b(police|constable|slprb|prpb)\\b", text_value):
+        return "State Recruitment / Police"
+    if re.search(r"\\b(ctet|tet|teacher|teaching|kvs|nvs)\\b", text_value):
+        return "Teaching / Eligibility"
+    if re.search(r"\\b(defence|defense|army|navy|air force|agniveer|coast guard|crpf|bsf|cisf|itbp|ssb)\\b", text_value):
+        return "Defence"
+    if re.search(r"\\b(psc|public service commission|state service commission|staff selection commission|subordinate services selection commission|recruitment board)\\b", text_value):
+        return "State PSC / Recruitment"
+    if state:
+        return "State PSC / Recruitment"
+    return "UPSC / Central Recruitment"
+
 
 def normalize_notice_url(url):
     """Normalize tracking noise without collapsing distinct CMS notice URLs."""
@@ -274,12 +307,14 @@ def telegram_send(chat_id, message):
 
 
 def is_stale_notice(title, published=""):
-    """Reject clearly old items only when the page supplies an explicit publish/post date."""
+    """Reject clearly old notices when the title or feed gives an explicit date."""
     candidates = []
     text_value = str(title or "")
     for match in re.finditer(
-        r"\b(?:posted|published|updated)\s+on\s+"
-        r"([A-Za-z]{3,9}\s+\d{1,2},?\s+\d{4}|\d{1,2}\s+[A-Za-z]{3,9}\s+\d{4})",
+        r"\\b(?:(?:posted|published|updated|uploaded|issued|dated)\\s+(?:on\\s+)?)"
+        r"(\\d{1,2}[./-]\\d{1,2}[./-]\\d{4}|"
+        r"[A-Za-z]{3,9}\\s+\\d{1,2},?\\s+\\d{4}|"
+        r"\\d{1,2}\\s+[A-Za-z]{3,9},?\\s+\\d{4})",
         text_value,
         re.I,
     ):
@@ -292,6 +327,8 @@ def is_stale_notice(title, published=""):
         for fmt in (
             "%b %d, %Y", "%B %d, %Y", "%b %d %Y", "%B %d %Y",
             "%d %b %Y", "%d %B %Y", "%d %b, %Y", "%d %B, %Y",
+            "%d/%m/%Y", "%d-%m-%Y", "%d.%m.%Y",
+            "%m/%d/%Y", "%m-%d-%Y", "%m.%d.%Y",
         ):
             try:
                 parsed_date = datetime.strptime(value, fmt).replace(tzinfo=timezone.utc)
@@ -412,7 +449,9 @@ def build_result(item, detected_at):
         "id": item["id"],
         "title": item["title"],
         "exam": item["title"],
-        "exam_category": item.get("exam_category", "Government Exams"),
+        "exam_category": item.get("exam_category") or infer_exam_category(
+            item.get("title", ""), item.get("source_name", ""), item.get("source_id", ""),
+            item.get("state", "")),
         "category": item["category"],
         "source_name": item["source_name"],
         "authority": item["source_name"],
@@ -456,10 +495,18 @@ def main():
             continue
         title = str(item.get("title") or item.get("exam") or "").strip()
         category = classify(title)
-        if not category:
+        # Keep curated archive landing pages, but remove dated non-archive
+        # notices outside the live 90-day window.
+        if not category or (not item.get("archive", False) and is_stale_notice(title, item.get("published", ""))):
             removed_result_rows += 1
             continue
+        item["title"] = title
+        item["exam"] = str(item.get("exam") or title)
         item["category"] = category
+        item["exam_category"] = infer_exam_category(
+            title, item.get("source_name") or item.get("authority", ""),
+            item.get("source_id", ""), item.get("state", ""),
+        )
         cleaned_results.append(item)
     results = cleaned_results
     print(f"Website data cleanup: removed {removed_result_rows} generic/irrelevant rows; {len(results)} remain")
@@ -533,7 +580,8 @@ def main():
                     item["state"] = source.get("state", "")
                     item["exam_category"] = source.get(
                         "exam_category",
-                        source.get("name", "Government Exams"),
+                        infer_exam_category(item.get("title", ""), source.get("name", ""),
+                                            source.get("id", ""), source.get("state", "")),
                     )
                     item["detected_at"] = checked_at
 
