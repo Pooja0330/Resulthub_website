@@ -904,7 +904,7 @@ def main():
     save_json("checker/state.json", state)
     save_json("checker/approved.json", {"pending": remaining_approved})
     save_json("site/data/results.json", results)
-failure_types = {}
+    failure_types = {}
     for source_health in health.values():
         if source_health.get("status") != "failed":
             continue
