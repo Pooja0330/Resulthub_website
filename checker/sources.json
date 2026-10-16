@@ -16,7 +16,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "exam_category": "UPSC / Central Recruitment"
     },
     {
       "id": "ssc",
@@ -34,7 +35,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "exam_category": "SSC / Central Recruitment"
     },
     {
       "id": "ibps",
@@ -56,7 +58,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official IBPS home page; the legacy root URL showed inconsistent TLS behavior in the runner. Also covers duplicate registry entries: IBPS examination and recruitment; IBPS RRB / Regional Rural Banks."
+      "coverage_note": "Official IBPS home page; the legacy root URL showed inconsistent TLS behavior in the runner. Also covers duplicate registry entries: IBPS examination and recruitment; IBPS RRB / Regional Rural Banks.",
+      "exam_category": "Banking"
     },
     {
       "id": "sbi-careers",
@@ -74,7 +77,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "SBI officially migrated its corporate site to sbi.bank.in; this redirect target is allowlisted for careers links."
+      "coverage_note": "SBI officially migrated its corporate site to sbi.bank.in; this redirect target is allowlisted for careers links.",
+      "exam_category": "Banking"
     },
     {
       "id": "rbi-opportunities",
@@ -94,7 +98,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: RBI Opportunities and Recruitment."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: RBI Opportunities and Recruitment.",
+      "exam_category": "Banking"
     },
     {
       "id": "nta",
@@ -113,7 +118,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: NTA exam notices and results."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: NTA exam notices and results.",
+      "exam_category": "Entrance & Eligibility"
     },
     {
       "id": "jeemain",
@@ -131,7 +137,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "exam_category": "Entrance & Eligibility"
     },
     {
       "id": "neet",
@@ -149,7 +156,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "exam_category": "Entrance & Eligibility"
     },
     {
       "id": "cuet",
@@ -167,7 +175,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "exam_category": "Entrance & Eligibility"
     },
     {
       "id": "ugcnet",
@@ -187,7 +196,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "exam_category": "Entrance & Eligibility"
     },
     {
       "id": "gate",
@@ -207,7 +217,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: GATE official portal (current-year URL changes annually)."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: GATE official portal (current-year URL changes annually).",
+      "exam_category": "Entrance & Eligibility"
     },
     {
       "id": "upsc-results",
@@ -223,7 +234,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "exam_category": "UPSC / Central Recruitment"
     },
     {
       "id": "rrb-bbs",
@@ -240,7 +252,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "exam_category": "Railways"
     },
     {
       "id": "rrb-sec",
@@ -257,7 +270,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "exam_category": "Railways"
     },
     {
       "id": "cbse",
@@ -278,7 +292,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official CBSE notices and press releases page, which lists exam-result announcements, admit cards and exam-related updates."
+      "coverage_note": "Official CBSE notices and press releases page, which lists exam-result announcements, admit cards and exam-related updates.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "cisce",
@@ -294,7 +309,8 @@
       ],
       "enabled": false,
       "last_reviewed": null,
-      "coverage_note": "Temporarily disabled because automated requests from the hosted runner are blocked (HTTP 403). Do not bypass the site's access controls; restore only when an approved feed or permitted access method is available."
+      "coverage_note": "Temporarily disabled because automated requests from the hosted runner are blocked (HTTP 403). Do not bypass the site's access controls; restore only when an approved feed or permitted access method is available.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "nios",
@@ -310,7 +326,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "up-board",
@@ -326,7 +343,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "mpbse",
@@ -342,7 +360,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "cgbse",
@@ -363,7 +382,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Chhattisgarh Board of Secondary Education Results."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Chhattisgarh Board of Secondary Education Results.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "bseb",
@@ -379,7 +399,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "rajeduboard",
@@ -401,7 +422,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Rajasthan Board of Secondary Education."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Rajasthan Board of Secondary Education.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "gseb",
@@ -422,7 +444,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Gujarat Secondary and Higher Secondary Education Board."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Gujarat Secondary and Higher Secondary Education Board.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "mahresult",
@@ -503,7 +526,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Board of Secondary Education Odisha."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Board of Secondary Education Odisha.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "karnataka-board",
@@ -524,7 +548,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "telangana-board",
@@ -546,7 +571,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Telangana Board of Secondary Education."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Telangana Board of Secondary Education.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "andhra-board",
@@ -568,7 +594,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Andhra Pradesh Board of Secondary Education."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Andhra Pradesh Board of Secondary Education.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "haryana-board",
@@ -589,7 +616,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Board of School Education Haryana."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Board of School Education Haryana.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "punjab-board",
@@ -610,7 +638,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Punjab School Education Board Results."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Punjab School Education Board Results.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "assam-board",
@@ -626,7 +655,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "jkbose",
@@ -645,7 +675,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: JKBOSE results."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: JKBOSE results.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "upsssc",
@@ -662,7 +693,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "mppsc",
@@ -678,7 +710,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "cgpsc",
@@ -694,7 +727,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "bpsc",
@@ -710,7 +744,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "rpsc",
@@ -726,7 +761,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "gpsc",
@@ -742,7 +778,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "tnpsc",
@@ -758,7 +795,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "keralapsc",
@@ -777,7 +815,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Kerala PSC candidate portal landing page."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Kerala PSC candidate portal landing page.",
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "mpsc",
@@ -796,7 +835,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "wbpsc",
@@ -815,7 +855,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "appsc",
@@ -834,7 +875,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "tspsc",
@@ -850,7 +892,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "opsc",
@@ -869,7 +912,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "hpsc",
@@ -888,7 +932,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "uppsc",
@@ -904,7 +949,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "nabard",
@@ -942,7 +988,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Banking"
     },
     {
       "id": "niacl",
@@ -961,7 +1008,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Banking"
     },
     {
       "id": "epfindia",
@@ -1000,7 +1048,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "UPSC / Central Recruitment"
     },
     {
       "id": "nta-exams",
@@ -1019,7 +1068,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Entrance & Eligibility"
     },
     {
       "id": "nta-cuetpg",
@@ -1038,7 +1088,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages. Also covers duplicate registry entries: CUET PG portal."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages. Also covers duplicate registry entries: CUET PG portal.",
+      "exam_category": "Entrance & Eligibility"
     },
     {
       "id": "nta-csirnet",
@@ -1057,7 +1108,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Entrance & Eligibility"
     },
     {
       "id": "jeeadv",
@@ -1076,7 +1128,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Entrance & Eligibility"
     },
     {
       "id": "ctet",
@@ -1095,7 +1148,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Teaching / Eligibility"
     },
     {
       "id": "kvs",
@@ -1152,7 +1206,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Updated to the NTA's currently listed NCHM JEE official portal."
+      "coverage_note": "Updated to the NTA's currently listed NCHM JEE official portal.",
+      "exam_category": "Entrance & Eligibility"
     },
     {
       "id": "rrb-ahmedabad",
@@ -1171,7 +1226,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Railways"
     },
     {
       "id": "rrb-ajmer",
@@ -1190,7 +1246,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Railways"
     },
     {
       "id": "rrb-allahabad",
@@ -1209,7 +1266,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Railways"
     },
     {
       "id": "rrb-bangalore",
@@ -1228,7 +1286,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Railways"
     },
     {
       "id": "rrb-bhopal",
@@ -1247,7 +1306,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Railways"
     },
     {
       "id": "rrb-bilaspur",
@@ -1266,7 +1326,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Railways"
     },
     {
       "id": "rrb-chandigarh",
@@ -1285,7 +1346,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Railways"
     },
     {
       "id": "rrb-chennai",
@@ -1304,7 +1366,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Railways"
     },
     {
       "id": "rrb-gorakhpur",
@@ -1323,7 +1386,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Railways"
     },
     {
       "id": "rrb-guwahati",
@@ -1342,7 +1406,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Railways"
     },
     {
       "id": "rrb-jammu",
@@ -1361,7 +1426,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages. Also covers duplicate registry entries: RRB Jammu."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages. Also covers duplicate registry entries: RRB Jammu.",
+      "exam_category": "Railways"
     },
     {
       "id": "rrb-kolkata",
@@ -1380,7 +1446,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Railways"
     },
     {
       "id": "rrb-malabar",
@@ -1399,7 +1466,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Railways"
     },
     {
       "id": "rrb-mumbai",
@@ -1418,7 +1486,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Railways"
     },
     {
       "id": "rrb-muzaffarpur",
@@ -1437,7 +1506,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Railways"
     },
     {
       "id": "rrb-patna",
@@ -1456,7 +1526,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Railways"
     },
     {
       "id": "rrb-ranchi",
@@ -1475,7 +1546,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Railways"
     },
     {
       "id": "rrb-siliguri",
@@ -1494,7 +1566,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Railways"
     },
     {
       "id": "rrc-central",
@@ -1513,7 +1586,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Railways"
     },
     {
       "id": "rrc-northern",
@@ -1532,7 +1606,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Railways"
     },
     {
       "id": "rrc-western",
@@ -1551,7 +1626,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Railways"
     },
     {
       "id": "rrc-eastern",
@@ -1570,7 +1646,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Railways"
     },
     {
       "id": "rrc-south-central",
@@ -1589,7 +1666,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Railways"
     },
     {
       "id": "apsc",
@@ -1608,7 +1686,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "arunachal-psc",
@@ -1627,7 +1706,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "manipur-psc",
@@ -1646,7 +1726,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "meghalaya-psc",
@@ -1665,7 +1746,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "mizoram-psc",
@@ -1684,7 +1766,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "nagaland-psc",
@@ -1703,7 +1786,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "sikkim-psc",
@@ -1722,7 +1806,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "tripura-psc",
@@ -1741,7 +1826,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "jharkhand-psc",
@@ -1760,7 +1846,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "uttarakhand-psc",
@@ -1779,7 +1866,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "hpssc",
@@ -1817,7 +1905,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "jkpsc",
@@ -1836,7 +1925,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "dsssb",
@@ -1855,7 +1945,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "bssc",
@@ -1874,7 +1965,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "SSC / Central Recruitment"
     },
     {
       "id": "btsc",
@@ -1912,7 +2004,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "SSC / Central Recruitment"
     },
     {
       "id": "osssc",
@@ -1931,7 +2024,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "SSC / Central Recruitment"
     },
     {
       "id": "ossc",
@@ -1950,7 +2044,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "SSC / Central Recruitment"
     },
     {
       "id": "maha-rojgar",
@@ -1988,7 +2083,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "bihar-police",
@@ -2007,7 +2103,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "bihar-daroga",
@@ -2026,7 +2123,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "State Recruitment / Police"
     },
     {
       "id": "mpesb",
@@ -2045,7 +2143,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "vyapam-cg",
@@ -2083,7 +2182,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "rajasthan-police",
@@ -2102,7 +2202,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "State Recruitment / Police"
     },
     {
       "id": "gujarat-ojas",
@@ -2140,7 +2241,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "tnusrb",
@@ -2159,7 +2261,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "tntrb",
@@ -2178,7 +2281,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "tnmrbrecruit",
@@ -2197,7 +2301,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "kerala-devaswom",
@@ -2216,7 +2321,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "karnataka-kea",
@@ -2254,7 +2360,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "karnataka-police",
@@ -2273,7 +2380,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "State Recruitment / Police"
     },
     {
       "id": "telangana-tslprb",
@@ -2292,7 +2400,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official Telangana Police Recruitment Board website, confirmed as tgprb.in; monitor this canonical domain."
+      "coverage_note": "Official Telangana Police Recruitment Board website, confirmed as tgprb.in; monitor this canonical domain.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "ap-police",
@@ -2311,7 +2420,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "wbssc",
@@ -2349,7 +2459,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "punjab-psc",
@@ -2368,7 +2479,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "punjab-sssb",
@@ -2387,7 +2499,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "assam-direct",
@@ -2425,7 +2538,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "maharashtra-board",
@@ -2446,7 +2560,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "karnataka-results",
@@ -2617,7 +2732,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages. Also covers duplicate registry entries: National Board of Examinations in Medical Sciences."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages. Also covers duplicate registry entries: National Board of Examinations in Medical Sciences.",
+      "exam_category": "Entrance & Eligibility"
     },
     {
       "id": "nmc",
@@ -2714,7 +2830,8 @@
       ],
       "enabled": true,
       "last_reviewed": "2026-10-16",
-      "coverage_note": "Official active-examinations list; covers UPSC civil services, NDA, CDS, CAPF, engineering, medical and other examinations."
+      "coverage_note": "Official active-examinations list; covers UPSC civil services, NDA, CDS, CAPF, engineering, medical and other examinations.",
+      "exam_category": "UPSC / Central Recruitment"
     },
     {
       "id": "upsc-online-ora",
@@ -2735,7 +2852,8 @@
       ],
       "enabled": true,
       "last_reviewed": "2026-10-16",
-      "coverage_note": "Official UPSC online recruitment application portal."
+      "coverage_note": "Official UPSC online recruitment application portal.",
+      "exam_category": "UPSC / Central Recruitment"
     },
     {
       "id": "rrcb-central",
@@ -2756,7 +2874,8 @@
       ],
       "enabled": true,
       "last_reviewed": "2026-10-16",
-      "coverage_note": "Central RRB recruitment, notification and result status information. Also covers duplicate registry entries: Railway Recruitment Boards Central Directory."
+      "coverage_note": "Central RRB recruitment, notification and result status information. Also covers duplicate registry entries: Railway Recruitment Boards Central Directory.",
+      "exam_category": "Railways"
     },
     {
       "id": "indiapost-recruitment",
@@ -2820,7 +2939,8 @@
       ],
       "enabled": true,
       "last_reviewed": "2026-10-16",
-      "coverage_note": "Official Navy officer and Agniveer recruitment updates. Also covers duplicate registry entries: Indian Navy Recruitment."
+      "coverage_note": "Official Navy officer and Agniveer recruitment updates. Also covers duplicate registry entries: Indian Navy Recruitment.",
+      "exam_category": "Defence"
     },
     {
       "id": "indian-army",
@@ -2841,7 +2961,8 @@
       ],
       "enabled": true,
       "last_reviewed": "2026-10-16",
-      "coverage_note": "Official Army recruitment and Agniveer notices. Also covers duplicate registry entries: Indian Army Recruitment."
+      "coverage_note": "Official Army recruitment and Agniveer notices. Also covers duplicate registry entries: Indian Army Recruitment.",
+      "exam_category": "Defence"
     },
     {
       "id": "indian-airforce-afcat",
@@ -2862,7 +2983,8 @@
       ],
       "enabled": true,
       "last_reviewed": "2026-10-16",
-      "coverage_note": "Official AFCAT application and examination portal."
+      "coverage_note": "Official AFCAT application and examination portal.",
+      "exam_category": "Defence"
     },
     {
       "id": "indian-airforce-careers",
@@ -2883,7 +3005,8 @@
       ],
       "enabled": true,
       "last_reviewed": "2026-10-16",
-      "coverage_note": "Official Indian Air Force recruitment/career portal. Also covers duplicate registry entries: Indian Air Force Recruitment."
+      "coverage_note": "Official Indian Air Force recruitment/career portal. Also covers duplicate registry entries: Indian Air Force Recruitment.",
+      "exam_category": "Defence"
     },
     {
       "id": "fci-recruitment",
@@ -2988,7 +3111,8 @@
       ],
       "enabled": true,
       "last_reviewed": "2026-10-16",
-      "coverage_note": "Official ESIC recruitment and examination notices."
+      "coverage_note": "Official ESIC recruitment and examination notices.",
+      "exam_category": "Banking"
     },
     {
       "id": "nielit-recruitment",
@@ -3072,7 +3196,8 @@
       ],
       "enabled": true,
       "last_reviewed": "2026-10-16",
-      "coverage_note": "Official pension regulator recruitment announcements."
+      "coverage_note": "Official pension regulator recruitment announcements.",
+      "exam_category": "Banking"
     },
     {
       "id": "sidbi-careers",
@@ -3156,7 +3281,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official CBSE/NIC result portal; use the non-www hostname to avoid the observed www DNS failure."
+      "coverage_note": "Official CBSE/NIC result portal; use the non-www hostname to avoid the observed www DNS failure.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "cisce-results",
@@ -3177,7 +3303,8 @@
       ],
       "enabled": false,
       "last_reviewed": null,
-      "coverage_note": "Disabled because the official results portal terms expressly prohibit automated scraping; monitor CISCE's official main website for public notices instead."
+      "coverage_note": "Disabled because the official results portal terms expressly prohibit automated scraping; monitor CISCE's official main website for public notices instead.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "crpf-results",
@@ -3200,7 +3327,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "CRPF official recruitment/results URLs redirect to crpf.mha.gov.in; allowlist includes the official redirect target."
+      "coverage_note": "CRPF official recruitment/results URLs redirect to crpf.mha.gov.in; allowlist includes the official redirect target.",
+      "exam_category": "Defence"
     },
     {
       "id": "crpf-recruitment",
@@ -3223,7 +3351,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "CRPF official recruitment/results URLs redirect to crpf.mha.gov.in; allowlist includes the official redirect target."
+      "coverage_note": "CRPF official recruitment/results URLs redirect to crpf.mha.gov.in; allowlist includes the official redirect target.",
+      "exam_category": "Defence"
     },
     {
       "id": "ssb-recruitment",
@@ -3244,7 +3373,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
+      "exam_category": "Defence"
     },
     {
       "id": "coast-guard-recruitment",
@@ -3307,7 +3437,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
+      "exam_category": "Defence"
     },
     {
       "id": "hpbose-results",
@@ -3328,7 +3459,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "ubse-results",
@@ -3349,7 +3481,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "manipur-board",
@@ -3370,7 +3503,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "tripura-board",
@@ -3391,7 +3525,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "meghalaya-board",
@@ -3412,7 +3547,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "mizoram-board",
@@ -3433,7 +3569,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "nagaland-board",
@@ -3454,7 +3591,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "sikkim-board",
@@ -3475,7 +3613,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "goa-board",
@@ -3496,7 +3635,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official Goa Board site; www hostname used because the bare domain had intermittent DNS failures."
+      "coverage_note": "Official Goa Board site; www hostname used because the bare domain had intermittent DNS failures.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "kerala-board-official",
@@ -3517,7 +3657,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "assam-board-official",
@@ -3538,7 +3679,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "westbengal-board-official",
@@ -3559,7 +3701,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "tamilnadu-board-official",
@@ -3580,7 +3723,100 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official Directorate of Government Examinations portal; canonical non-www hostname."
+      "coverage_note": "Official Directorate of Government Examinations portal; canonical non-www hostname.",
+      "exam_category": "School Board Results"
+    },
+    {
+      "id": "ibps-recent-updates",
+      "name": "IBPS Recent Updates",
+      "url": "https://www.ibps.in/index.php/crp-updates/",
+      "kind": "html",
+      "allowed_hosts": [
+        "ibps.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "exam_category": "Banking",
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Dedicated IBPS recent-updates page for CRP PO, SO, CSA/Clerk, RRB and recruitment notices."
+    },
+    {
+      "id": "ibps-po-mt",
+      "name": "IBPS PO / Management Trainees",
+      "url": "https://www.ibps.in/index.php/management-trainees-xvi/",
+      "kind": "html",
+      "allowed_hosts": [
+        "ibps.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "exam_category": "Banking",
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Dedicated current IBPS PO/MT examination page; page content changes with notices and results."
+    },
+    {
+      "id": "sbi-current-openings",
+      "name": "SBI Current Openings",
+      "url": "https://sbi.bank.in/en/web/careers/current-openings",
+      "kind": "html",
+      "allowed_hosts": [
+        "sbi.bank.in",
+        "bank.sbi",
+        "sbi.co.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "exam_category": "Banking",
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Dedicated official SBI careers current-openings page."
+    },
+    {
+      "id": "sbi-recruitment-results",
+      "name": "SBI Recruitment Results",
+      "url": "https://sbi.bank.in/en/web/careers/recruitment-results",
+      "kind": "html",
+      "allowed_hosts": [
+        "sbi.bank.in",
+        "bank.sbi",
+        "sbi.co.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "exam_category": "Banking",
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Dedicated official SBI recruitment-results page."
     }
   ]
 }
