@@ -20,7 +20,7 @@ ADMIN = os.getenv("TG_ADMIN", "").strip()
 CHANNEL = os.getenv("TG_CHANNEL", "").strip()
 TG_RATE_LIMITED = False
 
-TIMEOUT = max(4, min(int(os.getenv("SOURCE_TIMEOUT_SECONDS", "6")), 10))
+TIMEOUT = max(6, min(int(os.getenv("SOURCE_TIMEOUT_SECONDS", "12")), 20))
 WORKERS = max(1, min(int(os.getenv("SOURCE_WORKERS", "8")), 12))
 MAX_NEW_PER_SOURCE = max(1, min(int(os.getenv("MAX_NEW_PER_SOURCE", "5")), 20))
 MAX_AGE_DAYS = 90
@@ -125,7 +125,7 @@ def get_with_retries(url, headers=None):
             response = requests.get(
                 url,
                 headers=headers or HEADERS,
-                timeout=(3, TIMEOUT),
+                timeout=(8, TIMEOUT),
                 allow_redirects=True,
             )
 
