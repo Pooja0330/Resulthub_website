@@ -235,3 +235,7 @@
 #grh-language-control .grh-language-drag{border:0;background:#eaf2ff;color:#174f9c;border-radius:6px;min-width:26px;min-height:26px;font-size:18px;line-height:1;cursor:grab;touch-action:none}
 #grh-language-control .grh-language-drag:active{cursor:grabbing}
 @media(max-width:680px){#grh-language-control{left:8px;right:auto;bottom:72px;top:auto;max-width:calc(100vw - 16px)}}
+
+/* Keep alert popups from covering the page on initial load. */
+#grh-live-alerts .grh-toast-stack{max-height:42vh;overflow-y:auto;}
+#grh-live-alerts .grh-toast{max-width:min(360px,calc(100vw - 32px));}
