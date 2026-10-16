@@ -2947,6 +2947,448 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+    },
+    {
+      "id": "upsc-active-exams",
+      "name": "UPSC Active Examinations",
+      "url": "https://www.upsc.gov.in/examinations/active-exams",
+      "kind": "html",
+      "allowed_hosts": [
+        "upsc.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Official active-examinations list; covers UPSC civil services, NDA, CDS, CAPF, engineering, medical and other examinations."
+    },
+    {
+      "id": "upsc-online-ora",
+      "name": "UPSC Online Recruitment Applications",
+      "url": "https://upsconline.nic.in/ora/",
+      "kind": "html",
+      "allowed_hosts": [
+        "upsconline.nic.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Official UPSC online recruitment application portal."
+    },
+    {
+      "id": "rrcb-central",
+      "name": "Railway Recruitment Control Board",
+      "url": "https://www.rrcb.gov.in/recruitment.html",
+      "kind": "html",
+      "allowed_hosts": [
+        "rrcb.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Central RRB recruitment, notification and result status information."
+    },
+    {
+      "id": "indiapost-recruitment",
+      "name": "India Post Recruitment Notices",
+      "url": "https://www.indiapost.gov.in/vacancies/recruitments",
+      "kind": "html",
+      "allowed_hosts": [
+        "indiapost.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Official Department of Posts recruitment listings."
+    },
+    {
+      "id": "indiapost-gds",
+      "name": "India Post Gramin Dak Sevak Recruitment",
+      "url": "https://www.indiapost.gov.in/gdsonlineengagement",
+      "kind": "html",
+      "allowed_hosts": [
+        "indiapost.gov.in",
+        "indiapostgdsonline.cept.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Official GDS engagement schedule, notices and shortlisted candidates."
+    },
+    {
+      "id": "indian-navy",
+      "name": "Join Indian Navy",
+      "url": "https://www.joinindiannavy.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "joinindiannavy.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Official Navy officer and Agniveer recruitment updates."
+    },
+    {
+      "id": "indian-army",
+      "name": "Join Indian Army",
+      "url": "https://joinindianarmy.nic.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "joinindianarmy.nic.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Official Army recruitment and Agniveer notices."
+    },
+    {
+      "id": "indian-airforce-afcat",
+      "name": "Indian Air Force AFCAT",
+      "url": "https://afcat.cdac.in/AFCAT/",
+      "kind": "html",
+      "allowed_hosts": [
+        "afcat.cdac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Official AFCAT application and examination portal."
+    },
+    {
+      "id": "indian-airforce-careers",
+      "name": "Indian Air Force Career Portal",
+      "url": "https://careerindianairforce.cdac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "careerindianairforce.cdac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Official Indian Air Force recruitment/career portal."
+    },
+    {
+      "id": "fci-recruitment",
+      "name": "Food Corporation of India Recruitment",
+      "url": "https://fci.gov.in/recruitment",
+      "kind": "html",
+      "allowed_hosts": [
+        "fci.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Official FCI recruitment notices."
+    },
+    {
+      "id": "drdo-rac",
+      "name": "DRDO Recruitment and Assessment Centre",
+      "url": "https://rac.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "rac.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Official DRDO scientist recruitment, advertisements and recruitment notices."
+    },
+    {
+      "id": "isro-careers",
+      "name": "ISRO Current Opportunities",
+      "url": "https://www.isro.gov.in/ISRO_EN/CurrentOpportunities.html",
+      "kind": "html",
+      "allowed_hosts": [
+        "isro.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Official ISRO recruitment and centralised recruitment opportunities."
+    },
+    {
+      "id": "aiims-exams",
+      "name": "AIIMS Examination Section",
+      "url": "https://www.aiimsexams.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "aiimsexams.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Official AIIMS entrance examinations, recruitment examinations and results."
+    },
+    {
+      "id": "esic-recruitment",
+      "name": "Employees State Insurance Corporation Recruitment",
+      "url": "https://www.esic.gov.in/recruitments",
+      "kind": "html",
+      "allowed_hosts": [
+        "esic.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Official ESIC recruitment and examination notices."
+    },
+    {
+      "id": "nielit-recruitment",
+      "name": "NIELIT Recruitment",
+      "url": "https://www.nielit.gov.in/recruitments",
+      "kind": "html",
+      "allowed_hosts": [
+        "nielit.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Official NIELIT recruitment and examination notices."
+    },
+    {
+      "id": "sebi-careers",
+      "name": "SEBI Careers and Recruitment",
+      "url": "https://www.sebi.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "sebi.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Official securities regulator notices and recruitment announcements."
+    },
+    {
+      "id": "irdai-careers",
+      "name": "IRDAI Recruitment",
+      "url": "https://irdai.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "irdai.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Official insurance regulator recruitment and examination notices."
+    },
+    {
+      "id": "pfrda-careers",
+      "name": "PFRDA Recruitment",
+      "url": "https://www.pfrda.org.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "pfrda.org.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Official pension regulator recruitment announcements."
+    },
+    {
+      "id": "sidbi-careers",
+      "name": "SIDBI Careers",
+      "url": "https://www.sidbi.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "sidbi.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Official SIDBI recruitment announcements."
+    },
+    {
+      "id": "csir-hrdg",
+      "name": "CSIR Human Resource Development Group",
+      "url": "https://csirhrdg.res.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "csirhrdg.res.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Official CSIR examination and fellowship notices including NET."
+    },
+    {
+      "id": "barc-recruitment",
+      "name": "BARC Recruitment",
+      "url": "https://recruit.barc.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "barc.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "coverage_note": "Official BARC recruitment portal."
     }
   ]
 }
