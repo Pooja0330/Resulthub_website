@@ -45,8 +45,8 @@ jobs:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_ADMIN: ${{ secrets.TG_ADMIN }}
           TG_CHANNEL: ${{ secrets.TG_CHANNEL }}
-          SOURCE_TIMEOUT_SECONDS: "12"
-          SOURCE_WORKERS: "6"
+          SOURCE_TIMEOUT_SECONDS: "8"
+          SOURCE_WORKERS: "8"
           MAX_NEW_PER_SOURCE: "5"
         run: python checker/check.py
 
