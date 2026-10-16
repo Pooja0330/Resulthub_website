@@ -7,7 +7,7 @@ import time
 import hashlib
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
-from urllib.parse import urlparse, urljoin, parse_qsl, urlencode, urlunparse
+from urllib.parse import urlparse, urljoin, parse_qsl, urlencode, urlunparse, quote_plus
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import requests
@@ -348,7 +348,7 @@ def get_with_retries(url, headers=None):
     raise RuntimeError("Request failed after retries")
 
 
-def telegram_send(chat_id, message):
+def telegram_send(chat_id, message, reply_markup=None):
     global TG_RATE_LIMITED
     if TG_RATE_LIMITED:
         print('Telegram is rate-limited; skipping further sends this run')
@@ -364,6 +364,7 @@ def telegram_send(chat_id, message):
                 "chat_id": chat_id,
                 "text": message[:3900],
                 "disable_web_page_preview": True,
+                **({"reply_markup": reply_markup} if reply_markup else {}),
             },
             timeout=(5, 15),
         )
@@ -800,6 +801,7 @@ def main():
 
         direct_url = str(item.get("url", "")).strip()
         source_page = str(item.get("source_url", "")).strip()
+        website_url = "https://goresulthub.com/?q=" + quote_plus(str(item.get("title", "")).strip())
         message = (
             "🔔 GoResultHub | Potential Exam Update\n\n"
             f"Authority: {item.get('source_name', 'Official authority')}\n"
@@ -807,16 +809,19 @@ def main():
             f"Exam year: {exam_year_from_title(item.get('title', '')) or 'Not stated in title'}\n"
             f"Notice date: {format_notice_date(item.get('published', '')) or 'Not shown on source listing'}\n\n"
             f"{item.get('title', 'New official link')}\n\n"
-            + f"📄 OPEN NOTICE / RESULT:\n{direct_url}\n\n"
-            + f"🌐 OFFICIAL AUTHORITY WEBSITE:\n{source_page or 'Official website link unavailable; search the authority name on its official portal.'}\n"
+            + f"🌐 VIEW THIS UPDATE ON GORESULTHUB:\n{website_url}\n\n"
+            + f"📄 Official-source link (confirm details on the authority site):\n{direct_url}\n"
         )
+        keyboard = {"inline_keyboard": [[{"text": "🔎 View on GoResultHub", "url": website_url}]]}
+        if direct_url.startswith("https://"):
+            keyboard["inline_keyboard"].append([{"text": "📄 Open official source", "url": direct_url}])
 
         if not CHANNEL:
             print("TG_CHANNEL is missing; public alert remains pending")
             break
 
         public_attempts += 1
-        if telegram_send(CHANNEL, message):
+        if telegram_send(CHANNEL, message, reply_markup=keyboard):
             # Stay comfortably below Telegram's per-chat send rate.
             time.sleep(1.1)
             seen[key] = {
@@ -872,6 +877,7 @@ def main():
 
         source_page = str(source.get("url", "")).strip()
         direct_url = url
+        website_url = "https://goresulthub.com/?q=" + quote_plus(str(item.get("title", "")).strip())
         message = (
             "📢 GoResultHub | Approved Exam Update\n\n"
             f"Authority: {item['source_name']}\n"
@@ -879,12 +885,15 @@ def main():
             f"Exam year: {exam_year_from_title(item.get('title', '')) or 'Not stated in title'}\n"
             f"Notice date: {format_notice_date(item.get('published', '')) or 'Not shown on source listing'}\n\n"
             f"{item.get('title', '')}\n\n"
-            + f"📄 OPEN NOTICE / RESULT:\n{direct_url}\n\n"
-            + f"🌐 OFFICIAL AUTHORITY WEBSITE:\n{source_page or 'Official website link unavailable; search the authority name on its official portal.'}\n"
+            + f"🌐 VIEW THIS UPDATE ON GORESULTHUB:\n{website_url}\n\n"
+            + f"📄 Official-source link (confirm details on the authority site):\n{direct_url}\n"
         )
+        keyboard = {"inline_keyboard": [[{"text": "🔎 View on GoResultHub", "url": website_url}]]}
+        if direct_url.startswith("https://"):
+            keyboard["inline_keyboard"].append([{"text": "📄 Open official source", "url": direct_url}])
 
         approved_attempts += 1
-        if not telegram_send(CHANNEL, message):
+        if not telegram_send(CHANNEL, message, reply_markup=keyboard):
             remaining_approved.append(item)
         else:
             time.sleep(1.1)
