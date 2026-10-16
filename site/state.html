@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Browse state-wise Indian exam notifications, admit cards, answer keys, merit lists and results with links to official authorities.">
+<meta name="robots" content="index,follow"><meta name="theme-color" content="#123c75">
+<title>State Exam Notifications & Results | GoResultHub</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top"><a class="brand" href="./"><span class="logo">GR</span><span>GoResultHub<small>Exam updates with links to official websites</small></span></a><nav><a href="index.html">All India updates</a><a href="about.html">About</a><a href="disclaimer.html">Disclaimer</a></nav></header>
+<main>
+<section class="state-hero"><p class="eyebrow">STATE-WISE EXAM DIRECTORY</p><h1 id="stateTitle">Select a state or Union Territory</h1><p id="stateIntro">Choose a location below to view its exam notifications and results.</p><a id="allIndiaLink" href="index.html" class="state-back">← All India updates</a></section>
+<div class="state-page-layout">
+<aside class="state-directory"><div class="state-directory-head"><p class="eyebrow">BROWSE LOCATIONS</p><h2>All States &amp; UTs</h2><p>Choose a state to open its dedicated page.</p></div><div id="stateDirectory" class="state-directory-list"></div></aside>
+<section class="state-page-content">
+<div class="state-section-head"><div><p class="eyebrow">OFFICIAL LINKS</p><h2>Recruitment, boards &amp; results portals</h2></div></div>
+<div id="officialPortals" class="state-portal-links"></div>
+<div id="stateFilters" class="state-filters hidden"><div class="state-section-head"><div><p class="eyebrow">LATEST UPDATES</p><h2>Notifications &amp; results</h2></div><span id="stateCount" class="count">Loading…</span></div>
+<div class="filters"><label>Exam family<select id="examFamily"><option value="">All exam families</option><option>UPSC / Central Recruitment</option><option>SSC / Central Recruitment</option><option>Banking</option><option>Railways</option><option>School Board Results</option><option>Entrance &amp; Eligibility</option><option>State PSC / Recruitment</option><option>State Recruitment / Police</option><option>Teaching / Eligibility</option><option>Defence</option><option>Professional Exams</option></select></label><label>Update type<select id="updateType"><option value="">All updates</option><option value="notification">Notifications</option><option value="result">Results</option><option value="admit_card">Admit cards</option><option value="answer_key">Answer keys</option><option value="merit_list">Merit lists</option><option value="cutoff">Cutoffs</option><option value="exam_schedule">Exam schedules</option></select></label></div>
+<div id="stateUpdates" class="cards"></div><p id="noStateUpdates" class="empty hidden">No state-specific updates are currently indexed. Check the official portals above; new updates will appear when the monitor detects them.</p><div id="statePagination" class="pagination"></div></div>
+</section></div>
+</main>
+<footer><div><a class="brand footbrand" href="./"><span class="logo">GR</span><span>GoResultHub<small>Exam updates with links to official websites</small></span></a><p>Find exam updates and links to relevant official government, examination board, university and recruitment websites in one place.</p></div><div class="footlinks"><a href="about.html">About</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="disclaimer.html">Disclaimer</a><a href="contact.html">Contact</a></div><p class="copyright">© GoResultHub</p></footer>
+<script src="state.js" defer></script>
+</body></html>
