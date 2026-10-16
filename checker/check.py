@@ -69,6 +69,10 @@ RULES = [
         r"additional vacancies|selection process for|selection list for recruitment|"
         r"preliminary examination|prelims examination|main examination|mains examination|"
         r"preliminary test|preliminary exam|mains exam|main written examination|"
+        r"public notice|important notice|notice regarding|exam notice|examination notice|"
+        r"admission notice|admission schedule|counselling schedule|counseling schedule|"
+        r"application correction|correction window|registration extension|"
+        r"exam-related circular|examination circular|"
         r"civil services \(preliminary\)|civil services \(main\)|state services \(preliminary\)|"
         r"state services \(main\))\b", re.I)),
 ]
@@ -508,8 +512,10 @@ def fetch_source(source):
             )
             if context and classify(context) and generic_label and len(context) > len(title) + 10:
                 title = context
-            elif context and classify(context) and not classify(title) and title.lower() not in context.lower():
-                title = (context + " — " + title).strip(" —")
+            elif context and classify(context) and not classify(title):
+                # Use the official row/card text once; concatenating it with the
+                # link label creates duplicated, noisy titles from navigation-heavy pages.
+                title = context
 
             published = extract_notice_date(context) or extract_notice_date(title)
             links.append((
