@@ -8,8 +8,10 @@
   const sorted = items => items.filter(x => !x.archive).slice().sort((a,b) => stamp(b)-stamp(a));
   const stateName = () => new URLSearchParams(location.search).get("state") || "";
   const stateFor = item => {
-    const raw = String(item.state || item.region || "").trim();
-    if (raw && raw !== "Central" && raw !== "All India") return raw;
+    const stateValue = String(item.state || "").trim();
+    if (stateValue && stateValue !== "Central" && stateValue !== "All India") return stateValue;
+    const regionValue = String(item.region || "").trim();
+    if (regionValue && regionValue !== "Central" && regionValue !== "All India") return regionValue;
     const hay = [item.source_id,item.source_name,item.title,item.exam,item.url,item.source_url].join(" ").toLowerCase();
     const patterns = [
       ["Andhra Pradesh",/andhra pradesh|psc\.ap\.gov|bse\.ap\.gov|slprb\.ap/],["Arunachal Pradesh",/arunachal|appsc\.gov/],
