@@ -125,3 +125,22 @@
 .relative-detection-time{font-weight:800;color:#1458a6;white-space:nowrap}
 .exact-detection-time{display:inline-block;font-variant-numeric:tabular-nums;color:#52657e}
 @media(max-width:640px){.exact-detection-time{display:block;margin-top:3px}.relative-detection-time{white-space:normal}}
+
+/* Searchable exam directory: compact, responsive and easy to scan */
+.exam-directory{max-width:1440px;margin:28px auto 34px;padding:26px clamp(16px,3vw,36px);background:#fff;border:1px solid #e1e8f1;border-radius:20px;box-shadow:0 8px 28px rgba(25,53,91,.05)}
+.directory-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:16px}
+.directory-heading h2{font-size:clamp(1.45rem,2.4vw,2rem);margin:0 0 6px}.directory-heading p:not(.eyebrow){color:#60718a;margin:0;max-width:760px}
+.directory-all-states{display:inline-flex;align-items:center;white-space:nowrap;border:1px solid #cbd9ec;border-radius:10px;padding:10px 13px;font-weight:750}
+.directory-search{display:flex;align-items:center;gap:10px;background:#f7f9fc;border:1px solid #d7e0ec;border-radius:12px;padding:0 14px;margin:16px 0 20px}
+.directory-search input{width:100%;border:0!important;outline:0;background:transparent;padding:14px 0;font:inherit;box-shadow:none!important}.directory-search span:last-child{font-size:1.4rem;color:#667a96}
+.quick-exam-group{margin-top:22px}.quick-exam-group h3{font-size:1.05rem;margin:0 0 11px}.quick-exam-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.quick-exam-card{display:flex;flex-direction:column;align-items:flex-start;min-width:0;border:1px solid #e0e7f0;border-radius:13px;padding:15px;background:linear-gradient(180deg,#fff,#fbfcfe)}
+.quick-exam-tag{font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:#2059a3;background:#eaf2ff;border-radius:999px;padding:4px 8px}
+.quick-exam-card h4{font-size:1rem;margin:10px 0 4px}.quick-exam-card p{font-size:.84rem;color:#64748b;margin:0 0 12px;min-height:3.8em}
+.quick-exam-card a{font-size:.86rem;font-weight:750;margin-top:auto}
+.quick-exam-card button{margin-top:10px;border:1px solid #d3deed;border-radius:8px;background:#fff;color:#1b4f91;padding:8px 10px;font:inherit;font-size:.78rem;font-weight:750;cursor:pointer}
+.quick-exam-card button:hover,.directory-all-states:hover{background:#eef5ff;text-decoration:none}
+.quick-exam-empty{padding:16px;border:1px dashed #cbd7e6;border-radius:10px;color:#60718a}
+.directory-note{margin:18px 0 0;color:#6b7b90;font-size:.78rem}
+@media(max-width:1000px){.quick-exam-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.exam-directory{margin:18px 10px 24px;padding:18px 13px;border-radius:14px}.quick-exam-grid{grid-template-columns:1fr}.quick-exam-card p{min-height:0}.directory-all-states{white-space:normal}}
