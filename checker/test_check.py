@@ -79,6 +79,21 @@ class CheckerSafetyTests(unittest.TestCase):
             classify_source_title("Read More", {"include_all_items": True})
         )
 
+    def test_pib_navigation_links_are_not_indexed_as_updates(self):
+        from check import classify_source_title
+        for title in (
+            "Skip to Content",
+            "AccessibilityStatement",
+            "Screen Reader Access",
+            "About Us",
+            "Main Functions",
+            "Press Information Bureau",
+        ):
+            with self.subTest(title=title):
+                self.assertIsNone(
+                    classify_source_title(title, {"include_all_items": True})
+                )
+
 
 if __name__ == "__main__":
     unittest.main()
