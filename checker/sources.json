@@ -65,7 +65,8 @@
       "kind": "html",
       "allowed_hosts": [
         "bank.sbi",
-        "sbi.co.in"
+        "sbi.co.in",
+        "sbi.bank.in"
       ],
       "categories": [
         "result",
@@ -73,7 +74,7 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official SBI careers portal; uses bank.sbi as primary URL to avoid redirecting from the legacy host."
+      "coverage_note": "SBI officially migrated its corporate site to sbi.bank.in; this redirect target is allowlisted for careers links."
     },
     {
       "id": "rbi-opportunities",
@@ -3185,7 +3186,8 @@
       "kind": "html",
       "allowed_hosts": [
         "crpf.gov.in",
-        "rect.crpf.gov.in"
+        "rect.crpf.gov.in",
+        "crpf.mha.gov.in"
       ],
       "categories": [
         "result",
@@ -3198,7 +3200,7 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official CRPF recruitment/results pages may redirect to the official rect.crpf.gov.in recruitment portal; both official hosts are allowlisted."
+      "coverage_note": "CRPF official recruitment/results URLs redirect to crpf.mha.gov.in; allowlist includes the official redirect target."
     },
     {
       "id": "crpf-recruitment",
@@ -3207,7 +3209,8 @@
       "kind": "html",
       "allowed_hosts": [
         "crpf.gov.in",
-        "rect.crpf.gov.in"
+        "rect.crpf.gov.in",
+        "crpf.mha.gov.in"
       ],
       "categories": [
         "result",
@@ -3220,7 +3223,7 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official CRPF recruitment/results pages may redirect to the official rect.crpf.gov.in recruitment portal; both official hosts are allowlisted."
+      "coverage_note": "CRPF official recruitment/results URLs redirect to crpf.mha.gov.in; allowlist includes the official redirect target."
     },
     {
       "id": "ssb-recruitment",
