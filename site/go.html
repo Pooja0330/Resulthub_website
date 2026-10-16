@@ -28,7 +28,7 @@ document.title=title+" | GoResultHub";
 try{
  const destination=new URL(raw);
  if(destination.protocol!=="https:"||!destination.hostname||destination.hostname==="goresulthub.com"||destination.hostname.endsWith(".goresulthub.com"))throw new Error("invalid destination");
- authority.textContent="Official destination: "+source+" · "+destination.hostname;
+ authority.textContent="Official destination: "+(source&&source.toLowerCase()!==destination.hostname.toLowerCase()?source+" · "+destination.hostname:destination.hostname);
  link.href=destination.href;
  link.target="_blank";
  link.rel="noopener noreferrer";
