@@ -15,24 +15,28 @@
     merit_list:"Merit list",cutoff:"Cutoff",exam_schedule:"Exam schedule"
   }[value] || "Official update");
 
-  const cleanTitle = item => String(item.title || item.exam || "Official exam update").replace(/\\s+/g," ").replace(/\\s*[|·•].*$/,"").trim();
+  const cleanTitle = item => String(item.title || item.exam || "Official exam update").replace(/\s+/g," ").replace(/\s*[|·•].*$/,"").trim();
   const normalizedTitle = item => cleanTitle(item).toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
   const isNoise = item => {
     const title=normalizedTitle(item);
-    return !title || title.length<8 ||
-      /^(home about contact us|home about nta|read more|click here|official website|latest updates|notifications?)$/.test(title) ||
-      (/\\b(home about|contact us|faq|help desk|payment related|syllabus universities archive)\\b/.test(title) && title.split(" ").length>8);
+    if (!title || title.length<8) return true;
+    if (/^(home about contact us|home about nta|read more|click here|official website|latest updates|notifications?)$/.test(title)) return true;
+    // Some source pages expose the entire navigation menu as one giant "link".
+    const navMatches = title.match(/\b(home|about|contact us|faq|help desk|payment related|universities|archive|syllabus|information bulletin|public notices|nta help desk)\b/g) || [];
+    if (navMatches.length >= 4 && title.split(" ").length > 10) return true;
+    if (/\b(home about|contact us|faq|help desk|payment related|syllabus universities archive)\b/.test(title) && title.split(" ").length>8) return true;
+    return false;
   };
   const uniqueItems = items => {
     const keys=new Set();
     return items.filter(item=>{
       if(isNoise(item))return false;
-      const key=normalizedTitle(item)+"|"+String(item.source_name||item.authority||item.source_id||"").toLowerCase().replace(/\\s+/g," ").trim();
+      const key=normalizedTitle(item)+"|"+String(item.source_name||item.authority||item.source_id||"").toLowerCase().replace(/\s+/g," ").trim();
       if(keys.has(key))return false;
       keys.add(key);return true;
     });
   };
-  const identity = item => normalizedTitle(item)+"|"+String(item.source_name||item.authority||item.source_id||"").toLowerCase().replace(/\\s+/g," ").trim();
+  const identity = item => normalizedTitle(item)+"|"+String(item.source_name||item.authority||item.source_id||"").toLowerCase().replace(/\s+/g," ").trim();
   const readSeen = () => {
     try { const x=JSON.parse(localStorage.getItem(STORAGE_KEY)||"[]"); return new Set(Array.isArray(x)?x:[]); }
     catch (_) { return new Set(); }
@@ -54,7 +58,7 @@
     list.innerHTML = current.length ? current.map(item => {
       const url="https://goresulthub.com/notice.html?id="+encodeURIComponent(item.id||"")+"&q="+encodeURIComponent(item.title || item.exam || "");
       const date=item.published || item.detected_at || "";
-      const description=String(item.description || item.exam || "Open this update for full details.").replace(/\\s+/g," ").trim();
+      const description=String(item.description || item.exam || "Open this update for full details.").replace(/\s+/g," ").trim();
       const shortDescription=description.length>125?description.slice(0,122).trimEnd()+"…":description;
       return '<article class="grh-alert-item"><span class="grh-alert-type">'+esc(categoryName(item.category))+'</span><strong>'+esc(cleanTitle(item))+'</strong><p class="grh-alert-description">'+esc(shortDescription)+'</p><small>'+esc(item.source_name || item.authority || "Official source")+(date?' · '+esc(date):'')+'</small>'+(url?'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">View on GoResultHub ↗</a>':'<span class="grh-no-link">Official link not available in feed</span>')+'</article>';
     }).join("") : '<p class="grh-alert-empty">No updates have been indexed yet. Keep this page open; the panel checks the published feed periodically.</p>';
@@ -63,7 +67,7 @@
     const url="https://goresulthub.com/notice.html?id="+encodeURIComponent(item.id||"")+"&q="+encodeURIComponent(item.title || item.exam || "");
     const node=document.createElement("article");
     node.className="grh-toast";
-    const description=String(item.description || item.exam || "Open this update for full details.").replace(/\\s+/g," ").trim();
+    const description=String(item.description || item.exam || "Open this update for full details.").replace(/\s+/g," ").trim();
     const shortDescription=description.length>95?description.slice(0,92).trimEnd()+"…":description;
     node.innerHTML='<div class="grh-toast-top"><span>NEW OFFICIAL UPDATE</span><button type="button" aria-label="Dismiss">×</button></div><strong>'+esc(cleanTitle(item))+'</strong><small>'+esc(shortDescription)+'</small><small>'+esc(item.source_name || item.authority || "Official source")+' · '+esc(categoryName(item.category))+'</small>'+(url?'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">View update ↗</a>':'');
     node.querySelector("button").addEventListener("click",()=>node.remove());
