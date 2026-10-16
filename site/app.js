@@ -329,8 +329,9 @@ function resetUpdateFilters(){
 function init(){
  $("#year").textContent=new Date().getFullYear();
  resetUpdateFilters();
- const sharedQuery=new URLSearchParams(window.location.search).get("q");
- if(sharedQuery){$("#q").value=sharedQuery;page=1;}
+ // Start with a clean homepage on every load; search text is not a persistent filter.
+ $("#q").value="";
+ if(window.location.search){history.replaceState(null,"",window.location.pathname+window.location.hash);}
  try{const cached=JSON.parse(localStorage.getItem("goresult-results-cache")||"null");if(Array.isArray(cached?.items)){allItems=cached.items;render()}}catch(e){}
  refresh();
  if(refreshTimer)clearInterval(refreshTimer);
