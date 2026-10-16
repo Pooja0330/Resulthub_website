@@ -574,20 +574,33 @@ def main():
     save_json("checker/approved.json", {"pending": remaining_approved})
     save_json("site/data/results.json", results)
 
+    failure_types = {}
+    for source_health in health.values():
+        if source_health.get("status") != "failed":
+            continue
+        error = str(source_health.get("error", "Unknown"))
+        kind = error.split(":", 1)[0] or "Unknown"
+        failure_types[kind] = failure_types.get(kind, 0) + 1
+    failure_breakdown = ", ".join(
+        f"{kind}: {count}"
+        for kind, count in sorted(failure_types.items(), key=lambda pair: (-pair[1], pair[0]))[:5]
+    ) or "none"
+
     summary = (
         "GoResultHub | CHECKER SUMMARY\n\n"
         f"Checked (UTC): {checked_at}\n"
-        f"Sources enabled: {len(sources)}\n"
-        f"Sources successful: {successful}\n"
-        f"Sources failed: {failures}\n"
-        f"New candidates: {len(candidates)}\n"
+        f"Official sources enabled: {len(sources)}\n"
+        f"Sources scanned successfully: {successful}\n"
+        f"Sources not scanned: {failures}\n"
+        f"Failure types: {failure_breakdown}\n"
+        f"New candidate links: {len(candidates)}\n"
         f"Main-channel alerts sent: {public_sent}\n"
         f"Alerts pending delivery: {len(pending)}\n"
         f"Older alerts held for review: {len(held)}\n"
     )
 
     if failures:
-        summary += "\nSome sources failed. Check the GitHub Actions logs.\n"
+        summary += "\nSome official sites timed out, blocked automated access, or had DNS/TLS issues. See workflow logs for per-source details.\n"
 
     if ADMIN and not TG_RATE_LIMITED:
         telegram_send(ADMIN, summary)
