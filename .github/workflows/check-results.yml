@@ -12,6 +12,7 @@ on:
       - ".github/workflows/check-results.yml"
       - "site/app.js"
       - "site/sw.js"
+      - "site/notice.html"
   schedule:
     - cron: "17 * * * *"
 
