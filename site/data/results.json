@@ -14180,5 +14180,26 @@
     "verified": false,
     "archive": false,
     "detected_at": "2026-10-16T12:38:18.915901+00:00"
+  },
+  {
+    "id": "956aa67a6fb182a0e86bfed9",
+    "title": "Notice regarding Ph.D. Admission Interview Schedule (RUPA- 2025 Phase-I Round- 2/3), Department of A.B.S.T., UoR, Jaipur.",
+    "exam": "Notice regarding Ph.D. Admission Interview Schedule (RUPA- 2025 Phase-I Round- 2/3), Department of A.B.S.T., UoR, Jaipur.",
+    "exam_category": "University Results",
+    "category": "exam_schedule",
+    "source_name": "University of Rajasthan",
+    "source_id": "rajasthan-university",
+    "authority": "University of Rajasthan",
+    "url": "https://www.uniraj.ac.in/circular/notice/8613-16.10.2026.pdf",
+    "official_url": "https://www.uniraj.ac.in/circular/notice/8613-16.10.2026.pdf",
+    "source_url": "https://www.uniraj.ac.in/",
+    "published": "",
+    "exam_year": "2025",
+    "region": "Rajasthan",
+    "state": "Rajasthan",
+    "description": "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility.",
+    "verified": false,
+    "archive": false,
+    "detected_at": "2026-10-16T12:54:18.219641+00:00"
   }
 ]
