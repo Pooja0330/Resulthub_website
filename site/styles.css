@@ -225,3 +225,7 @@
 .grh-toast.is-exam .grh-toast-top>span::before{content:"● ";color:#1768d2}
 .grh-toast.is-pib .grh-toast-top>span::before{content:"● ";color:#c77721}
 @media(prefers-reduced-motion:no-preference){.grh-alert-item.is-exam{transition:box-shadow .18s ease,transform .18s ease}.grh-alert-item.is-exam:hover{box-shadow:0 5px 16px rgba(23,104,210,.12);transform:translateY(-1px)}}
+
+/* Keep the live-updates control above page widgets and overlays. */
+#grh-live-alerts{z-index:2147483000!important;visibility:visible!important;opacity:1!important}
+#grh-live-alerts .grh-bell{display:flex!important;visibility:visible!important;opacity:1!important}
