@@ -7,7 +7,7 @@ import time
 import hashlib
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
-from urllib.parse import urlparse, urljoin
+from urllib.parse import urlparse, urljoin, parse_qsl, urlencode, urlunparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import requests
@@ -72,7 +72,11 @@ SKIP = re.compile(
     r"expression of interest|vendor registration|agency appointment|"
     r"public relations|social media agency|media agency|privacy policy|"
     r"photo gallery|annual report|media advisory|holiday list|meeting notice|"
-    r"investor presentation|press release|corporate announcement)\b", re.I
+    r"investor presentation|press release|corporate announcement|"
+    r"conference|workshop|symposium|seminar|research proposal|research grant|"
+    r"inter college migration|inter-college migration|printing and supply|"
+    r"purchase of books|faculty research programme|faculty research program|"
+    r"glow dental clinic|sports meet|cultural fest|cultural festival)\b", re.I
 )
 
 NAV_TITLE = re.compile(
@@ -136,7 +140,7 @@ def classify(title):
     return None
 
 def normalize_notice_url(url):
-    """Normalize official notice URLs for cross-run duplicate prevention."""
+    """Normalize tracking noise without collapsing distinct CMS notice URLs."""
     try:
         parsed = urlparse(str(url).strip())
         if parsed.scheme.lower() != "https" or not parsed.hostname:
@@ -145,8 +149,19 @@ def normalize_notice_url(url):
         if host.startswith("www."):
             host = host[4:]
         path_value = re.sub(r"/+", "/", parsed.path or "/").rstrip("/") or "/"
-        # Query strings are commonly tracking parameters, so ignore them for dedupe.
-        return f"https://{host}{path_value}"
+        # Keep content-identifying query parameters (e.g. articleid); remove only
+        # common analytics/click-tracking parameters.
+        query_pairs = []
+        for key, value in parse_qsl(parsed.query, keep_blank_values=True):
+            key_lower = key.lower()
+            if (
+                key_lower.startswith("utm_")
+                or key_lower in {"fbclid", "gclid", "dclid", "msclkid", "yclid", "ref_src"}
+            ):
+                continue
+            query_pairs.append((key, value))
+        query = urlencode(sorted(query_pairs))
+        return urlunparse(("https", host, path_value, "", query, ""))
     except Exception:
         return ""
 
@@ -258,6 +273,44 @@ def telegram_send(chat_id, message):
         return False
 
 
+def is_stale_notice(title, published=""):
+    """Reject clearly old items only when the page supplies an explicit publish/post date."""
+    candidates = []
+    text_value = str(title or "")
+    for match in re.finditer(
+        r"\b(?:posted|published|updated)\s+on\s+"
+        r"([A-Za-z]{3,9}\s+\d{1,2},?\s+\d{4}|\d{1,2}\s+[A-Za-z]{3,9}\s+\d{4})",
+        text_value,
+        re.I,
+    ):
+        candidates.append(match.group(1).strip())
+    if published:
+        candidates.append(str(published).strip())
+
+    for value in candidates:
+        parsed_date = None
+        for fmt in (
+            "%b %d, %Y", "%B %d, %Y", "%b %d %Y", "%B %d %Y",
+            "%d %b %Y", "%d %B %Y", "%d %b, %Y", "%d %B, %Y",
+        ):
+            try:
+                parsed_date = datetime.strptime(value, fmt).replace(tzinfo=timezone.utc)
+                break
+            except ValueError:
+                continue
+        if parsed_date is None:
+            try:
+                from email.utils import parsedate_to_datetime
+                parsed_date = parsedate_to_datetime(value)
+                if parsed_date and parsed_date.tzinfo is None:
+                    parsed_date = parsed_date.replace(tzinfo=timezone.utc)
+            except (TypeError, ValueError, OverflowError):
+                parsed_date = None
+        if parsed_date and parsed_date < datetime.now(timezone.utc) - timedelta(days=MAX_AGE_DAYS):
+            return True
+    return False
+
+
 def fetch_source(source):
     name = source.get("name", source.get("id", "Unknown"))
     url = source.get("url", "")
@@ -331,6 +384,8 @@ def fetch_source(source):
 
         category = classify(title)
         if not category or link in seen_urls:
+            continue
+        if is_stale_notice(title, published):
             continue
 
         seen_urls.add(link)
