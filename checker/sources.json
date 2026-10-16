@@ -262,7 +262,7 @@
     {
       "id": "cbse",
       "name": "CBSE",
-      "url": "https://www.cbse.gov.in/",
+      "url": "https://www.cbse.gov.in/cbsenew/cbse.html",
       "kind": "html",
       "allowed_hosts": [
         "cbse.gov.in"
@@ -278,7 +278,7 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: CBSE Main Website and Examination Notices."
+      "coverage_note": "Official CBSE notices and press releases page, which lists exam-result announcements, admit cards and exam-related updates."
     },
     {
       "id": "cisce",
