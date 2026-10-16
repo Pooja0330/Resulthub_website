@@ -22,7 +22,7 @@ concurrency:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
 
     steps:
       - name: Checkout repository
@@ -47,7 +47,7 @@ jobs:
           TG_ADMIN: ${{ secrets.TG_ADMIN }}
           TG_CHANNEL: ${{ secrets.TG_CHANNEL }}
           SOURCE_TIMEOUT_SECONDS: "10"
-          SOURCE_WORKERS: "8"
+          SOURCE_WORKERS: "12"
           MAX_NEW_PER_SOURCE: "5"
         run: python checker/check.py
 
