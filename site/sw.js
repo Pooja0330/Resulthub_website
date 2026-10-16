@@ -39,10 +39,16 @@ self.addEventListener("fetch", event => {
         throw error;
       }
     }
-    const cached = await cache.match(request);
-    if (cached) return cached;
-    const response = await fetch(request);
-    if (response.ok) await cache.put(request, response.clone());
-    return response;
+    // Network-first for HTML/JS/CSS so visitors receive fixes promptly;
+    // keep the previous successful response as an outage fallback.
+    try {
+      const response = await fetch(request);
+      if (response.ok) await cache.put(request, response.clone());
+      return response;
+    } catch (error) {
+      const cached = await cache.match(request);
+      if (cached) return cached;
+      throw error;
+    }
   })());
 });
