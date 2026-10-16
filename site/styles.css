@@ -147,3 +147,6 @@
 
 /* Simple share action in the navigation */
 .nav-share{border:1px solid #cbd9eb;border-radius:8px;background:#f3f7fd;color:#174f9c;padding:7px 10px;font:inherit;font-weight:750;cursor:pointer}.nav-share:hover{background:#e5efff}.nav-share:focus-visible{outline:3px solid #ffce65;outline-offset:2px}
+
+/* Opt-in browser alerts in the live-update panel */
+.grh-enable-notifications{border:1px solid #c9d9ef;background:#edf4ff;color:#174f9c;border-radius:8px;padding:7px 10px;font:inherit;font-size:.75rem;font-weight:800;cursor:pointer}.grh-enable-notifications:disabled{opacity:.6;cursor:wait}.grh-enable-notifications:focus-visible{outline:3px solid #ffce65;outline-offset:2px}
