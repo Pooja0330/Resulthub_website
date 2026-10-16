@@ -15,7 +15,11 @@
     merit_list:"Merit list",cutoff:"Cutoff",exam_schedule:"Exam schedule"
   }[value] || "Official update");
 
-  const isPib = item => /pib|press information bureau|government & pib/i.test([item.source_id,item.source_name,item.authority,item.exam_category].filter(Boolean).join(" "));
+  const isPib = item => /pib|press information bureau|press releases|government & pib/i.test([item.id,item.source_id,item.source_name,item.authority,item.exam_category].filter(Boolean).join(" "));
+  const isExamPriority = item => !isPib(item) && item.archive !== true && /result|notification|admit_card|answer_key|merit_list|cutoff|exam_schedule/i.test(String(item.category||"")) && !/annual results old|old archive|historical|public notices information bulletin syllabus universities|home \/ annual results old/i.test(String(item.title||""));
+  const priorityScore = item => isExamPriority(item) ? 0 : isPib(item) ? 2 : 1;
+  const itemKindLabel = item => isPib(item) ? "GOVERNMENT & PIB" : isExamPriority(item) ? "EXAM ALERT" : "OFFICIAL UPDATE";
+  const itemKindClass = item => isPib(item) ? "is-pib" : isExamPriority(item) ? "is-exam" : "is-general";
   const isExamPriority = item => !isPib(item) && /result|notification|admit_card|answer_key|merit_list|cutoff|exam_schedule/i.test(String(item.category||""));
   const priorityScore = item => isExamPriority(item) ? 0 : isPib(item) ? 2 : 1;
   const itemKindLabel = item => isPib(item) ? "GOVERNMENT & PIB" : isExamPriority(item) ? "EXAM ALERT" : "OFFICIAL UPDATE";
@@ -28,7 +32,8 @@
     if (/^(home about contact us|home about nta|read more|click here|official website|latest updates|notifications?)$/.test(title)) return true;
     // Some source pages expose the entire navigation menu as one giant "link".
     const navMatches = title.match(/\b(home|about|contact us|faq|help desk|payment related|universities|archive|syllabus|information bulletin|public notices|nta help desk)\b/g) || [];
-    if (navMatches.length >= 4 && title.split(" ").length > 10) return true;
+    if (navMatches.length >= 3 && title.split(" ").length > 5) return true;
+    if (/public notices information bulletin syllabus universities|home annual results old|candidates corner e services/i.test(title)) return true;
     if (/\b(home about|contact us|faq|help desk|payment related|syllabus universities archive)\b/.test(title) && title.split(" ").length>8) return true;
     return false;
   };
