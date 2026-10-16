@@ -59,6 +59,20 @@ class CheckerSafetyTests(unittest.TestCase):
     def test_generic_call_letters_landing_page_is_not_a_notice(self):
         self.assertIsNone(classify("Call Letters"))
 
+    def test_pib_feed_indexes_general_press_releases(self):
+        from check import classify_source_title
+        source = {"include_all_items": True}
+        self.assertEqual(
+            classify_source_title("Government announces a new public initiative", source),
+            "notification",
+        )
+
+    def test_generic_navigation_is_not_indexed_as_pib_notice(self):
+        from check import classify_source_title
+        self.assertIsNone(
+            classify_source_title("Read More", {"include_all_items": True})
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
