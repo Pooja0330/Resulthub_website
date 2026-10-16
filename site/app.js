@@ -5,6 +5,7 @@ let page = 1;
 const PAGE_SIZE = 30;
 
 let selectedState = "";
+let selectedRegion = "";
 const STATE_NAMES = [
  "Andhra Pradesh","Arunachal Pradesh","Assam","Bihar","Chhattisgarh","Goa","Gujarat","Haryana",
  "Himachal Pradesh","Jharkhand","Karnataka","Kerala","Madhya Pradesh","Maharashtra","Manipur",
@@ -104,21 +105,22 @@ function stateCount(name){return allItems.filter(x=>stateForItem(x)===name).leng
 function renderStateSidebar(){
  const region=$("#region");
  if(region){
-  const current=selectedState||"";
+  const current=selectedState||selectedRegion||"";
   region.innerHTML='<option value="">All India</option><option value="Central">Central</option>'+STATE_NAMES.map(n=>'<option value="'+esc(n)+'">'+esc(n)+'</option>').join("");
   region.value=current;
  }
  $("#allIndiaCount").textContent=allItems.length;
- $("#allStatesBtn").classList.toggle("active",!selectedState);
+ $("#allStatesBtn").classList.toggle("active",!selectedState&&!selectedRegion);
  $("#stateList").innerHTML=STATE_NAMES.map(name=>'<button type="button" class="state-link'+(selectedState===name?' active':'')+'" data-state="'+esc(name)+'"><span>'+esc(name)+'</span><span class="state-count">'+stateCount(name)+'</span></button>').join("");
  $("#stateList").querySelectorAll("[data-state]").forEach(button=>button.addEventListener("click",()=>{
   selectedState=button.dataset.state;
+  selectedRegion="";
   $("#region").value=selectedState;
   $("#q").value="";$("#category").value="";$("#examCategory").value="";
   page=1;render();$("#updates").scrollIntoView({behavior:"smooth",block:"start"});
  }));
  $("#allStatesBtn").onclick=()=>{
-  selectedState="";$("#region").value="";page=1;render();
+  selectedState="";selectedRegion="";$("#region").value="";page=1;render();
  };
 }
 function renderStateResources(){
@@ -162,7 +164,7 @@ function filteredItems(){
   const family=inferredFamily(x);
   const hay=[x.title,x.exam,x.source_name,x.state,x.region,x.category,family].join(" ").toLowerCase();
   const itemState=stateForItem(x);
-   const stateFilter=selectedState||r;
+   const stateFilter=selectedState||selectedRegion||r;
    return (!q||hay.includes(q))&&(!c||x.category===c)&&(!ec||family===ec)&&(!stateFilter||itemState===stateFilter);
  });
  if($("#sort").value==="title") list.sort((a,b)=>(a.title||"").localeCompare(b.title||""));
@@ -244,7 +246,7 @@ function init(){
  if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});
 }
 $("#searchForm").addEventListener("submit",e=>{e.preventDefault();page=1;render()});
-["q","category","examCategory","region","sort"].forEach(id=>$("#"+id).addEventListener(id==="q"?"input":"change",()=>{if(id==="region")selectedState=$("#region").value&&STATE_NAMES.includes($("#region").value)?$("#region").value:"";page=1;render()}));
+["q","category","examCategory","region","sort"].forEach(id=>$("#"+id).addEventListener(id==="q"?"input":"change",()=>{if(id==="region"){const v=$("#region").value;selectedState=STATE_NAMES.includes(v)?v:"";selectedRegion=v==="Central"?"Central":"";}page=1;render()}));
 document.querySelectorAll(".pills [data-family]").forEach(button=>button.addEventListener("click",()=>{$("#examCategory").value=button.dataset.family;page=1;$("#updates").scrollIntoView({behavior:"smooth"});render()}));
 $("#supportBtn").addEventListener("click",()=>{$("#supportNote").textContent="Secure support payments are not configured yet. We will enable this after a payment provider and checkout URL are set up.";});
 init();
