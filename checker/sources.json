@@ -58,10 +58,11 @@
     {
       "id": "sbi-careers",
       "name": "State Bank of India Careers",
-      "url": "https://sbi.co.in/web/careers",
+      "url": "https://sbi.co.in/web/careers/",
       "kind": "html",
       "allowed_hosts": [
-        "sbi.co.in"
+        "sbi.co.in",
+        "bank.sbi"
       ],
       "categories": [
         "result",
@@ -108,10 +109,10 @@
     {
       "id": "jeemain",
       "name": "JEE Main",
-      "url": "https://jeemain.nta.ac.in/",
+      "url": "https://jeemain.nta.nic.in/",
       "kind": "html",
       "allowed_hosts": [
-        "nta.ac.in"
+        "nta.nic.in"
       ],
       "categories": [
         "result",
@@ -126,10 +127,10 @@
     {
       "id": "neet",
       "name": "NEET UG",
-      "url": "https://exams.nta.ac.in/NEET/",
+      "url": "https://neet.nta.nic.in/",
       "kind": "html",
       "allowed_hosts": [
-        "nta.ac.in"
+        "nta.nic.in"
       ],
       "categories": [
         "result",
@@ -144,10 +145,10 @@
     {
       "id": "cuet",
       "name": "CUET",
-      "url": "https://exams.nta.ac.in/CUET-UG/",
+      "url": "https://cuet.nta.nic.in/",
       "kind": "html",
       "allowed_hosts": [
-        "nta.ac.in"
+        "nta.nic.in"
       ],
       "categories": [
         "result",
@@ -180,10 +181,10 @@
     {
       "id": "gate",
       "name": "GATE",
-      "url": "https://gate2026.iisc.ac.in/",
+      "url": "https://gate2026.iitg.ac.in/",
       "kind": "html",
       "allowed_hosts": [
-        "iisc.ac.in"
+        "iitg.ac.in"
       ],
       "categories": [
         "result",
@@ -877,7 +878,7 @@
     {
       "id": "lic-careers",
       "name": "LIC careers",
-      "url": "https://licindia.in/Bottom-Links/Careers",
+      "url": "https://web.licindia.in/web/guest/careers",
       "kind": "html",
       "allowed_hosts": [
         "licindia.in"
@@ -915,10 +916,11 @@
     {
       "id": "epfindia",
       "name": "EPFO recruitment",
-      "url": "https://www.epfindia.gov.in/",
+      "url": "https://www.epfindia.gov.in/site_en/index.php",
       "kind": "html",
       "allowed_hosts": [
-        "epfindia.gov.in"
+        "epfindia.gov.in",
+        "epfo.gov.in"
       ],
       "categories": [
         "result",
@@ -991,10 +993,10 @@
     {
       "id": "nta-cuetpg",
       "name": "CUET PG",
-      "url": "https://exams.nta.ac.in/CUET-PG/",
+      "url": "https://exams.nta.nic.in/cuet-pg/",
       "kind": "html",
       "allowed_hosts": [
-        "exams.nta.ac.in"
+        "nta.nic.in"
       ],
       "categories": [
         "result",
@@ -1067,10 +1069,10 @@
     {
       "id": "gate-iitg",
       "name": "GATE official portal (current-year URL changes annually)",
-      "url": "https://gate2026.iisc.ac.in/",
+      "url": "https://gate2026.iitg.ac.in/",
       "kind": "html",
       "allowed_hosts": [
-        "gate2026.iisc.ac.in"
+        "gate2026.iitg.ac.in"
       ],
       "categories": [
         "result",
@@ -2818,7 +2820,7 @@
       "url": "https://exams.nta.nic.in/cuet-pg/",
       "kind": "html",
       "allowed_hosts": [
-        "exams.nta.nic.in"
+        "nta.nic.in"
       ],
       "categories": [
         "result",
