@@ -233,7 +233,7 @@ function renderYearArchiveHelp(){
  box.classList.remove("hidden");box.innerHTML='<h3>No individual records indexed for '+esc(year)+' yet</h3><p>This means GoResultHub has not indexed matching year-specific entries; it does not mean no exams or results existed in '+esc(year)+'. Check these official archive starting points while historical coverage is expanded.</p><div class="archive-help-links">'+ARCHIVE_LINKS.map(([label,url])=>'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(label)+' ↗</a>').join("")+'</div>';
 }
 function filteredItems(){
- const q=$("#q").value.trim().toLowerCase(), terms=q.split(/\\s+/).filter(Boolean), c=$("#category").value, ec=$("#examCategory").value, r=$("#region").value, y=$("#examYear").value;
+ const q=$("#q").value.trim().toLowerCase(), terms=q.split(/\s+/).filter(Boolean), c=$("#category").value, ec=$("#examCategory").value, r=$("#region").value, y=$("#examYear").value;
  const list=allItems.filter(x=>{
   const family=inferredFamily(x);
   const hay=[x.title,x.exam,x.source_name,x.state,x.region,x.category,family].join(" ").toLowerCase();
