@@ -161,11 +161,11 @@ def infer_exam_category(title="", source_name="", source_id="", state=""):
         return "School Board Results"
     if re.search(r"\b(police|constable|slprb|prpb)\b", text_value):
         return "State Recruitment / Police"
-    if re.search(r"\b(ctet|tet|teacher|teaching|kvs|nvs)\b", text_value):
+    if re.search(r"\b(ctet|tet|teacher|teaching|kvs|nvs|school service commission)\b", text_value):
         return "Teaching / Eligibility"
     if re.search(r"\b(defence|defense|army|navy|air force|agniveer|coast guard|crpf|bsf|cisf|itbp|ssb)\b", text_value):
         return "Defence"
-    if re.search(r"\b(psc|public service commission|state service commission|staff selection commission|subordinate services selection commission|recruitment board)\b", text_value):
+    if re.search(r"\b(psc|public service commission|state service commission|technical service commission|direct recruitment commission|staff selection commission|subordinate services selection commission|recruitment board)\b", text_value):
         return "State PSC / Recruitment"
     if source.startswith(("icai", "icsi", "icmai", "nmc")) or re.search(r"\b(icai|icsi|icmai|chartered accountant|company secretary|medical commission)\b", text_value):
         return "Professional Exams"
