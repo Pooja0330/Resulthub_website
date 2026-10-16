@@ -5769,6 +5769,28 @@
       "include_all_items": true,
       "max_new": 50,
       "coverage_note": "Official PIB English press-release RSS feed listed by PIB's own RSS directory (Regid=1). Checks recent feed entries each scheduled scan; feed retention and upstream availability limit historical completeness."
+    },
+    {
+      "id": "pib-english-all-releases",
+      "name": "Press Information Bureau (PIB) — English All Releases",
+      "url": "https://www.pib.gov.in/AllRelease.aspx?lang=1&reg=1",
+      "kind": "html",
+      "allowed_hosts": [
+        "pib.gov.in"
+      ],
+      "categories": [
+        "notification",
+        "result",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-16",
+      "state": "",
+      "region": "Central",
+      "exam_category": "Government & PIB Updates",
+      "include_all_items": true,
+      "max_new": 50,
+      "coverage_note": "Official PIB English All Releases page, used as a direct HTML fallback to the RSS feed so recent releases remain discoverable when RSS returns Hindi items or fails."
     }
   ]
 }
