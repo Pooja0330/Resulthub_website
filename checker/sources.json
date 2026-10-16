@@ -344,7 +344,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
-      "exam_category": "School Board Results"
+      "exam_category": "School Board Results",
+      "state": "Uttar Pradesh",
+      "region": "Uttar Pradesh"
     },
     {
       "id": "mpbse",
@@ -361,7 +363,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
-      "exam_category": "School Board Results"
+      "exam_category": "School Board Results",
+      "state": "Madhya Pradesh",
+      "region": "Madhya Pradesh"
     },
     {
       "id": "cgbse",
@@ -383,7 +387,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Chhattisgarh Board of Secondary Education Results.",
-      "exam_category": "School Board Results"
+      "exam_category": "School Board Results",
+      "state": "Chhattisgarh",
+      "region": "Chhattisgarh"
     },
     {
       "id": "bseb",
@@ -400,7 +406,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
-      "exam_category": "School Board Results"
+      "exam_category": "School Board Results",
+      "state": "Bihar",
+      "region": "Bihar"
     },
     {
       "id": "rajeduboard",
@@ -423,7 +431,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Rajasthan Board of Secondary Education.",
-      "exam_category": "School Board Results"
+      "exam_category": "School Board Results",
+      "state": "Rajasthan",
+      "region": "Rajasthan"
     },
     {
       "id": "gseb",
@@ -445,7 +455,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Gujarat Secondary and Higher Secondary Education Board.",
-      "exam_category": "School Board Results"
+      "exam_category": "School Board Results",
+      "state": "Gujarat",
+      "region": "Gujarat"
     },
     {
       "id": "mahresult",
@@ -461,7 +473,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
-      "exam_category": "School Board Results"
+      "exam_category": "School Board Results",
+      "state": "Maharashtra",
+      "region": "Maharashtra"
     },
     {
       "id": "tnresults",
@@ -477,7 +491,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
-      "exam_category": "School Board Results"
+      "exam_category": "School Board Results",
+      "state": "Tamil Nadu",
+      "region": "Tamil Nadu"
     },
     {
       "id": "keralaresults",
@@ -493,7 +509,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
-      "exam_category": "School Board Results"
+      "exam_category": "School Board Results",
+      "state": "Kerala",
+      "region": "Kerala"
     },
     {
       "id": "wbresults",
@@ -509,7 +527,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
-      "exam_category": "School Board Results"
+      "exam_category": "School Board Results",
+      "state": "West Bengal",
+      "region": "West Bengal"
     },
     {
       "id": "odisha-board",
@@ -531,7 +551,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Board of Secondary Education Odisha.",
-      "exam_category": "School Board Results"
+      "exam_category": "School Board Results",
+      "state": "Odisha",
+      "region": "Odisha"
     },
     {
       "id": "karnataka-board",
@@ -553,7 +575,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
-      "exam_category": "School Board Results"
+      "exam_category": "School Board Results",
+      "state": "Karnataka",
+      "region": "Karnataka"
     },
     {
       "id": "telangana-board",
@@ -576,7 +600,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Telangana Board of Secondary Education.",
-      "exam_category": "School Board Results"
+      "exam_category": "School Board Results",
+      "state": "Telangana",
+      "region": "Telangana"
     },
     {
       "id": "andhra-board",
@@ -599,7 +625,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Andhra Pradesh Board of Secondary Education.",
-      "exam_category": "School Board Results"
+      "exam_category": "School Board Results",
+      "state": "Andhra Pradesh",
+      "region": "Andhra Pradesh"
     },
     {
       "id": "haryana-board",
@@ -621,7 +649,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Board of School Education Haryana.",
-      "exam_category": "School Board Results"
+      "exam_category": "School Board Results",
+      "state": "Haryana",
+      "region": "Haryana"
     },
     {
       "id": "punjab-board",
@@ -643,7 +673,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Punjab School Education Board Results.",
-      "exam_category": "School Board Results"
+      "exam_category": "School Board Results",
+      "state": "Punjab",
+      "region": "Punjab"
     },
     {
       "id": "assam-board",
@@ -660,7 +692,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
-      "exam_category": "School Board Results"
+      "exam_category": "School Board Results",
+      "state": "Assam",
+      "region": "Assam"
     },
     {
       "id": "jkbose",
@@ -680,7 +714,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: JKBOSE results.",
-      "exam_category": "School Board Results"
+      "exam_category": "School Board Results",
+      "state": "Jammu and Kashmir",
+      "region": "Jammu and Kashmir"
     },
     {
       "id": "upsssc",
@@ -698,7 +734,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Uttar Pradesh",
+      "region": "Uttar Pradesh"
     },
     {
       "id": "mppsc",
@@ -715,7 +753,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Madhya Pradesh",
+      "region": "Madhya Pradesh"
     },
     {
       "id": "cgpsc",
@@ -732,7 +772,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Chhattisgarh",
+      "region": "Chhattisgarh"
     },
     {
       "id": "bpsc",
@@ -749,7 +791,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Bihar",
+      "region": "Bihar"
     },
     {
       "id": "rpsc",
@@ -766,7 +810,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Rajasthan",
+      "region": "Rajasthan"
     },
     {
       "id": "gpsc",
@@ -783,7 +829,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Gujarat",
+      "region": "Gujarat"
     },
     {
       "id": "tnpsc",
@@ -800,7 +848,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Tamil Nadu",
+      "region": "Tamil Nadu"
     },
     {
       "id": "keralapsc",
@@ -820,7 +870,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Kerala PSC candidate portal landing page.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Kerala",
+      "region": "Kerala"
     },
     {
       "id": "mpsc",
@@ -840,7 +892,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Maharashtra",
+      "region": "Maharashtra"
     },
     {
       "id": "wbpsc",
@@ -860,7 +914,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Bihar",
+      "region": "Bihar"
     },
     {
       "id": "appsc",
@@ -880,7 +936,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Andhra Pradesh",
+      "region": "Andhra Pradesh"
     },
     {
       "id": "tspsc",
@@ -897,7 +955,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Telangana",
+      "region": "Telangana"
     },
     {
       "id": "opsc",
@@ -917,7 +977,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Odisha",
+      "region": "Odisha"
     },
     {
       "id": "hpsc",
@@ -937,7 +999,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Haryana",
+      "region": "Haryana"
     },
     {
       "id": "uppsc",
@@ -954,7 +1018,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Punjab",
+      "region": "Punjab"
     },
     {
       "id": "nabard",
@@ -1695,7 +1761,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Assam",
+      "region": "Assam"
     },
     {
       "id": "arunachal-psc",
@@ -1715,7 +1783,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Arunachal Pradesh",
+      "region": "Arunachal Pradesh"
     },
     {
       "id": "manipur-psc",
@@ -1735,7 +1805,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Manipur",
+      "region": "Manipur"
     },
     {
       "id": "meghalaya-psc",
@@ -1755,7 +1827,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Meghalaya",
+      "region": "Meghalaya"
     },
     {
       "id": "mizoram-psc",
@@ -1775,7 +1849,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Mizoram",
+      "region": "Mizoram"
     },
     {
       "id": "nagaland-psc",
@@ -1795,7 +1871,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Nagaland",
+      "region": "Nagaland"
     },
     {
       "id": "sikkim-psc",
@@ -1815,7 +1893,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Sikkim",
+      "region": "Sikkim"
     },
     {
       "id": "tripura-psc",
@@ -1835,7 +1915,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Tripura",
+      "region": "Tripura"
     },
     {
       "id": "jharkhand-psc",
@@ -1855,7 +1937,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Jharkhand",
+      "region": "Jharkhand"
     },
     {
       "id": "uttarakhand-psc",
@@ -1875,7 +1959,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Uttarakhand",
+      "region": "Uttarakhand"
     },
     {
       "id": "hpssc",
@@ -1895,7 +1981,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages. Also covers duplicate registry entries: Himachal Pradesh Rajya Chayan Aayog.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Himachal Pradesh",
+      "region": "Himachal Pradesh"
     },
     {
       "id": "jkssb",
@@ -1915,7 +2003,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Defence"
+      "exam_category": "Defence",
+      "state": "Jammu and Kashmir",
+      "region": "Jammu and Kashmir"
     },
     {
       "id": "jkpsc",
@@ -1935,7 +2025,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Jammu and Kashmir",
+      "region": "Jammu and Kashmir"
     },
     {
       "id": "dsssb",
@@ -1955,7 +2047,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Defence"
+      "exam_category": "Defence",
+      "state": "Delhi",
+      "region": "Delhi"
     },
     {
       "id": "bssc",
@@ -1975,7 +2069,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "SSC / Central Recruitment"
+      "exam_category": "SSC / Central Recruitment",
+      "state": "Bihar",
+      "region": "Bihar"
     },
     {
       "id": "btsc",
@@ -1995,7 +2091,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Bihar",
+      "region": "Bihar"
     },
     {
       "id": "hssc",
@@ -2015,7 +2113,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "SSC / Central Recruitment"
+      "exam_category": "SSC / Central Recruitment",
+      "state": "Haryana",
+      "region": "Haryana"
     },
     {
       "id": "osssc",
@@ -2035,7 +2135,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "SSC / Central Recruitment"
+      "exam_category": "SSC / Central Recruitment",
+      "state": "Odisha",
+      "region": "Odisha"
     },
     {
       "id": "ossc",
@@ -2055,7 +2157,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "SSC / Central Recruitment"
+      "exam_category": "SSC / Central Recruitment",
+      "state": "Odisha",
+      "region": "Odisha"
     },
     {
       "id": "maha-rojgar",
@@ -2075,7 +2179,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Maharashtra",
+      "region": "Maharashtra"
     },
     {
       "id": "up-police",
@@ -2095,7 +2201,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "State Recruitment / Police"
+      "exam_category": "State Recruitment / Police",
+      "state": "Uttar Pradesh",
+      "region": "Uttar Pradesh"
     },
     {
       "id": "bihar-police",
@@ -2115,7 +2223,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "State Recruitment / Police"
+      "exam_category": "State Recruitment / Police",
+      "state": "Bihar",
+      "region": "Bihar"
     },
     {
       "id": "bihar-daroga",
@@ -2135,7 +2245,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "State Recruitment / Police"
+      "exam_category": "State Recruitment / Police",
+      "state": "Bihar",
+      "region": "Bihar"
     },
     {
       "id": "mpesb",
@@ -2155,7 +2267,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "School Board Results"
+      "exam_category": "School Board Results",
+      "state": "Madhya Pradesh",
+      "region": "Madhya Pradesh"
     },
     {
       "id": "vyapam-cg",
@@ -2175,7 +2289,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages. Also covers duplicate registry entries: Chhattisgarh Professional Examination Board.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Chhattisgarh",
+      "region": "Chhattisgarh"
     },
     {
       "id": "rajasthan-rssb",
@@ -2195,7 +2311,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Defence"
+      "exam_category": "Defence",
+      "state": "Rajasthan",
+      "region": "Rajasthan"
     },
     {
       "id": "rajasthan-police",
@@ -2215,7 +2333,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "State Recruitment / Police"
+      "exam_category": "State Recruitment / Police",
+      "state": "Rajasthan",
+      "region": "Rajasthan"
     },
     {
       "id": "gujarat-ojas",
@@ -2235,7 +2355,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Gujarat",
+      "region": "Gujarat"
     },
     {
       "id": "gujarat-gsssb",
@@ -2255,7 +2377,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Defence"
+      "exam_category": "Defence",
+      "state": "Gujarat",
+      "region": "Gujarat"
     },
     {
       "id": "tnusrb",
@@ -2275,7 +2399,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Tamil Nadu",
+      "region": "Tamil Nadu"
     },
     {
       "id": "tntrb",
@@ -2295,7 +2421,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Teaching / Eligibility"
+      "exam_category": "Teaching / Eligibility",
+      "state": "Tamil Nadu",
+      "region": "Tamil Nadu"
     },
     {
       "id": "tnmrbrecruit",
@@ -2315,7 +2443,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Tamil Nadu",
+      "region": "Tamil Nadu"
     },
     {
       "id": "kerala-devaswom",
@@ -2335,7 +2465,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Kerala",
+      "region": "Kerala"
     },
     {
       "id": "karnataka-kea",
@@ -2355,7 +2487,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Entrance & Eligibility"
+      "exam_category": "Entrance & Eligibility",
+      "state": "Karnataka",
+      "region": "Karnataka"
     },
     {
       "id": "karnataka-kpsc",
@@ -2375,7 +2509,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Karnataka",
+      "region": "Karnataka"
     },
     {
       "id": "karnataka-police",
@@ -2395,7 +2531,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "State Recruitment / Police"
+      "exam_category": "State Recruitment / Police",
+      "state": "Karnataka",
+      "region": "Karnataka"
     },
     {
       "id": "telangana-tslprb",
@@ -2415,7 +2553,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official Telangana Police Recruitment Board website, confirmed as tgprb.in; monitor this canonical domain.",
-      "exam_category": "State Recruitment / Police"
+      "exam_category": "State Recruitment / Police",
+      "state": "Telangana",
+      "region": "Telangana"
     },
     {
       "id": "ap-police",
@@ -2435,7 +2575,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "State Recruitment / Police"
+      "exam_category": "State Recruitment / Police",
+      "state": "Andhra Pradesh",
+      "region": "Andhra Pradesh"
     },
     {
       "id": "wbssc",
@@ -2455,7 +2597,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Teaching / Eligibility"
+      "exam_category": "Teaching / Eligibility",
+      "state": "Bihar",
+      "region": "Bihar"
     },
     {
       "id": "wb-police",
@@ -2475,7 +2619,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "State Recruitment / Police"
+      "exam_category": "State Recruitment / Police",
+      "state": "West Bengal",
+      "region": "West Bengal"
     },
     {
       "id": "punjab-psc",
@@ -2495,7 +2641,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Punjab",
+      "region": "Punjab"
     },
     {
       "id": "punjab-sssb",
@@ -2515,7 +2663,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Defence"
+      "exam_category": "Defence",
+      "state": "Punjab",
+      "region": "Punjab"
     },
     {
       "id": "assam-direct",
@@ -2535,7 +2685,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "State PSC / Recruitment"
+      "exam_category": "State PSC / Recruitment",
+      "state": "Assam",
+      "region": "Assam"
     },
     {
       "id": "nios-results",
@@ -2577,7 +2729,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "School Board Results"
+      "exam_category": "School Board Results",
+      "state": "Haryana",
+      "region": "Haryana"
     },
     {
       "id": "karnataka-results",
@@ -2597,7 +2751,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Entrance & Eligibility"
+      "exam_category": "Entrance & Eligibility",
+      "state": "Karnataka",
+      "region": "Karnataka"
     },
     {
       "id": "odisha-results",
@@ -2617,7 +2773,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Entrance & Eligibility"
+      "exam_category": "Entrance & Eligibility",
+      "state": "Odisha",
+      "region": "Odisha"
     },
     {
       "id": "ap-results",
@@ -2637,7 +2795,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Entrance & Eligibility"
+      "exam_category": "Entrance & Eligibility",
+      "state": "Andhra Pradesh",
+      "region": "Andhra Pradesh"
     },
     {
       "id": "telangana-results",
@@ -2657,7 +2817,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Entrance & Eligibility"
+      "exam_category": "Entrance & Eligibility",
+      "state": "Telangana",
+      "region": "Telangana"
     },
     {
       "id": "ipu",
@@ -2717,7 +2879,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Entrance & Eligibility"
+      "exam_category": "Entrance & Eligibility",
+      "state": "Delhi",
+      "region": "Delhi"
     },
     {
       "id": "bhu",
@@ -3502,7 +3666,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
-      "exam_category": "Entrance & Eligibility"
+      "exam_category": "Entrance & Eligibility",
+      "state": "Himachal Pradesh",
+      "region": "Himachal Pradesh"
     },
     {
       "id": "ubse-results",
@@ -3524,7 +3690,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
-      "exam_category": "Entrance & Eligibility"
+      "exam_category": "Entrance & Eligibility",
+      "state": "Uttarakhand",
+      "region": "Uttarakhand"
     },
     {
       "id": "manipur-board",
@@ -3546,7 +3714,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
-      "exam_category": "School Board Results"
+      "exam_category": "School Board Results",
+      "state": "Manipur",
+      "region": "Manipur"
     },
     {
       "id": "tripura-board",
@@ -3568,7 +3738,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
-      "exam_category": "School Board Results"
+      "exam_category": "School Board Results",
+      "state": "Tripura",
+      "region": "Tripura"
     },
     {
       "id": "meghalaya-board",
@@ -3590,7 +3762,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
-      "exam_category": "School Board Results"
+      "exam_category": "School Board Results",
+      "state": "Meghalaya",
+      "region": "Meghalaya"
     },
     {
       "id": "mizoram-board",
@@ -3612,7 +3786,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
-      "exam_category": "School Board Results"
+      "exam_category": "School Board Results",
+      "state": "Mizoram",
+      "region": "Mizoram"
     },
     {
       "id": "nagaland-board",
@@ -3634,7 +3810,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
-      "exam_category": "School Board Results"
+      "exam_category": "School Board Results",
+      "state": "Nagaland",
+      "region": "Nagaland"
     },
     {
       "id": "sikkim-board",
@@ -3656,7 +3834,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
-      "exam_category": "School Board Results"
+      "exam_category": "School Board Results",
+      "state": "Sikkim",
+      "region": "Sikkim"
     },
     {
       "id": "goa-board",
@@ -3678,7 +3858,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official Goa Board site; www hostname used because the bare domain had intermittent DNS failures.",
-      "exam_category": "School Board Results"
+      "exam_category": "School Board Results",
+      "state": "Goa",
+      "region": "Goa"
     },
     {
       "id": "kerala-board-official",
@@ -3700,7 +3882,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
-      "exam_category": "School Board Results"
+      "exam_category": "School Board Results",
+      "state": "Kerala",
+      "region": "Kerala"
     },
     {
       "id": "assam-board-official",
@@ -3722,7 +3906,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
-      "exam_category": "School Board Results"
+      "exam_category": "School Board Results",
+      "state": "Assam",
+      "region": "Assam"
     },
     {
       "id": "westbengal-board-official",
@@ -3744,7 +3930,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
-      "exam_category": "School Board Results"
+      "exam_category": "School Board Results",
+      "state": "West Bengal",
+      "region": "West Bengal"
     },
     {
       "id": "tamilnadu-board-official",
@@ -3766,7 +3954,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official Directorate of Government Examinations portal; canonical non-www hostname.",
-      "exam_category": "School Board Results"
+      "exam_category": "School Board Results",
+      "state": "Tamil Nadu",
+      "region": "Tamil Nadu"
     },
     {
       "id": "ibps-recent-updates",
