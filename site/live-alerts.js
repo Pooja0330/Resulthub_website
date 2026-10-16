@@ -24,13 +24,26 @@
   const normalizedTitle = item => cleanTitle(item).toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
   const isNoise = item => {
     const title=normalizedTitle(item);
+    const url=String(item.url||item.official_url||item.source_url||"").toLowerCase();
     if (!title || title.length<8) return true;
-    if (/^(home about contact us|home about nta|read more|click here|official website|latest updates|notifications?)$/.test(title)) return true;
-    // Some source pages expose the entire navigation menu as one giant "link".
-    const navMatches = title.match(/\b(home|about|contact us|faq|help desk|payment related|universities|archive|syllabus|information bulletin|public notices|nta help desk)\b/g) || [];
-    if (navMatches.length >= 3 && title.split(" ").length > 5) return true;
-    if (/public notices information bulletin syllabus universities|home annual results old|candidates corner e services/i.test(title)) return true;
-    if (/\b(home about|contact us|faq|help desk|payment related|syllabus universities archive)\b/.test(title) && title.split(" ").length>8) return true;
+    // Suppress navigation/menu text scraped as if it were an announcement.
+    const menuPatterns = [
+      /\\bhome current vacancies vacancies call letters results summer placements research internship scholarships post based rosters/,
+      /\\bmpbse portal results time table rti contact us\\b/,
+      /\\brecruitment notifications exam schedule interview schedule postwise syllabus physical efficiency tests/,
+      /\\bhome about us about nta about nic information information bulletin/,
+      /\\bhome about nta information information bulletin syllabus universities archive/,
+      /\\bpublic notices information bulletin syllabus universities\\b/,
+      /\\bhome annual results old\\b/,
+      /\\bcandidates corner e services/
+    ];
+    if (menuPatterns.some(pattern=>pattern.test(title))) return true;
+    const navTerms = title.match(/\\b(home|about us|about nta|contact us|faq|help desk|payment related|universities|archive|syllabus|information bulletin|public notices|current vacancies|call letters|summer placements|research internship|rosters|rti)\\b/g) || [];
+    if (navTerms.length >= 3 && title.split(" ").length > 7) return true;
+    // These pages are generally site navigation, contact, FAQ, archive, or index pages,
+    // not individual exam announcements.
+    if (/\\/(faq|contact-us|contactus|about-nta|archive|index|home)(\\.html)?(\\?|$|#)/.test(url)) return true;
+    if (/^(home|about us|contact us|faq|help desk|latest updates|official website|read more|click here)$/.test(title)) return true;
     return false;
   };
   const uniqueItems = items => {
