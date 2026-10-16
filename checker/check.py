@@ -88,7 +88,7 @@ SKIP = re.compile(
     r"inter college migration|inter-college migration|printing and supply|"
     r"purchase of books|faculty research programme|faculty research program|"
     r"glow dental clinic|sports meet|cultural fest|cultural festival|"
-    r"skip to content|accessibility statement|screen reader access|"
+    r"skip to content|accessibility statement|accessibilitystatement|screen reader access|"
     r"about us|main functions|press information bureau|site map|contact us|"
     r"terms of use|feedback|login|log in|register|search|help|"
     r"accessibility options|skip navigation|back to top)\b", re.I
@@ -216,7 +216,15 @@ def classify(title):
 def classify_source_title(title, source):
     """Classify normal exam notices; optionally index every entry from an official news feed."""
     category = classify(title)
-    if source.get("include_all_items", False) and title and not NAV_TITLE.fullmatch(title.strip()):
+    # Broad press-release feeds may index genuine announcements that do not
+    # match exam-specific keywords, but never promote navigation/accessibility
+    # links into notifications.
+    if (
+        source.get("include_all_items", False)
+        and title
+        and not SKIP.search(title)
+        and not NAV_TITLE.fullmatch(title.strip())
+    ):
         return category or "notification"
     return category
 
