@@ -144,3 +144,6 @@
 .directory-note{margin:18px 0 0;color:#6b7b90;font-size:.78rem}
 @media(max-width:1000px){.quick-exam-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.exam-directory{margin:18px 10px 24px;padding:18px 13px;border-radius:14px}.quick-exam-grid{grid-template-columns:1fr}.quick-exam-card p{min-height:0}.directory-all-states{white-space:normal}}
+
+/* Simple share action in the navigation */
+.nav-share{border:1px solid #cbd9eb;border-radius:8px;background:#f3f7fd;color:#174f9c;padding:7px 10px;font:inherit;font-weight:750;cursor:pointer}.nav-share:hover{background:#e5efff}.nav-share:focus-visible{outline:3px solid #ffce65;outline-offset:2px}
