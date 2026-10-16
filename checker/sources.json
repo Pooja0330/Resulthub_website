@@ -460,7 +460,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "tnresults",
@@ -475,7 +476,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "keralaresults",
@@ -490,7 +492,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "wbresults",
@@ -505,7 +508,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated."
+      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "exam_category": "School Board Results"
     },
     {
       "id": "odisha-board",
@@ -969,7 +973,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Banking"
     },
     {
       "id": "lic-careers",
@@ -1029,7 +1034,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "UPSC / Central Recruitment"
     },
     {
       "id": "upsc-recruitment",
@@ -1168,7 +1174,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Teaching / Eligibility"
     },
     {
       "id": "nvs",
@@ -1187,7 +1194,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Teaching / Eligibility"
     },
     {
       "id": "nta-nchm",
@@ -1886,7 +1894,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages. Also covers duplicate registry entries: Himachal Pradesh Rajya Chayan Aayog."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages. Also covers duplicate registry entries: Himachal Pradesh Rajya Chayan Aayog.",
+      "exam_category": "UPSC / Central Recruitment"
     },
     {
       "id": "jkssb",
@@ -1985,7 +1994,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "UPSC / Central Recruitment"
     },
     {
       "id": "hssc",
@@ -2064,7 +2074,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "up-police",
@@ -2163,7 +2174,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages. Also covers duplicate registry entries: Chhattisgarh Professional Examination Board."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages. Also covers duplicate registry entries: Chhattisgarh Professional Examination Board.",
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "rajasthan-rssb",
@@ -2222,7 +2234,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "gujarat-gsssb",
@@ -2341,7 +2354,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Entrance & Eligibility"
     },
     {
       "id": "karnataka-kpsc",
@@ -2440,7 +2454,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "UPSC / Central Recruitment"
     },
     {
       "id": "wb-police",
@@ -2519,7 +2534,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "State PSC / Recruitment"
     },
     {
       "id": "nios-results",
@@ -2539,7 +2555,7 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "School Board Results"
+      "exam_category": "Entrance & Eligibility"
     },
     {
       "id": "maharashtra-board",
@@ -2580,7 +2596,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Entrance & Eligibility"
     },
     {
       "id": "odisha-results",
@@ -2599,7 +2616,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Entrance & Eligibility"
     },
     {
       "id": "ap-results",
@@ -2618,7 +2636,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Entrance & Eligibility"
     },
     {
       "id": "telangana-results",
@@ -2637,7 +2656,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Entrance & Eligibility"
     },
     {
       "id": "ipu",
@@ -2656,7 +2676,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Entrance & Eligibility"
     },
     {
       "id": "ignou",
@@ -2675,7 +2696,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Entrance & Eligibility"
     },
     {
       "id": "du",
@@ -2694,7 +2716,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Entrance & Eligibility"
     },
     {
       "id": "bhu",
@@ -2713,7 +2736,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Entrance & Eligibility"
     },
     {
       "id": "neet-pg",
@@ -2752,7 +2776,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Professional Exams"
     },
     {
       "id": "icai",
@@ -2771,7 +2796,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Professional Exams"
     },
     {
       "id": "icsi",
@@ -2790,7 +2816,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Professional Exams"
     },
     {
       "id": "icmai",
@@ -2809,7 +2836,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages."
+      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "exam_category": "Professional Exams"
     },
     {
       "id": "upsc-active-exams",
@@ -2896,7 +2924,8 @@
       ],
       "enabled": true,
       "last_reviewed": "2026-10-16",
-      "coverage_note": "Official Department of Posts recruitment listings."
+      "coverage_note": "Official Department of Posts recruitment listings.",
+      "exam_category": "UPSC / Central Recruitment"
     },
     {
       "id": "indiapost-gds",
@@ -2918,7 +2947,8 @@
       ],
       "enabled": true,
       "last_reviewed": "2026-10-16",
-      "coverage_note": "Official GDS engagement schedule, notices and shortlisted candidates. Also covers duplicate registry entries: India Post GDS Engagement."
+      "coverage_note": "Official GDS engagement schedule, notices and shortlisted candidates. Also covers duplicate registry entries: India Post GDS Engagement.",
+      "exam_category": "UPSC / Central Recruitment"
     },
     {
       "id": "indian-navy",
@@ -3027,7 +3057,8 @@
       ],
       "enabled": true,
       "last_reviewed": "2026-10-16",
-      "coverage_note": "Official FCI recruitment notices."
+      "coverage_note": "Official FCI recruitment notices.",
+      "exam_category": "UPSC / Central Recruitment"
     },
     {
       "id": "drdo-rac",
@@ -3048,7 +3079,8 @@
       ],
       "enabled": true,
       "last_reviewed": "2026-10-16",
-      "coverage_note": "Official DRDO scientist recruitment, advertisements and recruitment notices."
+      "coverage_note": "Official DRDO scientist recruitment, advertisements and recruitment notices.",
+      "exam_category": "UPSC / Central Recruitment"
     },
     {
       "id": "isro-careers",
@@ -3069,7 +3101,8 @@
       ],
       "enabled": true,
       "last_reviewed": "2026-10-16",
-      "coverage_note": "Official ISRO recruitment and centralised recruitment opportunities."
+      "coverage_note": "Official ISRO recruitment and centralised recruitment opportunities.",
+      "exam_category": "UPSC / Central Recruitment"
     },
     {
       "id": "aiims-exams",
@@ -3090,7 +3123,8 @@
       ],
       "enabled": true,
       "last_reviewed": "2026-10-16",
-      "coverage_note": "Official AIIMS entrance examinations, recruitment examinations and results."
+      "coverage_note": "Official AIIMS entrance examinations, recruitment examinations and results.",
+      "exam_category": "UPSC / Central Recruitment"
     },
     {
       "id": "esic-recruitment",
@@ -3133,7 +3167,8 @@
       ],
       "enabled": true,
       "last_reviewed": "2026-10-16",
-      "coverage_note": "Official NIELIT recruitment and examination notices."
+      "coverage_note": "Official NIELIT recruitment and examination notices.",
+      "exam_category": "UPSC / Central Recruitment"
     },
     {
       "id": "sebi-careers",
@@ -3154,7 +3189,8 @@
       ],
       "enabled": true,
       "last_reviewed": "2026-10-16",
-      "coverage_note": "Official securities regulator notices and recruitment announcements."
+      "coverage_note": "Official securities regulator notices and recruitment announcements.",
+      "exam_category": "UPSC / Central Recruitment"
     },
     {
       "id": "irdai-careers",
@@ -3175,7 +3211,8 @@
       ],
       "enabled": true,
       "last_reviewed": "2026-10-16",
-      "coverage_note": "Official insurance regulator recruitment and examination notices."
+      "coverage_note": "Official insurance regulator recruitment and examination notices.",
+      "exam_category": "UPSC / Central Recruitment"
     },
     {
       "id": "pfrda-careers",
@@ -3218,7 +3255,8 @@
       ],
       "enabled": true,
       "last_reviewed": "2026-10-16",
-      "coverage_note": "Official SIDBI recruitment announcements."
+      "coverage_note": "Official SIDBI recruitment announcements.",
+      "exam_category": "UPSC / Central Recruitment"
     },
     {
       "id": "csir-hrdg",
@@ -3239,7 +3277,8 @@
       ],
       "enabled": true,
       "last_reviewed": "2026-10-16",
-      "coverage_note": "Official CSIR examination and fellowship notices including NET."
+      "coverage_note": "Official CSIR examination and fellowship notices including NET.",
+      "exam_category": "UPSC / Central Recruitment"
     },
     {
       "id": "barc-recruitment",
@@ -3260,7 +3299,8 @@
       ],
       "enabled": true,
       "last_reviewed": "2026-10-16",
-      "coverage_note": "Official BARC recruitment portal."
+      "coverage_note": "Official BARC recruitment portal.",
+      "exam_category": "UPSC / Central Recruitment"
     },
     {
       "id": "cbse-results-official",
@@ -3282,7 +3322,7 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official CBSE/NIC result portal; use the non-www hostname to avoid the observed www DNS failure.",
-      "exam_category": "School Board Results"
+      "exam_category": "Entrance & Eligibility"
     },
     {
       "id": "cisce-results",
@@ -3304,7 +3344,7 @@
       "enabled": false,
       "last_reviewed": null,
       "coverage_note": "Disabled because the official results portal terms expressly prohibit automated scraping; monitor CISCE's official main website for public notices instead.",
-      "exam_category": "School Board Results"
+      "exam_category": "Entrance & Eligibility"
     },
     {
       "id": "crpf-results",
@@ -3328,7 +3368,7 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "CRPF official recruitment/results URLs redirect to crpf.mha.gov.in; allowlist includes the official redirect target.",
-      "exam_category": "Defence"
+      "exam_category": "Entrance & Eligibility"
     },
     {
       "id": "crpf-recruitment",
@@ -3395,7 +3435,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites. Also covers duplicate registry entries: Indian Coast Guard and maritime recruitment notices."
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites. Also covers duplicate registry entries: Indian Coast Guard and maritime recruitment notices.",
+      "exam_category": "UPSC / Central Recruitment"
     },
     {
       "id": "coast-guard-home",
@@ -3416,7 +3457,8 @@
       ],
       "enabled": true,
       "last_reviewed": null,
-      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites."
+      "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
+      "exam_category": "UPSC / Central Recruitment"
     },
     {
       "id": "merchant-navy-imu",
@@ -3460,7 +3502,7 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
-      "exam_category": "School Board Results"
+      "exam_category": "Entrance & Eligibility"
     },
     {
       "id": "ubse-results",
@@ -3482,7 +3524,7 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
-      "exam_category": "School Board Results"
+      "exam_category": "Entrance & Eligibility"
     },
     {
       "id": "manipur-board",
