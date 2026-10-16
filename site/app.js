@@ -28,7 +28,7 @@ const STATE_PORTALS = {
  "Karnataka":[["Karnataka PSC","https://kpsc.kar.nic.in/"],["Karnataka School Examination and Assessment Board","https://kseab.karnataka.gov.in/"]],
  "Kerala":[["Kerala PSC","https://www.keralapsc.gov.in/"],["Kerala Board of Public Examinations","https://pareekshabhavan.kerala.gov.in/"],["Kerala Results","https://results.kerala.nic.in/"]],
  "Madhya Pradesh":[["MP PSC","https://mppsc.mp.gov.in/"],["MP Board","https://mpbse.nic.in/"],["MP Employees Selection Board","https://esb.mp.gov.in/"]],
- "Maharashtra":[["Maharashtra PSC","https://mpsc.gov.in/"],["Maharashtra Board","https://mahahsscboard.in/"],["Maharashtra Results","https://mahresult.nic.in/"],["MahaSwayam Recruitment","https://rojgar.mahaswayam.gov.in/"]],
+ "Maharashtra":[["MPSC announcements","https://mpsc.gov.in/announcement_and_circular/4"],["MPSC results & merit lists","https://mpsc.gov.in/results_merit_list/14"],["MPSC final recommendations","https://mpsc.gov.in/results_final_recomm_list/15"],["MPSC answer keys","https://mpsc.gov.in/answer_keys_of_examinations/45"],["MPSC interview schedules","https://mpsc.gov.in/schedule_interviews/21"],["Maharashtra Board SSC results","https://www.mahahsscboard.in/en/result/SSC"],["Maharashtra Board HSC results","https://www.mahahsscboard.in/en/result/HSC"],["Maharashtra Board home","https://www.mahahsscboard.in/"],["Maharashtra Results portal","https://mahresult.nic.in/"],["Maharashtra CET Cell / MHT-CET","https://cetcell.mahacet.org/"],["Maharashtra Government","https://maharashtra.gov.in/"],["MahaSwayam Recruitment","https://rojgar.mahaswayam.gov.in/"]],
  "Manipur":[["Manipur PSC","https://mpscmanipur.gov.in/"],["Board of Secondary Education Manipur","https://bsem.nic.in/"]],
  "Meghalaya":[["Meghalaya PSC","https://mpsc.meghalaya.gov.in/"],["Meghalaya Board of School Education","https://mbose.in/"]],
  "Mizoram":[["Mizoram PSC","https://mpsc.mizoram.gov.in/"],["Mizoram Board of School Education","https://mbse.edu.in/"]],
@@ -147,6 +147,14 @@ function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&l
 function dateText(v){if(!v)return "Date not supplied";const d=new Date(v);return Number.isNaN(d.getTime())?"Date not supplied":d.toLocaleDateString("en-IN",{day:"numeric",month:"short",year:"numeric"})}
 function inferredFamily(x){
  const t=[x.source_id,x.source_name,x.title,x.exam,x.state].join(" ").toLowerCase();
+ if(/\bjee\s*advanced\b/.test(t)) return "JEE Advanced";
+ if(/\bjee\s*(main|mains)\b/.test(t)) return "JEE Main";
+ if(/\bneet\s*(pg|post.?graduate)\b/.test(t)||/natboard\.edu/.test(t)) return "NEET PG";
+ if(/\bneet\s*(ug|under.?graduate)\b/.test(t)||String(x.source_id||"")==="neet") return "NEET UG";
+ if(/\b(upsc|union public service commission)\b/.test(t)&&/\b(main|mains)\b/.test(t)) return "UPSC Mains";
+ if(/\b(upsc|union public service commission)\b/.test(t)&&/\b(preliminary|prelims)\b/.test(t)) return "UPSC Prelims";
+ if(/\b(psc|public service commission|state services|state service|mpsc|uppsc|bpsc|rpsc|kpsc|tnpsc|opsc|gpsc|hpsc|jpsc|wbpsc)\b/.test(t)&&/\b(main|mains)\b/.test(t)) return "State PSC Mains";
+ if(/\b(psc|public service commission|state services|state service|mpsc|uppsc|bpsc|rpsc|kpsc|tnpsc|opsc|gpsc|hpsc|jpsc|wbpsc)\b/.test(t)&&/\b(preliminary|prelims)\b/.test(t)) return "State PSC Prelims";
  if(/railway recruitment|\brrb\b|\brrc\b|ntpc|group d|assistant loco pilot|\balp\b/.test(t)) return "Railways";
  if(/\bibps\b|state bank of india|\bsbi\b|reserve bank of india|\brbi\b|banking|\blic\b|insurance regulatory|niacl|uiic|pfrda/.test(t)) return "Banking";
  if(/staff selection commission|\bssc (cgl|chsl|mts|gd|stenographer)\b/.test(t)) return "SSC / Central Recruitment";
