@@ -253,7 +253,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
-      "exam_category": "Railways"
+      "exam_category": "Railways",
+      "state": "Odisha",
+      "region": "Odisha"
     },
     {
       "id": "rrb-sec",
@@ -271,7 +273,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
-      "exam_category": "Railways"
+      "exam_category": "Railways",
+      "state": "Telangana",
+      "region": "Telangana"
     },
     {
       "id": "cbse",
@@ -915,8 +919,8 @@
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
       "exam_category": "State PSC / Recruitment",
-      "state": "Bihar",
-      "region": "Bihar"
+      "state": "West Bengal",
+      "region": "West Bengal"
     },
     {
       "id": "appsc",
@@ -1301,7 +1305,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Railways"
+      "exam_category": "Railways",
+      "state": "Gujarat",
+      "region": "Gujarat"
     },
     {
       "id": "rrb-ajmer",
@@ -1321,7 +1327,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Railways"
+      "exam_category": "Railways",
+      "state": "Rajasthan",
+      "region": "Rajasthan"
     },
     {
       "id": "rrb-allahabad",
@@ -1341,7 +1349,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Railways"
+      "exam_category": "Railways",
+      "state": "Uttar Pradesh",
+      "region": "Uttar Pradesh"
     },
     {
       "id": "rrb-bangalore",
@@ -1361,7 +1371,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Railways"
+      "exam_category": "Railways",
+      "state": "Karnataka",
+      "region": "Karnataka"
     },
     {
       "id": "rrb-bhopal",
@@ -1381,7 +1393,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Railways"
+      "exam_category": "Railways",
+      "state": "Madhya Pradesh",
+      "region": "Madhya Pradesh"
     },
     {
       "id": "rrb-bilaspur",
@@ -1401,7 +1415,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Railways"
+      "exam_category": "Railways",
+      "state": "Chhattisgarh",
+      "region": "Chhattisgarh"
     },
     {
       "id": "rrb-chandigarh",
@@ -1421,7 +1437,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Railways"
+      "exam_category": "Railways",
+      "state": "Chandigarh",
+      "region": "Chandigarh"
     },
     {
       "id": "rrb-chennai",
@@ -1441,7 +1459,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Railways"
+      "exam_category": "Railways",
+      "state": "Tamil Nadu",
+      "region": "Tamil Nadu"
     },
     {
       "id": "rrb-gorakhpur",
@@ -1461,7 +1481,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Railways"
+      "exam_category": "Railways",
+      "state": "Uttar Pradesh",
+      "region": "Uttar Pradesh"
     },
     {
       "id": "rrb-guwahati",
@@ -1481,7 +1503,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Railways"
+      "exam_category": "Railways",
+      "state": "Assam",
+      "region": "Assam"
     },
     {
       "id": "rrb-jammu",
@@ -1501,7 +1525,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages. Also covers duplicate registry entries: RRB Jammu.",
-      "exam_category": "Railways"
+      "exam_category": "Railways",
+      "state": "Jammu and Kashmir",
+      "region": "Jammu and Kashmir"
     },
     {
       "id": "rrb-kolkata",
@@ -1521,7 +1547,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Railways"
+      "exam_category": "Railways",
+      "state": "West Bengal",
+      "region": "West Bengal"
     },
     {
       "id": "rrb-malabar",
@@ -1541,7 +1569,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Railways"
+      "exam_category": "Railways",
+      "state": "Kerala",
+      "region": "Kerala"
     },
     {
       "id": "rrb-mumbai",
@@ -1561,7 +1591,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Railways"
+      "exam_category": "Railways",
+      "state": "Maharashtra",
+      "region": "Maharashtra"
     },
     {
       "id": "rrb-muzaffarpur",
@@ -1581,7 +1613,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Railways"
+      "exam_category": "Railways",
+      "state": "Bihar",
+      "region": "Bihar"
     },
     {
       "id": "rrb-patna",
@@ -1601,7 +1635,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Railways"
+      "exam_category": "Railways",
+      "state": "Bihar",
+      "region": "Bihar"
     },
     {
       "id": "rrb-ranchi",
@@ -1621,7 +1657,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Railways"
+      "exam_category": "Railways",
+      "state": "Jharkhand",
+      "region": "Jharkhand"
     },
     {
       "id": "rrb-siliguri",
@@ -1641,7 +1679,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Railways"
+      "exam_category": "Railways",
+      "state": "West Bengal",
+      "region": "West Bengal"
     },
     {
       "id": "rrc-central",
@@ -1661,7 +1701,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Railways"
+      "exam_category": "Railways",
+      "state": "Maharashtra",
+      "region": "Maharashtra"
     },
     {
       "id": "rrc-northern",
@@ -1681,7 +1723,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Railways"
+      "exam_category": "Railways",
+      "state": "Delhi",
+      "region": "Delhi"
     },
     {
       "id": "rrc-western",
@@ -1701,7 +1745,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Railways"
+      "exam_category": "Railways",
+      "state": "Maharashtra",
+      "region": "Maharashtra"
     },
     {
       "id": "rrc-eastern",
@@ -1721,7 +1767,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Railways"
+      "exam_category": "Railways",
+      "state": "West Bengal",
+      "region": "West Bengal"
     },
     {
       "id": "rrc-south-central",
@@ -1741,7 +1789,9 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Railways"
+      "exam_category": "Railways",
+      "state": "Telangana",
+      "region": "Telangana"
     },
     {
       "id": "apsc",
@@ -2598,8 +2648,8 @@
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Teaching / Eligibility",
-      "state": "Bihar",
-      "region": "Bihar"
+      "state": "West Bengal",
+      "region": "West Bengal"
     },
     {
       "id": "wb-police",
@@ -4514,6 +4564,72 @@
       "exam_category": "School Board Results",
       "state": "Maharashtra",
       "region": "Maharashtra"
+    },
+    {
+      "id": "portal-maharashtra-www-mahahsscboard-in",
+      "name": "Maharashtra Board home",
+      "url": "https://www.mahahsscboard.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "www.mahahsscboard.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Maharashtra",
+      "region": "Maharashtra",
+      "exam_category": "State PSC / Recruitment",
+      "coverage_note": "Official state portal added to improve exam-notice coverage; scan results still depend on the portal's public page structure."
+    },
+    {
+      "id": "portal-maharashtra-maharashtra-gov-in",
+      "name": "Maharashtra Government",
+      "url": "https://maharashtra.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "maharashtra.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Maharashtra",
+      "region": "Maharashtra",
+      "exam_category": "State PSC / Recruitment",
+      "coverage_note": "Official state portal added to improve exam-notice coverage; scan results still depend on the portal's public page structure."
+    },
+    {
+      "id": "portal-delhi-delhi-gov-in",
+      "name": "Delhi Government",
+      "url": "https://delhi.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "delhi.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Delhi",
+      "region": "Delhi",
+      "exam_category": "State PSC / Recruitment",
+      "coverage_note": "Official state portal added to improve exam-notice coverage; scan results still depend on the portal's public page structure."
     }
   ]
 }
