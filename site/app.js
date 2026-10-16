@@ -343,6 +343,7 @@ function runSearch(scroll=true){
 $("#searchForm").addEventListener("submit",e=>{e.preventDefault();runSearch(true)});
 $("#q").addEventListener("input",()=>{clearUpdateFilters();if(quickSearch)quickSearch.value=$("#q").value;filterQuickExams($("#q").value);page=1;render()});
 ["category","examCategory","region","sort","examYear"].forEach(id=>$("#"+id).addEventListener("change",()=>{if(id==="region"){const v=$("#region").value;selectedState=STATE_NAMES.includes(v)?v:"";selectedRegion=v==="Central"?"Central":"";}page=1;render()}));
+ $("#clearFilters")?.addEventListener("click",()=>{clearAllFilters();$("#updates").scrollIntoView({behavior:"smooth",block:"start"});});
 document.querySelectorAll(".pills [data-family]").forEach(button=>button.addEventListener("click",()=>{$("#examCategory").value=button.dataset.family;page=1;$("#updates").scrollIntoView({behavior:"smooth"});render()}));
 document.querySelectorAll("[data-quick-search]").forEach(button=>button.addEventListener("click",()=>{const term=button.dataset.quickSearch||"";$("#q").value=term;if(quickSearch)quickSearch.value=term;filterQuickExams(term);$("#category").value="";$("#examCategory").value="";$("#region").value="";$("#examYear").value="";selectedState="";selectedRegion="";selectedBrowse="";page=1;render();$("#updates").scrollIntoView({behavior:"smooth",block:"start"});}));
 $("#stateQuickSearch")?.addEventListener("input",()=>renderStateSidebar());
