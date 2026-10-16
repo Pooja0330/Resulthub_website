@@ -87,7 +87,11 @@ SKIP = re.compile(
     r"conference|workshop|symposium|seminar|research proposal|research grant|"
     r"inter college migration|inter-college migration|printing and supply|"
     r"purchase of books|faculty research programme|faculty research program|"
-    r"glow dental clinic|sports meet|cultural fest|cultural festival)\b", re.I
+    r"glow dental clinic|sports meet|cultural fest|cultural festival|"
+    r"skip to content|accessibility statement|screen reader access|"
+    r"about us|main functions|press information bureau|site map|contact us|"
+    r"terms of use|feedback|login|log in|register|search|help|"
+    r"accessibility options|skip navigation|back to top)\b", re.I
 )
 
 NAV_TITLE = re.compile(
