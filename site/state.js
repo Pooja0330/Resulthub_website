@@ -143,7 +143,14 @@ function recordYear(x){
  const date=String(x.published||x.date||"").match(/(?:19|20)\d{2}/);
  return date?date[0]:"";
 }
+function renderStateYearBrowser(){
+ const box=$("#stateYearBrowser");if(!box)return;const selected=$("#stateExamYear").value,counts={};
+ allItems.filter(x=>stateForItem(x)===state).forEach(item=>{const year=recordYear(item);if(year)counts[year]=(counts[year]||0)+1;});
+ box.innerHTML=Array.from({length:27},(_,i)=>2026-i).map(year=>'<button type="button" class="year-chip'+(selected===String(year)?' active':'')+'" data-year="'+year+'" aria-pressed="'+(selected===String(year)?'true':'false')+'"><span>'+year+'</span><small>'+(counts[String(year)]||0)+'</small></button>').join('')+'<button type="button" class="year-chip'+(!selected?' active':'')+'" data-year="" aria-pressed="'+(!selected?'true':'false')+'"><span>All years</span><small>'+allItems.filter(x=>stateForItem(x)===state).length+'</small></button>';
+ box.querySelectorAll("[data-year]").forEach(button=>button.addEventListener("click",()=>{$("#stateExamYear").value=button.dataset.year;page=1;render();$("#stateUpdates").scrollIntoView({behavior:"smooth",block:"start"});}));
+}
 function render(){
+ renderStateYearBrowser();
  const selectedYear=$("#stateExamYear").value;
  const filtered=allItems.filter(x=>stateForItem(x)===state&&(!selectedCategory||x.category===selectedCategory)&&(!selectedFamily||inferredFamily(x)===selectedFamily)&&(!selectedYear||(selectedYear==="unknown"?!recordYear(x):recordYear(x)===selectedYear)));
  filtered.sort((a,b)=>new Date(b.detected_at||b.date||0)-new Date(a.detected_at||a.date||0));
@@ -154,7 +161,7 @@ function render(){
   const date=x.published||x.detected_at||x.date;
   const dateText=date&&!Number.isNaN(new Date(date).getTime())?new Date(date).toLocaleDateString("en-IN",{day:"numeric",month:"short",year:"numeric"}):"Date not supplied";
   const tag=titleCase(x.category);
-  return '<article class="card"><div class="meta"><span class="tag">'+esc(tag)+'</span><span class="unverified">'+(x.archive?'Historical archive':(x.archive?'Historical archive':(x.archive?'Historical archive':(x.verified===true?'✓ Verified official source':'Official source link'))))+'</span></div><h3>'+esc(x.title||x.exam||"Exam update")+'</h3><p>'+esc(x.description||x.source_name||"Open the official authority link for full details.")+'</p><div class="source">'+esc(x.source_name||x.authority||"Issuing authority")+' · '+esc(dateText)+'</div>'+(source&&source!==url?'<a class="link" href="'+esc(source)+'" target="_blank" rel="noopener noreferrer">Official authority ↗</a>':'')+(url?'<a class="link secondary" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">Open notice / result ↗</a>':'<span>Direct notice link not available; use the official portals above.</span>')+'</article>';
+  return '<article class="card"><div class="meta"><span class="tag">'+esc(tag)+'</span><span class="unverified">'+(x.archive?'Historical archive':(x.verified===true?'✓ Verified official source':'Official source link'))+'</span></div><h3>'+esc(x.title||x.exam||"Exam update")+'</h3><p>'+esc(x.description||x.source_name||"Open the official authority link for full details.")+'</p><div class="source">'+esc(x.source_name||x.authority||"Issuing authority")+' · '+esc(dateText)+'</div>'+(source&&source!==url?'<a class="link" href="'+esc(source)+'" target="_blank" rel="noopener noreferrer">Official authority ↗</a>':'')+(url?'<a class="link secondary" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">Open notice / result ↗</a>':'<span>Direct notice link not available; use the official portals above.</span>')+'</article>';
  }).join("");
  $("#noStateUpdates").classList.toggle("hidden",filtered.length>0);
  $("#statePagination").innerHTML=filtered.length>pageSize?'<button id="previous" class="secondary" '+(page===1?'disabled':'')+'>Previous</button><span>Page '+page+' of '+pages+'</span><button id="next" class="secondary" '+(page===pages?'disabled':'')+'>Next</button>':'';
