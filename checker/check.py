@@ -322,7 +322,7 @@ def fetch_source(source):
     response = get_with_retries(url)
 
     if not host_allowed(response.url, hosts):
-        raise ValueError("Redirected outside the official allowlist")
+        raise ValueError(f"Redirected outside the official allowlist: {urlparse(response.url).hostname or 'unknown host'}")
 
     kind = str(source.get("kind", "html")).lower()
     content_type = response.headers.get("content-type", "").lower()
