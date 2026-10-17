@@ -18988,5 +18988,26 @@
     "verified": false,
     "archive": false,
     "detected_at": "2026-10-17T16:48:03.716901+00:00"
+  },
+  {
+    "id": "30f82e95af0f4df19d2cbcc6",
+    "title": "Revised Admission schedule for PhD prog for AY 2026-27",
+    "exam": "Revised Admission schedule for PhD prog for AY 2026-27",
+    "exam_category": "University Results",
+    "category": "notification",
+    "source_name": "Jawaharlal Nehru University",
+    "source_id": "jnu",
+    "authority": "Jawaharlal Nehru University",
+    "url": "https://jnu.ac.in/sites/default/files/inline-files/Revised_admissionPhD_Schedule2026-27.pdf",
+    "official_url": "https://jnu.ac.in/sites/default/files/inline-files/Revised_admissionPhD_Schedule2026-27.pdf",
+    "source_url": "https://jnu.ac.in/",
+    "published": "",
+    "exam_year": "2026",
+    "region": "Delhi",
+    "state": "Delhi",
+    "description": "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility.",
+    "verified": false,
+    "archive": false,
+    "detected_at": "2026-10-17T18:59:18.680423+00:00"
   }
 ]
