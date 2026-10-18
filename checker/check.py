@@ -425,8 +425,8 @@ def is_speculative_status_title(title):
     """Reject editorial placeholders that are not official notices."""
     value = " ".join(str(title or "").lower().split())
     return bool(re.search(
-        r"\\b(awaiting official update|expected soon|result expected soon|"
-        r"result not yet declared|not yet declared by the authority)\\b",
+        r"\b(awaiting official update|expected soon|result expected soon|"
+        r"result not yet declared|not yet declared by the authority)\b",
         value,
     ))
 
