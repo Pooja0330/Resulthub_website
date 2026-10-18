@@ -474,7 +474,7 @@ def discover_listing_urls(soup, base_url, hosts, limit=2):
         re.I,
     )
     ignored_path = re.compile(
-        r"\\.(?:pdf|jpg|jpeg|png|gif|zip|docx?|xlsx?|pptx?)$",
+        r"\.(?:pdf|jpg|jpeg|png|gif|zip|docx?|xlsx?|pptx?)$",
         re.I,
     )
     base_host = (urlparse(base_url).hostname or "").lower()
@@ -551,7 +551,7 @@ def fetch_source(source):
                 len(title) < 45
                 or bool(NAV_TITLE.fullmatch(title.strip()))
                 or bool(re.fullmatch(
-                    r"(?:preliminary|main|mains|final)?\\s*(?:examination\\s+)?"
+                    r"(?:preliminary|main|mains|final)?\s*(?:examination\s+)?"
                     r"(?:result|results|result status|merit list|admit card|answer key|"
                     r"cut.?off|shortlisted candidates)",
                     title.strip(), re.I
