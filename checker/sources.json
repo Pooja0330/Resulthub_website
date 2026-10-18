@@ -5927,6 +5927,48 @@
       "coverage_note": "Official NTA results listing; candidate-specific result portals may still require login on the authority site.",
       "exam_category": "Entrance & Eligibility",
       "discover_listing_pages": true
+    },
+    {
+      "id": "pib-english-regional-releases",
+      "name": "PIB English Press Releases — Regional Feed Backup",
+      "url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3",
+      "kind": "rss",
+      "allowed_hosts": [
+        "pib.gov.in"
+      ],
+      "categories": [
+        "notification",
+        "result",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-18",
+      "state": "",
+      "region": "Central",
+      "exam_category": "Government & PIB Updates",
+      "include_all_items": true,
+      "max_new": 50,
+      "coverage_note": "Additional official PIB English RSS endpoint. Used as a redundancy source alongside the all-India English feed and All Releases page; duplicate links are deduplicated."
+    },
+    {
+      "id": "pib-english-features",
+      "name": "PIB English Features Feed",
+      "url": "https://pib.gov.in/RssMain.aspx?ModId=18&Lang=1&Regid=1",
+      "kind": "rss",
+      "allowed_hosts": [
+        "pib.gov.in"
+      ],
+      "categories": [
+        "notification"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-18",
+      "state": "",
+      "region": "Central",
+      "exam_category": "Government & PIB Updates",
+      "include_all_items": true,
+      "max_new": 25,
+      "coverage_note": "Official PIB English features RSS feed provides a second content stream for government explainers and public-information updates."
     }
   ]
 }
