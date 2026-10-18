@@ -283,7 +283,7 @@ function renderPibNews(){
   .sort((a,b)=>new Date(b.detected_at||b.published||b.date||0)-new Date(a.detected_at||a.published||a.date||0)).slice(0,14);
  box.innerHTML=rows.length?rows.map(x=>{
   const url=safeUrl(x.url||x.official_url)||safeUrl(x.source_url)||"https://pib.gov.in/";
-  const title=String(x.title||x.exam||"PIB press release").replace(/\\s+/g," ").trim();
+  const title=String(x.title||x.exam||"PIB press release").replace(/\s+/g," ").trim();
   return '<a class="pib-news-item" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer" title="'+esc(title)+'"><span class="pib-news-dot" aria-hidden="true"></span><span class="pib-news-title">'+esc(title)+'</span><span class="pib-news-arrow" aria-hidden="true">↗</span></a>';
  }).join(""):'<p class="pib-empty">No PIB press releases are available in the current feed. The panel refreshes automatically.</p>';
 }
@@ -320,7 +320,7 @@ async function loadStatus(){
  if(statusRequest)return statusRequest;
  statusRequest=(async()=>{
   try{
-   const r=await fetch("data/status.json");
+   const r=await fetch("data/status.json?v="+Date.now(),{cache:"no-store"});
    if(!r.ok) throw new Error("Status unavailable");
    lastStatus=await r.json();
    const checked=lastStatus.last_checked_at?new Date(lastStatus.last_checked_at):null;
