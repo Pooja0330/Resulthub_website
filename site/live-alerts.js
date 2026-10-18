@@ -3,7 +3,7 @@
   const FEED_URL = "data/results.json";
   const STORAGE_KEY = "grh_seen_official_updates_v1";
   const MAX_SEEN = 500;
-  const POLL_MS = 60000;
+  const POLL_MS = 15000;
   const $ = (s) => document.querySelector(s);
   const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const safeUrl = (value) => {
@@ -97,7 +97,7 @@
     if (busy) return;
     busy = true;
     try {
-      const response=await fetch(FEED_URL,{cache:"no-cache"});
+      const response=await fetch(FEED_URL+"?v="+Date.now(),{cache:"no-store"});
       if(!response.ok)throw new Error("Feed request failed ("+response.status+")");
       const data=await response.json();
       if(!Array.isArray(data))throw new Error("Feed format was not recognised");
