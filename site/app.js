@@ -249,13 +249,15 @@ function isNavigationNoise(item){
 }
 function cleanResults(items){return Array.isArray(items)?items.filter(item=>!isNavigationNoise(item)):[];}
 function displayTitle(x){return String(x.title||x.exam||"Exam update");}
-function dedupeVisibleItems(items){
+function dedupeVisibleItems(items, options={}){
  const seen=new Set();
  return items.filter(x=>{
   const title=String(x.title||x.exam||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
   const source=String(x.source_name||x.authority||x.source_id||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
-  const key=source+"|"+title;
+  const url=String(x.url||x.official_url||x.source_url||"").trim();
+  const key=options.titleOnly?title:(source+"|"+title);
   if(!title||!source||seen.has(key))return false;
+  if(options.requirePibReleaseUrl&&!/^https:\/\/(?:www\.)?pib\.gov\.in\/(?:PressReleaseIframePage|PressReleasePage|PressReleaseDetail)\.aspx\?[^#]*\bPRID=\d+/i.test(url))return false;
   seen.add(key);return true;
  });
 }
@@ -289,8 +291,8 @@ function renderPriorityExamAlerts(){
 }
 function renderPibNews(){
  const box=$("#pibNewsList");if(!box)return;
- const rows=dedupeVisibleItems(allItems.filter(x=>isPibItem(x)&&x.archive!==true))
-  .sort((a,b)=>new Date(b.detected_at||b.published||b.date||0)-new Date(a.detected_at||a.published||a.date||0)).slice(0,14);
+ const rows=dedupeVisibleItems(allItems.filter(x=>isPibItem(x)&&x.archive!==true),{titleOnly:true,requirePibReleaseUrl:true})
+  .sort((a,b)=>String(b.url||"").localeCompare(String(a.url||""))).slice(0,14);
  box.innerHTML=rows.length?rows.map(x=>{
   const url=safeUrl(x.url||x.official_url)||safeUrl(x.source_url)||"https://pib.gov.in/";
   const title=String(x.title||x.exam||"PIB press release").replace(/\s+/g," ").trim();
@@ -350,7 +352,7 @@ async function loadResults(){
  if(resultsRequest)return resultsRequest;
  resultsRequest=(async()=>{
   try{
-   const r=await fetch("data/results.json",{cache:"no-cache"});
+   const r=await fetch("data/results.json?v="+Date.now(),{cache:"no-store"});
    if(!r.ok) throw new Error("Data not available");
    const data=await r.json();
    if(!Array.isArray(data))throw new Error("Invalid data format");
