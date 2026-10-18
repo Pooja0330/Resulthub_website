@@ -193,7 +193,7 @@ async function init(){
  }
  renderStateLinks();
  try{
-  const r=await fetch("data/results.json",{cache:"no-cache"});
+  const r=await fetch("data/results.json?v="+Date.now(),{cache:"no-store"});
   if(!r.ok)throw new Error("Feed unavailable");
   const data=await r.json(); if(!Array.isArray(data))throw new Error("Invalid feed");
   allItems=data;
@@ -203,6 +203,22 @@ async function init(){
   $("#noStateUpdates").classList.remove("hidden");
  }
  if(valid)render();
+ // Refresh the state directory feed automatically; the main homepage already polls the same feed.
+ // Cache-busting plus no-store prevents an old static JSON response from sticking in this tab.
+ setInterval(async()=>{
+  if(document.visibilityState!=="visible")return;
+  try{
+   const response=await fetch("data/results.json?v="+Date.now(),{cache:"no-store"});
+   if(!response.ok)return;
+   const fresh=await response.json();
+   if(!Array.isArray(fresh))return;
+   allItems=fresh;
+   renderStateLinks();
+   if(valid)render();
+  }catch(error){
+   console.warn("GoResultHub state feed refresh failed; keeping the last loaded updates.",error);
+  }
+ },60000);
  $("#examFamily").addEventListener("change",()=>{selectedFamily=$("#examFamily").value;page=1;render()});
  $("#updateType").addEventListener("change",()=>{selectedCategory=$("#updateType").value;page=1;render()});
  $("#stateExamYear").addEventListener("change",()=>{page=1;render()});
