@@ -588,7 +588,7 @@ def fetch_source(source):
         and host_allowed(link, hosts)
     )
     pages_scanned = 1
-    if kind != "rss" and initial_count < 3:
+    if kind != "rss" and source.get("discover_listing_pages", False) and initial_count < 3:
         for listing_url in listing_urls:
             try:
                 listing_response = get_with_retries(listing_url)
