@@ -340,7 +340,7 @@ async function loadStatus(){
    const healthy=lastStatus.status==="healthy";
    const stale=checked&&!Number.isNaN(checked.getTime())&&(Date.now()-checked.getTime()>4*60*60*1000);
    $("#monitorStatus").textContent=stale?"Checker status is stale":(healthy?"Automatic monitoring active":(lastStatus.status==="partial"?"Monitoring partially available":(lastStatus.status==="pending"?"Initial scan pending":"Monitoring status unavailable")));
-   $("#monitorDetail").textContent="Last checked "+when+" IST · "+(lastStatus.sources_succeeded||0)+"/"+(lastStatus.sources_enabled||0)+" sources reachable · "+(lastStatus.sources_failed||0)+" failed · "+(lastStatus.alerts_pending||0)+" alerts pending delivery · checks run about every 5 minutes"+(stale?" · latest scan is over 4 hours old":"");
+   $("#monitorDetail").textContent="Last checked "+when+" IST · "+(lastStatus.sources_succeeded||0)+"/"+(lastStatus.sources_enabled||0)+" sources reachable · "+(lastStatus.sources_failed||0)+" failed · "+(lastStatus.alerts_pending||0)+" alerts pending delivery · checks run about every 15 minutes"+(stale?" · latest scan is over 4 hours old":"");
   }catch(e){
    $("#monitorStatus").textContent="Monitoring status unavailable";
    $("#monitorDetail").textContent="The website is online, but the latest checker status could not be loaded.";
