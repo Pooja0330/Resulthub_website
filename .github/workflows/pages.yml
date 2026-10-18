@@ -1,4 +1,3 @@
-
 name: Deploy GoResultHub Website
 
 on:
@@ -7,6 +6,10 @@ on:
     paths:
       - "site/**"
       - ".github/workflows/pages.yml"
+  workflow_run:
+    workflows: ["Check Exam Results"]
+    types: [completed]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -20,17 +23,21 @@ concurrency:
 
 jobs:
   deploy:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v3
         with:
           path: site
       - name: Deploy website
         id: deployment
         uses: actions/deploy-pages@v4
-    
