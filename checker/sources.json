@@ -5845,6 +5845,88 @@
       "last_reviewed": "2026-10-18",
       "coverage_note": "Official NTA public-notice portal; separate from the general NTA homepage.",
       "exam_category": "Entrance & Eligibility"
+    },
+    {
+      "id": "upsc-whats-new",
+      "name": "UPSC What’s New — official notices",
+      "url": "https://www.upsc.gov.in/whats-new",
+      "kind": "html",
+      "allowed_hosts": [
+        "upsc.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-18",
+      "coverage_note": "Dedicated official UPSC What’s New listing; scanned separately from the homepage so current notices and direct notice links are not missed.",
+      "exam_category": "UPSC / Central Recruitment",
+      "discover_listing_pages": true
+    },
+    {
+      "id": "upsc-final-results",
+      "name": "UPSC Final Results — official listing",
+      "url": "https://www.upsc.gov.in/recruitment/recruitment-test/results/final-result",
+      "kind": "html",
+      "allowed_hosts": [
+        "upsc.gov.in"
+      ],
+      "categories": [
+        "result",
+        "merit_list"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-18",
+      "coverage_note": "Official UPSC final-result listing with dated uploads and direct document links.",
+      "exam_category": "UPSC / Central Recruitment",
+      "discover_listing_pages": true
+    },
+    {
+      "id": "nta-notice-board-archive",
+      "name": "NTA Notice Board Archive — official notices",
+      "url": "https://www.nta.ac.in/NoticeBoardArchive",
+      "kind": "html",
+      "allowed_hosts": [
+        "nta.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-18",
+      "coverage_note": "Dedicated official NTA notice archive, scanned separately from the homepage to improve coverage of dated exam updates.",
+      "exam_category": "Entrance & Eligibility",
+      "discover_listing_pages": true
+    },
+    {
+      "id": "nta-exam-results",
+      "name": "NTA Exam Results — official listing",
+      "url": "https://www.nta.ac.in/ExamResult",
+      "kind": "html",
+      "allowed_hosts": [
+        "nta.ac.in"
+      ],
+      "categories": [
+        "result",
+        "merit_list",
+        "cutoff"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-18",
+      "coverage_note": "Official NTA results listing; candidate-specific result portals may still require login on the authority site.",
+      "exam_category": "Entrance & Eligibility",
+      "discover_listing_pages": true
     }
   ]
 }
