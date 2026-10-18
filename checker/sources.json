@@ -17,7 +17,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
-      "exam_category": "UPSC / Central Recruitment"
+      "exam_category": "UPSC / Central Recruitment",
+      "discover_listing_pages": true
     },
     {
       "id": "ssc",
@@ -36,7 +37,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
-      "exam_category": "SSC / Central Recruitment"
+      "exam_category": "SSC / Central Recruitment",
+      "discover_listing_pages": true
     },
     {
       "id": "ibps",
@@ -59,7 +61,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official IBPS home page; the legacy root URL showed inconsistent TLS behavior in the runner. Also covers duplicate registry entries: IBPS examination and recruitment; IBPS RRB / Regional Rural Banks.",
-      "exam_category": "Banking"
+      "exam_category": "Banking",
+      "discover_listing_pages": true
     },
     {
       "id": "sbi-careers",
@@ -78,7 +81,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "SBI officially migrated its corporate site to sbi.bank.in; this redirect target is allowlisted for careers links.",
-      "exam_category": "Banking"
+      "exam_category": "Banking",
+      "discover_listing_pages": true
     },
     {
       "id": "rbi-opportunities",
@@ -119,7 +123,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: NTA exam notices and results.",
-      "exam_category": "Entrance & Eligibility"
+      "exam_category": "Entrance & Eligibility",
+      "discover_listing_pages": true
     },
     {
       "id": "jeemain",
@@ -138,7 +143,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
-      "exam_category": "Entrance & Eligibility"
+      "exam_category": "Entrance & Eligibility",
+      "discover_listing_pages": true
     },
     {
       "id": "neet",
@@ -157,7 +163,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
-      "exam_category": "Entrance & Eligibility"
+      "exam_category": "Entrance & Eligibility",
+      "discover_listing_pages": true
     },
     {
       "id": "cuet",
@@ -297,7 +304,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official CBSE notices and press releases page, which lists exam-result announcements, admit cards and exam-related updates.",
-      "exam_category": "School Board Results"
+      "exam_category": "School Board Results",
+      "discover_listing_pages": true
     },
     {
       "id": "cisce",
@@ -1205,7 +1213,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Entrance & Eligibility"
+      "exam_category": "Entrance & Eligibility",
+      "discover_listing_pages": true
     },
     {
       "id": "ctet",
@@ -1417,7 +1426,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Railways",
       "state": "Chhattisgarh",
-      "region": "Chhattisgarh"
+      "region": "Chhattisgarh",
+      "discover_listing_pages": true
     },
     {
       "id": "rrb-chandigarh",
