@@ -21216,5 +21216,26 @@
     "verified": false,
     "archive": false,
     "detected_at": "2026-10-18T16:14:02.591595+00:00"
+  },
+  {
+    "id": "c4b47bd542c46be326b97dba",
+    "title": "भारत की राष्ट्रपति की दुर्गा पूजा पर शुभकामनाएं",
+    "exam": "भारत की राष्ट्रपति की दुर्गा पूजा पर शुभकामनाएं",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "source_name": "PIB English Press Releases — Regional Feed Backup",
+    "source_id": "pib-english-regional-releases",
+    "authority": "PIB English Press Releases — Regional Feed Backup",
+    "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2324976",
+    "official_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2324976",
+    "source_url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3",
+    "published": "",
+    "exam_year": "",
+    "region": "Central",
+    "state": "",
+    "description": "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility.",
+    "verified": false,
+    "archive": false,
+    "detected_at": "2026-10-18T18:43:48.817845+00:00"
   }
 ]
