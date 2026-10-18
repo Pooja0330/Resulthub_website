@@ -284,8 +284,7 @@ function renderPibNews(){
  box.innerHTML=rows.length?rows.map(x=>{
   const url=safeUrl(x.url||x.official_url)||safeUrl(x.source_url)||"https://pib.gov.in/";
   const title=String(x.title||x.exam||"PIB press release").replace(/\\s+/g," ").trim();
-  const date=x.published||x.detected_at||"";
-  return '<a class="pib-news-item" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer" title="'+esc(title)+'"><span class="pib-news-dot" aria-hidden="true"></span><span class="pib-news-title">'+esc(title)+'</span><span class="pib-news-arrow" aria-hidden="true">↗</span>'+(date?'<small>'+esc(date)+'</small>':'')+'</a>';
+  return '<a class="pib-news-item" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer" title="'+esc(title)+'"><span class="pib-news-dot" aria-hidden="true"></span><span class="pib-news-title">'+esc(title)+'</span><span class="pib-news-arrow" aria-hidden="true">↗</span></a>';
  }).join(""):'<p class="pib-empty">No PIB press releases are available in the current feed. The panel refreshes automatically.</p>';
 }
 function render(){
