@@ -1,9 +1,43 @@
 import unittest
 
-from check import classify, exam_year_from_title, extract_notice_date, host_allowed, infer_exam_category, is_stale_notice, normalize_notice_url
+from check import classify, discover_listing_urls, exam_year_from_title, extract_notice_date, host_allowed, infer_exam_category, is_stale_notice, normalize_notice_url
+from bs4 import BeautifulSoup
 
 
 class CheckerSafetyTests(unittest.TestCase):
+    def test_listing_discovery_prefers_official_notice_pages(self):
+        html = """
+        <a href="/latest-updates/">Latest Updates</a>
+        <a href="https://attacker.example/latest-results/">Latest Results</a>
+        <a href="/downloads/notice.pdf">Recruitment Notice PDF</a>
+        <a href="/contact/">Contact Us</a>
+        <a href="/results/">Results</a>
+        """
+        soup = BeautifulSoup(html, "html.parser")
+        found = discover_listing_urls(
+            soup,
+            "https://example.gov.in/",
+            ["example.gov.in"],
+        )
+        self.assertIn("https://example.gov.in/latest-updates/", found)
+        self.assertIn("https://example.gov.in/results/", found)
+        self.assertFalse(any("attacker.example" in url for url in found))
+        self.assertFalse(any(url.endswith(".pdf") for url in found))
+        self.assertFalse(any("/contact" in url for url in found))
+
+    def test_listing_discovery_is_bounded(self):
+        html = "".join(
+            f'<a href="/notices/page-{n}/">Latest Notices {n}</a>'
+            for n in range(10)
+        )
+        found = discover_listing_urls(
+            BeautifulSoup(html, "html.parser"),
+            "https://example.gov.in/",
+            ["example.gov.in"],
+            limit=2,
+        )
+        self.assertEqual(len(found), 2)
+
     def test_notice_url_keeps_content_identifiers(self):
         first = normalize_notice_url("https://www.example.gov.in/notice?id=123&utm_source=mail")
         second = normalize_notice_url("https://example.gov.in/notice?id=456")
