@@ -421,6 +421,16 @@ def telegram_send(chat_id, message, reply_markup=None):
         return False
 
 
+def is_speculative_status_title(title):
+    """Reject editorial placeholders that are not official notices."""
+    value = " ".join(str(title or "").lower().split())
+    return bool(re.search(
+        r"\\b(awaiting official update|expected soon|result expected soon|"
+        r"result not yet declared|not yet declared by the authority)\\b",
+        value,
+    ))
+
+
 def is_stale_notice(title, published=""):
     """Reject clearly old notices when the title or feed gives an explicit date."""
     candidates = []
@@ -600,7 +610,7 @@ def fetch_source(source):
         if len(title) < 4 or not normalized or not host_allowed(link, hosts):
             continue
         category = classify_source_title(title, source)
-        if not category or normalized in seen_urls:
+        if not category or is_speculative_status_title(title) or normalized in seen_urls:
             continue
         if is_stale_notice(title, published) and not source.get("historical_archive", False):
             continue
@@ -690,7 +700,7 @@ def main():
         category = classify_source_title(title, source_meta)
         # Keep curated archive landing pages, but remove dated non-archive
         # notices outside the live 90-day window.
-        if not category or (not item.get("archive", False) and is_stale_notice(title, item.get("published", ""))):
+        if not category or is_speculative_status_title(title) or (not item.get("archive", False) and is_stale_notice(title, item.get("published", ""))):
             removed_result_rows += 1
             continue
         item["title"] = title
