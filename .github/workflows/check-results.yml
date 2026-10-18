@@ -11,7 +11,7 @@ on:
       - "checker/sources.json"
       - ".github/workflows/check-results.yml"
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "*/15 * * * *"
 
 permissions:
   contents: write
