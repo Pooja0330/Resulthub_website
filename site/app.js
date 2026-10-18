@@ -275,7 +275,7 @@ function filteredItems(){
     return queryMatch&&(!c||x.category===c)&&(!ec||family===ec)&&(!effectiveStateFilter||itemState===effectiveStateFilter)&&(!y||(y==="unknown"?!year:year===y))&&browseMatches(x,selectedBrowse);
  });
  if($("#sort").value==="title") list.sort((a,b)=>(a.title||"").localeCompare(b.title||""));
- else list.sort((a,b)=>new Date(b.published||b.detected_at||b.date||0)-new Date(a.published||a.detected_at||a.date||0)||mainPriority(a)-mainPriority(b));
+ else list.sort((a,b)=>new Date(b.detected_at||b.date||b.published||0)-new Date(a.detected_at||a.date||a.published||0)||mainPriority(a)-mainPriority(b));
  return list;
 }
 function renderPriorityExamAlerts(){
@@ -294,7 +294,7 @@ function renderPriorityExamAlerts(){
 function renderPibNews(){
  const box=$("#pibNewsList");if(!box)return;
  const rows=dedupeVisibleItems(allItems.filter(x=>isPibItem(x)&&x.archive!==true),{titleOnly:true,requirePibReleaseUrl:true})
-  .sort((a,b)=>String(b.url||"").localeCompare(String(a.url||""))).slice(0,14);
+  .sort((a,b)=>new Date(b.detected_at||b.published||b.date||0)-new Date(a.detected_at||a.published||a.date||0)).slice(0,14);
  box.innerHTML=rows.length?rows.map(x=>{
   const url=safeUrl(x.url||x.official_url)||safeUrl(x.source_url)||"https://pib.gov.in/";
   const title=String(x.title||x.exam||"PIB press release").replace(/\s+/g," ").trim();
