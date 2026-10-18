@@ -463,6 +463,48 @@ def is_stale_notice(title, published=""):
     return False
 
 
+def discover_listing_urls(soup, base_url, hosts, limit=2):
+    """Find a small number of likely official notice-listing pages on the same allowlisted portal."""
+    candidates = []
+    seen = set()
+    listing_hint = re.compile(
+        r"(latest|what.?s new|news|notice|notification|announcement|circular|"
+        r"result|recruitment|career|admit.?card|answer.?key|examination|"
+        r"public notice|press release|updates|advertisement)",
+        re.I,
+    )
+    ignored_path = re.compile(
+        r"\\.(?:pdf|jpg|jpeg|png|gif|zip|docx?|xlsx?|pptx?)$",
+        re.I,
+    )
+    base_host = (urlparse(base_url).hostname or "").lower()
+
+    for anchor in soup.select("a[href]"):
+        label = " ".join(anchor.get_text(" ", strip=True).split())
+        href = urljoin(base_url, anchor.get("href", "")).split("#", 1)[0].strip()
+        if not label or len(label) > 100 or not href or href in seen:
+            continue
+        if not host_allowed(href, hosts):
+            continue
+        parsed = urlparse(href)
+        if parsed.scheme != "https" or ignored_path.search(parsed.path):
+            continue
+        if (parsed.hostname or "").lower() != base_host and not host_allowed(href, hosts):
+            continue
+        if href.rstrip("/") == base_url.rstrip("/"):
+            continue
+        # Avoid sending query-only links, login pages, search pages and generic navigation.
+        if re.search(r"(login|sign.?in|register|search|contact|privacy|accessibility)", label + " " + parsed.path, re.I):
+            continue
+        if not listing_hint.search(label + " " + parsed.path):
+            continue
+        seen.add(href)
+        candidates.append((0 if re.search(r"(latest|what.?s new|notice|notification|result|recruitment|announcement|updates)", label, re.I) else 1, href))
+
+    candidates.sort(key=lambda item: (item[0], item[1]))
+    return [url for _, url in candidates[:max(0, min(limit, 3))]]
+
+
 def fetch_source(source):
     name = source.get("name", source.get("id", "Unknown"))
     url = source.get("url", "")
@@ -471,52 +513,45 @@ def fetch_source(source):
     if not url or not hosts or not host_allowed(url, hosts):
         raise ValueError("Source URL is missing or not allowlisted")
 
+    kind = str(source.get("kind", "html")).lower()
     response = get_with_retries(url)
-
     if not host_allowed(response.url, hosts):
         raise ValueError(f"Redirected outside the official allowlist: {urlparse(response.url).hostname or 'unknown host'}")
 
-    kind = str(source.get("kind", "html")).lower()
-    content_type = response.headers.get("content-type", "").lower()
-
-    if kind == "rss":
-        feed = feedparser.parse(response.content)
-        if not feed.entries and getattr(feed, "bozo", False):
-            raise ValueError("RSS feed could not be parsed")
-
-        links = [
-            (
-                str(entry.get("title", "")).strip(),
-                str(entry.get("link", "")).strip(),
-                str(entry.get("published", "")).strip(),
-            )
-            for entry in feed.entries
-        ]
-    else:
+    def links_from_response(page_response):
+        content_type = page_response.headers.get("content-type", "").lower()
+        if kind == "rss":
+            feed = feedparser.parse(page_response.content)
+            if not feed.entries and getattr(feed, "bozo", False):
+                raise ValueError("RSS feed could not be parsed")
+            return [
+                (
+                    str(entry.get("title", "")).strip(),
+                    str(entry.get("link", "")).strip(),
+                    str(entry.get("published", entry.get("updated", ""))).strip(),
+                )
+                for entry in feed.entries
+            ], []
         if "html" not in content_type and "xml" not in content_type:
             raise ValueError("Source did not return HTML or XML")
 
-        soup = BeautifulSoup(response.text, "html.parser")
+        soup = BeautifulSoup(page_response.text, "html.parser")
         links = []
-        for a in soup.select("a[href]"):
-            title = " ".join(a.get_text(" ", strip=True).split())
+        for anchor in soup.select("a[href]"):
+            title = " ".join(anchor.get_text(" ", strip=True).split())
             context = ""
-            for parent in list(a.parents)[:7]:
+            for parent in list(anchor.parents)[:7]:
                 if getattr(parent, "name", None) in ("tr", "li", "article", "div"):
                     candidate_context = " ".join(parent.get_text(" ", strip=True).split())
                     if 20 <= len(candidate_context) <= 350:
                         context = candidate_context
                         break
 
-            # Enrich short but technically classifiable labels (for example,
-            # "PRELIMINARY EXAMINATION RESULT") with the exam/recruitment name
-            # from the official row/card. Otherwise unrelated exams look like
-            # they have the same generic result title in the public feed.
             generic_label = (
                 len(title) < 45
                 or bool(NAV_TITLE.fullmatch(title.strip()))
                 or bool(re.fullmatch(
-                    r"(?:preliminary|main|mains|final)?\s*(?:examination\s+)?"
+                    r"(?:preliminary|main|mains|final)?\\s*(?:examination\\s+)?"
                     r"(?:result|results|result status|merit list|admit card|answer key|"
                     r"cut.?off|shortlisted candidates)",
                     title.strip(), re.I
@@ -525,35 +560,52 @@ def fetch_source(source):
             if context and classify(context) and generic_label and len(context) > len(title) + 10:
                 title = context
             elif context and classify(context) and not classify(title):
-                # Use the official row/card text once; concatenating it with the
-                # link label creates duplicated, noisy titles from navigation-heavy pages.
                 title = context
 
             published = extract_notice_date(context) or extract_notice_date(title)
-            links.append((
-                title,
-                urljoin(response.url, a.get("href", "")),
-                published,
-            ))
+            links.append((title, urljoin(page_response.url, anchor.get("href", "")), published))
+
+        listing_urls = discover_listing_urls(soup, page_response.url, hosts) if kind != "rss" else []
+        return links, listing_urls
+
+    links, listing_urls = links_from_response(response)
+    # Homepages frequently expose only a few generic links. If they yield fewer
+    # than three useful notices, inspect up to two official listing pages as a
+    # fallback; never crawl arbitrary external hosts or an unbounded link graph.
+    initial_count = sum(
+        1 for title, link, published in links
+        if classify_source_title(" ".join(str(title or "").split()), source)
+        and host_allowed(link, hosts)
+    )
+    pages_scanned = 1
+    if kind != "rss" and initial_count < 3:
+        for listing_url in listing_urls:
+            try:
+                listing_response = get_with_retries(listing_url)
+                if not host_allowed(listing_response.url, hosts):
+                    print(f"SKIP listing page redirected outside allowlist for {name}")
+                    continue
+                extra_links, _ = links_from_response(listing_response)
+                links.extend(extra_links)
+                pages_scanned += 1
+            except Exception as exc:
+                print(f"WARN listing page failed for {name}: {type(exc).__name__}: {str(exc)[:120]}")
 
     found = []
     seen_urls = set()
-
     for title, link, published in links:
-        title = " ".join(title.split())
-        link = link.split("#")[0].strip()
-
-        if len(title) < 4 or not host_allowed(link, hosts):
+        title = " ".join(str(title or "").split())
+        link = str(link or "").split("#")[0].strip()
+        normalized = normalize_notice_url(link)
+        if len(title) < 4 or not normalized or not host_allowed(link, hosts):
             continue
-
         category = classify_source_title(title, source)
-        if not category or link in seen_urls:
+        if not category or normalized in seen_urls:
             continue
         if is_stale_notice(title, published) and not source.get("historical_archive", False):
             continue
 
-        seen_urls.add(link)
-
+        seen_urls.add(normalized)
         found.append({
             "title": title[:260],
             "url": link,
@@ -565,12 +617,9 @@ def fetch_source(source):
             "archive": bool(source.get("historical_archive", False)),
         })
 
-    # Official portals often list years of archived notices. Keep only a
-    # bounded set of the first matching links (normally newest-first) per source.
-    # This cap is also used to limit stale backlog and Telegram alert pressure.
     source_limit = int(source.get("max_new", MAX_ARCHIVE_PER_SOURCE if source.get("historical_archive", False) else MAX_NEW_PER_SOURCE))
+    print(f"Source scan {name}: {pages_scanned} official page(s), {len(found)} matching notices")
     return found[:max(1, min(source_limit, 100))]
-
 
 def build_result(item, detected_at):
     # Match the JSON fields consumed by site/app.js.
