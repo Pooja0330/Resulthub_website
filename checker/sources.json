@@ -5791,6 +5791,50 @@
       "include_all_items": true,
       "max_new": 50,
       "coverage_note": "Official PIB English All Releases page, used as a direct HTML fallback to the RSS feed so recent releases remain discoverable when RSS returns Hindi items or fails."
+    },
+    {
+      "id": "ssc-northern-region-whats-new",
+      "name": "SSC Northern Region — What's New",
+      "url": "https://sscnr.nic.in/newlook/Site/Whatsnew.html",
+      "kind": "html",
+      "allowed_hosts": [
+        "sscnr.nic.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-18",
+      "coverage_note": "Dedicated official SSC Northern Region What's New listing; direct notice links are extracted from the official listing.",
+      "exam_category": "SSC / Central Recruitment"
+    },
+    {
+      "id": "nta-data-public-notices",
+      "name": "National Testing Agency — Public Notices",
+      "url": "https://data.nta.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "data.nta.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-18",
+      "coverage_note": "Official NTA public-notice portal; separate from the general NTA homepage.",
+      "exam_category": "Entrance & Eligibility"
     }
   ]
 }
