@@ -265,6 +265,29 @@ function filteredItems(){
  else list.sort((a,b)=>new Date(b.published||b.detected_at||b.date||0)-new Date(a.published||a.detected_at||a.date||0)||mainPriority(a)-mainPriority(b));
  return list;
 }
+function renderPriorityExamAlerts(){
+ const box=$("#priorityExamList");if(!box)return;
+ const rows=allItems.filter(x=>!isPibItem(x)&&x.archive!==true&&/^(result|notification|admit_card|answer_key|merit_list|cutoff|exam_schedule)$/.test(String(x.category||""))&&!/annual results old|old archive|historical/i.test(String(x.title||"")))
+  .sort((a,b)=>new Date(b.detected_at||b.published||b.date||0)-new Date(a.detected_at||a.published||a.date||0)).slice(0,8);
+ box.innerHTML=rows.length?rows.map(x=>{
+  const url=safeUrl(x.url||x.official_url)||safeUrl(x.source_url);
+  const category=label(x.category);
+  const date=x.detected_at?new Date(x.detected_at).toLocaleString("en-IN",{day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit",timeZone:"Asia/Kolkata"}):(x.published||"Date not shown");
+  const href=url||"#";
+  return '<article class="priority-exam-row"><span class="priority-exam-tag">'+esc(category)+'</span><div class="priority-exam-copy"><strong>'+esc(x.title||x.exam||"Official exam update")+'</strong><small>'+esc(x.source_name||x.authority||"Official source")+' · '+esc(date)+'</small></div>'+(url?'<a href="'+esc(href)+'" target="_blank" rel="noopener noreferrer" aria-label="Open official notice">Open ↗</a>':'')+'</article>';
+ }).join(""):'<p class="priority-empty">No new exam alerts have been indexed yet. Updates appear here after an official source is checked.</p>';
+}
+function renderPibNews(){
+ const box=$("#pibNewsList");if(!box)return;
+ const rows=allItems.filter(x=>isPibItem(x)&&x.archive!==true)
+  .sort((a,b)=>new Date(b.detected_at||b.published||b.date||0)-new Date(a.detected_at||a.published||a.date||0)).slice(0,14);
+ box.innerHTML=rows.length?rows.map(x=>{
+  const url=safeUrl(x.url||x.official_url)||safeUrl(x.source_url)||"https://pib.gov.in/";
+  const title=String(x.title||x.exam||"PIB press release").replace(/\\s+/g," ").trim();
+  const date=x.published||x.detected_at||"";
+  return '<a class="pib-news-item" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer" title="'+esc(title)+'"><span class="pib-news-dot" aria-hidden="true"></span><span class="pib-news-title">'+esc(title)+'</span><span class="pib-news-arrow" aria-hidden="true">↗</span>'+(date?'<small>'+esc(date)+'</small>':'')+'</a>';
+ }).join(""):'<p class="pib-empty">No PIB press releases are available in the current feed. The panel refreshes automatically.</p>';
+}
 function render(){
  try{
  renderStateSidebar();
@@ -347,7 +370,7 @@ function init(){
  try{const cached=JSON.parse(localStorage.getItem("goresult-results-cache")||"null");if(Array.isArray(cached?.items)){allItems=cached.items;render()}}catch(e){}
  refresh();
  if(refreshTimer)clearInterval(refreshTimer);
- refreshTimer=setInterval(refresh,15*60*1000);
+ refreshTimer=setInterval(refresh,15*1000);
  document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")refresh()});
   // Clear stale filter UI when browsers restore the page from the back-forward cache.
   window.addEventListener("pageshow",event=>{if(event.persisted){resetUpdateFilters();render();}});
