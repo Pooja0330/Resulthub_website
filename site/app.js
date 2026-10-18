@@ -249,9 +249,19 @@ function isNavigationNoise(item){
 }
 function cleanResults(items){return Array.isArray(items)?items.filter(item=>!isNavigationNoise(item)):[];}
 function displayTitle(x){return String(x.title||x.exam||"Exam update");}
+function dedupeVisibleItems(items){
+ const seen=new Set();
+ return items.filter(x=>{
+  const title=String(x.title||x.exam||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
+  const source=String(x.source_name||x.authority||x.source_id||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
+  const key=source+"|"+title;
+  if(!title||!source||seen.has(key))return false;
+  seen.add(key);return true;
+ });
+}
 function filteredItems(){
  const q=$("#q").value.trim().toLowerCase(), terms=q.split(/\s+/).filter(Boolean), c=$("#category").value, ec=$("#examCategory").value, r=$("#region").value, y=$("#examYear").value;
- const list=allItems.filter(x=>{
+ const list=dedupeVisibleItems(allItems).filter(x=>{
   const family=inferredFamily(x);
   const hay=[x.title,x.exam,x.source_name,x.state,x.region,x.category,family].join(" ").toLowerCase();
   const itemState=stateForItem(x);
@@ -267,7 +277,7 @@ function filteredItems(){
 }
 function renderPriorityExamAlerts(){
  const box=$("#priorityExamList");if(!box)return;
- const rows=allItems.filter(x=>!isPibItem(x)&&x.archive!==true&&/^(result|notification|admit_card|answer_key|merit_list|cutoff|exam_schedule)$/.test(String(x.category||""))&&!/annual results old|old archive|historical/i.test(String(x.title||"")))
+ const rows=dedupeVisibleItems(allItems.filter(x=>!isPibItem(x)&&x.archive!==true&&/^(result|notification|admit_card|answer_key|merit_list|cutoff|exam_schedule)$/.test(String(x.category||""))&&!/annual results old|old archive|historical/i.test(String(x.title||""))))
   .sort((a,b)=>new Date(b.detected_at||b.published||b.date||0)-new Date(a.detected_at||a.published||a.date||0)).slice(0,8);
  box.innerHTML=rows.length?rows.map(x=>{
   const url=safeUrl(x.url||x.official_url)||safeUrl(x.source_url);
@@ -279,7 +289,7 @@ function renderPriorityExamAlerts(){
 }
 function renderPibNews(){
  const box=$("#pibNewsList");if(!box)return;
- const rows=allItems.filter(x=>isPibItem(x)&&x.archive!==true)
+ const rows=dedupeVisibleItems(allItems.filter(x=>isPibItem(x)&&x.archive!==true))
   .sort((a,b)=>new Date(b.detected_at||b.published||b.date||0)-new Date(a.detected_at||a.published||a.date||0)).slice(0,14);
  box.innerHTML=rows.length?rows.map(x=>{
   const url=safeUrl(x.url||x.official_url)||safeUrl(x.source_url)||"https://pib.gov.in/";
