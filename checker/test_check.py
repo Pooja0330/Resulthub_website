@@ -1,6 +1,6 @@
 import unittest
 
-from check import classify, discover_listing_urls, exam_year_from_title, extract_notice_date, host_allowed, infer_exam_category, is_stale_notice, normalize_notice_url
+from check import classify, discover_listing_urls, exam_year_from_title, extract_notice_date, host_allowed, infer_exam_category, is_speculative_status_title, is_stale_notice, normalize_notice_url
 from bs4 import BeautifulSoup
 
 
@@ -61,6 +61,14 @@ class CheckerSafetyTests(unittest.TestCase):
 
     def test_keeps_exam_results_in_official_press_releases(self):
         self.assertEqual(classify("Press Release: CBSE Declares Class X Result 2026"), "result")
+
+    def test_rejects_editorial_placeholder_not_official_notice(self):
+        self.assertTrue(
+            is_speculative_status_title("IBPS PO/MT-XVI Mains Result 2026 — Awaiting Official Update")
+        )
+        self.assertFalse(
+            is_speculative_status_title("IBPS PO/MT-XVI Mains Result 2026")
+        )
 
     def test_old_explicit_feed_date_is_stale(self):
         self.assertTrue(is_stale_notice("Recruitment Result", "Mon, 01 Jan 2024 00:00:00 GMT"))
