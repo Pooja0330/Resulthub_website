@@ -200,7 +200,8 @@ function renderFeatured(){
  const makeList=(items,emptyText)=>items.length?items.slice(0,5).map(x=>{
   const url=safeUrl(x.url||x.official_url)||safeUrl(x.source_url);
   const date=x.published||x.detected_at||"Date not supplied";
-  return '<article class="featured-item"><div><span class="tag">'+esc(label(x.category))+'</span><h3>'+esc(x.title||x.exam||"Exam update")+'</h3><p>'+esc(x.source_name||x.authority||"Official source")+' · '+esc(date)+'</p></div>'+(url?'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">Open ↗</a>':'')+'</article>';
+  const detail="notice.html?id="+encodeURIComponent(x.id||"")+"&q="+encodeURIComponent(x.title||x.exam||"Exam update");
+  return '<article class="featured-item"><div><span class="tag">'+esc(label(x.category))+'</span><h3>'+esc(x.title||x.exam||"Exam update")+'</h3><p>'+esc(x.source_name||x.authority||"Official source")+' · '+esc(date)+'</p></div>'+(url?'<a href="'+esc(detail)+'">View update ↗</a>':'')+'</article>';
  }).join(""):'<p class="empty">'+esc(emptyText)+'</p>';
  const resultBox=$("#featuredResults"), scheduleBox=$("#featuredSchedules"), upcomingBox=$("#featuredUpcoming");
  if(resultBox){
@@ -286,7 +287,8 @@ function renderPriorityExamAlerts(){
   const category=label(x.category);
   const date=x.detected_at?new Date(x.detected_at).toLocaleString("en-IN",{day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit",timeZone:"Asia/Kolkata"}):(x.published||"Date not shown");
   const href=url||"#";
-  return '<article class="priority-exam-row"><span class="priority-exam-tag">'+esc(category)+'</span><div class="priority-exam-copy"><strong>'+esc(x.title||x.exam||"Official exam update")+'</strong><small>'+esc(x.source_name||x.authority||"Official source")+' · '+esc(date)+'</small></div>'+(url?'<a href="'+esc(href)+'" target="_blank" rel="noopener noreferrer" aria-label="Open official notice">Open ↗</a>':'')+'</article>';
+  const detail="notice.html?id="+encodeURIComponent(x.id||"")+"&q="+encodeURIComponent(x.title||x.exam||"Official exam update");
+  return '<article class="priority-exam-row"><span class="priority-exam-tag">'+esc(category)+'</span><div class="priority-exam-copy"><strong>'+esc(x.title||x.exam||"Official exam update")+'</strong><small>'+esc(x.source_name||x.authority||"Official source")+' · '+esc(date)+'</small></div>'+(url?'<a href="'+esc(detail)+'" aria-label="View update on GoResultHub">View update ↗</a>':'')+'</article>';
  }).join(""):'<p class="priority-empty">No new exam alerts have been indexed yet. Updates appear here after an official source is checked.</p>';
 }
 function renderPibNews(){
@@ -296,7 +298,8 @@ function renderPibNews(){
  box.innerHTML=rows.length?rows.map(x=>{
   const url=safeUrl(x.url||x.official_url)||safeUrl(x.source_url)||"https://pib.gov.in/";
   const title=String(x.title||x.exam||"PIB press release").replace(/\s+/g," ").trim();
-  return '<a class="pib-news-item" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer" title="'+esc(title)+'"><span class="pib-news-dot" aria-hidden="true"></span><span class="pib-news-title">'+esc(title)+'</span><span class="pib-news-arrow" aria-hidden="true">↗</span></a>';
+  const detail="notice.html?id="+encodeURIComponent(x.id||"")+"&q="+encodeURIComponent(title);
+  return '<a class="pib-news-item" href="'+esc(detail)+'" title="'+esc(title)+'"><span class="pib-news-dot" aria-hidden="true"></span><span class="pib-news-title">'+esc(title)+'</span><span class="pib-news-arrow" aria-hidden="true">↗</span></a>';
  }).join(""):'<p class="pib-empty">No PIB press releases are available in the current feed. The panel refreshes automatically.</p>';
 }
 function render(){
