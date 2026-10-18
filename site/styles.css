@@ -274,5 +274,8 @@
 .pib-news-arrow{font-size:.75rem;font-weight:900;color:#b96818}
 .pib-all-link{margin:0 13px 14px;display:block;border:1px solid #f0d6b7;border-radius:8px;padding:9px;text-align:center;color:#99500d;font-size:.74rem;font-weight:850}
 @media(max-width:1250px){.state-layout{grid-template-columns:220px minmax(0,1fr)}.pib-news-sidebar{grid-column:2;position:static;max-height:460px;margin:0 0 30px}.pib-news-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:16px}.pib-news-item{align-content:start}}
-@media(max-width:900px){.state-layout{grid-template-columns:minmax(0,1fr);padding:0 16px}.state-sidebar{position:static;max-height:440px;margin:18px 0 0}.pib-news-sidebar{grid-column:auto;margin:0 0 24px;max-height:480px}.priority-exam-row{grid-template-columns:auto minmax(0,1fr)}.priority-exam-row>a{grid-column:2}.pib-news-list{grid-template-columns:1fr}}
+@media(max-width:900px){.state-layout{grid-template-columns:minmax(0,1fr);padding:0 16px}.state-sidebar{position:static;max-height:440px;margin:18px 0 0}.pib-news-sidebar{grid-column:1;grid-row:1;position:static;margin:0 0 18px;max-height:360px}.priority-exam-row{grid-template-columns:auto minmax(0,1fr)}.priority-exam-row>a{grid-column:2}.pib-news-list{grid-template-columns:1fr}}
 @media(max-width:520px){.priority-exam-alerts{padding:13px}.priority-exam-heading{flex-direction:column}.priority-exam-row{gap:7px}.priority-exam-tag{font-size:.56rem}.priority-exam-copy strong{font-size:.78rem}.pib-news-head{padding:14px}.pib-news-title{font-size:.78rem}}
+
+/* Mobile: keep PIB news near the top instead of after the long results grid. */
+@media(max-width:900px){.state-layout>.pib-news-sidebar{order:-1}.state-layout{display:flex;flex-direction:column}.state-layout>.pib-news-sidebar{width:100%}.state-layout>.state-sidebar{order:2}.state-layout>main,.state-layout>.main-content{order:1}}
