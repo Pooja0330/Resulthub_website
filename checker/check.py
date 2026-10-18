@@ -899,7 +899,33 @@ def main():
             pending.pop(key, None)
             continue
 
-        website_url = "https://goresulthub.com/notice.html?id=" + quote_plus(str(item.get("id", "")).strip()) + "&q=" + quote_plus(str(item.get("title", "")).strip()) + "&utm_source=telegram&utm_medium=channel&utm_campaign=exam_alert"
+        # Approved alerts must also be indexed in the public website feed.
+        # Previously this queue could send a Telegram link to notice.html without
+        # adding the corresponding record to site/data/results.json.
+        item_id = str(item.get("id", "")).strip()
+        item_title = str(item.get("title", "")).strip()
+        normalized_item = dict(item)
+        normalized_item["id"] = item_id or hashlib.sha256(url.encode("utf-8")).hexdigest()[:24]
+        normalized_item["title"] = item_title or url
+        normalized_item["source_id"] = source.get("id", source.get("name", ""))
+        normalized_item["source_url"] = normalized_item.get("source_url") or source.get("url", "")
+        normalized_item["category"] = normalized_item.get("category") or "update"
+        normalized_item["region"] = normalized_item.get("region") or source.get("region", "Central")
+        normalized_item["state"] = normalized_item.get("state") or source.get("state", "")
+        normalized_item["exam_category"] = normalized_item.get("exam_category") or source.get("exam_category", "")
+        normalized_url = normalize_notice_url(url)
+        already_indexed = any(
+            isinstance(record, dict) and (
+                str(record.get("id", "")) == normalized_item["id"]
+                or normalize_notice_url(record.get("url") or record.get("official_url") or "") == normalized_url
+            )
+            for record in results
+        )
+        if not already_indexed:
+            results.append(build_result(normalized_item, normalized_item.get("detected_at") or checked_at))
+            published_urls.add(normalized_url)
+
+        website_url = "https://goresulthub.com/notice.html?id=" + quote_plus(normalized_item["id"]) + "&q=" + quote_plus(item_title) + "&utm_source=telegram&utm_medium=channel&utm_campaign=exam_alert"
         message = (
             "🔔 GoResultHub | Exam Update\n\n"
             f"Authority: {item.get('source_name', 'Official authority')}\n"
