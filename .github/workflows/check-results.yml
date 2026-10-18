@@ -11,7 +11,8 @@ on:
       - "checker/sources.json"
       - ".github/workflows/check-results.yml"
   schedule:
-    - cron: "*/15 * * * *"
+    # Run every 15 minutes, offset from the busiest quarter-hour boundaries.
+    - cron: "7,22,37,52 * * * *"
 
 permissions:
   contents: write
