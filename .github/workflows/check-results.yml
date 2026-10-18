@@ -42,6 +42,60 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install --upgrade requests certifi urllib3 beautifulsoup4 feedparser
 
+      - name: Verify Telegram bot and channel configuration
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_ADMIN: ${{ secrets.TG_ADMIN }}
+          TG_CHANNEL: ${{ secrets.TG_CHANNEL }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from urllib.error import HTTPError, URLError
+          from urllib.request import Request, urlopen
+
+          token = os.environ.get("TG_TOKEN", "").strip()
+          admin = os.environ.get("TG_ADMIN", "").strip()
+          channel = os.environ.get("TG_CHANNEL", "").strip()
+          if not token:
+              raise SystemExit("Telegram configuration error: TG_TOKEN secret is missing.")
+          if not admin:
+              print("WARNING: TG_ADMIN secret is missing; private diagnostic summaries cannot be sent.")
+          if not channel:
+              raise SystemExit("Telegram configuration error: TG_CHANNEL secret is missing; public alerts cannot be sent.")
+
+          base = "https://api.telegram.org/bot" + token + "/"
+          def call(method, payload=None):
+              data = json.dumps(payload or {}).encode("utf-8") if payload is not None else None
+              req = Request(base + method, data=data, headers={"Content-Type": "application/json"})
+              try:
+                  with urlopen(req, timeout=15) as response:
+                      result = json.loads(response.read().decode("utf-8"))
+              except HTTPError as exc:
+                  try:
+                      result = json.loads(exc.read().decode("utf-8"))
+                      detail = result.get("description", "Telegram API HTTP error")
+                  except Exception:
+                      detail = "Telegram API HTTP error " + str(exc.code)
+                  raise SystemExit(method + " failed: " + detail)
+              except (URLError, TimeoutError) as exc:
+                  raise SystemExit(method + " network failure: " + type(exc).__name__)
+              if not result.get("ok"):
+                  raise SystemExit(method + " failed: " + str(result.get("description", "Unknown Telegram API error")))
+              return result["result"]
+
+          bot = call("getMe")
+          chat = call("getChat", {"chat_id": channel})
+          member = call("getChatMember", {"chat_id": channel, "user_id": bot["id"]})
+          if member.get("status") not in ("administrator", "creator"):
+              raise SystemExit("Telegram permission error: bot is not an administrator of the configured channel.")
+          if member.get("status") == "administrator" and member.get("can_post_messages") is False:
+              raise SystemExit("Telegram permission error: bot administrator cannot post messages in the channel.")
+          print("Telegram preflight passed: bot @" + bot.get("username", "unknown") +
+                " can access channel " + str(chat.get("title") or chat.get("username") or channel) +
+                " and is allowed to post. Token and chat IDs were not printed.")
+          PY
+
       - name: Run offline checker regression tests
         run: python -m unittest discover -s checker -p "test_*.py" -v
 
