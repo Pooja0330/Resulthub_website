@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   schedule:
     # Independent of the exam scanner so PIB refreshes even when exam portals time out.
-    - cron: "2,17,32,47 * * * *"
+    - cron: "2,12,22,32,42,52 * * * *"
   push:
     branches: [main]
     paths:
