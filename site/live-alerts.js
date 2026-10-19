@@ -91,8 +91,8 @@
     const shortDescription=description.length>95?description.slice(0,92).trimEnd()+"…":description;
     node.innerHTML='<div class="grh-toast-top"><span>'+itemKindLabel(item)+'</span><button type="button" aria-label="Dismiss">×</button></div><strong>'+esc(cleanTitle(item))+'</strong><small>'+esc(shortDescription)+'</small><small>'+esc(item.source_name || item.authority || "Official source")+' · '+esc(categoryName(item.category))+'</small>'+(url?'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">View update ↗</a>':'');
     node.querySelector("button").addEventListener("click",()=>node.remove());
-    stack.prepend(node);
-    while(stack.children.length>3)stack.lastElementChild.remove();
+    // Keep one shared popup only; replace the previous alert instead of stacking duplicates.
+    stack.replaceChildren(node);
   }
   async function poll() {
     if (busy) return;
@@ -123,7 +123,7 @@
           const detected=Date.parse(item.detected_at||"");
           return Number.isFinite(detected) && detected<=now && now-detected<=20*60*1000 && !seen.has(identity(item));
         });
-        recent.slice(0,3).reverse().forEach(toast);
+        recent.slice(0,1).forEach(toast);
         recent.forEach(item=>seen.add(identity(item)));
         data.forEach(item=>seen.add(identity(item)));
         writeSeen(seen);
@@ -138,7 +138,7 @@
           if(item.archive===true || isNoise(item)) continue;
           if(!seen.has(id))fresh.push(item);
         }
-        fresh.slice(0,5).reverse().forEach(toast);
+        fresh.slice(0,1).forEach(toast);
         fresh.forEach(item=>seen.add(identity(item)));
         if(fresh.length) {
           unread+=fresh.length;
