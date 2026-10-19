@@ -108,6 +108,7 @@ jobs:
           SOURCE_TIMEOUT_SECONDS: "8"
           SOURCE_WORKERS: "24"
           MAX_NEW_PER_SOURCE: "5"
+          MAX_PUBLIC_ALERTS_PER_RUN: "10"
         run: python checker/check.py
 
       - name: Validate generated website data
