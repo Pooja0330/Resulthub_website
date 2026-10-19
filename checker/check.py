@@ -43,14 +43,14 @@ RULES = [
     ("merit_list", re.compile(
         r"\b(merit list|final selection|selected candidates|qualified candidates|"
         r"provisional selection|selection list|final panel|allotment list|"
-        r"provisional panel|shortlisted candidates)\b", re.I)),
+        r"provisional panel|shortlisted candidates|shortlisting of candidates|shortlisting candidates)\b", re.I)),
     ("cutoff", re.compile(
         r"\b(cut.?off marks?|qualifying marks?)\b", re.I)),
     ("admit_card", re.compile(
         r"\b(admit cards?|hall tickets?|call letters?|exam city intimation|"
         r"city intimation slip|download your admit card)\b", re.I)),
     ("answer_key", re.compile(
-        r"\b(answer keys?|response sheets?|objection tracker|challenge answer key)\b", re.I)),
+        r"\b(answer keys?|response sheets?|response sheet(?:s|\(s\))?|tentative answer keys?|objection tracker|challenge answer key)\b", re.I)),
     ("exam_schedule", re.compile(
         r"\b(exam date|examination date|exam schedule|examination schedule|"
         r"date sheet|exam calendar|exam postponement|exam rescheduled|"
@@ -65,7 +65,7 @@ RULES = [
         r"recruitment of|recruitment to|recruitment for|recruitment drive|"
         r"recruitment process|notification for recruitment|advertisement no\.?|"
         r"advertisement for|advertisement dated|recruitment notice|"
-        r"vacancies for|vacancy for|last date to apply|application deadline|"
+        r"vacancies for|vacancy for|tentative vacancies|last date to apply|application deadline|"
         r"corrigendum|addendum|extension of last date|revised vacancy|"
         r"additional vacancies|selection process for|selection list for recruitment|"
         r"preliminary examination|prelims examination|main examination|mains examination|"
