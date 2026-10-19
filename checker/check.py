@@ -654,7 +654,11 @@ def build_result(item, detected_at):
         "description": (
             "Historical entry discovered on an official archive listing. Open the issuing authority link to confirm the year, notice details and availability."
             if item.get("archive") else
-            "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility."
+            (
+                "Discovered through IndiaResults.com, a secondary results index, not the issuing authority. Verify the notice and dates on the official authority website."
+                if str(item.get("source_id", "")).startswith("indiaresults-") else
+                "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility."
+            )
         ),
         "verified": False,
         "archive": bool(item.get("archive", False)),
