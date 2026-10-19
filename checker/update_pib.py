@@ -5,6 +5,7 @@ import json
 import re
 import time
 from datetime import datetime, timezone
+from email.utils import parsedate_to_datetime
 from pathlib import Path
 from urllib.parse import urljoin, urlparse, parse_qs
 
@@ -124,7 +125,33 @@ def main():
         previous = previous_by_url.get(item["url"], {})
         if previous.get("detected_at"):
             item["detected_at"] = previous["detected_at"]
-    records = sorted(found.values(), key=lambda item: item.get("published", ""), reverse=True)[:100]
+    def publication_timestamp(item):
+        # Feed dates may be RFC-822 while the HTML listing often has no date.
+        # Parse both formats; use detection time for undated releases.
+        raw = str(item.get("published") or "").strip()
+        if raw:
+            try:
+                parsed = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+                if parsed.tzinfo is None:
+                    parsed = parsed.replace(tzinfo=timezone.utc)
+                return parsed.timestamp()
+            except (TypeError, ValueError):
+                try:
+                    parsed = parsedate_to_datetime(raw)
+                    if parsed.tzinfo is None:
+                        parsed = parsed.replace(tzinfo=timezone.utc)
+                    return parsed.timestamp()
+                except (TypeError, ValueError, OverflowError):
+                    pass
+        try:
+            detected = datetime.fromisoformat(str(item.get("detected_at") or "").replace("Z", "+00:00"))
+            if detected.tzinfo is None:
+                detected = detected.replace(tzinfo=timezone.utc)
+            return detected.timestamp()
+        except (TypeError, ValueError, OverflowError):
+            return 0
+
+    records = sorted(found.values(), key=publication_timestamp, reverse=True)[:100]
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     temporary = OUTPUT.with_suffix(".json.tmp")
     temporary.write_text(json.dumps(records, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
