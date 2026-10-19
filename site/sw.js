@@ -1,5 +1,5 @@
-const CACHE_NAME = "goresult-hub-v12";
-const DATA_PATHS = ["data/results.json", "data/status.json"];
+const CACHE_NAME = "goresult-hub-v13";
+const DATA_PATHS = ["data/results.json", "data/status.json", "data/pib-news.json"];
 self.addEventListener("install", event => { self.skipWaiting(); });
 self.addEventListener("activate", event => {
   event.waitUntil((async () => {
@@ -15,33 +15,27 @@ self.addEventListener("fetch", event => {
   if (url.origin !== self.location.origin) return;
   const scopePath = new URL(self.registration.scope).pathname;
   if (!url.pathname.startsWith(scopePath)) return;
+
   event.respondWith((async () => {
     const cache = await caches.open(CACHE_NAME);
-    const isData = DATA_PATHS.some(path => url.pathname.endsWith(path.split("/").pop()));
-    if (isData) {
+    const dataPath = DATA_PATHS.find(path => url.pathname.endsWith(path));
+    if (dataPath) {
+      // Always request the current feed from the network; use a stable cache key
+      // only as an outage fallback so timestamp query strings do not fragment the cache.
+      const fallbackKey = new Request(new URL(dataPath, self.registration.scope).toString());
       try {
-        const response = await fetch(request);
-        if (response.ok) await cache.put(request, response.clone());
+        const freshRequest = new Request(request, { cache: "no-store" });
+        const response = await fetch(freshRequest);
+        if (response.ok) await cache.put(fallbackKey, response.clone());
         return response;
       } catch (error) {
-        const cached = await cache.match(request);
+        const cached = await cache.match(fallbackKey);
         if (cached) return cached;
         throw error;
       }
     }
-    if (request.mode === "navigate") {
-      try {
-        const response = await fetch(request);
-        if (response.ok) await cache.put(request, response.clone());
-        return response;
-      } catch (error) {
-        const cached = await cache.match(request);
-        if (cached) return cached;
-        throw error;
-      }
-    }
-    // Network-first for HTML/JS/CSS so visitors receive fixes promptly;
-    // keep the previous successful response as an outage fallback.
+
+    // Network-first for HTML/JS/CSS so visitors receive fixes promptly.
     try {
       const response = await fetch(request);
       if (response.ok) await cache.put(request, response.clone());
