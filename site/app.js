@@ -10,25 +10,9 @@ const knownPibKeys = new Set();
 function feedItemKey(item){
  return String(item?.id||item?.url||item?.official_url||item?.title||item?.exam||"").trim();
 }
-function showLiveFeedToast(item, kind, count=1){
- let toast=document.querySelector("#liveFeedToast");
- if(!toast){
-  toast=document.createElement("aside");
-  toast.id="liveFeedToast";
-  toast.className="live-feed-toast";
-  toast.setAttribute("aria-live","polite");
-  toast.setAttribute("role","status");
-  document.body.appendChild(toast);
- }
- const title=String(item?.title||item?.exam||(kind==="pib"?"New PIB release":"New exam update"));
- const detail="notice.html?id="+encodeURIComponent(item?.id||"")+"&q="+encodeURIComponent(title);
- const labelText=kind==="pib"?"New PIB update":"New exam update";
- toast.innerHTML='<a class="live-feed-toast-link" href="'+esc(detail)+'"><strong>'+esc(count>1?count+" new "+(kind==="pib"?"PIB updates":"exam updates"):labelText)+'</strong><span>'+esc(title)+'</span><small>View on GoResultHub ↗</small></a><button type="button" class="live-feed-toast-close" aria-label="Dismiss notification">×</button>';
- toast.classList.add("is-visible");
- toast.querySelector(".live-feed-toast-close")?.addEventListener("click",()=>toast.classList.remove("is-visible"));
- if(toast._hideTimer)clearTimeout(toast._hideTimer);
- toast._hideTimer=setTimeout(()=>toast.classList.remove("is-visible"),12000);
-}
+// Legacy app.js popup intentionally disabled. The single Live updates widget
+// in live-alerts.js is the only source of floating notifications.
+function showLiveFeedToast(_item, _kind, _count=1){}
 let page = 1;
 const PAGE_SIZE = 30;
 
