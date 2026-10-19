@@ -314,9 +314,9 @@ function renderPriorityExamAlerts(){
   const url=safeUrl(x.url||x.official_url)||safeUrl(x.source_url);
   const category=label(x.category);
   const date=x.detected_at?new Date(x.detected_at).toLocaleString("en-IN",{day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit",timeZone:"Asia/Kolkata"}):(x.published||"Date not shown");
-  const href=url||"#";
   const detail="notice.html?id="+encodeURIComponent(x.id||"")+"&q="+encodeURIComponent(x.title||x.exam||"Official exam update");
-  return '<article class="priority-exam-row"><span class="priority-exam-tag">'+esc(category)+'</span><div class="priority-exam-copy"><strong>'+esc(x.title||x.exam||"Official exam update")+'</strong><small>'+esc(x.source_name||x.authority||"Official source")+' · '+esc(date)+'</small></div>'+(url?'<a href="'+esc(detail)+'" aria-label="View update on GoResultHub">View update ↗</a>':'')+'</article>';
+  const title=String(x.title||x.exam||"Official exam update");
+  return '<article class="priority-exam-row"><span class="priority-exam-tag">'+esc(category)+'</span><div class="priority-exam-copy"><a class="priority-exam-title-link" href="'+esc(detail)+'" aria-label="Open '+esc(title)+' details on GoResultHub">'+esc(title)+'</a><small>'+esc(x.source_name||x.authority||"Official source")+' · '+esc(date)+'</small></div><a class="priority-exam-view-link" href="'+esc(detail)+'" aria-label="View update on GoResultHub">View update ↗</a></article>';
  }).join(""):'<p class="priority-empty">No new exam alerts have been indexed yet. Updates appear here after an official source is checked.</p>';
 }
 function renderPibNews(){
