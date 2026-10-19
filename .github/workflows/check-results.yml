@@ -18,7 +18,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: goresult-hub-checker-v2
+  group: goresult-hub-data-writers
   cancel-in-progress: false
 
 jobs:
@@ -170,11 +170,26 @@ jobs:
 
           git commit -m "Update exam notification data"
 
-          git fetch origin main
-          # Prefer this run's freshly generated scan snapshot if an overlapping
-          # status-file update creates a rebase conflict.
-          git rebase -X theirs origin/main
-          git push origin HEAD:main
+          # Shared concurrency prevents the PIB updater from pushing at the same time.
+          # Retry if a manual repository change still races this commit.
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase --abort >/dev/null 2>&1 || true
+            if ! git rebase -X theirs origin/main; then
+              echo "Rebase failed on attempt $attempt; retrying from the latest main."
+              git rebase --abort >/dev/null 2>&1 || true
+              sleep 2
+              continue
+            fi
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Concurrent repository update; retrying push ($attempt/5)"
+            git rebase --abort >/dev/null 2>&1 || true
+            sleep 3
+          done
+          echo "Could not push exam data after five attempts"
+          exit 1
 
       - name: Notify admin if the checker workflow fails
         if: failure()
