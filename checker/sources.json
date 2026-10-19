@@ -5969,6 +5969,30 @@
       "include_all_items": true,
       "max_new": 25,
       "coverage_note": "Official PIB English features RSS feed provides a second content stream for government explainers and public-information updates."
+    },
+    {
+      "id": "indiaresults-secondary-index",
+      "name": "IndiaResults.com — Secondary Results Index",
+      "url": "https://news.indiaresults.com/",
+      "kind": "html",
+      "allowed_hosts": [
+        "indiaresults.com"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-19",
+      "coverage_note": "Secondary aggregator used as a discovery backup when official portals are unavailable. Entries are not official announcements; verify each item with the issuing authority. Links remain on IndiaResults.com.",
+      "exam_category": "Secondary Index — Verify Official Source",
+      "discover_listing_pages": true,
+      "max_new": 20
     }
   ]
 }
