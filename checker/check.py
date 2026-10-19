@@ -551,10 +551,32 @@ def fetch_source(source):
         for anchor in soup.select("a[href]"):
             title = " ".join(anchor.get_text(" ", strip=True).split())
             context = ""
-            for parent in list(anchor.parents)[:7]:
-                if getattr(parent, "name", None) in ("tr", "li", "article", "div"):
+            # Official notice boards often render the date, title and PDF link
+            # as separate elements in one card. Prefer the smallest containing
+            # row/card that includes a recognizable notice title, rather than
+            # taking a short "Read more"/PDF label as the announcement.
+            parents = list(anchor.parents)[:12]
+            for parent in parents:
+                if getattr(parent, "name", None) not in ("tr", "li", "article", "div", "section"):
+                    continue
+                candidate_context = " ".join(parent.get_text(" ", strip=True).split())
+                if not (20 <= len(candidate_context) <= 600):
+                    continue
+                if classify(candidate_context):
+                    context = candidate_context
+                    break
+            # Some SSC notice cards have a separate date element next to a
+            # linked title. Recover the date from the closest card even when
+            # the title itself already classifies correctly.
+            if not context:
+                for parent in parents:
+                    if getattr(parent, "name", None) not in ("tr", "li", "article", "div", "section"):
+                        continue
                     candidate_context = " ".join(parent.get_text(" ", strip=True).split())
-                    if 20 <= len(candidate_context) <= 350:
+                    if 20 <= len(candidate_context) <= 600 and re.search(
+                        r"\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{1,2},?\s+20\d{2}\b|\b\d{1,2}\s+[A-Za-z]{3,9}\s+20\d{2}\b",
+                        candidate_context, re.I
+                    ):
                         context = candidate_context
                         break
 
