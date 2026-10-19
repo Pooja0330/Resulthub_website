@@ -1,5 +1,6 @@
 const $ = s => document.querySelector(s);
 let allItems = [];
+let pibItems = [];
 let lastStatus = null;
 let page = 1;
 const PAGE_SIZE = 30;
@@ -293,7 +294,7 @@ function renderPriorityExamAlerts(){
 }
 function renderPibNews(){
  const box=$("#pibNewsList");if(!box)return;
- const rows=dedupeVisibleItems(allItems.filter(x=>isPibItem(x)&&x.archive!==true),{titleOnly:true,requirePibReleaseUrl:true})
+ const rows=dedupeVisibleItems(pibItems.filter(x=>x.archive!==true),{titleOnly:true,requirePibReleaseUrl:true})
   .sort((a,b)=>new Date(b.detected_at||b.published||b.date||0)-new Date(a.detected_at||a.published||a.date||0)).slice(0,14);
  box.innerHTML=rows.length?rows.map(x=>{
   const url=safeUrl(x.url||x.official_url)||safeUrl(x.source_url)||"https://pib.gov.in/";
@@ -371,7 +372,20 @@ async function loadResults(){
  })();
  return resultsRequest;
 }
-async function refresh(){if(document.visibilityState==="visible")await Promise.all([loadResults(),loadStatus()])}
+async function loadPibResults(){
+ try{
+  const r=await fetch("data/pib-news.json?v="+Date.now(),{cache:"no-store"});
+  if(!r.ok)throw new Error("PIB feed unavailable");
+  const data=await r.json();
+  if(!Array.isArray(data))throw new Error("Invalid PIB feed");
+  pibItems=data;
+  renderPibNews();
+ }catch(error){
+  console.error("GoResultHub independent PIB feed failed:",error);
+  // Keep the independent feed's last successful in-memory view on temporary network errors.
+ }
+}
+async function refresh(){if(document.visibilityState==="visible")await Promise.all([loadResults(),loadStatus(),loadPibResults()])}
 function resetUpdateFilters(){
  $("#category").value="";$("#examCategory").value="";$("#region").value="";$("#examYear").value="";$("#sort").value="new";
  selectedState="";selectedRegion="";selectedBrowse="";page=1;
