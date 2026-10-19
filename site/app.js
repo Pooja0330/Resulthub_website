@@ -279,7 +279,7 @@ function dedupeVisibleItems(items, options={}){
 }
 function filteredItems(){
  const q=$("#q").value.trim().toLowerCase(), terms=q.split(/\s+/).filter(Boolean), c=$("#category").value, ec=$("#examCategory").value, r=$("#region").value, y=$("#examYear").value;
- const list=dedupeVisibleItems(allItems).filter(x=>{
+ const list=dedupeVisibleItems(allItems).filter(x=>!isPibItem(x)).filter(x=>{
   const family=inferredFamily(x);
   const hay=[x.title,x.exam,x.source_name,x.state,x.region,x.category,family].join(" ").toLowerCase();
   const itemState=stateForItem(x);
@@ -309,7 +309,7 @@ function renderPriorityExamAlerts(){
 function renderPibNews(){
  const box=$("#pibNewsList");if(!box)return;
  const rows=dedupeVisibleItems(pibItems.filter(x=>x.archive!==true),{titleOnly:true,requirePibReleaseUrl:true})
-  .sort((a,b)=>new Date(b.detected_at||b.published||b.date||0)-new Date(a.detected_at||a.published||a.date||0)).slice(0,14);
+  .sort((a,b)=>{const aid=Number(new URL(a.url||a.official_url,location.href).searchParams.get("PRID")||0);const bid=Number(new URL(b.url||b.official_url,location.href).searchParams.get("PRID")||0);if(aid&&bid&&aid!==bid)return bid-aid;return new Date(b.detected_at||b.published||b.date||0)-new Date(a.detected_at||a.published||a.date||0);}).slice(0,14);
  box.innerHTML=rows.length?rows.map(x=>{
   const url=safeUrl(x.url||x.official_url)||safeUrl(x.source_url)||"https://pib.gov.in/";
   const title=String(x.title||x.exam||"PIB press release").replace(/\s+/g," ").trim();
@@ -356,9 +356,9 @@ async function loadStatus(){
    const checked=lastStatus.last_checked_at?new Date(lastStatus.last_checked_at):null;
    const when=checked&&!Number.isNaN(checked.getTime())?checked.toLocaleString("en-IN",{dateStyle:"medium",timeStyle:"short",timeZone:"Asia/Kolkata"}):"Not available";
    const healthy=lastStatus.status==="healthy";
-   const stale=checked&&!Number.isNaN(checked.getTime())&&(Date.now()-checked.getTime()>4*60*60*1000);
+   const stale=checked&&!Number.isNaN(checked.getTime())&&(Date.now()-checked.getTime()>20*60*1000);
    $("#monitorStatus").textContent=stale?"Checker status is stale":(healthy?"Automatic monitoring active":(lastStatus.status==="partial"?"Monitoring partially available":(lastStatus.status==="pending"?"Initial scan pending":"Monitoring status unavailable")));
-   $("#monitorDetail").textContent="Last checked "+when+" IST · "+(lastStatus.sources_succeeded||0)+"/"+(lastStatus.sources_enabled||0)+" sources reachable · "+(lastStatus.sources_failed||0)+" failed · "+(lastStatus.alerts_pending||0)+" alerts pending delivery · the page refreshes feeds every 15 seconds; automatic source checks run through scheduled workflows"+(stale?" · latest scan is over 4 hours old":"");
+   $("#monitorDetail").textContent="Last checked "+when+" IST · "+(lastStatus.sources_succeeded||0)+"/"+(lastStatus.sources_enabled||0)+" sources reachable · "+(lastStatus.sources_failed||0)+" failed · "+(lastStatus.alerts_pending||0)+" alerts pending delivery · the page refreshes feeds every 15 seconds; automatic source checks run through scheduled workflows"+(stale?" · latest scan is over 20 minutes old":"");
   }catch(e){
    $("#monitorStatus").textContent="Monitoring status unavailable";
    $("#monitorDetail").textContent="The website is online, but the latest checker status could not be loaded.";
