@@ -27,7 +27,6 @@ TIMEOUT = max(5, min(int(os.getenv("SOURCE_TIMEOUT_SECONDS", "8")), 15))
 WORKERS = max(1, min(int(os.getenv("SOURCE_WORKERS", "24")), 32))
 MAX_NEW_PER_SOURCE = max(1, min(int(os.getenv("MAX_NEW_PER_SOURCE", "5")), 20))
 MAX_ARCHIVE_PER_SOURCE = max(20, min(int(os.getenv("MAX_ARCHIVE_PER_SOURCE", "250")), 500))
-MAX_ARCHIVE_PER_SOURCE = max(20, min(int(os.getenv("MAX_ARCHIVE_PER_SOURCE", "250")), 500))
 MAX_AGE_DAYS = 90
 
 HEADERS = {
