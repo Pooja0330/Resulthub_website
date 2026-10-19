@@ -295,3 +295,12 @@
 .live-feed-toast-link small{font-size:.75rem;color:#526a83}
 .live-feed-toast-close{align-self:flex-start;border:0;background:transparent;color:#53677d;font-size:1.4rem;line-height:1;padding:10px 12px;cursor:pointer}
 @media(prefers-reduced-motion:reduce){.live-feed-toast{transition:none}}
+
+/* Make alert titles visibly clickable on hover and keyboard focus. */
+
+.priority-exam-title-link{display:block;color:#183354;text-decoration:none;font-size:.82rem;font-weight:850;line-height:1.35;overflow-wrap:anywhere;border-radius:4px}
+.priority-exam-title-link:hover,.priority-exam-title-link:focus-visible{text-decoration:underline;color:#0759b5;outline-offset:3px}
+.priority-exam-row:has(.priority-exam-title-link:hover){background:#f1f7ff}
+.priority-exam-view-link:hover,.priority-exam-view-link:focus-visible{text-decoration:underline;color:#073f8b}
+.pib-news-item:hover,.pib-news-item:focus-visible{background:#fff4e7;text-decoration:underline;color:#7c3d08}
+.live-feed-toast-link:hover span,.live-feed-toast-link:focus-visible span{text-decoration:underline}
