@@ -85,6 +85,29 @@
 <script src="app.js?v=20261019-normalized-dedupe-v9" defer></script>
 <script src="live-alerts.js?v=20261019-exam-pib-poll-v9" defer></script>
 <script>
+/* Emergency fallback: if the main live-alert script fails to initialize, keep a working
+   Exam Alert + PIB notification panel available on the homepage. */
+window.setTimeout(function(){
+ if(document.getElementById("grh-live-alerts")) return;
+ if(document.getElementById("grh-notification-fallback")) return;
+ const css=document.createElement("style");
+ css.textContent="#grh-notification-fallback{position:fixed;right:16px;bottom:16px;z-index:2147483647;font:14px/1.4 system-ui,sans-serif;color:#183354}#grh-notification-fallback button{cursor:pointer;border:0;border-radius:24px;background:#123f7a;color:#fff;padding:12px 16px;font-weight:800;box-shadow:0 5px 22px #0003}#grh-notification-fallback .grhf-panel{position:absolute;right:0;bottom:56px;width:min(390px,calc(100vw - 32px));max-height:70vh;overflow:auto;background:#fff;border:1px solid #dbe4f0;border-radius:14px;box-shadow:0 12px 36px #0003;padding:14px}#grh-notification-fallback .grhf-panel[hidden]{display:none}#grh-notification-fallback article{padding:11px 0;border-bottom:1px solid #e6ebf2}#grh-notification-fallback article a{display:block;color:#0759a8;font-weight:700;margin-top:5px}#grh-notification-fallback small{display:block;color:#63748b;margin-top:4px}#grh-notification-fallback .grhf-status{color:#63748b;font-size:12px}";
+ document.head.appendChild(css);
+ const root=document.createElement("div");root.id="grh-notification-fallback";
+ root.innerHTML='<button type="button" aria-expanded="false">🔔 Live updates <span id="grhf-count"></span></button><section class="grhf-panel" hidden><strong>Latest Exam Alerts &amp; PIB News</strong><p class="grhf-status" aria-live="polite">Loading both feeds…</p><div class="grhf-list"></div></section>';
+ document.body.appendChild(root);
+ const trigger=root.querySelector("button"),panel=root.querySelector(".grhf-panel"),status=root.querySelector(".grhf-status"),list=root.querySelector(".grhf-list"),count=root.querySelector("#grhf-count");
+ let initialized=false,seen=new Set(),items=[];
+ const esc=s=>String(s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+ async function getFeed(path){const r=await fetch(path+"?v="+Date.now(),{cache:"no-store"});if(!r.ok)throw Error(path+" HTTP "+r.status);const d=await r.json();if(!Array.isArray(d))throw Error(path+" is not an array");return d;}
+ function key(x){return String(x.id||x.url||x.official_url||x.title||"");}
+ function render(){list.innerHTML=items.slice(0,25).map(x=>{const pib=/pib|press information bureau|pib-independent-feed/i.test([x.source_id,x.source_name,x.authority,x.exam_category].join(" "));const link=x.official_url||x.url||x.source_url||"https://goresulthub.com/";return '<article><small>'+(pib?"GOVERNMENT &amp; PIB":"EXAM ALERT")+" · "+esc(x.category||"official update")+'</small><strong>'+esc(x.title||x.exam||"Official update")+'</strong><small>'+esc(x.source_name||x.authority||"Official source")+'</small><a href="'+esc(link)+'" target="_blank" rel="noopener noreferrer">Open official update ↗</a></article>';}).join("")||"<p>No updates available in the published feeds yet.</p>";}
+ async function poll(){try{const settled=await Promise.allSettled([getFeed("data/results.json"),getFeed("data/pib-news.json")]);const good=settled.filter(x=>x.status==="fulfilled");if(!good.length)throw Error("Both feeds failed");const map=new Map();good.flatMap(x=>x.value).forEach(x=>{const k=key(x);if(k&&!map.has(k))map.set(k,x);});items=[...map.values()].sort((a,b)=>String(b.detected_at||b.published||"").localeCompare(String(a.detected_at||a.published||"")));render();status.textContent=items.length+" updates loaded · checked "+new Date().toLocaleTimeString();if(!initialized){items.forEach(x=>seen.add(key(x)));initialized=true;}else{const fresh=items.filter(x=>!seen.has(key(x)));fresh.forEach(x=>seen.add(key(x)));if(fresh.length){count.textContent="· "+fresh.length+" new";fresh.slice(0,3).forEach(x=>{const toast=document.createElement("div");toast.style.cssText="position:fixed;right:16px;bottom:76px;max-width:min(360px,calc(100vw - 32px));background:white;border:1px solid #b9d3f8;border-left:5px solid #1768d2;border-radius:12px;padding:12px;box-shadow:0 8px 28px #0003;margin-top:8px";toast.innerHTML="<strong>"+(/pib|press information bureau|pib-independent-feed/i.test([x.source_id,x.source_name,x.authority].join(" "))?"PIB NEWS":"EXAM ALERT")+"</strong><div>"+esc(x.title||x.exam||"New official update")+"</div>";document.body.appendChild(toast);setTimeout(()=>toast.remove(),9000);});}}}catch(e){status.textContent="Feeds could not load; retrying automatically. "+String(e.message||"");}}
+ trigger.addEventListener("click",()=>{panel.hidden=!panel.hidden;trigger.setAttribute("aria-expanded",String(!panel.hidden));count.textContent="";});
+ poll();window.setInterval(poll,15000);
+},2500);
+</script>
+<script>
 document.querySelector("#shareWebsite")?.addEventListener("click",async()=>{
  const button=document.querySelector("#shareWebsite");
  try{
