@@ -2,6 +2,33 @@ const $ = s => document.querySelector(s);
 let allItems = [];
 let pibItems = [];
 let lastStatus = null;
+let resultsFeedInitialized = false;
+let pibFeedInitialized = false;
+const knownResultKeys = new Set();
+const knownPibKeys = new Set();
+
+function feedItemKey(item){
+ return String(item?.id||item?.url||item?.official_url||item?.title||item?.exam||"").trim();
+}
+function showLiveFeedToast(item, kind, count=1){
+ let toast=document.querySelector("#liveFeedToast");
+ if(!toast){
+  toast=document.createElement("aside");
+  toast.id="liveFeedToast";
+  toast.className="live-feed-toast";
+  toast.setAttribute("aria-live","polite");
+  toast.setAttribute("role","status");
+  document.body.appendChild(toast);
+ }
+ const title=String(item?.title||item?.exam||(kind==="pib"?"New PIB release":"New exam update"));
+ const detail="notice.html?id="+encodeURIComponent(item?.id||"")+"&q="+encodeURIComponent(title);
+ const labelText=kind==="pib"?"New PIB update":"New exam update";
+ toast.innerHTML='<a class="live-feed-toast-link" href="'+esc(detail)+'"><strong>'+esc(count>1?count+" new "+(kind==="pib"?"PIB updates":"exam updates"):labelText)+'</strong><span>'+esc(title)+'</span><small>View on GoResultHub ↗</small></a><button type="button" class="live-feed-toast-close" aria-label="Dismiss notification">×</button>';
+ toast.classList.add("is-visible");
+ toast.querySelector(".live-feed-toast-close")?.addEventListener("click",()=>toast.classList.remove("is-visible"));
+ if(toast._hideTimer)clearTimeout(toast._hideTimer);
+ toast._hideTimer=setTimeout(()=>toast.classList.remove("is-visible"),12000);
+}
 let page = 1;
 const PAGE_SIZE = 30;
 
@@ -344,7 +371,7 @@ async function loadStatus(){
    const healthy=lastStatus.status==="healthy";
    const stale=checked&&!Number.isNaN(checked.getTime())&&(Date.now()-checked.getTime()>4*60*60*1000);
    $("#monitorStatus").textContent=stale?"Checker status is stale":(healthy?"Automatic monitoring active":(lastStatus.status==="partial"?"Monitoring partially available":(lastStatus.status==="pending"?"Initial scan pending":"Monitoring status unavailable")));
-   $("#monitorDetail").textContent="Last checked "+when+" IST · "+(lastStatus.sources_succeeded||0)+"/"+(lastStatus.sources_enabled||0)+" sources reachable · "+(lastStatus.sources_failed||0)+" failed · "+(lastStatus.alerts_pending||0)+" alerts pending delivery · checks run about every 15 minutes"+(stale?" · latest scan is over 4 hours old":"");
+   $("#monitorDetail").textContent="Last checked "+when+" IST · "+(lastStatus.sources_succeeded||0)+"/"+(lastStatus.sources_enabled||0)+" sources reachable · "+(lastStatus.sources_failed||0)+" failed · "+(lastStatus.alerts_pending||0)+" alerts pending delivery · the page refreshes feeds every 15 seconds; automatic source checks run through scheduled workflows"+(stale?" · latest scan is over 4 hours old":"");
   }catch(e){
    $("#monitorStatus").textContent="Monitoring status unavailable";
    $("#monitorDetail").textContent="The website is online, but the latest checker status could not be loaded.";
@@ -360,9 +387,18 @@ async function loadResults(){
    if(!r.ok) throw new Error("Data not available");
    const data=await r.json();
    if(!Array.isArray(data))throw new Error("Invalid data format");
+   const freshExamItems=[];
+   for(const item of data){
+    const key=feedItemKey(item);
+    if(!key)continue;
+    if(resultsFeedInitialized&&!knownResultKeys.has(key)&&!isPibItem(item)&&item.archive!==true)freshExamItems.push(item);
+    knownResultKeys.add(key);
+   }
    allItems=data;
    try{localStorage.setItem("goresult-results-cache",JSON.stringify({savedAt:Date.now(),items:data}))}catch(e){}
    page=1;render();
+   if(resultsFeedInitialized&&freshExamItems.length)showLiveFeedToast(freshExamItems[0],"exam",freshExamItems.length);
+   resultsFeedInitialized=true;
   }catch(e){
    if(!allItems.length){
     try{const cached=JSON.parse(localStorage.getItem("goresult-results-cache")||"null");if(Array.isArray(cached?.items)){allItems=cleanResults(cached.items);try{localStorage.setItem("goresult-results-cache",JSON.stringify({savedAt:Date.now(),items:allItems}))}catch(ignore){}render();$("#monitorDetail").textContent="Showing the last saved updates because the live feed is temporarily unavailable."}}catch(ignore){}
@@ -378,8 +414,17 @@ async function loadPibResults(){
   if(!r.ok)throw new Error("PIB feed unavailable");
   const data=await r.json();
   if(!Array.isArray(data))throw new Error("Invalid PIB feed");
+  const freshPibItems=[];
+  for(const item of data){
+   const key=feedItemKey(item);
+   if(!key)continue;
+   if(pibFeedInitialized&&!knownPibKeys.has(key)&&item.archive!==true)freshPibItems.push(item);
+   knownPibKeys.add(key);
+  }
   pibItems=data;
   renderPibNews();
+  if(pibFeedInitialized&&freshPibItems.length)showLiveFeedToast(freshPibItems[0],"pib",freshPibItems.length);
+  pibFeedInitialized=true;
  }catch(error){
   console.error("GoResultHub independent PIB feed failed:",error);
   // Keep the independent feed's last successful in-memory view on temporary network errors.
