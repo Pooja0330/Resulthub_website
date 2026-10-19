@@ -106,12 +106,22 @@
       renderPanel(allItems);
       status.textContent=data.length+" indexed updates · last checked "+new Date().toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"});
       if(!initialized) {
+        // On first page load, surface recently detected items too. Otherwise,
+        // visitors who open the site after the scheduled scan never see alerts
+        // for updates that arrived before they opened the page.
+        const now=Date.now();
+        const recent=sorted.filter(item=>{
+          if(item.archive===true || isNoise(item)) return false;
+          const detected=Date.parse(item.detected_at||"");
+          return Number.isFinite(detected) && detected<=now && now-detected<=20*60*1000 && !seen.has(identity(item));
+        });
+        recent.slice(0,3).reverse().forEach(toast);
+        recent.forEach(item=>seen.add(identity(item)));
         data.forEach(item=>seen.add(identity(item)));
         writeSeen(seen);
-        // First page load should not replay old alerts as floating popups.
-        // Mark current feed items as seen; new items detected by later polls can toast.
-        unread=0;
+        unread=recent.length;
         updateBadge();
+        if(recent.length) status.textContent=recent.length+" recent update"+(recent.length===1?"":"s")+" detected · "+new Date().toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"});
         initialized=true;
       } else {
         const fresh=[];
