@@ -1,5 +1,5 @@
 {
-  "last_checked_at": "2026-10-19T09:35:25.029394+00:00",
+  "last_checked_at": "2026-10-19T09:40:58.538978+00:00",
   "sources_enabled": 273,
   "sources_succeeded": 126,
   "sources_failed": 147,
@@ -7,6 +7,6 @@
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, SSLError: 46, ConnectionError: 18, HTTPError: 11, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 91, SSLError: 47, ConnectionError: 18, HTTPError: 11, ReadTimeout: 2",
   "note": "Some sources may be unavailable or use formats automated scanning cannot read."
 }
