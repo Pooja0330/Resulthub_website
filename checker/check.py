@@ -89,8 +89,8 @@ SKIP = re.compile(
     r"purchase of books|faculty research programme|faculty research program|"
     r"glow dental clinic|sports meet|cultural fest|cultural festival|"
     r"skip to content|accessibility statement|accessibilitystatement|screen reader access|"
-    r"about us|main functions|press information bureau|site map|contact us|"
-    r"terms of use|feedback|login|log in|register|search|help|"
+    r"about us|main functions|press information bureau|site map|contact us|quick links|"
+    r"terms of use|feedback|login|log in|register|search|help|results 360 news|indiaresults blog|"
     r"accessibility options|skip navigation|back to top|rti|policy information|rti officers|case decisions)\b", re.I
 )
 
