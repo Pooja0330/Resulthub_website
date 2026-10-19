@@ -13,6 +13,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: goresult-hub-pib-updater
@@ -37,12 +39,14 @@ jobs:
       - name: Fetch official PIB releases
         run: python checker/update_pib.py
       - name: Commit PIB feed if changed
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add site/data/pib-news.json
           if git diff --cached --quiet; then
             echo "PIB feed unchanged"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git commit -m "Refresh official PIB news feed"
@@ -52,6 +56,7 @@ jobs:
             git fetch origin main
             git rebase -X theirs origin/main
             if git push origin HEAD:main; then
+              echo "changed=true" >> "$GITHUB_OUTPUT"
               exit 0
             fi
             echo "Concurrent repository update; retrying push ($attempt/3)"
@@ -60,3 +65,16 @@ jobs:
           done
           echo "Could not push PIB data after three attempts"
           exit 1
+
+      - name: Configure Pages
+        if: steps.commit.outputs.changed == 'true'
+        uses: actions/configure-pages@v5
+      - name: Upload updated website
+        if: steps.commit.outputs.changed == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - name: Deploy updated PIB feed
+        if: steps.commit.outputs.changed == 'true'
+        id: deployment
+        uses: actions/deploy-pages@v4
