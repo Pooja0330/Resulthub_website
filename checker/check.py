@@ -654,11 +654,7 @@ def build_result(item, detected_at):
         "description": (
             "Historical entry discovered on an official archive listing. Open the issuing authority link to confirm the year, notice details and availability."
             if item.get("archive") else
-            (
-                "Discovered through IndiaResults.com, a secondary results index, not the issuing authority. Verify the notice and dates on the official authority website."
-                if str(item.get("source_id", "")).startswith("indiaresults-") else
-                "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility."
-            )
+            "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility."
         ),
         "verified": False,
         "archive": bool(item.get("archive", False)),
@@ -693,6 +689,12 @@ def main():
             removed_result_rows += 1
             continue
         title = str(item.get("title") or item.get("exam") or "").strip()
+        # Keep GoResultHub links on GoResultHub; do not publish third-party aggregator links.
+        source_id_value = str(item.get("source_id") or "").strip().lower()
+        source_name_value = str(item.get("source_name") or item.get("authority") or "").strip().lower()
+        if source_id_value.startswith("indiaresults-") or "indiaresults.com" in source_name_value or source_name_value.startswith("indiaresults"):
+            removed_result_rows += 1
+            continue
         # Repair stale/mislabelled state metadata from the authoritative source registry.
         source_meta = source_by_id.get(str(item.get("source_id", ""))) or source_by_name.get(
             str(item.get("source_name") or item.get("authority") or "").strip().lower(), {}
