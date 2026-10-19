@@ -1,4 +1,5 @@
 # GoResultHub checker: official exam notices, controlled alert delivery, and source health diagnostics.
+# Scanner refresh validation: 2026-10-19 live-notification investigation.
 
 import os
 import re
