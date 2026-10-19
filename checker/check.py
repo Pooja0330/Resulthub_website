@@ -872,13 +872,13 @@ def main():
 
     # Review the persistent queue before sending. Invalid or irrelevant legacy
     # items are held for review, while valid failed deliveries remain retryable.
-    source_by_name = {str(s.get("name", "")): s for s in sources}
+    source_by_name = {str(s.get("name", "")).strip().lower(): s for s in sources}
     for key in list(pending.keys()):
         record = pending.get(key, {})
         item = record.get("item", {}) if isinstance(record, dict) else {}
         title = str(item.get("title", "")).strip() if isinstance(item, dict) else ""
         url = str(item.get("url", "")).strip() if isinstance(item, dict) else ""
-        source = source_by_name.get(str(item.get("source_name", ""))) if isinstance(item, dict) else None
+        source = source_by_name.get(str(item.get("source_name", "")).strip().lower()) if isinstance(item, dict) else None
         stale_pending = isinstance(item, dict) and is_stale_notice(title, item.get("published", ""))
         if not isinstance(item, dict) or not classify(title) or stale_pending:
             held[key] = {
