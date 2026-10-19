@@ -47,16 +47,25 @@
     if (/^(home|about us|contact us|faq|help desk|latest updates|official website|read more|click here)$/.test(title)) return true;
     return false;
   };
+  const identity = item => {
+    if(isPib(item)){
+      const rawUrl=item.url||item.official_url||item.source_url||"";
+      try{
+        const prid=new URL(rawUrl,location.href).searchParams.get("PRID");
+        if(prid)return "pib-prid:"+prid;
+      }catch(_){}
+    }
+    return normalizedTitle(item)+"|"+String(item.source_name||item.authority||item.source_id||"").toLowerCase().replace(/\s+/g," ").trim();
+  };
   const uniqueItems = items => {
     const keys=new Set();
     return items.filter(item=>{
       if(isNoise(item))return false;
-      const key=normalizedTitle(item)+"|"+String(item.source_name||item.authority||item.source_id||"").toLowerCase().replace(/\s+/g," ").trim();
+      const key=identity(item);
       if(keys.has(key))return false;
       keys.add(key);return true;
     });
   };
-  const identity = item => normalizedTitle(item)+"|"+String(item.source_name||item.authority||item.source_id||"").toLowerCase().replace(/\s+/g," ").trim();
   const readSeen = () => {
     try { const x=JSON.parse(localStorage.getItem(STORAGE_KEY)||"[]"); return new Set(Array.isArray(x)?x:[]); }
     catch (_) { return new Set(); }
