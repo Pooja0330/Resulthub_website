@@ -394,10 +394,13 @@ function resetUpdateFilters(){
 function init(){
  $("#year").textContent=new Date().getFullYear();
  resetUpdateFilters();
- // Start with a clean homepage on every load; search text is not a persistent filter.
- $("#q").value="";
+ // Support search links (including the WebSite SearchAction) while keeping
+ // ordinary homepage visits clean.
+ const initialQuery=new URLSearchParams(window.location.search).get("q")||"";
+ $("#q").value=initialQuery;
  if(window.location.search){history.replaceState(null,"",window.location.pathname+window.location.hash);}
  try{const cached=JSON.parse(localStorage.getItem("goresult-results-cache")||"null");if(Array.isArray(cached?.items)){allItems=cached.items;render()}}catch(e){}
+ if(initialQuery&&quickSearch){quickSearch.value=initialQuery;filterQuickExams(initialQuery);}
  refresh();
  if(refreshTimer)clearInterval(refreshTimer);
  refreshTimer=setInterval(refresh,15*1000);
