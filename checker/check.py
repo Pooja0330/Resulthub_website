@@ -472,7 +472,7 @@ def is_stale_notice(title, published=""):
     return False
 
 
-def discover_listing_urls(soup, base_url, hosts, limit=2):
+def discover_listing_urls(soup, base_url, hosts, limit=3):
     """Find a small number of likely official notice-listing pages on the same allowlisted portal."""
     candidates = []
     seen = set()
@@ -579,7 +579,7 @@ def fetch_source(source):
 
     links, listing_urls = links_from_response(response)
     # Homepages frequently expose only a few generic links. If they yield fewer
-    # than three useful notices, inspect up to two official listing pages as a
+    # than three useful notices, inspect up to three official listing pages as a
     # fallback; never crawl arbitrary external hosts or an unbounded link graph.
     initial_count = sum(
         1 for title, link, published in links
