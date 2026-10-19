@@ -23,7 +23,7 @@
     {
       "id": "ssc",
       "name": "Staff Selection Commission",
-      "url": "https://ssc.gov.in/",
+      "url": "https://ssc.gov.in/?pfrom=news",
       "kind": "html",
       "allowed_hosts": [
         "ssc.gov.in"
