@@ -1,3 +1,4 @@
+# Fresh-feed trigger: ensure the official PIB list is rechecked after the live update investigation.
 #!/usr/bin/env python3
 """Fetch PIB press releases independently of the longer exam-source scan."""
 import hashlib
