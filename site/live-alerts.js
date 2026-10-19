@@ -98,10 +98,17 @@
     if (busy) return;
     busy = true;
     try {
-      const response=await fetch(FEED_URL+"?v="+Date.now(),{cache:"no-store"});
-      if(!response.ok)throw new Error("Feed request failed ("+response.status+")");
-      const data=await response.json();
-      if(!Array.isArray(data))throw new Error("Feed format was not recognised");
+      const fetchFeed=async url=>{
+        const response=await fetch(url+"?v="+Date.now(),{cache:"no-store"});
+        if(!response.ok)throw new Error("Feed request failed ("+response.status+")");
+        const value=await response.json();
+        if(!Array.isArray(value))throw new Error("Feed format was not recognised");
+        return value;
+      };
+      const feedResults=await Promise.allSettled([fetchFeed(FEED_URL),fetchFeed(PIB_FEED_URL)]);
+      const successfulFeeds=feedResults.filter(result=>result.status==="fulfilled");
+      if(!successfulFeeds.length)throw new Error("Both live feeds failed");
+      const data=successfulFeeds.flatMap(result=>result.value);
       const sorted=uniqueItems(data).sort((a,b)=>priorityScore(a)-priorityScore(b)||String(b.detected_at||b.published||b.date||"").localeCompare(String(a.detected_at||a.published||a.date||"")));
       allItems.splice(0,allItems.length,...sorted);
       renderPanel(allItems);
