@@ -17,7 +17,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: goresult-hub-pib-updater
+  group: goresult-hub-data-writers
   cancel-in-progress: false
 
 jobs:
@@ -53,20 +53,25 @@ jobs:
             exit 0
           fi
           git commit -m "Refresh official PIB news feed"
-          # Exam scans and the PIB updater can finish at nearly the same time.
-          # Retry after fetching/rebasing instead of failing on a concurrent push.
-          for attempt in 1 2 3; do
+          # Serialize with the exam checker and retry safely if a human push races this run.
+          for attempt in 1 2 3 4 5; do
             git fetch origin main
-            git rebase -X theirs origin/main
+            git rebase --abort >/dev/null 2>&1 || true
+            if ! git rebase -X theirs origin/main; then
+              echo "Rebase failed on attempt $attempt; retrying from the latest main."
+              git rebase --abort >/dev/null 2>&1 || true
+              sleep 2
+              continue
+            fi
             if git push origin HEAD:main; then
               echo "changed=true" >> "$GITHUB_OUTPUT"
               exit 0
             fi
-            echo "Concurrent repository update; retrying push ($attempt/3)"
-            git rebase --abort || true
-            sleep 2
+            echo "Concurrent repository update; retrying push ($attempt/5)"
+            git rebase --abort >/dev/null 2>&1 || true
+            sleep 3
           done
-          echo "Could not push PIB data after three attempts"
+          echo "Could not push PIB data after five attempts"
           exit 1
 
       - name: Configure Pages
