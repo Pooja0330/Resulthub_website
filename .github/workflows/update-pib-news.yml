@@ -1,0 +1,51 @@
+name: Update PIB News
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Independent of the exam scanner so PIB refreshes even when exam portals time out.
+    - cron: "*/10 * * * *"
+  push:
+    branches: [main]
+    paths:
+      - "checker/update_pib.py"
+      - ".github/workflows/update-pib-news.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: goresult-hub-pib-updater
+  cancel-in-progress: false
+
+jobs:
+  update-pib:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install PIB feed dependencies
+        run: python -m pip install --disable-pip-version-check requests beautifulsoup4 feedparser
+      - name: Fetch official PIB releases
+        run: python checker/update_pib.py
+      - name: Commit PIB feed if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data/pib-news.json
+          if git diff --cached --quiet; then
+            echo "PIB feed unchanged"
+            exit 0
+          fi
+          git commit -m "Refresh official PIB news feed"
+          git fetch origin main
+          git rebase -X theirs origin/main
+          git push origin HEAD:main
