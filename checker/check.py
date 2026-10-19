@@ -906,8 +906,10 @@ def main():
     public_attempts = 0
     # Limit attempts as well as successful deliveries. A Telegram 429 must not
     # cause the checker to hammer the API for every queued alert.
+    # Drain the backlog faster while remaining below Telegram's per-chat rate.
+    # Sends are still spaced by 1.1 seconds and 429 stops the batch immediately.
     max_public_alerts_per_run = max(
-        1, min(int(os.getenv("MAX_PUBLIC_ALERTS_PER_RUN", "5")), 5)
+        1, min(int(os.getenv("MAX_PUBLIC_ALERTS_PER_RUN", "10")), 10)
     )
     # Retry valid pending alerts from previous runs as well as newly discovered
     # alerts. Failed sends therefore remain queued instead of being stranded.
