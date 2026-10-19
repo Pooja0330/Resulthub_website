@@ -70,6 +70,17 @@ def main():
     session.headers.update(HEADERS)
     found = {}
     errors = []
+    previous_by_url = {}
+    if OUTPUT.exists():
+        try:
+            previous_data = json.loads(OUTPUT.read_text(encoding="utf-8"))
+            if isinstance(previous_data, list):
+                previous_by_url = {
+                    str(item.get("url") or item.get("official_url") or ""): item
+                    for item in previous_data if isinstance(item, dict)
+                }
+        except (OSError, ValueError):
+            previous_by_url = {}
     for url in FEEDS:
         try:
             response = session.get(url, timeout=12)
@@ -109,6 +120,10 @@ def main():
                 pass
         raise SystemExit("No valid official PIB release URLs retrieved. " + "; ".join(errors))
 
+    for item in found.values():
+        previous = previous_by_url.get(item["url"], {})
+        if previous.get("detected_at"):
+            item["detected_at"] = previous["detected_at"]
     records = sorted(found.values(), key=lambda item: item.get("published", ""), reverse=True)[:100]
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     temporary = OUTPUT.with_suffix(".json.tmp")
