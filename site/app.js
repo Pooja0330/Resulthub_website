@@ -308,7 +308,7 @@ function filteredItems(){
 }
 function renderPriorityExamAlerts(){
  const box=$("#priorityExamList");if(!box)return;
- const rows=dedupeVisibleItems(allItems.filter(x=>!isPibItem(x)&&x.archive!==true&&/^(result|notification|admit_card|answer_key|merit_list|cutoff|exam_schedule)$/.test(String(x.category||""))&&!/annual results old|old archive|historical/i.test(String(x.title||""))))
+ const rows=dedupeVisibleItems(allItems.filter(x=>!isPibItem(x)&&x.archive!==true&&/^(result|notification|admit_card|answer_key|merit_list|cutoff|exam_schedule)$/.test(String(x.category||""))&&!/annual results old|old archive|historical/i.test(String(x.title||""))),{titleOnly:true})
   .sort((a,b)=>new Date(b.detected_at||b.published||b.date||0)-new Date(a.detected_at||a.published||a.date||0)).slice(0,8);
  box.innerHTML=rows.length?rows.map(x=>{
   const url=safeUrl(x.url||x.official_url)||safeUrl(x.source_url);
