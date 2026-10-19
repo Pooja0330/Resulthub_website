@@ -924,8 +924,26 @@ def main():
 
         record = pending.get(key, {})
         item = record.get("item", {})
-        if not item:
+        if not isinstance(item, dict) or not item:
             pending.pop(key, None)
+            continue
+
+        # Resolve each queued notice from its own official source and URL.
+        # Do not reuse loop variables from source scanning or queue validation.
+        url = str(item.get("url", "")).strip()
+        source = (
+            source_by_id.get(str(item.get("source_id", "")))
+            or source_by_name.get(str(item.get("source_name", "")).strip().lower())
+        )
+        if not source or not host_allowed(url, source.get("allowed_hosts", [])):
+            held[key] = {
+                "item": item,
+                "detected_at": record.get("detected_at", checked_at),
+                "held_at": checked_at,
+                "hold_reason": "Queued notice URL could not be validated against its own official source allowlist.",
+            }
+            pending.pop(key, None)
+            print("Held queued alert with missing source or invalid official URL")
             continue
 
         # Approved alerts must also be indexed in the public website feed.
