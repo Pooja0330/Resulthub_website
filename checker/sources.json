@@ -5993,6 +5993,30 @@
       "exam_category": "Secondary Index — Verify Official Source",
       "discover_listing_pages": true,
       "max_new": 20
+    },
+    {
+      "id": "indiaresults-global-recent",
+      "name": "IndiaResults.com — Global Recent Results",
+      "url": "https://result.indiaresults.com/globalrecentlist.html",
+      "kind": "html",
+      "allowed_hosts": [
+        "indiaresults.com"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-10-19",
+      "coverage_note": "Secondary aggregator's global recent-results index. Use for discovery only; verify the notice and date on the issuing authority's official site before treating it as confirmed.",
+      "exam_category": "Secondary Index — Verify Official Source",
+      "discover_listing_pages": true,
+      "max_new": 30
     }
   ]
 }
