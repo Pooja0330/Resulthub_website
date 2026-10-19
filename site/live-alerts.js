@@ -1,6 +1,7 @@
 (() => {
   "use strict";
   const FEED_URL = "data/results.json";
+  const PIB_FEED_URL = "data/pib-news.json";
   const STORAGE_KEY = "grh_seen_official_updates_v1";
   const MAX_SEEN = 500;
   const POLL_MS = 15000;
