@@ -1,5 +1,6 @@
 # GoResultHub checker: official exam notices, controlled alert delivery, and source health diagnostics.
 # Scanner refresh validation: 2026-10-19 live-notification investigation.
+# Fresh-scan trigger: keep the homepage feed backed by recent source checks, not only browser polling.
 
 import os
 import re
