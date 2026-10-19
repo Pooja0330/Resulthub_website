@@ -281,7 +281,10 @@ function displayTitle(x){return String(x.title||x.exam||"Exam update");}
 function dedupeVisibleItems(items, options={}){
  const seen=new Set();
  return items.filter(x=>{
-  const title=String(x.title||x.exam||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
+  let title=String(x.title||x.exam||"").toLowerCase().replace(/\(with name\)/g," ").replace(/\b(with name|name wise|pdf)\b/g," ").replace(/[^a-z0-9]+/g," ").trim();
+  if(options.titleOnly){
+   title=title.replace(/^(?:written\s+)?(?:result|notification|admit\s+card|answer\s+key|merit\s+list|cut\s*off|exam\s+schedule)\s+/,"").replace(/\b(?:released|declared|published|out now)\b/g,"").replace(/\s+/g," ").trim();
+  }
   const source=String(x.source_name||x.authority||x.source_id||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
   const url=String(x.url||x.official_url||x.source_url||"").trim();
   const key=options.titleOnly?title:(source+"|"+title);
