@@ -2,7 +2,7 @@
   "use strict";
   const FEED_URL = "data/results.json";
   const PIB_FEED_URL = "data/pib-news.json";
-  const STORAGE_KEY = "grh_seen_official_updates_v1";
+  const STORAGE_KEY = "grh_seen_official_updates_v2";
   const MAX_SEEN = 500;
   const POLL_MS = 15000;
   const $ = (s) => document.querySelector(s);
@@ -123,14 +123,14 @@
       renderPanel(allItems);
       status.textContent=data.length+" indexed updates · last checked "+new Date().toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"});
       if(!initialized) {
-        // On first page load, surface recently detected items too. Otherwise,
+        // On first page load, surface recent items from the latest checker window too. Otherwise,
         // visitors who open the site after the scheduled scan never see alerts
         // for updates that arrived before they opened the page.
         const now=Date.now();
         const recent=sorted.filter(item=>{
           if(item.archive===true || isNoise(item)) return false;
           const detected=Date.parse(item.detected_at||"");
-          return Number.isFinite(detected) && detected<=now && now-detected<=20*60*1000 && !seen.has(identity(item));
+          return Number.isFinite(detected) && detected<=now && now-detected<=2*60*60*1000 && !seen.has(identity(item));
         });
         recent.slice(0,1).forEach(toast);
         recent.forEach(item=>seen.add(identity(item)));
