@@ -12,7 +12,7 @@ on:
       - ".github/workflows/check-results.yml"
   schedule:
     # GitHub Actions scheduled workflows support a minimum interval of 5 minutes.
-    - cron: "7,22,37,52 * * * *"
+    - cron: "*/5 * * * *"
 
 permissions:
   contents: write
