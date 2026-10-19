@@ -279,3 +279,19 @@
 
 /* Mobile: keep PIB news near the top instead of after the long results grid. */
 @media(max-width:900px){.state-layout>.pib-news-sidebar{order:-1}.state-layout{display:flex;flex-direction:column}.state-layout>.pib-news-sidebar{width:100%}.state-layout>.state-sidebar{order:2}.state-layout>main,.state-layout>.main-content{order:1}}
+
+
+/* Live feed notifications: shown only when a later refresh discovers genuinely new feed IDs. */
+.live-feed-toast{
+ position:fixed;z-index:9999;right:20px;bottom:20px;width:min(390px,calc(100vw - 32px));
+ display:flex;align-items:stretch;gap:10px;padding:0;border:1px solid #b8d8ff;border-left:5px solid #1873d1;
+ border-radius:14px;background:#fff;color:#132b49;box-shadow:0 12px 36px rgba(15,42,80,.22);
+ opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .22s ease,transform .22s ease;
+}
+.live-feed-toast.is-visible{opacity:1;transform:translateY(0);pointer-events:auto}
+.live-feed-toast-link{display:flex;flex:1;min-width:0;flex-direction:column;gap:5px;padding:14px 4px 14px 15px;color:inherit;text-decoration:none}
+.live-feed-toast-link strong{font-size:.92rem;color:#0759a8}
+.live-feed-toast-link span{font-size:.86rem;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere}
+.live-feed-toast-link small{font-size:.75rem;color:#526a83}
+.live-feed-toast-close{align-self:flex-start;border:0;background:transparent;color:#53677d;font-size:1.4rem;line-height:1;padding:10px 12px;cursor:pointer}
+@media(prefers-reduced-motion:reduce){.live-feed-toast{transition:none}}
