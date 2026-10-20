@@ -2,7 +2,7 @@
   "use strict";
   const FEED_URL = "data/results.json";
   const PIB_FEED_URL = "data/pib-news.json";
-  const STORAGE_KEY = "grh_seen_official_updates_v2";
+  const STORAGE_KEY = "grh_seen_official_updates_v3";
   const MAX_SEEN = 500;
   const POLL_MS = 15000;
   const $ = (s) => document.querySelector(s);
@@ -130,7 +130,7 @@
         const recent=sorted.filter(item=>{
           if(item.archive===true || isNoise(item)) return false;
           const detected=Date.parse(item.detected_at||"");
-          return Number.isFinite(detected) && detected<=now && now-detected<=2*60*60*1000 && !seen.has(identity(item));
+          return Number.isFinite(detected) && detected<=now && now-detected<=24*60*60*1000 && !seen.has(identity(item));
         });
         recent.slice(0,1).forEach(toast);
         recent.forEach(item=>seen.add(identity(item)));
