@@ -2,7 +2,7 @@
   "use strict";
   const FEED_URL = "data/results.json";
   const PIB_FEED_URL = "data/pib-news.json";
-  const STORAGE_KEY = "grh_seen_official_updates_v3";
+  const STORAGE_KEY = "grh_seen_official_updates_v4";
   const MAX_SEEN = 500;
   const POLL_MS = 15000;
   const $ = (s) => document.querySelector(s);
@@ -47,6 +47,7 @@
     if (/^(home|about us|contact us|faq|help desk|latest updates|official website|read more|click here)$/.test(title)) return true;
     return false;
   };
+  const alertTimestamp = item => item.telegram_sent_at || item.detected_at || item.published || item.date || "";
   const identity = item => {
     if(isPib(item)){
       const rawUrl=item.url||item.official_url||item.source_url||"";
@@ -55,7 +56,7 @@
         if(prid)return "pib-prid:"+prid;
       }catch(_){}
     }
-    return normalizedTitle(item)+"|"+String(item.source_name||item.authority||item.source_id||"").toLowerCase().replace(/\s+/g," ").trim();
+    return normalizedTitle(item)+"|"+String(item.source_name||item.authority||item.source_id||"").toLowerCase().replace(/\s+/g," ").trim()+"|delivery:"+String(item.telegram_sent_at||"");
   };
   const uniqueItems = items => {
     const keys=new Set();
@@ -83,7 +84,7 @@
     badge.hidden = unread < 1;
   }
   function renderPanel(items) {
-    const current = items.slice(0, 6);
+    const current = items.slice(0, 12);
     list.innerHTML = current.length ? current.map(item => {
       const url="https://goresulthub.com/notice.html?id="+encodeURIComponent(item.id||"")+"&q="+encodeURIComponent(item.title || item.exam || "");
       const date=item.published || item.detected_at || "";
@@ -118,7 +119,7 @@
       const successfulFeeds=feedResults.filter(result=>result.status==="fulfilled");
       if(!successfulFeeds.length)throw new Error("Both live feeds failed");
       const data=successfulFeeds.flatMap(result=>result.value);
-      const sorted=uniqueItems(data).sort((a,b)=>priorityScore(a)-priorityScore(b)||String(b.detected_at||b.published||b.date||"").localeCompare(String(a.detected_at||a.published||a.date||"")));
+      const sorted=uniqueItems(data).sort((a,b)=>String(alertTimestamp(b)).localeCompare(String(alertTimestamp(a)))||priorityScore(a)-priorityScore(b));
       allItems.splice(0,allItems.length,...sorted);
       renderPanel(allItems);
       status.textContent=data.length+" indexed updates · last checked "+new Date().toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"});
@@ -129,16 +130,20 @@
         const now=Date.now();
         const recent=sorted.filter(item=>{
           if(item.archive===true || isNoise(item)) return false;
-          const detected=Date.parse(item.detected_at||"");
+          const detected=Date.parse(alertTimestamp(item));
           return Number.isFinite(detected) && detected<=now && now-detected<=24*60*60*1000 && !seen.has(identity(item));
         });
-        recent.slice(0,1).forEach(toast);
-        recent.forEach(item=>seen.add(identity(item)));
-        data.forEach(item=>seen.add(identity(item)));
+        const firstRecent=recent[0];
+        if(firstRecent){
+          toast(firstRecent);
+          seen.add(identity(firstRecent));
+        }
+        const recentKeys=new Set(recent.map(identity));
+        data.forEach(item=>{if(!recentKeys.has(identity(item)))seen.add(identity(item));});
         writeSeen(seen);
-        unread=recent.length;
+        unread=Math.max(0,recent.length-(firstRecent?1:0));
         updateBadge();
-        if(recent.length) status.textContent=recent.length+" recent update"+(recent.length===1?"":"s")+" detected · "+new Date().toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"});
+        if(recent.length) status.textContent=recent.length+" recent update"+(recent.length===1?"":"s")+" detected · surfacing one at a time";
         initialized=true;
       } else {
         const fresh=[];
@@ -147,21 +152,25 @@
           if(item.archive===true || isNoise(item)) continue;
           if(!seen.has(id))fresh.push(item);
         }
-        fresh.slice(0,1).forEach(toast);
-        fresh.forEach(item=>seen.add(identity(item)));
         if(fresh.length) {
-          unread+=fresh.length;
+          // Surface one unseen item per poll. Do not mark the rest as seen before
+          // they have had their own popup; otherwise batch deliveries disappear.
+          const next=fresh[0];
+          toast(next);
+          seen.add(identity(next));
+          unread=Math.max(0,fresh.length-1);
           updateBadge();
-          status.textContent=fresh.length+" new update"+(fresh.length===1?"":"s")+" detected · "+new Date().toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"});
+          status.textContent=fresh.length>1?(fresh.length-1)+" more update"+(fresh.length-1===1?"":"s")+" waiting · "+new Date().toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"}):"New update surfaced · "+new Date().toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"});
           if("Notification" in window && Notification.permission==="granted") {
-            fresh.slice(0,3).forEach(item=>{
-              try {
-                const n=new Notification("GoResultHub: "+categoryName(item.category),{body:item.title||"A new official exam update was detected.",icon:"favicon.ico"});
-                n.onclick=()=>{window.focus();const url="https://goresulthub.com/notice.html?id="+encodeURIComponent(item.id||"")+"&q="+encodeURIComponent(item.title||item.exam||"");window.open(url,"_blank","noopener");n.close();};
-              } catch (_) {}
-            });
+            try {
+              const n=new Notification("GoResultHub: "+categoryName(next.category),{body:next.title||"A new official exam update was detected.",icon:"favicon.ico"});
+              n.onclick=()=>{window.focus();const url="https://goresulthub.com/notice.html?id="+encodeURIComponent(next.id||"")+"&q="+encodeURIComponent(next.title||next.exam||"");window.open(url,"_blank","noopener");n.close();};
+            } catch (_) {}
           }
           writeSeen(seen);
+        } else {
+          unread=0;
+          updateBadge();
         }
       }
     } catch (_) {
