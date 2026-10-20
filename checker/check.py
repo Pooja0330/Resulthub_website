@@ -1063,6 +1063,18 @@ def main():
         if not telegram_send(CHANNEL, message, reply_markup=keyboard):
             remaining_approved.append(item)
         else:
+            # Approved-queue alerts also need a delivery timestamp in the public
+            # feed; otherwise Chrome can announce them while the homepage keeps
+            # sorting them by their older original detection time.
+            delivered_at = now_utc()
+            sent_url = normalize_notice_url(url)
+            if sent_url:
+                for result_item in results:
+                    if not isinstance(result_item, dict):
+                        continue
+                    result_url = normalize_notice_url(result_item.get("url") or result_item.get("official_url") or "")
+                    if result_url == sent_url:
+                        result_item["telegram_sent_at"] = delivered_at
             time.sleep(1.1)
 
     # Mirror successful Telegram delivery timestamps into the public feed so the
