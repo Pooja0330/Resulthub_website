@@ -11,6 +11,7 @@ on:
       - "checker/sources.json"
       - ".github/workflows/check-results.yml"
   schedule:
+    # Scheduled checker runs every 5 minutes; manual/push runs also provide recovery if scheduling is delayed.
     # GitHub Actions scheduled workflows support a minimum interval of 5 minutes.
     - cron: "*/5 * * * *"
 
