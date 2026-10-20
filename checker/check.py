@@ -1065,6 +1065,22 @@ def main():
         else:
             time.sleep(1.1)
 
+    # Mirror successful Telegram delivery timestamps into the public feed so the
+    # website can notify visitors when an older queued alert is actually delivered.
+    sent_by_url = {}
+    for delivery in seen.values():
+        if not isinstance(delivery, dict) or not delivery.get("telegram_sent_at"):
+            continue
+        delivery_url = normalize_notice_url(delivery.get("url", ""))
+        if delivery_url:
+            sent_by_url[delivery_url] = delivery["telegram_sent_at"]
+    for result_item in results:
+        if not isinstance(result_item, dict):
+            continue
+        result_url = normalize_notice_url(result_item.get("url") or result_item.get("official_url") or "")
+        if result_url in sent_by_url:
+            result_item["telegram_sent_at"] = sent_by_url[result_url]
+
     # Save data only after the run's work is complete.
     state.update({
         "last_run": checked_at,
