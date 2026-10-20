@@ -250,6 +250,8 @@ function renderYearArchiveHelp(){
 }
 function isPibItem(x){return /pib|press information bureau|press releases|government & pib/i.test([x.source_id,x.source_name,x.authority,x.exam_category].filter(Boolean).join(" "));}
 function mainPriority(x){if(isPibItem(x))return 2;if(x.archive===true)return 3;if(x.verified===true&&!/archive/i.test(String(x.title||"")))return 0;return 1;}
+function updateTime(x){return x.telegram_sent_at||x.detected_at||x.date||x.published||0;}
+function updateTimeValue(x){const n=new Date(updateTime(x)).getTime();return Number.isFinite(n)?n:0;}
 function isNavigationNoise(item){
  const title=String(item?.title||item?.exam||"").toLowerCase().replace(/[^a-z0-9]/g,"");
  const blocked=new Set([
@@ -290,13 +292,13 @@ function filteredItems(){
     return queryMatch&&(!c||x.category===c)&&(!ec||family===ec)&&(!effectiveStateFilter||itemState===effectiveStateFilter)&&(!y||(y==="unknown"?!year:year===y))&&browseMatches(x,selectedBrowse);
  });
  if($("#sort").value==="title") list.sort((a,b)=>(a.title||"").localeCompare(b.title||""));
- else list.sort((a,b)=>new Date(b.detected_at||b.date||b.published||0)-new Date(a.detected_at||a.date||a.published||0)||mainPriority(a)-mainPriority(b));
+ else list.sort((a,b)=>updateTimeValue(b)-updateTimeValue(a)||mainPriority(a)-mainPriority(b));
  return list;
 }
 function renderPriorityExamAlerts(){
  const box=$("#priorityExamList");if(!box)return;
  const rows=dedupeVisibleItems(allItems.filter(x=>!isPibItem(x)&&x.archive!==true&&/^(result|notification|admit_card|answer_key|merit_list|cutoff|exam_schedule)$/.test(String(x.category||""))&&!/annual results old|old archive|historical/i.test(String(x.title||""))),{titleOnly:true})
-  .sort((a,b)=>new Date(b.detected_at||b.published||b.date||0)-new Date(a.detected_at||a.published||a.date||0)).slice(0,8);
+  .sort((a,b)=>updateTimeValue(b)-updateTimeValue(a)).slice(0,8);
  box.innerHTML=rows.length?rows.map(x=>{
   const url=safeUrl(x.url||x.official_url)||safeUrl(x.source_url);
   const category=label(x.category);
@@ -330,7 +332,7 @@ function render(){
    const sourceBadge=x.archive?"Historical archive":(x.verified===true?"✓ Verified official source":"Official website link");
    const explicitYear=x.exam_year||((String(x.title||x.exam||"").match(/\b20\d{2}\b/)||[])[0]||"");
    const noticeDate=x.published||"";
-   const dateDetails=(explicitYear?`Exam year: ${esc(explicitYear)} · `:"")+(noticeDate?`Notice date: ${esc(noticeDate)} · `:"Notice date not shown by authority · ")+`Detected by GoResultHub: ${detectedTimeMarkup(x.detected_at||x.date)}`;
+   const dateDetails=(explicitYear?`Exam year: ${esc(explicitYear)} · `:"")+(noticeDate?`Notice date: ${esc(noticeDate)} · `:"Notice date not shown by authority · ")+`Updated on GoResultHub: ${detectedTimeMarkup(updateTime(x))}`;
    return `<article class="card"><div class="meta"><span class="tag">${esc(label(x.category))}</span><span class="unverified">${esc(sourceBadge)}</span></div><h3>${esc(displayTitle(x))}</h3><p>${esc(x.description||x.source_name||"View the official website for full details and eligibility.")}</p><div class="source">${esc(x.source_name||x.authority||"Issuing authority")} · ${dateDetails}</div>${url?(x.direct===true||/\/(?:login|candidate-login|candidatelogin|score.?display|result.?status)(?:[/?#]|$)/i.test(new URL(url).pathname)?` <a class="link secondary" href="${esc(url)}" target="_blank" rel="noopener noreferrer">Open official login ↗</a>`:` <a class="link secondary" href="${esc("notice.html?id="+encodeURIComponent(x.id||"")+"&q="+encodeURIComponent(x.title||x.exam||"Exam update"))}" rel="noopener">View update on GoResultHub ↗</a>`):`<span>Official link unavailable</span>`}<button type="button" class="share-update" data-share-title="${esc(x.title||x.exam||"Exam update")}" data-share-url="${esc("https://goresulthub.com/notice.html?id="+encodeURIComponent(x.id||"")+"&q="+encodeURIComponent(x.title||x.exam||""))}">Share this update ↗</button></article>`;
   }).join("");
  $("#empty").classList.toggle("hidden",list.length>0);
