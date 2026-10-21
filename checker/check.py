@@ -1093,6 +1093,23 @@ def main():
         if result_url in sent_by_url:
             result_item["telegram_sent_at"] = sent_by_url[result_url]
 
+    # Backfill the two OSSTET answer-key alerts already sent to Telegram
+    # before delivery timestamps were added to approved-queue records. The
+    # channel screenshot shows both at 17:11 IST on 2026-10-20 (11:41 UTC).
+    osstet_sent_at = "2026-10-20T11:41:00+00:00"
+    osstet_backfilled = 0
+    for result_item in results:
+        if not isinstance(result_item, dict):
+            continue
+        title_value = str(result_item.get("title") or result_item.get("exam") or "").upper()
+        source_value = str(result_item.get("source_name") or result_item.get("authority") or "").upper()
+        if "OSSTET" in title_value and "ANSWER KEY" in title_value and "ODISHA" in (source_value + " " + title_value):
+            if not result_item.get("telegram_sent_at"):
+                result_item["telegram_sent_at"] = osstet_sent_at
+                osstet_backfilled += 1
+    if osstet_backfilled:
+        print(f"Backfilled Telegram delivery time for {osstet_backfilled} existing OSSTET answer-key feed record(s)")
+
     # Save data only after the run's work is complete.
     state.update({
         "last_run": checked_at,
