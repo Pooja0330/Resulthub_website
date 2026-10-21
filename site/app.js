@@ -267,13 +267,12 @@ function isCurrent2026Update(item){
  if(!item || item.archive===true) return false;
  const title=String(item.title||item.exam||"").toLowerCase();
  if(/historical|old archive|previous year|past papers archive/.test(title)) return false;
- // Keep notices for the current year and future years, while excluding records
- // whose actual notice/exam year is before 2026.
+ // Keep current/future updates from 2026 onward and historical records from 2023 onward.
  const year=recordYear(item);
- if(year && /^\d{4}$/.test(year)) return Number(year)>=2026;
+ if(year && /^\d{4}$/.test(year)) return Number(year)>=2023;
  const stamp=item.telegram_sent_at||item.detected_at||item.date||item.published||"";
  const parsed=stamp?new Date(stamp):null;
- return !!(parsed && !Number.isNaN(parsed.getTime()) && parsed.getFullYear()>=2026);
+ return !!(parsed && !Number.isNaN(parsed.getTime()) && parsed.getFullYear()>=2023);
 }
 function current2026Items(items){return Array.isArray(items)?items.filter(isCurrent2026Update):[];}
 function displayTitle(x){return String(x.title||x.exam||"Exam update");}
