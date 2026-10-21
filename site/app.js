@@ -263,6 +263,15 @@ function isNavigationNoise(item){
  return blocked.has(title) || title.includes("rtipolicyinformation") || title.includes("informationrtiofficers") || title.includes("rtirelatedcasedecisions");
 }
 function cleanResults(items){return Array.isArray(items)?items.filter(item=>!isNavigationNoise(item)):[];}
+function isCurrent2026Update(item){
+ if(!item || item.archive===true) return false;
+ const stamp=item.telegram_sent_at||item.detected_at||item.date||item.published||"";
+ const parsed=stamp?new Date(stamp):null;
+ if(parsed && !Number.isNaN(parsed.getTime())) return parsed.getFullYear()===2026;
+ const year=recordYear(item);
+ return year==="2026";
+}
+function current2026Items(items){return Array.isArray(items)?items.filter(isCurrent2026Update):[];}
 function displayTitle(x){return String(x.title||x.exam||"Exam update");}
 function dedupeVisibleItems(items, options={}){
  const seen=new Set();
@@ -310,7 +319,7 @@ function renderPriorityExamAlerts(){
 }
 function renderPibNews(){
  const box=$("#pibNewsList");if(!box)return;
- const rows=dedupeVisibleItems(pibItems.filter(x=>x.archive!==true),{titleOnly:true,requirePibReleaseUrl:true})
+ const rows=dedupeVisibleItems(pibItems.filter(x=>isCurrent2026Update(x)),{titleOnly:true,requirePibReleaseUrl:true})
   .sort((a,b)=>{const aid=Number(new URL(a.url||a.official_url,location.href).searchParams.get("PRID")||0);const bid=Number(new URL(b.url||b.official_url,location.href).searchParams.get("PRID")||0);if(aid&&bid&&aid!==bid)return bid-aid;return new Date(b.detected_at||b.published||b.date||0)-new Date(a.detected_at||a.published||a.date||0);}).slice(0,14);
  box.innerHTML=rows.length?rows.map(x=>{
   const url=safeUrl(x.url||x.official_url)||safeUrl(x.source_url)||"https://pib.gov.in/";
@@ -383,14 +392,14 @@ async function loadResults(){
     if(resultsFeedInitialized&&!knownResultKeys.has(key)&&!isPibItem(item)&&item.archive!==true)freshExamItems.push(item);
     knownResultKeys.add(key);
    }
-   allItems=data;
+   allItems=current2026Items(data);
    try{localStorage.setItem("goresult-results-cache",JSON.stringify({savedAt:Date.now(),items:data}))}catch(e){}
    page=1;render();
    if(resultsFeedInitialized&&freshExamItems.length)showLiveFeedToast(freshExamItems[0],"exam",freshExamItems.length);
    resultsFeedInitialized=true;
   }catch(e){
    if(!allItems.length){
-    try{const cached=JSON.parse(localStorage.getItem("goresult-results-cache")||"null");if(Array.isArray(cached?.items)){allItems=cleanResults(cached.items);try{localStorage.setItem("goresult-results-cache",JSON.stringify({savedAt:Date.now(),items:allItems}))}catch(ignore){}render();$("#monitorDetail").textContent="Showing the last saved updates because the live feed is temporarily unavailable."}}catch(ignore){}
+    try{const cached=JSON.parse(localStorage.getItem("goresult-results-cache")||"null");if(Array.isArray(cached?.items)){allItems=current2026Items(cleanResults(cached.items));try{localStorage.setItem("goresult-results-cache",JSON.stringify({savedAt:Date.now(),items:allItems}))}catch(ignore){}render();$("#monitorDetail").textContent="Showing the last saved updates because the live feed is temporarily unavailable."}}catch(ignore){}
    }
    console.error("GoResultHub results load/render failed:",e);$("#count").textContent=allItems.length?"Updates need a refresh":"Updates unavailable";$("#updatesList").innerHTML='<div class="empty">Updates could not finish loading. <button type="button" id="retryUpdates">Retry loading updates</button></div>';$("#retryUpdates")?.addEventListener("click",()=>{allItems=[];loadResults()});
   }finally{resultsRequest=null}
@@ -421,7 +430,7 @@ async function loadPibResults(){
 }
 async function refresh(){if(document.visibilityState==="visible")await Promise.all([loadResults(),loadStatus(),loadPibResults()])}
 function resetUpdateFilters(){
- $("#category").value="";$("#examCategory").value="";$("#region").value="";$("#examYear").value="";$("#sort").value="new";
+ $("#category").value="";$("#examCategory").value="";$("#region").value="";$("#examYear").value="2026";$("#sort").value="new";
  selectedState="";selectedRegion="";selectedBrowse="";page=1;
  document.querySelectorAll("[data-browse]").forEach(button=>button.classList.remove("active"));
 }
@@ -433,7 +442,7 @@ function init(){
  const initialQuery=new URLSearchParams(window.location.search).get("q")||"";
  $("#q").value=initialQuery;
  if(window.location.search){history.replaceState(null,"",window.location.pathname+window.location.hash);}
- try{const cached=JSON.parse(localStorage.getItem("goresult-results-cache")||"null");if(Array.isArray(cached?.items)){allItems=cached.items;render()}}catch(e){}
+ try{const cached=JSON.parse(localStorage.getItem("goresult-results-cache")||"null");if(Array.isArray(cached?.items)){allItems=current2026Items(cached.items);render()}}catch(e){}
  if(initialQuery&&quickSearch){quickSearch.value=initialQuery;filterQuickExams(initialQuery);}
  refresh();
  if(refreshTimer)clearInterval(refreshTimer);
@@ -444,7 +453,7 @@ function init(){
  if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});
 }
 function clearUpdateFilters(){
- $("#category").value="";$("#examCategory").value="";$("#region").value="";$("#examYear").value="";
+ $("#category").value="";$("#examCategory").value="";$("#region").value="";$("#examYear").value="2026";
  selectedState="";selectedRegion="";selectedBrowse="";
 }
 function runSearch(scroll=true){
