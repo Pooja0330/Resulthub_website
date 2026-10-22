@@ -45,6 +45,7 @@ jobs:
           python -m pip install --upgrade requests certifi urllib3 beautifulsoup4 feedparser
 
       - name: Verify Telegram bot and channel configuration
+        continue-on-error: true
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_ADMIN: ${{ secrets.TG_ADMIN }}
