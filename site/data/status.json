@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-10-22T05:10:25.655524+00:00",
+  "last_checked_at": "2026-10-22T10:07:21.082188+00:00",
   "sources_enabled": 273,
   "sources_succeeded": 138,
   "sources_failed": 135,
   "new_candidates": 10,
-  "telegram_posts_sent": 0,
-  "alerts_pending": 0,
+  "telegram_posts_sent": 4,
+  "alerts_pending": 1,
   "status": "partial",
   "failure_types": "ConnectTimeout: 92, SSLError: 28, ConnectionError: 23, HTTPError: 12, ReadTimeout: 2",
   "note": "Some sources may be unavailable or use formats automated scanning cannot read."
