@@ -1,15 +1,14 @@
 name: Deploy GoResultHub Website
 
 on:
+  # Deploy only when published site files actually change. The exam checker
+  # commits site/data/results.json, and the PIB workflow deploys its own feed.
+  # Avoid a second deployment for every successful checker run when no data changed.
   push:
     branches: [main]
     paths:
       - "site/**"
       - ".github/workflows/pages.yml"
-  workflow_run:
-    workflows: ["Check Exam Results"]
-    types: [completed]
-    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -23,7 +22,6 @@ concurrency:
 
 jobs:
   deploy:
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
