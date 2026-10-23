@@ -316,63 +316,43 @@ def normalize_notice_url(url):
 
 def get_with_retries(url, headers=None):
     last_error = None
-
-    # Retry transient failures with bounded backoff. Keep TLS verification enabled:
-    # certificate errors should be diagnosed, never hidden by disabling verification.
-    # Three bounded attempts improve resilience to intermittent government-portal outages.
+    # Retry transient timeouts, resets and temporary server errors. TLS and DNS
+    # failures are not bypassed; certificate verification remains enabled.
     for attempt in range(3):
         try:
             response = requests.get(
                 url,
                 headers=headers or HEADERS,
-                timeout=(min(TIMEOUT, 10), min(TIMEOUT, 12)),
+                timeout=(min(TIMEOUT, 10), min(TIMEOUT, 15)),
                 allow_redirects=True,
                 verify=certifi.where(),
             )
-
-            if response.status_code in (408, 425, 429, 500, 502, 503, 504):
-                if attempt < 2:
-                    retry_after = response.headers.get("Retry-After", "").strip()
-                    try:
-                        delay = min(max(float(retry_after), 1.0), 10.0) if retry_after else 1.5 * (attempt + 1)
-                    except ValueError:
-                        delay = 1.5 * (attempt + 1)
-                    time.sleep(delay)
-                    continue
-
+            if response.status_code in (408, 425, 429, 500, 502, 503, 504) and attempt < 2:
+                retry_after = response.headers.get("Retry-After", "").strip()
+                try:
+                    delay = min(max(float(retry_after), 1.0), 10.0) if retry_after else 1.5 * (attempt + 1)
+                except ValueError:
+                    delay = 1.5 * (attempt + 1)
+                response.close()
+                time.sleep(delay)
+                continue
             response.raise_for_status()
             return response
-
         except (requests.Timeout, requests.ConnectionError) as exc:
             last_error = exc
-
-            # Fail fast on errors that a retry cannot fix. Several official portals
-            # return persistent DNS/TLS failures from hosted runners; retrying those
-            # three times wastes the run budget needed to scan other authorities.
-            error_text = f"{type(exc).__name__}: {exc}"
-            permanent_network_error = (
+            error_text = str(exc)
+            permanent = (
                 isinstance(exc, requests.exceptions.SSLError)
                 or "NameResolutionError" in error_text
                 or "Temporary failure in name resolution" in error_text
                 or "CERTIFICATE_VERIFY_FAILED" in error_text
-                or "Failed to establish a new connection" in error_text
             )
-            if permanent_network_error:
+            if permanent or attempt >= 2:
                 raise
-
-            # Timeouts and connection resets can be transient. Use two attempts
-            # total so a small set of slow sites cannot stall the whole registry.
-            if attempt < 1:
-                time.sleep(1.0)
-                continue
-            raise
-
+            time.sleep(min(1.5 * (attempt + 1), 4.0))
     if last_error:
         raise last_error
-
     raise RuntimeError("Request failed after retries")
-
-
 def telegram_send(chat_id, message, reply_markup=None):
     global TG_RATE_LIMITED
     if TG_RATE_LIMITED:
