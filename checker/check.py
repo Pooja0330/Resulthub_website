@@ -316,23 +316,24 @@ def normalize_notice_url(url):
 
 def get_with_retries(url, headers=None):
     last_error = None
-    # Retry transient timeouts, resets and temporary server errors. TLS and DNS
-    # failures are not bypassed; certificate verification remains enabled.
-    for attempt in range(3):
+    # Keep the full scan moving: retry transient network/server failures once,
+    # but do not let unreachable hosts consume three long timeout windows.
+    # TLS certificate and DNS failures still fail fast; TLS verification stays on.
+    for attempt in range(2):
         try:
             response = requests.get(
                 url,
                 headers=headers or HEADERS,
-                timeout=(min(TIMEOUT, 10), min(TIMEOUT, 15)),
+                timeout=(min(TIMEOUT, 5), min(TIMEOUT, 10)),
                 allow_redirects=True,
                 verify=certifi.where(),
             )
-            if response.status_code in (408, 425, 429, 500, 502, 503, 504) and attempt < 2:
+            if response.status_code in (408, 425, 429, 500, 502, 503, 504) and attempt < 1:
                 retry_after = response.headers.get("Retry-After", "").strip()
                 try:
-                    delay = min(max(float(retry_after), 1.0), 10.0) if retry_after else 1.5 * (attempt + 1)
+                    delay = min(max(float(retry_after), 1.0), 3.0) if retry_after else 1.0
                 except ValueError:
-                    delay = 1.5 * (attempt + 1)
+                    delay = 1.0
                 response.close()
                 time.sleep(delay)
                 continue
@@ -347,9 +348,9 @@ def get_with_retries(url, headers=None):
                 or "Temporary failure in name resolution" in error_text
                 or "CERTIFICATE_VERIFY_FAILED" in error_text
             )
-            if permanent or attempt >= 2:
+            if permanent or attempt >= 1:
                 raise
-            time.sleep(min(1.5 * (attempt + 1), 4.0))
+            time.sleep(0.75)
     if last_error:
         raise last_error
     raise RuntimeError("Request failed after retries")
