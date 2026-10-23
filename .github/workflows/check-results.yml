@@ -83,7 +83,11 @@ jobs:
                       detail = "Telegram API HTTP error " + str(exc.code)
                   raise SystemExit(method + " failed: " + detail)
               except (URLError, TimeoutError) as exc:
-                  raise SystemExit(method + " network failure: " + type(exc).__name__)
+                  # Telegram can be temporarily unreachable from GitHub-hosted runners.
+                  # Keep scanning/publishing the website feed even during a Telegram outage.
+                  print("WARNING: " + method + " network failure: " + type(exc).__name__ +
+                        "; continuing with website scanning. Telegram delivery may be delayed.")
+                  raise SystemExit(0)
               if not result.get("ok"):
                   raise SystemExit(method + " failed: " + str(result.get("description", "Unknown Telegram API error")))
               return result["result"]
