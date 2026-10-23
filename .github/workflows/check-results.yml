@@ -45,6 +45,8 @@ jobs:
           python -m pip install --upgrade requests certifi urllib3 beautifulsoup4 feedparser
 
       - name: Verify Telegram bot and channel configuration
+        # Telegram API/network hiccups must not prevent publishing website data.
+        continue-on-error: true
         continue-on-error: true
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
