@@ -17,6 +17,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: goresult-hub-data-writers
@@ -26,6 +28,9 @@ jobs:
   check:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout repository
@@ -162,6 +167,7 @@ jobs:
 
       - name: Commit updated data
         if: success()
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -173,6 +179,7 @@ jobs:
 
           if git diff --cached --quiet; then
             echo "No data changes to commit"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
@@ -190,6 +197,7 @@ jobs:
               continue
             fi
             if git push origin HEAD:main; then
+              echo "changed=true" >> "$GITHUB_OUTPUT"
               exit 0
             fi
             echo "Concurrent repository update; retrying push ($attempt/5)"
@@ -198,6 +206,21 @@ jobs:
           done
           echo "Could not push exam data after five attempts"
           exit 1
+
+      # GITHUB_TOKEN pushes do not trigger another workflow's push event.
+      # Deploy updated results.json and status.json in the same scan run.
+      - name: Configure Pages
+        if: steps.commit.outputs.changed == 'true'
+        uses: actions/configure-pages@v5
+      - name: Upload updated website
+        if: steps.commit.outputs.changed == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - name: Deploy updated exam feed and status
+        if: steps.commit.outputs.changed == 'true'
+        id: deployment
+        uses: actions/deploy-pages@v4
 
       - name: Notify admin if the checker workflow fails
         if: failure()
