@@ -1,6 +1,6 @@
 import unittest
 
-from check import classify, discover_listing_urls, exam_year_from_title, extract_notice_date, host_allowed, infer_exam_category, is_speculative_status_title, is_stale_notice, normalize_notice_url
+from check import classify, discover_listing_urls, exam_year_from_title, extract_notice_date, get_with_retries, host_allowed, infer_exam_category, is_speculative_status_title, is_stale_notice, normalize_notice_url
 from bs4 import BeautifulSoup
 
 
@@ -137,6 +137,27 @@ class CheckerSafetyTests(unittest.TestCase):
                 self.assertIsNone(
                     classify_source_title(title, {"include_all_items": True})
                 )
+
+
+    def test_transient_connection_reset_is_retried(self):
+        from unittest.mock import patch
+        import requests
+
+        response = requests.Response()
+        response.status_code = 200
+        response._content = b"ok"
+        with patch("check.requests.get", side_effect=[requests.ConnectionError("connection reset by peer"), response]) as mocked, patch("check.time.sleep"):
+            self.assertEqual(get_with_retries("https://example.gov.in/").status_code, 200)
+            self.assertEqual(mocked.call_count, 2)
+
+    def test_tls_certificate_error_is_not_retried_or_ignored(self):
+        from unittest.mock import patch
+        import requests
+
+        with patch("check.requests.get", side_effect=requests.exceptions.SSLError("CERTIFICATE_VERIFY_FAILED")) as mocked:
+            with self.assertRaises(requests.exceptions.SSLError):
+                get_with_retries("https://example.gov.in/")
+            self.assertEqual(mocked.call_count, 1)
 
 
 if __name__ == "__main__":
