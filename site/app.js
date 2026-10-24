@@ -316,9 +316,10 @@ function filteredItems(){
 }
 function renderPriorityExamAlerts(){
  const box=$("#priorityExamList");if(!box)return;
- // Preserve same-titled notices from different official authorities and show
- // a full batch of ten recent candidates, whether or not Telegram sent them.
- const rows=dedupeVisibleItems(allItems.filter(x=>!isPibItem(x)&&x.archive!==true&&/^(result|notification|admit_card|answer_key|merit_list|cutoff|exam_schedule)$/.test(String(x.category||""))&&!/annual results old|old archive|historical/i.test(String(x.title||""))))
+ // Show every recent, non-archive official candidate on the homepage,
+ // including PIB/government notifications; Telegram delivery is independent.
+ // Keep archive/history records out so old 2020 notices cannot crowd the feed.
+ const rows=dedupeVisibleItems(allItems.filter(x=>x.archive!==true&&/^(result|notification|admit_card|answer_key|merit_list|cutoff|exam_schedule)$/.test(String(x.category||""))&&!/annual results old|old archive|historical/i.test(String(x.title||""))))
   .sort((a,b)=>updateTimeValue(b)-updateTimeValue(a)).slice(0,12);
  box.innerHTML=rows.length?rows.map(x=>{
   const url=safeUrl(x.url||x.official_url)||safeUrl(x.source_url);
