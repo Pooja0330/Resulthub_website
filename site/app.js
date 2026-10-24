@@ -300,7 +300,7 @@ function dedupeVisibleItems(items, options={}){
 }
 function filteredItems(){
  const q=$("#q").value.trim().toLowerCase(), terms=q.split(/\s+/).filter(Boolean), c=$("#category").value, ec=$("#examCategory").value, r=$("#region").value, y=$("#examYear").value;
- const list=dedupeVisibleItems(allItems).filter(x=>!isPibItem(x)).filter(x=>{
+ const list=dedupeVisibleItems(allItems).filter(x=>{
   const family=inferredFamily(x);
   const hay=[x.title,x.exam,x.source_name,x.state,x.region,x.category,family].join(" ").toLowerCase();
   const itemState=stateForItem(x);
@@ -320,7 +320,7 @@ function renderPriorityExamAlerts(){
  // including PIB/government notifications; Telegram delivery is independent.
  // Keep archive/history records out so old 2020 notices cannot crowd the feed.
  const rows=dedupeVisibleItems(allItems.filter(x=>x.archive!==true&&/^(result|notification|admit_card|answer_key|merit_list|cutoff|exam_schedule)$/.test(String(x.category||""))&&!/annual results old|old archive|historical/i.test(String(x.title||""))))
-  .sort((a,b)=>updateTimeValue(b)-updateTimeValue(a)).slice(0,12);
+  .sort((a,b)=>updateTimeValue(b)-updateTimeValue(a)).slice(0,20);
  box.innerHTML=rows.length?rows.map(x=>{
   const url=safeUrl(x.url||x.official_url)||safeUrl(x.source_url);
   const category=label(x.category);
