@@ -250,7 +250,7 @@ function renderYearArchiveHelp(){
 }
 function isPibItem(x){return /pib|press information bureau|press releases|government & pib/i.test([x.source_id,x.source_name,x.authority,x.exam_category].filter(Boolean).join(" "));}
 function mainPriority(x){if(isPibItem(x))return 2;if(x.archive===true)return 3;if(x.verified===true&&!/archive/i.test(String(x.title||"")))return 0;return 1;}
-function updateTime(x){return x.telegram_sent_at||x.detected_at||x.date||x.published||0;}
+function updateTime(x){return x.detected_at||x.telegram_sent_at||x.date||x.published||0;}
 function updateTimeValue(x){const n=new Date(updateTime(x)).getTime();return Number.isFinite(n)?n:0;}
 function isNavigationNoise(item){
  const title=String(item?.title||item?.exam||"").toLowerCase().replace(/[^a-z0-9]/g,"");
@@ -267,10 +267,17 @@ function isCurrent2026Update(item){
  if(!item || item.archive===true) return false;
  const title=String(item.title||item.exam||"").toLowerCase();
  if(/historical|old archive|previous year|past papers archive/.test(title)) return false;
- // Keep current/future updates from 2026 onward and historical records from 2023 onward.
+ // A freshly detected official listing must remain visible even if its own
+ // publication date is missing, old, or incorrectly scraped. Archive sources
+ // are separately marked above and are never promoted into the live feed.
+ const detected=item.detected_at?new Date(item.detected_at):null;
+ const now=Date.now();
+ if(detected && !Number.isNaN(detected.getTime()) && detected.getTime()<=now+24*60*60*1000 && now-detected.getTime()<=90*24*60*60*1000) return true;
+ // Otherwise keep current/future updates from 2026 onward and historical
+ // non-archive records from 2023 onward.
  const year=recordYear(item);
  if(year && /^\d{4}$/.test(year)) return Number(year)>=2023;
- const stamp=item.telegram_sent_at||item.detected_at||item.date||item.published||"";
+ const stamp=item.telegram_sent_at||item.date||item.published||"";
  const parsed=stamp?new Date(stamp):null;
  return !!(parsed && !Number.isNaN(parsed.getTime()) && parsed.getFullYear()>=2023);
 }
@@ -309,8 +316,10 @@ function filteredItems(){
 }
 function renderPriorityExamAlerts(){
  const box=$("#priorityExamList");if(!box)return;
- const rows=dedupeVisibleItems(allItems.filter(x=>!isPibItem(x)&&x.archive!==true&&/^(result|notification|admit_card|answer_key|merit_list|cutoff|exam_schedule)$/.test(String(x.category||""))&&!/annual results old|old archive|historical/i.test(String(x.title||""))),{titleOnly:true})
-  .sort((a,b)=>updateTimeValue(b)-updateTimeValue(a)).slice(0,8);
+ // Preserve same-titled notices from different official authorities and show
+ // a full batch of ten recent candidates, whether or not Telegram sent them.
+ const rows=dedupeVisibleItems(allItems.filter(x=>!isPibItem(x)&&x.archive!==true&&/^(result|notification|admit_card|answer_key|merit_list|cutoff|exam_schedule)$/.test(String(x.category||""))&&!/annual results old|old archive|historical/i.test(String(x.title||""))))
+  .sort((a,b)=>updateTimeValue(b)-updateTimeValue(a)).slice(0,12);
  box.innerHTML=rows.length?rows.map(x=>{
   const url=safeUrl(x.url||x.official_url)||safeUrl(x.source_url);
   const category=label(x.category);
