@@ -461,9 +461,11 @@ function init(){
  if(refreshTimer)clearInterval(refreshTimer);
  refreshTimer=setInterval(refresh,15*1000);
  document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")refresh()});
+ window.addEventListener("focus",()=>refresh());
+ window.addEventListener("online",()=>refresh());
   // Clear stale filter UI when browsers restore the page from the back-forward cache.
   window.addEventListener("pageshow",event=>{if(event.persisted){resetUpdateFilters();render();}});
- if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});
+ if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js",{updateViaCache:"none"}).catch(()=>{});
 }
 function clearUpdateFilters(){
  $("#category").value="";$("#examCategory").value="";$("#region").value="";$("#examYear").value="2026";
