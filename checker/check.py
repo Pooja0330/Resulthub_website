@@ -413,6 +413,32 @@ def is_speculative_status_title(title):
     ))
 
 
+def is_navigation_noise_title(title):
+    """Reject scraped site menus/homepage link clusters mistaken for notices."""
+    value = re.sub(r"[^a-z0-9]+", "", str(title or "").lower())
+    menu_terms = (
+        "servicespayfeeonline",
+        "officialemailservice",
+        "jobsrecruitmentadvertisements",
+        "callletters",
+        "tendersnotices",
+        "employeeonlineservices",
+        "photogalleryconferences",
+        "virtualtour",
+        "esamikshya",
+        "epratikaar",
+    )
+    hits = sum(term in value for term in menu_terms)
+    # These are menu aggregates, not individual result/admit-card notices.
+    if value.startswith("servicespayfeeonlineforofflineapplications") and hits >= 3:
+        return True
+    if value.startswith("epratikaar") and hits >= 3:
+        return True
+    if value == "jobsrecruitmentadvertisementscallletters":
+        return True
+    return len(value) > 100 and hits >= 4
+
+
 def is_stale_notice(title, published=""):
     """Reject clearly old notices when the title or feed gives an explicit date."""
     candidates = []
@@ -612,6 +638,9 @@ def fetch_source(source):
         link = str(link or "").split("#")[0].strip()
         normalized = normalize_notice_url(link)
         if len(title) < 4 or not normalized or not host_allowed(link, hosts):
+            continue
+        if is_navigation_noise_title(title):
+            print(f"INFO ignored navigation/menu text from {name}: {title[:100]}")
             continue
         category = classify_source_title(title, source)
         if not category or is_speculative_status_title(title) or normalized in seen_urls:
