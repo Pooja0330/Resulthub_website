@@ -101,6 +101,16 @@ class CheckerSafetyTests(unittest.TestCase):
     def test_generic_call_letters_landing_page_is_not_a_notice(self):
         self.assertIsNone(classify("Call Letters"))
 
+    def test_navigation_menu_clusters_are_rejected(self):
+        from check import is_navigation_noise_title
+        self.assertTrue(is_navigation_noise_title(
+            "Services Pay Fee Online For Offline Applications KU Mail Official e-Mail Service Jobs/Recruitment Advertisements,Call Letters Tenders Notices,eTenders Employee Online Services Downloads Forms Applications Photogallery Conferences Workshops"
+        ))
+        self.assertTrue(is_navigation_noise_title(
+            "e-PRATIKAAR e-Samikshya Virtual Tour e-Learning e-Admission Results Examinations Online Payment PM Internship Scheme 2025 Library Seminars Conferences"
+        ))
+        self.assertTrue(is_navigation_noise_title("Jobs/Recruitment Advertisements,Call Letters"))
+        self.assertFalse(is_navigation_noise_title("SSC CGL Tier-I Result 2026"))
     def test_classifies_public_exam_notice(self):
         self.assertEqual(classify("Public Notice: Revised Examination Schedule 2026"), "exam_schedule")
 
