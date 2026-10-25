@@ -12172,38 +12172,80 @@
       "source_id": "utkal-university",
       "url": "https://utkaluniversity.ac.in/results/",
       "telegram_sent_at": "2026-10-25T01:25:56.863736+00:00"
+    },
+    "09a41b6eeaaa5a422b4f38ea": {
+      "first_seen": "2026-10-25T11:39:57.016547+00:00",
+      "source_id": "pib-english-regional-releases",
+      "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2328140",
+      "dedupe_reason": "already_present_on_website"
+    },
+    "00146df942c2edf5c30e1de1": {
+      "first_seen": "2026-10-25T11:39:57.016547+00:00",
+      "source_id": "pib-english-regional-releases",
+      "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2328133",
+      "dedupe_reason": "already_present_on_website"
+    },
+    "d486562487367f3228079f04": {
+      "first_seen": "2026-10-25T11:39:57.016547+00:00",
+      "source_id": "pib-english-regional-releases",
+      "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2328135",
+      "dedupe_reason": "already_present_on_website"
+    },
+    "a5f7d80c57c7159bfe939877": {
+      "first_seen": "2026-10-25T11:39:57.016547+00:00",
+      "source_id": "pib-english-regional-releases",
+      "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2328130",
+      "dedupe_reason": "already_present_on_website"
+    },
+    "e2afee2863a765a368f1bfcb": {
+      "first_seen": "2026-10-25T11:39:57.016547+00:00",
+      "source_id": "pib-english-regional-releases",
+      "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2328136",
+      "dedupe_reason": "already_present_on_website"
+    },
+    "c6259ca136498c25fed10c0e": {
+      "first_seen": "2026-10-25T11:39:57.016547+00:00",
+      "source_id": "pib-english-regional-releases",
+      "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2328129",
+      "dedupe_reason": "already_present_on_website"
+    },
+    "d1689e33bc50fbca942fb709": {
+      "first_seen": "2026-10-25T11:39:57.016547+00:00",
+      "source_id": "pib-english-regional-releases",
+      "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2328127",
+      "dedupe_reason": "already_present_on_website"
     }
   },
-  "last_run": "2026-10-25T06:17:53.048749+00:00",
+  "last_run": "2026-10-25T11:39:57.016547+00:00",
   "source_health": {
     "jeemain": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "ugcnet": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "gate": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "ibps": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "SSLError: HTTPSConnectionPool(host='www.ibps.in', port=443): Max retries exceeded with url: /index.html (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify faile"
     },
     "rbi-opportunities": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "rrb-bbs": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "ConnectionError: HTTPSConnectionPool(host='rrbbbs.gov.in', port=443): Max retries exceeded with url: /results.php (Caused by NewConnectionError(\"HTTPSConnection(host='rrbbbs.gov.in', port=443): Failed to establish a n"
     },
     "cisce": {
@@ -12213,177 +12255,177 @@
     },
     "neet": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "cuet": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "ssc": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "cbse": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "nta": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
     },
     "sbi-careers": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "mpbse": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='mpbse.nic.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='mpbse.nic.in', port=443) at 0x79510cd50500>, 'Connection to m"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='mpbse.nic.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='mpbse.nic.in', port=443) at 0x773e4042eb70>, 'Connection to m"
     },
     "mahresult": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "ConnectionError: HTTPSConnectionPool(host='mahresult.nic.in', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='mahresult.nic.in', port=443): Failed to resolve 'mahresul"
     },
     "rajeduboard": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "keralaresults": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "ConnectionError: HTTPSConnectionPool(host='results.kerala.nic.in', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='results.kerala.nic.in', port=443): Failed to resolve"
     },
     "gseb": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "odisha-board": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "upsc": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='upsc.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='upsc.gov.in', port=443) at 0x79510cd5bb00>, 'Connection to ups"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='upsc.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='upsc.gov.in', port=443) at 0x773e40314800>, 'Connection to ups"
     },
     "upsc-results": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "ConnectTimeout: HTTPSConnectionPool(host='upsc.gov.in', port=443): Max retries exceeded with url: /exams-related-info/written-result (Caused by ConnectTimeoutError(<HTTPSConnection(host='upsc.gov.in', port=443) at 0x"
     },
     "rrb-sec": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='rrbsecunderabad.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='rrbsecunderabad.gov.in', port=443) at 0x79510cfe33e"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='rrbsecunderabad.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='rrbsecunderabad.gov.in', port=443) at 0x773e4042cf5"
     },
     "nios": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.nios.ac.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.nios.ac.in', port=443) at 0x795120b64d10>, 'Connection "
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.nios.ac.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.nios.ac.in', port=443) at 0x773e4059a150>, 'Connection "
     },
     "cgbse": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='cgbse.nic.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='cgbse.nic.in', port=443) at 0x79510cd5acf0>, 'Connection to c"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='cgbse.nic.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='cgbse.nic.in', port=443) at 0x773e539d1ca0>, 'Connection to c"
     },
     "up-board": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "haryana-board": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "punjab-board": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "tnresults": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='tnresults.nic.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='tnresults.nic.in', port=443) at 0x79510cd50aa0>, 'Connect"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='tnresults.nic.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='tnresults.nic.in', port=443) at 0x773e4050fa40>, 'Connect"
     },
     "wbresults": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='wbresults.nic.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='wbresults.nic.in', port=443) at 0x79510cd50e60>, 'Connect"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='wbresults.nic.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='wbresults.nic.in', port=443) at 0x773e4042e210>, 'Connect"
     },
     "assam-board": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "karnataka-board": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='kseab.karnataka.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='kseab.karnataka.gov.in', port=443) at 0x79510cd50c8"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='kseab.karnataka.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='kseab.karnataka.gov.in', port=443) at 0x773e4059a93"
     },
     "bpsc": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "SSLError: HTTPSConnectionPool(host='bpsc.bihar.gov.in', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: u"
     },
     "bseb": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ReadTimeout: HTTPSConnectionPool(host='biharboardonline.bihar.gov.in', port=443): Read timed out. (read timeout=5)"
     },
     "telangana-board": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='bse.telangana.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='bse.telangana.gov.in', port=443) at 0x79510cc765d0>, "
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='bse.telangana.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='bse.telangana.gov.in', port=443) at 0x773e4042c5f0>, "
     },
     "andhra-board": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='bse.ap.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='bse.ap.gov.in', port=443) at 0x79510cfe3980>, 'Connection to"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='bse.ap.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='bse.ap.gov.in', port=443) at 0x773e4042d880>, 'Connection to"
     },
     "mpsc": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "jkbose": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='jkbose.nic.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='jkbose.nic.in', port=443) at 0x79510ccbfb90>, 'Connection to"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='jkbose.nic.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='jkbose.nic.in', port=443) at 0x773e404efe30>, 'Connection to"
     },
     "upsssc": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='upsssc.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='upsssc.gov.in', port=443) at 0x79510cc4eb40>, 'Connection to"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='upsssc.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='upsssc.gov.in', port=443) at 0x773e40315970>, 'Connection to"
     },
     "tspsc": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "ConnectionError: HTTPSConnectionPool(host='www.tspsc.gov.in', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.tspsc.gov.in', port=443): Failed to resolve 'www.tsps"
     },
     "mppsc": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='mppsc.mp.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='mppsc.mp.gov.in', port=443) at 0x79510cdc0d40>, 'Connectio"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='mppsc.mp.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='mppsc.mp.gov.in', port=443) at 0x773e40316300>, 'Connectio"
     },
     "cgpsc": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='psc.cg.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='psc.cg.gov.in', port=443) at 0x79510cdc1670>, 'Connection to"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='psc.cg.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='psc.cg.gov.in', port=443) at 0x773e40316d20>, 'Connection to"
     },
     "rpsc": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "ConnectionError: HTTPSConnectionPool(host='rpsc.rajasthan.gov.in', port=443): Max retries exceeded with url: / (Caused by NewConnectionError(\"HTTPSConnection(host='rpsc.rajasthan.gov.in', port=443): Failed to establis"
     },
     "ibps-calendar": {
@@ -12393,22 +12435,22 @@
     },
     "gpsc": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "ConnectionError: HTTPSConnectionPool(host='gpsc.gujarat.gov.in', port=443): Max retries exceeded with url: / (Caused by NewConnectionError(\"HTTPSConnection(host='gpsc.gujarat.gov.in', port=443): Failed to establish a "
     },
     "keralapsc": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "tnpsc": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.tnpsc.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.tnpsc.gov.in', port=443) at 0x79510cdc2810>, 'Connect"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.tnpsc.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.tnpsc.gov.in', port=443) at 0x773e403ef800>, 'Connect"
     },
     "opsc": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "rbi-careers": {
@@ -12418,22 +12460,22 @@
     },
     "lic-careers": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "wbpsc": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='psc.wb.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='psc.wb.gov.in', port=443) at 0x79510cb77350>, 'Connection to"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='psc.wb.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='psc.wb.gov.in', port=443) at 0x773e402200b0>, 'Connection to"
     },
     "appsc": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='psc.ap.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='psc.ap.gov.in', port=443) at 0x79510cbf6ba0>, 'Connection to"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='psc.ap.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='psc.ap.gov.in', port=443) at 0x773e40246450>, 'Connection to"
     },
     "uppsc": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "nta-ugcnet": {
@@ -12443,17 +12485,17 @@
     },
     "jeeadv": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "epfindia": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.epfo.gov.in:443/site_en/index.php"
     },
     "nta-exams": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "gate-iitg": {
@@ -12468,168 +12510,168 @@
     },
     "nta-cuetpg": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "hpsc": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='hpsc.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='hpsc.gov.in', port=443) at 0x79510cbf7e90>, 'Connection to hps"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='hpsc.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='hpsc.gov.in', port=443) at 0x773e40274ec0>, 'Connection to hps"
     },
     "nta-csirnet": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "nta-nchm": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "ctet": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "nabard": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.nabard.org', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.nabard.org', port=443) at 0x79510ce12ba0>, 'Connection "
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.nabard.org', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.nabard.org', port=443) at 0x773e405e3c20>, 'Connection "
     },
     "rrb-allahabad": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "SSLError: HTTPSConnectionPool(host='rrbald.gov.in', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certi"
     },
     "upsc-recruitment": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "ConnectTimeout: HTTPSConnectionPool(host='upsc.gov.in', port=443): Max retries exceeded with url: /recruitment/recruitment-permanent (Caused by ConnectTimeoutError(<HTTPSConnection(host='upsc.gov.in', port=443) at 0x"
     },
     "rrb-bilaspur": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "SSLError: HTTPSConnectionPool(host='rrbbilaspur.gov.in', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: "
     },
     "rrb-ahmedabad": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.rrbahmedabad.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.rrbahmedabad.gov.in', port=443) at 0x79510cf25"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.rrbahmedabad.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.rrbahmedabad.gov.in', port=443) at 0x773e406ac"
     },
     "rrb-bangalore": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='rrbbnc.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='rrbbnc.gov.in', port=443) at 0x7951209b4f20>, 'Connection to"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='rrbbnc.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='rrbbnc.gov.in', port=443) at 0x773e40959940>, 'Connection to"
     },
     "niacl": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "rrb-ajmer": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='rrbajmer.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='rrbajmer.gov.in', port=443) at 0x79510cc76750>, 'Connectio"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='rrbajmer.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='rrbajmer.gov.in', port=443) at 0x773e40f60500>, 'Connectio"
     },
     "rrb-bhopal": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "ConnectionError: HTTPSConnectionPool(host='rrbbhopal.gov.in', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='rrbbhopal.gov.in', port=443): Failed to resolve 'rrbbhopa"
     },
     "rrb-mumbai": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "ConnectionError: HTTPSConnectionPool(host='www.rrbmumbai.gov.in', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.rrbmumbai.gov.in', port=443): Failed to resolve '"
     },
     "nvs": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectionError: HTTPSConnectionPool(host='navodaya.gov.in', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='navodaya.gov.in', port=443): Failed to resolve 'navodaya.g"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectionError: HTTPSConnectionPool(host='navodaya.gov.in', port=443): Max retries exceeded with url: / (Caused by NewConnectionError(\"HTTPSConnection(host='navodaya.gov.in', port=443): Failed to establish a new conn"
     },
     "rrb-chandigarh": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.rrbcdg.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.rrbcdg.gov.in', port=443) at 0x79510ce42bd0>, 'Conne"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.rrbcdg.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.rrbcdg.gov.in', port=443) at 0x773e40b06150>, 'Conne"
     },
     "rrb-chennai": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.rrbchennai.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.rrbchennai.gov.in', port=443) at 0x795120d86d80>"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.rrbchennai.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.rrbchennai.gov.in', port=443) at 0x773e504e1220>"
     },
     "rrb-gorakhpur": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='rrbgkp.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='rrbgkp.gov.in', port=443) at 0x795120466d80>, 'Connection to"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='rrbgkp.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='rrbgkp.gov.in', port=443) at 0x773e501d2bd0>, 'Connection to"
     },
     "rrb-ranchi": {
-      "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "new_candidates": 0
+      "status": "failed",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "SSLError: HTTPSConnectionPool(host='rrbranchi.gov.in', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: ce"
     },
     "kvs": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "ValueError: Redirected outside the official allowlist: kvs.gov.in"
     },
     "rrc-central": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "rrb-guwahati": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='rrbguwahati.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='rrbguwahati.gov.in', port=443) at 0x79510cee1580>, 'Con"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='rrbguwahati.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='rrbguwahati.gov.in', port=443) at 0x773e401cfce0>, 'Con"
     },
     "rrb-jammu": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.rrbjammu.nic.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.rrbjammu.nic.in', port=443) at 0x795120496960>, 'C"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.rrbjammu.nic.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.rrbjammu.nic.in', port=443) at 0x773e401cf8c0>, 'C"
     },
     "rrc-northern": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "rrb-kolkata": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.rrbkolkata.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.rrbkolkata.gov.in', port=443) at 0x79510c974dd0>"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.rrbkolkata.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.rrbkolkata.gov.in', port=443) at 0x773e40fa67b0>"
     },
     "rrb-malabar": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "ConnectTimeout: HTTPSConnectionPool(host='www.rrbthiruvananthapuram.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.rrbthiruvananthapuram.gov.in', port=4"
     },
     "rrc-western": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "rrb-muzaffarpur": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='rrbmuzaffarpur.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='rrbmuzaffarpur.gov.in', port=443) at 0x79510c8ab7a0>"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='rrbmuzaffarpur.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='rrbmuzaffarpur.gov.in', port=443) at 0x773e40f49130>"
     },
     "rrb-patna": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='rrbpatna.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='rrbpatna.gov.in', port=443) at 0x795120d2acc0>, 'Connectio"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='rrbpatna.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='rrbpatna.gov.in', port=443) at 0x773e40b05f10>, 'Connectio"
     },
     "rrc-eastern": {
-      "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "new_candidates": 0
+      "status": "failed",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectionError: HTTPSConnectionPool(host='rrcer.org', port=443): Max retries exceeded with url: / (Caused by NewConnectionError(\"HTTPSConnection(host='rrcer.org', port=443): Failed to establish a new connection: [Err"
     },
     "mizoram-psc": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "rrb-siliguri": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='rrbsiliguri.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='rrbsiliguri.gov.in', port=443) at 0x7951205729c0>, 'Con"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='rrbsiliguri.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='rrbsiliguri.gov.in', port=443) at 0x773e501d2f00>, 'Con"
     },
     "rrb-trivandrum": {
       "status": "failed",
@@ -12643,68 +12685,68 @@
     },
     "manipur-psc": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "nagaland-psc": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "meghalaya-psc": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "jharkhand-psc": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "jkssb": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "SSLError: HTTPSConnectionPool(host='jkssb.nic.in', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable"
     },
     "arunachal-psc": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
     },
     "bssc": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "SSLError: HTTPSConnectionPool(host='bssc.bihar.gov.in', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: u"
     },
     "rrc-south-central": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='scr.indianrailways.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='scr.indianrailways.gov.in', port=443) at 0x79513"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='scr.indianrailways.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='scr.indianrailways.gov.in', port=443) at 0x773e4"
     },
     "apsc": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='apsc.nic.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='apsc.nic.in', port=443) at 0x7951204674a0>, 'Connection to aps"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='apsc.nic.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='apsc.nic.in', port=443) at 0x773e504e2660>, 'Connection to aps"
     },
     "hssc": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "hpssc": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "sikkim-psc": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='spsc.sikkim.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='spsc.sikkim.gov.in', port=443) at 0x79510c6023c0>, 'Con"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='spsc.sikkim.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='spsc.sikkim.gov.in', port=443) at 0x773e5071fc80>, 'Con"
     },
     "tripura-psc": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='tpsc.tripura.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='tpsc.tripura.gov.in', port=443) at 0x79510c6aa660>, 'C"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='tpsc.tripura.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='tpsc.tripura.gov.in', port=443) at 0x773e30b94ce0>, 'C"
     },
     "hprca": {
       "status": "ok",
@@ -12712,9 +12754,9 @@
       "new_candidates": 0
     },
     "osssc": {
-      "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "SSLError: HTTPSConnectionPool(host='www.osssc.gov.in', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: un"
+      "status": "ok",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "new_candidates": 0
     },
     "mpsc-maha": {
       "status": "ok",
@@ -12723,23 +12765,23 @@
     },
     "btsc": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "uttarakhand-psc": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='psc.uk.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='psc.uk.gov.in', port=443) at 0x79510c633b00>, 'Connection to"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='psc.uk.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='psc.uk.gov.in', port=443) at 0x773e30d775c0>, 'Connection to"
     },
     "maha-rojgar": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "HTTPError: 403 Client Error: Forbidden for url: https://rojgar.mahaswayam.gov.in/"
     },
     "jkpsc": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='jkpsc.nic.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='jkpsc.nic.in', port=443) at 0x79510c562570>, 'Connection to j"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='jkpsc.nic.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='jkpsc.nic.in', port=443) at 0x773e30d51430>, 'Connection to j"
     },
     "kerala-psc-thulasi": {
       "status": "ok",
@@ -12748,98 +12790,98 @@
     },
     "mpesb": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='esb.mp.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='esb.mp.gov.in', port=443) at 0x79510c3ac7d0>, 'Connection to"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='esb.mp.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='esb.mp.gov.in', port=443) at 0x773e30a8c530>, 'Connection to"
     },
     "dsssb": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='dsssb.delhi.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='dsssb.delhi.gov.in', port=443) at 0x79510c6d9b20>, 'Con"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='dsssb.delhi.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='dsssb.delhi.gov.in', port=443) at 0x773e30b438c0>, 'Con"
     },
     "bihar-police": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "bihar-daroga": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "up-police": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "ossc": {
-      "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectionError: HTTPSConnectionPool(host='www.ossc.gov.in', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.ossc.gov.in', port=443): Failed to resolve 'www.ossc.g"
+      "status": "ok",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "new_candidates": 0
     },
     "rajasthan-police": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='police.rajasthan.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='police.rajasthan.gov.in', port=443) at 0x79510c51c"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='police.rajasthan.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='police.rajasthan.gov.in', port=443) at 0x773e30bdb"
     },
     "rajasthan-rssb": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='rssb.rajasthan.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='rssb.rajasthan.gov.in', port=443) at 0x79510c3ae0f0>"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='rssb.rajasthan.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='rssb.rajasthan.gov.in', port=443) at 0x773e3080e540>"
     },
     "gujarat-ojas": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "ConnectionError: HTTPSConnectionPool(host='ojas.gujarat.gov.in', port=443): Max retries exceeded with url: / (Caused by NewConnectionError(\"HTTPSConnection(host='ojas.gujarat.gov.in', port=443): Failed to establish a "
     },
     "gujarat-gsssb": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "ConnectionError: HTTPSConnectionPool(host='gsssb.gujarat.gov.in', port=443): Max retries exceeded with url: / (Caused by NewConnectionError(\"HTTPSConnection(host='gsssb.gujarat.gov.in', port=443): Failed to establish "
     },
     "kerala-devaswom": {
-      "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "new_candidates": 0
+      "status": "failed",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "SSLError: HTTPSConnectionPool(host='kdrb.kerala.gov.in', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: "
     },
     "tnusrb": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.tnusrb.tn.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.tnusrb.tn.gov.in', port=443) at 0x79510c470590>, "
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.tnusrb.tn.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.tnusrb.tn.gov.in', port=443) at 0x773e30cf63f0>, "
     },
     "tntrb": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.trb.tn.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.trb.tn.gov.in', port=443) at 0x79510c5f15b0>, 'Conne"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.trb.tn.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.trb.tn.gov.in', port=443) at 0x773e30f625a0>, 'Conne"
     },
     "tnmrbrecruit": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.mrb.tn.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.mrb.tn.gov.in', port=443) at 0x79510c25c170>, 'Conne"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.mrb.tn.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.mrb.tn.gov.in', port=443) at 0x773e30d522a0>, 'Conne"
     },
     "karnataka-police": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "telangana-tslprb": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "karnataka-kea": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "ConnectTimeout: HTTPSConnectionPool(host='cetonline.karnataka.gov.in', port=443): Max retries exceeded with url: /kea/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='cetonline.karnataka.gov.in', port=443) at 0"
     },
     "wbssc": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "vyapam-cg": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='vyapam.cgstate.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='vyapam.cgstate.gov.in', port=443) at 0x79510c2d95e0>"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='vyapam.cgstate.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='vyapam.cgstate.gov.in', port=443) at 0x773e402c2b40>"
     },
     "cg-vyapam": {
       "status": "failed",
@@ -12848,17 +12890,17 @@
     },
     "karnataka-kpsc": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "ConnectionError: HTTPSConnectionPool(host='kpsc.kar.nic.in', port=443): Read timed out."
     },
     "ap-police": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='slprb.ap.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='slprb.ap.gov.in', port=443) at 0x79510c5545f0>, 'Connectio"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='slprb.ap.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='slprb.ap.gov.in', port=443) at 0x773e30dd0c50>, 'Connectio"
     },
     "nios-results": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "ap-psc": {
@@ -12873,17 +12915,17 @@
     },
     "ap-results": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "ConnectionError: HTTPSConnectionPool(host='results.bse.ap.gov.in', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='results.bse.ap.gov.in', port=443): Failed to resolve"
     },
     "wb-police": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='prb.wb.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='prb.wb.gov.in', port=443) at 0x7951205ee750>, 'Connection to"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='prb.wb.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='prb.wb.gov.in', port=443) at 0x773e309c8e90>, 'Connection to"
     },
     "maharashtra-board": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "odisha-psc": {
@@ -12893,7 +12935,7 @@
     },
     "ipu": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "haryana-psc": {
@@ -12903,17 +12945,17 @@
     },
     "ignou": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "assam-direct": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='assam.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='assam.gov.in', port=443) at 0x79510ce78950>, 'Connection to a"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='assam.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='assam.gov.in', port=443) at 0x773e40c484a0>, 'Connection to a"
     },
     "neet-pg": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "HTTPError: 403 Client Error: Forbidden for url: https://natboard.edu.in/"
     },
     "nbems": {
@@ -12923,13 +12965,13 @@
     },
     "karnataka-results": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='karresults.nic.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='karresults.nic.in', port=443) at 0x7950fcc78890>, 'Conne"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='karresults.nic.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='karresults.nic.in', port=443) at 0x773e307a0d10>, 'Conne"
     },
     "punjab-psc": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='ppsc.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='ppsc.gov.in', port=443) at 0x7950fc612840>, 'Connection to pps"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='ppsc.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='ppsc.gov.in', port=443) at 0x773e20b55610>, 'Connection to pps"
     },
     "cuet-pg": {
       "status": "ok",
@@ -12938,7 +12980,7 @@
     },
     "bhu": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "jkbose-results": {
@@ -12948,137 +12990,137 @@
     },
     "nmc": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "punjab-sssb": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='sssb.punjab.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='sssb.punjab.gov.in', port=443) at 0x7950fc648200>, 'Con"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='sssb.punjab.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='sssb.punjab.gov.in', port=443) at 0x773e20bf9c40>, 'Con"
     },
     "du": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "icai": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "odisha-results": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     "icmai": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "icsi": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "telangana-results": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='results.cgg.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='results.cgg.gov.in', port=443) at 0x7950ecf2b080>, 'Con"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='results.cgg.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='results.cgg.gov.in', port=443) at 0x773e40a33a10>, 'Con"
     },
     "upsc-active-exams": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "upsc-online-ora": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "indiapost-gds": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "indiapost-recruitment": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "rrcb-central": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.rrcb.gov.in', port=443): Max retries exceeded with url: /recruitment.html (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.rrcb.gov.in', port=443) at 0x7950fc8eb"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.rrcb.gov.in', port=443): Max retries exceeded with url: /recruitment.html (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.rrcb.gov.in', port=443) at 0x773e40223"
     },
     "indian-navy": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.joinindiannavy.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.joinindiannavy.gov.in', port=443) at 0x79512"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.joinindiannavy.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.joinindiannavy.gov.in', port=443) at 0x773e3"
     },
     "indian-army": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='joinindianarmy.nic.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='joinindianarmy.nic.in', port=443) at 0x79510ce79d60>"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='joinindianarmy.nic.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='joinindianarmy.nic.in', port=443) at 0x773e3016d160>"
     },
     "fci-recruitment": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "aiims-exams": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "isro-careers": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "drdo-rac": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='rac.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='rac.gov.in', port=443) at 0x7950fcfd1bb0>, 'Connection to rac.g"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='rac.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='rac.gov.in', port=443) at 0x773e20ea78f0>, 'Connection to rac.g"
     },
     "sebi-careers": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "irdai-careers": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "indian-airforce-afcat": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='afcat.cdac.in', port=443): Max retries exceeded with url: /AFCAT/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='afcat.cdac.in', port=443) at 0x79510ce91f10>, 'Connect"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='afcat.cdac.in', port=443): Max retries exceeded with url: /AFCAT/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='afcat.cdac.in', port=443) at 0x773e303a41a0>, 'Connect"
     },
     "pfrda-careers": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "nielit-recruitment": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "SSLError: HTTPSConnectionPool(host='www.nielit.gov.in', port=443): Max retries exceeded with url: /recruitments (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate veri"
     },
     "csir-hrdg": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "sidbi-careers": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "cbse-results-official": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "SSLError: HTTPSConnectionPool(host='cbseresults.nic.in', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: "
     },
     "cisce-results": {
@@ -13092,29 +13134,29 @@
       "new_candidates": 0
     },
     "crpf-results": {
-      "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "SSLError: HTTPSConnectionPool(host='crpf.gov.in', port=443): Max retries exceeded with url: /Results (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: "
+      "status": "ok",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "new_candidates": 0
     },
     "ssb-recruitment": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "crpf-recruitment": {
-      "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "SSLError: HTTPSConnectionPool(host='crpf.gov.in', port=443): Max retries exceeded with url: /Recruitments/Recruitment-Details (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] ce"
+      "status": "ok",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "new_candidates": 0
     },
     "coast-guard-recruitment": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "ConnectTimeout: HTTPSConnectionPool(host='indiancoastguard.gov.in', port=443): Max retries exceeded with url: /recruitment (Caused by ConnectTimeoutError(<HTTPSConnection(host='indiancoastguard.gov.in', port=443) at "
     },
     "coast-guard-home": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='indiancoastguard.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='indiancoastguard.gov.in', port=443) at 0x7950ec43f"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='indiancoastguard.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='indiancoastguard.gov.in', port=443) at 0x773e402d7"
     },
     "ibps-rrb": {
       "status": "failed",
@@ -13128,22 +13170,22 @@
     },
     "indian-airforce-careers": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "ConnectTimeout: HTTPSConnectionPool(host='careerindianairforce.cdac.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='careerindianairforce.cdac.in', port=443) at 0"
     },
     "esic-recruitment": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.esic.gov.in', port=443): Max retries exceeded with url: /recruitments (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.esic.gov.in', port=443) at 0x7950ecb580e0>"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.esic.gov.in', port=443): Max retries exceeded with url: /recruitments (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.esic.gov.in', port=443) at 0x773e405e13d0>"
     },
     "barc-recruitment": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='recruit.barc.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='recruit.barc.gov.in', port=443) at 0x79512049d8e0>, 'C"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='recruit.barc.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='recruit.barc.gov.in', port=443) at 0x773e406cce90>, 'C"
     },
     "merchant-navy-imu": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "SSLError: HTTPSConnectionPool(host='www.imu.edu.in', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unab"
     },
     "naval-coastguard-jobs": {
@@ -13173,12 +13215,12 @@
     },
     "hpbose-results": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "ubse-results": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "bseh-results": {
@@ -13208,12 +13250,12 @@
     },
     "mizoram-board": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "nagaland-board": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "cgbse-results": {
@@ -13223,17 +13265,17 @@
     },
     "sikkim-board": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "ConnectionError: HTTPSConnectionPool(host='sikkimhrdd.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='sikkimhrdd.org', port=443): Failed to resolve 'sikkimhrdd.o"
     },
     "manipur-board": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='bsem.nic.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='bsem.nic.in', port=443) at 0x7950ec688050>, 'Connection to bse"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='bsem.nic.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='bsem.nic.in', port=443) at 0x773e107e3ce0>, 'Connection to bse"
     },
     "goa-board": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "maharashtra-board-official": {
@@ -13252,18 +13294,18 @@
       "new_candidates": 0
     },
     "kerala-board-official": {
-      "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "new_candidates": 0
+      "status": "failed",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "SSLError: HTTPSConnectionPool(host='pareekshabhavan.kerala.gov.in', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate veri"
     },
     "tripura-board": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='tbse.tripura.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='tbse.tripura.gov.in', port=443) at 0x7950ec6cc890>, 'C"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='tbse.tripura.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='tbse.tripura.gov.in', port=443) at 0x773e30763e60>, 'C"
     },
     "assam-board-official": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "SSLError: HTTPSConnectionPool(host='site.sebaonline.org', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed:"
     },
     "bse-ap": {
@@ -13273,18 +13315,18 @@
     },
     "tamilnadu-board-official": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "SSLError: HTTPSConnectionPool(host='dge.tn.gov.in', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unabl"
     },
     "meghalaya-board": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "westbengal-board-official": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='wbbse.wb.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='wbbse.wb.gov.in', port=443) at 0x7950ecaec1a0>, 'Connectio"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='wbbse.wb.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='wbbse.wb.gov.in', port=443) at 0x773e40bafd10>, 'Connectio"
     },
     "karnataka-board-official": {
       "status": "failed",
@@ -13293,447 +13335,447 @@
     },
     "ibps-recent-updates": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "SSLError: HTTPSConnectionPool(host='www.ibps.in', port=443): Max retries exceeded with url: /index.php/crp-updates/ (Caused by SSLError(SSLError(1, '[SSL: UNEXPECTED_MESSAGE] unexpected message (_ssl.c:1010)'))"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "SSLError: HTTPSConnectionPool(host='www.ibps.in', port=443): Max retries exceeded with url: /index.php/crp-updates/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate "
     },
     "ibps-po-mt": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "SSLError: HTTPSConnectionPool(host='www.ibps.in', port=443): Max retries exceeded with url: /index.php/management-trainees-xvi/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] "
     },
     "sbi-current-openings": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "sbi-recruitment-results": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "goa-government": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "chandigarh-administration": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "SSLError: HTTPSConnectionPool(host='chandigarh.gov.in', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: u"
     },
     "dnh-dd-administration": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "ladakh-administration": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "lakshadweep-administration": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='lakshadweep.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='lakshadweep.gov.in', port=443) at 0x7950ec748dd0>, 'Con"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='lakshadweep.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='lakshadweep.gov.in', port=443) at 0x773e503c7f80>, 'Con"
     },
     "puducherry-government": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "andaman-administration": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "ConnectionError: HTTPSConnectionPool(host='andaman.gov.in', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='andaman.gov.in', port=443): Failed to resolve 'andaman.gov."
     },
     "jeemain-public-notices": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "jeeadv-official": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "neet-ug-public-notices": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "neet-pg-nbems": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "HTTPError: 403 Client Error: Forbidden for url: https://natboard.edu.in/"
     },
     "mpsc-announcements": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "mpsc-merit-lists": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "mpsc-final-recommendations": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "mpsc-answer-keys": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "mpsc-interview-schedules": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "maharashtra-ssc-results": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "maharashtra-cet-cell": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "maharashtra-hsc-results": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "upsc-exam-calendar": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='upsc.gov.in', port=443): Max retries exceeded with url: /examinations/exam-calendar (Caused by ConnectTimeoutError(<HTTPSConnection(host='upsc.gov.in', port=443) at 0x79510cf"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='upsc.gov.in', port=443): Max retries exceeded with url: /examinations/exam-calendar (Caused by ConnectTimeoutError(<HTTPSConnection(host='upsc.gov.in', port=443) at 0x773e207"
     },
     "upsc-written-results-archive": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "ConnectTimeout: HTTPSConnectionPool(host='upsc.gov.in', port=443): Max retries exceeded with url: /exams-related-info/written-result (Caused by ConnectTimeoutError(<HTTPSConnection(host='upsc.gov.in', port=443) at 0x"
     },
     "upsc-active-examinations": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='upsc.gov.in', port=443): Max retries exceeded with url: /examinations/active-exams (Caused by ConnectTimeoutError(<HTTPSConnection(host='upsc.gov.in', port=443) at 0x7950ec14"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='upsc.gov.in', port=443): Max retries exceeded with url: /examinations/active-exams (Caused by ConnectTimeoutError(<HTTPSConnection(host='upsc.gov.in', port=443) at 0x773e4024"
     },
     "portal-maharashtra-www-mahahsscboard-in": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "portal-maharashtra-maharashtra-gov-in": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "portal-delhi-delhi-gov-in": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='delhi.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='delhi.gov.in', port=443) at 0x7950dca74b60>, 'Connection to d"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='delhi.gov.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='delhi.gov.in', port=443) at 0x773e30419b20>, 'Connection to d"
     },
     "du-exam-branch": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "amu": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "SSLError: HTTPSConnectionPool(host='www.amu.ac.in', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unabl"
     },
     "jnu": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "sppu": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "calcutta-university": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "jadavpur-university": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "SSLError: HTTPSConnectionPool(host='jadavpuruniversity.in', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify faile"
     },
     "gauhati-university": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "dibrugarh-university": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "jamia": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "mumbai-university": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "calicut-university": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "anna-university": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "vtu": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "kerala-university": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "patna-university": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "SSLError: HTTPSConnectionPool(host='patnauniversity.ac.in', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify faile"
     },
     "utkal-university": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "ranchi-university": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "SSLError: HTTPSConnectionPool(host='www.ranchiuniversity.ac.in', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify "
     },
     "panjab-university": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "osmania-university": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "SSLError: HTTPSConnectionPool(host='www.osmania.ac.in', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: u"
     },
     "jammu-university": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "jntua": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "jntuh": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "gujarat-university": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "hptu": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "goa-university": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "ValueError: Redirected outside the official allowlist: unigoa.ac.in"
     },
     "kurukshetra-university": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.kuk.ac.in/"
     },
     "kumaun-university": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "sambalpur-university": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "magadh-university": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "tripura-university": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "mizoram-university": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "SSLError: HTTPSConnectionPool(host='mzu.edu.in', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable t"
     },
     "manipur-university": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "nagaland-university": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "rajiv-gandhi-university": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "nehu": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "kurukshetra-university-results-archive": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "HTTPError: 403 Client Error: Forbidden for url: https://kuk.ac.in/results/"
     },
     "du-exam-results-archive": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "sikkim-university": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "lucknow-university-old-results": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "hp-university": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "HTTPError: 500 Server Error: Internal Server Error for url: https://hpuniv.ac.in/"
     },
     "rajasthan-university-old-results": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "goa-technical-education-old-results": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "SSLError: HTTPSConnectionPool(host='www.dte.goa.gov.in', port=443): Max retries exceeded with url: /board-of-technical-education/old-results (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VE"
     },
     "cbse-previous-years-results": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "ConnectionError: HTTPSConnectionPool(host='resultsarchives.nic.in', port=443): Max retries exceeded with url: /cbseresults/ (Caused by NameResolutionError(\"HTTPSConnection(host='resultsarchives.nic.in', port=443): Fai"
     },
     "pondicherry-university-old-results": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "rajasthan-university": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ReadTimeout: HTTPSConnectionPool(host='www.uniraj.ac.in', port=443): Read timed out. (read timeout=5)"
     },
     "bihar-state-health-society-results-archive": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "SSLError: HTTPSConnectionPool(host='shs.bihar.gov.in', port=443): Max retries exceeded with url: /result (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify fail"
     },
     "andhra-university": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "ConnectTimeout: HTTPSConnectionPool(host='www.andhrauniversity.edu.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.andhrauniversity.edu.in', port=443) at 0x7"
     },
     "wbpsc-results-archive": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='psc.wb.gov.in', port=443): Max retries exceeded with url: /results.jsp (Caused by ConnectTimeoutError(<HTTPSConnection(host='psc.wb.gov.in', port=443) at 0x7950cc52b950>, 'Co"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='psc.wb.gov.in', port=443): Max retries exceeded with url: /results.jsp (Caused by ConnectTimeoutError(<HTTPSConnection(host='psc.wb.gov.in', port=443) at 0x773e00fbeff0>, 'Co"
     },
     "dsssb-old-results-archive": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "ConnectTimeout: HTTPSConnectionPool(host='dsssb.delhi.gov.in', port=443): Max retries exceeded with url: /doit/tab-content/old-result?page=0 (Caused by ConnectTimeoutError(<HTTPSConnection(host='dsssb.delhi.gov.in', "
     },
     "kashmir-university": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.kashmiruniversity.net', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.kashmiruniversity.net', port=443) at 0x7950c"
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.kashmiruniversity.net', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.kashmiruniversity.net', port=443) at 0x773e2"
     },
     "pib-press-releases": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "pib-english-all-releases": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "new_candidates": 0
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "new_candidates": 1
     },
     "ssc-northern-region-whats-new": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "nta-data-public-notices": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
     },
     "upsc-whats-new": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "nta-notice-board-archive": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
     },
     "nta-exam-results": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
     },
     "upsc-final-results": {
       "status": "failed",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "error": "ReadTimeout: HTTPSConnectionPool(host='www.upsc.gov.in', port=443): Read timed out. (read timeout=10)"
     },
     "pib-english-regional-releases": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
-      "new_candidates": 7
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
+      "new_candidates": 2
     },
     "pib-english-features": {
       "status": "ok",
-      "checked_at": "2026-10-25T06:17:53.048749+00:00",
+      "checked_at": "2026-10-25T11:39:57.016547+00:00",
       "new_candidates": 0
     },
     "indiaresults-secondary-index": {
@@ -13748,7 +13790,7 @@
     }
   },
   "last_run_failures": 138,
-  "last_run_new_candidates": 7,
+  "last_run_new_candidates": 3,
   "source_registry_count": 273,
   "last_run_successful_sources": 135,
   "pending_alerts": {},
@@ -38046,7 +38088,67 @@
       "detected_at": "2026-10-25T06:17:53.048749+00:00",
       "held_at": "2026-10-25T06:17:53.048749+00:00",
       "hold_reason": "Generic, irrelevant, or unclassifiable title; held for review."
+    },
+    "bec2b16f93979f7cd4985d46": {
+      "item": {
+        "title": "मोदी सरकार का ड्रग्स के खिलाफ बड़ा प्रहार, NCB द्वारा चलाए गए 'ऑपरेशन ट्राइडेंट' के तहत 38 टीमों ने असम, मिजोरम और मणिपुर में एक साथ 38 जगहों पर छापेमारी की",
+        "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2328187",
+        "category": "notification",
+        "source_name": "PIB English Press Releases — Regional Feed Backup",
+        "source_id": "pib-english-regional-releases",
+        "source_url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3",
+        "published": "",
+        "archive": false,
+        "id": "bec2b16f93979f7cd4985d46",
+        "region": "Central",
+        "state": "",
+        "exam_category": "Government & PIB Updates",
+        "detected_at": "2026-10-25T11:39:57.016547+00:00"
+      },
+      "detected_at": "2026-10-25T11:39:57.016547+00:00",
+      "held_at": "2026-10-25T11:39:57.016547+00:00",
+      "hold_reason": "Generic, irrelevant, or unclassifiable title; held for review."
+    },
+    "3e4f17eebcdab7fe14d876b0": {
+      "item": {
+        "title": "नवीन एवं नवीकरणीय ऊर्जा मंत्रालय ने विशेष अभियान 6 सक्रिय रूप से लागू किया",
+        "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2328158",
+        "category": "notification",
+        "source_name": "PIB English Press Releases — Regional Feed Backup",
+        "source_id": "pib-english-regional-releases",
+        "source_url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3",
+        "published": "",
+        "archive": false,
+        "id": "3e4f17eebcdab7fe14d876b0",
+        "region": "Central",
+        "state": "",
+        "exam_category": "Government & PIB Updates",
+        "detected_at": "2026-10-25T11:39:57.016547+00:00"
+      },
+      "detected_at": "2026-10-25T11:39:57.016547+00:00",
+      "held_at": "2026-10-25T11:39:57.016547+00:00",
+      "hold_reason": "Generic, irrelevant, or unclassifiable title; held for review."
+    },
+    "41ebc0758e7c0c0be8bb9622": {
+      "item": {
+        "title": "Vice-President Shri C. P. Radhakrishnan to Visit Andhra Pradesh on October 26–27",
+        "url": "https://www.pib.gov.in/PressReleseDetail.aspx?PRID=2328201",
+        "category": "notification",
+        "source_name": "Press Information Bureau (PIB) — English All Releases",
+        "source_id": "pib-english-all-releases",
+        "source_url": "https://www.pib.gov.in/AllRelease.aspx?lang=1&reg=1",
+        "published": "25 Oct 2026",
+        "archive": false,
+        "id": "41ebc0758e7c0c0be8bb9622",
+        "region": "Central",
+        "state": "",
+        "exam_category": "Government & PIB Updates",
+        "detected_at": "2026-10-25T11:39:57.016547+00:00"
+      },
+      "detected_at": "2026-10-25T11:39:57.016547+00:00",
+      "held_at": "2026-10-25T11:39:57.016547+00:00",
+      "hold_reason": "Generic, irrelevant, or unclassifiable title; held for review."
     }
   },
-  "held_for_review_count": 1253
+  "held_for_review_count": 1256
 }
