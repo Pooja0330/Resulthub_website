@@ -260,7 +260,10 @@ function isNavigationNoise(item){
   "contactus","termsofuse","accessibilityoptions","skipnavigation",
   "backtotop","privacy_policy".replace(/[^a-z0-9]/g,"")
  ]);
- return blocked.has(title) || title.includes("rtipolicyinformation") || title.includes("informationrtiofficers") || title.includes("rtirelatedcasedecisions");
+ const navigationTerms=["servicespayfeeonline","officialemailservice","jobsrecruitmentadvertisements","callletters","tendersnotices","employeeonlineservices","photogalleryconferences","virtualtour","esamikshya","epratikaar"];
+ const navigationHits=navigationTerms.reduce((count,term)=>count+(title.includes(term)?1:0),0);
+ const genericMenu=(title.length>100 && navigationHits>=3);
+ return blocked.has(title) || title.includes("rtipolicyinformation") || title.includes("informationrtiofficers") || title.includes("rtirelatedcasedecisions") || genericMenu;
 }
 function cleanResults(items){return Array.isArray(items)?items.filter(item=>!isNavigationNoise(item)):[];}
 function isCurrent2026Update(item){
@@ -291,8 +294,10 @@ function dedupeVisibleItems(items, options={}){
    title=title.replace(/^(?:written\s+)?(?:result|notification|admit\s+card|answer\s+key|merit\s+list|cut\s*off|exam\s+schedule)\s+/,"").replace(/\b(?:released|declared|published|out now)\b/g,"").replace(/\s+/g," ").trim();
   }
   const source=String(x.source_name||x.authority||x.source_id||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
-  const url=String(x.url||x.official_url||x.source_url||"").trim();
-  const key=options.titleOnly?title:(source+"|"+title);
+  const url=String(x.url||x.official_url||x.source_url||"").trim().split("#")[0].toLowerCase();
+  // Different official URLs can carry separate notices even when a source
+  // reuses one generic page title; dedupe exact links, not title alone.
+  const key=options.titleOnly?title:(source+"|"+title+"|"+url);
   if(!title||!source||seen.has(key))return false;
   if(options.requirePibReleaseUrl&&!/^https:\/\/(?:www\.)?pib\.gov\.in\/(?:PressReleaseIframePage|PressReleasePage|PressReleaseDetail)\.aspx\?[^#]*\bPRID=\d+/i.test(url))return false;
   seen.add(key);return true;
@@ -405,7 +410,7 @@ async function loadResults(){
     if(resultsFeedInitialized&&!knownResultKeys.has(key)&&!isPibItem(item)&&item.archive!==true)freshExamItems.push(item);
     knownResultKeys.add(key);
    }
-   allItems=current2026Items(data);
+   allItems=current2026Items(cleanResults(data));
    try{localStorage.setItem("goresult-results-cache",JSON.stringify({savedAt:Date.now(),items:data}))}catch(e){}
    page=1;render();
    if(resultsFeedInitialized&&freshExamItems.length)showLiveFeedToast(freshExamItems[0],"exam",freshExamItems.length);
