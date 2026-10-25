@@ -31506,7 +31506,7 @@
     "description": "Historical entry discovered on an official archive listing. Open the issuing authority link to confirm the year, notice details and availability.",
     "verified": false,
     "archive": true,
-    "detected_at": "2026-10-24T23:26:48.406844+00:00"
+    "detected_at": "2026-10-25T01:22:45.824819+00:00"
   },
   {
     "id": "37f4f1474dbb703d8d487508",
@@ -31527,7 +31527,7 @@
     "description": "Historical entry discovered on an official archive listing. Open the issuing authority link to confirm the year, notice details and availability.",
     "verified": false,
     "archive": true,
-    "detected_at": "2026-10-24T23:26:48.406844+00:00"
+    "detected_at": "2026-10-25T01:22:45.824819+00:00"
   },
   {
     "id": "b6d04a31bd04c337d15982b8",
@@ -31548,7 +31548,7 @@
     "description": "Historical entry discovered on an official archive listing. Open the issuing authority link to confirm the year, notice details and availability.",
     "verified": false,
     "archive": true,
-    "detected_at": "2026-10-24T23:26:48.406844+00:00"
+    "detected_at": "2026-10-25T01:22:45.824819+00:00"
   },
   {
     "id": "49648cd3c2b9f032deada502",
@@ -31569,7 +31569,7 @@
     "description": "Historical entry discovered on an official archive listing. Open the issuing authority link to confirm the year, notice details and availability.",
     "verified": false,
     "archive": true,
-    "detected_at": "2026-10-24T23:26:48.406844+00:00"
+    "detected_at": "2026-10-25T01:22:45.824819+00:00"
   },
   {
     "id": "a4cba4a1a596fc03054efd02",
@@ -31590,7 +31590,7 @@
     "description": "Historical entry discovered on an official archive listing. Open the issuing authority link to confirm the year, notice details and availability.",
     "verified": false,
     "archive": true,
-    "detected_at": "2026-10-24T23:26:48.406844+00:00"
+    "detected_at": "2026-10-25T01:22:45.824819+00:00"
   },
   {
     "id": "2cb3c13026c5da11eaf5b0a3",
@@ -31611,7 +31611,7 @@
     "description": "Historical entry discovered on an official archive listing. Open the issuing authority link to confirm the year, notice details and availability.",
     "verified": false,
     "archive": true,
-    "detected_at": "2026-10-24T23:26:48.406844+00:00"
+    "detected_at": "2026-10-25T01:22:45.824819+00:00"
   },
   {
     "id": "289a0374e5ca0ae1ff0fbb82",
@@ -31632,7 +31632,7 @@
     "description": "Historical entry discovered on an official archive listing. Open the issuing authority link to confirm the year, notice details and availability.",
     "verified": false,
     "archive": true,
-    "detected_at": "2026-10-24T23:26:48.406844+00:00"
+    "detected_at": "2026-10-25T01:22:45.824819+00:00"
   },
   {
     "id": "35d09a6af8e48cf351fc622f",
@@ -31653,6 +31653,72 @@
     "description": "Historical entry discovered on an official archive listing. Open the issuing authority link to confirm the year, notice details and availability.",
     "verified": false,
     "archive": true,
-    "detected_at": "2026-10-24T23:26:48.406844+00:00"
+    "detected_at": "2026-10-25T01:22:45.824819+00:00"
+  },
+  {
+    "id": "f30addf063abf9530f57dab6",
+    "title": "e-PRATIKAAR e-Samikshya Virtual Tour e-Learning e-Admission Results Examinations Online Payment PM Internship Scheme 2025 Library Rural Campus(Chandikhol) Seminars / Conferences / workshops",
+    "exam": "e-PRATIKAAR e-Samikshya Virtual Tour e-Learning e-Admission Results Examinations Online Payment PM Internship Scheme 2025 Library Rural Campus(Chandikhol) Seminars / Conferences / workshops",
+    "exam_category": "University Results",
+    "category": "result",
+    "source_name": "Utkal University",
+    "source_id": "utkal-university",
+    "authority": "Utkal University",
+    "url": "https://utkaluniversity.ac.in/e-learning/",
+    "official_url": "https://utkaluniversity.ac.in/e-learning/",
+    "source_url": "https://utkaluniversity.ac.in/",
+    "published": "",
+    "exam_year": "2025",
+    "region": "Odisha",
+    "state": "Odisha",
+    "description": "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility.",
+    "verified": false,
+    "archive": false,
+    "detected_at": "2026-10-25T01:22:45.824819+00:00",
+    "telegram_sent_at": "2026-10-25T01:25:53.249049+00:00"
+  },
+  {
+    "id": "8cff8ec6ffc4e2b61885425c",
+    "title": "e-PRATIKAAR e-Samikshya Virtual Tour e-Learning e-Admission Results Examinations Online Payment PM Internship Scheme 2025 Library Rural Campus(Chandikhol) Seminars / Conferences / workshops",
+    "exam": "e-PRATIKAAR e-Samikshya Virtual Tour e-Learning e-Admission Results Examinations Online Payment PM Internship Scheme 2025 Library Rural Campus(Chandikhol) Seminars / Conferences / workshops",
+    "exam_category": "University Results",
+    "category": "result",
+    "source_name": "Utkal University",
+    "source_id": "utkal-university",
+    "authority": "Utkal University",
+    "url": "https://eadmission.utkaluniversity.ac.in/",
+    "official_url": "https://eadmission.utkaluniversity.ac.in/",
+    "source_url": "https://utkaluniversity.ac.in/",
+    "published": "",
+    "exam_year": "2025",
+    "region": "Odisha",
+    "state": "Odisha",
+    "description": "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility.",
+    "verified": false,
+    "archive": false,
+    "detected_at": "2026-10-25T01:22:45.824819+00:00",
+    "telegram_sent_at": "2026-10-25T01:25:55.015991+00:00"
+  },
+  {
+    "id": "7147cad547f4fae8dde83bc5",
+    "title": "e-PRATIKAAR e-Samikshya Virtual Tour e-Learning e-Admission Results Examinations Online Payment PM Internship Scheme 2025 Library Rural Campus(Chandikhol) Seminars / Conferences / workshops",
+    "exam": "e-PRATIKAAR e-Samikshya Virtual Tour e-Learning e-Admission Results Examinations Online Payment PM Internship Scheme 2025 Library Rural Campus(Chandikhol) Seminars / Conferences / workshops",
+    "exam_category": "University Results",
+    "category": "result",
+    "source_name": "Utkal University",
+    "source_id": "utkal-university",
+    "authority": "Utkal University",
+    "url": "https://utkaluniversity.ac.in/results/",
+    "official_url": "https://utkaluniversity.ac.in/results/",
+    "source_url": "https://utkaluniversity.ac.in/",
+    "published": "",
+    "exam_year": "2025",
+    "region": "Odisha",
+    "state": "Odisha",
+    "description": "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility.",
+    "verified": false,
+    "archive": false,
+    "detected_at": "2026-10-25T01:22:45.824819+00:00",
+    "telegram_sent_at": "2026-10-25T01:25:56.863736+00:00"
   }
 ]
