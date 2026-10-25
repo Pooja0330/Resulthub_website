@@ -1,4 +1,4 @@
-const CACHE_NAME = "goresult-hub-v16";
+const CACHE_NAME = "goresult-hub-v17";
 const DATA_PATHS = ["data/results.json", "data/status.json", "data/pib-news.json"];
 self.addEventListener("install", event => { self.skipWaiting(); });
 self.addEventListener("activate", event => {
@@ -37,7 +37,9 @@ self.addEventListener("fetch", event => {
 
     // Network-first for HTML/JS/CSS so visitors receive fixes promptly.
     try {
-      const response = await fetch(request);
+      // Bypass the browser HTTP cache too; only the service worker cache is a fallback.
+      const freshRequest = new Request(request, { cache: "no-store" });
+      const response = await fetch(freshRequest);
       if (response.ok) await cache.put(request, response.clone());
       return response;
     } catch (error) {
