@@ -211,6 +211,8 @@
     if(!ui.contains(event.target)){panel.hidden=true;bell.setAttribute("aria-expanded","false");}
   });
   document.addEventListener("visibilitychange",()=>{if(!document.hidden)poll();});
+  window.addEventListener("focus",poll);
+  window.addEventListener("online",poll);
   poll();
   window.setInterval(poll,POLL_MS);
   window.GoResultHubLiveAlerts={
