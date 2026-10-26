@@ -32277,7 +32277,7 @@
     "description": "Historical entry discovered on an official archive listing. Open the issuing authority link to confirm the year, notice details and availability.",
     "verified": false,
     "archive": true,
-    "detected_at": "2026-10-26T00:22:24.067464+00:00"
+    "detected_at": "2026-10-26T05:08:01.546077+00:00"
   },
   {
     "id": "37f4f1474dbb703d8d487508",
@@ -32298,7 +32298,7 @@
     "description": "Historical entry discovered on an official archive listing. Open the issuing authority link to confirm the year, notice details and availability.",
     "verified": false,
     "archive": true,
-    "detected_at": "2026-10-26T00:22:24.067464+00:00"
+    "detected_at": "2026-10-26T05:08:01.546077+00:00"
   },
   {
     "id": "b6d04a31bd04c337d15982b8",
@@ -32319,7 +32319,7 @@
     "description": "Historical entry discovered on an official archive listing. Open the issuing authority link to confirm the year, notice details and availability.",
     "verified": false,
     "archive": true,
-    "detected_at": "2026-10-26T00:22:24.067464+00:00"
+    "detected_at": "2026-10-26T05:08:01.546077+00:00"
   },
   {
     "id": "49648cd3c2b9f032deada502",
@@ -32340,7 +32340,7 @@
     "description": "Historical entry discovered on an official archive listing. Open the issuing authority link to confirm the year, notice details and availability.",
     "verified": false,
     "archive": true,
-    "detected_at": "2026-10-26T00:22:24.067464+00:00"
+    "detected_at": "2026-10-26T05:08:01.546077+00:00"
   },
   {
     "id": "a4cba4a1a596fc03054efd02",
@@ -32361,7 +32361,7 @@
     "description": "Historical entry discovered on an official archive listing. Open the issuing authority link to confirm the year, notice details and availability.",
     "verified": false,
     "archive": true,
-    "detected_at": "2026-10-26T00:22:24.067464+00:00"
+    "detected_at": "2026-10-26T05:08:01.546077+00:00"
   },
   {
     "id": "2cb3c13026c5da11eaf5b0a3",
@@ -32382,7 +32382,7 @@
     "description": "Historical entry discovered on an official archive listing. Open the issuing authority link to confirm the year, notice details and availability.",
     "verified": false,
     "archive": true,
-    "detected_at": "2026-10-26T00:22:24.067464+00:00"
+    "detected_at": "2026-10-26T05:08:01.546077+00:00"
   },
   {
     "id": "289a0374e5ca0ae1ff0fbb82",
@@ -32403,7 +32403,7 @@
     "description": "Historical entry discovered on an official archive listing. Open the issuing authority link to confirm the year, notice details and availability.",
     "verified": false,
     "archive": true,
-    "detected_at": "2026-10-26T00:22:24.067464+00:00"
+    "detected_at": "2026-10-26T05:08:01.546077+00:00"
   },
   {
     "id": "35d09a6af8e48cf351fc622f",
@@ -32424,6 +32424,111 @@
     "description": "Historical entry discovered on an official archive listing. Open the issuing authority link to confirm the year, notice details and availability.",
     "verified": false,
     "archive": true,
-    "detected_at": "2026-10-26T00:22:24.067464+00:00"
+    "detected_at": "2026-10-26T05:08:01.546077+00:00"
+  },
+  {
+    "id": "afc465174a0bfb3cfc5d2ea1",
+    "title": "NOTICE INVITING TENDERS:- Construction of Fish Raceway at two selected sites in Shargole block Kargil District. 26 Oct, 2026 NOTICE INVITING TENDERS:- The Construction of Fish Raceway at two selected sites in Chuchote block Leh District. 26 Oct, 2026 Advertise",
+    "exam": "NOTICE INVITING TENDERS:- Construction of Fish Raceway at two selected sites in Shargole block Kargil District. 26 Oct, 2026 NOTICE INVITING TENDERS:- The Construction of Fish Raceway at two selected sites in Chuchote block Leh District. 26 Oct, 2026 Advertise",
+    "exam_category": "State PSC / Recruitment",
+    "category": "notification",
+    "source_name": "Ladakh Administration notices",
+    "source_id": "ladakh-administration",
+    "authority": "Ladakh Administration notices",
+    "url": "https://ladakh.gov.in/notice/notice-inviting-tenders-construction-of-fish-raceway-at-two-selected-sites-in-shargole-block-kargil-district/",
+    "official_url": "https://ladakh.gov.in/notice/notice-inviting-tenders-construction-of-fish-raceway-at-two-selected-sites-in-shargole-block-kargil-district/",
+    "source_url": "https://ladakh.gov.in/",
+    "published": "",
+    "exam_year": "2026",
+    "region": "Ladakh",
+    "state": "Ladakh",
+    "description": "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility.",
+    "verified": false,
+    "archive": false,
+    "detected_at": "2026-10-26T05:08:01.546077+00:00"
+  },
+  {
+    "id": "b2c53246eac6f98103ca7b30",
+    "title": "NOTICE INVITING TENDERS:- Construction of Fish Raceway at two selected sites in Shargole block Kargil District. 26 Oct, 2026 NOTICE INVITING TENDERS:- The Construction of Fish Raceway at two selected sites in Chuchote block Leh District. 26 Oct, 2026 Advertise",
+    "exam": "NOTICE INVITING TENDERS:- Construction of Fish Raceway at two selected sites in Shargole block Kargil District. 26 Oct, 2026 NOTICE INVITING TENDERS:- The Construction of Fish Raceway at two selected sites in Chuchote block Leh District. 26 Oct, 2026 Advertise",
+    "exam_category": "State PSC / Recruitment",
+    "category": "notification",
+    "source_name": "Ladakh Administration notices",
+    "source_id": "ladakh-administration",
+    "authority": "Ladakh Administration notices",
+    "url": "https://ladakh.gov.in/notice/notice-inviting-tenders-the-construction-of-fish-raceway-at-two-selected-sites-in-chuchote-block-leh-district/",
+    "official_url": "https://ladakh.gov.in/notice/notice-inviting-tenders-the-construction-of-fish-raceway-at-two-selected-sites-in-chuchote-block-leh-district/",
+    "source_url": "https://ladakh.gov.in/",
+    "published": "",
+    "exam_year": "2026",
+    "region": "Ladakh",
+    "state": "Ladakh",
+    "description": "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility.",
+    "verified": false,
+    "archive": false,
+    "detected_at": "2026-10-26T05:08:01.546077+00:00"
+  },
+  {
+    "id": "24bd32af2b6ce1a968da77b8",
+    "title": "प्रधानमंत्री श्री नरेन्द्र मोदी ने अपने 'मन की बात' कार्यक्रम में खादी एवं ग्रामोद्योग क्षेत्र की उपलब्धियों को रेखांकित कर कारीगरों का मनोबल बढ़ाया",
+    "exam": "प्रधानमंत्री श्री नरेन्द्र मोदी ने अपने 'मन की बात' कार्यक्रम में खादी एवं ग्रामोद्योग क्षेत्र की उपलब्धियों को रेखांकित कर कारीगरों का मनोबल बढ़ाया",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "source_name": "PIB English Press Releases — Regional Feed Backup",
+    "source_id": "pib-english-regional-releases",
+    "authority": "PIB English Press Releases — Regional Feed Backup",
+    "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2328309",
+    "official_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2328309",
+    "source_url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3",
+    "published": "",
+    "exam_year": "",
+    "region": "Central",
+    "state": "",
+    "description": "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility.",
+    "verified": false,
+    "archive": false,
+    "detected_at": "2026-10-26T05:08:01.546077+00:00"
+  },
+  {
+    "id": "bf0e86e2ed1b3a90f097b20b",
+    "title": "कोरिया दौरे के दौरान श्री सर्बानंद सोनोवाल कोरियाई उद्योग जगत के समक्ष भारत में जहाज निर्माण के अवसरों को प्रस्तुत करेंगे",
+    "exam": "कोरिया दौरे के दौरान श्री सर्बानंद सोनोवाल कोरियाई उद्योग जगत के समक्ष भारत में जहाज निर्माण के अवसरों को प्रस्तुत करेंगे",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "source_name": "PIB English Press Releases — Regional Feed Backup",
+    "source_id": "pib-english-regional-releases",
+    "authority": "PIB English Press Releases — Regional Feed Backup",
+    "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2328308",
+    "official_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2328308",
+    "source_url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3",
+    "published": "",
+    "exam_year": "",
+    "region": "Central",
+    "state": "",
+    "description": "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility.",
+    "verified": false,
+    "archive": false,
+    "detected_at": "2026-10-26T05:08:01.546077+00:00"
+  },
+  {
+    "id": "bb0457f074ca6249cbcf3292",
+    "title": "एनएलसी इंडिया ने विशेष अभियान 6 के तहत प्रमुख लक्ष्य पार किए, कबाड़ के निपटान से 3.12 करोड़ रुपये की आमदनी",
+    "exam": "एनएलसी इंडिया ने विशेष अभियान 6 के तहत प्रमुख लक्ष्य पार किए, कबाड़ के निपटान से 3.12 करोड़ रुपये की आमदनी",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "source_name": "PIB English Press Releases — Regional Feed Backup",
+    "source_id": "pib-english-regional-releases",
+    "authority": "PIB English Press Releases — Regional Feed Backup",
+    "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2328316",
+    "official_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2328316",
+    "source_url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3",
+    "published": "",
+    "exam_year": "",
+    "region": "Central",
+    "state": "",
+    "description": "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility.",
+    "verified": false,
+    "archive": false,
+    "detected_at": "2026-10-26T05:08:01.546077+00:00"
   }
 ]
