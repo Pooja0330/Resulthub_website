@@ -321,10 +321,10 @@ function filteredItems(){
 }
 function renderPriorityExamAlerts(){
  const box=$("#priorityExamList");if(!box)return;
- // Show every recent, non-archive official candidate on the homepage,
- // including PIB/government notifications; Telegram delivery is independent.
- // Keep archive/history records out so old 2020 notices cannot crowd the feed.
- const rows=dedupeVisibleItems(allItems.filter(x=>x.archive!==true&&/^(result|notification|admit_card|answer_key|merit_list|cutoff|exam_schedule)$/.test(String(x.category||""))&&!/annual results old|old archive|historical/i.test(String(x.title||""))))
+ // Show only exam-related items in Exam Alert. PIB/government press releases
+ // are rendered in the separate PIB News panel and must never be labelled as exam alerts.
+ // Keep archive/history records out so old notices cannot crowd the live feed.
+ const rows=dedupeVisibleItems(allItems.filter(x=>!isPibItem(x)&&x.archive!==true&&/^(result|notification|admit_card|answer_key|merit_list|cutoff|exam_schedule)$/.test(String(x.category||""))&&!/annual results old|old archive|historical/i.test(String(x.title||""))))
   .sort((a,b)=>updateTimeValue(b)-updateTimeValue(a)).slice(0,20);
  box.innerHTML=rows.length?rows.map(x=>{
   const url=safeUrl(x.url||x.official_url)||safeUrl(x.source_url);
