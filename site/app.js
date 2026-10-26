@@ -305,7 +305,7 @@ function dedupeVisibleItems(items, options={}){
 }
 function filteredItems(){
  const q=$("#q").value.trim().toLowerCase(), terms=q.split(/\s+/).filter(Boolean), c=$("#category").value, ec=$("#examCategory").value, r=$("#region").value, y=$("#examYear").value;
- const list=dedupeVisibleItems(allItems).filter(x=>{
+ const list=dedupeVisibleItems(allItems.filter(x=>!isPibItem(x))).filter(x=>{
   const family=inferredFamily(x);
   const hay=[x.title,x.exam,x.source_name,x.state,x.region,x.category,family].join(" ").toLowerCase();
   const itemState=stateForItem(x);
