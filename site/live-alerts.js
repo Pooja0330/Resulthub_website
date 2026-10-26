@@ -129,7 +129,7 @@
         // for updates that arrived before they opened the page.
         const now=Date.now();
         const recent=sorted.filter(item=>{
-          if(item.archive===true || isNoise(item)) return false;
+          if(isPib(item) || item.archive===true || isNoise(item)) return false;
           const detected=Date.parse(alertTimestamp(item));
           return Number.isFinite(detected) && detected<=now && now-detected<=24*60*60*1000 && !seen.has(identity(item));
         });
@@ -149,7 +149,7 @@
         const fresh=[];
         for(const item of sorted) {
           const id=identity(item);
-          if(item.archive===true || isNoise(item)) continue;
+          if(isPib(item) || item.archive===true || isNoise(item)) continue;
           if(!seen.has(id))fresh.push(item);
         }
         if(fresh.length) {
