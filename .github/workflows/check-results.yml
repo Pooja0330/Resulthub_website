@@ -11,9 +11,9 @@ on:
       - "checker/sources.json"
       - ".github/workflows/check-results.yml"
   schedule:
-    # Run every 5 minutes. Keep the schedule explicit and standard so the checker
-    # continues publishing data even when no Telegram alerts are sent.
-    - cron: "*/5 * * * *"
+    # Run every five minutes, offset from the top of the hour to reduce GitHub
+    # scheduled-workflow congestion; publish website data even when no alerts are sent.
+    - cron: "2,7,12,17,22,27,32,37,42,47,52,57 * * * *"
 
 permissions:
   contents: write
