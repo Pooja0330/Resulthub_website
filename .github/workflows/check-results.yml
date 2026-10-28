@@ -11,8 +11,13 @@ on:
       - "checker/sources.json"
       - ".github/workflows/check-results.yml"
   schedule:
-    # Run at the standard five-minute interval; publish data even when no alerts are sent.
+    # GitHub schedules are best-effort; offset the five-minute checks from the top of the hour.
     - cron: "3-58/5 * * * *"
+  workflow_run:
+    # Run another scan when the independent PIB updater finishes, providing a second trigger
+    # if a scheduled checker invocation is delayed or skipped.
+    workflows: ["Update PIB News"]
+    types: [completed]
 
 permissions:
   contents: write
