@@ -5969,6 +5969,414 @@
       "include_all_items": true,
       "max_new": 25,
       "coverage_note": "Official PIB English features RSS feed provides a second content stream for government explainers and public-information updates."
+    },
+    {
+      "id": "secl-careers",
+      "name": "South Eastern Coalfields Limited — Careers",
+      "url": "https://secl-cil.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "secl-cil.in"
+      ],
+      "categories": [
+        "notification",
+        "result",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official SECL portal; verify careers and recruitment notices on the linked recruitment pages.",
+      "exam_category": "PSU / Coal Recruitment",
+      "discover_listing_pages": true
+    },
+    {
+      "id": "ccl-careers",
+      "name": "Central Coalfields Limited — Careers",
+      "url": "https://www.centralcoalfields.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "centralcoalfields.in"
+      ],
+      "categories": [
+        "notification",
+        "result",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official CCL portal; verify recruitment notices on the linked careers pages.",
+      "exam_category": "PSU / Coal Recruitment",
+      "discover_listing_pages": true
+    },
+    {
+      "id": "coal-india-careers",
+      "name": "Coal India Limited — Careers",
+      "url": "https://www.coalindia.in/career-cil/",
+      "kind": "html",
+      "allowed_hosts": [
+        "coalindia.in"
+      ],
+      "categories": [
+        "notification",
+        "result",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official Coal India careers portal for company-level and subsidiary recruitment.",
+      "exam_category": "PSU / Coal Recruitment",
+      "discover_listing_pages": true
+    },
+    {
+      "id": "drdo-careers",
+      "name": "DRDO — Careers",
+      "url": "https://www.drdo.gov.in/drdo/careers",
+      "kind": "html",
+      "allowed_hosts": [
+        "drdo.gov.in"
+      ],
+      "categories": [
+        "notification",
+        "result",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Scientist, technical and administrative recruitment notices from DRDO.",
+      "exam_category": "Scientist / Defence Research Recruitment",
+      "discover_listing_pages": true
+    },
+    {
+      "id": "barc-careers",
+      "name": "BARC — Careers",
+      "url": "https://www.barc.gov.in/careers.html",
+      "kind": "html",
+      "allowed_hosts": [
+        "barc.gov.in"
+      ],
+      "categories": [
+        "notification",
+        "result",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Scientific officer, research and technical recruitment notices from BARC.",
+      "exam_category": "Scientist / Atomic Research Recruitment",
+      "discover_listing_pages": true
+    },
+    {
+      "id": "csir-careers",
+      "name": "CSIR — Recruitment",
+      "url": "https://www.csir.res.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "csir.res.in"
+      ],
+      "categories": [
+        "notification",
+        "result",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "CSIR headquarters and linked laboratory recruitment notices; lab-specific pages may need separate sources.",
+      "exam_category": "Scientist / Research Recruitment",
+      "discover_listing_pages": true
+    },
+    {
+      "id": "icmr-careers",
+      "name": "ICMR — Employment Opportunities",
+      "url": "https://www.icmr.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "icmr.gov.in"
+      ],
+      "categories": [
+        "notification",
+        "result",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Medical, biomedical research and institute recruitment notices published by ICMR.",
+      "exam_category": "Medical / Research Recruitment",
+      "discover_listing_pages": true
+    },
+    {
+      "id": "iiser-admissions",
+      "name": "IISER Admissions",
+      "url": "https://www.iiseradmission.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "iiseradmission.in"
+      ],
+      "categories": [
+        "notification",
+        "exam_schedule",
+        "result",
+        "admit_card"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official IISER science and research undergraduate admission examination notices.",
+      "exam_category": "Science Entrance Exams",
+      "discover_listing_pages": true
+    },
+    {
+      "id": "cat-iim",
+      "name": "CAT — Common Admission Test",
+      "url": "https://iimcat.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "iimcat.ac.in"
+      ],
+      "categories": [
+        "notification",
+        "exam_schedule",
+        "result",
+        "admit_card"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official CAT management entrance examination notices, schedule and results.",
+      "exam_category": "Private / Management Entrance Exams",
+      "discover_listing_pages": true
+    },
+    {
+      "id": "xat-exam",
+      "name": "XAT — Xavier Aptitude Test",
+      "url": "https://xatonline.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "xatonline.in"
+      ],
+      "categories": [
+        "notification",
+        "exam_schedule",
+        "result",
+        "admit_card"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official XAT exam notifications, registration and results.",
+      "exam_category": "Private / Management Entrance Exams",
+      "discover_listing_pages": true
+    },
+    {
+      "id": "mat-aima",
+      "name": "AIMA MAT — Management Aptitude Test",
+      "url": "https://mat.aima.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "aima.in"
+      ],
+      "categories": [
+        "notification",
+        "exam_schedule",
+        "result",
+        "admit_card"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official AIMA MAT examination and registration updates.",
+      "exam_category": "Private / Management Entrance Exams",
+      "discover_listing_pages": true
+    },
+    {
+      "id": "clat-consortium",
+      "name": "CLAT — Consortium of NLUs",
+      "url": "https://consortiumofnlus.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "consortiumofnlus.ac.in"
+      ],
+      "categories": [
+        "notification",
+        "exam_schedule",
+        "result",
+        "admit_card"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official CLAT admission test notifications, dates and results.",
+      "exam_category": "Law Entrance Exams",
+      "discover_listing_pages": true
+    },
+    {
+      "id": "nift-admissions",
+      "name": "NIFT — Admissions",
+      "url": "https://www.nift.ac.in/admission",
+      "kind": "html",
+      "allowed_hosts": [
+        "nift.ac.in"
+      ],
+      "categories": [
+        "notification",
+        "exam_schedule",
+        "result",
+        "admit_card"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official NIFT entrance examination and admission notices.",
+      "exam_category": "Design Entrance Exams",
+      "discover_listing_pages": true
+    },
+    {
+      "id": "gate-official",
+      "name": "GATE — Graduate Aptitude Test in Engineering",
+      "url": "https://gate2026.iitg.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "iitg.ac.in"
+      ],
+      "categories": [
+        "notification",
+        "exam_schedule",
+        "result",
+        "admit_card"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official GATE exam notices; current-year portal changes annually.",
+      "exam_category": "Engineering Entrance / PSU Recruitment",
+      "discover_listing_pages": true
+    },
+    {
+      "id": "csir-ugc-net",
+      "name": "CSIR UGC NET",
+      "url": "https://csirnet.nta.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "nta.ac.in"
+      ],
+      "categories": [
+        "notification",
+        "exam_schedule",
+        "result",
+        "admit_card"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official CSIR UGC NET science eligibility and research fellowship examination notices.",
+      "exam_category": "Science Eligibility / Research Exams",
+      "discover_listing_pages": true
+    },
+    {
+      "id": "nvs-recruitment",
+      "name": "Navodaya Vidyalaya Samiti — Recruitment",
+      "url": "https://navodaya.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "navodaya.gov.in"
+      ],
+      "categories": [
+        "notification",
+        "result",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Teaching and non-teaching recruitment notices from NVS.",
+      "exam_category": "Teaching / Central Recruitment",
+      "discover_listing_pages": true
+    },
+    {
+      "id": "kvs-recruitment",
+      "name": "Kendriya Vidyalaya Sangathan — Recruitment",
+      "url": "https://kvsangathan.nic.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "kvsangathan.nic.in"
+      ],
+      "categories": [
+        "notification",
+        "result",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Teaching and non-teaching recruitment notices from KVS.",
+      "exam_category": "Teaching / Central Recruitment",
+      "discover_listing_pages": true
+    },
+    {
+      "id": "indian-navy-jobs",
+      "name": "Indian Navy — Join Navy",
+      "url": "https://www.joinindiannavy.gov.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "joinindiannavy.gov.in"
+      ],
+      "categories": [
+        "notification",
+        "result",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official Indian Navy officer and sailor entry notifications.",
+      "exam_category": "Defence Recruitment",
+      "discover_listing_pages": true
+    },
+    {
+      "id": "indian-airforce-jobs",
+      "name": "Indian Air Force — Agniveer / Officer Recruitment",
+      "url": "https://careerindianairforce.cdac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "cdac.in"
+      ],
+      "categories": [
+        "notification",
+        "result",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official Indian Air Force career portal for officer and airmen recruitment.",
+      "exam_category": "Defence Recruitment",
+      "discover_listing_pages": true
+    },
+    {
+      "id": "indian-army-jobs",
+      "name": "Indian Army — Join Indian Army",
+      "url": "https://joinindianarmy.nic.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "joinindianarmy.nic.in"
+      ],
+      "categories": [
+        "notification",
+        "result",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official Indian Army recruitment and entry notifications.",
+      "exam_category": "Defence Recruitment",
+      "discover_listing_pages": true
+    },
+    {
+      "id": "tcs-ions-nqt",
+      "name": "TCS iON NQT — Private-sector Employability Test",
+      "url": "https://www.tcsion.com/",
+      "kind": "html",
+      "allowed_hosts": [
+        "tcsion.com"
+      ],
+      "categories": [
+        "notification",
+        "exam_schedule",
+        "result",
+        "admit_card"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Private-sector employability test and assessment announcements; check official registration details.",
+      "exam_category": "Private / Employment Exams",
+      "discover_listing_pages": true
     }
   ]
 }
