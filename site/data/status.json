@@ -1,5 +1,5 @@
 {
-  "last_checked_at": "2026-10-27T23:03:58.062619+00:00",
+  "last_checked_at": "2026-10-28T02:07:11.856994+00:00",
   "sources_enabled": 273,
   "sources_succeeded": 136,
   "sources_failed": 137,
@@ -7,6 +7,6 @@
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 92, SSLError: 28, ConnectionError: 24, HTTPError: 12, ReadTimeout: 2",
+  "failure_types": "ConnectTimeout: 92, SSLError: 28, ConnectionError: 22, HTTPError: 12, ReadTimeout: 4",
   "note": "Some sources may be unavailable or use formats automated scanning cannot read."
 }
