@@ -35411,7 +35411,8 @@
     "description": "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility.",
     "verified": false,
     "archive": false,
-    "detected_at": "2026-10-28T15:12:20.624698+00:00"
+    "detected_at": "2026-10-28T15:12:20.624698+00:00",
+    "telegram_sent_at": "2026-10-28T17:04:57.631158+00:00"
   },
   {
     "id": "2da56591cf462100641510dd",
@@ -35432,7 +35433,8 @@
     "description": "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility.",
     "verified": false,
     "archive": false,
-    "detected_at": "2026-10-28T15:12:20.624698+00:00"
+    "detected_at": "2026-10-28T15:12:20.624698+00:00",
+    "telegram_sent_at": "2026-10-28T17:04:59.257669+00:00"
   },
   {
     "id": "1203d0c1c110a04db0cac85a",
@@ -35453,7 +35455,8 @@
     "description": "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility.",
     "verified": false,
     "archive": false,
-    "detected_at": "2026-10-28T15:12:20.624698+00:00"
+    "detected_at": "2026-10-28T15:12:20.624698+00:00",
+    "telegram_sent_at": "2026-10-28T17:05:00.878087+00:00"
   },
   {
     "id": "3d016ebad5eb59e8a6bb6774",
@@ -35474,7 +35477,8 @@
     "description": "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility.",
     "verified": false,
     "archive": false,
-    "detected_at": "2026-10-28T15:12:20.624698+00:00"
+    "detected_at": "2026-10-28T15:12:20.624698+00:00",
+    "telegram_sent_at": "2026-10-28T17:05:02.499512+00:00"
   },
   {
     "id": "c5717763b2075bf76dcf8220",
@@ -35495,7 +35499,8 @@
     "description": "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility.",
     "verified": false,
     "archive": false,
-    "detected_at": "2026-10-28T15:12:20.624698+00:00"
+    "detected_at": "2026-10-28T15:12:20.624698+00:00",
+    "telegram_sent_at": "2026-10-28T17:05:04.122322+00:00"
   },
   {
     "id": "35419eb55d57e653266dd0f3",
@@ -35936,7 +35941,8 @@
     "description": "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility.",
     "verified": false,
     "archive": false,
-    "detected_at": "2026-10-28T15:12:20.624698+00:00"
+    "detected_at": "2026-10-28T15:12:20.624698+00:00",
+    "telegram_sent_at": "2026-10-28T17:05:05.727991+00:00"
   },
   {
     "id": "b3ed62bba56a9b64c4187fe0",
@@ -35958,5 +35964,152 @@
     "verified": false,
     "archive": false,
     "detected_at": "2026-10-28T15:12:20.624698+00:00"
+  },
+  {
+    "id": "32c2e2a16cbf717e7758474f",
+    "title": "Admission 2026-27: Admission Main Admission Brochures Notices - Admission Refund Status Admission Regulatory Management Quota Seat Matrix / Status CET Notices Distance & Online Programmes Prevous Year... Admission 2025: Admissions Main Page Admissions 2025 Not",
+    "exam": "Admission 2026-27: Admission Main Admission Brochures Notices - Admission Refund Status Admission Regulatory Management Quota Seat Matrix / Status CET Notices Distance & Online Programmes Prevous Year... Admission 2025: Admissions Main Page Admissions 2025 Not",
+    "exam_category": "Entrance & Eligibility",
+    "category": "result",
+    "source_name": "Guru Gobind Singh Indraprastha University examinations",
+    "source_id": "ipu",
+    "authority": "Guru Gobind Singh Indraprastha University examinations",
+    "url": "https://ipu.ac.in/adm2026/adm2026refund.php",
+    "official_url": "https://ipu.ac.in/adm2026/adm2026refund.php",
+    "source_url": "https://ipu.ac.in/",
+    "published": "",
+    "exam_year": "2026",
+    "region": "Central",
+    "state": "",
+    "description": "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility.",
+    "verified": false,
+    "archive": false,
+    "detected_at": "2026-10-28T17:01:52.486704+00:00"
+  },
+  {
+    "id": "243895a9bc93fa24061589a2",
+    "title": "'GeM संवाद 2026' में सूक्ष्म और लघु उद्यमों के लिए सार्वजनिक खरीद को अधिक सुलभ और किफायती बनाने वाले सुधारों की जानकारी दी गई",
+    "exam": "'GeM संवाद 2026' में सूक्ष्म और लघु उद्यमों के लिए सार्वजनिक खरीद को अधिक सुलभ और किफायती बनाने वाले सुधारों की जानकारी दी गई",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "source_name": "PIB English Press Releases — Regional Feed Backup",
+    "source_id": "pib-english-regional-releases",
+    "authority": "PIB English Press Releases — Regional Feed Backup",
+    "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2329825",
+    "official_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2329825",
+    "source_url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3",
+    "published": "",
+    "exam_year": "2026",
+    "region": "Central",
+    "state": "",
+    "description": "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility.",
+    "verified": false,
+    "archive": false,
+    "detected_at": "2026-10-28T17:01:52.486704+00:00"
+  },
+  {
+    "id": "5653372763a19c86deb7542b",
+    "title": "रक्षा मंत्री ने 13वीं आसियान रक्षा मंत्रियों की बैठक-प्लस से इतर सिंगापुर के रक्षा मंत्री के साथ द्विपक्षीय वार्ता की",
+    "exam": "रक्षा मंत्री ने 13वीं आसियान रक्षा मंत्रियों की बैठक-प्लस से इतर सिंगापुर के रक्षा मंत्री के साथ द्विपक्षीय वार्ता की",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "source_name": "PIB English Press Releases — Regional Feed Backup",
+    "source_id": "pib-english-regional-releases",
+    "authority": "PIB English Press Releases — Regional Feed Backup",
+    "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2329828",
+    "official_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2329828",
+    "source_url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3",
+    "published": "",
+    "exam_year": "",
+    "region": "Central",
+    "state": "",
+    "description": "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility.",
+    "verified": false,
+    "archive": false,
+    "detected_at": "2026-10-28T17:01:52.486704+00:00"
+  },
+  {
+    "id": "7c4364e7f29937f7580ad54e",
+    "title": "एमएसडीई ने सभी सीपीएसई से परिणामों एवं समावेशन पर ध्यान केन्द्रित करते हुए अप्रेंटिसशिप संबंधी जुड़ाव में तेजी लाने का आह्वान किया",
+    "exam": "एमएसडीई ने सभी सीपीएसई से परिणामों एवं समावेशन पर ध्यान केन्द्रित करते हुए अप्रेंटिसशिप संबंधी जुड़ाव में तेजी लाने का आह्वान किया",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "source_name": "PIB English Press Releases — Regional Feed Backup",
+    "source_id": "pib-english-regional-releases",
+    "authority": "PIB English Press Releases — Regional Feed Backup",
+    "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2329808",
+    "official_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2329808",
+    "source_url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3",
+    "published": "",
+    "exam_year": "",
+    "region": "Central",
+    "state": "",
+    "description": "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility.",
+    "verified": false,
+    "archive": false,
+    "detected_at": "2026-10-28T17:01:52.486704+00:00"
+  },
+  {
+    "id": "89b527a029730fcc9523d11c",
+    "title": "दूरसंचार विभाग ने ईएसटीआईसी 2026 में इंटेलिजेंट नेटवर्क्स एंड क्वांटम कम्युनिकेशन पर विषयगत सत्र का नेतृत्व किया",
+    "exam": "दूरसंचार विभाग ने ईएसटीआईसी 2026 में इंटेलिजेंट नेटवर्क्स एंड क्वांटम कम्युनिकेशन पर विषयगत सत्र का नेतृत्व किया",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "source_name": "PIB English Press Releases — Regional Feed Backup",
+    "source_id": "pib-english-regional-releases",
+    "authority": "PIB English Press Releases — Regional Feed Backup",
+    "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2329804",
+    "official_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2329804",
+    "source_url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3",
+    "published": "",
+    "exam_year": "2026",
+    "region": "Central",
+    "state": "",
+    "description": "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility.",
+    "verified": false,
+    "archive": false,
+    "detected_at": "2026-10-28T17:01:52.486704+00:00"
+  },
+  {
+    "id": "ea78a6269329b111907f7e30",
+    "title": "केंद्रीय शिक्षा राज्य मंत्री ने 'विकसित भारत बिल्डाथॉन 2025' के विजेताओं को सम्मानित किया",
+    "exam": "केंद्रीय शिक्षा राज्य मंत्री ने 'विकसित भारत बिल्डाथॉन 2025' के विजेताओं को सम्मानित किया",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "source_name": "PIB English Press Releases — Regional Feed Backup",
+    "source_id": "pib-english-regional-releases",
+    "authority": "PIB English Press Releases — Regional Feed Backup",
+    "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2329789",
+    "official_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2329789",
+    "source_url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3",
+    "published": "",
+    "exam_year": "2025",
+    "region": "Central",
+    "state": "",
+    "description": "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility.",
+    "verified": false,
+    "archive": false,
+    "detected_at": "2026-10-28T17:01:52.486704+00:00"
+  },
+  {
+    "id": "0b3a4517a3745628f2c391e3",
+    "title": "प्रधानमंत्री 2 नवंबर, 2026 को भारत नवीकरणीय ऊर्जा शिखर सम्मेलन और एक्सपो 2026 का उद्घाटन करेंगे",
+    "exam": "प्रधानमंत्री 2 नवंबर, 2026 को भारत नवीकरणीय ऊर्जा शिखर सम्मेलन और एक्सपो 2026 का उद्घाटन करेंगे",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "source_name": "PIB English Press Releases — Regional Feed Backup",
+    "source_id": "pib-english-regional-releases",
+    "authority": "PIB English Press Releases — Regional Feed Backup",
+    "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2329788",
+    "official_url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2329788",
+    "source_url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3",
+    "published": "",
+    "exam_year": "2026",
+    "region": "Central",
+    "state": "",
+    "description": "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility.",
+    "verified": false,
+    "archive": false,
+    "detected_at": "2026-10-28T17:01:52.486704+00:00"
   }
 ]
