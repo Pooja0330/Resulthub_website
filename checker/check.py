@@ -1164,7 +1164,18 @@ def main():
         "alerts_pending": len(pending),
         "status": "healthy" if successful > 0 and failures == 0 else ("partial" if successful > 0 else "unavailable"),
         "failure_types": failure_breakdown,
-        "note": "Some sources may be unavailable or use formats automated scanning cannot read."
+        # Small, safe diagnostic sample makes recurring source failures actionable
+        # without exposing full URLs, response bodies, credentials, or request headers.
+        "failed_source_samples": [
+            {
+                "source_id": sid,
+                "error_type": str(source_health.get("error", "Unknown")).split(":", 1)[0][:60],
+            }
+            for sid, source_health in sorted(health.items())
+            if source_health.get("status") == "failed"
+        ][:12],
+        "note": "Some sources may be unavailable or use formats automated scanning cannot read. failed_source_samples lists a small diagnostic sample."
+
     })
 
     summary = (
