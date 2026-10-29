@@ -6377,6 +6377,50 @@
       "coverage_note": "Private-sector employability test and assessment announcements; check official registration details.",
       "exam_category": "Private / Employment Exams",
       "discover_listing_pages": true
+    },
+    {
+      "id": "ibps-spl-xvi",
+      "name": "IBPS Specialist Officers XVI",
+      "url": "https://www.ibps.in/index.php/specialist-officers-xvi/",
+      "kind": "html",
+      "allowed_hosts": [
+        "ibps.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "exam_category": "Banking",
+      "enabled": true,
+      "last_reviewed": "2026-10-29",
+      "coverage_note": "Dedicated official IBPS Specialist Officers XVI updates page."
+    },
+    {
+      "id": "ibps-csa-xvi",
+      "name": "IBPS CSA XVI",
+      "url": "https://www.ibps.in/index.php/clerical-cadre-xvi/",
+      "kind": "html",
+      "allowed_hosts": [
+        "ibps.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "exam_category": "Banking",
+      "enabled": true,
+      "last_reviewed": "2026-10-29",
+      "coverage_note": "Dedicated official IBPS Customer Service Associates XVI updates page."
     }
   ]
 }
