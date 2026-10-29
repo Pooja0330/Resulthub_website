@@ -12,7 +12,7 @@ on:
       - ".github/workflows/check-results.yml"
   schedule:
     # GitHub schedules are best-effort; offset the five-minute checks from the top of the hour.
-    - cron: "3-58/5 * * * *"
+    - cron: "*/5 * * * *"
   workflow_run:
     # Run another scan when the independent PIB updater finishes, providing a second trigger
     # if a scheduled checker invocation is delayed or skipped.
