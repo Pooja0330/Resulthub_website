@@ -121,10 +121,14 @@ def save_json(name, value):
     target = path(name)
     target.parent.mkdir(parents=True, exist_ok=True)
     temporary = target.with_suffix(target.suffix + ".tmp")
-    temporary.write_text(
-        json.dumps(value, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
-    )
+    # The public exam feed can contain thousands of records. Keep that
+    # frequently downloaded browser payload compact so mobile browsers do not
+    # have to parse/render megabytes of whitespace on every refresh.
+    if name == "site/data/results.json":
+        serialized = json.dumps(value, ensure_ascii=False, separators=(",", ":")) + "\n"
+    else:
+        serialized = json.dumps(value, ensure_ascii=False, indent=2) + "\n"
+    temporary.write_text(serialized, encoding="utf-8")
     os.replace(temporary, target)
 
 
