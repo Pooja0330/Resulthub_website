@@ -4039,7 +4039,8 @@
       "exam_category": "Banking",
       "enabled": true,
       "last_reviewed": "2026-10-16",
-      "coverage_note": "Dedicated IBPS recent-updates page for CRP PO, SO, CSA/Clerk, RRB and recruitment notices."
+      "coverage_note": "Dedicated IBPS recent-updates page for CRP PO, SO, CSA/Clerk, RRB and recruitment notices.",
+      "discover_listing_pages": true
     },
     {
       "id": "ibps-po-mt",
@@ -4061,7 +4062,8 @@
       "exam_category": "Banking",
       "enabled": true,
       "last_reviewed": "2026-10-16",
-      "coverage_note": "Dedicated current IBPS PO/MT examination page; page content changes with notices and results."
+      "coverage_note": "Dedicated current IBPS PO/MT examination page; page content changes with notices and results.",
+      "discover_listing_pages": true
     },
     {
       "id": "sbi-current-openings",
@@ -6398,7 +6400,8 @@
       "exam_category": "Banking",
       "enabled": true,
       "last_reviewed": "2026-10-29",
-      "coverage_note": "Dedicated official IBPS Specialist Officers XVI updates page."
+      "coverage_note": "Dedicated official IBPS Specialist Officers XVI updates page.",
+      "discover_listing_pages": true
     },
     {
       "id": "ibps-csa-xvi",
@@ -6420,7 +6423,8 @@
       "exam_category": "Banking",
       "enabled": true,
       "last_reviewed": "2026-10-29",
-      "coverage_note": "Dedicated official IBPS Customer Service Associates XVI updates page."
+      "coverage_note": "Dedicated official IBPS Customer Service Associates XVI updates page.",
+      "discover_listing_pages": true
     }
   ]
 }
