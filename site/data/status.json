@@ -1,12 +1,62 @@
 {
-  "last_checked_at": "2026-10-29T10:34:16.250009+00:00",
+  "last_checked_at": "2026-10-29T10:38:22.483542+00:00",
   "sources_enabled": 296,
-  "sources_succeeded": 149,
-  "sources_failed": 147,
+  "sources_succeeded": 145,
+  "sources_failed": 151,
   "new_candidates": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, SSLError: 32, ConnectionError: 25, HTTPError: 18, ReadTimeout: 3",
-  "note": "Some sources may be unavailable or use formats automated scanning cannot read."
+  "failure_types": "ConnectTimeout: 92, SSLError: 31, ConnectionError: 28, HTTPError: 18, ValueError: 3",
+  "failed_source_samples": [
+    {
+      "source_id": "airforce-afcat",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "airforce-careers",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "amu",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "andaman-administration",
+      "error_type": "ConnectionError"
+    },
+    {
+      "source_id": "andhra-board",
+      "error_type": "ConnectionError"
+    },
+    {
+      "source_id": "andhra-university",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "ap-police",
+      "error_type": "ConnectionError"
+    },
+    {
+      "source_id": "ap-psc",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "ap-results",
+      "error_type": "ConnectionError"
+    },
+    {
+      "source_id": "appsc",
+      "error_type": "ConnectionError"
+    },
+    {
+      "source_id": "apsc",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "arunachal-psc",
+      "error_type": "ConnectionError"
+    }
+  ],
+  "note": "Some sources may be unavailable or use formats automated scanning cannot read. failed_source_samples lists a small diagnostic sample."
 }
