@@ -779,6 +779,10 @@ def main():
     sources = [s for s in registry["sources"] if s.get("enabled", True)]
     candidates = []
     historical_candidates = []
+    # Recover feed records if results.json was emptied or lost while state.json
+    # still remembers previously delivered notices. Re-index them on the website
+    # without sending duplicate Telegram alerts.
+    recovered_candidates = []
     successful = 0
     failures = 0
     checked_at = now_utc()
@@ -835,7 +839,25 @@ def main():
                         })
                         continue
 
-                    if key in seen or key in pending or key in held:
+                    if key in seen:
+                        # A seen key is not proof that the website still contains
+                        # the record. If the public feed was accidentally emptied,
+                        # restore the notice from its official source without
+                        # queueing another Telegram message.
+                        item["id"] = key
+                        item["region"] = source.get("region", "Central")
+                        item["state"] = source.get("state", "")
+                        item["exam_category"] = source.get(
+                            "exam_category",
+                            infer_exam_category(item.get("title", ""), source.get("name", ""),
+                                                source.get("id", ""), source.get("state", "")),
+                        )
+                        item["detected_at"] = seen.get(key, {}).get("first_seen", checked_at)
+                        item["recovered"] = True
+                        recovered_candidates.append(item)
+                        continue
+
+                    if key in pending or key in held:
                         continue
 
                     item["id"] = key
@@ -879,7 +901,7 @@ def main():
         for item in results if isinstance(item, dict)
     }
     published_urls.discard("")
-    for item in historical_candidates + candidates:
+    for item in historical_candidates + recovered_candidates + candidates:
         normalized_url = normalize_notice_url(item.get("url", ""))
         if item["id"] not in existing_ids and normalized_url not in published_urls:
             results.append(build_result(item, item["detected_at"]))
@@ -1132,6 +1154,7 @@ def main():
         "last_run_failures": failures,
         "last_run_successful_sources": successful,
         "last_run_new_candidates": len(candidates),
+        "last_run_recovered_records": len(recovered_candidates),
         "last_run_public_posts": public_sent,
         "pending_alert_count": len(pending),
         "held_for_review_count": len(held),
@@ -1160,6 +1183,7 @@ def main():
         "sources_succeeded": successful,
         "sources_failed": failures,
         "new_candidates": len(candidates),
+        "recovered_records": len(recovered_candidates),
         "telegram_posts_sent": public_sent,
         "alerts_pending": len(pending),
         "status": "healthy" if successful > 0 and failures == 0 else ("partial" if successful > 0 else "unavailable"),
@@ -1186,6 +1210,7 @@ def main():
         f"Sources not scanned: {failures}\n"
         f"Failure types: {failure_breakdown}\n"
         f"New candidate links: {len(candidates)}\n"
+        f"Website records recovered: {len(recovered_candidates)}\n"
         f"Main-channel alerts sent: {public_sent}\n"
         f"Alerts pending delivery: {len(pending)}\n"
         f"Older alerts held for review: {len(held)}\n"
