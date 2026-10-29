@@ -320,10 +320,11 @@ def normalize_notice_url(url):
 
 def get_with_retries(url, headers=None):
     last_error = None
-    # Keep the full scan moving: retry transient network/server failures once,
-    # but do not let unreachable hosts consume three long timeout windows.
-    # TLS certificate and DNS failures still fail fast; TLS verification stays on.
-    for attempt in range(2):
+    # Retry transient timeouts, connection resets, and temporary HTTP failures
+    # up to three attempts. TLS verification remains enabled; certificate and
+    # DNS failures fail fast because retrying them rarely helps.
+    retryable_statuses = (408, 425, 429, 500, 502, 503, 504)
+    for attempt in range(3):
         try:
             response = requests.get(
                 url,
@@ -332,12 +333,12 @@ def get_with_retries(url, headers=None):
                 allow_redirects=True,
                 verify=certifi.where(),
             )
-            if response.status_code in (408, 425, 429, 500, 502, 503, 504) and attempt < 1:
+            if response.status_code in retryable_statuses and attempt < 2:
                 retry_after = response.headers.get("Retry-After", "").strip()
                 try:
-                    delay = min(max(float(retry_after), 1.0), 3.0) if retry_after else 1.0
+                    delay = min(max(float(retry_after), 1.0), 4.0) if retry_after else (1.0 + attempt)
                 except ValueError:
-                    delay = 1.0
+                    delay = 1.0 + attempt
                 response.close()
                 time.sleep(delay)
                 continue
@@ -352,12 +353,13 @@ def get_with_retries(url, headers=None):
                 or "Temporary failure in name resolution" in error_text
                 or "CERTIFICATE_VERIFY_FAILED" in error_text
             )
-            if permanent or attempt >= 1:
+            if permanent or attempt >= 2:
                 raise
-            time.sleep(0.75)
+            time.sleep(0.75 * (attempt + 1))
     if last_error:
         raise last_error
     raise RuntimeError("Request failed after retries")
+
 def telegram_send(chat_id, message, reply_markup=None):
     global TG_RATE_LIMITED
     if TG_RATE_LIMITED:
