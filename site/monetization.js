@@ -1,8 +1,8 @@
 /* GoResultHub monetization settings.
- * Add only real IDs after ad-network approval. Optional ads load only after visitor consent.
+ * Auto ads use the configured publisher ID after visitor consent. Manual slots require real slot IDs.
  */
 window.GRH_MONETIZATION = window.GRH_MONETIZATION || {
-  adsenseClient: "",
+  adsenseClient: "ca-pub-1349514866763498",
   adSlots: { homeTop: "", homeMid: "", homeBottom: "", stateTop: "", stateBottom: "" },
   sponsoredResources: []
 };
@@ -20,7 +20,8 @@ window.GRH_MONETIZATION = window.GRH_MONETIZATION || {
       const slotId = String(slots[wrapper.dataset.adSlot] || "").trim();
       return adClientIsValid && /^\d{5,20}$/.test(slotId) && wrapper.dataset.adInitialized !== "true";
     });
-    if (!activeSlots.length) return;
+    // Loading the AdSense library enables Auto ads when they are configured in AdSense.
+    // Explicit ad units render only when their real slot IDs are configured above.
     adsStarted = true;
     const existing = document.querySelector('script[data-grh-adsense="true"]');
     const renderSlots = () => activeSlots.forEach(wrapper => {
