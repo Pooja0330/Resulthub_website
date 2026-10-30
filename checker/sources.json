@@ -103,7 +103,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: RBI Opportunities and Recruitment.",
-      "exam_category": "Banking"
+      "exam_category": "Banking",
+      "discover_listing_pages": true
     },
     {
       "id": "nta",
@@ -183,7 +184,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
-      "exam_category": "Entrance & Eligibility"
+      "exam_category": "Entrance & Eligibility",
+      "discover_listing_pages": true
     },
     {
       "id": "ugcnet",
@@ -204,7 +206,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
-      "exam_category": "Entrance & Eligibility"
+      "exam_category": "Entrance & Eligibility",
+      "discover_listing_pages": true
     },
     {
       "id": "gate",
@@ -225,7 +228,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: GATE official portal (current-year URL changes annually).",
-      "exam_category": "Entrance & Eligibility"
+      "exam_category": "Entrance & Eligibility",
+      "discover_listing_pages": true
     },
     {
       "id": "upsc-results",
@@ -242,7 +246,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
-      "exam_category": "UPSC / Central Recruitment"
+      "exam_category": "UPSC / Central Recruitment",
+      "discover_listing_pages": true
     },
     {
       "id": "rrb-bbs",
@@ -262,7 +267,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
       "exam_category": "Railways",
       "state": "Odisha",
-      "region": "Odisha"
+      "region": "Odisha",
+      "discover_listing_pages": true
     },
     {
       "id": "rrb-sec",
@@ -282,7 +288,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
       "exam_category": "Railways",
       "state": "Telangana",
-      "region": "Telangana"
+      "region": "Telangana",
+      "discover_listing_pages": true
     },
     {
       "id": "cbse",
@@ -339,7 +346,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
-      "exam_category": "School Board Results"
+      "exam_category": "School Board Results",
+      "discover_listing_pages": true
     },
     {
       "id": "up-board",
@@ -358,7 +366,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
       "exam_category": "School Board Results",
       "state": "Uttar Pradesh",
-      "region": "Uttar Pradesh"
+      "region": "Uttar Pradesh",
+      "discover_listing_pages": true
     },
     {
       "id": "mpbse",
@@ -377,7 +386,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
       "exam_category": "School Board Results",
       "state": "Madhya Pradesh",
-      "region": "Madhya Pradesh"
+      "region": "Madhya Pradesh",
+      "discover_listing_pages": true
     },
     {
       "id": "cgbse",
@@ -401,7 +411,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Chhattisgarh Board of Secondary Education Results.",
       "exam_category": "School Board Results",
       "state": "Chhattisgarh",
-      "region": "Chhattisgarh"
+      "region": "Chhattisgarh",
+      "discover_listing_pages": true
     },
     {
       "id": "bseb",
@@ -420,7 +431,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
       "exam_category": "School Board Results",
       "state": "Bihar",
-      "region": "Bihar"
+      "region": "Bihar",
+      "discover_listing_pages": true
     },
     {
       "id": "rajeduboard",
@@ -445,7 +457,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Rajasthan Board of Secondary Education.",
       "exam_category": "School Board Results",
       "state": "Rajasthan",
-      "region": "Rajasthan"
+      "region": "Rajasthan",
+      "discover_listing_pages": true
     },
     {
       "id": "gseb",
@@ -469,7 +482,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Gujarat Secondary and Higher Secondary Education Board.",
       "exam_category": "School Board Results",
       "state": "Gujarat",
-      "region": "Gujarat"
+      "region": "Gujarat",
+      "discover_listing_pages": true
     },
     {
       "id": "mahresult",
@@ -487,7 +501,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
       "exam_category": "School Board Results",
       "state": "Maharashtra",
-      "region": "Maharashtra"
+      "region": "Maharashtra",
+      "discover_listing_pages": true
     },
     {
       "id": "tnresults",
@@ -505,7 +520,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
       "exam_category": "School Board Results",
       "state": "Tamil Nadu",
-      "region": "Tamil Nadu"
+      "region": "Tamil Nadu",
+      "discover_listing_pages": true
     },
     {
       "id": "keralaresults",
@@ -523,7 +539,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
       "exam_category": "School Board Results",
       "state": "Kerala",
-      "region": "Kerala"
+      "region": "Kerala",
+      "discover_listing_pages": true
     },
     {
       "id": "wbresults",
@@ -541,7 +558,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
       "exam_category": "School Board Results",
       "state": "West Bengal",
-      "region": "West Bengal"
+      "region": "West Bengal",
+      "discover_listing_pages": true
     },
     {
       "id": "odisha-board",
@@ -565,7 +583,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Board of Secondary Education Odisha.",
       "exam_category": "School Board Results",
       "state": "Odisha",
-      "region": "Odisha"
+      "region": "Odisha",
+      "discover_listing_pages": true
     },
     {
       "id": "karnataka-board",
@@ -589,7 +608,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
       "exam_category": "School Board Results",
       "state": "Karnataka",
-      "region": "Karnataka"
+      "region": "Karnataka",
+      "discover_listing_pages": true
     },
     {
       "id": "telangana-board",
@@ -614,7 +634,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Telangana Board of Secondary Education.",
       "exam_category": "School Board Results",
       "state": "Telangana",
-      "region": "Telangana"
+      "region": "Telangana",
+      "discover_listing_pages": true
     },
     {
       "id": "andhra-board",
@@ -639,7 +660,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Andhra Pradesh Board of Secondary Education.",
       "exam_category": "School Board Results",
       "state": "Andhra Pradesh",
-      "region": "Andhra Pradesh"
+      "region": "Andhra Pradesh",
+      "discover_listing_pages": true
     },
     {
       "id": "haryana-board",
@@ -663,7 +685,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Board of School Education Haryana.",
       "exam_category": "School Board Results",
       "state": "Haryana",
-      "region": "Haryana"
+      "region": "Haryana",
+      "discover_listing_pages": true
     },
     {
       "id": "punjab-board",
@@ -687,7 +710,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Punjab School Education Board Results.",
       "exam_category": "School Board Results",
       "state": "Punjab",
-      "region": "Punjab"
+      "region": "Punjab",
+      "discover_listing_pages": true
     },
     {
       "id": "assam-board",
@@ -706,7 +730,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
       "exam_category": "School Board Results",
       "state": "Assam",
-      "region": "Assam"
+      "region": "Assam",
+      "discover_listing_pages": true
     },
     {
       "id": "jkbose",
@@ -728,7 +753,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: JKBOSE results.",
       "exam_category": "School Board Results",
       "state": "Jammu and Kashmir",
-      "region": "Jammu and Kashmir"
+      "region": "Jammu and Kashmir",
+      "discover_listing_pages": true
     },
     {
       "id": "upsssc",
@@ -748,7 +774,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
       "exam_category": "State PSC / Recruitment",
       "state": "Uttar Pradesh",
-      "region": "Uttar Pradesh"
+      "region": "Uttar Pradesh",
+      "discover_listing_pages": true
     },
     {
       "id": "mppsc",
@@ -767,7 +794,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
       "exam_category": "State PSC / Recruitment",
       "state": "Madhya Pradesh",
-      "region": "Madhya Pradesh"
+      "region": "Madhya Pradesh",
+      "discover_listing_pages": true
     },
     {
       "id": "cgpsc",
@@ -786,7 +814,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
       "exam_category": "State PSC / Recruitment",
       "state": "Chhattisgarh",
-      "region": "Chhattisgarh"
+      "region": "Chhattisgarh",
+      "discover_listing_pages": true
     },
     {
       "id": "bpsc",
@@ -805,7 +834,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
       "exam_category": "State PSC / Recruitment",
       "state": "Bihar",
-      "region": "Bihar"
+      "region": "Bihar",
+      "discover_listing_pages": true
     },
     {
       "id": "rpsc",
@@ -824,7 +854,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
       "exam_category": "State PSC / Recruitment",
       "state": "Rajasthan",
-      "region": "Rajasthan"
+      "region": "Rajasthan",
+      "discover_listing_pages": true
     },
     {
       "id": "gpsc",
@@ -843,7 +874,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
       "exam_category": "State PSC / Recruitment",
       "state": "Gujarat",
-      "region": "Gujarat"
+      "region": "Gujarat",
+      "discover_listing_pages": true
     },
     {
       "id": "tnpsc",
@@ -862,7 +894,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
       "exam_category": "State PSC / Recruitment",
       "state": "Tamil Nadu",
-      "region": "Tamil Nadu"
+      "region": "Tamil Nadu",
+      "discover_listing_pages": true
     },
     {
       "id": "keralapsc",
@@ -884,7 +917,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated. Also covers duplicate registry entries: Kerala PSC candidate portal landing page.",
       "exam_category": "State PSC / Recruitment",
       "state": "Kerala",
-      "region": "Kerala"
+      "region": "Kerala",
+      "discover_listing_pages": true
     },
     {
       "id": "mpsc",
@@ -906,7 +940,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
       "exam_category": "State PSC / Recruitment",
       "state": "Maharashtra",
-      "region": "Maharashtra"
+      "region": "Maharashtra",
+      "discover_listing_pages": true
     },
     {
       "id": "wbpsc",
@@ -928,7 +963,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
       "exam_category": "State PSC / Recruitment",
       "state": "West Bengal",
-      "region": "West Bengal"
+      "region": "West Bengal",
+      "discover_listing_pages": true
     },
     {
       "id": "appsc",
@@ -950,7 +986,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
       "exam_category": "State PSC / Recruitment",
       "state": "Andhra Pradesh",
-      "region": "Andhra Pradesh"
+      "region": "Andhra Pradesh",
+      "discover_listing_pages": true
     },
     {
       "id": "tspsc",
@@ -969,7 +1006,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
       "exam_category": "State PSC / Recruitment",
       "state": "Telangana",
-      "region": "Telangana"
+      "region": "Telangana",
+      "discover_listing_pages": true
     },
     {
       "id": "opsc",
@@ -991,7 +1029,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
       "exam_category": "State PSC / Recruitment",
       "state": "Odisha",
-      "region": "Odisha"
+      "region": "Odisha",
+      "discover_listing_pages": true
     },
     {
       "id": "hpsc",
@@ -1013,7 +1052,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
       "exam_category": "State PSC / Recruitment",
       "state": "Haryana",
-      "region": "Haryana"
+      "region": "Haryana",
+      "discover_listing_pages": true
     },
     {
       "id": "uppsc",
@@ -1032,7 +1072,8 @@
       "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
       "exam_category": "State PSC / Recruitment",
       "state": "Uttar Pradesh",
-      "region": "Uttar Pradesh"
+      "region": "Uttar Pradesh",
+      "discover_listing_pages": true
     },
     {
       "id": "nabard",
@@ -1052,7 +1093,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Banking"
+      "exam_category": "Banking",
+      "discover_listing_pages": true
     },
     {
       "id": "lic-careers",
@@ -1072,7 +1114,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Banking"
+      "exam_category": "Banking",
+      "discover_listing_pages": true
     },
     {
       "id": "niacl",
@@ -1092,7 +1135,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Banking"
+      "exam_category": "Banking",
+      "discover_listing_pages": true
     },
     {
       "id": "epfindia",
@@ -1113,7 +1157,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "UPSC / Central Recruitment"
+      "exam_category": "UPSC / Central Recruitment",
+      "discover_listing_pages": true
     },
     {
       "id": "upsc-recruitment",
@@ -1133,7 +1178,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "UPSC / Central Recruitment"
+      "exam_category": "UPSC / Central Recruitment",
+      "discover_listing_pages": true
     },
     {
       "id": "nta-exams",
@@ -1153,7 +1199,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Entrance & Eligibility"
+      "exam_category": "Entrance & Eligibility",
+      "discover_listing_pages": true
     },
     {
       "id": "nta-cuetpg",
@@ -1173,7 +1220,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages. Also covers duplicate registry entries: CUET PG portal.",
-      "exam_category": "Entrance & Eligibility"
+      "exam_category": "Entrance & Eligibility",
+      "discover_listing_pages": true
     },
     {
       "id": "nta-csirnet",
@@ -1193,7 +1241,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Entrance & Eligibility"
+      "exam_category": "Entrance & Eligibility",
+      "discover_listing_pages": true
     },
     {
       "id": "jeeadv",
@@ -1234,7 +1283,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Teaching / Eligibility"
+      "exam_category": "Teaching / Eligibility",
+      "discover_listing_pages": true
     },
     {
       "id": "kvs",
@@ -1254,7 +1304,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Teaching / Eligibility"
+      "exam_category": "Teaching / Eligibility",
+      "discover_listing_pages": true
     },
     {
       "id": "nvs",
@@ -1274,7 +1325,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Teaching / Eligibility"
+      "exam_category": "Teaching / Eligibility",
+      "discover_listing_pages": true
     },
     {
       "id": "nta-nchm",
@@ -1294,7 +1346,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Updated to the NTA's currently listed NCHM JEE official portal.",
-      "exam_category": "Entrance & Eligibility"
+      "exam_category": "Entrance & Eligibility",
+      "discover_listing_pages": true
     },
     {
       "id": "rrb-ahmedabad",
@@ -1316,7 +1369,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Railways",
       "state": "Gujarat",
-      "region": "Gujarat"
+      "region": "Gujarat",
+      "discover_listing_pages": true
     },
     {
       "id": "rrb-ajmer",
@@ -1338,7 +1392,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Railways",
       "state": "Rajasthan",
-      "region": "Rajasthan"
+      "region": "Rajasthan",
+      "discover_listing_pages": true
     },
     {
       "id": "rrb-allahabad",
@@ -1360,7 +1415,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Railways",
       "state": "Uttar Pradesh",
-      "region": "Uttar Pradesh"
+      "region": "Uttar Pradesh",
+      "discover_listing_pages": true
     },
     {
       "id": "rrb-bangalore",
@@ -1382,7 +1438,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Railways",
       "state": "Karnataka",
-      "region": "Karnataka"
+      "region": "Karnataka",
+      "discover_listing_pages": true
     },
     {
       "id": "rrb-bhopal",
@@ -1404,7 +1461,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Railways",
       "state": "Madhya Pradesh",
-      "region": "Madhya Pradesh"
+      "region": "Madhya Pradesh",
+      "discover_listing_pages": true
     },
     {
       "id": "rrb-bilaspur",
@@ -1449,7 +1507,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Railways",
       "state": "Chandigarh",
-      "region": "Chandigarh"
+      "region": "Chandigarh",
+      "discover_listing_pages": true
     },
     {
       "id": "rrb-chennai",
@@ -1471,7 +1530,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Railways",
       "state": "Tamil Nadu",
-      "region": "Tamil Nadu"
+      "region": "Tamil Nadu",
+      "discover_listing_pages": true
     },
     {
       "id": "rrb-gorakhpur",
@@ -1493,7 +1553,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Railways",
       "state": "Uttar Pradesh",
-      "region": "Uttar Pradesh"
+      "region": "Uttar Pradesh",
+      "discover_listing_pages": true
     },
     {
       "id": "rrb-guwahati",
@@ -1515,7 +1576,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Railways",
       "state": "Assam",
-      "region": "Assam"
+      "region": "Assam",
+      "discover_listing_pages": true
     },
     {
       "id": "rrb-jammu",
@@ -1537,7 +1599,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages. Also covers duplicate registry entries: RRB Jammu.",
       "exam_category": "Railways",
       "state": "Jammu and Kashmir",
-      "region": "Jammu and Kashmir"
+      "region": "Jammu and Kashmir",
+      "discover_listing_pages": true
     },
     {
       "id": "rrb-kolkata",
@@ -1559,7 +1622,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Railways",
       "state": "West Bengal",
-      "region": "West Bengal"
+      "region": "West Bengal",
+      "discover_listing_pages": true
     },
     {
       "id": "rrb-malabar",
@@ -1581,7 +1645,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Railways",
       "state": "Kerala",
-      "region": "Kerala"
+      "region": "Kerala",
+      "discover_listing_pages": true
     },
     {
       "id": "rrb-mumbai",
@@ -1603,7 +1668,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Railways",
       "state": "Maharashtra",
-      "region": "Maharashtra"
+      "region": "Maharashtra",
+      "discover_listing_pages": true
     },
     {
       "id": "rrb-muzaffarpur",
@@ -1625,7 +1691,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Railways",
       "state": "Bihar",
-      "region": "Bihar"
+      "region": "Bihar",
+      "discover_listing_pages": true
     },
     {
       "id": "rrb-patna",
@@ -1647,7 +1714,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Railways",
       "state": "Bihar",
-      "region": "Bihar"
+      "region": "Bihar",
+      "discover_listing_pages": true
     },
     {
       "id": "rrb-ranchi",
@@ -1669,7 +1737,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Railways",
       "state": "Jharkhand",
-      "region": "Jharkhand"
+      "region": "Jharkhand",
+      "discover_listing_pages": true
     },
     {
       "id": "rrb-siliguri",
@@ -1691,7 +1760,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Railways",
       "state": "West Bengal",
-      "region": "West Bengal"
+      "region": "West Bengal",
+      "discover_listing_pages": true
     },
     {
       "id": "rrc-central",
@@ -1713,7 +1783,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Railways",
       "state": "Maharashtra",
-      "region": "Maharashtra"
+      "region": "Maharashtra",
+      "discover_listing_pages": true
     },
     {
       "id": "rrc-northern",
@@ -1735,7 +1806,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Railways",
       "state": "Delhi",
-      "region": "Delhi"
+      "region": "Delhi",
+      "discover_listing_pages": true
     },
     {
       "id": "rrc-western",
@@ -1757,7 +1829,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Railways",
       "state": "Maharashtra",
-      "region": "Maharashtra"
+      "region": "Maharashtra",
+      "discover_listing_pages": true
     },
     {
       "id": "rrc-eastern",
@@ -1779,7 +1852,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Railways",
       "state": "West Bengal",
-      "region": "West Bengal"
+      "region": "West Bengal",
+      "discover_listing_pages": true
     },
     {
       "id": "rrc-south-central",
@@ -1801,7 +1875,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Railways",
       "state": "Telangana",
-      "region": "Telangana"
+      "region": "Telangana",
+      "discover_listing_pages": true
     },
     {
       "id": "apsc",
@@ -1823,7 +1898,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "State PSC / Recruitment",
       "state": "Assam",
-      "region": "Assam"
+      "region": "Assam",
+      "discover_listing_pages": true
     },
     {
       "id": "arunachal-psc",
@@ -1845,7 +1921,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "State PSC / Recruitment",
       "state": "Arunachal Pradesh",
-      "region": "Arunachal Pradesh"
+      "region": "Arunachal Pradesh",
+      "discover_listing_pages": true
     },
     {
       "id": "manipur-psc",
@@ -1867,7 +1944,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "State PSC / Recruitment",
       "state": "Manipur",
-      "region": "Manipur"
+      "region": "Manipur",
+      "discover_listing_pages": true
     },
     {
       "id": "meghalaya-psc",
@@ -1889,7 +1967,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "State PSC / Recruitment",
       "state": "Meghalaya",
-      "region": "Meghalaya"
+      "region": "Meghalaya",
+      "discover_listing_pages": true
     },
     {
       "id": "mizoram-psc",
@@ -1911,7 +1990,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "State PSC / Recruitment",
       "state": "Mizoram",
-      "region": "Mizoram"
+      "region": "Mizoram",
+      "discover_listing_pages": true
     },
     {
       "id": "nagaland-psc",
@@ -1933,7 +2013,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "State PSC / Recruitment",
       "state": "Nagaland",
-      "region": "Nagaland"
+      "region": "Nagaland",
+      "discover_listing_pages": true
     },
     {
       "id": "sikkim-psc",
@@ -1955,7 +2036,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "State PSC / Recruitment",
       "state": "Sikkim",
-      "region": "Sikkim"
+      "region": "Sikkim",
+      "discover_listing_pages": true
     },
     {
       "id": "tripura-psc",
@@ -1977,7 +2059,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "State PSC / Recruitment",
       "state": "Tripura",
-      "region": "Tripura"
+      "region": "Tripura",
+      "discover_listing_pages": true
     },
     {
       "id": "jharkhand-psc",
@@ -1999,7 +2082,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "State PSC / Recruitment",
       "state": "Jharkhand",
-      "region": "Jharkhand"
+      "region": "Jharkhand",
+      "discover_listing_pages": true
     },
     {
       "id": "uttarakhand-psc",
@@ -2021,7 +2105,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "State PSC / Recruitment",
       "state": "Uttarakhand",
-      "region": "Uttarakhand"
+      "region": "Uttarakhand",
+      "discover_listing_pages": true
     },
     {
       "id": "hpssc",
@@ -2043,7 +2128,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages. Also covers duplicate registry entries: Himachal Pradesh Rajya Chayan Aayog.",
       "exam_category": "State PSC / Recruitment",
       "state": "Himachal Pradesh",
-      "region": "Himachal Pradesh"
+      "region": "Himachal Pradesh",
+      "discover_listing_pages": true
     },
     {
       "id": "jkssb",
@@ -2065,7 +2151,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Defence",
       "state": "Jammu and Kashmir",
-      "region": "Jammu and Kashmir"
+      "region": "Jammu and Kashmir",
+      "discover_listing_pages": true
     },
     {
       "id": "jkpsc",
@@ -2087,7 +2174,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "State PSC / Recruitment",
       "state": "Jammu and Kashmir",
-      "region": "Jammu and Kashmir"
+      "region": "Jammu and Kashmir",
+      "discover_listing_pages": true
     },
     {
       "id": "dsssb",
@@ -2109,7 +2197,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Defence",
       "state": "Delhi",
-      "region": "Delhi"
+      "region": "Delhi",
+      "discover_listing_pages": true
     },
     {
       "id": "bssc",
@@ -2131,7 +2220,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "SSC / Central Recruitment",
       "state": "Bihar",
-      "region": "Bihar"
+      "region": "Bihar",
+      "discover_listing_pages": true
     },
     {
       "id": "btsc",
@@ -2153,7 +2243,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "State PSC / Recruitment",
       "state": "Bihar",
-      "region": "Bihar"
+      "region": "Bihar",
+      "discover_listing_pages": true
     },
     {
       "id": "hssc",
@@ -2175,7 +2266,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "SSC / Central Recruitment",
       "state": "Haryana",
-      "region": "Haryana"
+      "region": "Haryana",
+      "discover_listing_pages": true
     },
     {
       "id": "osssc",
@@ -2197,7 +2289,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "SSC / Central Recruitment",
       "state": "Odisha",
-      "region": "Odisha"
+      "region": "Odisha",
+      "discover_listing_pages": true
     },
     {
       "id": "ossc",
@@ -2219,7 +2312,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "SSC / Central Recruitment",
       "state": "Odisha",
-      "region": "Odisha"
+      "region": "Odisha",
+      "discover_listing_pages": true
     },
     {
       "id": "maha-rojgar",
@@ -2241,7 +2335,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "State PSC / Recruitment",
       "state": "Maharashtra",
-      "region": "Maharashtra"
+      "region": "Maharashtra",
+      "discover_listing_pages": true
     },
     {
       "id": "up-police",
@@ -2263,7 +2358,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "State Recruitment / Police",
       "state": "Uttar Pradesh",
-      "region": "Uttar Pradesh"
+      "region": "Uttar Pradesh",
+      "discover_listing_pages": true
     },
     {
       "id": "bihar-police",
@@ -2285,7 +2381,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "State Recruitment / Police",
       "state": "Bihar",
-      "region": "Bihar"
+      "region": "Bihar",
+      "discover_listing_pages": true
     },
     {
       "id": "bihar-daroga",
@@ -2307,7 +2404,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "State Recruitment / Police",
       "state": "Bihar",
-      "region": "Bihar"
+      "region": "Bihar",
+      "discover_listing_pages": true
     },
     {
       "id": "mpesb",
@@ -2329,7 +2427,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "School Board Results",
       "state": "Madhya Pradesh",
-      "region": "Madhya Pradesh"
+      "region": "Madhya Pradesh",
+      "discover_listing_pages": true
     },
     {
       "id": "vyapam-cg",
@@ -2351,7 +2450,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages. Also covers duplicate registry entries: Chhattisgarh Professional Examination Board.",
       "exam_category": "State PSC / Recruitment",
       "state": "Chhattisgarh",
-      "region": "Chhattisgarh"
+      "region": "Chhattisgarh",
+      "discover_listing_pages": true
     },
     {
       "id": "rajasthan-rssb",
@@ -2373,7 +2473,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Defence",
       "state": "Rajasthan",
-      "region": "Rajasthan"
+      "region": "Rajasthan",
+      "discover_listing_pages": true
     },
     {
       "id": "rajasthan-police",
@@ -2395,7 +2496,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "State Recruitment / Police",
       "state": "Rajasthan",
-      "region": "Rajasthan"
+      "region": "Rajasthan",
+      "discover_listing_pages": true
     },
     {
       "id": "gujarat-ojas",
@@ -2417,7 +2519,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "State PSC / Recruitment",
       "state": "Gujarat",
-      "region": "Gujarat"
+      "region": "Gujarat",
+      "discover_listing_pages": true
     },
     {
       "id": "gujarat-gsssb",
@@ -2439,7 +2542,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Defence",
       "state": "Gujarat",
-      "region": "Gujarat"
+      "region": "Gujarat",
+      "discover_listing_pages": true
     },
     {
       "id": "tnusrb",
@@ -2461,7 +2565,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "State PSC / Recruitment",
       "state": "Tamil Nadu",
-      "region": "Tamil Nadu"
+      "region": "Tamil Nadu",
+      "discover_listing_pages": true
     },
     {
       "id": "tntrb",
@@ -2483,7 +2588,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Teaching / Eligibility",
       "state": "Tamil Nadu",
-      "region": "Tamil Nadu"
+      "region": "Tamil Nadu",
+      "discover_listing_pages": true
     },
     {
       "id": "tnmrbrecruit",
@@ -2505,7 +2611,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "State PSC / Recruitment",
       "state": "Tamil Nadu",
-      "region": "Tamil Nadu"
+      "region": "Tamil Nadu",
+      "discover_listing_pages": true
     },
     {
       "id": "kerala-devaswom",
@@ -2527,7 +2634,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "State PSC / Recruitment",
       "state": "Kerala",
-      "region": "Kerala"
+      "region": "Kerala",
+      "discover_listing_pages": true
     },
     {
       "id": "karnataka-kea",
@@ -2549,7 +2657,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Entrance & Eligibility",
       "state": "Karnataka",
-      "region": "Karnataka"
+      "region": "Karnataka",
+      "discover_listing_pages": true
     },
     {
       "id": "karnataka-kpsc",
@@ -2571,7 +2680,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "State PSC / Recruitment",
       "state": "Karnataka",
-      "region": "Karnataka"
+      "region": "Karnataka",
+      "discover_listing_pages": true
     },
     {
       "id": "karnataka-police",
@@ -2593,7 +2703,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "State Recruitment / Police",
       "state": "Karnataka",
-      "region": "Karnataka"
+      "region": "Karnataka",
+      "discover_listing_pages": true
     },
     {
       "id": "telangana-tslprb",
@@ -2615,7 +2726,8 @@
       "coverage_note": "Official Telangana Police Recruitment Board website, confirmed as tgprb.in; monitor this canonical domain.",
       "exam_category": "State Recruitment / Police",
       "state": "Telangana",
-      "region": "Telangana"
+      "region": "Telangana",
+      "discover_listing_pages": true
     },
     {
       "id": "ap-police",
@@ -2637,7 +2749,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "State Recruitment / Police",
       "state": "Andhra Pradesh",
-      "region": "Andhra Pradesh"
+      "region": "Andhra Pradesh",
+      "discover_listing_pages": true
     },
     {
       "id": "wbssc",
@@ -2659,7 +2772,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Teaching / Eligibility",
       "state": "West Bengal",
-      "region": "West Bengal"
+      "region": "West Bengal",
+      "discover_listing_pages": true
     },
     {
       "id": "wb-police",
@@ -2681,7 +2795,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "State Recruitment / Police",
       "state": "West Bengal",
-      "region": "West Bengal"
+      "region": "West Bengal",
+      "discover_listing_pages": true
     },
     {
       "id": "punjab-psc",
@@ -2703,7 +2818,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "State PSC / Recruitment",
       "state": "Punjab",
-      "region": "Punjab"
+      "region": "Punjab",
+      "discover_listing_pages": true
     },
     {
       "id": "punjab-sssb",
@@ -2725,7 +2841,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Defence",
       "state": "Punjab",
-      "region": "Punjab"
+      "region": "Punjab",
+      "discover_listing_pages": true
     },
     {
       "id": "assam-direct",
@@ -2747,7 +2864,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "State PSC / Recruitment",
       "state": "Assam",
-      "region": "Assam"
+      "region": "Assam",
+      "discover_listing_pages": true
     },
     {
       "id": "nios-results",
@@ -2767,7 +2885,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Entrance & Eligibility"
+      "exam_category": "Entrance & Eligibility",
+      "discover_listing_pages": true
     },
     {
       "id": "maharashtra-board",
@@ -2792,7 +2911,8 @@
       "coverage_note": "Official Maharashtra State Board portal; SSC/HSC results have dedicated pages.",
       "exam_category": "School Board Results",
       "state": "Maharashtra",
-      "region": "Maharashtra"
+      "region": "Maharashtra",
+      "discover_listing_pages": true
     },
     {
       "id": "karnataka-results",
@@ -2814,7 +2934,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Entrance & Eligibility",
       "state": "Karnataka",
-      "region": "Karnataka"
+      "region": "Karnataka",
+      "discover_listing_pages": true
     },
     {
       "id": "odisha-results",
@@ -2836,7 +2957,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Entrance & Eligibility",
       "state": "Odisha",
-      "region": "Odisha"
+      "region": "Odisha",
+      "discover_listing_pages": true
     },
     {
       "id": "ap-results",
@@ -2858,7 +2980,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Entrance & Eligibility",
       "state": "Andhra Pradesh",
-      "region": "Andhra Pradesh"
+      "region": "Andhra Pradesh",
+      "discover_listing_pages": true
     },
     {
       "id": "telangana-results",
@@ -2880,7 +3003,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Entrance & Eligibility",
       "state": "Telangana",
-      "region": "Telangana"
+      "region": "Telangana",
+      "discover_listing_pages": true
     },
     {
       "id": "ipu",
@@ -2900,7 +3024,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Entrance & Eligibility"
+      "exam_category": "Entrance & Eligibility",
+      "discover_listing_pages": true
     },
     {
       "id": "ignou",
@@ -2920,7 +3045,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Entrance & Eligibility"
+      "exam_category": "Entrance & Eligibility",
+      "discover_listing_pages": true
     },
     {
       "id": "du",
@@ -2942,7 +3068,8 @@
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
       "exam_category": "Entrance & Eligibility",
       "state": "Delhi",
-      "region": "Delhi"
+      "region": "Delhi",
+      "discover_listing_pages": true
     },
     {
       "id": "bhu",
@@ -2962,7 +3089,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Entrance & Eligibility"
+      "exam_category": "Entrance & Eligibility",
+      "discover_listing_pages": true
     },
     {
       "id": "neet-pg",
@@ -2982,7 +3110,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages. Also covers duplicate registry entries: National Board of Examinations in Medical Sciences.",
-      "exam_category": "Entrance & Eligibility"
+      "exam_category": "Entrance & Eligibility",
+      "discover_listing_pages": true
     },
     {
       "id": "nmc",
@@ -3002,7 +3131,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Professional Exams"
+      "exam_category": "Professional Exams",
+      "discover_listing_pages": true
     },
     {
       "id": "icai",
@@ -3022,7 +3152,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Professional Exams"
+      "exam_category": "Professional Exams",
+      "discover_listing_pages": true
     },
     {
       "id": "icsi",
@@ -3042,7 +3173,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Professional Exams"
+      "exam_category": "Professional Exams",
+      "discover_listing_pages": true
     },
     {
       "id": "icmai",
@@ -3062,7 +3194,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
-      "exam_category": "Professional Exams"
+      "exam_category": "Professional Exams",
+      "discover_listing_pages": true
     },
     {
       "id": "upsc-active-exams",
@@ -3084,7 +3217,8 @@
       "enabled": true,
       "last_reviewed": "2026-10-16",
       "coverage_note": "Official active-examinations list; covers UPSC civil services, NDA, CDS, CAPF, engineering, medical and other examinations.",
-      "exam_category": "UPSC / Central Recruitment"
+      "exam_category": "UPSC / Central Recruitment",
+      "discover_listing_pages": true
     },
     {
       "id": "upsc-online-ora",
@@ -3106,7 +3240,8 @@
       "enabled": true,
       "last_reviewed": "2026-10-16",
       "coverage_note": "Official UPSC online recruitment application portal.",
-      "exam_category": "UPSC / Central Recruitment"
+      "exam_category": "UPSC / Central Recruitment",
+      "discover_listing_pages": true
     },
     {
       "id": "rrcb-central",
@@ -3128,7 +3263,8 @@
       "enabled": true,
       "last_reviewed": "2026-10-16",
       "coverage_note": "Central RRB recruitment, notification and result status information. Also covers duplicate registry entries: Railway Recruitment Boards Central Directory.",
-      "exam_category": "Railways"
+      "exam_category": "Railways",
+      "discover_listing_pages": true
     },
     {
       "id": "indiapost-recruitment",
@@ -3150,7 +3286,8 @@
       "enabled": true,
       "last_reviewed": "2026-10-16",
       "coverage_note": "Official Department of Posts recruitment listings.",
-      "exam_category": "UPSC / Central Recruitment"
+      "exam_category": "UPSC / Central Recruitment",
+      "discover_listing_pages": true
     },
     {
       "id": "indiapost-gds",
@@ -3173,7 +3310,8 @@
       "enabled": true,
       "last_reviewed": "2026-10-16",
       "coverage_note": "Official GDS engagement schedule, notices and shortlisted candidates. Also covers duplicate registry entries: India Post GDS Engagement.",
-      "exam_category": "UPSC / Central Recruitment"
+      "exam_category": "UPSC / Central Recruitment",
+      "discover_listing_pages": true
     },
     {
       "id": "indian-navy",
@@ -3195,7 +3333,8 @@
       "enabled": true,
       "last_reviewed": "2026-10-16",
       "coverage_note": "Official Navy officer and Agniveer recruitment updates. Also covers duplicate registry entries: Indian Navy Recruitment.",
-      "exam_category": "Defence"
+      "exam_category": "Defence",
+      "discover_listing_pages": true
     },
     {
       "id": "indian-army",
@@ -3217,7 +3356,8 @@
       "enabled": true,
       "last_reviewed": "2026-10-16",
       "coverage_note": "Official Army recruitment and Agniveer notices. Also covers duplicate registry entries: Indian Army Recruitment.",
-      "exam_category": "Defence"
+      "exam_category": "Defence",
+      "discover_listing_pages": true
     },
     {
       "id": "indian-airforce-afcat",
@@ -3239,7 +3379,8 @@
       "enabled": true,
       "last_reviewed": "2026-10-16",
       "coverage_note": "Official AFCAT application and examination portal.",
-      "exam_category": "Defence"
+      "exam_category": "Defence",
+      "discover_listing_pages": true
     },
     {
       "id": "indian-airforce-careers",
@@ -3261,7 +3402,8 @@
       "enabled": true,
       "last_reviewed": "2026-10-16",
       "coverage_note": "Official Indian Air Force recruitment/career portal. Also covers duplicate registry entries: Indian Air Force Recruitment.",
-      "exam_category": "Defence"
+      "exam_category": "Defence",
+      "discover_listing_pages": true
     },
     {
       "id": "fci-recruitment",
@@ -3283,7 +3425,8 @@
       "enabled": true,
       "last_reviewed": "2026-10-16",
       "coverage_note": "Official FCI recruitment notices.",
-      "exam_category": "UPSC / Central Recruitment"
+      "exam_category": "UPSC / Central Recruitment",
+      "discover_listing_pages": true
     },
     {
       "id": "drdo-rac",
@@ -3305,7 +3448,8 @@
       "enabled": true,
       "last_reviewed": "2026-10-16",
       "coverage_note": "Official DRDO scientist recruitment, advertisements and recruitment notices.",
-      "exam_category": "UPSC / Central Recruitment"
+      "exam_category": "UPSC / Central Recruitment",
+      "discover_listing_pages": true
     },
     {
       "id": "isro-careers",
@@ -3327,7 +3471,8 @@
       "enabled": true,
       "last_reviewed": "2026-10-16",
       "coverage_note": "Official ISRO recruitment and centralised recruitment opportunities.",
-      "exam_category": "UPSC / Central Recruitment"
+      "exam_category": "UPSC / Central Recruitment",
+      "discover_listing_pages": true
     },
     {
       "id": "aiims-exams",
@@ -3349,7 +3494,8 @@
       "enabled": true,
       "last_reviewed": "2026-10-16",
       "coverage_note": "Official AIIMS entrance examinations, recruitment examinations and results.",
-      "exam_category": "UPSC / Central Recruitment"
+      "exam_category": "UPSC / Central Recruitment",
+      "discover_listing_pages": true
     },
     {
       "id": "esic-recruitment",
@@ -3371,7 +3517,8 @@
       "enabled": true,
       "last_reviewed": "2026-10-16",
       "coverage_note": "Official ESIC recruitment and examination notices.",
-      "exam_category": "UPSC / Central Recruitment"
+      "exam_category": "UPSC / Central Recruitment",
+      "discover_listing_pages": true
     },
     {
       "id": "nielit-recruitment",
@@ -3393,7 +3540,8 @@
       "enabled": true,
       "last_reviewed": "2026-10-16",
       "coverage_note": "Official NIELIT recruitment and examination notices.",
-      "exam_category": "UPSC / Central Recruitment"
+      "exam_category": "UPSC / Central Recruitment",
+      "discover_listing_pages": true
     },
     {
       "id": "sebi-careers",
@@ -3415,7 +3563,8 @@
       "enabled": true,
       "last_reviewed": "2026-10-16",
       "coverage_note": "Official securities regulator notices and recruitment announcements.",
-      "exam_category": "UPSC / Central Recruitment"
+      "exam_category": "UPSC / Central Recruitment",
+      "discover_listing_pages": true
     },
     {
       "id": "irdai-careers",
@@ -3437,7 +3586,8 @@
       "enabled": true,
       "last_reviewed": "2026-10-16",
       "coverage_note": "Official insurance regulator recruitment and examination notices.",
-      "exam_category": "UPSC / Central Recruitment"
+      "exam_category": "UPSC / Central Recruitment",
+      "discover_listing_pages": true
     },
     {
       "id": "pfrda-careers",
@@ -3459,7 +3609,8 @@
       "enabled": true,
       "last_reviewed": "2026-10-16",
       "coverage_note": "Official pension regulator recruitment announcements.",
-      "exam_category": "Banking"
+      "exam_category": "Banking",
+      "discover_listing_pages": true
     },
     {
       "id": "sidbi-careers",
@@ -3481,7 +3632,8 @@
       "enabled": true,
       "last_reviewed": "2026-10-16",
       "coverage_note": "Official SIDBI recruitment announcements.",
-      "exam_category": "UPSC / Central Recruitment"
+      "exam_category": "UPSC / Central Recruitment",
+      "discover_listing_pages": true
     },
     {
       "id": "csir-hrdg",
@@ -3503,7 +3655,8 @@
       "enabled": true,
       "last_reviewed": "2026-10-16",
       "coverage_note": "Official CSIR examination and fellowship notices including NET.",
-      "exam_category": "UPSC / Central Recruitment"
+      "exam_category": "UPSC / Central Recruitment",
+      "discover_listing_pages": true
     },
     {
       "id": "barc-recruitment",
@@ -3525,7 +3678,8 @@
       "enabled": true,
       "last_reviewed": "2026-10-16",
       "coverage_note": "Official BARC recruitment portal.",
-      "exam_category": "UPSC / Central Recruitment"
+      "exam_category": "UPSC / Central Recruitment",
+      "discover_listing_pages": true
     },
     {
       "id": "cbse-results-official",
@@ -3547,7 +3701,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official CBSE/NIC result portal; use the non-www hostname to avoid the observed www DNS failure.",
-      "exam_category": "Entrance & Eligibility"
+      "exam_category": "Entrance & Eligibility",
+      "discover_listing_pages": true
     },
     {
       "id": "cisce-results",
@@ -3593,7 +3748,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "CRPF official recruitment/results URLs redirect to crpf.mha.gov.in; allowlist includes the official redirect target.",
-      "exam_category": "Entrance & Eligibility"
+      "exam_category": "Entrance & Eligibility",
+      "discover_listing_pages": true
     },
     {
       "id": "crpf-recruitment",
@@ -3617,7 +3773,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "CRPF official recruitment/results URLs redirect to crpf.mha.gov.in; allowlist includes the official redirect target.",
-      "exam_category": "Defence"
+      "exam_category": "Defence",
+      "discover_listing_pages": true
     },
     {
       "id": "ssb-recruitment",
@@ -3639,7 +3796,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
-      "exam_category": "Defence"
+      "exam_category": "Defence",
+      "discover_listing_pages": true
     },
     {
       "id": "coast-guard-recruitment",
@@ -3661,7 +3819,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites. Also covers duplicate registry entries: Indian Coast Guard and maritime recruitment notices.",
-      "exam_category": "UPSC / Central Recruitment"
+      "exam_category": "UPSC / Central Recruitment",
+      "discover_listing_pages": true
     },
     {
       "id": "coast-guard-home",
@@ -3683,7 +3842,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
-      "exam_category": "UPSC / Central Recruitment"
+      "exam_category": "UPSC / Central Recruitment",
+      "discover_listing_pages": true
     },
     {
       "id": "merchant-navy-imu",
@@ -3705,7 +3865,8 @@
       "enabled": true,
       "last_reviewed": null,
       "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
-      "exam_category": "Defence"
+      "exam_category": "Defence",
+      "discover_listing_pages": true
     },
     {
       "id": "hpbose-results",
@@ -3729,7 +3890,8 @@
       "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
       "exam_category": "Entrance & Eligibility",
       "state": "Himachal Pradesh",
-      "region": "Himachal Pradesh"
+      "region": "Himachal Pradesh",
+      "discover_listing_pages": true
     },
     {
       "id": "ubse-results",
@@ -3753,7 +3915,8 @@
       "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
       "exam_category": "Entrance & Eligibility",
       "state": "Uttarakhand",
-      "region": "Uttarakhand"
+      "region": "Uttarakhand",
+      "discover_listing_pages": true
     },
     {
       "id": "manipur-board",
@@ -3777,7 +3940,8 @@
       "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
       "exam_category": "School Board Results",
       "state": "Manipur",
-      "region": "Manipur"
+      "region": "Manipur",
+      "discover_listing_pages": true
     },
     {
       "id": "tripura-board",
@@ -3801,7 +3965,8 @@
       "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
       "exam_category": "School Board Results",
       "state": "Tripura",
-      "region": "Tripura"
+      "region": "Tripura",
+      "discover_listing_pages": true
     },
     {
       "id": "meghalaya-board",
@@ -3825,7 +3990,8 @@
       "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
       "exam_category": "School Board Results",
       "state": "Meghalaya",
-      "region": "Meghalaya"
+      "region": "Meghalaya",
+      "discover_listing_pages": true
     },
     {
       "id": "mizoram-board",
@@ -3849,7 +4015,8 @@
       "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
       "exam_category": "School Board Results",
       "state": "Mizoram",
-      "region": "Mizoram"
+      "region": "Mizoram",
+      "discover_listing_pages": true
     },
     {
       "id": "nagaland-board",
@@ -3873,7 +4040,8 @@
       "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
       "exam_category": "School Board Results",
       "state": "Nagaland",
-      "region": "Nagaland"
+      "region": "Nagaland",
+      "discover_listing_pages": true
     },
     {
       "id": "sikkim-board",
@@ -3897,7 +4065,8 @@
       "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
       "exam_category": "School Board Results",
       "state": "Sikkim",
-      "region": "Sikkim"
+      "region": "Sikkim",
+      "discover_listing_pages": true
     },
     {
       "id": "goa-board",
@@ -3921,7 +4090,8 @@
       "coverage_note": "Official Goa Board site; www hostname used because the bare domain had intermittent DNS failures.",
       "exam_category": "School Board Results",
       "state": "Goa",
-      "region": "Goa"
+      "region": "Goa",
+      "discover_listing_pages": true
     },
     {
       "id": "kerala-board-official",
@@ -3945,7 +4115,8 @@
       "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
       "exam_category": "School Board Results",
       "state": "Kerala",
-      "region": "Kerala"
+      "region": "Kerala",
+      "discover_listing_pages": true
     },
     {
       "id": "assam-board-official",
@@ -3969,7 +4140,8 @@
       "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
       "exam_category": "School Board Results",
       "state": "Assam",
-      "region": "Assam"
+      "region": "Assam",
+      "discover_listing_pages": true
     },
     {
       "id": "westbengal-board-official",
@@ -3993,7 +4165,8 @@
       "coverage_note": "Official landing page; confirm portal reachability and result/recruitment links during scheduled runs. Automated access may be limited on some government sites.",
       "exam_category": "School Board Results",
       "state": "West Bengal",
-      "region": "West Bengal"
+      "region": "West Bengal",
+      "discover_listing_pages": true
     },
     {
       "id": "tamilnadu-board-official",
@@ -4017,7 +4190,8 @@
       "coverage_note": "Official Directorate of Government Examinations portal; canonical non-www hostname.",
       "exam_category": "School Board Results",
       "state": "Tamil Nadu",
-      "region": "Tamil Nadu"
+      "region": "Tamil Nadu",
+      "discover_listing_pages": true
     },
     {
       "id": "ibps-recent-updates",
@@ -4087,7 +4261,8 @@
       "exam_category": "Banking",
       "enabled": true,
       "last_reviewed": "2026-10-16",
-      "coverage_note": "Dedicated official SBI careers current-openings page."
+      "coverage_note": "Dedicated official SBI careers current-openings page.",
+      "discover_listing_pages": true
     },
     {
       "id": "sbi-recruitment-results",
@@ -4111,7 +4286,8 @@
       "exam_category": "Banking",
       "enabled": true,
       "last_reviewed": "2026-10-16",
-      "coverage_note": "Dedicated official SBI recruitment-results page."
+      "coverage_note": "Dedicated official SBI recruitment-results page.",
+      "discover_listing_pages": true
     },
     {
       "id": "goa-government",
@@ -4131,7 +4307,8 @@
       "coverage_note": "Official Goa Government portal; scanner accepts only links whose titles resemble exam, result, or recruitment notices.",
       "exam_category": "State PSC / Recruitment",
       "state": "Goa",
-      "region": "Goa"
+      "region": "Goa",
+      "discover_listing_pages": true
     },
     {
       "id": "andaman-administration",
@@ -4151,7 +4328,8 @@
       "coverage_note": "Official Union Territory administration portal; relevant exam and recruitment links may be listed here.",
       "exam_category": "State PSC / Recruitment",
       "state": "Andaman and Nicobar Islands",
-      "region": "Andaman and Nicobar Islands"
+      "region": "Andaman and Nicobar Islands",
+      "discover_listing_pages": true
     },
     {
       "id": "chandigarh-administration",
@@ -4171,7 +4349,8 @@
       "coverage_note": "Official Union Territory administration portal; relevant recruitment notices may be listed here.",
       "exam_category": "State PSC / Recruitment",
       "state": "Chandigarh",
-      "region": "Chandigarh"
+      "region": "Chandigarh",
+      "discover_listing_pages": true
     },
     {
       "id": "dnh-dd-administration",
@@ -4191,7 +4370,8 @@
       "coverage_note": "Official Union Territory administration portal; relevant recruitment notices may be listed here.",
       "exam_category": "State PSC / Recruitment",
       "state": "Dadra and Nagar Haveli and Daman and Diu",
-      "region": "Dadra and Nagar Haveli and Daman and Diu"
+      "region": "Dadra and Nagar Haveli and Daman and Diu",
+      "discover_listing_pages": true
     },
     {
       "id": "ladakh-administration",
@@ -4211,7 +4391,8 @@
       "coverage_note": "Official Union Territory administration portal; relevant recruitment notices may be listed here.",
       "exam_category": "State PSC / Recruitment",
       "state": "Ladakh",
-      "region": "Ladakh"
+      "region": "Ladakh",
+      "discover_listing_pages": true
     },
     {
       "id": "lakshadweep-administration",
@@ -4231,7 +4412,8 @@
       "coverage_note": "Official Union Territory administration portal; relevant recruitment notices may be listed here.",
       "exam_category": "State PSC / Recruitment",
       "state": "Lakshadweep",
-      "region": "Lakshadweep"
+      "region": "Lakshadweep",
+      "discover_listing_pages": true
     },
     {
       "id": "puducherry-government",
@@ -4251,7 +4433,8 @@
       "coverage_note": "Official Union Territory government portal; relevant recruitment notices may be listed here.",
       "exam_category": "State PSC / Recruitment",
       "state": "Puducherry",
-      "region": "Puducherry"
+      "region": "Puducherry",
+      "discover_listing_pages": true
     },
     {
       "id": "upsc-exam-calendar",
@@ -4273,7 +4456,8 @@
       "enabled": true,
       "last_reviewed": "2026-10-16",
       "coverage_note": "Official UPSC annual exam calendar; covers Civil Services Preliminary and Main, NDA, CDS, CAPF, Engineering Services and other scheduled examinations.",
-      "exam_category": "UPSC / Central Recruitment"
+      "exam_category": "UPSC / Central Recruitment",
+      "discover_listing_pages": true
     },
     {
       "id": "upsc-active-examinations",
@@ -4295,7 +4479,8 @@
       "enabled": true,
       "last_reviewed": "2026-10-16",
       "coverage_note": "Official active examination listing; use alongside the UPSC home page and written-result archive.",
-      "exam_category": "UPSC / Central Recruitment"
+      "exam_category": "UPSC / Central Recruitment",
+      "discover_listing_pages": true
     },
     {
       "id": "upsc-written-results-archive",
@@ -4314,7 +4499,8 @@
       "enabled": true,
       "last_reviewed": "2026-10-16",
       "coverage_note": "Official UPSC written-result index for preliminary, main and other written examination stages.",
-      "exam_category": "UPSC / Central Recruitment"
+      "exam_category": "UPSC / Central Recruitment",
+      "discover_listing_pages": true
     },
     {
       "id": "jeemain-public-notices",
@@ -4337,7 +4523,8 @@
       "enabled": true,
       "last_reviewed": "2026-10-16",
       "coverage_note": "Official JEE Main portal covering both sessions, Paper 1, Paper 2, applications, admit cards, answer keys and scorecards.",
-      "exam_category": "Entrance & Eligibility"
+      "exam_category": "Entrance & Eligibility",
+      "discover_listing_pages": true
     },
     {
       "id": "jeeadv-official",
@@ -4359,7 +4546,8 @@
       "enabled": true,
       "last_reviewed": "2026-10-16",
       "coverage_note": "Official JEE Advanced examination, registration, admit card, answer key and result portal.",
-      "exam_category": "Entrance & Eligibility"
+      "exam_category": "Entrance & Eligibility",
+      "discover_listing_pages": true
     },
     {
       "id": "neet-ug-public-notices",
@@ -4382,7 +4570,8 @@
       "enabled": true,
       "last_reviewed": "2026-10-16",
       "coverage_note": "Official NEET UG notices, application, city intimation, admit card, answer key, OMR and result portal.",
-      "exam_category": "Entrance & Eligibility"
+      "exam_category": "Entrance & Eligibility",
+      "discover_listing_pages": true
     },
     {
       "id": "neet-pg-nbems",
@@ -4404,7 +4593,8 @@
       "enabled": true,
       "last_reviewed": "2026-10-16",
       "coverage_note": "Official NBEMS portal for NEET PG and other postgraduate medical examinations, notices, admit cards and results.",
-      "exam_category": "Entrance & Eligibility"
+      "exam_category": "Entrance & Eligibility",
+      "discover_listing_pages": true
     },
     {
       "id": "mpsc-announcements",
@@ -4428,7 +4618,8 @@
       "coverage_note": "Dedicated official MPSC announcements/circulars page; covers State Services prelims and mains, Group B/C and other recruitment notices.",
       "exam_category": "State PSC / Recruitment",
       "state": "Maharashtra",
-      "region": "Maharashtra"
+      "region": "Maharashtra",
+      "discover_listing_pages": true
     },
     {
       "id": "mpsc-merit-lists",
@@ -4449,7 +4640,8 @@
       "coverage_note": "Dedicated official MPSC merit-list/results index.",
       "exam_category": "State PSC / Recruitment",
       "state": "Maharashtra",
-      "region": "Maharashtra"
+      "region": "Maharashtra",
+      "discover_listing_pages": true
     },
     {
       "id": "mpsc-final-recommendations",
@@ -4468,7 +4660,8 @@
       "coverage_note": "Dedicated official MPSC final recommendation/result index.",
       "exam_category": "State PSC / Recruitment",
       "state": "Maharashtra",
-      "region": "Maharashtra"
+      "region": "Maharashtra",
+      "discover_listing_pages": true
     },
     {
       "id": "mpsc-answer-keys",
@@ -4488,7 +4681,8 @@
       "coverage_note": "Dedicated official MPSC examination answer-key index.",
       "exam_category": "State PSC / Recruitment",
       "state": "Maharashtra",
-      "region": "Maharashtra"
+      "region": "Maharashtra",
+      "discover_listing_pages": true
     },
     {
       "id": "mpsc-interview-schedules",
@@ -4508,7 +4702,8 @@
       "coverage_note": "Dedicated official MPSC interview-schedule index.",
       "exam_category": "State PSC / Recruitment",
       "state": "Maharashtra",
-      "region": "Maharashtra"
+      "region": "Maharashtra",
+      "discover_listing_pages": true
     },
     {
       "id": "maharashtra-cet-cell",
@@ -4533,7 +4728,8 @@
       "coverage_note": "Official Maharashtra CET Cell portal for MHT-CET and state professional-course entrance examinations.",
       "exam_category": "Entrance & Eligibility",
       "state": "Maharashtra",
-      "region": "Maharashtra"
+      "region": "Maharashtra",
+      "discover_listing_pages": true
     },
     {
       "id": "maharashtra-ssc-results",
@@ -4554,7 +4750,8 @@
       "coverage_note": "Official Maharashtra Board SSC results page. If the official site is under maintenance, use the board's main site.",
       "exam_category": "School Board Results",
       "state": "Maharashtra",
-      "region": "Maharashtra"
+      "region": "Maharashtra",
+      "discover_listing_pages": true
     },
     {
       "id": "maharashtra-hsc-results",
@@ -4575,7 +4772,8 @@
       "coverage_note": "Official Maharashtra Board HSC results page. If the official site is under maintenance, use the board's main site.",
       "exam_category": "School Board Results",
       "state": "Maharashtra",
-      "region": "Maharashtra"
+      "region": "Maharashtra",
+      "discover_listing_pages": true
     },
     {
       "id": "portal-maharashtra-www-mahahsscboard-in",
@@ -4597,7 +4795,8 @@
       "state": "Maharashtra",
       "region": "Maharashtra",
       "exam_category": "State PSC / Recruitment",
-      "coverage_note": "Official state portal added to improve exam-notice coverage; scan results still depend on the portal's public page structure."
+      "coverage_note": "Official state portal added to improve exam-notice coverage; scan results still depend on the portal's public page structure.",
+      "discover_listing_pages": true
     },
     {
       "id": "portal-maharashtra-maharashtra-gov-in",
@@ -4619,7 +4818,8 @@
       "state": "Maharashtra",
       "region": "Maharashtra",
       "exam_category": "State PSC / Recruitment",
-      "coverage_note": "Official state portal added to improve exam-notice coverage; scan results still depend on the portal's public page structure."
+      "coverage_note": "Official state portal added to improve exam-notice coverage; scan results still depend on the portal's public page structure.",
+      "discover_listing_pages": true
     },
     {
       "id": "portal-delhi-delhi-gov-in",
@@ -4641,7 +4841,8 @@
       "state": "Delhi",
       "region": "Delhi",
       "exam_category": "State PSC / Recruitment",
-      "coverage_note": "Official state portal added to improve exam-notice coverage; scan results still depend on the portal's public page structure."
+      "coverage_note": "Official state portal added to improve exam-notice coverage; scan results still depend on the portal's public page structure.",
+      "discover_listing_pages": true
     },
     {
       "id": "du-exam-branch",
@@ -4664,7 +4865,8 @@
       "state": "Delhi",
       "region": "Delhi",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "jnu",
@@ -4687,7 +4889,8 @@
       "state": "Delhi",
       "region": "Delhi",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "amu",
@@ -4710,7 +4913,8 @@
       "state": "Uttar Pradesh",
       "region": "Uttar Pradesh",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "jamia",
@@ -4733,7 +4937,8 @@
       "state": "Delhi",
       "region": "Delhi",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "mumbai-university",
@@ -4756,7 +4961,8 @@
       "state": "Maharashtra",
       "region": "Maharashtra",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "sppu",
@@ -4779,7 +4985,8 @@
       "state": "Maharashtra",
       "region": "Maharashtra",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "calcutta-university",
@@ -4802,7 +5009,8 @@
       "state": "West Bengal",
       "region": "West Bengal",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "jadavpur-university",
@@ -4825,7 +5033,8 @@
       "state": "West Bengal",
       "region": "West Bengal",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "gauhati-university",
@@ -4848,7 +5057,8 @@
       "state": "Assam",
       "region": "Assam",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "dibrugarh-university",
@@ -4871,7 +5081,8 @@
       "state": "Assam",
       "region": "Assam",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "rajasthan-university",
@@ -4894,7 +5105,8 @@
       "state": "Rajasthan",
       "region": "Rajasthan",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "vtu",
@@ -4917,7 +5129,8 @@
       "state": "Karnataka",
       "region": "Karnataka",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "anna-university",
@@ -4940,7 +5153,8 @@
       "state": "Tamil Nadu",
       "region": "Tamil Nadu",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "calicut-university",
@@ -4963,7 +5177,8 @@
       "state": "Kerala",
       "region": "Kerala",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "kerala-university",
@@ -4986,7 +5201,8 @@
       "state": "Kerala",
       "region": "Kerala",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "osmania-university",
@@ -5009,7 +5225,8 @@
       "state": "Telangana",
       "region": "Telangana",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "utkal-university",
@@ -5032,7 +5249,8 @@
       "state": "Odisha",
       "region": "Odisha",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "patna-university",
@@ -5055,7 +5273,8 @@
       "state": "Bihar",
       "region": "Bihar",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "ranchi-university",
@@ -5078,7 +5297,8 @@
       "state": "Jharkhand",
       "region": "Jharkhand",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "panjab-university",
@@ -5101,7 +5321,8 @@
       "state": "Chandigarh",
       "region": "Chandigarh",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "jammu-university",
@@ -5124,7 +5345,8 @@
       "state": "Jammu and Kashmir",
       "region": "Jammu and Kashmir",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "kashmir-university",
@@ -5147,7 +5369,8 @@
       "state": "Jammu and Kashmir",
       "region": "Jammu and Kashmir",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "hp-university",
@@ -5170,7 +5393,8 @@
       "state": "Himachal Pradesh",
       "region": "Himachal Pradesh",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "goa-university",
@@ -5193,7 +5417,8 @@
       "state": "Goa",
       "region": "Goa",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "andhra-university",
@@ -5216,7 +5441,8 @@
       "state": "Andhra Pradesh",
       "region": "Andhra Pradesh",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "jntuh",
@@ -5239,7 +5465,8 @@
       "state": "Telangana",
       "region": "Telangana",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "jntua",
@@ -5262,7 +5489,8 @@
       "state": "Andhra Pradesh",
       "region": "Andhra Pradesh",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "gujarat-university",
@@ -5285,7 +5513,8 @@
       "state": "Gujarat",
       "region": "Gujarat",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "hptu",
@@ -5308,7 +5537,8 @@
       "state": "Himachal Pradesh",
       "region": "Himachal Pradesh",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "sambalpur-university",
@@ -5331,7 +5561,8 @@
       "state": "Odisha",
       "region": "Odisha",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "magadh-university",
@@ -5354,7 +5585,8 @@
       "state": "Bihar",
       "region": "Bihar",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "kurukshetra-university",
@@ -5377,7 +5609,8 @@
       "state": "Haryana",
       "region": "Haryana",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "kumaun-university",
@@ -5400,7 +5633,8 @@
       "state": "Uttarakhand",
       "region": "Uttarakhand",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "tripura-university",
@@ -5423,7 +5657,8 @@
       "state": "Tripura",
       "region": "Tripura",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "nehu",
@@ -5446,7 +5681,8 @@
       "state": "Meghalaya",
       "region": "Meghalaya",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "manipur-university",
@@ -5469,7 +5705,8 @@
       "state": "Manipur",
       "region": "Manipur",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "mizoram-university",
@@ -5492,7 +5729,8 @@
       "state": "Mizoram",
       "region": "Mizoram",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "nagaland-university",
@@ -5515,7 +5753,8 @@
       "state": "Nagaland",
       "region": "Nagaland",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "sikkim-university",
@@ -5538,7 +5777,8 @@
       "state": "Sikkim",
       "region": "Sikkim",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "rajiv-gandhi-university",
@@ -5561,7 +5801,8 @@
       "state": "Arunachal Pradesh",
       "region": "Arunachal Pradesh",
       "exam_category": "University Results",
-      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules."
+      "coverage_note": "Official university portal. Notices appear when the public listing is readable and matches the exam-update rules.",
+      "discover_listing_pages": true
     },
     {
       "id": "du-exam-results-archive",
@@ -5824,7 +6065,8 @@
       "enabled": true,
       "last_reviewed": "2026-10-18",
       "coverage_note": "Dedicated official SSC Northern Region What's New listing; direct notice links are extracted from the official listing.",
-      "exam_category": "SSC / Central Recruitment"
+      "exam_category": "SSC / Central Recruitment",
+      "discover_listing_pages": true
     },
     {
       "id": "nta-data-public-notices",
@@ -5846,7 +6088,8 @@
       "enabled": true,
       "last_reviewed": "2026-10-18",
       "coverage_note": "Official NTA public-notice portal; separate from the general NTA homepage.",
-      "exam_category": "Entrance & Eligibility"
+      "exam_category": "Entrance & Eligibility",
+      "discover_listing_pages": true
     },
     {
       "id": "upsc-whats-new",
