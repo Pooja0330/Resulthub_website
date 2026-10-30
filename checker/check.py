@@ -488,14 +488,14 @@ def is_stale_notice(title, published=""):
     return False
 
 
-def discover_listing_urls(soup, base_url, hosts, limit=3):
+def discover_listing_urls(soup, base_url, hosts, limit=6):
     """Find a small number of likely official notice-listing pages on the same allowlisted portal."""
     candidates = []
     seen = set()
     listing_hint = re.compile(
         r"(latest|what.?s new|news|notice|notification|announcement|circular|"
         r"result|recruitment|career|admit.?card|answer.?key|examination|"
-        r"public notice|press release|updates|advertisement)",
+        r"public notice|press release|updates|advertisement|next|older|previous|page)",
         re.I,
     )
     ignored_path = re.compile(
@@ -521,13 +521,18 @@ def discover_listing_urls(soup, base_url, hosts, limit=3):
         # Avoid sending query-only links, login pages, search pages and generic navigation.
         if re.search(r"(login|sign.?in|register|search|contact|privacy|accessibility)", label + " " + parsed.path, re.I):
             continue
-        if not listing_hint.search(label + " " + parsed.path):
+        # Pagination controls are useful only on the same official portal and
+        # are kept behind the same strict six-page crawl bound.
+        is_pagination = bool(re.search(r"(next|older|previous|page\\s*\\d+)", label, re.I)
+                             or re.search(r"(?:[?&](?:page|paged|p)=\\d+|/page/\\d+)", href, re.I))
+        if not listing_hint.search(label + " " + parsed.path) and not is_pagination:
             continue
         seen.add(href)
-        candidates.append((0 if re.search(r"(latest|what.?s new|notice|notification|result|recruitment|announcement|updates)", label, re.I) else 1, href))
+        priority = 0 if re.search(r"(latest|what.?s new|notice|notification|result|recruitment|announcement|updates)", label, re.I) else (1 if is_pagination else 2)
+        candidates.append((priority, href))
 
     candidates.sort(key=lambda item: (item[0], item[1]))
-    return [url for _, url in candidates[:max(0, min(limit, 3))]]
+    return [url for _, url in candidates[:max(0, min(limit, 6))]]
 
 
 def fetch_source(source):
@@ -619,21 +624,42 @@ def fetch_source(source):
     # Homepages frequently expose only a few generic links. If they yield fewer
     # than three useful notices, inspect up to three official listing pages as a
     # fallback; never crawl arbitrary external hosts or an unbounded link graph.
-    initial_count = sum(
-        1 for title, link, published in links
-        if classify_source_title(" ".join(str(title or "").split()), source)
-        and host_allowed(link, hosts)
-    )
+    # Count only fresh, publishable candidates. Three old notices on a homepage
+    # must not prevent the scanner from checking the deeper official notice list.
+    initial_urls = set()
+    initial_count = 0
+    for title, link, published in links:
+        normalized = normalize_notice_url(link)
+        if (normalized and normalized not in initial_urls
+                and classify_source_title(" ".join(str(title or "").split()), source)
+                and not is_navigation_noise_title(title)
+                and not is_speculative_status_title(title)
+                and not is_stale_notice(title, published)
+                and host_allowed(link, hosts)):
+            initial_urls.add(normalized)
+            initial_count += 1
+
     pages_scanned = 1
     if kind != "rss" and source.get("discover_listing_pages", False) and initial_count < 3:
-        for listing_url in listing_urls:
+        # Inspect up to six official listing pages (including pagination) rather
+        # than stopping at the first three links, which may be stale or generic.
+        inspected_pages = set()
+        page_queue = list(listing_urls)
+        while page_queue and pages_scanned < 7:
+            listing_url = page_queue.pop(0)
+            if listing_url in inspected_pages:
+                continue
+            inspected_pages.add(listing_url)
             try:
                 listing_response = get_with_retries(listing_url)
                 if not host_allowed(listing_response.url, hosts):
                     print(f"SKIP listing page redirected outside allowlist for {name}")
                     continue
-                extra_links, _ = links_from_response(listing_response)
+                extra_links, extra_listing_urls = links_from_response(listing_response)
                 links.extend(extra_links)
+                for next_url in extra_listing_urls:
+                    if next_url not in inspected_pages and next_url not in page_queue:
+                        page_queue.append(next_url)
                 pages_scanned += 1
             except Exception as exc:
                 print(f"WARN listing page failed for {name}: {type(exc).__name__}: {str(exc)[:120]}")
