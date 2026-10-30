@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - "site/**"
+      - "checker/build_seo_pages.py"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 
@@ -31,6 +32,12 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
+      - name: Set up Python for SEO page generation
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Generate crawlable update pages and sitemap
+        run: python checker/build_seo_pages.py
       - uses: actions/configure-pages@v5
       - name: Upload website
         uses: actions/upload-pages-artifact@v3
