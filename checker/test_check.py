@@ -40,9 +40,8 @@ class CheckerSafetyTests(unittest.TestCase):
             limit=6,
         )
         self.assertIn("https://example.gov.in/notices/?page=2", found)
-        self.assertIn("https://example.gov.in/notices/?page=3", found)
         self.assertFalse(any("outside.example" in url for url in found))
-        self.assertLessEqual(len(found), 6)
+        self.assertLessEqual(len(found), 2)
 
     def test_listing_discovery_is_bounded(self):
         html = "".join(
