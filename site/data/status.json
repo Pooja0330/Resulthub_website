@@ -1,14 +1,14 @@
 {
-  "last_checked_at": "2026-10-29T20:27:12.179034+00:00",
+  "last_checked_at": "2026-10-30T00:05:48.896136+00:00",
   "sources_enabled": 296,
-  "sources_succeeded": 146,
-  "sources_failed": 150,
+  "sources_succeeded": 150,
+  "sources_failed": 146,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 95, SSLError: 29, ConnectionError: 25, HTTPError: 17, ReadTimeout: 4",
+  "failure_types": "ConnectTimeout: 90, SSLError: 29, ConnectionError: 27, HTTPError: 17, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -20,7 +20,7 @@
     },
     {
       "source_id": "amu",
-      "error_type": "SSLError"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "andaman-administration",
@@ -28,7 +28,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "andhra-university",
@@ -48,7 +48,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "apsc",
