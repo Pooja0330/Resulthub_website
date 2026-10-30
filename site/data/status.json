@@ -1,14 +1,14 @@
 {
-  "last_checked_at": "2026-10-30T07:14:42.120236+00:00",
+  "last_checked_at": "2026-10-30T11:41:36.457556+00:00",
   "sources_enabled": 296,
-  "sources_succeeded": 145,
-  "sources_failed": 151,
-  "new_candidates": 2,
-  "recovered_records": 415,
-  "telegram_posts_sent": 1,
+  "sources_succeeded": 146,
+  "sources_failed": 150,
+  "new_candidates": 16,
+  "recovered_records": 29,
+  "telegram_posts_sent": 3,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, SSLError: 34, ConnectionError: 26, HTTPError: 16, ReadTimeout: 5",
+  "failure_types": "ConnectTimeout: 91, SSLError: 35, ConnectionError: 24, HTTPError: 17, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -36,7 +36,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -48,7 +48,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "apsc",
