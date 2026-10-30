@@ -7,6 +7,11 @@ let pibFeedInitialized = false;
 const knownResultKeys = new Set();
 const knownPibKeys = new Set();
 
+function detailPageUrl(item){
+ const id=String(item?.id||"").trim();
+ return id?"updates/"+encodeURIComponent(id)+".html":"notice.html?q="+encodeURIComponent(item?.title||item?.exam||"Exam update");
+}
+
 function feedItemKey(item){
  return String(item?.id||item?.url||item?.official_url||item?.title||item?.exam||"").trim();
 }
@@ -212,7 +217,7 @@ function renderFeatured(){
  const makeList=(items,emptyText)=>items.length?items.slice(0,5).map(x=>{
   const url=safeUrl(x.url||x.official_url)||safeUrl(x.source_url);
   const date=x.published||x.detected_at||"Date not supplied";
-  const detail="notice.html?id="+encodeURIComponent(x.id||"")+"&q="+encodeURIComponent(x.title||x.exam||"Exam update");
+  const detail=detailPageUrl(x);
   return '<article class="featured-item"><div><span class="tag">'+esc(label(x.category))+'</span><h3>'+esc(x.title||x.exam||"Exam update")+'</h3><p>'+esc(x.source_name||x.authority||"Official source")+' · '+esc(date)+'</p></div>'+(url?'<a href="'+esc(detail)+'">View update ↗</a>':'')+'</article>';
  }).join(""):'<p class="empty">'+esc(emptyText)+'</p>';
  const resultBox=$("#featuredResults"), scheduleBox=$("#featuredSchedules"), upcomingBox=$("#featuredUpcoming");
@@ -331,7 +336,7 @@ function renderPriorityExamAlerts(){
   const url=safeUrl(x.url||x.official_url)||safeUrl(x.source_url);
   const category=label(x.category);
   const date=x.detected_at?new Date(x.detected_at).toLocaleString("en-IN",{day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit",timeZone:"Asia/Kolkata"}):(x.published||"Date not shown");
-  const detail="notice.html?id="+encodeURIComponent(x.id||"")+"&q="+encodeURIComponent(x.title||x.exam||"Official exam update");
+  const detail=detailPageUrl(x);
   const title=String(x.title||x.exam||"Official exam update");
   return '<article class="priority-exam-row"><span class="priority-exam-tag">'+esc(category)+'</span><div class="priority-exam-copy"><a class="priority-exam-title-link" href="'+esc(detail)+'" aria-label="Open '+esc(title)+' details on GoResultHub">'+esc(title)+'</a><small>'+esc(x.source_name||x.authority||"Official source")+' · '+esc(date)+'</small></div><a class="priority-exam-view-link" href="'+esc(detail)+'" aria-label="View update on GoResultHub">View update ↗</a></article>';
  }).join(""):'<p class="priority-empty">No new exam alerts have been indexed yet. Updates appear here after an official source is checked.</p>';
@@ -343,7 +348,7 @@ function renderPibNews(){
  box.innerHTML=rows.length?rows.map(x=>{
   const url=safeUrl(x.url||x.official_url)||safeUrl(x.source_url)||"https://pib.gov.in/";
   const title=String(x.title||x.exam||"PIB press release").replace(/\s+/g," ").trim();
-  const detail="notice.html?id="+encodeURIComponent(x.id||"")+"&q="+encodeURIComponent(title);
+  const detail=detailPageUrl(x);
   return '<a class="pib-news-item" href="'+esc(detail)+'" title="'+esc(title)+'"><span class="pib-news-dot" aria-hidden="true"></span><span class="pib-news-title">'+esc(title)+'</span><span class="pib-news-arrow" aria-hidden="true">↗</span></a>';
  }).join(""):'<p class="pib-empty">No PIB press releases are available in the current feed. The panel refreshes automatically.</p>';
 }
@@ -361,7 +366,7 @@ function render(){
    const explicitYear=x.exam_year||((String(x.title||x.exam||"").match(/\b20\d{2}\b/)||[])[0]||"");
    const noticeDate=x.published||"";
    const dateDetails=(explicitYear?`Exam year: ${esc(explicitYear)} · `:"")+(noticeDate?`Notice date: ${esc(noticeDate)} · `:"Notice date not shown by authority · ")+`Updated on GoResultHub: ${detectedTimeMarkup(updateTime(x))}`;
-   return `<article class="card"><div class="meta"><span class="tag">${esc(label(x.category))}</span><span class="unverified">${esc(sourceBadge)}</span></div><h3>${esc(displayTitle(x))}</h3><p>${esc(x.description||x.source_name||"View the official website for full details and eligibility.")}</p><div class="source">${esc(x.source_name||x.authority||"Issuing authority")} · ${dateDetails}</div>${url?(x.direct===true||/\/(?:login|candidate-login|candidatelogin|score.?display|result.?status)(?:[/?#]|$)/i.test(new URL(url).pathname)?` <a class="link secondary" href="${esc(url)}" target="_blank" rel="noopener noreferrer">Open official login ↗</a>`:` <a class="link secondary" href="${esc("notice.html?id="+encodeURIComponent(x.id||"")+"&q="+encodeURIComponent(x.title||x.exam||"Exam update"))}" rel="noopener">View update on GoResultHub ↗</a>`):`<span>Official link unavailable</span>`}<button type="button" class="share-update" data-share-title="${esc(x.title||x.exam||"Exam update")}" data-share-url="${esc("https://goresulthub.com/notice.html?id="+encodeURIComponent(x.id||"")+"&q="+encodeURIComponent(x.title||x.exam||""))}">Share this update ↗</button></article>`;
+   return `<article class="card"><div class="meta"><span class="tag">${esc(label(x.category))}</span><span class="unverified">${esc(sourceBadge)}</span></div><h3>${esc(displayTitle(x))}</h3><p>${esc(x.description||x.source_name||"View the official website for full details and eligibility.")}</p><div class="source">${esc(x.source_name||x.authority||"Issuing authority")} · ${dateDetails}</div>${url?(x.direct===true||/\/(?:login|candidate-login|candidatelogin|score.?display|result.?status)(?:[/?#]|$)/i.test(new URL(url).pathname)?` <a class="link secondary" href="${esc(url)}" target="_blank" rel="noopener noreferrer">Open official login ↗</a>`:` <a class="link secondary" href="${esc(detailPageUrl(x))}" rel="noopener">View update on GoResultHub ↗</a>`):`<span>Official link unavailable</span>`}<button type="button" class="share-update" data-share-title="${esc(x.title||x.exam||"Exam update")}" data-share-url="${esc("https://goresulthub.com/"+detailPageUrl(x))}">Share this update ↗</button></article>`;
   }).join("");
  $("#empty").classList.toggle("hidden",list.length>0);
  if(!list.length) $("#updatesList").innerHTML="";
