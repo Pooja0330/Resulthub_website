@@ -124,7 +124,7 @@ def save_json(name, value):
     # The public exam feed can contain thousands of records. Keep that
     # frequently downloaded browser payload compact so mobile browsers do not
     # have to parse/render megabytes of whitespace on every refresh.
-    if name == "site/data/results.json":
+    if name in {"site/data/results.json", "site/results.json"}:
         serialized = json.dumps(value, ensure_ascii=False, separators=(",", ":")) + "\n"
     else:
         serialized = json.dumps(value, ensure_ascii=False, indent=2) + "\n"
@@ -1165,6 +1165,9 @@ def main():
     save_json("checker/state.json", state)
     save_json("checker/approved.json", {"pending": remaining_approved})
     save_json("site/data/results.json", results)
+    # Keep the legacy /results.json URL synchronized for older links and
+    # integrations. The website itself reads /data/results.json.
+    save_json("site/results.json", results)
     failure_types = {}
     for source_health in health.values():
         if source_health.get("status") != "failed":
