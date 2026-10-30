@@ -9,6 +9,7 @@ on:
       - "checker/check.py"
       - "checker/test_check.py"
       - "checker/sources.json"
+      - "site/data/results.json"
       - ".github/workflows/check-results.yml"
   schedule:
     # GitHub schedules are best-effort; offset the five-minute checks from the top of the hour.
