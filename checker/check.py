@@ -451,7 +451,7 @@ def is_stale_notice(title, published=""):
     candidates = []
     text_value = str(title or "")
     for match in re.finditer(
-        r"\b(?:(?:posted|published|updated|uploaded|issued|dated)\s+(?:on\s+)?)"
+        r"\b(?:(?:posted|published|updated|uploaded|issued|dated|issue\s+date)\s*[:\-]?\s*(?:on\s+)?)"
         r"(\d{1,2}[./-]\d{1,2}[./-]\d{4}|"
         r"[A-Za-z]{3,9}\s+\d{1,2},?\s+\d{4}|"
         r"\d{1,2}\s+[A-Za-z]{3,9},?\s+\d{4})",
