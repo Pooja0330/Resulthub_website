@@ -523,8 +523,8 @@ def discover_listing_urls(soup, base_url, hosts, limit=6):
             continue
         # Pagination controls are useful only on the same official portal and
         # are kept behind the same strict six-page crawl bound.
-        is_pagination = bool(re.search(r"(next|older|previous|page\\s*\\d+)", label, re.I)
-                             or re.search(r"(?:[?&](?:page|paged|p)=\\d+|/page/\\d+)", href, re.I))
+        is_pagination = bool(re.search(r"(next|older|previous|page\s*\d+)", label, re.I)
+                             or re.search(r"(?:[?&](?:page|paged|p)=\d+|/page/\d+)", href, re.I))
         if not listing_hint.search(label + " " + parsed.path) and not is_pagination:
             continue
         seen.add(href)
@@ -645,7 +645,7 @@ def fetch_source(source):
         # than stopping at the first three links, which may be stale or generic.
         inspected_pages = set()
         page_queue = list(listing_urls)
-        while page_queue and pages_scanned < 7:
+        while page_queue and len(inspected_pages) < 6:
             listing_url = page_queue.pop(0)
             if listing_url in inspected_pages:
                 continue
