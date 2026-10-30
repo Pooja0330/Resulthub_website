@@ -933,35 +933,47 @@ def main():
 
     # Review the persistent queue before sending. Invalid or irrelevant legacy
     # items are held for review, while valid failed deliveries remain retryable.
-    source_by_name = {str(s.get("name", "")).strip().lower(): s for s in sources}
+    source_by_name = {str(s.get("name", "")).strip().lower(): s for s in sources if s.get("name")}
+    queue_held_this_run = 0
     for key in list(pending.keys()):
         record = pending.get(key, {})
         item = record.get("item", {}) if isinstance(record, dict) else {}
-        title = str(item.get("title", "")).strip() if isinstance(item, dict) else ""
-        url = str(item.get("url", "")).strip() if isinstance(item, dict) else ""
-        source = source_by_name.get(str(item.get("source_name", "")).strip().lower()) if isinstance(item, dict) else None
-        stale_pending = isinstance(item, dict) and is_stale_notice(title, item.get("published", ""))
-        if not isinstance(item, dict) or not classify(title) or stale_pending:
-            held[key] = {
-                "item": item if isinstance(item, dict) else {},
-                "detected_at": record.get("detected_at", checked_at) if isinstance(record, dict) else checked_at,
-                "held_at": checked_at,
-                "hold_reason": (
-                    "Explicitly dated notice is outside the live 90-day window; held for review."
-                    if stale_pending else
-                    "Generic, irrelevant, or unclassifiable title; held for review."
-                ),
-            }
-            pending.pop(key, None)
-            continue
-        if not source or not host_allowed(url, source.get("allowed_hosts", [])):
+        if not isinstance(item, dict):
+            item = {}
+        title = str(item.get("title", "")).strip()
+        url = str(item.get("url", "")).strip()
+        # Resolve by stable source ID first. Names can change or differ in
+        # capitalization between the registry and older queued records.
+        source = (
+            source_by_id.get(str(item.get("source_id", "")))
+            or source_by_name.get(str(item.get("source_name", "")).strip().lower())
+        )
+        stale_pending = is_stale_notice(title, item.get("published", ""))
+        category = classify_source_title(title, source or {}) if title else None
+        hold_reason = ""
+        if not source:
+            hold_reason = "Source ID/name no longer matches an enabled official source."
+        elif not category or is_speculative_status_title(title):
+            hold_reason = "Generic, irrelevant, speculative, or unclassifiable title."
+        elif stale_pending:
+            hold_reason = "Explicitly dated notice is outside the live 90-day window."
+        elif not host_allowed(url, source.get("allowed_hosts", [])):
+            hold_reason = "Notice URL could not be validated against its official source allowlist."
+
+        if hold_reason:
             held[key] = {
                 "item": item,
-                "detected_at": record.get("detected_at", checked_at),
+                "detected_at": record.get("detected_at", checked_at) if isinstance(record, dict) else checked_at,
                 "held_at": checked_at,
-                "hold_reason": "Notice URL could not be validated against its official source allowlist.",
+                "hold_reason": hold_reason,
             }
             pending.pop(key, None)
+            queue_held_this_run += 1
+            print(f"ALERT QUEUE HOLD {key}: {hold_reason} | source={item.get('source_id', item.get('source_name', 'unknown'))} | title={title[:140]}")
+    print(
+        f"ALERT QUEUE CHECK: pending={len(pending)}, newly_held={queue_held_this_run}, "
+        f"previously_held={len(held)}, candidates_this_run={len(candidates)}"
+    )
 
     public_sent = 0
     public_attempts = 0
