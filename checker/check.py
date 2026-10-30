@@ -24,7 +24,7 @@ ADMIN = os.getenv("TG_ADMIN", "").strip()
 CHANNEL = os.getenv("TG_CHANNEL", "").strip()
 TG_RATE_LIMITED = False
 
-TIMEOUT = max(5, min(int(os.getenv("SOURCE_TIMEOUT_SECONDS", "8")), 15))
+TIMEOUT = max(5, min(int(os.getenv("SOURCE_TIMEOUT_SECONDS", "20")), 30))
 # Scan more sources concurrently so a five-minute schedule is practical without letting one slow portal block the whole run.
 WORKERS = max(1, min(int(os.getenv("SOURCE_WORKERS", "24")), 32))
 MAX_NEW_PER_SOURCE = max(1, min(int(os.getenv("MAX_NEW_PER_SOURCE", "5")), 20))
@@ -320,16 +320,17 @@ def normalize_notice_url(url):
 
 def get_with_retries(url, headers=None):
     last_error = None
-    # Retry transient timeouts, connection resets, and temporary HTTP failures
-    # up to three attempts. TLS verification remains enabled; certificate and
-    # DNS failures fail fast because retrying them rarely helps.
+    # Government portals often have slow connection setup. Use a meaningful
+    # connect/read budget and retry transient DNS, timeout, reset and TLS
+    # handshake failures. Certificate verification remains STRICT: never
+    # disable TLS checks or accept an invalid certificate.
     retryable_statuses = (408, 425, 429, 500, 502, 503, 504)
     for attempt in range(3):
         try:
             response = requests.get(
                 url,
                 headers=headers or HEADERS,
-                timeout=(min(TIMEOUT, 5), min(TIMEOUT, 10)),
+                timeout=(min(TIMEOUT, 12), min(TIMEOUT, 18)),
                 allow_redirects=True,
                 verify=certifi.where(),
             )
@@ -347,15 +348,15 @@ def get_with_retries(url, headers=None):
         except (requests.Timeout, requests.ConnectionError) as exc:
             last_error = exc
             error_text = str(exc)
-            permanent = (
-                isinstance(exc, requests.exceptions.SSLError)
-                or "NameResolutionError" in error_text
-                or "Temporary failure in name resolution" in error_text
-                or "CERTIFICATE_VERIFY_FAILED" in error_text
-            )
+            # A certificate validation failure is a security failure, not a
+            # transient network condition. Keep verification enabled and fail
+            # this source safely; it will be checked again on the next run.
+            permanent = "CERTIFICATE_VERIFY_FAILED" in error_text
             if permanent or attempt >= 2:
                 raise
-            time.sleep(0.75 * (attempt + 1))
+            delay = min(2 ** attempt, 4)
+            print(f"Retrying source request ({attempt + 2}/3) after {type(exc).__name__}; wait={delay}s")
+            time.sleep(delay)
     if last_error:
         raise last_error
     raise RuntimeError("Request failed after retries")
