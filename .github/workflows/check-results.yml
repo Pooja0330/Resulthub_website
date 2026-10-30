@@ -121,7 +121,9 @@ jobs:
           SOURCE_WORKERS: "24"
           MAX_NEW_PER_SOURCE: "5"
           MAX_PUBLIC_ALERTS_PER_RUN: "10"
-        run: python checker/check.py
+        run: |
+          python checker/check.py
+          python checker/build_seo_pages.py
 
       - name: Validate generated website data
         run: |
@@ -180,6 +182,8 @@ jobs:
           git add site/data/results.json
           git add site/results.json
           git add site/data/status.json
+          git add site/updates/
+          git add site/sitemap.xml
 
           if git diff --cached --quiet; then
             echo "No data changes to commit"
