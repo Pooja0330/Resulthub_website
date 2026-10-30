@@ -25,6 +25,25 @@ class CheckerSafetyTests(unittest.TestCase):
         self.assertFalse(any(url.endswith(".pdf") for url in found))
         self.assertFalse(any("/contact" in url for url in found))
 
+    def test_listing_discovery_includes_bounded_pagination(self):
+        html = """
+        <a href="/notices/">Latest Notices</a>
+        <a href="/notices/?page=2">Next Page</a>
+        <a href="/notices/?page=3">Page 3</a>
+        <a href="/notices/?page=4">Page 4</a>
+        <a href="https://outside.example/page/2">Next Page</a>
+        """
+        found = discover_listing_urls(
+            BeautifulSoup(html, "html.parser"),
+            "https://example.gov.in/",
+            ["example.gov.in"],
+            limit=6,
+        )
+        self.assertIn("https://example.gov.in/notices/?page=2", found)
+        self.assertIn("https://example.gov.in/notices/?page=3", found)
+        self.assertFalse(any("outside.example" in url for url in found))
+        self.assertLessEqual(len(found), 6)
+
     def test_listing_discovery_is_bounded(self):
         html = "".join(
             f'<a href="/notices/page-{n}/">Latest Notices {n}</a>'
