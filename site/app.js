@@ -295,9 +295,10 @@ function dedupeVisibleItems(items, options={}){
   }
   const source=String(x.source_name||x.authority||x.source_id||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
   const url=String(x.url||x.official_url||x.source_url||"").trim().split("#")[0].toLowerCase();
-  // Different official URLs can carry separate notices even when a source
-  // reuses one generic page title; dedupe exact links, not title alone.
-  const key=options.titleOnly?title:(source+"|"+title+"|"+url);
+  // A source can expose the same notice through multiple URLs (for example,
+  // desktop/mobile links or tracking variants). Suppress repeated identical
+  // titles from the same authority; keep same-title notices from other sources.
+  const key=options.titleOnly?title:(source+"|"+title);
   if(!title||!source||seen.has(key))return false;
   if(options.requirePibReleaseUrl&&!/^https:\/\/(?:www\.)?pib\.gov\.in\/(?:PressReleaseIframePage|PressReleasePage|PressReleaseDetail)\.aspx\?[^#]*\bPRID=\d+/i.test(url))return false;
   seen.add(key);return true;
