@@ -137,6 +137,9 @@ jobs:
 
           results = json.loads(Path("site/data/results.json").read_text(encoding="utf-8"))
           status = json.loads(Path("site/data/status.json").read_text(encoding="utf-8"))
+          legacy_results = json.loads(Path("site/results.json").read_text(encoding="utf-8"))
+          if legacy_results != results:
+              raise SystemExit("Legacy /results.json must mirror /data/results.json")
           if not isinstance(results, list):
               raise SystemExit("results.json must contain a JSON array")
           seen_ids, seen_urls = set(), set()
@@ -180,6 +183,7 @@ jobs:
           git add checker/state.json
           git add checker/approved.json
           git add site/data/results.json
+          git add site/results.json
           git add site/data/status.json
 
           if git diff --cached --quiet; then
