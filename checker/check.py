@@ -671,6 +671,18 @@ def fetch_source(source):
     print(f"Source scan {name}: {pages_scanned} official page(s), {len(found)} matching notices")
     return found[:max(1, min(source_limit, 100))]
 
+def is_exam_alert_source(source):
+    """Keep broad PIB press-release feeds out of the exam-alert pipeline."""
+    source_id = str(source.get("id", "")).strip().lower()
+    source_name = str(source.get("name", "")).strip().lower()
+    return (
+        source.get("enabled", True)
+        and not source.get("include_all_items", False)
+        and not source_id.startswith("pib-")
+        and not source_name.startswith("press information bureau")
+    )
+
+
 def build_result(item, detected_at):
     # Match the JSON fields consumed by site/app.js.
     return {
@@ -732,7 +744,15 @@ def main():
         # Keep GoResultHub links on GoResultHub; do not publish third-party aggregator links.
         source_id_value = str(item.get("source_id") or "").strip().lower()
         source_name_value = str(item.get("source_name") or item.get("authority") or "").strip().lower()
-        if source_id_value.startswith("indiaresults-") or "indiaresults.com" in source_name_value or source_name_value.startswith("indiaresults"):
+        source_meta_for_cleanup = source_by_id.get(source_id_value, {})
+        if (
+            source_id_value.startswith("indiaresults-")
+            or "indiaresults.com" in source_name_value
+            or source_name_value.startswith("indiaresults")
+            or source_id_value.startswith("pib-")
+            or source_meta_for_cleanup.get("include_all_items", False)
+            or source_name_value.startswith("press information bureau")
+        ):
             removed_result_rows += 1
             continue
         # Repair stale/mislabelled state metadata from the authoritative source registry.
@@ -777,7 +797,9 @@ def main():
         pending = {}
         state["pending_alerts"] = pending
 
-    sources = [s for s in registry["sources"] if s.get("enabled", True)]
+    # PIB has its own independent publisher and must never enter the exam-alert queue.
+    # Its all-releases feed contains general government press releases, not just exams.
+    sources = [s for s in registry["sources"] if is_exam_alert_source(s)]
     candidates = []
     historical_candidates = []
     # Recover feed records if results.json was emptied or lost while state.json
