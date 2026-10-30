@@ -8,6 +8,8 @@ on:
     paths:
       - "checker/check.py"
       - "checker/test_check.py"
+      - "checker/build_seo_pages.py"
+      - "checker/test_build_seo_pages.py"
       - "checker/sources.json"
       - "site/data/results.json"
       - ".github/workflows/check-results.yml"
