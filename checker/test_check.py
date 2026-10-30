@@ -1,6 +1,6 @@
 import unittest
 
-from check import classify, discover_listing_urls, exam_year_from_title, extract_notice_date, get_with_retries, host_allowed, infer_exam_category, is_speculative_status_title, is_stale_notice, normalize_notice_url
+from check import classify, discover_listing_urls, exam_year_from_title, extract_notice_date, get_with_retries, host_allowed, infer_exam_category, is_exam_alert_source, is_speculative_status_title, is_stale_notice, normalize_notice_url
 from bs4 import BeautifulSoup
 
 
@@ -52,6 +52,26 @@ class CheckerSafetyTests(unittest.TestCase):
         self.assertTrue(host_allowed("https://results.example.gov.in/", ["example.gov.in"]))
         self.assertFalse(host_allowed("https://example.gov.in.attacker.test/", ["example.gov.in"]))
         self.assertFalse(host_allowed("http://example.gov.in/", ["example.gov.in"]))
+
+    def test_pib_all_release_sources_are_excluded_from_exam_alerts(self):
+        self.assertFalse(is_exam_alert_source({
+            "id": "pib-press-releases",
+            "name": "Press Information Bureau (PIB) — Press Releases",
+            "enabled": True,
+            "include_all_items": True,
+        }))
+        self.assertFalse(is_exam_alert_source({
+            "id": "pib-custom-feed",
+            "name": "Custom source",
+            "enabled": True,
+        }))
+
+    def test_regular_exam_source_remains_enabled(self):
+        self.assertTrue(is_exam_alert_source({
+            "id": "ssc",
+            "name": "Staff Selection Commission",
+            "enabled": True,
+        }))
 
     def test_classifies_exam_result(self):
         self.assertEqual(classify("SSC CGL Tier I Result 2026"), "result")
