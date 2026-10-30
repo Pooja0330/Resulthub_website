@@ -169,6 +169,33 @@ class CheckerSafetyTests(unittest.TestCase):
                 get_with_retries("https://example.gov.in/")
             self.assertEqual(mocked.call_count, 1)
 
+    def test_temporary_dns_failure_is_retried(self):
+        from unittest.mock import patch
+        import requests
+
+        response = requests.Response()
+        response.status_code = 200
+        response._content = b"ok"
+        with patch("check.requests.get", side_effect=[
+            requests.ConnectionError("NameResolutionError temporary DNS failure"),
+            response,
+        ]) as mocked, patch("check.time.sleep"):
+            self.assertEqual(get_with_retries("https://example.gov.in/").status_code, 200)
+            self.assertEqual(mocked.call_count, 2)
+
+    def test_source_timeout_has_longer_connect_and_read_budgets(self):
+        from unittest.mock import patch
+        import requests
+
+        response = requests.Response()
+        response.status_code = 200
+        response._content = b"ok"
+        with patch("check.requests.get", return_value=response) as mocked:
+            get_with_retries("https://example.gov.in/")
+            timeout = mocked.call_args.kwargs["timeout"]
+            self.assertGreaterEqual(timeout[0], 10)
+            self.assertGreaterEqual(timeout[1], 15)
+
 
 if __name__ == "__main__":
     unittest.main()
