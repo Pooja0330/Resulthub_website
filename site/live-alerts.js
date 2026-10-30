@@ -86,7 +86,7 @@
   function renderPanel(items) {
     const current = items.slice(0, 12);
     list.innerHTML = current.length ? current.map(item => {
-      const url="https://goresulthub.com/notice.html?id="+encodeURIComponent(item.id||"")+"&q="+encodeURIComponent(item.title || item.exam || "");
+      const url="https://goresulthub.com/updates/"+encodeURIComponent(item.id||"")+".html";
       const date=item.published || item.detected_at || "";
       const description=String(item.description || item.exam || "Open this update for full details.").replace(/\s+/g," ").trim();
       const shortDescription=description.length>125?description.slice(0,122).trimEnd()+"…":description;
@@ -94,7 +94,7 @@
     }).join("") : '<p class="grh-alert-empty">No updates have been indexed yet. Keep this page open; the panel checks the published feed periodically.</p>';
   }
   function toast(item) {
-    const url="https://goresulthub.com/notice.html?id="+encodeURIComponent(item.id||"")+"&q="+encodeURIComponent(item.title || item.exam || "");
+    const url="https://goresulthub.com/updates/"+encodeURIComponent(item.id||"")+".html";
     const node=document.createElement("article");
     node.className="grh-toast "+itemKindClass(item);
     const description=String(item.description || item.exam || "Open this update for full details.").replace(/\s+/g," ").trim();
@@ -164,7 +164,7 @@
           if("Notification" in window && Notification.permission==="granted") {
             try {
               const n=new Notification("GoResultHub: "+categoryName(next.category),{body:next.title||"A new official exam update was detected.",icon:"favicon.ico"});
-              n.onclick=()=>{window.focus();const url="https://goresulthub.com/notice.html?id="+encodeURIComponent(next.id||"")+"&q="+encodeURIComponent(next.title||next.exam||"");window.open(url,"_blank","noopener");n.close();};
+              n.onclick=()=>{window.focus();const url="https://goresulthub.com/updates/"+encodeURIComponent(next.id||"")+".html";window.open(url,"_blank","noopener");n.close();};
             } catch (_) {}
           }
           writeSeen(seen);
