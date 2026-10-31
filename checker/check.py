@@ -579,7 +579,11 @@ def fetch_source(source):
                 if getattr(parent, "name", None) not in ("tr", "li", "article", "div", "section"):
                     continue
                 candidate_context = " ".join(parent.get_text(" ", strip=True).split())
-                if not (20 <= len(candidate_context) <= 600):
+                # Never promote a whole page/menu/link cluster into a notice title.
+                # Real notice cards are short and must not contain navigation aggregates.
+                if not (20 <= len(candidate_context) <= 240):
+                    continue
+                if is_navigation_noise_title(candidate_context):
                     continue
                 if classify(candidate_context):
                     context = candidate_context
@@ -592,7 +596,9 @@ def fetch_source(source):
                     if getattr(parent, "name", None) not in ("tr", "li", "article", "div", "section"):
                         continue
                     candidate_context = " ".join(parent.get_text(" ", strip=True).split())
-                    if 20 <= len(candidate_context) <= 600 and re.search(
+                    if (20 <= len(candidate_context) <= 240
+                        and not is_navigation_noise_title(candidate_context)
+                        and re.search(
                         r"\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{1,2},?\s+20\d{2}\b|\b\d{1,2}\s+[A-Za-z]{3,9}\s+20\d{2}\b",
                         candidate_context, re.I
                     ):
@@ -609,9 +615,11 @@ def fetch_source(source):
                     title.strip(), re.I
                 ))
             )
-            if context and classify(context) and generic_label and len(context) > len(title) + 10:
+            if (context and classify(context) and not is_navigation_noise_title(context)
+                    and generic_label and len(context) > len(title) + 10):
                 title = context
-            elif context and classify(context) and not classify(title):
+            elif (context and classify(context) and not is_navigation_noise_title(context)
+                    and not classify(title)):
                 title = context
 
             published = extract_notice_date(context) or extract_notice_date(title)
@@ -792,7 +800,8 @@ def main():
         category = classify_source_title(title, source_meta)
         # Keep curated archive landing pages, but remove dated non-archive
         # notices outside the live 90-day window.
-        if not category or is_speculative_status_title(title) or (not item.get("archive", False) and is_stale_notice(title, item.get("published", ""))):
+        if (not category or is_navigation_noise_title(title) or is_speculative_status_title(title)
+                or (not item.get("archive", False) and is_stale_notice(title, item.get("published", ""))):
             removed_result_rows += 1
             continue
         item["title"] = title
