@@ -156,11 +156,17 @@ function renderStateYearBrowser(){
  box.innerHTML=Array.from({length:27},(_,i)=>2026-i).map(year=>'<button type="button" class="year-chip'+(selected===String(year)?' active':'')+'" data-year="'+year+'" aria-pressed="'+(selected===String(year)?'true':'false')+'"><span>'+year+'</span><small>'+(counts[String(year)]||0)+'</small></button>').join('')+'<button type="button" class="year-chip'+(!selected?' active':'')+'" data-year="" aria-pressed="'+(!selected?'true':'false')+'"><span>All years</span><small>'+allItems.filter(x=>stateForItem(x)===state).length+'</small></button>';
  box.querySelectorAll("[data-year]").forEach(button=>button.addEventListener("click",()=>{$("#stateExamYear").value=button.dataset.year;page=1;render();$("#stateUpdates").scrollIntoView({behavior:"smooth",block:"start"});}));
 }
+function stateGovernmentPriority(x){
+ const text=[x.source_id,x.source_name,x.authority,x.exam_category,x.title,x.exam].filter(Boolean).join(" ").toLowerCase();
+ if(/\\b(upsc|ssc|ibps|rrb|rrc|railway|public service commission|\\bpsc\\b|staff selection|state selection|subordinate services|vyapam|cgpeb|nta|national testing agency|government|govt|gov\\.|\\bpolice\\b|recruitment board|school education board|board of secondary|board of higher secondary|ministry|department of|commission|civil services|defence|defense|armed forces|central university|state university)\\b/.test(text))return 0;
+ if(x.verified===true)return 1;
+ return 2;
+}
 function render(){
  renderStateYearBrowser();
  const selectedYear=$("#stateExamYear").value;
  const filtered=allItems.filter(x=>stateForItem(x)===state&&(!selectedCategory||x.category===selectedCategory)&&(!selectedFamily||inferredFamily(x)===selectedFamily)&&(!selectedYear||(selectedYear==="unknown"?!recordYear(x):recordYear(x)===selectedYear)));
- filtered.sort((a,b)=>new Date(b.detected_at||b.date||0)-new Date(a.detected_at||a.date||0));
+ filtered.sort((a,b)=>stateGovernmentPriority(a)-stateGovernmentPriority(b)||new Date(b.detected_at||b.date||0)-new Date(a.detected_at||a.date||0));
  const pages=Math.max(1,Math.ceil(filtered.length/pageSize)); page=Math.min(page,pages);
  $("#stateCount").textContent=filtered.length+" update"+(filtered.length===1?"":"s");
  $("#stateUpdates").innerHTML=filtered.slice((page-1)*pageSize,page*pageSize).map(x=>{
