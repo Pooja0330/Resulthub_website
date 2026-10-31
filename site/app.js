@@ -254,7 +254,17 @@ function renderYearArchiveHelp(){
  box.classList.remove("hidden");box.innerHTML='<h3>No individual records indexed for '+esc(year)+' yet</h3><p>This means GoResultHub has not indexed matching year-specific entries; it does not mean no exams or results existed in '+esc(year)+'. Check these official archive starting points while historical coverage is expanded.</p><div class="archive-help-links">'+ARCHIVE_LINKS.map(([label,url])=>'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(label)+' ↗</a>').join("")+'</div>';
 }
 function isPibItem(x){return /pib|press information bureau|press releases|government & pib/i.test([x.source_id,x.source_name,x.authority,x.exam_category].filter(Boolean).join(" "));}
-function mainPriority(x){if(isPibItem(x))return 2;if(x.archive===true)return 3;if(x.verified===true&&!/archive/i.test(String(x.title||"")))return 0;return 1;}
+function governmentExamPriority(x){
+ const text=[x.source_id,x.source_name,x.authority,x.exam_category,x.state,x.title,x.exam].filter(Boolean).join(" ").toLowerCase();
+ if(isPibItem(x))return 3;
+ if(x.archive===true)return 4;
+ // Give public-sector recruitment, boards and national/state exam authorities first placement.
+ if(/\\b(upsc|ssc|ibps|rrb|rrc|railway|public service commission|\\bpsc\\b|staff selection|state selection|subordinate services|vyapam|cgpeb|nta|national testing agency|government|govt|gov\\.|\\bpolice\\b|recruitment board|school education board|board of secondary|board of higher secondary|ministry|department of|commission|civil services|defence|defense|armed forces|central university|state university)\\b/.test(text))return 0;
+ // Verified institutional exams follow government exams; unverified/private notices remain below them.
+ if(x.verified===true)return 1;
+ return 2;
+}
+function mainPriority(x){return governmentExamPriority(x);}
 function updateTime(x){return x.detected_at||x.telegram_sent_at||x.date||x.published||0;}
 function updateTimeValue(x){const n=new Date(updateTime(x)).getTime();return Number.isFinite(n)?n:0;}
 function isNavigationNoise(item){
@@ -322,7 +332,7 @@ function filteredItems(){
     return queryMatch&&(!c||x.category===c)&&(!ec||family===ec)&&(!effectiveStateFilter||itemState===effectiveStateFilter)&&(!y||(y==="unknown"?!year:year===y))&&browseMatches(x,selectedBrowse);
  });
  if($("#sort").value==="title") list.sort((a,b)=>(a.title||"").localeCompare(b.title||""));
- else list.sort((a,b)=>updateTimeValue(b)-updateTimeValue(a)||mainPriority(a)-mainPriority(b));
+ else list.sort((a,b)=>mainPriority(a)-mainPriority(b)||updateTimeValue(b)-updateTimeValue(a));
  return list;
 }
 function renderPriorityExamAlerts(){
@@ -331,7 +341,7 @@ function renderPriorityExamAlerts(){
  // are rendered in the separate PIB News panel and must never be labelled as exam alerts.
  // Keep archive/history records out so old notices cannot crowd the live feed.
  const rows=dedupeVisibleItems(allItems.filter(x=>!isPibItem(x)&&x.archive!==true&&/^(result|notification|admit_card|answer_key|merit_list|cutoff|exam_schedule)$/.test(String(x.category||""))&&!/annual results old|old archive|historical/i.test(String(x.title||""))))
-  .sort((a,b)=>updateTimeValue(b)-updateTimeValue(a)).slice(0,50);
+  .sort((a,b)=>mainPriority(a)-mainPriority(b)||updateTimeValue(b)-updateTimeValue(a)).slice(0,50);
  box.innerHTML=rows.length?rows.map(x=>{
   const url=safeUrl(x.url||x.official_url)||safeUrl(x.source_url);
   const category=label(x.category);
