@@ -158,7 +158,7 @@ function renderStateYearBrowser(){
 }
 function stateGovernmentPriority(x){
  const text=[x.source_id,x.source_name,x.authority,x.exam_category,x.title,x.exam].filter(Boolean).join(" ").toLowerCase();
- if(/\\b(upsc|ssc|ibps|rrb|rrc|railway|public service commission|\\bpsc\\b|staff selection|state selection|subordinate services|vyapam|cgpeb|nta|national testing agency|government|govt|gov\\.|\\bpolice\\b|recruitment board|school education board|board of secondary|board of higher secondary|ministry|department of|commission|civil services|defence|defense|armed forces|central university|state university)\\b/.test(text))return 0;
+ if(/\b(upsc|ssc|ibps|rrb|rrc|railway|public service commission|\bpsc\b|staff selection|state selection|subordinate services|vyapam|cgpeb|nta|national testing agency|government|govt|gov\\.|\bpolice\b|recruitment board|school education board|board of secondary|board of higher secondary|ministry|department of|commission|civil services|defence|defense|armed forces|central university|state university)\b/.test(text))return 0;
  if(x.verified===true)return 1;
  return 2;
 }
