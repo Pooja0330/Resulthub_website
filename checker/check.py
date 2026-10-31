@@ -606,7 +606,7 @@ def fetch_source(source):
                         and re.search(
                         r"\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{1,2},?\s+20\d{2}\b|\b\d{1,2}\s+[A-Za-z]{3,9}\s+20\d{2}\b",
                         candidate_context, re.I
-                    ):
+                    )):
                         context = candidate_context
                         break
 
