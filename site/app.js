@@ -259,7 +259,7 @@ function governmentExamPriority(x){
  if(isPibItem(x))return 3;
  if(x.archive===true)return 4;
  // Give public-sector recruitment, boards and national/state exam authorities first placement.
- if(/\\b(upsc|ssc|ibps|rrb|rrc|railway|public service commission|\\bpsc\\b|staff selection|state selection|subordinate services|vyapam|cgpeb|nta|national testing agency|government|govt|gov\\.|\\bpolice\\b|recruitment board|school education board|board of secondary|board of higher secondary|ministry|department of|commission|civil services|defence|defense|armed forces|central university|state university)\\b/.test(text))return 0;
+ if(/\b(upsc|ssc|ibps|rrb|rrc|railway|public service commission|\bpsc\b|staff selection|state selection|subordinate services|vyapam|cgpeb|nta|national testing agency|government|govt|gov\\.|\bpolice\b|recruitment board|school education board|board of secondary|board of higher secondary|ministry|department of|commission|civil services|defence|defense|armed forces|central university|state university)\b/.test(text))return 0;
  // Verified institutional exams follow government exams; unverified/private notices remain below them.
  if(x.verified===true)return 1;
  return 2;
