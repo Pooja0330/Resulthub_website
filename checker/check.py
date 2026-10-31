@@ -422,7 +422,12 @@ def is_speculative_status_title(title):
 
 def is_navigation_noise_title(title):
     """Reject scraped site menus/homepage link clusters mistaken for notices."""
-    value = re.sub(r"[^a-z0-9]+", "", str(title or "").lower())
+    raw = " ".join(str(title or "").split())
+    # A single notice title can be detailed, but very long multi-clause page
+    # summaries are usually concatenated navigation/cards rather than one notice.
+    if len(raw) > 260 and len(raw.split()) > 32:
+        return True
+    value = re.sub(r"[^a-z0-9]+", "", raw.lower())
     menu_terms = (
         "servicespayfeeonline",
         "officialemailservice",
