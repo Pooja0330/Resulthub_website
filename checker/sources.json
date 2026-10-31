@@ -6668,6 +6668,106 @@
       "last_reviewed": "2026-10-29",
       "coverage_note": "Dedicated official IBPS Customer Service Associates XVI updates page.",
       "discover_listing_pages": true
+    },
+    {
+      "id": "csvtu-university",
+      "name": "Chhattisgarh Swami Vivekanand Technical University — Notices and Examinations",
+      "url": "https://csvtu.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "csvtu.ac.in",
+        "www.csvtu.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "state": "Chhattisgarh",
+      "region": "Chhattisgarh",
+      "exam_category": "University Results",
+      "coverage_note": "Official affiliating technical university for many Chhattisgarh colleges, including Columbia Institute of Engineering and Technology and Columbia Institute of Pharmacy. Monitors official university notices; individual college pages are separate sources.",
+      "discover_listing_pages": true
+    },
+    {
+      "id": "cgdte-admissions",
+      "name": "Chhattisgarh Directorate of Technical Education — Admissions and Merit Lists",
+      "url": "https://cgdte.admissions.nic.in/merit-list/",
+      "kind": "html",
+      "allowed_hosts": [
+        "cgdte.admissions.nic.in",
+        "admissions.nic.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "merit_list",
+        "cutoff",
+        "admission"
+      ],
+      "enabled": true,
+      "state": "Chhattisgarh",
+      "region": "Chhattisgarh",
+      "exam_category": "University Results",
+      "coverage_note": "Official state technical-education counselling and institute-wise merit-list portal.",
+      "discover_listing_pages": true
+    },
+    {
+      "id": "columbia-ciet-raipur",
+      "name": "Columbia Institute of Engineering and Technology — Raipur",
+      "url": "https://www.cietraipur.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "cietraipur.ac.in",
+        "www.cietraipur.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule",
+        "admission"
+      ],
+      "enabled": true,
+      "state": "Chhattisgarh",
+      "region": "Chhattisgarh",
+      "exam_category": "University Results",
+      "coverage_note": "Official college website. Monitor college notices and academic updates; university-issued examinations/results may also appear through CSVTU.",
+      "discover_listing_pages": true
+    },
+    {
+      "id": "columbia-institute-pharmacy-raipur",
+      "name": "Columbia Institute of Pharmacy — Raipur",
+      "url": "https://columbiaiop.ac.in/news_media.html",
+      "kind": "html",
+      "allowed_hosts": [
+        "columbiaiop.ac.in",
+        "www.columbiaiop.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule",
+        "admission"
+      ],
+      "enabled": true,
+      "state": "Chhattisgarh",
+      "region": "Chhattisgarh",
+      "exam_category": "University Results",
+      "coverage_note": "Official Latest News/Notice page. Includes academic calendars, examination schedules, admissions and institutional notices; CSVTU notices are monitored separately.",
+      "discover_listing_pages": true
     }
   ]
 }
