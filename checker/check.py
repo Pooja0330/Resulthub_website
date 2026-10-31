@@ -421,34 +421,53 @@ def is_speculative_status_title(title):
 
 
 def is_navigation_noise_title(title):
-    """Reject scraped site menus/homepage link clusters mistaken for notices."""
+    """Reject scraped site menus and concatenated link clusters, not real notices."""
     raw = " ".join(str(title or "").split())
-    # A single notice title can be detailed, but very long multi-clause page
-    # summaries are usually concatenated navigation/cards rather than one notice.
-    if len(raw) > 260 and len(raw.split()) > 32:
+    low = raw.lower()
+    value = re.sub(r"[^a-z0-9]+", "", low)
+
+    # A notice may be detailed, but an anchor containing multiple independent
+    # notice headings is almost always the text of a whole card/list container.
+    repeated_heading = (
+        len(re.findall(r"\\bnotification\\b", low)) >= 2
+        or len(re.findall(r"\\bresults?\\b", low)) >= 3
+        or len(re.findall(r"\\badmissions?\\b", low)) >= 3
+        or len(re.findall(r"\\bexaminations?\\b", low)) >= 3
+    )
+    if repeated_heading and len(raw) > 65:
         return True
-    value = re.sub(r"[^a-z0-9]+", "", raw.lower())
+
+    menu_phrases = (
+        "apply for job", "instructions to applicants", "quick links",
+        "online services", "employee online", "management quota",
+        "refund policy", "refund status", "photo gallery", "virtual tour",
+        "about us", "contact us", "tenders", "downloads", "login",
+        "screen reader", "accessibility", "fee payment", "mail service",
+        "viewing marks", "personal interview", "screening written examination",
+    )
+    menu_hits = sum(phrase in low for phrase in menu_phrases)
+    if menu_hits >= 2 and len(raw) > 55:
+        return True
+
+    # Recognize known menu-cluster patterns even when punctuation is stripped.
     menu_terms = (
-        "servicespayfeeonline",
-        "officialemailservice",
-        "jobsrecruitmentadvertisements",
-        "callletters",
-        "tendersnotices",
-        "employeeonlineservices",
-        "photogalleryconferences",
-        "virtualtour",
-        "esamikshya",
-        "epratikaar",
+        "servicespayfeeonline", "officialemailservice",
+        "jobsrecruitmentadvertisements", "callletters", "tendersnotices",
+        "employeeonlineservices", "photogalleryconferences", "virtualtour",
+        "esamikshya", "epratikaar",
     )
     hits = sum(term in value for term in menu_terms)
-    # These are menu aggregates, not individual result/admit-card notices.
     if value.startswith("servicespayfeeonlineforofflineapplications") and hits >= 3:
         return True
     if value.startswith("epratikaar") and hits >= 3:
         return True
     if value == "jobsrecruitmentadvertisementscallletters":
         return True
-    return len(value) > 100 and hits >= 4
+    if len(value) > 100 and hits >= 2:
+        return True
+
+    # Long multi-clause page summaries should not be treated as one notice.
+    return len(raw) > 260 and len(raw.split()) > 32
 
 
 def is_stale_notice(title, published=""):
