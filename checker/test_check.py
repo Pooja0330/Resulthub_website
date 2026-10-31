@@ -252,6 +252,27 @@ class CheckerSafetyTests(unittest.TestCase):
             "including eligibility, application dates and examination schedule"
         ))
 
+    def test_rejects_concatenated_commission_notice_menu(self):
+        from check import is_navigation_noise_title
+        self.assertTrue(is_navigation_noise_title(
+            "Notification for Screening/Written Examination Notification for "
+            "Personal Interview Notification for Answer Keys Notification for "
+            "Viewing Marks Corrigendum/Addendum"
+        ))
+
+    def test_rejects_concatenated_university_navigation(self):
+        from check import is_navigation_noise_title
+        self.assertTrue(is_navigation_noise_title(
+            "CET 2025 Notices CET 2025 Results Management Quota Admission "
+            "Regulatory Committee Refund Policy Refund Status Admission 2024"
+        ))
+
+    def test_rejects_recruitment_menu_not_a_notice(self):
+        from check import is_navigation_noise_title
+        self.assertTrue(is_navigation_noise_title(
+            "Recruitment Process Instructions to Applicants Apply for Job"
+        ))
+
 
 if __name__ == "__main__":
     unittest.main()
