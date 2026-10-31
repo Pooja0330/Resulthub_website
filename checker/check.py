@@ -429,10 +429,10 @@ def is_navigation_noise_title(title):
     # A notice may be detailed, but an anchor containing multiple independent
     # notice headings is almost always the text of a whole card/list container.
     repeated_heading = (
-        len(re.findall(r"\\bnotification\\b", low)) >= 2
-        or len(re.findall(r"\\bresults?\\b", low)) >= 3
-        or len(re.findall(r"\\badmissions?\\b", low)) >= 3
-        or len(re.findall(r"\\bexaminations?\\b", low)) >= 3
+        len(re.findall(r"\bnotification\b", low)) >= 2
+        or len(re.findall(r"\bresults?\b", low)) >= 3
+        or len(re.findall(r"\badmissions?\b", low)) >= 3
+        or len(re.findall(r"\bexaminations?\b", low)) >= 3
     )
     if repeated_heading and len(raw) > 65:
         return True
