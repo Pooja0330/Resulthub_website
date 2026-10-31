@@ -235,5 +235,23 @@ class CheckerSafetyTests(unittest.TestCase):
             self.assertGreaterEqual(timeout[1], 15)
 
 
+    def test_rejects_long_concatenated_homepage_content(self):
+        from check import is_navigation_noise_title
+        title = (
+            "Intimation regarding Principals and Management Meeting on 4th November 2026 "
+            "at JNTUH. FullTime Ph.D. and PDF Admissions under the Visvesvaraya Scheme: "
+            "List of Eligible Candidates, Interview Schedule, and Instructions. "
+            "Google Developer Group activities, campus news and other links."
+        )
+        self.assertTrue(is_navigation_noise_title(title))
+
+    def test_keeps_a_legitimate_detailed_notice_title(self):
+        from check import is_navigation_noise_title
+        self.assertFalse(is_navigation_noise_title(
+            "Notification for recruitment to the post of Junior Engineer "
+            "including eligibility, application dates and examination schedule"
+        ))
+
+
 if __name__ == "__main__":
     unittest.main()
