@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-10-31T14:43:29.942710+00:00",
+  "last_checked_at": "2026-10-31T16:45:16.793438+00:00",
   "sources_enabled": 296,
   "sources_succeeded": 144,
   "sources_failed": 152,
-  "new_candidates": 4,
+  "new_candidates": 2,
   "recovered_records": 0,
-  "telegram_posts_sent": 5,
+  "telegram_posts_sent": 2,
   "alerts_pending": 0,
   "status": "partial",
   "failure_types": "ConnectTimeout: 94, SSLError: 35, ConnectionError: 23, HTTPError: 18, ValueError: 3",
@@ -28,7 +28,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
