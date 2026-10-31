@@ -801,7 +801,7 @@ def main():
         # Keep curated archive landing pages, but remove dated non-archive
         # notices outside the live 90-day window.
         if (not category or is_navigation_noise_title(title) or is_speculative_status_title(title)
-                or (not item.get("archive", False) and is_stale_notice(title, item.get("published", ""))):
+                or (not item.get("archive", False) and is_stale_notice(title, item.get("published", "")))):
             removed_result_rows += 1
             continue
         item["title"] = title
