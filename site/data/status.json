@@ -1,5 +1,5 @@
 {
-  "last_checked_at": "2026-11-01T14:15:45.376515+00:00",
+  "last_checked_at": "2026-11-01T14:25:16.060397+00:00",
   "sources_enabled": 296,
   "sources_succeeded": 145,
   "sources_failed": 151,
@@ -8,7 +8,7 @@
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, SSLError: 37, ConnectionError: 22, HTTPError: 17, ReadTimeout: 4",
+  "failure_types": "ConnectTimeout: 90, SSLError: 37, ConnectionError: 24, HTTPError: 17, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -48,7 +48,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "apsc",
