@@ -27,7 +27,7 @@ TG_RATE_LIMITED = False
 TIMEOUT = max(5, min(int(os.getenv("SOURCE_TIMEOUT_SECONDS", "20")), 30))
 # Scan more sources concurrently so a five-minute schedule is practical without letting one slow portal block the whole run.
 WORKERS = max(1, min(int(os.getenv("SOURCE_WORKERS", "24")), 32))
-MAX_NEW_PER_SOURCE = max(1, min(int(os.getenv("MAX_NEW_PER_SOURCE", "5")), 20))
+MAX_NEW_PER_SOURCE = max(1, min(int(os.getenv("MAX_NEW_PER_SOURCE", "20")), 20))
 MAX_ARCHIVE_PER_SOURCE = max(20, min(int(os.getenv("MAX_ARCHIVE_PER_SOURCE", "250")), 500))
 MAX_AGE_DAYS = 90
 
