@@ -1,14 +1,14 @@
 {
-  "last_checked_at": "2026-11-01T17:15:47.463213+00:00",
+  "last_checked_at": "2026-11-01T17:31:01.302769+00:00",
   "sources_enabled": 296,
-  "sources_succeeded": 120,
-  "sources_failed": 176,
+  "sources_succeeded": 146,
+  "sources_failed": 150,
   "new_candidates": 0,
-  "recovered_records": 0,
+  "recovered_records": 6,
   "telegram_posts_sent": 10,
-  "alerts_pending": 476,
+  "alerts_pending": 466,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 129, SSLError: 29, ConnectionError: 21, HTTPError: 17, ReadTimeout: 2",
+  "failure_types": "ConnectTimeout: 91, SSLError: 38, ConnectionError: 22, HTTPError: 17, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -104,7 +104,7 @@
     },
     {
       "source_id": "cbse-results-official",
-      "error_type": "ConnectTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "cg-vyapam",
@@ -119,16 +119,12 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "cgdte-admissions",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "cgpsc",
       "error_type": "ConnectTimeout"
     },
     {
       "source_id": "chandigarh-administration",
-      "error_type": "ConnectTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "cisce",
@@ -151,36 +147,8 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "crpf-recruitment",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "crpf-results",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "csir-careers",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "csir-hrdg",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "csir-ugc-net",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "ctet",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "cuet",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "dnh-dd-administration",
-      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "drdo-careers",
@@ -196,14 +164,6 @@
     },
     {
       "source_id": "esic-recruitment",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "fci-recruitment",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "goa-government",
       "error_type": "ConnectTimeout"
     },
     {
@@ -244,7 +204,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps",
@@ -273,10 +233,6 @@
     {
       "source_id": "ibps-spl-xvi",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "icmr-careers",
-      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "iiser-admissions",
@@ -319,10 +275,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "ipu",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -340,7 +292,7 @@
     },
     {
       "source_id": "jkssb",
-      "error_type": "ConnectTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "jntuh",
@@ -360,7 +312,7 @@
     },
     {
       "source_id": "karnataka-kpsc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "karnataka-results",
@@ -380,19 +332,11 @@
     },
     {
       "source_id": "kvs",
-      "error_type": "ConnectTimeout"
+      "error_type": "ValueError"
     },
     {
       "source_id": "kvs-recruitment",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "ladakh-administration",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "lakshadweep-administration",
-      "error_type": "ConnectTimeout"
+      "error_type": "ValueError"
     },
     {
       "source_id": "maha-rojgar",
@@ -404,10 +348,6 @@
     },
     {
       "source_id": "manipur-board",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "manipur-psc",
       "error_type": "ConnectTimeout"
     },
     {
@@ -425,10 +365,6 @@
     {
       "source_id": "mizoram-university",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "mpbse",
-      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "mpesb",
@@ -460,7 +396,7 @@
     },
     {
       "source_id": "nielit-recruitment",
-      "error_type": "ConnectTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "nift-admissions",
@@ -511,20 +447,12 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "opsc",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "osmania-university",
       "error_type": "SSLError"
     },
     {
-      "source_id": "ossc",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "osssc",
-      "error_type": "ConnectTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "patna-university",
@@ -533,10 +461,6 @@
     {
       "source_id": "pondicherry-university-old-results",
       "error_type": "HTTPError"
-    },
-    {
-      "source_id": "puducherry-government",
-      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "punjab-psc",
@@ -576,7 +500,7 @@
     },
     {
       "source_id": "rrb-allahabad",
-      "error_type": "ConnectTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "rrb-bangalore",
@@ -584,7 +508,7 @@
     },
     {
       "source_id": "rrb-bbs",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "rrb-bhopal",
@@ -592,7 +516,7 @@
     },
     {
       "source_id": "rrb-bilaspur",
-      "error_type": "ConnectTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "rrb-central-recruitment",
@@ -644,7 +568,7 @@
     },
     {
       "source_id": "rrb-ranchi",
-      "error_type": "ConnectTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "rrb-sec",
@@ -672,18 +596,6 @@
     },
     {
       "source_id": "sikkim-psc",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "ssb-recruitment",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "ssc",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "ssc-northern-region-whats-new",
       "error_type": "ConnectTimeout"
     },
     {
@@ -727,20 +639,8 @@
       "error_type": "ConnectionError"
     },
     {
-      "source_id": "ubse-results",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "ugcnet",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "up-police",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "uppsc",
-      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "upsc",
@@ -748,7 +648,7 @@
     },
     {
       "source_id": "upsc-active-examinations",
-      "error_type": "ConnectTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "upsc-exam-calendar",
@@ -757,10 +657,6 @@
     {
       "source_id": "upsc-final-results",
       "error_type": "ReadTimeout"
-    },
-    {
-      "source_id": "upsc-online-ora",
-      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "upsc-results",
