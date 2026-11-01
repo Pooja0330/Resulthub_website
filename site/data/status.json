@@ -1,14 +1,14 @@
 {
-  "last_checked_at": "2026-11-01T14:43:24.028778+00:00",
+  "last_checked_at": "2026-11-01T14:50:44.405884+00:00",
   "sources_enabled": 296,
-  "sources_succeeded": 144,
-  "sources_failed": 152,
+  "sources_succeeded": 143,
+  "sources_failed": 153,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 93, SSLError: 36, ConnectionError: 23, HTTPError: 17, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 92, SSLError: 37, ConnectionError: 23, HTTPError: 17, ReadTimeout: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -204,7 +204,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ibps",
@@ -444,7 +444,7 @@
     },
     {
       "source_id": "odisha-results",
-      "error_type": "ConnectionError"
+      "error_type": "SSLError"
     },
     {
       "source_id": "osmania-university",
@@ -481,6 +481,10 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
