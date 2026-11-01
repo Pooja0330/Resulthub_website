@@ -433,6 +433,10 @@ def is_navigation_noise_title(title):
     low = raw.lower()
     value = re.sub(r"[^a-z0-9]+", "", low)
 
+    # A repeated generic landing-page heading is navigation, not a result.
+    if value in {"resultsstatisticsresultsstatistics", "resultstatisticsresultstatistics"}:
+        return True
+
     # A notice may be detailed, but an anchor containing multiple independent
     # notice headings is almost always the text of a whole card/list container.
     repeated_heading = (
