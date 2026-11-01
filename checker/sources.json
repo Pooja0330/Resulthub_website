@@ -1163,7 +1163,7 @@
     {
       "id": "upsc-recruitment",
       "name": "UPSC recruitment notices",
-      "url": "https://upsc.gov.in/recruitment/recruitment-permanent",
+      "url": "https://www.upsc.gov.in/recruitment/recruitment-test/notices",
       "kind": "html",
       "allowed_hosts": [
         "upsc.gov.in"
@@ -1176,8 +1176,8 @@
         "merit_list"
       ],
       "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "last_reviewed": "2026-11-01",
+      "coverage_note": "Official UPSC recruitment-test notices listing; verified as the current notice table.",
       "exam_category": "UPSC / Central Recruitment",
       "discover_listing_pages": true
     },
@@ -4462,10 +4462,11 @@
     {
       "id": "upsc-active-examinations",
       "name": "UPSC Active Examinations and notices",
-      "url": "https://upsc.gov.in/examinations/active-exams",
+      "url": "https://cms.upsc.gov.in/exam-notification/archives/",
       "kind": "html",
       "allowed_hosts": [
-        "upsc.gov.in"
+        "upsc.gov.in",
+        "cms.upsc.gov.in"
       ],
       "categories": [
         "result",
@@ -4477,8 +4478,8 @@
         "exam_schedule"
       ],
       "enabled": true,
-      "last_reviewed": "2026-10-16",
-      "coverage_note": "Official active examination listing; use alongside the UPSC home page and written-result archive.",
+      "last_reviewed": "2026-11-01",
+      "coverage_note": "Official UPSC examination-notification archive on the CMS UPSC domain; verified as the current archive listing.",
       "exam_category": "UPSC / Central Recruitment",
       "discover_listing_pages": true
     },
