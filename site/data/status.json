@@ -1,14 +1,14 @@
 {
-  "last_checked_at": "2026-11-01T19:03:51.326280+00:00",
+  "last_checked_at": "2026-11-01T19:15:45.936962+00:00",
   "sources_enabled": 296,
-  "sources_succeeded": 145,
-  "sources_failed": 151,
-  "new_candidates": 23,
-  "recovered_records": 0,
+  "sources_succeeded": 147,
+  "sources_failed": 149,
+  "new_candidates": 8,
+  "recovered_records": 2,
   "telegram_posts_sent": 10,
-  "alerts_pending": 447,
+  "alerts_pending": 445,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, SSLError: 38, ConnectionError: 24, HTTPError: 17, ValueError: 3",
+  "failure_types": "ConnectTimeout: 91, SSLError: 38, ConnectionError: 22, HTTPError: 16, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -92,7 +92,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
@@ -204,7 +204,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps",
@@ -395,10 +395,6 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "niacl",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "nielit-recruitment",
       "error_type": "SSLError"
     },
@@ -477,10 +473,6 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
