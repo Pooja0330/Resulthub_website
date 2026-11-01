@@ -117,6 +117,15 @@ class CheckerSafetyTests(unittest.TestCase):
     def test_old_uploaded_date_in_notice_title_is_stale(self):
         self.assertTrue(is_stale_notice("Result uploaded on 13/02/2024", ""))
 
+    def test_old_unlabelled_date_at_end_of_title_is_stale(self):
+        self.assertTrue(is_stale_notice("Most Urgent Public Notice 22/02/2023", ""))
+
+    def test_old_iso_date_in_notice_title_is_stale(self):
+        self.assertTrue(is_stale_notice("2026-06-25 ODISHA STATE OPEN SCHOOL EXAM ADMIT CARD", ""))
+
+    def test_current_unlabelled_full_date_is_not_stale(self):
+        self.assertFalse(is_stale_notice("Notice issued 01 Nov 2026", ""))
+
     def test_banking_sources_use_banking_filter_family(self):
         self.assertEqual(infer_exam_category("IBPS PO result", "Institute of Banking Personnel Selection", "ibps"), "Banking")
 
@@ -148,7 +157,14 @@ class CheckerSafetyTests(unittest.TestCase):
             "e-PRATIKAAR e-Samikshya Virtual Tour e-Learning e-Admission Results Examinations Online Payment PM Internship Scheme 2025 Library Seminars Conferences"
         ))
         self.assertTrue(is_navigation_noise_title("Jobs/Recruitment Advertisements,Call Letters"))
+        self.assertTrue(is_navigation_noise_title(
+            "Home Current Vacancies Vacancies Call Letters Results Recruitment Calendar "
+            "Summer Placements Research Internship Scholarships Post based Rosters"
+        ))
         self.assertFalse(is_navigation_noise_title("SSC CGL Tier-I Result 2026"))
+        self.assertIsNone(classify("Date Sheet"))
+        self.assertIsNone(classify("Examination Notice Board"))
+        self.assertIsNone(classify("RESULTS & Statistics Results Statistics"))
     def test_classifies_public_exam_notice(self):
         self.assertEqual(classify("Public Notice: Revised Examination Schedule 2026"), "exam_schedule")
 
