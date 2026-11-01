@@ -123,6 +123,13 @@ class CheckerSafetyTests(unittest.TestCase):
     def test_old_iso_date_in_notice_title_is_stale(self):
         self.assertTrue(is_stale_notice("2026-06-25 ODISHA STATE OPEN SCHOOL EXAM ADMIT CARD", ""))
 
+    def test_old_compact_date_in_official_pdf_url_is_stale(self):
+        self.assertTrue(is_stale_notice(
+            "Press Release: CBSE Post-Result Portal Notice",
+            "",
+            "https://www.cbse.gov.in/cbsenew/documents/Press_Release_Complaint_PVR_05062026.pdf",
+        ))
+
     def test_current_unlabelled_full_date_is_not_stale(self):
         self.assertFalse(is_stale_notice("Notice issued 01 Nov 2026", ""))
 
