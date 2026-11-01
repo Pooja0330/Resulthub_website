@@ -438,6 +438,10 @@ def is_navigation_noise_title(title):
     repeated_heading = (
         len(re.findall(r"\bnotification\b", low)) >= 2
         or len(re.findall(r"\bresults?\b", low)) >= 3
+        or (
+            len(re.findall(r"\bresults?\b", low)) >= 2
+            and len(re.findall(r"\bstatistics?\b", low)) >= 2
+        )
         or len(re.findall(r"\badmissions?\b", low)) >= 3
         or len(re.findall(r"\bexaminations?\b", low)) >= 3
     )
