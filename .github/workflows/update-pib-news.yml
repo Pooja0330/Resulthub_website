@@ -2,9 +2,6 @@ name: Update PIB News
 
 on:
   workflow_dispatch:
-  schedule:
-    # Independent of the exam scanner so PIB refreshes even when exam portals time out.
-    - cron: "*/10 * * * *"
   push:
     branches: [main]
     paths:
