@@ -1,14 +1,14 @@
 {
-  "last_checked_at": "2026-11-01T13:15:57.101111+00:00",
+  "last_checked_at": "2026-11-01T13:25:27.515429+00:00",
   "sources_enabled": 296,
-  "sources_succeeded": 145,
-  "sources_failed": 151,
-  "new_candidates": 0,
+  "sources_succeeded": 146,
+  "sources_failed": 150,
+  "new_candidates": 5,
   "recovered_records": 0,
-  "telegram_posts_sent": 0,
+  "telegram_posts_sent": 5,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, SSLError: 37, ConnectionError: 24, HTTPError: 17, ValueError: 3",
+  "failure_types": "ConnectTimeout: 91, SSLError: 35, ConnectionError: 24, HTTPError: 17, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
