@@ -212,7 +212,12 @@ def host_allowed(url, hosts):
 
 
 def classify(title):
-    if not title or SKIP.search(title) or NAV_TITLE.fullmatch(title.strip()):
+    if (
+        not title
+        or SKIP.search(title)
+        or NAV_TITLE.fullmatch(title.strip())
+        or is_navigation_noise_title(title)
+    ):
         return None
     for category, pattern in RULES:
         if pattern.search(title):
