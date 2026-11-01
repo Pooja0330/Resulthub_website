@@ -1,14 +1,14 @@
 {
-  "last_checked_at": "2026-11-01T23:15:47.846716+00:00",
+  "last_checked_at": "2026-11-01T23:31:06.820724+00:00",
   "sources_enabled": 296,
   "sources_succeeded": 146,
   "sources_failed": 150,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 10,
-  "alerts_pending": 287,
+  "alerts_pending": 277,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, SSLError: 38, ConnectionError: 23, HTTPError: 16, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 91, SSLError: 38, ConnectionError: 23, HTTPError: 16, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -204,7 +204,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps",
@@ -273,6 +273,10 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "indiapost-recruitment",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -475,10 +479,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "rajeduboard",
       "error_type": "ConnectTimeout"
     },
@@ -656,7 +656,7 @@
     },
     {
       "source_id": "upsc-final-results",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "upsc-results",
