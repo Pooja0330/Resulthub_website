@@ -1,14 +1,14 @@
 {
-  "last_checked_at": "2026-11-01T20:45:46.672832+00:00",
+  "last_checked_at": "2026-11-01T21:01:43.358945+00:00",
   "sources_enabled": 296,
-  "sources_succeeded": 146,
-  "sources_failed": 150,
+  "sources_succeeded": 139,
+  "sources_failed": 157,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 10,
-  "alerts_pending": 396,
+  "alerts_pending": 386,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, SSLError: 38, ConnectionError: 23, HTTPError: 16, ValueError: 3",
+  "failure_types": "ConnectTimeout: 97, SSLError: 38, ConnectionError: 23, HTTPError: 17, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -159,6 +159,14 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "dsssb",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "dsssb-old-results-archive",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "epfindia",
       "error_type": "HTTPError"
     },
@@ -279,6 +287,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "jammu-university",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "jkbose",
       "error_type": "ConnectTimeout"
     },
@@ -319,6 +331,14 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "kashmir-university",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "kerala-devaswom",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "keralaresults",
       "error_type": "ConnectionError"
     },
@@ -355,6 +375,10 @@
       "error_type": "HTTPError"
     },
     {
+      "source_id": "meghalaya-psc",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -372,6 +396,10 @@
     },
     {
       "source_id": "mppsc",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "mumbai-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -451,16 +479,16 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ossc",
-      "error_type": "ConnectionError"
-    },
-    {
       "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
       "source_id": "patna-university",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "portal-delhi-delhi-gov-in",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "punjab-psc",
@@ -608,7 +636,7 @@
     },
     {
       "source_id": "telangana-results",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "tnmrbrecruit",
@@ -620,7 +648,7 @@
     },
     {
       "source_id": "tntrb",
-      "error_type": "ConnectTimeout"
+      "error_type": "HTTPError"
     },
     {
       "source_id": "tnusrb",
