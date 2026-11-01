@@ -1,14 +1,14 @@
 {
-  "last_checked_at": "2026-11-01T15:10:59.056050+00:00",
+  "last_checked_at": "2026-11-01T15:18:40.706582+00:00",
   "sources_enabled": 296,
-  "sources_succeeded": 146,
-  "sources_failed": 150,
+  "sources_succeeded": 145,
+  "sources_failed": 151,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, SSLError: 37, ConnectionError: 23, HTTPError: 17, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 91, SSLError: 37, ConnectionError: 24, HTTPError: 17, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -28,7 +28,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -92,7 +92,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bssc",
@@ -444,15 +444,23 @@
     },
     {
       "source_id": "odisha-results",
-      "error_type": "SSLError"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "osmania-university",
       "error_type": "SSLError"
     },
     {
+      "source_id": "osssc",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "patna-university",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "pfrda-careers",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "pondicherry-university-old-results",
@@ -473,10 +481,6 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
