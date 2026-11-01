@@ -485,7 +485,7 @@ def is_navigation_noise_title(title):
     return len(raw) > 260 and len(raw.split()) > 32
 
 
-def is_stale_notice(title, published=""):
+def is_stale_notice(title, published="", url=""):
     """Reject clearly old notices when the title or feed gives an explicit date."""
     candidates = []
     text_value = str(title or "")
@@ -512,7 +512,17 @@ def is_stale_notice(title, published=""):
         r"\d{1,2}\s+(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*,?\s+20\d{2})\b",
         re.I,
     )
-    candidates.extend(match.group(0).strip() for match in unlabelled_date.finditer(text_value))
+    candidates.extend(match.group(0).strip() for match in unlabelled_date.finditer(text_value + " " + str(url or "")))
+
+    # Some official PDF filenames encode dates as DDMMYYYY or YYYYMMDD.
+    # Interpret only complete eight-digit tokens and validate with real dates.
+    for token in re.findall(r"(?<!\d)(?:20\d{6}|\d{8})(?!\d)", str(url or "")):
+        for fmt in ("%Y%m%d", "%d%m%Y"):
+            try:
+                candidates.append(datetime.strptime(token, fmt).strftime("%d %b %Y"))
+                break
+            except ValueError:
+                continue
 
     for value in candidates:
         parsed_date = None
@@ -695,7 +705,7 @@ def fetch_source(source):
                 and classify_source_title(" ".join(str(title or "").split()), source)
                 and not is_navigation_noise_title(title)
                 and not is_speculative_status_title(title)
-                and not is_stale_notice(title, published)
+                and not is_stale_notice(title, published, link)
                 and host_allowed(link, hosts)):
             initial_urls.add(normalized)
             initial_count += 1
@@ -739,7 +749,7 @@ def fetch_source(source):
         category = classify_source_title(title, source)
         if not category or is_speculative_status_title(title) or normalized in seen_urls:
             continue
-        if is_stale_notice(title, published) and not source.get("historical_archive", False):
+        if is_stale_notice(title, published, link) and not source.get("historical_archive", False):
             continue
 
         seen_urls.add(normalized)
@@ -854,7 +864,7 @@ def main():
         # Keep curated archive landing pages, but remove dated non-archive
         # notices outside the live 90-day window.
         if (not category or is_navigation_noise_title(title) or is_speculative_status_title(title)
-                or (not item.get("archive", False) and is_stale_notice(title, item.get("published", "")))):
+                or (not item.get("archive", False) and is_stale_notice(title, item.get("published", ""), item.get("url") or item.get("official_url", "")))):
             removed_result_rows += 1
             continue
         item["title"] = title
@@ -1036,7 +1046,7 @@ def main():
             source_by_id.get(str(item.get("source_id", "")))
             or source_by_name.get(str(item.get("source_name", "")).strip().lower())
         )
-        stale_pending = is_stale_notice(title, item.get("published", ""))
+        stale_pending = is_stale_notice(title, item.get("published", ""), url)
         category = classify_source_title(title, source or {}) if title else None
         hold_reason = ""
         if not source:
