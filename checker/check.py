@@ -101,7 +101,9 @@ NAV_TITLE = re.compile(
     r"view all|view more|recruitment calendar|stages of recruitment|"
     r"reporting vacancies|detailed advertisement|call letters?|admit cards?|"
     r"answer keys?|cut.?off marks?|current openings|recruitment results|"
-    r"recruitment archives|latest updates)$", re.I
+    r"recruitment archives|latest updates|date sheet|examination notice board|"
+    r"results?\s*(?:&|and)\s*statistics|current vacancies|vacancies|"
+    r"summer placements|research internship|scholarships|post based rosters|rosters?)$", re.I
 )
 
 
@@ -449,6 +451,19 @@ def is_navigation_noise_title(title):
     if menu_hits >= 2 and len(raw) > 55:
         return True
 
+    # Reject concatenated navigation labels that individually contain exam
+    # keywords (for example, RBI's "Current Vacancies / Call Letters / Results").
+    navigation_labels = (
+        r"\bhome\b", r"\bcurrent vacancies\b", r"\bvacancies\b",
+        r"\bcall letters?\b", r"\brecruitment calendar\b",
+        r"\bsummer placements\b", r"\bresearch internship\b",
+        r"\bscholarships\b", r"\bpost based rosters?\b",
+        r"\brosters? at (?:co|ros?)\b",
+    )
+    navigation_hits = sum(bool(re.search(pattern, low, re.I)) for pattern in navigation_labels)
+    if len(raw) > 65 and navigation_hits >= 4:
+        return True
+
     # Recognize known menu-cluster patterns even when punctuation is stripped.
     menu_terms = (
         "servicespayfeeonline", "officialemailservice",
@@ -486,6 +501,19 @@ def is_stale_notice(title, published=""):
     if published:
         candidates.append(str(published).strip())
 
+    # Official portals often append the issue date to a PDF/title without
+    # labelling it (for example, "Notice 22/02/2023" or "2026-06-25 ...").
+    # Parse full dates, but never treat a bare exam year such as "Result 2026"
+    # as a publication date.
+    unlabelled_date = re.compile(
+        r"\b(?:20\d{2}-\d{1,2}-\d{1,2}|"
+        r"\d{1,2}[./-]\d{1,2}[./-]20\d{2}|"
+        r"(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{1,2},?\s+20\d{2}|"
+        r"\d{1,2}\s+(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*,?\s+20\d{2})\b",
+        re.I,
+    )
+    candidates.extend(match.group(0).strip() for match in unlabelled_date.finditer(text_value))
+
     for value in candidates:
         parsed_date = None
         for fmt in (
@@ -493,6 +521,7 @@ def is_stale_notice(title, published=""):
             "%d %b %Y", "%d %B %Y", "%d %b, %Y", "%d %B, %Y",
             "%d/%m/%Y", "%d-%m-%Y", "%d.%m.%Y",
             "%m/%d/%Y", "%m-%d-%Y", "%m.%d.%Y",
+            "%Y-%m-%d",
         ):
             try:
                 parsed_date = datetime.strptime(value, fmt).replace(tzinfo=timezone.utc)
