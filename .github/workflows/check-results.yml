@@ -2,6 +2,8 @@
 name: Check Exam Results
 
 on:
+  schedule:
+    - cron: '*/15 * * * *'
   workflow_dispatch:
   push:
     branches: [main]
