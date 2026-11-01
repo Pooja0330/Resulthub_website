@@ -1,5 +1,5 @@
 {
-  "last_checked_at": "2026-11-01T15:31:01.440008+00:00",
+  "last_checked_at": "2026-11-01T15:45:50.511928+00:00",
   "sources_enabled": 296,
   "sources_succeeded": 145,
   "sources_failed": 151,
@@ -92,7 +92,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bssc",
@@ -204,7 +204,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps",
@@ -275,6 +275,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "indiapost-gds",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -316,10 +320,6 @@
     },
     {
       "source_id": "karnataka-results",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "kerala-devaswom",
       "error_type": "ConnectTimeout"
     },
     {
