@@ -1,12 +1,12 @@
 {
-  "last_checked_at": "2026-11-01T20:01:15.867124+00:00",
+  "last_checked_at": "2026-11-01T20:15:47.347542+00:00",
   "sources_enabled": 296,
   "sources_succeeded": 148,
   "sources_failed": 148,
-  "new_candidates": 11,
+  "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 10,
-  "alerts_pending": 426,
+  "alerts_pending": 416,
   "status": "partial",
   "failure_types": "ConnectTimeout: 91, SSLError: 37, ConnectionError: 23, HTTPError: 16, ValueError: 3",
   "failed_source_samples": [
