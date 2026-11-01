@@ -1294,8 +1294,8 @@ def main():
             }
             for sid, source_health in sorted(health.items())
             if source_health.get("status") == "failed"
-        ][:12],
-        "note": "Some sources may be unavailable or use formats automated scanning cannot read. failed_source_samples lists a small diagnostic sample."
+        ][:200],
+        "note": "Diagnostic list includes up to 200 failed source IDs and error types. Source IDs are safe identifiers; no credentials, response bodies, or request headers are exposed."
 
     })
 
