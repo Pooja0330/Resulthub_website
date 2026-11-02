@@ -1,14 +1,14 @@
 {
-  "last_checked_at": "2026-11-02T00:01:46.371776+00:00",
+  "last_checked_at": "2026-11-02T00:15:48.712467+00:00",
   "sources_enabled": 296,
-  "sources_succeeded": 147,
-  "sources_failed": 149,
-  "new_candidates": 1,
+  "sources_succeeded": 145,
+  "sources_failed": 151,
+  "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 10,
-  "alerts_pending": 258,
+  "alerts_pending": 248,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, SSLError: 38, ConnectionError: 22, HTTPError: 16, ValueError: 3",
+  "failure_types": "ConnectTimeout: 91, SSLError: 38, ConnectionError: 23, HTTPError: 16, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -92,7 +92,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bssc",
@@ -275,6 +275,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "indiapost-gds",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -353,6 +357,10 @@
     {
       "source_id": "mat-aima",
       "error_type": "HTTPError"
+    },
+    {
+      "source_id": "meghalaya-board",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "merchant-navy-imu",
