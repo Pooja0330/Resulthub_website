@@ -39,7 +39,7 @@ def official_release_url(raw, base):
     prid = parse_qs(parsed.query, keep_blank_values=True).get("PRID", [""])[0]
     if not prid.isdigit():
         return ""
-    return "https://www.pib.gov.in/PressReleasePage.aspx?PRID=" + prid
+    return "https://www.pib.gov.in/PressReleasePage.aspx?PRID=" + prid + "&lang=1"
 
 
 def item_record(title, raw_url, base, published=""):
