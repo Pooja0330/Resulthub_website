@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-02T23:07:44.301946+00:00",
-  "scan_started_at": "2026-11-02T23:01:31.843034+00:00",
+  "last_checked_at": "2026-11-02T23:22:14.726785+00:00",
+  "scan_started_at": "2026-11-02T23:15:53.802368+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 147,
-  "sources_failed": 150,
+  "sources_succeeded": 143,
+  "sources_failed": 154,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 10,
-  "alerts_pending": 690,
+  "alerts_pending": 680,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, SSLError: 35, ConnectionError: 24, HTTPError: 17, ReadTimeout: 4",
+  "failure_types": "ConnectTimeout: 96, SSLError: 34, ConnectionError: 25, HTTPError: 17, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bssc",
@@ -145,6 +145,14 @@
     },
     {
       "source_id": "coast-guard-recruitment",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "columbia-ciet-raipur",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "columbia-institute-pharmacy-raipur",
       "error_type": "ConnectTimeout"
     },
     {
@@ -276,16 +284,12 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "indiapost-gds",
-      "error_type": "ReadTimeout"
-    },
-    {
-      "source_id": "indiapost-recruitment",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "jharkhand-psc",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "jkbose",
@@ -358,6 +362,10 @@
     {
       "source_id": "mat-aima",
       "error_type": "HTTPError"
+    },
+    {
+      "source_id": "meghalaya-board",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "merchant-navy-imu",
@@ -449,11 +457,15 @@
     },
     {
       "source_id": "odisha-results",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "osmania-university",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "ossc",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "patna-university",
@@ -481,7 +493,7 @@
     },
     {
       "source_id": "ranchi-university",
-      "error_type": "SSLError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "rpsc",
@@ -597,6 +609,10 @@
     },
     {
       "source_id": "sikkim-psc",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "sikkim-university",
       "error_type": "ConnectTimeout"
     },
     {
