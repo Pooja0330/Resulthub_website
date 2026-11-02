@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-02T09:26:34.288684+00:00",
+  "last_checked_at": "2026-11-02T09:36:46.641130+00:00",
   "sources_enabled": 296,
   "sources_succeeded": 147,
   "sources_failed": 149,
-  "new_candidates": 0,
-  "recovered_records": 0,
-  "telegram_posts_sent": 0,
+  "new_candidates": 1,
+  "recovered_records": 1,
+  "telegram_posts_sent": 1,
   "alerts_pending": 0,
   "status": "partial",
   "failure_types": "ConnectTimeout: 93, SSLError: 35, ConnectionError: 22, HTTPError: 16, ReadTimeout: 3",
@@ -327,6 +327,10 @@
       "error_type": "ValueError"
     },
     {
+      "source_id": "magadh-university",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "maha-rojgar",
       "error_type": "HTTPError"
     },
@@ -341,10 +345,6 @@
     {
       "source_id": "mat-aima",
       "error_type": "HTTPError"
-    },
-    {
-      "source_id": "meghalaya-board",
-      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "merchant-navy-imu",
@@ -368,6 +368,10 @@
     },
     {
       "source_id": "nabard",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "nagaland-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -428,7 +432,7 @@
     },
     {
       "source_id": "nvs-recruitment",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "odisha-board-official",
@@ -441,10 +445,6 @@
     {
       "source_id": "osmania-university",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "ossc",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "osssc",
