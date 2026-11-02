@@ -265,7 +265,7 @@ function governmentExamPriority(x){
  return 2;
 }
 function mainPriority(x){return governmentExamPriority(x);}
-function updateTime(x){return x.detected_at||x.telegram_sent_at||x.date||x.published||0;}
+function updateTime(x){return x.telegram_sent_at||x.detected_at||x.date||x.published||0;}
 function updateTimeValue(x){const n=new Date(updateTime(x)).getTime();return Number.isFinite(n)?n:0;}
 function isNavigationNoise(item){
  const title=String(item?.title||item?.exam||"").toLowerCase().replace(/[^a-z0-9]/g,"");
@@ -355,7 +355,7 @@ function renderPriorityExamAlerts(){
  box.innerHTML=rows.length?rows.map(x=>{
   const url=safeUrl(x.url||x.official_url)||safeUrl(x.source_url);
   const category=label(x.category);
-  const detected=x.detected_at?new Date(x.detected_at).toLocaleString("en-IN",{day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit",timeZone:"Asia/Kolkata"}):"";const date=x.published|| (detected?"Detected "+detected:"Date not shown");
+  const displayStamp=x.telegram_sent_at||x.detected_at||"";const detected=displayStamp?new Date(displayStamp).toLocaleString("en-IN",{day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit",timeZone:"Asia/Kolkata"}):"";const date=x.telegram_sent_at?(detected?"Telegram alert sent "+detected:"Telegram alert sent"): (x.published||(detected?"Detected "+detected:"Date not shown"));
   const detail=detailPageUrl(x);
   const title=String(x.title||x.exam||"Official exam update");
   return '<article class="priority-exam-row"><span class="priority-exam-tag">'+esc(category)+'</span><div class="priority-exam-copy"><a class="priority-exam-title-link" href="'+esc(detail)+'" aria-label="Open '+esc(title)+' details on GoResultHub">'+esc(title)+'</a><small>'+esc(x.source_name||x.authority||"Official source")+' · '+esc(date)+'</small></div><a class="priority-exam-view-link" href="'+esc(detail)+'" aria-label="View update on GoResultHub">View update ↗</a></article>';
