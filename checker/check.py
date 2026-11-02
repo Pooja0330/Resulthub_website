@@ -1034,7 +1034,7 @@ def main():
         normalized_queued_url = normalize_notice_url(queued_url)
         if not queued_title or not normalized_queued_url or not host_allowed(
             queued_url,
-            next((source.get("allowed_hosts", []) for source in sources
+            next((source.get("allowed_hosts", []) for source in registry["sources"]
                   if str(source.get("id", "")) == str(queued_item.get("source_id", ""))), []),
         ):
             continue
@@ -1042,7 +1042,7 @@ def main():
         if queued_id in existing_ids or normalized_queued_url in existing_urls:
             continue
         source_meta = next(
-            (source for source in sources
+            (source for source in registry["sources"]
              if str(source.get("id", "")) == str(queued_item.get("source_id", ""))),
             {},
         )
@@ -1058,7 +1058,7 @@ def main():
             infer_exam_category(queued_title, source_meta.get("name", ""),
                                 source_meta.get("id", ""), source_meta.get("state", "")),
         )
-        detected = queued_item.get("detected_at") or pending_record.get("detected_at") or checked_at
+        detected = queued_item.get("detected_at") or pending_record.get("detected_at") or now_utc()
         results.append(build_result(queued_item, detected))
         existing_ids.add(queued_id)
         existing_urls.add(normalized_queued_url)
