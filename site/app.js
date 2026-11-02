@@ -320,33 +320,53 @@ function dedupeVisibleItems(items, options={}){
  });
 }
 function filteredItems(){
- const rawQuery=$("#q").value.trim().toLocaleLowerCase();
+ const rawQuery=$("#q").value.trim();
  const normalizeSearch=value=>String(value||"").toLocaleLowerCase().normalize("NFKC").replace(/[’']/g," ").replace(/[^\p{L}\p{M}\p{N}]+/gu," ").trim().replace(/\s+/g," ");
  const terms=normalizeSearch(rawQuery).split(" ").filter(Boolean);
  const c=$("#category").value, ec=$("#examCategory").value, r=$("#region").value, y=$("#examYear").value;
- const list=dedupeVisibleItems(allItems.filter(x=>!isPibItem(x))).filter(x=>{
+ const base=dedupeVisibleItems(allItems.filter(x=>!isPibItem(x))).filter(x=>{
   const family=inferredFamily(x);
-  const hay=normalizeSearch([x.title,x.exam,x.source_name,x.authority,x.description,x.state,x.region,x.category,x.exam_category,family,x.source_id,x.url,x.official_url,x.published].join(" "));
+  // Search every useful field supplied by a source, not just the visible headline.
+  // Different exam authorities use different names and abbreviations for the same notice.
+  const hay=normalizeSearch([
+   x.title,x.exam,x.exam_name,x.exam_title,x.post_name,x.department,x.organization,
+   x.source_name,x.authority,x.description,x.summary,x.keywords,x.tags,x.aliases,
+   x.state,x.region,x.category,x.exam_category,x.notification_type,family,
+   x.source_id,x.url,x.official_url,x.source_url,x.published,x.exam_year
+  ].flat(Infinity).join(" "));
   const itemState=stateForItem(x), stateFilter=selectedState||selectedRegion||r, year=recordYear(x);
-  const queryMatch=!terms.length||terms.every(term=>hay.includes(term));
   const effectiveStateFilter=stateFilter==="All India"?"":stateFilter;
-  return queryMatch&&(!c||x.category===c)&&(!ec||family===ec)&&(!effectiveStateFilter||itemState===effectiveStateFilter)&&(!y||(y==="unknown"?!year:year===y))&&browseMatches(x,selectedBrowse);
+  return (!c||x.category===c)&&(!ec||family===ec)&&(!effectiveStateFilter||itemState===effectiveStateFilter)&&(!y||(y==="unknown"?!year:year===y))&&browseMatches(x,selectedBrowse);
  });
+ const searchable=base.map(item=>{
+  const hay=normalizeSearch([
+   item.title,item.exam,item.exam_name,item.exam_title,item.post_name,item.department,item.organization,
+   item.source_name,item.authority,item.description,item.summary,item.keywords,item.tags,item.aliases,
+   item.state,item.region,item.category,item.exam_category,item.notification_type,inferredFamily(item),
+   item.source_id,item.url,item.official_url,item.source_url,item.published,item.exam_year
+  ].flat(Infinity).join(" "));
+  return {item,hay};
+ });
+ // Prefer records containing every search word. If that produces no result,
+ // fall back to records matching at least one word instead of showing a blank page.
+ const exact=searchable.filter(row=>!terms.length||terms.every(term=>row.hay.includes(term)));
+ const matches=exact.length?exact:searchable.filter(row=>terms.some(term=>row.hay.includes(term)));
+ const list=matches.map(row=>row.item);
  if($("#sort").value==="title") list.sort((a,b)=>(a.title||"").localeCompare(b.title||""));
  else if(terms.length){
   const phrase=normalizeSearch(rawQuery);
   const relevance=item=>{
-   const title=normalizeSearch(item.title||item.exam||"");
-   const exam=normalizeSearch(item.exam||"");
-   const source=normalizeSearch(item.source_name||item.authority||"");
+   const title=normalizeSearch([item.title,item.exam,item.exam_name,item.exam_title].join(" "));
+   const source=normalizeSearch([item.source_name,item.authority,item.source_id].join(" "));
+   const description=normalizeSearch([item.description,item.summary,item.keywords,item.tags,item.aliases].flat(Infinity).join(" "));
    let score=0;
-   if(title===phrase||exam===phrase)score+=1000;
-   if(title.includes(phrase)||exam.includes(phrase))score+=500;
+   if(title===phrase)score+=1500;
+   if(title.includes(phrase))score+=700;
    for(const term of terms){
-    if(title.split(" ").includes(term))score+=100;
-    else if(title.includes(term))score+=45;
-    if(exam.includes(term))score+=30;
-    if(source.includes(term))score+=8;
+    if(title.split(" ").includes(term))score+=140;
+    else if(title.includes(term))score+=60;
+    if(source.includes(term))score+=20;
+    if(description.includes(term))score+=12;
    }
    return score;
   };
