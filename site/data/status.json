@@ -1,14 +1,14 @@
 {
-  "last_checked_at": "2026-11-02T03:01:46.459017+00:00",
+  "last_checked_at": "2026-11-02T03:15:49.113468+00:00",
   "sources_enabled": 296,
   "sources_succeeded": 148,
   "sources_failed": 148,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 10,
-  "alerts_pending": 134,
+  "alerts_pending": 124,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, SSLError: 38, ConnectionError: 23, HTTPError: 16, ValueError: 3",
+  "failure_types": "ConnectTimeout: 90, SSLError: 37, ConnectionError: 23, HTTPError: 16, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -227,6 +227,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "icmai",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "iiser-admissions",
       "error_type": "SSLError"
     },
@@ -440,10 +444,6 @@
     },
     {
       "source_id": "osmania-university",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
