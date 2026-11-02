@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-02T17:21:03.389860+00:00",
-  "scan_started_at": "2026-11-02T17:15:52.683406+00:00",
+  "last_checked_at": "2026-11-02T17:39:08.843001+00:00",
+  "scan_started_at": "2026-11-02T17:31:48.264751+00:00",
   "sources_enabled": 297,
   "sources_succeeded": 147,
   "sources_failed": 150,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 10,
-  "alerts_pending": 921,
+  "alerts_pending": 911,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, SSLError: 35, ConnectionError: 27, HTTPError: 18, ValueError: 3",
+  "failure_types": "ConnectTimeout: 90, SSLError: 35, ConnectionError: 25, HTTPError: 18, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -336,6 +336,10 @@
       "error_type": "ValueError"
     },
     {
+      "source_id": "magadh-university",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "maha-rojgar",
       "error_type": "HTTPError"
     },
@@ -445,10 +449,6 @@
     },
     {
       "source_id": "osmania-university",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
@@ -649,7 +649,7 @@
     },
     {
       "source_id": "upsc-active-examinations",
-      "error_type": "ConnectionError"
+      "error_type": "SSLError"
     },
     {
       "source_id": "upsc-exam-calendar",
