@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-02T14:10:01.029681+00:00",
-  "scan_started_at": "2026-11-02T14:01:40.869393+00:00",
+  "last_checked_at": "2026-11-02T14:23:06.507921+00:00",
+  "scan_started_at": "2026-11-02T14:15:53.014338+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 145,
-  "sources_failed": 152,
+  "sources_succeeded": 149,
+  "sources_failed": 148,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 10,
-  "alerts_pending": 1061,
+  "alerts_pending": 1051,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, SSLError: 36, ConnectionError: 24, HTTPError: 16, ReadTimeout: 6",
+  "failure_types": "ConnectTimeout: 90, SSLError: 36, ConnectionError: 23, HTTPError: 17, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "apsc",
@@ -372,10 +372,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "nagaland-psc",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "naval-coastguard-jobs",
       "error_type": "SSLError"
     },
@@ -448,10 +444,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ossc",
-      "error_type": "ConnectionError"
-    },
-    {
       "source_id": "osssc",
       "error_type": "SSLError"
     },
@@ -461,7 +453,7 @@
     },
     {
       "source_id": "pondicherry-university-old-results",
-      "error_type": "ReadTimeout"
+      "error_type": "HTTPError"
     },
     {
       "source_id": "punjab-psc",
@@ -478,10 +470,6 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
@@ -586,10 +574,6 @@
     {
       "source_id": "rrb-trivandrum",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rrc-northern",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rrcb-central",
