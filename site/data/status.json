@@ -1,14 +1,14 @@
 {
-  "last_checked_at": "2026-11-02T07:45:48.961291+00:00",
+  "last_checked_at": "2026-11-02T08:02:33.198088+00:00",
   "sources_enabled": 296,
-  "sources_succeeded": 150,
-  "sources_failed": 146,
-  "new_candidates": 2,
+  "sources_succeeded": 148,
+  "sources_failed": 148,
+  "new_candidates": 0,
   "recovered_records": 0,
-  "telegram_posts_sent": 10,
-  "alerts_pending": 5,
+  "telegram_posts_sent": 5,
+  "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, SSLError: 36, ConnectionError: 23, HTTPError: 16, ValueError: 3",
+  "failure_types": "ConnectTimeout: 91, SSLError: 36, ConnectionError: 22, HTTPError: 16, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -267,6 +267,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "indiapost-gds",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -420,11 +424,11 @@
     },
     {
       "source_id": "nvs",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "nvs-recruitment",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "odisha-board-official",
@@ -461,6 +465,10 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "rajeduboard",
