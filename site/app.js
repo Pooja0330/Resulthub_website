@@ -340,7 +340,16 @@ function renderPriorityExamAlerts(){
  // Show only exam-related items in Exam Alert. PIB/government press releases
  // are rendered in the separate PIB News panel and must never be labelled as exam alerts.
  // Keep archive/history records out so old notices cannot crowd the live feed.
- const rows=dedupeVisibleItems(allItems.filter(x=>!isPibItem(x)&&x.archive!==true&&/^(result|notification|admit_card|answer_key|merit_list|cutoff|exam_schedule)$/.test(String(x.category||""))&&!/annual results old|old archive|historical/i.test(String(x.title||""))))
+ const rows=dedupeVisibleItems(allItems.filter(x=>{
+  const title=String(x.title||x.exam||"").trim();
+  const source=String(x.exam_category||"");
+  const category=String(x.category||"");
+  if(isPibItem(x)||x.archive===true||!/^(result|notification|admit_card|answer_key|merit_list|cutoff|exam_schedule)$/.test(category))return false;
+  if(/annual results old|old archive|historical|research project|sponsored project|project staff|project assistant|project fellow|families in transition|ice hockey association|sports association/i.test(title))return false;
+  if(/^(?:download advertisement|apply online)\\b/i.test(title)&&!/\\b(post|officer|clerk|assistant|manager|engineer|probationary|junior associate|recruitment|vacanc(?:y|ies)|advertisement no)\\b/i.test(title))return false;
+  if(source==="University Results"&&!/\\b(result|results|scorecard|marksheet|mark sheet|merit list|admission|admissions|entrance|counselling|counseling|examination|exam|semester|hall ticket|admit card|answer key|date sheet|time table|timetable|back paper|revaluation|supplementary)\\b/i.test(title))return false;
+  return true;
+ }))
   .sort((a,b)=>updateTimeValue(b)-updateTimeValue(a)||mainPriority(a)-mainPriority(b)).slice(0,50);
  box.innerHTML=rows.length?rows.map(x=>{
   const url=safeUrl(x.url||x.official_url)||safeUrl(x.source_url);
