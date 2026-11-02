@@ -92,7 +92,9 @@ SKIP = re.compile(
     r"skip to content|accessibility statement|accessibilitystatement|screen reader access|"
     r"about us|main functions|press information bureau|site map|contact us|quick links|"
     r"terms of use|feedback|login|log in|register|search|help|results 360 news|indiaresults blog|"
-    r"accessibility options|skip navigation|back to top|rti|policy information|rti officers|case decisions)\b", re.I
+    r"accessibility options|skip navigation|back to top|rti|policy information|rti officers|case decisions|"
+    r"research project|sponsored project|project staff|project assistant|project fellow|"
+    r"families in transition|ice hockey association|sports association|tournament fixtures)\b", re.I
 )
 
 NAV_TITLE = re.compile(
@@ -228,6 +230,22 @@ def classify(title):
 def classify_source_title(title, source):
     """Classify normal exam notices; optionally index every entry from an official news feed."""
     category = classify(title)
+    # University homepages contain many non-exam items. Only keep academic/exam
+    # notices from university registries.
+    if source.get("exam_category") == "University Results" and not re.search(
+        r"\b(result|results|scorecard|marksheet|mark sheet|merit list|admission|admissions|"
+        r"entrance|counselling|counseling|examination|exam|semester|hall ticket|admit card|"
+        r"answer key|date sheet|time table|timetable|back paper|revaluation|supplementary)\b",
+        str(title or ""), re.I
+    ):
+        return None
+    # SBI's current-openings landing page exposes generic action links as
+    # separate scraped titles. Keep them only when a post/recruitment is named.
+    if re.match(r"^\s*(?:download advertisement|apply online)\b", str(title or ""), re.I) and not re.search(
+        r"\b(post|officer|clerk|assistant|manager|engineer|probationary|junior associate|"
+        r"recruitment|vacanc(?:y|ies)|advertisement no)\b", str(title or ""), re.I
+    ):
+        return None
     # Broad press-release feeds may index genuine announcements that do not
     # match exam-specific keywords, but never promote navigation/accessibility
     # links into notifications.
@@ -431,6 +449,11 @@ def is_navigation_noise_title(title):
     """Reject scraped site menus and concatenated link clusters, not real notices."""
     raw = " ".join(str(title or "").split())
     low = raw.lower()
+    if re.match(r"^\s*(?:download advertisement|apply online)\b", low) and not re.search(
+        r"\b(post|officer|clerk|assistant|manager|engineer|probationary|junior associate|"
+        r"recruitment|vacanc(?:y|ies)|advertisement no)\b", low
+    ):
+        return True
     value = re.sub(r"[^a-z0-9]+", "", low)
 
     # A repeated generic landing-page heading is navigation, not a result.
