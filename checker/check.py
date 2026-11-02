@@ -345,26 +345,25 @@ def normalize_notice_url(url):
 
 def get_with_retries(url, headers=None):
     last_error = None
-    # Government portals often have slow connection setup. Use a meaningful
-    # connect/read budget and retry transient DNS, timeout, reset and TLS
-    # handshake failures. Certificate verification remains STRICT: never
-    # disable TLS checks or accept an invalid certificate.
+    # Keep each scheduled scan bounded: one short retry for transient network
+    # errors, then record the source failure and continue with the other portals.
+    # TLS certificate verification remains STRICT.
     retryable_statuses = (408, 425, 429, 500, 502, 503, 504)
-    for attempt in range(3):
+    for attempt in range(2):
         try:
             response = requests.get(
                 url,
                 headers=headers or HEADERS,
-                timeout=(min(TIMEOUT, 12), min(TIMEOUT, 18)),
+                timeout=(min(TIMEOUT, 6), min(TIMEOUT, 8)),
                 allow_redirects=True,
                 verify=certifi.where(),
             )
-            if response.status_code in retryable_statuses and attempt < 2:
+            if response.status_code in retryable_statuses and attempt < 1:
                 retry_after = response.headers.get("Retry-After", "").strip()
                 try:
-                    delay = min(max(float(retry_after), 1.0), 4.0) if retry_after else (1.0 + attempt)
+                    delay = min(max(float(retry_after), 1.0), 2.0) if retry_after else 1.0
                 except ValueError:
-                    delay = 1.0 + attempt
+                    delay = 1.0
                 response.close()
                 time.sleep(delay)
                 continue
@@ -377,10 +376,10 @@ def get_with_retries(url, headers=None):
             # transient network condition. Keep verification enabled and fail
             # this source safely; it will be checked again on the next run.
             permanent = "CERTIFICATE_VERIFY_FAILED" in error_text
-            if permanent or attempt >= 2:
+            if permanent or attempt >= 1:
                 raise
-            delay = min(2 ** attempt, 4)
-            print(f"Retrying source request ({attempt + 2}/3) after {type(exc).__name__}; wait={delay}s")
+            delay = 1
+            print(f"Retrying source request (2/2) after {type(exc).__name__}; wait={delay}s")
             time.sleep(delay)
     if last_error:
         raise last_error
