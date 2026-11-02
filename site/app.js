@@ -222,11 +222,11 @@ function renderFeatured(){
  }).join(""):'<p class="empty">'+esc(emptyText)+'</p>';
  const resultBox=$("#featuredResults"), scheduleBox=$("#featuredSchedules"), upcomingBox=$("#featuredUpcoming");
  if(resultBox){
-  const rows=allItems.filter(x=>!x.archive&&(x.category==="result"||x.category==="merit_list"||x.category==="cutoff")).sort(sortLatest);
+  const rows=allItems.filter(x=>!x.archive&&(x.category==="result"||x.category==="merit_list"||x.category==="cutoff")).sort((a,b)=>mainPriority(a)-mainPriority(b)||sortLatest(a,b));
   resultBox.innerHTML=makeList(rows,"No recent result notices are indexed yet. Check the official state and exam portals below.");
  }
  if(scheduleBox){
-  const rows=allItems.filter(x=>!x.archive&&x.category==="exam_schedule").sort(sortLatest);
+  const rows=allItems.filter(x=>!x.archive&&x.category==="exam_schedule").sort((a,b)=>mainPriority(a)-mainPriority(b)||sortLatest(a,b));
   scheduleBox.innerHTML=makeList(rows,"No exam schedule notices are currently indexed. Official calendars and schedules appear here when detected.");
  }
  if(upcomingBox){
@@ -255,14 +255,16 @@ function renderYearArchiveHelp(){
 }
 function isPibItem(x){return /pib|press information bureau|press releases|government & pib/i.test([x.source_id,x.source_name,x.authority,x.exam_category].filter(Boolean).join(" "));}
 function governmentExamPriority(x){
- const text=[x.source_id,x.source_name,x.authority,x.exam_category,x.state,x.title,x.exam].filter(Boolean).join(" ").toLowerCase();
- if(isPibItem(x))return 3;
+ const authority=[x.source_id,x.source_name,x.authority,x.title,x.exam].filter(Boolean).join(" ").toLowerCase();
  if(x.archive===true)return 4;
- // Give public-sector recruitment, boards and national/state exam authorities first placement.
- if(/\b(upsc|ssc|ibps|rrb|rrc|railway|public service commission|\bpsc\b|staff selection|state selection|subordinate services|vyapam|cgpeb|nta|national testing agency|government|govt|gov\\.|\bpolice\b|recruitment board|school education board|board of secondary|board of higher secondary|ministry|department of|commission|civil services|defence|defense|armed forces|central university|state university)\b/.test(text))return 0;
- // Verified institutional exams follow government exams; unverified/private notices remain below them.
- if(x.verified===true)return 1;
- return 2;
+ if(isPibItem(x))return 3;
+ // Prioritize national and state government recruitment/exam authorities above universities.
+ if(/\b(upsc|ssc|ibps|rrb|rrc|railway|public service commission|psc|staff selection|subordinate services|vyapam|cgpeb|nta|national testing agency|government|govt|gov\.|police|recruitment board|ministry|department of|civil services|defence|defense|armed forces|state selection commission|teacher recruitment board|teacher eligibility test|navodaya|kendriya vidyalaya|india post|employment selection board)\b/.test(authority))return 0;
+ if(/^(UPSC|SSC|Banking|Railways|State PSC|State Recruitment|Teaching|Defence|Entrance & Eligibility)/i.test(String(x.exam_category||"")))return 0;
+ // Public school-board notices remain prominent, after recruitment exams.
+ if(/school board|board of secondary|board of higher secondary|board of school education/.test(authority))return 1;
+ if(x.verified===true)return 2;
+ return 3;
 }
 function mainPriority(x){return governmentExamPriority(x);}
 function updateTime(x){return x.telegram_sent_at||x.detected_at||x.date||x.published||0;}
@@ -332,18 +334,18 @@ function filteredItems(){
    x.title,x.exam,x.exam_name,x.exam_title,x.post_name,x.department,x.organization,
    x.source_name,x.authority,x.description,x.summary,x.keywords,x.tags,x.aliases,
    x.state,x.region,x.category,x.exam_category,x.notification_type,family,
-   x.source_id,x.url,x.official_url,x.source_url,x.published,x.exam_year
+   x.source_id,x.url,x.official_url,x.source_url,x.published,x.exam_year,mainPriority(x)===0?"government exams government exam govt exams central government state government":""
   ].flat(Infinity).join(" "));
   const itemState=stateForItem(x), stateFilter=selectedState||selectedRegion||r, year=recordYear(x);
   const effectiveStateFilter=stateFilter==="All India"?"":stateFilter;
-  return (!c||x.category===c)&&(!ec||family===ec)&&(!effectiveStateFilter||itemState===effectiveStateFilter)&&(!y||(y==="unknown"?!year:year===y))&&browseMatches(x,selectedBrowse);
+  return (!c||x.category===c)&&(ec==="government-exams"?mainPriority(x)===0:(!ec||family===ec))&&(!effectiveStateFilter||itemState===effectiveStateFilter)&&(!y||(y==="unknown"?!year:year===y))&&browseMatches(x,selectedBrowse);
  });
  const searchable=base.map(item=>{
   const hay=normalizeSearch([
    item.title,item.exam,item.exam_name,item.exam_title,item.post_name,item.department,item.organization,
    item.source_name,item.authority,item.description,item.summary,item.keywords,item.tags,item.aliases,
    item.state,item.region,item.category,item.exam_category,item.notification_type,inferredFamily(item),
-   item.source_id,item.url,item.official_url,item.source_url,item.published,item.exam_year
+   item.source_id,item.url,item.official_url,item.source_url,item.published,item.exam_year,mainPriority(item)===0?"government exams government exam govt exams central government state government":""
   ].flat(Infinity).join(" "));
   return {item,hay};
  });
@@ -371,7 +373,7 @@ function filteredItems(){
    return score;
   };
   list.sort((a,b)=>relevance(b)-relevance(a)||updateTimeValue(b)-updateTimeValue(a)||mainPriority(a)-mainPriority(b));
- }else list.sort((a,b)=>updateTimeValue(b)-updateTimeValue(a)||mainPriority(a)-mainPriority(b));
+ }else list.sort((a,b)=>mainPriority(a)-mainPriority(b)||updateTimeValue(b)-updateTimeValue(a));
  return list;
 }
 function renderPriorityExamAlerts(){
@@ -389,7 +391,7 @@ function renderPriorityExamAlerts(){
   if(source==="University Results"&&!/\\b(result|results|scorecard|marksheet|mark sheet|merit list|admission|admissions|entrance|counselling|counseling|examination|exam|semester|hall ticket|admit card|answer key|date sheet|time table|timetable|back paper|revaluation|supplementary)\\b/i.test(title))return false;
   return true;
  }))
-  .sort((a,b)=>updateTimeValue(b)-updateTimeValue(a)||mainPriority(a)-mainPriority(b)).slice(0,50);
+  .sort((a,b)=>mainPriority(a)-mainPriority(b)||updateTimeValue(b)-updateTimeValue(a)).slice(0,50);
  box.innerHTML=rows.length?rows.map(x=>{
   const url=safeUrl(x.url||x.official_url)||safeUrl(x.source_url);
   const category=label(x.category);
