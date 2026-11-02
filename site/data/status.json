@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-02T10:37:46.937105+00:00",
-  "scan_started_at": "2026-11-02T10:31:29.519458+00:00",
+  "last_checked_at": "2026-11-02T10:55:25.991409+00:00",
+  "scan_started_at": "2026-11-02T10:45:56.283364+00:00",
   "sources_enabled": 296,
-  "sources_succeeded": 139,
-  "sources_failed": 157,
+  "sources_succeeded": 151,
+  "sources_failed": 145,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 95, SSLError: 36, ConnectionError: 25, HTTPError: 17, ReadTimeout: 4",
+  "failure_types": "ConnectTimeout: 87, SSLError: 35, ConnectionError: 25, HTTPError: 16, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ap-psc",
@@ -160,14 +160,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "dsssb",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "dsssb-old-results-archive",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "epfindia",
       "error_type": "HTTPError"
     },
@@ -204,16 +196,8 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "hpbose-results",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "hpsc",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "hpssc",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "ibps",
@@ -284,20 +268,8 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "indiapost-gds",
-      "error_type": "ReadTimeout"
-    },
-    {
-      "source_id": "indiapost-recruitment",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "jammu-university",
-      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "jkbose",
@@ -333,14 +305,6 @@
     },
     {
       "source_id": "karnataka-results",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "kashmir-university",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "kerala-devaswom",
       "error_type": "ConnectTimeout"
     },
     {
@@ -380,10 +344,6 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "meghalaya-psc",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -401,10 +361,6 @@
     },
     {
       "source_id": "mppsc",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "mumbai-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -484,16 +440,8 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "osssc",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "patna-university",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "portal-delhi-delhi-gov-in",
-      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "punjab-psc",
@@ -510,6 +458,10 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "rajeduboard",
@@ -641,7 +593,7 @@
     },
     {
       "source_id": "telangana-results",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "tnresults",
@@ -649,7 +601,7 @@
     },
     {
       "source_id": "tntrb",
-      "error_type": "HTTPError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "tnusrb",
