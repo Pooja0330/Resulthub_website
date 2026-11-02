@@ -1,14 +1,14 @@
 {
-  "last_checked_at": "2026-11-02T01:38:59.849403+00:00",
+  "last_checked_at": "2026-11-02T01:49:02.642592+00:00",
   "sources_enabled": 296,
-  "sources_succeeded": 147,
-  "sources_failed": 149,
+  "sources_succeeded": 146,
+  "sources_failed": 150,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 10,
-  "alerts_pending": 188,
+  "alerts_pending": 178,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, SSLError: 38, ConnectionError: 23, HTTPError: 16, ValueError: 3",
+  "failure_types": "ConnectTimeout: 90, SSLError: 38, ConnectionError: 24, HTTPError: 17, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -92,7 +92,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bssc",
@@ -457,6 +457,10 @@
     {
       "source_id": "patna-university",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "punjab-board",
+      "error_type": "HTTPError"
     },
     {
       "source_id": "punjab-psc",
