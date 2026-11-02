@@ -688,18 +688,39 @@ def fetch_source(source):
                     target = urljoin(article.url, anchor.get("href", ""))
                     parsed = urlparse(target)
                     target_host = (parsed.hostname or "").lower()
-                    if parsed.scheme != "https" or not any(
-                        target_host == host or target_host.endswith("." + host)
-                        for host in trusted_hosts
-                    ):
+                    if parsed.scheme != "https":
                         continue
+                    matching_sources = [
+                        entry for entry in registry.get("sources", [])
+                        if entry.get("enabled", True)
+                        and not entry.get("discovery_only")
+                        and host_allowed(target, entry.get("allowed_hosts", []))
+                    ]
+                    if not matching_sources:
+                        continue
+                    # Attribute the notice to the issuing authority, not to the
+                    # discovery index. The later queue validator checks this exact
+                    # source's allowlist before publishing the notice.
+                    official_source = max(
+                        matching_sources,
+                        key=lambda entry: max(
+                            (len(str(host)) for host in (
+                                entry.get("allowed_hosts", [])
+                                if isinstance(entry.get("allowed_hosts", []), list)
+                                else [entry.get("allowed_hosts")]
+                            ) if host and (target_host == str(host).lower()
+                                           or target_host.endswith("." + str(host).lower())),
+                            default=0,
+                        ),
+                    )
                     label = " ".join(anchor.get_text(" ", strip=True).split()).lower()
                     priority = 0 if re.search(r"result|score.?card|admit|answer|cut.?off|download|apply|official|notice|notification", label) else 1
-                    official_links.append((priority, target))
+                    official_links.append((priority, target, official_source))
                 if not official_links:
                     continue
                 official_links.sort(key=lambda pair: pair[0])
                 official_url = official_links[0][1].split("#", 1)[0]
+                official_source = official_links[0][2]
                 normalized = normalize_notice_url(official_url)
                 if not normalized or normalized in seen_official:
                     continue
@@ -709,8 +730,8 @@ def fetch_source(source):
                     "title": title[:260],
                     "url": official_url,
                     "category": category,
-                    "source_name": "ResultBharat discovery — official link checked",
-                    "source_id": source.get("id", "resultbharat-discovery"),
+                    "source_name": official_source.get("name", "Official authority"),
+                    "source_id": official_source.get("id", ""),
                     "source_url": article_url,
                     "published": extract_notice_date(page_text),
                     "archive": False,
@@ -1008,6 +1029,54 @@ def main():
     if not isinstance(pending, dict):
         pending = {}
         state["pending_alerts"] = pending
+
+    # Re-evaluate held discovery notices against the actual issuing authority.
+    # Older versions tagged every ResultBharat discovery with the discovery-source
+    # ID, so valid official URLs were incorrectly rejected by the queue validator.
+    # Release only current, classifiable notices whose HTTPS host matches a
+    # registered official source; leave every other held item untouched.
+    held_recovered = 0
+    for held_key, held_record in list(held.items()):
+        if not isinstance(held_record, dict):
+            continue
+        held_item = held_record.get("item")
+        if not isinstance(held_item, dict):
+            continue
+        held_url = str(held_item.get("url") or held_item.get("official_url") or "").strip()
+        held_title = str(held_item.get("title") or "").strip()
+        if not held_url or not held_title or not normalize_notice_url(held_url):
+            continue
+        matching_source = next(
+            (entry for entry in registry["sources"]
+             if entry.get("enabled", True) and not entry.get("discovery_only")
+             and host_allowed(held_url, entry.get("allowed_hosts", []))),
+            None,
+        )
+        if not matching_source:
+            continue
+        held_category = classify_source_title(held_title, matching_source)
+        if (not held_category or is_speculative_status_title(held_title)
+                or is_stale_notice(held_title, held_item.get("published", ""), held_url)):
+            continue
+        held_item = dict(held_item)
+        held_item["source_id"] = matching_source.get("id", "")
+        held_item["source_name"] = matching_source.get("name", "Official authority")
+        held_item["category"] = held_category
+        held_item["region"] = held_item.get("region") or matching_source.get("region", "Central")
+        held_item["state"] = held_item.get("state") or matching_source.get("state", "")
+        held_item["exam_category"] = held_item.get("exam_category") or matching_source.get("exam_category") or infer_exam_category(
+            held_title, matching_source.get("name", ""), matching_source.get("id", ""),
+            matching_source.get("state", ""),
+        )
+        pending.setdefault(held_key, {
+            "item": held_item,
+            "detected_at": held_record.get("detected_at") or held_item.get("detected_at") or now_utc(),
+            "attempts": 0,
+        })
+        held.pop(held_key, None)
+        held_recovered += 1
+    if held_recovered:
+        print(f"Recovered {held_recovered} valid official notice(s) from the held-review queue")
 
     # Restore valid notifications from the persistent Telegram delivery queue.
     # A queued item is already an official-source candidate; it must remain
