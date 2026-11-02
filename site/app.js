@@ -260,7 +260,7 @@ function governmentExamPriority(x){
  if(isPibItem(x))return 3;
  // Prioritize national and state government recruitment/exam authorities above universities.
  if(/\b(upsc|ssc|ibps|rrb|rrc|railway|public service commission|psc|staff selection|subordinate services|vyapam|cgpeb|nta|national testing agency|government|govt|gov\.|police|recruitment board|ministry|department of|civil services|defence|defense|armed forces|state selection commission|teacher recruitment board|teacher eligibility test|navodaya|kendriya vidyalaya|india post|employment selection board)\b/.test(authority))return 0;
- if(/^(UPSC|SSC|Banking|Railways|State PSC|State Recruitment|Teaching|Defence|Entrance & Eligibility)/i.test(String(x.exam_category||"")))return 0;
+ if(/^(UPSC|SSC|Banking|Railways|State PSC|State Recruitment|Teaching|Defence)/i.test(String(x.exam_category||"")))return 0;
  // Public school-board notices remain prominent, after recruitment exams.
  if(/school board|board of secondary|board of higher secondary|board of school education/.test(authority))return 1;
  if(x.verified===true)return 2;
