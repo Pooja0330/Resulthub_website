@@ -333,7 +333,25 @@ function filteredItems(){
   return queryMatch&&(!c||x.category===c)&&(!ec||family===ec)&&(!effectiveStateFilter||itemState===effectiveStateFilter)&&(!y||(y==="unknown"?!year:year===y))&&browseMatches(x,selectedBrowse);
  });
  if($("#sort").value==="title") list.sort((a,b)=>(a.title||"").localeCompare(b.title||""));
- else list.sort((a,b)=>updateTimeValue(b)-updateTimeValue(a)||mainPriority(a)-mainPriority(b));
+ else if(terms.length){
+  const phrase=normalizeSearch(rawQuery);
+  const relevance=item=>{
+   const title=normalizeSearch(item.title||item.exam||"");
+   const exam=normalizeSearch(item.exam||"");
+   const source=normalizeSearch(item.source_name||item.authority||"");
+   let score=0;
+   if(title===phrase||exam===phrase)score+=1000;
+   if(title.includes(phrase)||exam.includes(phrase))score+=500;
+   for(const term of terms){
+    if(title.split(" ").includes(term))score+=100;
+    else if(title.includes(term))score+=45;
+    if(exam.includes(term))score+=30;
+    if(source.includes(term))score+=8;
+   }
+   return score;
+  };
+  list.sort((a,b)=>relevance(b)-relevance(a)||updateTimeValue(b)-updateTimeValue(a)||mainPriority(a)-mainPriority(b));
+ }else list.sort((a,b)=>updateTimeValue(b)-updateTimeValue(a)||mainPriority(a)-mainPriority(b));
  return list;
 }
 function renderPriorityExamAlerts(){
