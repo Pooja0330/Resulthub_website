@@ -1,14 +1,14 @@
 {
-  "last_checked_at": "2026-11-02T00:31:07.429696+00:00",
+  "last_checked_at": "2026-11-02T00:45:46.854095+00:00",
   "sources_enabled": 296,
-  "sources_succeeded": 146,
-  "sources_failed": 150,
+  "sources_succeeded": 148,
+  "sources_failed": 148,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 10,
-  "alerts_pending": 238,
+  "alerts_pending": 228,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, SSLError: 38, ConnectionError: 23, HTTPError: 16, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 90, SSLError: 38, ConnectionError: 22, HTTPError: 16, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -204,7 +204,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps",
@@ -317,10 +317,6 @@
     {
       "source_id": "karnataka-results",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "kerala-devaswom",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "keralaresults",
@@ -452,10 +448,6 @@
     },
     {
       "source_id": "osmania-university",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
@@ -612,7 +604,7 @@
     },
     {
       "source_id": "tnmrbrecruit",
-      "error_type": "ConnectTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "tnresults",
