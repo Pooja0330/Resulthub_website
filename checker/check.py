@@ -1105,22 +1105,44 @@ def main():
         queued_title = str(queued_item.get("title") or "").strip()
         queued_url = str(queued_item.get("url") or queued_item.get("official_url") or "").strip()
         normalized_queued_url = normalize_notice_url(queued_url)
-        if not queued_title or not normalized_queued_url or not host_allowed(
-            queued_url,
-            next((source.get("allowed_hosts", []) for source in registry["sources"]
-                  if str(source.get("id", "")) == str(queued_item.get("source_id", ""))), []),
-        ):
+        if not queued_title or not normalized_queued_url:
             continue
+
+        # Older queue entries may carry a retired/renamed source_id. Resolve
+        # the official authority from the URL host instead of silently leaving
+        # valid Telegram alerts out of the website feed.
+        source_meta = next(
+            (source for source in registry["sources"]
+             if str(source.get("id", "")) == str(queued_item.get("source_id", ""))
+             and is_exam_alert_source(source)
+             and host_allowed(queued_url, source.get("allowed_hosts", []))),
+            None,
+        )
+        if source_meta is None:
+            matching_sources = [
+                source for source in registry["sources"]
+                if is_exam_alert_source(source)
+                and host_allowed(queued_url, source.get("allowed_hosts", []))
+            ]
+            if not matching_sources:
+                continue
+            def queued_source_specificity(source):
+                return max(
+                    (len(str(host)) for host in source.get("allowed_hosts", [])
+                     if queued_url.lower().split("://", 1)[-1].split("/", 1)[0].split(":", 1)[0]
+                     .removeprefix("www.").endswith(str(host).lower().removeprefix("www."))),
+                    default=0,
+                )
+            source_meta = max(matching_sources, key=queued_source_specificity)
+
         queued_id = str(queued_item.get("id") or pending_key).strip()
         if queued_id in existing_ids or normalized_queued_url in existing_urls:
             continue
-        source_meta = next(
-            (source for source in registry["sources"]
-             if str(source.get("id", "")) == str(queued_item.get("source_id", ""))),
-            {},
-        )
         queued_item = dict(queued_item)
         queued_item["id"] = queued_id
+        queued_item["source_id"] = source_meta.get("id", "")
+        queued_item["source_name"] = source_meta.get("name", "Official authority")
+        queued_item["source_url"] = queued_item.get("source_url") or source_meta.get("url", "")
         queued_item["category"] = classify_source_title(queued_title, source_meta)
         if not queued_item["category"] or is_speculative_status_title(queued_title):
             continue
