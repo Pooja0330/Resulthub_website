@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-02T17:50:16.089887+00:00",
-  "scan_started_at": "2026-11-02T17:45:49.814844+00:00",
+  "last_checked_at": "2026-11-02T18:10:25.452286+00:00",
+  "scan_started_at": "2026-11-02T18:01:26.226610+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 146,
-  "sources_failed": 151,
+  "sources_succeeded": 145,
+  "sources_failed": 152,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 10,
-  "alerts_pending": 901,
+  "alerts_pending": 891,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, SSLError: 35, ConnectionError: 24, HTTPError: 18, ReadTimeout: 4",
+  "failure_types": "ConnectTimeout: 89, SSLError: 36, ConnectionError: 27, HTTPError: 18, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bssc",
@@ -316,6 +316,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "keralapsc",
+      "error_type": "ConnectionError"
+    },
+    {
       "source_id": "keralaresults",
       "error_type": "ConnectionError"
     },
@@ -392,10 +396,6 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "niacl",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "nielit-recruitment",
       "error_type": "SSLError"
     },
@@ -437,7 +437,7 @@
     },
     {
       "source_id": "nvs-recruitment",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "odisha-board-official",
@@ -445,15 +445,15 @@
     },
     {
       "source_id": "odisha-results",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "osmania-university",
       "error_type": "SSLError"
     },
     {
-      "source_id": "ossc",
-      "error_type": "ConnectionError"
+      "source_id": "osssc",
+      "error_type": "SSLError"
     },
     {
       "source_id": "patna-university",
@@ -461,7 +461,7 @@
     },
     {
       "source_id": "pondicherry-university-old-results",
-      "error_type": "ReadTimeout"
+      "error_type": "HTTPError"
     },
     {
       "source_id": "punjab-psc",
@@ -478,6 +478,10 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
