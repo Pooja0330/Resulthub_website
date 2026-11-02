@@ -354,7 +354,7 @@ def get_with_retries(url, headers=None):
             response = requests.get(
                 url,
                 headers=headers or HEADERS,
-                timeout=(min(TIMEOUT, 6), min(TIMEOUT, 8)),
+                timeout=(min(TIMEOUT, 10), min(TIMEOUT, 12)),
                 allow_redirects=True,
                 verify=certifi.where(),
             )
@@ -1349,7 +1349,8 @@ def main():
 
     # Public, non-sensitive health snapshot for the website live status panel.
     save_json("site/data/status.json", {
-        "last_checked_at": checked_at,
+        "last_checked_at": now_utc(),
+        "scan_started_at": checked_at,
         "sources_enabled": len(sources),
         "sources_succeeded": successful,
         "sources_failed": failures,
