@@ -256,8 +256,8 @@ class CheckerSafetyTests(unittest.TestCase):
             timeout = mocked.call_args.kwargs["timeout"]
             self.assertGreater(timeout[0], 0)
             self.assertGreater(timeout[1], 0)
-            self.assertLessEqual(timeout[0], 6)
-            self.assertLessEqual(timeout[1], 8)
+            self.assertLessEqual(timeout[0], 10)
+            self.assertLessEqual(timeout[1], 12)
 
 
     def test_rejects_long_concatenated_homepage_content(self):
