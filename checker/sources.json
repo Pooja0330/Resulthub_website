@@ -6769,6 +6769,30 @@
       "exam_category": "University Results",
       "coverage_note": "Official Latest News/Notice page. Includes academic calendars, examination schedules, admissions and institutional notices; CSVTU notices are monitored separately.",
       "discover_listing_pages": true
+    },
+    {
+      "id": "resultbharat-discovery",
+      "name": "ResultBharat — discovery only, official links required",
+      "url": "https://www.resultbharat.com/",
+      "kind": "html",
+      "allowed_hosts": [
+        "resultbharat.com",
+        "www.resultbharat.com"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "discovery_only": true,
+      "exam_category": "Central Recruitment",
+      "coverage_note": "Discovery index only. GoResultHub follows ResultBharat exam articles but publishes only HTTPS destinations whose hosts are already allowlisted as official sources. ResultBharat article links are never presented as official.",
+      "discover_listing_pages": false
     }
   ]
 }
