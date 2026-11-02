@@ -1,13 +1,13 @@
 {
-  "last_checked_at": "2026-11-02T20:53:20.606634+00:00",
-  "scan_started_at": "2026-11-02T20:45:53.090121+00:00",
+  "last_checked_at": "2026-11-02T21:12:02.185908+00:00",
+  "scan_started_at": "2026-11-02T21:04:42.780024+00:00",
   "sources_enabled": 297,
   "sources_succeeded": 147,
   "sources_failed": 150,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 10,
-  "alerts_pending": 771,
+  "alerts_pending": 761,
   "status": "partial",
   "failure_types": "ConnectTimeout: 91, SSLError: 36, ConnectionError: 22, HTTPError: 17, ReadTimeout: 4",
   "failed_source_samples": [
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "andhra-university",
@@ -205,7 +205,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps",
@@ -274,6 +274,10 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "indiapost-recruitment",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -374,10 +378,6 @@
     {
       "source_id": "nabard",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "nagaland-psc",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "naval-coastguard-jobs",
