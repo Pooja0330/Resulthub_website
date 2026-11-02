@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-02T12:13:35.317331+00:00",
-  "scan_started_at": "2026-11-02T12:02:40.784266+00:00",
+  "last_checked_at": "2026-11-02T12:24:50.752644+00:00",
+  "scan_started_at": "2026-11-02T12:15:50.981021+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 152,
-  "sources_failed": 145,
-  "new_candidates": 1,
-  "recovered_records": 4,
-  "telegram_posts_sent": 1,
+  "sources_succeeded": 150,
+  "sources_failed": 147,
+  "new_candidates": 0,
+  "recovered_records": 0,
+  "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, SSLError: 36, ConnectionError: 23, HTTPError: 16, ValueError: 3",
+  "failure_types": "ConnectTimeout: 89, SSLError: 36, ConnectionError: 23, HTTPError: 16, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -53,6 +53,10 @@
     },
     {
       "source_id": "apsc",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "arunachal-psc",
       "error_type": "ConnectTimeout"
     },
     {
@@ -637,6 +641,10 @@
     },
     {
       "source_id": "upsc-final-results",
+      "error_type": "ReadTimeout"
+    },
+    {
+      "source_id": "upsc-recruitment",
       "error_type": "ReadTimeout"
     },
     {
