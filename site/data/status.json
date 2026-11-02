@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-02T13:54:59.259868+00:00",
-  "scan_started_at": "2026-11-02T13:48:52.109318+00:00",
+  "last_checked_at": "2026-11-02T14:10:01.029681+00:00",
+  "scan_started_at": "2026-11-02T14:01:40.869393+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 148,
-  "sources_failed": 149,
-  "new_candidates": 2,
+  "sources_succeeded": 145,
+  "sources_failed": 152,
+  "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 10,
-  "alerts_pending": 1071,
+  "alerts_pending": 1061,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, SSLError: 35, ConnectionError: 22, HTTPError: 17, ReadTimeout: 4",
+  "failure_types": "ConnectTimeout: 90, SSLError: 36, ConnectionError: 24, HTTPError: 16, ReadTimeout: 6",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -268,14 +268,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "indiapost-gds",
-      "error_type": "ReadTimeout"
-    },
-    {
-      "source_id": "indiapost-recruitment",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -380,6 +372,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "nagaland-psc",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "naval-coastguard-jobs",
       "error_type": "SSLError"
     },
@@ -433,11 +429,11 @@
     },
     {
       "source_id": "nvs",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "nvs-recruitment",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "odisha-board-official",
@@ -452,12 +448,20 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "ossc",
+      "error_type": "ConnectionError"
+    },
+    {
+      "source_id": "osssc",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
     {
       "source_id": "pondicherry-university-old-results",
-      "error_type": "HTTPError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "punjab-psc",
@@ -477,7 +481,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ConnectTimeout"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
@@ -584,6 +588,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "rrc-northern",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "rrcb-central",
       "error_type": "ConnectTimeout"
     },
@@ -609,6 +617,10 @@
     },
     {
       "source_id": "telangana-results",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "tnmrbrecruit",
       "error_type": "ConnectTimeout"
     },
     {
