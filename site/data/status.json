@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-02T12:01:38.161717+00:00",
-  "scan_started_at": "2026-11-02T11:52:24.914386+00:00",
+  "last_checked_at": "2026-11-02T12:13:35.317331+00:00",
+  "scan_started_at": "2026-11-02T12:02:40.784266+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 151,
-  "sources_failed": 146,
+  "sources_succeeded": 152,
+  "sources_failed": 145,
   "new_candidates": 1,
-  "recovered_records": 0,
+  "recovered_records": 4,
   "telegram_posts_sent": 1,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 87, SSLError: 35, ConnectionError: 27, HTTPError: 16, ValueError: 3",
+  "failure_types": "ConnectTimeout: 88, SSLError: 36, ConnectionError: 23, HTTPError: 16, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -49,15 +49,11 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "arunachal-psc",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "assam-board-official",
@@ -440,8 +436,8 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ossc",
-      "error_type": "ConnectionError"
+      "source_id": "osssc",
+      "error_type": "SSLError"
     },
     {
       "source_id": "patna-university",
@@ -465,7 +461,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
