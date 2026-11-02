@@ -1,14 +1,14 @@
 {
-  "last_checked_at": "2026-11-02T05:31:56.153104+00:00",
+  "last_checked_at": "2026-11-02T05:45:51.055489+00:00",
   "sources_enabled": 296,
-  "sources_succeeded": 147,
-  "sources_failed": 149,
-  "new_candidates": 1,
+  "sources_succeeded": 149,
+  "sources_failed": 147,
+  "new_candidates": 5,
   "recovered_records": 0,
   "telegram_posts_sent": 10,
-  "alerts_pending": 25,
+  "alerts_pending": 20,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, SSLError: 36, ConnectionError: 24, HTTPError: 16, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 89, SSLError: 38, ConnectionError: 23, HTTPError: 16, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -92,7 +92,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bssc",
@@ -227,10 +227,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "icmai",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "iiser-admissions",
       "error_type": "SSLError"
     },
@@ -269,10 +265,6 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "indiapost-gds",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -317,10 +309,6 @@
     {
       "source_id": "karnataka-results",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "keralapsc",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "keralaresults",
@@ -448,10 +436,14 @@
     },
     {
       "source_id": "odisha-results",
-      "error_type": "ConnectionError"
+      "error_type": "SSLError"
     },
     {
       "source_id": "osmania-university",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
