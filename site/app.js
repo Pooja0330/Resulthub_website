@@ -332,7 +332,7 @@ function filteredItems(){
     return queryMatch&&(!c||x.category===c)&&(!ec||family===ec)&&(!effectiveStateFilter||itemState===effectiveStateFilter)&&(!y||(y==="unknown"?!year:year===y))&&browseMatches(x,selectedBrowse);
  });
  if($("#sort").value==="title") list.sort((a,b)=>(a.title||"").localeCompare(b.title||""));
- else list.sort((a,b)=>mainPriority(a)-mainPriority(b)||updateTimeValue(b)-updateTimeValue(a));
+ else list.sort((a,b)=>updateTimeValue(b)-updateTimeValue(a)||mainPriority(a)-mainPriority(b));
  return list;
 }
 function renderPriorityExamAlerts(){
@@ -341,7 +341,7 @@ function renderPriorityExamAlerts(){
  // are rendered in the separate PIB News panel and must never be labelled as exam alerts.
  // Keep archive/history records out so old notices cannot crowd the live feed.
  const rows=dedupeVisibleItems(allItems.filter(x=>!isPibItem(x)&&x.archive!==true&&/^(result|notification|admit_card|answer_key|merit_list|cutoff|exam_schedule)$/.test(String(x.category||""))&&!/annual results old|old archive|historical/i.test(String(x.title||""))))
-  .sort((a,b)=>mainPriority(a)-mainPriority(b)||updateTimeValue(b)-updateTimeValue(a)).slice(0,50);
+  .sort((a,b)=>updateTimeValue(b)-updateTimeValue(a)||mainPriority(a)-mainPriority(b)).slice(0,50);
  box.innerHTML=rows.length?rows.map(x=>{
   const url=safeUrl(x.url||x.official_url)||safeUrl(x.source_url);
   const category=label(x.category);
@@ -464,7 +464,7 @@ async function loadPibResults(){
 }
 async function refresh(){if(document.visibilityState==="visible")await Promise.all([loadResults(),loadStatus(),loadPibResults()])}
 function resetUpdateFilters(){
- $("#category").value="";$("#examCategory").value="";$("#region").value="";$("#examYear").value="2026";$("#sort").value="new";
+ $("#category").value="";$("#examCategory").value="";$("#region").value="";$("#examYear").value="";$("#sort").value="new";
  selectedState="";selectedRegion="";selectedBrowse="";page=1;
  document.querySelectorAll("[data-browse]").forEach(button=>button.classList.remove("active"));
 }
@@ -489,7 +489,7 @@ function init(){
  if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js",{updateViaCache:"none"}).catch(()=>{});
 }
 function clearUpdateFilters(){
- $("#category").value="";$("#examCategory").value="";$("#region").value="";$("#examYear").value="2026";
+ $("#category").value="";$("#examCategory").value="";$("#region").value="";$("#examYear").value="";
  selectedState="";selectedRegion="";selectedBrowse="";
 }
 function runSearch(scroll=true){
@@ -501,7 +501,7 @@ function runSearch(scroll=true){
 $("#searchForm").addEventListener("submit",e=>{e.preventDefault();runSearch(true)});
 $("#q").addEventListener("input",()=>{clearUpdateFilters();if(quickSearch)quickSearch.value=$("#q").value;filterQuickExams($("#q").value);page=1;render()});
 ["category","examCategory","region","sort","examYear"].forEach(id=>$("#"+id).addEventListener("change",()=>{if(id==="region"){const v=$("#region").value;selectedState=STATE_NAMES.includes(v)?v:"";selectedRegion=v==="Central"?"Central":"";}page=1;render()}));
- $("#clearFilters")?.addEventListener("click",()=>{$("#q").value="";$("#quickExamSearch").value="";$("#category").value="";$("#examCategory").value="";$("#region").value="";$("#examYear").value=String(new Date().getFullYear());$("#sort").value="new";selectedState="";selectedRegion="";selectedBrowse="";filterQuickExams("");page=1;render();$("#updates").scrollIntoView({behavior:"smooth",block:"start"});});
+ $("#clearFilters")?.addEventListener("click",()=>{$("#q").value="";$("#quickExamSearch").value="";$("#category").value="";$("#examCategory").value="";$("#region").value="";$("#examYear").value="";$("#sort").value="new";selectedState="";selectedRegion="";selectedBrowse="";filterQuickExams("");page=1;render();$("#updates").scrollIntoView({behavior:"smooth",block:"start"});});
 document.querySelectorAll(".pills [data-family]").forEach(button=>button.addEventListener("click",()=>{$("#examCategory").value=button.dataset.family;page=1;$("#updates").scrollIntoView({behavior:"smooth"});render()}));
 document.querySelectorAll("[data-quick-search]").forEach(button=>button.addEventListener("click",()=>{const term=button.dataset.quickSearch||"";$("#q").value=term;if(quickSearch)quickSearch.value=term;filterQuickExams(term);$("#category").value="";$("#examCategory").value="";$("#region").value="";$("#examYear").value="";selectedState="";selectedRegion="";selectedBrowse="";page=1;render();$("#updates").scrollIntoView({behavior:"smooth",block:"start"});}));
 $("#stateQuickSearch")?.addEventListener("input",()=>renderStateSidebar());
