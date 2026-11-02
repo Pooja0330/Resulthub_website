@@ -1,14 +1,15 @@
 {
-  "last_checked_at": "2026-11-02T09:48:18.465046+00:00",
+  "last_checked_at": "2026-11-02T10:05:23.578808+00:00",
+  "scan_started_at": "2026-11-02T09:55:53.156091+00:00",
   "sources_enabled": 296,
-  "sources_succeeded": 146,
-  "sources_failed": 150,
-  "new_candidates": 3,
-  "recovered_records": 0,
-  "telegram_posts_sent": 3,
+  "sources_succeeded": 148,
+  "sources_failed": 148,
+  "new_candidates": 0,
+  "recovered_records": 3,
+  "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 92, SSLError: 35, ConnectionError: 23, HTTPError: 16, ReadTimeout: 4",
+  "failure_types": "ConnectTimeout: 92, SSLError: 36, ConnectionError: 21, HTTPError: 16, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -343,6 +344,10 @@
       "error_type": "HTTPError"
     },
     {
+      "source_id": "meghalaya-board",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -384,7 +389,7 @@
     },
     {
       "source_id": "nielit-recruitment",
-      "error_type": "ConnectTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "nift-admissions",
@@ -420,11 +425,11 @@
     },
     {
       "source_id": "nvs",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "nvs-recruitment",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "odisha-board-official",
@@ -571,10 +576,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "rrc-eastern",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "rrcb-central",
       "error_type": "ConnectTimeout"
     },
@@ -604,10 +605,6 @@
     },
     {
       "source_id": "telangana-results",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "tnmrbrecruit",
       "error_type": "ConnectTimeout"
     },
     {
@@ -652,10 +649,6 @@
     },
     {
       "source_id": "upsc-final-results",
-      "error_type": "ReadTimeout"
-    },
-    {
-      "source_id": "upsc-recruitment",
       "error_type": "ReadTimeout"
     },
     {
