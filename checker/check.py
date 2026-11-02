@@ -641,6 +641,85 @@ def fetch_source(source):
     if not url or not hosts or not host_allowed(url, hosts):
         raise ValueError("Source URL is missing or not allowlisted")
 
+    # ResultBharat is used only as a discovery index. Its own article URLs
+    # are never published as official links: each candidate must contain a
+    # destination hosted by a domain already allowlisted in our official-source
+    # registry. This borrows the discovery workflow, not its protected content.
+    if source.get("discovery_only"):
+        registry = load_json("checker/sources.json", {"sources": []})
+        trusted_hosts = sorted({
+            str(host).lower()
+            for entry in registry.get("sources", [])
+            if entry.get("enabled", True) and not entry.get("discovery_only")
+            for host in (entry.get("allowed_hosts", []) if isinstance(entry.get("allowed_hosts", []), list) else [entry.get("allowed_hosts")])
+            if host
+        })
+        listing = get_with_retries(url)
+        if not host_allowed(listing.url, hosts):
+            raise ValueError("Discovery listing redirected outside ResultBharat")
+        soup = BeautifulSoup(listing.text, "html.parser")
+        article_urls = []
+        for anchor in soup.select("a[href]"):
+            title = " ".join(anchor.get_text(" ", strip=True).split())
+            link = urljoin(listing.url, anchor.get("href", ""))
+            parsed = urlparse(link)
+            if (parsed.scheme == "https" and parsed.hostname and
+                    any(parsed.hostname.lower() == h or parsed.hostname.lower().endswith("." + h) for h in hosts) and
+                    classify(title) and link not in article_urls):
+                article_urls.append(link)
+            if len(article_urls) >= 24:
+                break
+
+        discovered = []
+        seen_official = set()
+        for article_url in article_urls:
+            try:
+                article = get_with_retries(article_url)
+                if not host_allowed(article.url, hosts):
+                    continue
+                detail = BeautifulSoup(article.text, "html.parser")
+                heading = detail.find(["h1", "h2"])
+                title = " ".join((heading.get_text(" ", strip=True) if heading else detail.title.get_text(" ", strip=True) if detail.title else "").split())
+                category = classify(title)
+                if not category or is_navigation_noise_title(title):
+                    continue
+                official_links = []
+                for anchor in detail.select("a[href]"):
+                    target = urljoin(article.url, anchor.get("href", ""))
+                    parsed = urlparse(target)
+                    target_host = (parsed.hostname or "").lower()
+                    if parsed.scheme != "https" or not any(
+                        target_host == host or target_host.endswith("." + host)
+                        for host in trusted_hosts
+                    ):
+                        continue
+                    label = " ".join(anchor.get_text(" ", strip=True).split()).lower()
+                    priority = 0 if re.search(r"result|score.?card|admit|answer|cut.?off|download|apply|official|notice|notification", label) else 1
+                    official_links.append((priority, target))
+                if not official_links:
+                    continue
+                official_links.sort(key=lambda pair: pair[0])
+                official_url = official_links[0][1].split("#", 1)[0]
+                normalized = normalize_notice_url(official_url)
+                if not normalized or normalized in seen_official:
+                    continue
+                seen_official.add(normalized)
+                page_text = " ".join(detail.get_text(" ", strip=True).split())
+                discovered.append({
+                    "title": title[:260],
+                    "url": official_url,
+                    "category": category,
+                    "source_name": "ResultBharat discovery — official link checked",
+                    "source_id": source.get("id", "resultbharat-discovery"),
+                    "source_url": article_url,
+                    "published": extract_notice_date(page_text),
+                    "archive": False,
+                })
+            except Exception as exc:
+                print(f"WARN ResultBharat discovery page skipped: {type(exc).__name__}")
+        print(f"ResultBharat discovery: {len(article_urls)} article pages checked, {len(discovered)} official links accepted")
+        return discovered[:24]
+
     kind = str(source.get("kind", "html")).lower()
     response = get_with_retries(url)
     if not host_allowed(response.url, hosts):
