@@ -320,16 +320,17 @@ function dedupeVisibleItems(items, options={}){
  });
 }
 function filteredItems(){
- const q=$("#q").value.trim().toLowerCase(), terms=q.split(/\s+/).filter(Boolean), c=$("#category").value, ec=$("#examCategory").value, r=$("#region").value, y=$("#examYear").value;
+ const rawQuery=$("#q").value.trim().toLocaleLowerCase();
+ const normalizeSearch=value=>String(value||"").toLocaleLowerCase().normalize("NFKC").replace(/[’']/g," ").replace(/[^\p{L}\p{M}\p{N}]+/gu," ").trim().replace(/\s+/g," ");
+ const terms=normalizeSearch(rawQuery).split(" ").filter(Boolean);
+ const c=$("#category").value, ec=$("#examCategory").value, r=$("#region").value, y=$("#examYear").value;
  const list=dedupeVisibleItems(allItems.filter(x=>!isPibItem(x))).filter(x=>{
   const family=inferredFamily(x);
-  const hay=[x.title,x.exam,x.source_name,x.state,x.region,x.category,family].join(" ").toLowerCase();
-  const itemState=stateForItem(x);
-   const stateFilter=selectedState||selectedRegion||r;
-   const year=recordYear(x);
-   const queryMatch=!terms.length||terms.every(term=>hay.includes(term))||terms.some(term=>hay.includes(term));
-    const effectiveStateFilter=stateFilter==="All India"?"":stateFilter;
-    return queryMatch&&(!c||x.category===c)&&(!ec||family===ec)&&(!effectiveStateFilter||itemState===effectiveStateFilter)&&(!y||(y==="unknown"?!year:year===y))&&browseMatches(x,selectedBrowse);
+  const hay=normalizeSearch([x.title,x.exam,x.source_name,x.authority,x.description,x.state,x.region,x.category,x.exam_category,family,x.source_id,x.url,x.official_url,x.published].join(" "));
+  const itemState=stateForItem(x), stateFilter=selectedState||selectedRegion||r, year=recordYear(x);
+  const queryMatch=!terms.length||terms.every(term=>hay.includes(term));
+  const effectiveStateFilter=stateFilter==="All India"?"":stateFilter;
+  return queryMatch&&(!c||x.category===c)&&(!ec||family===ec)&&(!effectiveStateFilter||itemState===effectiveStateFilter)&&(!y||(y==="unknown"?!year:year===y))&&browseMatches(x,selectedBrowse);
  });
  if($("#sort").value==="title") list.sort((a,b)=>(a.title||"").localeCompare(b.title||""));
  else list.sort((a,b)=>updateTimeValue(b)-updateTimeValue(a)||mainPriority(a)-mainPriority(b));
@@ -504,11 +505,12 @@ function clearUpdateFilters(){
 function runSearch(scroll=true){
  const term=$("#q").value.trim();clearUpdateFilters();
  if(quickSearch)quickSearch.value=term;
- const shortcutCount=filterQuickExams(term);page=1;render();
- if(scroll){const target=term&&shortcutCount?$("#find-exams"):$("#updates");target.scrollIntoView({behavior:"smooth",block:"start"});}
+ filterQuickExams(term);page=1;render();
+ if(scroll)$("#updates").scrollIntoView({behavior:"smooth",block:"start"});
 }
 $("#searchForm").addEventListener("submit",e=>{e.preventDefault();runSearch(true)});
 $("#q").addEventListener("input",()=>{clearUpdateFilters();if(quickSearch)quickSearch.value=$("#q").value;filterQuickExams($("#q").value);page=1;render()});
+ $("#q").addEventListener("keydown",event=>{if(event.key==="Enter"){event.preventDefault();runSearch(true);}});
 ["category","examCategory","region","sort","examYear"].forEach(id=>$("#"+id).addEventListener("change",()=>{if(id==="region"){const v=$("#region").value;selectedState=STATE_NAMES.includes(v)?v:"";selectedRegion=v==="Central"?"Central":"";}page=1;render()}));
  $("#clearFilters")?.addEventListener("click",()=>{$("#q").value="";$("#quickExamSearch").value="";$("#category").value="";$("#examCategory").value="";$("#region").value="";$("#examYear").value="";$("#sort").value="new";selectedState="";selectedRegion="";selectedBrowse="";filterQuickExams("");page=1;render();$("#updates").scrollIntoView({behavior:"smooth",block:"start"});});
 document.querySelectorAll(".pills [data-family]").forEach(button=>button.addEventListener("click",()=>{$("#examCategory").value=button.dataset.family;page=1;$("#updates").scrollIntoView({behavior:"smooth"});render()}));
