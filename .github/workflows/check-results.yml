@@ -9,6 +9,7 @@ on:
     branches: [main]
     paths:
       - "checker/check.py"
+      - "checker/update_pib.py"
       - "checker/test_check.py"
       - "checker/build_seo_pages.py"
       - "checker/test_build_seo_pages.py"
@@ -125,6 +126,7 @@ jobs:
           MAX_PUBLIC_ALERTS_PER_RUN: "10"
         run: |
           python checker/check.py
+          python checker/update_pib.py
           python checker/build_seo_pages.py
 
       - name: Validate generated website data
@@ -182,6 +184,7 @@ jobs:
           git add checker/state.json
           git add checker/approved.json
           git add site/data/results.json
+          git add site/data/pib-news.json
           git add site/results.json
           git add site/data/status.json
           git add site/updates/
