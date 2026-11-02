@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-02T11:19:51.125965+00:00",
-  "scan_started_at": "2026-11-02T11:11:25.500200+00:00",
+  "last_checked_at": "2026-11-02T11:26:48.800347+00:00",
+  "scan_started_at": "2026-11-02T11:20:42.398052+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 150,
-  "sources_failed": 147,
-  "new_candidates": 13,
-  "recovered_records": 1,
-  "telegram_posts_sent": 1,
+  "sources_succeeded": 151,
+  "sources_failed": 146,
+  "new_candidates": 2,
+  "recovered_records": 0,
+  "telegram_posts_sent": 2,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, SSLError: 36, ConnectionError: 25, HTTPError: 16, ValueError: 3",
+  "failure_types": "ConnectTimeout: 88, SSLError: 36, ConnectionError: 24, HTTPError: 16, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
@@ -344,10 +344,6 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "meghalaya-psc",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -469,7 +465,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "rajeduboard",
