@@ -701,17 +701,21 @@ def fetch_source(source):
                     # Attribute the notice to the issuing authority, not to the
                     # discovery index. The later queue validator checks this exact
                     # source's allowlist before publishing the notice.
+                    def source_host_specificity(entry):
+                        allowed = entry.get("allowed_hosts", [])
+                        allowed = allowed if isinstance(allowed, list) else [allowed]
+                        matching_lengths = [
+                            len(str(host)) for host in allowed
+                            if host and (
+                                target_host == str(host).lower()
+                                or target_host.endswith("." + str(host).lower())
+                            )
+                        ]
+                        return max(matching_lengths, default=0)
+
                     official_source = max(
                         matching_sources,
-                        key=lambda entry: max(
-                            (len(str(host)) for host in (
-                                entry.get("allowed_hosts", [])
-                                if isinstance(entry.get("allowed_hosts", []), list)
-                                else [entry.get("allowed_hosts")]
-                            ) if host and (target_host == str(host).lower()
-                                           or target_host.endswith("." + str(host).lower())),
-                            default=0,
-                        ),
+                        key=source_host_specificity,
                     )
                     label = " ".join(anchor.get_text(" ", strip=True).split()).lower()
                     priority = 0 if re.search(r"result|score.?card|admit|answer|cut.?off|download|apply|official|notice|notification", label) else 1
