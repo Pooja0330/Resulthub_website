@@ -667,7 +667,7 @@ def fetch_source(source):
                     any(parsed.hostname.lower() == h or parsed.hostname.lower().endswith("." + h) for h in hosts) and
                     classify(title) and link not in article_urls):
                 article_urls.append(link)
-            if len(article_urls) >= 24:
+            if len(article_urls) >= 8:
                 break
 
         discovered = []
@@ -830,7 +830,7 @@ def fetch_source(source):
         # than stopping at the first three links, which may be stale or generic.
         inspected_pages = set()
         page_queue = list(listing_urls)
-        while page_queue and len(inspected_pages) < 6:
+        while page_queue and len(inspected_pages) < 3:
             listing_url = page_queue.pop(0)
             if listing_url in inspected_pages:
                 continue
