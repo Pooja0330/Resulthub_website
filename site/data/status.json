@@ -1,14 +1,14 @@
 {
-  "last_checked_at": "2026-11-02T03:15:49.113468+00:00",
+  "last_checked_at": "2026-11-02T03:31:40.809436+00:00",
   "sources_enabled": 296,
-  "sources_succeeded": 148,
-  "sources_failed": 148,
+  "sources_succeeded": 147,
+  "sources_failed": 149,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 10,
-  "alerts_pending": 124,
+  "alerts_pending": 114,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, SSLError: 37, ConnectionError: 23, HTTPError: 16, ValueError: 3",
+  "failure_types": "ConnectTimeout: 89, SSLError: 38, ConnectionError: 24, HTTPError: 16, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -92,7 +92,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
@@ -227,10 +227,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "icmai",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "iiser-admissions",
       "error_type": "SSLError"
     },
@@ -313,6 +309,10 @@
     {
       "source_id": "karnataka-results",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "keralapsc",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "keralaresults",
@@ -444,6 +444,10 @@
     },
     {
       "source_id": "osmania-university",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
@@ -648,7 +652,7 @@
     },
     {
       "source_id": "upsc-final-results",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "upsc-results",
