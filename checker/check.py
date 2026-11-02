@@ -1009,6 +1009,63 @@ def main():
         pending = {}
         state["pending_alerts"] = pending
 
+    # Restore valid notifications from the persistent Telegram delivery queue.
+    # A queued item is already an official-source candidate; it must remain
+    # visible on the website even when a later scan does not rediscover its URL.
+    # This also repairs a feed that was emptied while checker/state.json still
+    # contains pending alerts, without sending any extra Telegram messages.
+    pending_restored = 0
+    existing_ids = {
+        str(item.get("id", "")).strip()
+        for item in results if isinstance(item, dict)
+    }
+    existing_urls = {
+        normalize_notice_url(item.get("url") or item.get("official_url") or "")
+        for item in results if isinstance(item, dict)
+    }
+    for pending_key, pending_record in pending.items():
+        if not isinstance(pending_record, dict):
+            continue
+        queued_item = pending_record.get("item")
+        if not isinstance(queued_item, dict):
+            continue
+        queued_title = str(queued_item.get("title") or "").strip()
+        queued_url = str(queued_item.get("url") or queued_item.get("official_url") or "").strip()
+        normalized_queued_url = normalize_notice_url(queued_url)
+        if not queued_title or not normalized_queued_url or not host_allowed(
+            queued_url,
+            next((source.get("allowed_hosts", []) for source in sources
+                  if str(source.get("id", "")) == str(queued_item.get("source_id", ""))), []),
+        ):
+            continue
+        queued_id = str(queued_item.get("id") or pending_key).strip()
+        if queued_id in existing_ids or normalized_queued_url in existing_urls:
+            continue
+        source_meta = next(
+            (source for source in sources
+             if str(source.get("id", "")) == str(queued_item.get("source_id", ""))),
+            {},
+        )
+        queued_item = dict(queued_item)
+        queued_item["id"] = queued_id
+        queued_item["category"] = classify_source_title(queued_title, source_meta)
+        if not queued_item["category"] or is_speculative_status_title(queued_title):
+            continue
+        queued_item["region"] = queued_item.get("region") or source_meta.get("region", "Central")
+        queued_item["state"] = queued_item.get("state") or source_meta.get("state", "")
+        queued_item["exam_category"] = queued_item.get("exam_category") or source_meta.get(
+            "exam_category",
+            infer_exam_category(queued_title, source_meta.get("name", ""),
+                                source_meta.get("id", ""), source_meta.get("state", "")),
+        )
+        detected = queued_item.get("detected_at") or pending_record.get("detected_at") or checked_at
+        results.append(build_result(queued_item, detected))
+        existing_ids.add(queued_id)
+        existing_urls.add(normalized_queued_url)
+        pending_restored += 1
+    if pending_restored:
+        print(f"Recovered {pending_restored} website record(s) from the pending Telegram queue")
+
     # PIB has its own independent publisher and must never enter the exam-alert queue.
     # Its all-releases feed contains general government press releases, not just exams.
     sources = [s for s in registry["sources"] if is_exam_alert_source(s)]
@@ -1394,6 +1451,16 @@ def main():
                 osstet_backfilled += 1
     if osstet_backfilled:
         print(f"Backfilled Telegram delivery time for {osstet_backfilled} existing OSSTET answer-key feed record(s)")
+
+    # Never let a successful-but-empty scrape replace the public exam feed.
+    # If no trustworthy records can be recovered or discovered, fail this run
+    # before writing results.json so the workflow cannot publish a blank feed.
+    if not results:
+        raise SystemExit(
+            "Refusing to publish an empty exam feed: no existing records, pending "
+            "queue records, or new official-source notices were available. "
+            "Check source scan logs and checker/state.json before retrying."
+        )
 
     # Save data only after the run's work is complete.
     state.update({
