@@ -244,7 +244,7 @@ class CheckerSafetyTests(unittest.TestCase):
             self.assertEqual(get_with_retries("https://example.gov.in/").status_code, 200)
             self.assertEqual(mocked.call_count, 2)
 
-    def test_source_timeout_has_longer_connect_and_read_budgets(self):
+    def test_source_timeout_is_bounded_for_scheduled_scans(self):
         from unittest.mock import patch
         import requests
 
@@ -254,8 +254,10 @@ class CheckerSafetyTests(unittest.TestCase):
         with patch("check.requests.get", return_value=response) as mocked:
             get_with_retries("https://example.gov.in/")
             timeout = mocked.call_args.kwargs["timeout"]
-            self.assertGreaterEqual(timeout[0], 10)
-            self.assertGreaterEqual(timeout[1], 15)
+            self.assertGreater(timeout[0], 0)
+            self.assertGreater(timeout[1], 0)
+            self.assertLessEqual(timeout[0], 6)
+            self.assertLessEqual(timeout[1], 8)
 
 
     def test_rejects_long_concatenated_homepage_content(self):
