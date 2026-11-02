@@ -1,14 +1,14 @@
 {
-  "last_checked_at": "2026-11-02T02:01:42.629474+00:00",
+  "last_checked_at": "2026-11-02T02:15:49.566123+00:00",
   "sources_enabled": 296,
   "sources_succeeded": 147,
   "sources_failed": 149,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 10,
-  "alerts_pending": 168,
+  "alerts_pending": 158,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, SSLError: 37, ConnectionError: 23, HTTPError: 16, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 91, SSLError: 37, ConnectionError: 23, HTTPError: 16, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -275,10 +275,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "indiapost-recruitment",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -472,6 +468,10 @@
     },
     {
       "source_id": "rajasthan-rssb",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
       "error_type": "ConnectTimeout"
     },
     {
