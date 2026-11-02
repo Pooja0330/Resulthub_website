@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-02T21:39:02.082368+00:00",
-  "scan_started_at": "2026-11-02T21:31:36.522005+00:00",
+  "last_checked_at": "2026-11-02T21:53:02.822640+00:00",
+  "scan_started_at": "2026-11-02T21:45:51.009657+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 148,
-  "sources_failed": 149,
+  "sources_succeeded": 146,
+  "sources_failed": 151,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 10,
-  "alerts_pending": 741,
+  "alerts_pending": 731,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, SSLError: 34, ConnectionError: 23, HTTPError: 17, ReadTimeout: 4",
+  "failure_types": "ConnectTimeout: 91, SSLError: 36, ConnectionError: 23, HTTPError: 17, ReadTimeout: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -193,7 +193,7 @@
     },
     {
       "source_id": "hp-university",
-      "error_type": "ConnectTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "hpbose-results",
@@ -274,10 +274,6 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "indiapost-recruitment",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -452,6 +448,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "osssc",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -469,6 +469,10 @@
     },
     {
       "source_id": "rajasthan-rssb",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -646,6 +650,10 @@
     {
       "source_id": "upsc-active-examinations",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "upsc-active-exams",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "upsc-exam-calendar",
