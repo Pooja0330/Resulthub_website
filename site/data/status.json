@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-02T20:05:46.208307+00:00",
-  "scan_started_at": "2026-11-02T19:59:06.618067+00:00",
+  "last_checked_at": "2026-11-02T20:18:43.996122+00:00",
+  "scan_started_at": "2026-11-02T20:06:37.670789+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 148,
-  "sources_failed": 149,
+  "sources_succeeded": 147,
+  "sources_failed": 150,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 10,
-  "alerts_pending": 811,
+  "alerts_pending": 801,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 92, SSLError: 35, ConnectionError: 22, HTTPError: 17, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 90, SSLError: 36, ConnectionError: 24, HTTPError: 17, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "andhra-university",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "apsc",
@@ -448,6 +448,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "osssc",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -466,6 +470,10 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "rajeduboard",
@@ -569,10 +577,6 @@
     },
     {
       "source_id": "rrb-trivandrum",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rrc-eastern",
       "error_type": "ConnectTimeout"
     },
     {
