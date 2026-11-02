@@ -1,14 +1,14 @@
 {
-  "last_checked_at": "2026-11-02T08:45:51.827775+00:00",
+  "last_checked_at": "2026-11-02T09:01:24.070512+00:00",
   "sources_enabled": 296,
-  "sources_succeeded": 150,
-  "sources_failed": 146,
+  "sources_succeeded": 149,
+  "sources_failed": 147,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, SSLError: 36, ConnectionError: 24, HTTPError: 16, ValueError: 3",
+  "failure_types": "ConnectTimeout: 91, SSLError: 36, ConnectionError: 21, HTTPError: 16, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -36,7 +36,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -267,6 +267,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "indiapost-recruitment",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -420,11 +424,11 @@
     },
     {
       "source_id": "nvs",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "nvs-recruitment",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "odisha-board-official",
