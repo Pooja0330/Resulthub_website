@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-03T09:23:00.463161+00:00",
-  "scan_started_at": "2026-11-03T09:15:54.330516+00:00",
+  "last_checked_at": "2026-11-03T09:39:34.011481+00:00",
+  "scan_started_at": "2026-11-03T09:31:40.864750+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 149,
-  "sources_failed": 148,
+  "sources_succeeded": 150,
+  "sources_failed": 147,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 10,
-  "alerts_pending": 276,
+  "alerts_pending": 266,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, SSLError: 37, ConnectionError: 22, HTTPError: 17, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 91, SSLError: 35, ConnectionError: 23, HTTPError: 17, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "andhra-university",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bssc",
@@ -368,6 +368,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "nagaland-university",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "naval-coastguard-jobs",
       "error_type": "SSLError"
     },
@@ -425,7 +429,7 @@
     },
     {
       "source_id": "nvs-recruitment",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "odisha-board-official",
@@ -437,10 +441,6 @@
     },
     {
       "source_id": "osmania-university",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
@@ -462,10 +462,6 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
@@ -605,7 +601,7 @@
     },
     {
       "source_id": "tnmrbrecruit",
-      "error_type": "SSLError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "tnresults",
