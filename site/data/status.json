@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-03T20:24:01.031167+00:00",
-  "scan_started_at": "2026-11-03T20:15:54.550296+00:00",
+  "last_checked_at": "2026-11-03T20:39:50.319728+00:00",
+  "scan_started_at": "2026-11-03T20:32:05.221150+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 145,
-  "sources_failed": 152,
+  "sources_succeeded": 146,
+  "sources_failed": 151,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, SSLError: 36, ConnectionError: 26, HTTPError: 17, ReadTimeout: 4",
+  "failure_types": "ConnectTimeout: 92, SSLError: 35, ConnectionError: 24, HTTPError: 17, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -36,6 +36,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "anna-university",
+      "error_type": "ConnectionError"
+    },
+    {
       "source_id": "ap-police",
       "error_type": "ConnectionError"
     },
@@ -49,7 +53,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -93,7 +97,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
@@ -205,7 +209,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps",
@@ -276,10 +280,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "indiapost-gds",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -298,6 +298,10 @@
     {
       "source_id": "jkssb",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "jnu",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "karnataka-board",
@@ -338,10 +342,6 @@
     {
       "source_id": "kvs-recruitment",
       "error_type": "ValueError"
-    },
-    {
-      "source_id": "lucknow-university-old-results",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "maha-rojgar",
@@ -453,10 +453,6 @@
     },
     {
       "source_id": "osmania-university",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
@@ -621,7 +617,7 @@
     },
     {
       "source_id": "tnpsc",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "tnresults",
