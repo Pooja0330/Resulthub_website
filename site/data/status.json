@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-03T19:38:11.453473+00:00",
-  "scan_started_at": "2026-11-03T19:31:45.813702+00:00",
+  "last_checked_at": "2026-11-03T19:54:12.683097+00:00",
+  "scan_started_at": "2026-11-03T19:46:04.098721+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 147,
-  "sources_failed": 150,
+  "sources_succeeded": 148,
+  "sources_failed": 149,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, SSLError: 34, ConnectionError: 26, HTTPError: 17, ValueError: 3",
+  "failure_types": "ConnectTimeout: 90, SSLError: 36, ConnectionError: 24, HTTPError: 17, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -336,10 +336,6 @@
       "error_type": "ValueError"
     },
     {
-      "source_id": "magadh-university",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "maha-rojgar",
       "error_type": "HTTPError"
     },
@@ -452,6 +448,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "osssc",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -469,10 +469,6 @@
     },
     {
       "source_id": "rajasthan-rssb",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -601,7 +597,7 @@
     },
     {
       "source_id": "tamilnadu-board-official",
-      "error_type": "ConnectionError"
+      "error_type": "SSLError"
     },
     {
       "source_id": "telangana-board",
