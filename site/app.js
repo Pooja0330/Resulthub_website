@@ -267,7 +267,7 @@ function governmentExamPriority(x){
  return 3;
 }
 function mainPriority(x){return governmentExamPriority(x);}
-function updateTime(x){return x.telegram_sent_at||x.detected_at||x.date||x.published||0;}
+function updateTime(x){return x.detected_at||x.date||x.published||x.telegram_sent_at||0;}
 function updateTimeValue(x){const n=new Date(updateTime(x)).getTime();return Number.isFinite(n)?n:0;}
 function isNavigationNoise(item){
  const title=String(item?.title||item?.exam||"").toLowerCase().replace(/[^a-z0-9]/g,"");
