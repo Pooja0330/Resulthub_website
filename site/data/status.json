@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-03T22:54:04.214555+00:00",
-  "scan_started_at": "2026-11-03T22:45:54.885474+00:00",
+  "last_checked_at": "2026-11-03T23:09:52.234496+00:00",
+  "scan_started_at": "2026-11-03T23:01:54.431721+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 146,
-  "sources_failed": 151,
-  "new_candidates": 0,
+  "sources_succeeded": 148,
+  "sources_failed": 149,
+  "new_candidates": 15,
   "recovered_records": 0,
-  "telegram_posts_sent": 0,
-  "alerts_pending": 0,
+  "telegram_posts_sent": 10,
+  "alerts_pending": 5,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, SSLError: 36, ConnectionError: 27, HTTPError: 17, ValueError: 3",
+  "failure_types": "ConnectTimeout: 94, SSLError: 36, ConnectionError: 22, HTTPError: 15, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,11 +37,11 @@
     },
     {
       "source_id": "anna-university",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -53,7 +53,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -97,7 +97,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
@@ -137,10 +137,6 @@
     },
     {
       "source_id": "cisce-results",
-      "error_type": "HTTPError"
-    },
-    {
-      "source_id": "coal-india-careers",
       "error_type": "HTTPError"
     },
     {
@@ -209,7 +205,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps",
@@ -350,10 +346,6 @@
     {
       "source_id": "manipur-board",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "mat-aima",
-      "error_type": "HTTPError"
     },
     {
       "source_id": "merchant-navy-imu",
