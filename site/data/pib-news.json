@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-fe1c1308b01236edc22f0141",
+    "title": "पुणे मेट्रो परियोजनाओं की आधारशिला रखने के अवसर पर प्रधानमंत्री के संबोधन का मूल पाठ",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2332005&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2332005&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-03T09:06:09.341178+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-544184b84e223ad5379b85e5",
     "title": "ट्राई ने “दूरसंचार इंटरकनेक्शन (तीसरा संशोधन) विनियम, 2026” जारी किए",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2331991&lang=1",
@@ -302,23 +319,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-02T16:23:14.857112+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-e8e18860f30955fa013c15b2",
-    "title": "प्रधानमंत्री श्री नरेन्द्र मोदी ने भारत नवीकरणीय ऊर्जा शिखर सम्मेलन एवं एक्सपो 2026 का उद्घाटन किया",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2331787&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2331787&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-02T15:08:59.420074+00:00",
     "archive": false,
     "verified": true
   },
