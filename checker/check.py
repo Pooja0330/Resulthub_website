@@ -783,7 +783,7 @@ def fetch_source(source):
                 candidate_context = " ".join(parent.get_text(" ", strip=True).split())
                 # Never promote a whole page/menu/link cluster into a notice title.
                 # Real notice cards are short and must not contain navigation aggregates.
-                if not (20 <= len(candidate_context) <= 240):
+                if not (20 <= len(candidate_context) <= 700):
                     continue
                 if is_navigation_noise_title(candidate_context):
                     continue
@@ -798,7 +798,7 @@ def fetch_source(source):
                     if getattr(parent, "name", None) not in ("tr", "li", "article", "div", "section"):
                         continue
                     candidate_context = " ".join(parent.get_text(" ", strip=True).split())
-                    if (20 <= len(candidate_context) <= 240
+                    if (20 <= len(candidate_context) <= 700
                         and not is_navigation_noise_title(candidate_context)
                         and re.search(
                         r"\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{1,2},?\s+20\d{2}\b|\b\d{1,2}\s+[A-Za-z]{3,9}\s+20\d{2}\b",
