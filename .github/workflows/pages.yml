@@ -18,7 +18,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: github-pages
+  group: goresult-hub-publish-queue
   cancel-in-progress: false
 
 jobs:
