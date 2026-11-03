@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-03T07:23:10.028152+00:00",
-  "scan_started_at": "2026-11-03T07:15:52.985686+00:00",
+  "last_checked_at": "2026-11-03T07:39:08.013076+00:00",
+  "scan_started_at": "2026-11-03T07:31:14.599677+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 150,
-  "sources_failed": 147,
+  "sources_succeeded": 149,
+  "sources_failed": 148,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 10,
-  "alerts_pending": 352,
+  "alerts_pending": 342,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, SSLError: 36, ConnectionError: 22, HTTPError: 17, ValueError: 3",
+  "failure_types": "ConnectTimeout: 89, SSLError: 36, ConnectionError: 24, HTTPError: 18, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ap-psc",
@@ -384,6 +384,10 @@
       "error_type": "HTTPError"
     },
     {
+      "source_id": "niacl",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "nielit-recruitment",
       "error_type": "SSLError"
     },
@@ -421,7 +425,7 @@
     },
     {
       "source_id": "nvs",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "nvs-recruitment",
