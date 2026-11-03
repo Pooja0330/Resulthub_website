@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-03T04:05:36.398889+00:00",
-  "scan_started_at": "2026-11-03T04:01:21.181841+00:00",
+  "last_checked_at": "2026-11-03T04:20:38.558515+00:00",
+  "scan_started_at": "2026-11-03T04:15:49.544800+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 147,
-  "sources_failed": 150,
+  "sources_succeeded": 150,
+  "sources_failed": 147,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 10,
-  "alerts_pending": 480,
+  "alerts_pending": 470,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 92, SSLError: 36, ConnectionError: 23, HTTPError: 16, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 90, SSLError: 36, ConnectionError: 24, HTTPError: 16, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bssc",
@@ -198,10 +198,6 @@
     {
       "source_id": "hpsc",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "hptu",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "ibps",
@@ -433,7 +429,7 @@
     },
     {
       "source_id": "nvs-recruitment",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "odisha-board-official",
@@ -445,10 +441,6 @@
     },
     {
       "source_id": "osmania-university",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
@@ -469,10 +461,6 @@
     },
     {
       "source_id": "rajasthan-rssb",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -613,7 +601,7 @@
     },
     {
       "source_id": "tnmrbrecruit",
-      "error_type": "ConnectTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "tnresults",
