@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-03T14:52:03.642356+00:00",
-  "scan_started_at": "2026-11-03T14:46:00.176007+00:00",
+  "last_checked_at": "2026-11-03T14:59:55.874627+00:00",
+  "scan_started_at": "2026-11-03T14:53:34.986478+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 146,
-  "sources_failed": 151,
+  "sources_succeeded": 145,
+  "sources_failed": 152,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 10,
-  "alerts_pending": 48,
+  "alerts_pending": 38,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, SSLError: 36, ConnectionError: 26, HTTPError: 17, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 92, SSLError: 36, ConnectionError: 23, HTTPError: 18, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ap-psc",
@@ -205,7 +205,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps",
@@ -429,11 +429,11 @@
     },
     {
       "source_id": "nvs",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "nvs-recruitment",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "odisha-board-official",
@@ -448,6 +448,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "ossc",
+      "error_type": "ConnectionError"
+    },
+    {
       "source_id": "osssc",
       "error_type": "SSLError"
     },
@@ -457,6 +461,10 @@
     },
     {
       "source_id": "pondicherry-university-old-results",
+      "error_type": "HTTPError"
+    },
+    {
+      "source_id": "puducherry-government",
       "error_type": "ReadTimeout"
     },
     {
@@ -474,10 +482,6 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "rajeduboard",
