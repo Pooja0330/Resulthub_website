@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-03T16:09:38.782332+00:00",
-  "scan_started_at": "2026-11-03T16:01:28.965143+00:00",
+  "last_checked_at": "2026-11-03T16:22:19.266242+00:00",
+  "scan_started_at": "2026-11-03T16:16:10.926336+00:00",
   "sources_enabled": 297,
   "sources_succeeded": 144,
   "sources_failed": 153,
@@ -9,7 +9,7 @@
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, SSLError: 36, ConnectionError: 24, HTTPError: 18, ReadTimeout: 4",
+  "failure_types": "ConnectTimeout: 89, SSLError: 36, ConnectionError: 24, HTTPError: 19, ReadTimeout: 5",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -340,10 +340,6 @@
       "error_type": "ValueError"
     },
     {
-      "source_id": "magadh-university",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "maha-rojgar",
       "error_type": "HTTPError"
     },
@@ -384,6 +380,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "nagaland-psc",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "naval-coastguard-jobs",
       "error_type": "SSLError"
     },
@@ -397,6 +397,10 @@
     },
     {
       "source_id": "neet-pg-nbems",
+      "error_type": "HTTPError"
+    },
+    {
+      "source_id": "niacl",
       "error_type": "HTTPError"
     },
     {
@@ -453,10 +457,6 @@
     },
     {
       "source_id": "osmania-university",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
@@ -625,7 +625,7 @@
     },
     {
       "source_id": "tnmrbrecruit",
-      "error_type": "ConnectTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "tnresults",
