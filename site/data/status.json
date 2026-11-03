@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-03T04:52:47.755838+00:00",
-  "scan_started_at": "2026-11-03T04:45:50.423903+00:00",
+  "last_checked_at": "2026-11-03T05:06:04.165396+00:00",
+  "scan_started_at": "2026-11-03T05:01:48.903129+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 150,
-  "sources_failed": 147,
+  "sources_succeeded": 147,
+  "sources_failed": 150,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 10,
-  "alerts_pending": 450,
+  "alerts_pending": 440,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, SSLError: 35, ConnectionError: 22, HTTPError: 17, ValueError: 3",
+  "failure_types": "ConnectTimeout: 92, SSLError: 36, ConnectionError: 20, HTTPError: 17, ReadTimeout: 5",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -340,6 +340,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "manipur-university",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "mat-aima",
       "error_type": "HTTPError"
     },
@@ -421,11 +425,11 @@
     },
     {
       "source_id": "nvs",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "nvs-recruitment",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "odisha-board-official",
@@ -437,6 +441,10 @@
     },
     {
       "source_id": "osmania-university",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
@@ -461,7 +469,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ConnectTimeout"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
@@ -645,6 +653,10 @@
     },
     {
       "source_id": "upsc-final-results",
+      "error_type": "ReadTimeout"
+    },
+    {
+      "source_id": "upsc-recruitment",
       "error_type": "ReadTimeout"
     },
     {
