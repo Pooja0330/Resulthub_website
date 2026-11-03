@@ -1,5 +1,39 @@
 [
   {
+    "id": "pib-aed57d96361740cb66ddf3fa",
+    "title": "भारत के बायोस्फीयर रिजर्व",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2331895&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2331895&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-03T05:22:31.984818+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
+    "id": "pib-4e0418bb7ee46cc7e1f18360",
+    "title": "प्रधानमंत्री ने एक संस्कृत सुभाषितम् साझा किया, जिसमें संयमित वाणी और मन, तप, आत्म-त्याग और सत्यनिष्ठा के महत्व पर प्रकाश डाला गया है",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2331896&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2331896&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-03T05:22:31.984165+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-5594286f32290850cbc40120",
     "title": "ई-कोर्ट मिशन मोड परियोजना के अंतर्गत एक पहल ‘ई-फाइलिंग 3.0: प्रक्रिया से व्यवहार तक’ विषय पर कार्यशाला",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2331878&lang=1",
@@ -289,23 +323,6 @@
     "verified": true
   },
   {
-    "id": "pib-dddecdaf5a58d3478fd0de1a",
-    "title": "पीएम-सेतु, उद्योग नेतृत्व वाले आईटीआई परिवर्तन के माध्यम से पूर्वोत्तर के कौशल इकोसिस्टम को सुदृढ़ करेगा; पर्यटन और आतिथ्य की वैश्विक रोजगार के अवसरों के लिए प्रमुख क्षेत्रों के रूप में पहचान की गई",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2331736&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2331736&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-02T13:55:04.418930+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
     "id": "pib-51fa964105f9fa083b6434b4",
     "title": "दिल्ली में 'भारत रिन्यूएबल एनर्जी समिट एंड एक्सपो' के उद्घाटन के अवसर पर प्रधानमंत्री के संबोधन का मूल पाठ",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2331739&lang=1",
@@ -319,23 +336,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-02T13:55:04.418840+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-56a5532e23f5185607b401c9",
-    "title": "पेंशन और पेंशनभोगी कल्याण विभाग ने राष्ट्रव्यापी 'डिजिटल जीवन प्रमाणपत्र अभियान-5' के माध्यम से पेंशनभोगियों का डिजिटल सशक्तिकरण तेज़ किया",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2331720&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2331720&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-02T13:01:35.607107+00:00",
     "archive": false,
     "verified": true
   }
