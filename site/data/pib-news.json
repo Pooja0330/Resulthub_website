@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-744cf3f7a179100dfd9505bd",
+    "title": "आईपीआरडी-2026 का नई दिल्ली में शुभारंभ; वैज्ञानिक प्रगति को क्षेत्रीय सहयोग में रूपांतरित करने पर जोर",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2332291&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2332291&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-03T15:53:56.974057+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-b0fc824804f69f98986dbb86",
     "title": "एनएलएमसी ने नई दिल्ली में एचआईएल (इंडिया) लिमिटेड की 5.119 एकड़ भूमि की ई-नीलामी हेतु बोली से पहले बैठक का आयोजन किया",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2332289&lang=1",
@@ -35,7 +52,7 @@
   },
   {
     "id": "pib-099ab3942048453797918ec4",
-    "title": "डीएएचडी विशेष अभियान 6.0 सफलतापूर्वक संपन्न हुआ",
+    "title": "डीएएचडी का विशेष अभियान 6.0 सफलतापूर्वक संपन्न",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2332285&lang=1",
     "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2332285&lang=1",
     "source_id": "pib-independent-feed",
@@ -319,23 +336,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-03T13:38:48.929473+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-266dddcb0c7b53dec96fd870",
-    "title": "एपीडा ने कुल्लू से दुबई तक 1.3 मीट्रिक टन सिंदूरी अनार के निर्यात में मदद की",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2332126&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2332126&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-03T12:07:05.317244+00:00",
     "archive": false,
     "verified": true
   }
