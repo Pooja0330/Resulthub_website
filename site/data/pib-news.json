@@ -1,7 +1,24 @@
 [
   {
+    "id": "pib-381afe8e8b4809bb7210e554",
+    "title": "शराब की लत छोड़कर स्वस्थ जीवन की ओर",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2332014&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2332014&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-03T09:23:06.117988+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-fe1c1308b01236edc22f0141",
-    "title": "पुणे मेट्रो परियोजनाओं की आधारशिला रखने के अवसर पर प्रधानमंत्री के संबोधन का मूल पाठ",
+    "title": "पुणे मेट्रो परियोजनाओं के शिलान्यास समारोह में प्रधानमंत्री के संबोधन का मूल पाठ",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2332005&lang=1",
     "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2332005&lang=1",
     "source_id": "pib-independent-feed",
@@ -319,23 +336,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-02T16:23:14.857112+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-7351eca7b489d615b421e42a",
-    "title": "केंद्रीय मंत्री श्री शिवराज सिंह चौहान ने की देश में कृषि क्षेत्र की स्थिति की समग्र समीक्षा, किसानों को समय पर हरसंभव मदद के दिए निर्देश",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2331762&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2331762&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-02T14:10:06.229703+00:00",
     "archive": false,
     "verified": true
   }
