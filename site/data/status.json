@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-03T11:07:53.745319+00:00",
-  "scan_started_at": "2026-11-03T11:01:25.986811+00:00",
+  "last_checked_at": "2026-11-03T11:20:06.163096+00:00",
+  "scan_started_at": "2026-11-03T11:15:53.275703+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 149,
-  "sources_failed": 148,
+  "sources_succeeded": 147,
+  "sources_failed": 150,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 10,
-  "alerts_pending": 198,
+  "alerts_pending": 188,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, SSLError: 36, ConnectionError: 25, HTTPError: 17, ValueError: 3",
+  "failure_types": "ConnectTimeout: 88, SSLError: 36, ConnectionError: 26, HTTPError: 18, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "apsc",
@@ -268,6 +268,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "indiapost-gds",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -384,6 +388,10 @@
       "error_type": "HTTPError"
     },
     {
+      "source_id": "niacl",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "nielit-recruitment",
       "error_type": "SSLError"
     },
@@ -465,7 +473,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "rajeduboard",
