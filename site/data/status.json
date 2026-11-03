@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-03T08:08:44.201250+00:00",
-  "scan_started_at": "2026-11-03T08:01:25.410326+00:00",
+  "last_checked_at": "2026-11-03T08:22:40.653776+00:00",
+  "scan_started_at": "2026-11-03T08:15:55.113130+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 150,
-  "sources_failed": 147,
-  "new_candidates": 1,
+  "sources_succeeded": 147,
+  "sources_failed": 150,
+  "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 10,
-  "alerts_pending": 324,
+  "alerts_pending": 314,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, SSLError: 36, ConnectionError: 21, HTTPError: 17, ValueError: 3",
+  "failure_types": "ConnectTimeout: 91, SSLError: 36, ConnectionError: 23, HTTPError: 17, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bssc",
@@ -268,6 +268,14 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "indiapost-gds",
+      "error_type": "ReadTimeout"
+    },
+    {
+      "source_id": "indiapost-recruitment",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -421,7 +429,7 @@
     },
     {
       "source_id": "nvs",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "nvs-recruitment",
@@ -565,6 +573,10 @@
     },
     {
       "source_id": "rrb-trivandrum",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rrc-eastern",
       "error_type": "ConnectTimeout"
     },
     {
