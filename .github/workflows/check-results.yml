@@ -24,7 +24,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: goresult-hub-data-writers
+  group: goresult-hub-publish-queue
   cancel-in-progress: false
 
 jobs:
