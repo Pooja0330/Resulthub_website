@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-03T10:09:52.895596+00:00",
-  "scan_started_at": "2026-11-03T10:01:54.394345+00:00",
+  "last_checked_at": "2026-11-03T10:23:17.763646+00:00",
+  "scan_started_at": "2026-11-03T10:15:53.901145+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 148,
-  "sources_failed": 149,
-  "new_candidates": 0,
+  "sources_succeeded": 147,
+  "sources_failed": 150,
+  "new_candidates": 1,
   "recovered_records": 0,
   "telegram_posts_sent": 10,
-  "alerts_pending": 237,
+  "alerts_pending": 228,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, SSLError: 36, ConnectionError: 23, HTTPError: 17, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 90, SSLError: 36, ConnectionError: 23, HTTPError: 17, ReadTimeout: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "andhra-university",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -166,6 +166,10 @@
     {
       "source_id": "esic-recruitment",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "goa-government",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "goa-technical-education-old-results",
@@ -328,10 +332,6 @@
       "error_type": "ValueError"
     },
     {
-      "source_id": "magadh-university",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "maha-rojgar",
       "error_type": "HTTPError"
     },
@@ -346,6 +346,10 @@
     {
       "source_id": "mat-aima",
       "error_type": "HTTPError"
+    },
+    {
+      "source_id": "meghalaya-board",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "merchant-navy-imu",
@@ -432,10 +436,6 @@
       "error_type": "ConnectionError"
     },
     {
-      "source_id": "odisha-board",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "odisha-board-official",
       "error_type": "HTTPError"
     },
@@ -470,6 +470,10 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
