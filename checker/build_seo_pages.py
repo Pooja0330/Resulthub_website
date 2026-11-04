@@ -61,6 +61,12 @@ def render_detail(item):
     published = str(item.get("published") or "").strip()
     official = safe_https(item.get("url") or item.get("official_url"))
     portal = safe_https(item.get("source_url"))
+    application = safe_https(item.get("application_url") or item.get("apply_url") or item.get("registration_url") or item.get("portal_url"))
+    is_pdf = lambda value: bool(value and re.search(r"\.pdf(?:$|[?#])", value, re.I))
+    pdf_notice = official if is_pdf(official) else ""
+    # Prefer an official application/HTML page over a PDF as the primary action.
+    primary = application or (portal if is_pdf(official) and portal and not is_pdf(portal) else official) or portal
+    secondary_portal = portal if portal and portal != primary else ""
     description = str(item.get("description") or
                       f"{title}. View the official notice and verify current details with {authority}.").strip()
     description = re.sub(r"\s+", " ", description)[:300]
@@ -76,10 +82,12 @@ def render_detail(item):
         "publisher": {"@type": "Organization", "name": "GoResultHub", "url": BASE + "/"},
     }
     schema_text = safe_json({k: v for k, v in schema.items() if v is not None})
-    official_link = (f'<a class="seo-primary" href="{esc(official)}" rel="nofollow noopener">Open official notice / result ↗</a>'
-                     if official else "")
-    portal_link = (f'<a class="seo-secondary" href="{esc(portal)}" rel="nofollow noopener">Visit authority website ↗</a>'
-                   if portal else "")
+    official_link = (f'<a class="seo-primary" href="{esc(primary)}" rel="nofollow noopener">'
+                     + ("Open official application / webpage ↗" if application or (primary and primary != official) else "Open official notice / result ↗") + "</a>" if primary else "")
+    pdf_link = (f'<a class="seo-secondary" href="{esc(pdf_notice)}" rel="nofollow noopener">Download official PDF notice ↗</a>'
+                if pdf_notice and pdf_notice != primary else "")
+    portal_link = (f'<a class="seo-secondary" href="{esc(secondary_portal)}" rel="nofollow noopener">Visit authority website ↗</a>'
+                   if secondary_portal else "")
     return f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)} | GoResultHub</title><meta name="description" content="{esc(description)}">
@@ -110,7 +118,7 @@ def render_detail(item):
 <div class="seo-meta"><span class="seo-chip">{esc(category)}</span><span class="seo-chip">{esc(authority)}</span><span class="seo-chip">{esc(state)}</span></div>
 <div class="seo-note"><b>Detected by GoResultHub:</b> {esc(detected or "Date not recorded")}<br>
 <b>Publication date:</b> {esc(published or "Not separately shown by the issuing authority")}<br><b>Source:</b> {esc(authority)}</div>
-<div class="seo-actions">{official_link}{portal_link}<a class="seo-secondary" href="../#updates">More exam updates</a></div>
+<div class="seo-actions">{official_link}{pdf_link}{portal_link}<a class="seo-secondary" href="../#updates">More exam updates</a></div>
 <h2>How to check this update</h2><ol><li>Open the official notice or result link above.</li><li>Confirm the exam name, year, dates and instructions on the issuing authority's website.</li><li>If a candidate login is required, enter your details only on the verified official portal.</li><li>Download the notice or scorecard directly from the authority if available.</li></ol>
 <p class="seo-muted">GoResultHub is an independent information directory and is not affiliated with any government, board, university or recruitment authority. Detection time means when GoResultHub indexed this listing, not necessarily when the authority published it. Always verify details on the issuing authority's website.</p>
 </article></main>
