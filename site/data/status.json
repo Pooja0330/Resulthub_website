@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-04T06:24:09.876900+00:00",
-  "scan_started_at": "2026-11-04T06:15:57.762104+00:00",
+  "last_checked_at": "2026-11-04T06:41:39.807945+00:00",
+  "scan_started_at": "2026-11-04T06:31:13.940106+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 149,
-  "sources_failed": 148,
-  "new_candidates": 2,
-  "recovered_records": 2,
-  "telegram_posts_sent": 2,
+  "sources_succeeded": 148,
+  "sources_failed": 149,
+  "new_candidates": 1,
+  "recovered_records": 0,
+  "telegram_posts_sent": 1,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, SSLError: 37, ConnectionError: 24, HTTPError: 16, ValueError: 3",
+  "failure_types": "ConnectTimeout: 90, SSLError: 34, ConnectionError: 25, HTTPError: 17, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ap-psc",
@@ -193,7 +193,7 @@
     },
     {
       "source_id": "hp-university",
-      "error_type": "SSLError"
+      "error_type": "HTTPError"
     },
     {
       "source_id": "hpsc",
@@ -266,10 +266,6 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "indiapost-recruitment",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -448,12 +444,16 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "osssc",
-      "error_type": "SSLError"
+      "source_id": "ossc",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "patna-university",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "puducherry-government",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "punjab-psc",
@@ -473,7 +473,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
@@ -513,7 +513,7 @@
     },
     {
       "source_id": "rrb-bilaspur",
-      "error_type": "SSLError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "rrb-central-recruitment",
@@ -650,6 +650,10 @@
     {
       "source_id": "upsc-exam-calendar",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "upsc-final-results",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "upsc-results",
