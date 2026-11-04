@@ -771,6 +771,27 @@ def fetch_source(source):
         links = []
         for anchor in soup.select("a[href]"):
             title = " ".join(anchor.get_text(" ", strip=True).split())
+            # SBI renders each recruitment heading as a separate text block,
+            # followed by advertisement details and an "APPLY ONLINE" anchor.
+            # The heading is not always inside the anchor's parent card, so
+            # recover the nearest preceding recruitment heading from the DOM.
+            if (
+                source.get("id") == "sbi-current-openings"
+                and re.match(r"^apply online\\b", title, re.I)
+            ):
+                for previous_text in anchor.find_all_previous(string=True, limit=120):
+                    previous = " ".join(str(previous_text).split())
+                    if (
+                        30 <= len(previous) <= 450
+                        and re.match(r"^(?:RECRUITMENT OF|ENGAGEMENT OF)\\b", previous, re.I)
+                        and re.search(
+                            r"\\b(officer|manager|assistant|associate|clerk|engineer|"
+                            r"apprentice|specialist|recruitment|vacanc(?:y|ies))\\b",
+                            previous, re.I
+                        )
+                    ):
+                        title = previous
+                        break
             context = ""
             # Official notice boards often render the date, title and PDF link
             # as separate elements in one card. Prefer the smallest containing
