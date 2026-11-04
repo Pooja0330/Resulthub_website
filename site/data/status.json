@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-04T14:06:44.623653+00:00",
-  "scan_started_at": "2026-11-04T13:58:29.948055+00:00",
+  "last_checked_at": "2026-11-04T14:23:09.155445+00:00",
+  "scan_started_at": "2026-11-04T14:15:56.720947+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 149,
-  "sources_failed": 148,
-  "new_candidates": 0,
-  "recovered_records": 0,
-  "telegram_posts_sent": 0,
-  "alerts_pending": 0,
+  "sources_succeeded": 141,
+  "sources_failed": 156,
+  "new_candidates": 12,
+  "recovered_records": 5,
+  "telegram_posts_sent": 10,
+  "alerts_pending": 19,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, SSLError: 34, ConnectionError: 25, HTTPError: 18, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 100, SSLError: 34, ConnectionError: 22, HTTPError: 17, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -160,6 +160,14 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "dsssb",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "dsssb-old-results-archive",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "epfindia",
       "error_type": "HTTPError"
     },
@@ -196,7 +204,15 @@
       "error_type": "HTTPError"
     },
     {
+      "source_id": "hpbose-results",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "hpsc",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "hpssc",
       "error_type": "ConnectTimeout"
     },
     {
@@ -272,6 +288,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "jammu-university",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "jkbose",
       "error_type": "ConnectTimeout"
     },
@@ -305,6 +325,14 @@
     },
     {
       "source_id": "karnataka-results",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "kashmir-university",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "kerala-devaswom",
       "error_type": "ConnectTimeout"
     },
     {
@@ -344,6 +372,10 @@
       "error_type": "HTTPError"
     },
     {
+      "source_id": "meghalaya-psc",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -364,6 +396,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "mumbai-university",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "nabard",
       "error_type": "ConnectTimeout"
     },
@@ -381,10 +417,6 @@
     },
     {
       "source_id": "neet-pg-nbems",
-      "error_type": "HTTPError"
-    },
-    {
-      "source_id": "niacl",
       "error_type": "HTTPError"
     },
     {
@@ -456,6 +488,10 @@
       "error_type": "ReadTimeout"
     },
     {
+      "source_id": "portal-delhi-delhi-gov-in",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "punjab-psc",
       "error_type": "ConnectTimeout"
     },
@@ -481,7 +517,7 @@
     },
     {
       "source_id": "rpsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "rrb-ahmedabad",
@@ -601,7 +637,7 @@
     },
     {
       "source_id": "telangana-results",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "tnmrbrecruit",
@@ -609,10 +645,6 @@
     },
     {
       "source_id": "tnresults",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "tntrb",
       "error_type": "ConnectTimeout"
     },
     {
