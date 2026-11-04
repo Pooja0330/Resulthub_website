@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-04T04:23:31.759665+00:00",
-  "scan_started_at": "2026-11-04T04:15:54.749643+00:00",
+  "last_checked_at": "2026-11-04T04:38:54.048010+00:00",
+  "scan_started_at": "2026-11-04T04:31:12.697642+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 147,
-  "sources_failed": 150,
+  "sources_succeeded": 149,
+  "sources_failed": 148,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, SSLError: 37, ConnectionError: 22, HTTPError: 17, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 90, SSLError: 36, ConnectionError: 23, HTTPError: 17, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -268,10 +268,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "indiapost-recruitment",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -376,10 +372,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "nagaland-university",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "naval-coastguard-jobs",
       "error_type": "SSLError"
     },
@@ -437,7 +429,7 @@
     },
     {
       "source_id": "nvs-recruitment",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "odisha-board-official",
@@ -449,10 +441,6 @@
     },
     {
       "source_id": "osmania-university",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
@@ -474,6 +462,10 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "rajeduboard",
@@ -669,7 +661,7 @@
     },
     {
       "source_id": "upsssc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "uttarakhand-psc",
