@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-04T00:53:20.821221+00:00",
-  "scan_started_at": "2026-11-04T00:45:50.706766+00:00",
+  "last_checked_at": "2026-11-04T01:09:55.619918+00:00",
+  "scan_started_at": "2026-11-04T01:01:21.970369+00:00",
   "sources_enabled": 297,
   "sources_succeeded": 145,
   "sources_failed": 152,
@@ -9,7 +9,7 @@
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, SSLError: 37, ConnectionError: 26, HTTPError: 17, ValueError: 3",
+  "failure_types": "ConnectTimeout: 92, SSLError: 37, ConnectionError: 23, HTTPError: 18, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -36,10 +36,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "anna-university",
-      "error_type": "ConnectionError"
-    },
-    {
       "source_id": "ap-police",
       "error_type": "ConnectTimeout"
     },
@@ -53,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -209,7 +205,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps",
@@ -442,6 +438,10 @@
     {
       "source_id": "nvs-recruitment",
       "error_type": "ConnectionError"
+    },
+    {
+      "source_id": "odisha-board",
+      "error_type": "HTTPError"
     },
     {
       "source_id": "odisha-board-official",
