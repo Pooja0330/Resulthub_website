@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-04T01:53:36.682273+00:00",
-  "scan_started_at": "2026-11-04T01:45:49.722378+00:00",
+  "last_checked_at": "2026-11-04T02:10:37.005963+00:00",
+  "scan_started_at": "2026-11-04T02:01:24.957631+00:00",
   "sources_enabled": 297,
   "sources_succeeded": 148,
   "sources_failed": 149,
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -205,7 +205,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ibps",
