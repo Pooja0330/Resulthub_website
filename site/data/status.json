@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-04T09:41:07.734748+00:00",
-  "scan_started_at": "2026-11-04T09:31:50.343361+00:00",
+  "last_checked_at": "2026-11-04T09:53:42.684698+00:00",
+  "scan_started_at": "2026-11-04T09:45:53.657018+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 151,
-  "sources_failed": 146,
-  "new_candidates": 1,
+  "sources_succeeded": 150,
+  "sources_failed": 147,
+  "new_candidates": 0,
   "recovered_records": 0,
-  "telegram_posts_sent": 1,
+  "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, SSLError: 34, ConnectionError: 25, HTTPError: 17, ValueError: 3",
+  "failure_types": "ConnectTimeout: 92, SSLError: 33, ConnectionError: 24, HTTPError: 17, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ap-psc",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -305,6 +305,10 @@
     },
     {
       "source_id": "karnataka-results",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "kerala-devaswom",
       "error_type": "ConnectTimeout"
     },
     {
@@ -633,7 +637,7 @@
     },
     {
       "source_id": "upsc-active-examinations",
-      "error_type": "SSLError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "upsc-exam-calendar",
