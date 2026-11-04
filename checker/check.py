@@ -667,7 +667,12 @@ def fetch_source(source):
                     any(parsed.hostname.lower() == h or parsed.hostname.lower().endswith("." + h) for h in hosts) and
                     classify(title) and link not in article_urls):
                 article_urls.append(link)
-            if len(article_urls) >= 8:
+            # The discovery homepage contains a rotating/latest list. Eight
+            # entries were too narrow and often missed fresh recruitment and
+            # result notices when non-exam posts occupied the first positions.
+            # Inspect a wider recent window while still validating every final
+            # destination against the official-source registry below.
+            if len(article_urls) >= 30:
                 break
 
         discovered = []
@@ -743,7 +748,8 @@ def fetch_source(source):
             except Exception as exc:
                 print(f"WARN ResultBharat discovery page skipped: {type(exc).__name__}")
         print(f"ResultBharat discovery: {len(article_urls)} article pages checked, {len(discovered)} official links accepted")
-        return discovered[:24]
+        print(f"ResultBharat discovery accepted {len(discovered)} official notice links from the expanded scan")
+        return discovered[:40]
 
     kind = str(source.get("kind", "html")).lower()
     response = get_with_retries(url)
