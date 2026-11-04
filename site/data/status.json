@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-04T10:53:47.748894+00:00",
-  "scan_started_at": "2026-11-04T10:45:56.676651+00:00",
+  "last_checked_at": "2026-11-04T11:09:43.821696+00:00",
+  "scan_started_at": "2026-11-04T11:01:27.855582+00:00",
   "sources_enabled": 297,
   "sources_succeeded": 150,
   "sources_failed": 147,
@@ -9,7 +9,7 @@
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, SSLError: 34, ConnectionError: 24, HTTPError: 17, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 89, SSLError: 34, ConnectionError: 24, HTTPError: 18, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -472,6 +472,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "rbi-opportunities",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "rpsc",
       "error_type": "ConnectionError"
     },
@@ -641,10 +645,6 @@
     },
     {
       "source_id": "upsc-final-results",
-      "error_type": "ReadTimeout"
-    },
-    {
-      "source_id": "upsc-recruitment",
       "error_type": "ReadTimeout"
     },
     {
