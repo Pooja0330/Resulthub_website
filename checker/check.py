@@ -1271,7 +1271,7 @@ def main():
                         recovered_candidates.append(item)
                         continue
 
-                    if key in pending or key in held:
+                    if key in pending:
                         continue
 
                     item["id"] = key
@@ -1283,6 +1283,28 @@ def main():
                                             source.get("id", ""), source.get("state", "")),
                     )
                     item["detected_at"] = checked_at
+
+                    # A URL previously held for review may be rediscovered with
+                    # corrected official-source attribution or a better title.
+                    # Refresh the held record instead of silently discarding it;
+                    # the next run's held-review validator can then release it.
+                    if key in held:
+                        previous_held = held.get(key, {})
+                        held[key] = {
+                            **(previous_held if isinstance(previous_held, dict) else {}),
+                            "item": item,
+                            "detected_at": (
+                                previous_held.get("detected_at", checked_at)
+                                if isinstance(previous_held, dict) else checked_at
+                            ),
+                            "refreshed_at": checked_at,
+                        }
+                        print(
+                            f"REFRESHED HELD NOTICE {key}: "
+                            f"{item.get('source_name', source.get('name', 'official source'))} | "
+                            f"{item.get('title', '')[:140]}"
+                        )
+                        continue
 
                     pending[key] = {
                         "item": item,
