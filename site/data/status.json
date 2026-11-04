@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-04T08:11:07.756570+00:00",
-  "scan_started_at": "2026-11-04T08:01:24.023996+00:00",
+  "last_checked_at": "2026-11-04T08:21:49.335146+00:00",
+  "scan_started_at": "2026-11-04T08:15:51.534647+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 148,
-  "sources_failed": 149,
-  "new_candidates": 1,
+  "sources_succeeded": 151,
+  "sources_failed": 146,
+  "new_candidates": 0,
   "recovered_records": 0,
-  "telegram_posts_sent": 1,
+  "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, SSLError: 35, ConnectionError: 24, HTTPError: 17, ReadTimeout: 4",
+  "failure_types": "ConnectTimeout: 91, SSLError: 34, ConnectionError: 22, HTTPError: 17, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ap-psc",
@@ -421,11 +421,11 @@
     },
     {
       "source_id": "nvs",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "nvs-recruitment",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "odisha-board-official",
@@ -438,10 +438,6 @@
     {
       "source_id": "osmania-university",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "ossc",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "osssc",
@@ -601,7 +597,7 @@
     },
     {
       "source_id": "tnmrbrecruit",
-      "error_type": "SSLError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "tnresults",
@@ -640,19 +636,11 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "upsc-active-exams",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "upsc-exam-calendar",
       "error_type": "ConnectTimeout"
     },
     {
       "source_id": "upsc-final-results",
-      "error_type": "ReadTimeout"
-    },
-    {
-      "source_id": "upsc-recruitment",
       "error_type": "ReadTimeout"
     },
     {
