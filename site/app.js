@@ -163,6 +163,7 @@ let statusRequest = null;
 let refreshTimer = null;
 const label = s => String(s||"update").replace(/_/g," ").replace(/\b\w/g,c=>c.toUpperCase());
 function safeUrl(u){try{const x=new URL(u);return x.protocol==="https:"?x.href:null}catch{return null}}
+function preferredOfficialUrl(item){const raw=safeUrl(item?.url||item?.official_url),portal=safeUrl(item?.source_url),apply=safeUrl(item?.application_url||item?.apply_url||item?.registration_url||item?.portal_url),pdf=u=>!!u&&/\.pdf(?:$|[?#])/i.test(u);return apply||(pdf(raw)&&portal&&!pdf(portal)?portal:raw)||portal;}
 function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
 function dateText(v){if(!v)return "Date not supplied";const d=new Date(v);return Number.isNaN(d.getTime())?"Date not supplied":d.toLocaleDateString("en-IN",{day:"numeric",month:"short",year:"numeric"})}
 function absoluteTimeText(v){if(!v)return "Exact detection time unavailable";const d=new Date(v);if(Number.isNaN(d.getTime()))return "Exact detection time unavailable";return d.toLocaleString("en-IN",{day:"numeric",month:"short",year:"numeric",hour:"numeric",minute:"2-digit",second:"2-digit",hour12:true,timeZone:"Asia/Kolkata"})+" IST"}
@@ -215,7 +216,7 @@ function browseMatches(x, view){
 function renderFeatured(){
  const sortLatest=(a,b)=>new Date(b.detected_at||b.published||b.date||0)-new Date(a.detected_at||a.published||a.date||0);
  const makeList=(items,emptyText)=>items.length?items.slice(0,5).map(x=>{
-  const url=safeUrl(x.url||x.official_url)||safeUrl(x.source_url);
+  const url=preferredOfficialUrl(x);
   const date=x.published||x.detected_at||"Date not supplied";
   const detail=detailPageUrl(x);
   return '<article class="featured-item"><div><span class="tag">'+esc(label(x.category))+'</span><h3>'+esc(x.title||x.exam||"Exam update")+'</h3><p>'+esc(x.source_name||x.authority||"Official source")+' · '+esc(date)+'</p></div>'+(url?'<a href="'+esc(detail)+'">View update ↗</a>':'')+'</article>';
