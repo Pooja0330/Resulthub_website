@@ -97,6 +97,7 @@ function stateForItem(x){
 const $ = s => document.querySelector(s);
 const esc = s => String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const safeUrl = u => { try { const x=new URL(u); return x.protocol==="https:"?x.href:null; } catch { return null; } };
+const preferredOfficialUrl = item => { const raw=safeUrl(item?.url||item?.official_url), portal=safeUrl(item?.source_url), apply=safeUrl(item?.application_url||item?.apply_url||item?.registration_url||item?.portal_url), pdf=u=>!!u&&/\.pdf(?:$|[?#])/i.test(u); return apply||(pdf(raw)&&portal&&!pdf(portal)?portal:raw)||portal; };
 const titleCase = s => String(s||"update").replace(/_/g," ").replace(/\b\w/g,c=>c.toUpperCase());
 const params = new URLSearchParams(location.search);
 const state = params.get("state") || "";
@@ -171,7 +172,7 @@ function render(){
  const pages=Math.max(1,Math.ceil(filtered.length/pageSize)); page=Math.min(page,pages);
  $("#stateCount").textContent=filtered.length+" update"+(filtered.length===1?"":"s");
  $("#stateUpdates").innerHTML=filtered.slice((page-1)*pageSize,page*pageSize).map(x=>{
-  const url=safeUrl(x.url||x.official_url), source=safeUrl(x.source_url);
+  const url=preferredOfficialUrl(x), source=safeUrl(x.source_url);
   const date=x.published||x.date;
   const dateText=date&&!Number.isNaN(new Date(date).getTime())?new Date(date).toLocaleDateString("en-IN",{day:"numeric",month:"short",year:"numeric"}):"Notice date not supplied";
   const detectedAt=detectedTimeMarkup(x.detected_at);
