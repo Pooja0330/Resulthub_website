@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-04T15:53:48.724238+00:00",
-  "scan_started_at": "2026-11-04T15:45:51.621277+00:00",
+  "last_checked_at": "2026-11-04T16:36:33.826627+00:00",
+  "scan_started_at": "2026-11-04T16:26:53.674183+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 146,
-  "sources_failed": 151,
+  "sources_succeeded": 145,
+  "sources_failed": 152,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 92, SSLError: 34, ConnectionError: 26, HTTPError: 18, ValueError: 3",
+  "failure_types": "ConnectTimeout: 92, SSLError: 34, ConnectionError: 23, HTTPError: 18, ReadTimeout: 5",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
@@ -208,6 +208,10 @@
       "error_type": "ConnectionError"
     },
     {
+      "source_id": "hptu",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "ibps",
       "error_type": "SSLError"
     },
@@ -314,10 +318,6 @@
     {
       "source_id": "karnataka-results",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "keralapsc",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "keralaresults",
@@ -480,6 +480,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "rajasthan-university",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "rajeduboard",
       "error_type": "ConnectTimeout"
     },
@@ -601,7 +605,7 @@
     },
     {
       "source_id": "ssc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "tamilnadu-board-official",
