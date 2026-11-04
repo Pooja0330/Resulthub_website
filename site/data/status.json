@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-04T07:39:16.456320+00:00",
-  "scan_started_at": "2026-11-04T07:31:32.703514+00:00",
+  "last_checked_at": "2026-11-04T07:54:25.955298+00:00",
+  "scan_started_at": "2026-11-04T07:45:54.930160+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 149,
-  "sources_failed": 148,
-  "new_candidates": 3,
+  "sources_succeeded": 150,
+  "sources_failed": 147,
+  "new_candidates": 1,
   "recovered_records": 0,
-  "telegram_posts_sent": 3,
+  "telegram_posts_sent": 1,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, SSLError: 35, ConnectionError: 25, HTTPError: 17, ValueError: 3",
+  "failure_types": "ConnectTimeout: 90, SSLError: 33, ConnectionError: 24, HTTPError: 17, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -57,7 +57,7 @@
     },
     {
       "source_id": "arunachal-psc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "assam-board-official",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
@@ -364,10 +364,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "mumbai-university",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "nabard",
       "error_type": "ConnectTimeout"
     },
@@ -444,8 +440,8 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "osssc",
-      "error_type": "SSLError"
+      "source_id": "ossc",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "patna-university",
@@ -469,7 +465,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
