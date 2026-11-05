@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-d8d52281a4ff73b44b8551af",
+    "title": "भारतीय वायुयान नियम, 2026: भारत के आसमान के लिए एक आधुनिक नियमावली",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2332990&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2332990&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-05T08:51:49.741595+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-e4f73e8da1b28b86f3072ea4",
     "title": "एनएचआरसी के हस्तक्षेप से हैदराबाद के केंद्रीय कारागार में विविध लैंगिक पहचान और अभिव्यक्ति वाले लोगों के लिए लिंग-तटस्थ प्रकोष्ठ की स्थापना की गई",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2332922&lang=1",
@@ -319,23 +336,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-04T15:10:02.706453+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-6c9c650f92381f106a019bf2",
-    "title": "केरलम के राज्यपाल प्रधानमंत्री से मिले",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2332708&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2332708&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-04T13:24:35.757875+00:00",
     "archive": false,
     "verified": true
   }
