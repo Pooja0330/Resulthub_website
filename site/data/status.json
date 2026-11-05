@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-05T04:10:15.417748+00:00",
-  "scan_started_at": "2026-11-05T04:01:49.999712+00:00",
+  "last_checked_at": "2026-11-05T04:24:29.480535+00:00",
+  "scan_started_at": "2026-11-05T04:15:52.147457+00:00",
   "sources_enabled": 297,
   "sources_succeeded": 150,
   "sources_failed": 147,
@@ -9,7 +9,7 @@
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, SSLError: 34, ConnectionError: 24, HTTPError: 17, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 91, SSLError: 33, ConnectionError: 24, HTTPError: 17, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -57,7 +57,7 @@
     },
     {
       "source_id": "arunachal-psc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "assam-board-official",
@@ -226,6 +226,10 @@
     {
       "source_id": "ibps-spl-xvi",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "icmai",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "iiser-admissions",
@@ -440,10 +444,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "osssc",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -462,6 +462,10 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "rajeduboard",
@@ -641,10 +645,6 @@
     },
     {
       "source_id": "upsc-final-results",
-      "error_type": "ReadTimeout"
-    },
-    {
-      "source_id": "upsc-recruitment",
       "error_type": "ReadTimeout"
     },
     {
