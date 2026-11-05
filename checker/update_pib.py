@@ -25,7 +25,7 @@ FEEDS = [
     "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3",
     "https://pib.gov.in/RssMain.aspx?ModId=18&Lang=1&Regid=1",
 ]
-HTML_LISTING = "https://www.pib.gov.in/AllRelease.aspx?lang=1&reg=1"
+HTML_LISTING = "https://www.pib.gov.in/AllReleasem.aspx?lang=1&reg=1"
 RELEASE_PATH = re.compile(r"^/(?:PressReleaseIframePage|PressReleasePage|PressReleaseDetail)\.aspx$", re.I)
 
 
