@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-05T10:23:49.489385+00:00",
-  "scan_started_at": "2026-11-05T10:15:52.705039+00:00",
+  "last_checked_at": "2026-11-05T10:39:05.556609+00:00",
+  "scan_started_at": "2026-11-05T10:31:37.164592+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 144,
-  "sources_failed": 153,
-  "new_candidates": 1,
+  "sources_succeeded": 142,
+  "sources_failed": 155,
+  "new_candidates": 0,
   "recovered_records": 0,
-  "telegram_posts_sent": 1,
+  "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 97, SSLError: 32, ConnectionError: 25, HTTPError: 17, ValueError: 3",
+  "failure_types": "ConnectTimeout: 96, SSLError: 32, ConnectionError: 29, HTTPError: 18, ValueError: 2",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "andhra-university",
@@ -333,7 +333,7 @@
     },
     {
       "source_id": "kvs",
-      "error_type": "ValueError"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "kvs-recruitment",
@@ -354,6 +354,10 @@
     {
       "source_id": "mat-aima",
       "error_type": "HTTPError"
+    },
+    {
+      "source_id": "meghalaya-board",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "merchant-navy-imu",
@@ -452,8 +456,16 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "ossc",
+      "error_type": "ConnectionError"
+    },
+    {
       "source_id": "osssc",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "panjab-university",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "patna-university",
@@ -473,10 +485,6 @@
     },
     {
       "source_id": "rajasthan-rssb",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -668,10 +676,6 @@
       "error_type": "ReadTimeout"
     },
     {
-      "source_id": "upsc-recruitment",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "upsc-results",
       "error_type": "ConnectTimeout"
     },
@@ -686,6 +690,10 @@
     {
       "source_id": "uttarakhand-psc",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "vtu",
+      "error_type": "HTTPError"
     },
     {
       "source_id": "vyapam-cg",
