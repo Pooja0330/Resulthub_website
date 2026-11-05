@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-05T18:07:51.235425+00:00",
-  "scan_started_at": "2026-11-05T18:01:28.849184+00:00",
+  "last_checked_at": "2026-11-05T18:19:47.421543+00:00",
+  "scan_started_at": "2026-11-05T18:15:51.928783+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 143,
-  "sources_failed": 154,
+  "sources_succeeded": 140,
+  "sources_failed": 157,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 96, SSLError: 33, ConnectionError: 25, HTTPError: 18, ValueError: 3",
+  "failure_types": "ConnectTimeout: 96, SSLError: 34, ConnectionError: 26, HTTPError: 18, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bssc",
@@ -284,6 +284,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "indiapost-recruitment",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -465,6 +469,10 @@
     },
     {
       "source_id": "osmania-university",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
@@ -673,6 +681,10 @@
     },
     {
       "source_id": "upsc-final-results",
+      "error_type": "ReadTimeout"
+    },
+    {
+      "source_id": "upsc-recruitment",
       "error_type": "ReadTimeout"
     },
     {
