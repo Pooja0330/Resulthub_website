@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-05T13:50:42.932679+00:00",
-  "scan_started_at": "2026-11-05T13:45:52.818858+00:00",
+  "last_checked_at": "2026-11-05T14:07:45.180242+00:00",
+  "scan_started_at": "2026-11-05T14:02:57.655665+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 150,
-  "sources_failed": 147,
-  "new_candidates": 0,
+  "sources_succeeded": 149,
+  "sources_failed": 148,
+  "new_candidates": 1,
   "recovered_records": 0,
-  "telegram_posts_sent": 0,
+  "telegram_posts_sent": 1,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, SSLError: 35, ConnectionError: 25, HTTPError: 18, ValueError: 3",
+  "failure_types": "ConnectTimeout: 89, SSLError: 35, ConnectionError: 24, HTTPError: 18, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
@@ -601,7 +601,7 @@
     },
     {
       "source_id": "telangana-results",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "tnmrbrecruit",
@@ -646,6 +646,10 @@
     {
       "source_id": "upsc-exam-calendar",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "upsc-final-results",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "upsc-results",
