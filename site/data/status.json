@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-05T03:24:44.148693+00:00",
-  "scan_started_at": "2026-11-05T03:15:52.113183+00:00",
+  "last_checked_at": "2026-11-05T03:38:50.790249+00:00",
+  "scan_started_at": "2026-11-05T03:31:20.294554+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 150,
-  "sources_failed": 147,
+  "sources_succeeded": 153,
+  "sources_failed": 144,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, SSLError: 34, ConnectionError: 24, HTTPError: 17, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 90, SSLError: 34, ConnectionError: 23, HTTPError: 15, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -133,10 +133,6 @@
     },
     {
       "source_id": "cisce-results",
-      "error_type": "HTTPError"
-    },
-    {
-      "source_id": "coal-india-careers",
       "error_type": "HTTPError"
     },
     {
@@ -340,10 +336,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "mat-aima",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -462,10 +454,6 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
