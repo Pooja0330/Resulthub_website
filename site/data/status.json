@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-05T12:55:14.791845+00:00",
-  "scan_started_at": "2026-11-05T12:47:51.156792+00:00",
+  "last_checked_at": "2026-11-05T13:09:09.169195+00:00",
+  "scan_started_at": "2026-11-05T13:03:10.811810+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 148,
-  "sources_failed": 149,
-  "new_candidates": 5,
+  "sources_succeeded": 146,
+  "sources_failed": 151,
+  "new_candidates": 0,
   "recovered_records": 0,
-  "telegram_posts_sent": 5,
+  "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 87, SSLError: 35, ConnectionError: 28, HTTPError: 17, ValueError: 3",
+  "failure_types": "ConnectTimeout: 90, SSLError: 35, ConnectionError: 24, HTTPError: 17, ReadTimeout: 5",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
@@ -272,12 +272,12 @@
       "error_type": "ReadTimeout"
     },
     {
-      "source_id": "jadavpur-university",
-      "error_type": "SSLError"
+      "source_id": "indiapost-recruitment",
+      "error_type": "ReadTimeout"
     },
     {
-      "source_id": "jamia",
-      "error_type": "ReadTimeout"
+      "source_id": "jadavpur-university",
+      "error_type": "SSLError"
     },
     {
       "source_id": "jkbose",
@@ -458,6 +458,10 @@
     {
       "source_id": "patna-university",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "pondicherry-university-old-results",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "punjab-psc",
@@ -654,6 +658,10 @@
     {
       "source_id": "upsc-exam-calendar",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "upsc-final-results",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "upsc-results",
