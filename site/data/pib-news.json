@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-4510cb47a2042465c9dfb416",
+    "title": "भारतीय विशिष्ट पहचान प्राधिकरण (यूआईडीएआई) ने 300 ऑफलाइन सत्यापन चाहने वाली संस्थाओं (ओवीएसई) को ऑनबोर्ड किया, इससे आधार ऑफलाइन सत्यापन प्रणाली विस्तारित हुई",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333257&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333257&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-05T13:50:47.774160+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-46607f6e29211c9e2a6483cb",
     "title": "ट्राई ने मुंबई में मोबाइल नेटवर्क की गुणवत्ता का आकलन किया",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333253&lang=1",
@@ -319,23 +336,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-05T09:38:43.779301+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-d9495ae20f0a607595ab9422",
-    "title": "अंतर-मंत्रालयी समूह ने कैबिनेट द्वारा प्रत्यायोजित वैकल्पिक तंत्र द्वारा अनुमोदन के लिए 1,100 करोड़ रुपये से अधिक के परिसंपत्ति मुद्रीकरण प्रस्तावों की सिफारिश की",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333009&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333009&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-05T09:10:56.656205+00:00",
     "archive": false,
     "verified": true
   }
