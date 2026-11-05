@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-05T06:23:32.085336+00:00",
-  "scan_started_at": "2026-11-05T06:15:53.081047+00:00",
+  "last_checked_at": "2026-11-05T06:39:16.810335+00:00",
+  "scan_started_at": "2026-11-05T06:31:13.188254+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 142,
-  "sources_failed": 155,
-  "new_candidates": 0,
+  "sources_succeeded": 149,
+  "sources_failed": 148,
+  "new_candidates": 1,
   "recovered_records": 0,
-  "telegram_posts_sent": 0,
+  "telegram_posts_sent": 1,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 97, SSLError: 33, ConnectionError: 25, HTTPError: 17, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 91, SSLError: 33, ConnectionError: 24, HTTPError: 17, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "andhra-university",
@@ -76,14 +76,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "bihar-daroga",
-      "error_type": "ConnectionError"
-    },
-    {
-      "source_id": "bihar-police",
-      "error_type": "ConnectionError"
-    },
-    {
       "source_id": "bihar-state-health-society-results-archive",
       "error_type": "SSLError"
     },
@@ -101,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
@@ -113,7 +105,7 @@
     },
     {
       "source_id": "cbse-results-official",
-      "error_type": "SSLError"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "cg-vyapam",
@@ -153,14 +145,6 @@
     },
     {
       "source_id": "coast-guard-recruitment",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "columbia-ciet-raipur",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "columbia-institute-pharmacy-raipur",
       "error_type": "ConnectTimeout"
     },
     {
@@ -288,16 +272,8 @@
       "error_type": "ReadTimeout"
     },
     {
-      "source_id": "indiapost-recruitment",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "jharkhand-psc",
-      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "jkbose",
@@ -370,10 +346,6 @@
     {
       "source_id": "mat-aima",
       "error_type": "HTTPError"
-    },
-    {
-      "source_id": "meghalaya-board",
-      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "merchant-navy-imu",
@@ -496,12 +468,16 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "rajasthan-university",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "rajeduboard",
       "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ranchi-university",
-      "error_type": "ConnectTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "rpsc",
@@ -613,10 +589,6 @@
     },
     {
       "source_id": "sikkim-psc",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "sikkim-university",
       "error_type": "ConnectTimeout"
     },
     {
