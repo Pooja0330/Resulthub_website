@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-05T23:08:39.826255+00:00",
-  "scan_started_at": "2026-11-05T23:01:51.998101+00:00",
+  "last_checked_at": "2026-11-05T23:35:31.668301+00:00",
+  "scan_started_at": "2026-11-05T23:31:10.319231+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 148,
-  "sources_failed": 149,
+  "sources_succeeded": 145,
+  "sources_failed": 152,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, SSLError: 35, ConnectionError: 26, HTTPError: 17, ValueError: 3",
+  "failure_types": "ConnectTimeout: 90, SSLError: 33, ConnectionError: 31, HTTPError: 17, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -76,8 +76,16 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "bihar-daroga",
+      "error_type": "ConnectionError"
+    },
+    {
+      "source_id": "bihar-police",
+      "error_type": "ConnectionError"
+    },
+    {
       "source_id": "bihar-state-health-society-results-archive",
-      "error_type": "SSLError"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bpsc",
@@ -93,11 +101,15 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bssc",
-      "error_type": "SSLError"
+      "error_type": "ConnectionError"
+    },
+    {
+      "source_id": "btsc",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "cbse-previous-years-results",
@@ -205,7 +217,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps",
