@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-05T14:07:45.180242+00:00",
-  "scan_started_at": "2026-11-05T14:02:57.655665+00:00",
+  "last_checked_at": "2026-11-05T14:22:18.108764+00:00",
+  "scan_started_at": "2026-11-05T14:15:59.767466+00:00",
   "sources_enabled": 297,
   "sources_succeeded": 149,
   "sources_failed": 148,
-  "new_candidates": 1,
+  "new_candidates": 0,
   "recovered_records": 0,
-  "telegram_posts_sent": 1,
+  "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, SSLError: 35, ConnectionError: 24, HTTPError: 18, ValueError: 3",
+  "failure_types": "ConnectTimeout: 91, SSLError: 34, ConnectionError: 23, HTTPError: 18, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -348,6 +348,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "mizoram-board",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "mizoram-psc",
       "error_type": "HTTPError"
     },
@@ -441,10 +445,6 @@
     },
     {
       "source_id": "osmania-university",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
@@ -601,7 +601,7 @@
     },
     {
       "source_id": "telangana-results",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "tnmrbrecruit",
