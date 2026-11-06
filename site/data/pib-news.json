@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-f8bb8292726d56ff2ef2e15f",
+    "title": "चार देशों के दूतों ने भारत की राष्ट्रपति को अपने परिचय-पत्र प्रस्तुत किए",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333705&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333705&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-06T12:39:06.885050+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-dd349355304c406f0d8ff3ae",
     "title": "श्री जी. किशन रेड्डी ने खनिज अन्वेषण कार्यों में तेजी लाने और केंद्र-राज्य समन्वय को सुदृढ़ करने की अपील की",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333677&lang=1",
@@ -200,23 +217,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-06T11:11:25.600320+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-9f8bb3daa44d427334272304",
-    "title": "'विशेष अभियान 6' देशव्यापी ई-कचरा जागरूकता और संग्रह अभियान के साथ संपन्न",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333572&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333572&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-06T10:01:23.859149+00:00",
     "archive": false,
     "verified": true
   },
