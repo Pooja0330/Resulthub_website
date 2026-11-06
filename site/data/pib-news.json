@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-45e213f056469314f0a072ff",
+    "title": "प्रधानमंत्री ने झारखंड के खूंटी में हुए हादसे में लोगों की मौत पर दुख जताया",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333449&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333449&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-06T06:53:17.122028+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-56f1e56172abd4ab03bb5700",
     "title": "सूक्ष्म, लघु और मध्यम उद्यम मंत्रालय (एमएसएमई) और सैमसंग इंडिया ने कौशल विकास और युवाओं की रोजगार क्षमता को मजबूत करने के लिए साझेदारी की है",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333410&lang=1",
@@ -302,23 +319,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-05T14:38:06.217980+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-df2d309425558778990cd1f5",
-    "title": "नशे की लत से एक स्वस्थ और अधिक स्वतंत्र जीवन की ओर",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333266&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333266&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-05T14:07:50.619376+00:00",
     "archive": false,
     "verified": true
   },
