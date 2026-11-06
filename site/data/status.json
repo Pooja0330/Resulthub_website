@@ -1,12 +1,12 @@
 {
-  "last_checked_at": "2026-11-06T05:35:35.225028+00:00",
-  "scan_started_at": "2026-11-06T05:31:30.589030+00:00",
+  "last_checked_at": "2026-11-06T05:53:27.986729+00:00",
+  "scan_started_at": "2026-11-06T05:45:53.968374+00:00",
   "sources_enabled": 297,
   "sources_succeeded": 149,
   "sources_failed": 148,
-  "new_candidates": 0,
+  "new_candidates": 2,
   "recovered_records": 0,
-  "telegram_posts_sent": 0,
+  "telegram_posts_sent": 2,
   "alerts_pending": 0,
   "status": "partial",
   "failure_types": "ConnectTimeout: 90, SSLError: 34, ConnectionError: 25, HTTPError: 17, ValueError: 3",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -425,7 +425,7 @@
     },
     {
       "source_id": "nvs",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "nvs-recruitment",
@@ -466,6 +466,10 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
@@ -602,10 +606,6 @@
     {
       "source_id": "tnmrbrecruit",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "tnpsc",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "tnresults",
