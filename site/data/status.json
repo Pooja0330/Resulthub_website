@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-06T18:07:05.294394+00:00",
-  "scan_started_at": "2026-11-06T18:01:53.498201+00:00",
+  "last_checked_at": "2026-11-06T18:19:59.970715+00:00",
+  "scan_started_at": "2026-11-06T18:15:49.990037+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 147,
-  "sources_failed": 150,
+  "sources_succeeded": 148,
+  "sources_failed": 149,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, SSLError: 33, ConnectionError: 27, HTTPError: 18, ValueError: 3",
+  "failure_types": "ConnectTimeout: 89, SSLError: 34, ConnectionError: 27, HTTPError: 17, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "andhra-university",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "apsc",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
@@ -205,7 +205,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps",
@@ -352,6 +352,10 @@
       "error_type": "HTTPError"
     },
     {
+      "source_id": "meghalaya-board",
+      "error_type": "ConnectionError"
+    },
+    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -361,7 +365,7 @@
     },
     {
       "source_id": "mizoram-university",
-      "error_type": "ConnectionError"
+      "error_type": "SSLError"
     },
     {
       "source_id": "mpesb",
@@ -454,10 +458,6 @@
     {
       "source_id": "patna-university",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "pondicherry-university-old-results",
-      "error_type": "HTTPError"
     },
     {
       "source_id": "punjab-psc",
@@ -578,10 +578,6 @@
     {
       "source_id": "rrb-trivandrum",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rrc-eastern",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rrcb-central",
