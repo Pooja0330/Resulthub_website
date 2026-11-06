@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-06T14:20:12.733698+00:00",
-  "scan_started_at": "2026-11-06T14:15:52.591598+00:00",
+  "last_checked_at": "2026-11-06T14:36:32.129232+00:00",
+  "scan_started_at": "2026-11-06T14:31:14.137728+00:00",
   "sources_enabled": 297,
   "sources_succeeded": 145,
   "sources_failed": 152,
@@ -9,7 +9,7 @@
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, SSLError: 34, ConnectionError: 26, HTTPError: 18, ReadTimeout: 5",
+  "failure_types": "ConnectTimeout: 91, SSLError: 34, ConnectionError: 27, HTTPError: 18, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -196,8 +196,16 @@
       "error_type": "HTTPError"
     },
     {
+      "source_id": "hpbose-results",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "hpsc",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "hpssc",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ibps",
@@ -328,10 +336,6 @@
       "error_type": "ValueError"
     },
     {
-      "source_id": "magadh-university",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "maha-rojgar",
       "error_type": "HTTPError"
     },
@@ -349,7 +353,7 @@
     },
     {
       "source_id": "meghalaya-board",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "merchant-navy-imu",
@@ -377,7 +381,7 @@
     },
     {
       "source_id": "nagaland-university",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "naval-coastguard-jobs",
@@ -481,7 +485,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "rajeduboard",
@@ -662,10 +666,6 @@
     {
       "source_id": "upsc-exam-calendar",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "upsc-final-results",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "upsc-results",
