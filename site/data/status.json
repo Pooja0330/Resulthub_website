@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-06T03:38:37.147813+00:00",
-  "scan_started_at": "2026-11-06T03:31:10.442099+00:00",
+  "last_checked_at": "2026-11-06T03:53:07.871425+00:00",
+  "scan_started_at": "2026-11-06T03:45:53.596578+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 147,
-  "sources_failed": 150,
+  "sources_succeeded": 149,
+  "sources_failed": 148,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, SSLError: 35, ConnectionError: 26, HTTPError: 17, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 89, SSLError: 35, ConnectionError: 25, HTTPError: 18, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bssc",
@@ -198,6 +198,10 @@
     {
       "source_id": "hpsc",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "hssc",
+      "error_type": "HTTPError"
     },
     {
       "source_id": "ibps",
@@ -372,10 +376,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "nagaland-psc",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "naval-coastguard-jobs",
       "error_type": "SSLError"
     },
@@ -452,10 +452,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "panjab-university",
-      "error_type": "ConnectionError"
-    },
-    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -473,10 +469,6 @@
     },
     {
       "source_id": "rajasthan-rssb",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
       "error_type": "ConnectTimeout"
     },
     {
