@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-06T17:53:25.432026+00:00",
-  "scan_started_at": "2026-11-06T17:46:09.639875+00:00",
+  "last_checked_at": "2026-11-06T18:07:05.294394+00:00",
+  "scan_started_at": "2026-11-06T18:01:53.498201+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 146,
-  "sources_failed": 151,
+  "sources_succeeded": 147,
+  "sources_failed": 150,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, SSLError: 34, ConnectionError: 30, HTTPError: 18, ValueError: 3",
+  "failure_types": "ConnectTimeout: 90, SSLError: 33, ConnectionError: 27, HTTPError: 18, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -361,7 +361,7 @@
     },
     {
       "source_id": "mizoram-university",
-      "error_type": "SSLError"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "mpesb",
@@ -448,16 +448,8 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ossc",
-      "error_type": "ConnectionError"
-    },
-    {
       "source_id": "osssc",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "panjab-university",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "patna-university",
@@ -586,6 +578,10 @@
     {
       "source_id": "rrb-trivandrum",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rrc-eastern",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rrcb-central",
