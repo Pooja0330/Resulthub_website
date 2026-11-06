@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-e21d296b067f257956176760",
+    "title": "प्रधानमंत्री ने एशियाई पैरा खेलों में भारत के पदक जीतने की संख्या 14 से बढ़कर 114 तक पहुंचने की उल्लेखनीय उपलब्धि को रेखांकित किया",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333400&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333400&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-06T02:01:24.838274+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-d7d20374f9287b556fbc2ee0",
     "title": "सिविल सेवा (मुख्य) परीक्षा, 2026 – लिखित परीक्षा का परिणाम",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333373&lang=1",
@@ -47,23 +64,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-05T16:25:14.865916+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-5bbc418703dabe44d22937cf",
-    "title": "ट्राई ने महाराष्ट्र (लाइसेंस प्राप्त सेवा क्षेत्र) के रत्नागिरी जिले में मोबाइल नेटवर्क की गुणवत्ता का आकलन किया",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333335&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333335&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-05T15:50:12.506590+00:00",
     "archive": false,
     "verified": true
   },
