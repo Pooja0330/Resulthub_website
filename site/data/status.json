@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-06T08:23:52.457621+00:00",
-  "scan_started_at": "2026-11-06T08:16:10.253203+00:00",
+  "last_checked_at": "2026-11-06T08:40:49.116749+00:00",
+  "scan_started_at": "2026-11-06T08:31:13.384341+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 149,
-  "sources_failed": 148,
+  "sources_succeeded": 146,
+  "sources_failed": 151,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, SSLError: 34, ConnectionError: 24, HTTPError: 17, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 92, SSLError: 34, ConnectionError: 24, HTTPError: 17, ReadTimeout: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -268,6 +268,14 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "indiapost-gds",
+      "error_type": "ReadTimeout"
+    },
+    {
+      "source_id": "indiapost-recruitment",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "ipu",
       "error_type": "ConnectionError"
     },
@@ -448,6 +456,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "panjab-university",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -465,6 +477,10 @@
     },
     {
       "source_id": "rajasthan-rssb",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -638,10 +654,6 @@
     {
       "source_id": "upsc-active-examinations",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "upsc-active-exams",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "upsc-exam-calendar",
