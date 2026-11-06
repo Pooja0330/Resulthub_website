@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-06T08:15:25.790674+00:00",
-  "scan_started_at": "2026-11-06T08:07:56.948796+00:00",
+  "last_checked_at": "2026-11-06T08:23:52.457621+00:00",
+  "scan_started_at": "2026-11-06T08:16:10.253203+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 151,
-  "sources_failed": 146,
+  "sources_succeeded": 149,
+  "sources_failed": 148,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, SSLError: 33, ConnectionError: 25, HTTPError: 17, ValueError: 3",
+  "failure_types": "ConnectTimeout: 90, SSLError: 34, ConnectionError: 24, HTTPError: 17, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -444,6 +444,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "osssc",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -634,6 +638,10 @@
     {
       "source_id": "upsc-active-examinations",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "upsc-active-exams",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "upsc-exam-calendar",
