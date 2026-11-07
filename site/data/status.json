@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-07T23:04:09.818551+00:00",
-  "scan_started_at": "2026-11-07T22:57:01.278126+00:00",
+  "last_checked_at": "2026-11-07T23:24:04.142860+00:00",
+  "scan_started_at": "2026-11-07T23:15:51.965696+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 150,
-  "sources_failed": 147,
+  "sources_succeeded": 151,
+  "sources_failed": 146,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, SSLError: 30, ConnectionError: 27, HTTPError: 17, ValueError: 3",
+  "failure_types": "ConnectTimeout: 91, SSLError: 30, ConnectionError: 25, HTTPError: 17, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -272,6 +272,14 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "indiapost-gds",
+      "error_type": "ReadTimeout"
+    },
+    {
+      "source_id": "indiapost-recruitment",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -310,10 +318,6 @@
     {
       "source_id": "karnataka-results",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "keralapsc",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "keralaresults",
@@ -442,10 +446,6 @@
     {
       "source_id": "osssc",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "panjab-university",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "patna-university",
@@ -658,10 +658,6 @@
     {
       "source_id": "uttarakhand-psc",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "vtu",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "vyapam-cg",
