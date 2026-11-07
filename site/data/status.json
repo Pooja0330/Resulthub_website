@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-07T12:09:05.004282+00:00",
-  "scan_started_at": "2026-11-07T12:01:26.736479+00:00",
+  "last_checked_at": "2026-11-07T12:24:30.047594+00:00",
+  "scan_started_at": "2026-11-07T12:15:52.478796+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 151,
-  "sources_failed": 146,
+  "sources_succeeded": 150,
+  "sources_failed": 147,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, SSLError: 33, ConnectionError: 26, HTTPError: 18, ValueError: 3",
+  "failure_types": "ConnectTimeout: 88, SSLError: 33, ConnectionError: 25, HTTPError: 18, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
@@ -366,6 +366,10 @@
     {
       "source_id": "nabard",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "nagaland-psc",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "naval-coastguard-jobs",
