@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-07T20:05:31.452201+00:00",
-  "scan_started_at": "2026-11-07T20:01:16.175465+00:00",
+  "last_checked_at": "2026-11-07T20:23:30.034940+00:00",
+  "scan_started_at": "2026-11-07T20:15:50.344633+00:00",
   "sources_enabled": 297,
   "sources_succeeded": 151,
   "sources_failed": 146,
@@ -9,7 +9,7 @@
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, SSLError: 30, ConnectionError: 27, HTTPError: 17, ReadTimeout: 4",
+  "failure_types": "ConnectTimeout: 89, SSLError: 30, ConnectionError: 27, HTTPError: 17, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ap-psc",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -272,12 +272,12 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "indiapost-gds",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "jamia",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jkbose",
@@ -314,6 +314,10 @@
     {
       "source_id": "karnataka-results",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "keralapsc",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "keralaresults",
@@ -470,10 +474,6 @@
     {
       "source_id": "ranchi-university",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "rbi-opportunities",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rpsc",
