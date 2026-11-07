@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-36f4075982697b9814c315c8",
+    "title": "व्यावसायिक जोखिमों से सुरक्षित आजीविका की ओर",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333874&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333874&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-07T04:23:43.908252+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-65767eba3b8b37f2783901dd",
     "title": "केंद्रीय मंत्री श्री अश्विनी वैष्णव ने सेमीकॉन 2.0 वेब एप्लिकेशन पोर्टल लॉन्च किया और इलेक्ट्रॉनिक्स कंपोनेंट्स मैन्युफैक्चरिंग स्कीम के तहत 12 स्वीकृत आवेदकों की घोषणा की",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333813&lang=1",
@@ -217,23 +234,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-06T13:10:12.580625+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-04d7b193cf0011a6798179e3",
-    "title": "आईएनएस त्रिशूल ने ग्रीस के सौडा बे में पोर्ट कॉल पूरा किया",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333722&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333722&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-06T12:53:40.817113+00:00",
     "archive": false,
     "verified": true
   },
