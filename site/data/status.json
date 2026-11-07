@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-07T21:38:25.092588+00:00",
-  "scan_started_at": "2026-11-07T21:31:07.383457+00:00",
+  "last_checked_at": "2026-11-07T21:53:19.358675+00:00",
+  "scan_started_at": "2026-11-07T21:45:49.961029+00:00",
   "sources_enabled": 297,
   "sources_succeeded": 152,
   "sources_failed": 145,
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "andhra-university",
@@ -201,7 +201,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps",
@@ -310,6 +310,10 @@
     {
       "source_id": "karnataka-results",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "keralapsc",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "keralaresults",
@@ -434,10 +438,6 @@
     {
       "source_id": "osmania-university",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "ossc",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "osssc",
