@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-600c2553c21a789e0d4c756b",
+    "title": "प्रधानमंत्री ने नागरिकों को दिवाली की शुभकामनाएं दीं और कहा कि यह पर्व अंधकार पर विजय पाने के संकल्प का प्रतीक है",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333997&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333997&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-07T13:39:14.459352+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-d28f058343a0387fa4376649",
     "title": "दीपावली की पूर्व संध्या पर भारत की राष्ट्रपति की शुभकामनाएं",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333993&lang=1",
@@ -302,23 +319,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-06T15:08:54.851030+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-eaa4d0f6e9f3e9cc0ce98050",
-    "title": "उर्वरक विभाग और उसके सार्वजनिक क्षेत्र के उपक्रमों ने विशेष अभियान-6 के अंतर्गत महत्वपूर्ण प्रगति की",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333774&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333774&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-06T14:51:34.669462+00:00",
     "archive": false,
     "verified": true
   },

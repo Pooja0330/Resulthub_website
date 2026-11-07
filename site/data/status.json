@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-07T13:20:33.254012+00:00",
-  "scan_started_at": "2026-11-07T13:15:47.309966+00:00",
+  "last_checked_at": "2026-11-07T13:39:09.490521+00:00",
+  "scan_started_at": "2026-11-07T13:31:42.316054+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 152,
-  "sources_failed": 145,
+  "sources_succeeded": 148,
+  "sources_failed": 149,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 87, SSLError: 33, ConnectionError: 27, HTTPError: 17, ValueError: 3",
+  "failure_types": "ConnectTimeout: 89, SSLError: 33, ConnectionError: 25, HTTPError: 18, ReadTimeout: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
@@ -268,6 +268,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "indiapost-gds",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -306,6 +310,10 @@
     {
       "source_id": "karnataka-results",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "keralapsc",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "keralaresults",
@@ -442,6 +450,10 @@
     {
       "source_id": "patna-university",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "pondicherry-university-old-results",
+      "error_type": "HTTPError"
     },
     {
       "source_id": "punjab-psc",
@@ -637,6 +649,10 @@
     },
     {
       "source_id": "upsc-final-results",
+      "error_type": "ReadTimeout"
+    },
+    {
+      "source_id": "upsc-recruitment",
       "error_type": "ReadTimeout"
     },
     {
