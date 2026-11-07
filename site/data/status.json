@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-07T00:39:01.974564+00:00",
-  "scan_started_at": "2026-11-07T00:31:32.045079+00:00",
+  "last_checked_at": "2026-11-07T00:53:22.249678+00:00",
+  "scan_started_at": "2026-11-07T00:45:54.831190+00:00",
   "sources_enabled": 297,
   "sources_succeeded": 148,
   "sources_failed": 149,
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -205,7 +205,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ibps",
@@ -274,6 +274,10 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "irdai-careers",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -470,10 +474,6 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
