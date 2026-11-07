@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-07T14:09:49.306646+00:00",
-  "scan_started_at": "2026-11-07T14:02:27.932930+00:00",
+  "last_checked_at": "2026-11-07T14:21:05.306327+00:00",
+  "scan_started_at": "2026-11-07T14:15:51.227064+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 153,
-  "sources_failed": 144,
+  "sources_succeeded": 147,
+  "sources_failed": 150,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 86, SSLError: 32, ConnectionError: 28, HTTPError: 17, ValueError: 3",
+  "failure_types": "ConnectTimeout: 92, SSLError: 32, ConnectionError: 27, HTTPError: 17, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
@@ -145,6 +145,14 @@
     },
     {
       "source_id": "coast-guard-recruitment",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "columbia-ciet-raipur",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "columbia-institute-pharmacy-raipur",
       "error_type": "ConnectTimeout"
     },
     {
@@ -272,6 +280,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "jharkhand-psc",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "jkbose",
       "error_type": "ConnectTimeout"
     },
@@ -342,6 +354,10 @@
     {
       "source_id": "mat-aima",
       "error_type": "HTTPError"
+    },
+    {
+      "source_id": "meghalaya-board",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "merchant-navy-imu",
@@ -436,6 +452,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "osssc",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -461,7 +481,7 @@
     },
     {
       "source_id": "ranchi-university",
-      "error_type": "SSLError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "rpsc",
@@ -576,6 +596,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "sikkim-university",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "tamilnadu-board-official",
       "error_type": "SSLError"
     },
@@ -632,7 +656,7 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "upsc-recruitment",
+      "source_id": "upsc-final-results",
       "error_type": "ReadTimeout"
     },
     {
