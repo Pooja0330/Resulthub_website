@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-07T20:23:30.034940+00:00",
-  "scan_started_at": "2026-11-07T20:15:50.344633+00:00",
+  "last_checked_at": "2026-11-07T20:39:05.091352+00:00",
+  "scan_started_at": "2026-11-07T20:31:38.561735+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 151,
-  "sources_failed": 146,
+  "sources_succeeded": 148,
+  "sources_failed": 149,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, SSLError: 30, ConnectionError: 27, HTTPError: 17, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 89, SSLError: 30, ConnectionError: 28, HTTPError: 17, ReadTimeout: 5",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -272,12 +272,12 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "jadavpur-university",
-      "error_type": "SSLError"
+      "source_id": "indiapost-gds",
+      "error_type": "ReadTimeout"
     },
     {
-      "source_id": "jamia",
-      "error_type": "ReadTimeout"
+      "source_id": "jadavpur-university",
+      "error_type": "SSLError"
     },
     {
       "source_id": "jkbose",
@@ -444,6 +444,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "ossc",
+      "error_type": "ConnectionError"
+    },
+    {
       "source_id": "osssc",
       "error_type": "SSLError"
     },
@@ -466,6 +470,10 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
@@ -641,6 +649,10 @@
     },
     {
       "source_id": "upsc-final-results",
+      "error_type": "ReadTimeout"
+    },
+    {
+      "source_id": "upsc-recruitment",
       "error_type": "ReadTimeout"
     },
     {
