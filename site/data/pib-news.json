@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-e460e53c5394277246b935ea",
+    "title": "प्रधानमंत्री ने उपराष्ट्रपति थिरु सी. पी. राधाकृष्णन से मुलाकात की और उन्हें दिवाली की शुभकामनाएं दीं",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333989&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333989&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-07T13:20:39.330375+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-a7bf87ae2e7ca11ccfea4cb7",
     "title": "लोकसभा अध्यक्ष ने दीपावली, गोवर्धन पूजा और भाई दूज की शुभकामनाएँ दीं",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333988&lang=1",
@@ -285,23 +302,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-06T14:51:34.669462+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-83344f39e6b44fa5f89dada7",
-    "title": "प्रधान वैज्ञानिक सलाहकार के कार्यालय और 'उद्योग और आंतरिक व्यापार संवर्धन विभाग ने राष्ट्रीय अनुसंधान बुनियादी ढांचे तक पहुंच मजबूत करने के लिए 'स्टार्टअप इंडिया' और 'I-STEM' पोर्टलों के बीच एपीआई एकीकरण की शुरुआत की",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333761&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333761&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-06T14:12:23.499053+00:00",
     "archive": false,
     "verified": true
   },
