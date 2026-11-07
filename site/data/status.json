@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-07T08:09:13.643754+00:00",
-  "scan_started_at": "2026-11-07T08:01:20.507115+00:00",
+  "last_checked_at": "2026-11-07T08:21:48.148434+00:00",
+  "scan_started_at": "2026-11-07T08:15:51.327155+00:00",
   "sources_enabled": 297,
   "sources_succeeded": 150,
   "sources_failed": 147,
@@ -9,7 +9,7 @@
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, SSLError: 34, ConnectionError: 26, HTTPError: 17, ValueError: 3",
+  "failure_types": "ConnectTimeout: 89, SSLError: 33, ConnectionError: 25, HTTPError: 17, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -57,7 +57,7 @@
     },
     {
       "source_id": "arunachal-psc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "assam-board-official",
@@ -268,6 +268,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "indiapost-recruitment",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -306,10 +310,6 @@
     {
       "source_id": "karnataka-results",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "keralapsc",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "keralaresults",
@@ -444,8 +444,8 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "osssc",
-      "error_type": "SSLError"
+      "source_id": "ossc",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "patna-university",
