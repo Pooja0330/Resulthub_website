@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-a7bf87ae2e7ca11ccfea4cb7",
+    "title": "लोकसभा अध्यक्ष ने दीपावली, गोवर्धन पूजा और भाई दूज की शुभकामनाएँ दीं",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333988&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333988&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-07T13:08:41.809826+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-ac53c182bf71d6074ccb7a16",
     "title": "कैंसर रोधी दवाओं की संशोधित कीमतें 9 नवंबर से लागू होंगी",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333968&lang=1",
@@ -217,23 +234,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-06T15:22:36.921634+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-a36575653e086c096d4102ef",
-    "title": "अंडमान और निकोबार कमान में पहले बिम्सटेक समुद्री सुरक्षा अभ्यास का सफलतापूर्वक समापन",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333778&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333778&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-06T15:08:54.851210+00:00",
     "archive": false,
     "verified": true
   },
