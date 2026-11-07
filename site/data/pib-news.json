@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-8860b86e86452f0c59d317bf",
+    "title": "भारत का रसायन और पेट्रोकेमिकल सेक्टर: औद्योगिक विकास का आधार",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333895&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333895&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-07T05:38:39.689951+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-02e6c2dc6b8cd6aa0956da1c",
     "title": "केंद्रीय राज्य मंत्री श्री रामदास अठावले ने आईएनए स्थित दिल्ली हाट में शिल्प समागम मेला 2026 का दौरा किया",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333883&lang=1",
@@ -285,23 +302,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-06T12:39:06.885050+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-c2b5314435962dd36656b5cc",
-    "title": "तमिलनाडु के राज्यपाल ने प्रधानमंत्री से मुलाकात की",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333686&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333686&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-06T12:08:59.764206+00:00",
     "archive": false,
     "verified": true
   },
