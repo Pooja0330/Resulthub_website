@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-07T07:07:14.450078+00:00",
-  "scan_started_at": "2026-11-07T07:01:52.299930+00:00",
+  "last_checked_at": "2026-11-07T07:20:04.967847+00:00",
+  "scan_started_at": "2026-11-07T07:15:48.440513+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 149,
-  "sources_failed": 148,
+  "sources_succeeded": 150,
+  "sources_failed": 147,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, SSLError: 34, ConnectionError: 24, HTTPError: 17, ReadTimeout: 4",
+  "failure_types": "ConnectTimeout: 90, SSLError: 34, ConnectionError: 24, HTTPError: 17, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -272,10 +272,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "jamia",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "jkbose",
       "error_type": "ConnectTimeout"
     },
@@ -446,6 +442,10 @@
     {
       "source_id": "osssc",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "panjab-university",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "patna-university",
@@ -645,10 +645,6 @@
     },
     {
       "source_id": "upsc-final-results",
-      "error_type": "ReadTimeout"
-    },
-    {
-      "source_id": "upsc-recruitment",
       "error_type": "ReadTimeout"
     },
     {
