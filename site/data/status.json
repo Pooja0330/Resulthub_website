@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-07T05:38:34.140429+00:00",
-  "scan_started_at": "2026-11-07T05:31:12.569124+00:00",
+  "last_checked_at": "2026-11-07T05:52:53.188960+00:00",
+  "scan_started_at": "2026-11-07T05:45:49.609496+00:00",
   "sources_enabled": 297,
   "sources_succeeded": 150,
   "sources_failed": 147,
@@ -9,7 +9,7 @@
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, SSLError: 34, ConnectionError: 26, HTTPError: 17, ValueError: 3",
+  "failure_types": "ConnectTimeout: 89, SSLError: 34, ConnectionError: 25, HTTPError: 17, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -268,10 +268,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "indiapost-recruitment",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -446,6 +442,10 @@
     {
       "source_id": "osssc",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "panjab-university",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "patna-university",
