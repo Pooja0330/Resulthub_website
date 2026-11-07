@@ -1,9 +1,9 @@
 {
-  "last_checked_at": "2026-11-07T15:53:18.923075+00:00",
-  "scan_started_at": "2026-11-07T15:45:51.126374+00:00",
+  "last_checked_at": "2026-11-07T16:08:56.514943+00:00",
+  "scan_started_at": "2026-11-07T16:01:20.170883+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 150,
-  "sources_failed": 147,
+  "sources_succeeded": 149,
+  "sources_failed": 148,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
@@ -314,6 +314,10 @@
     {
       "source_id": "karnataka-results",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "keralapsc",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "keralaresults",
