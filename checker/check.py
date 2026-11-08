@@ -43,7 +43,10 @@ RULES = [
     ("merit_list", re.compile(
         r"\b(merit list|final selection|selected candidates|qualified candidates|"
         r"provisional selection|selection list|final panel|allotment list|"
-        r"provisional panel|shortlisted candidates|shortlisting of candidates|shortlisting candidates)\b", re.I)),
+        r"provisional panel|shortlisted candidates|shortlisting of candidates|shortlisting candidates|"
+        r"identity verification|document verification|verification of documents|"
+        r"first round of tentative allocation|tentative allocation|"
+        r"physical standard test|physical efficiency test|skill test|medical examination)\b", re.I)),
     ("cutoff", re.compile(
         r"\b(cut.?off marks?|qualifying marks?)\b", re.I)),
     ("admit_card", re.compile(
