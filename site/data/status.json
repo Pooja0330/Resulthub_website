@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-08T21:21:25.820186+00:00",
-  "scan_started_at": "2026-11-08T21:15:51.263081+00:00",
+  "last_checked_at": "2026-11-08T21:35:20.114089+00:00",
+  "scan_started_at": "2026-11-08T21:31:06.287076+00:00",
   "sources_enabled": 300,
-  "sources_succeeded": 153,
-  "sources_failed": 147,
+  "sources_succeeded": 152,
+  "sources_failed": 148,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, SSLError: 32, ConnectionError: 25, HTTPError: 17, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 90, SSLError: 32, ConnectionError: 27, HTTPError: 17, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bssc",
@@ -278,6 +278,10 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "indiapost-recruitment",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -468,6 +472,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "rajasthan-university",
+      "error_type": "ConnectionError"
+    },
+    {
       "source_id": "rajeduboard",
       "error_type": "ConnectTimeout"
     },
@@ -654,10 +662,6 @@
     {
       "source_id": "upsssc",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "utkal-university",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "uttarakhand-psc",
