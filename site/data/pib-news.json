@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-bd3efe56f81c78f386c98c8f",
+    "title": "प्रधानमंत्री ने किसानों के साथ दीपावली मनाने के महाराष्ट्र के मुख्यमंत्री श्री देवेंद्र फडणवीस के संवेदनशील कदम की सराहना की",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334120&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334120&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-08T10:07:51.596462+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-8a26e668bc0cff0a252d0b32",
     "title": "प्रधानमंत्री ने सभी देशवासियों को दीपावली की शुभकामनाएँ दीं",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334118&lang=1",
@@ -319,23 +336,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-07T07:01:19.193340+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-8860b86e86452f0c59d317bf",
-    "title": "भारत का रसायन और पेट्रोकेमिकल सेक्टर: औद्योगिक विकास का आधार",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333895&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333895&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-07T05:38:39.689951+00:00",
     "archive": false,
     "verified": true
   }
