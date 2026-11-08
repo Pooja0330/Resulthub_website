@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-08T00:51:44.324268+00:00",
-  "scan_started_at": "2026-11-08T00:45:50.758585+00:00",
+  "last_checked_at": "2026-11-08T01:11:27.403970+00:00",
+  "scan_started_at": "2026-11-08T01:01:22.768653+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 154,
-  "sources_failed": 143,
+  "sources_succeeded": 152,
+  "sources_failed": 145,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, SSLError: 29, ConnectionError: 24, HTTPError: 17, ValueError: 3",
+  "failure_types": "ConnectTimeout: 89, SSLError: 30, ConnectionError: 27, HTTPError: 17, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ap-psc",
@@ -201,7 +201,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ibps",
@@ -436,6 +436,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "osssc",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -454,6 +458,10 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "rajeduboard",
