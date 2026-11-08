@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-a9f05c912f329681a8a14cdb",
+    "title": "छत्तीसगढ़ के बस्तर में सुरक्षा बलों के साथ बातचीत के दौरान प्रधानमंत्री के भाषण का मूल पाठ",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334109&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334109&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-08T09:39:29.780796+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-59cd86843c62364a8f13f778",
     "title": "श्रम संवाद: मध्य प्रदेश के देवास में श्रम संहिता पर जिला स्तरीय क्षमता निर्माण और जागरूकता कार्यक्रम आयोजित किया गया",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334092&lang=1",
@@ -319,23 +336,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-07T05:38:39.689951+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-36f4075982697b9814c315c8",
-    "title": "व्यावसायिक जोखिमों से सुरक्षित आजीविका की ओर",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333874&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333874&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-07T04:23:43.908252+00:00",
     "archive": false,
     "verified": true
   }
