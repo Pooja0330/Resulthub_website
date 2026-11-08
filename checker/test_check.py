@@ -94,6 +94,16 @@ class CheckerSafetyTests(unittest.TestCase):
     def test_classifies_exam_result(self):
         self.assertEqual(classify("SSC CGL Tier I Result 2026"), "result")
 
+    def test_classifies_ssc_identity_and_document_verification_notices(self):
+        self.assertEqual(
+            classify("Identity Verification (IV) for candidates shortlisted in FRTA of Combined Hindi Translators Examination, 2025"),
+            "merit_list",
+        )
+        self.assertEqual(
+            classify("Document Verification Schedule for shortlisted candidates"),
+            "merit_list",
+        )
+
     def test_ignores_unrelated_cultural_event(self):
         self.assertIsNone(classify("Annual Cultural Festival 2026"))
 
