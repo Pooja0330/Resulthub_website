@@ -6794,6 +6794,74 @@
       "exam_category": "Central Recruitment",
       "coverage_note": "Discovery index only. GoResultHub follows ResultBharat exam articles but publishes only HTTPS destinations whose hosts are already allowlisted as official sources. ResultBharat article links are never presented as official.",
       "discover_listing_pages": false
+    },
+    {
+      "id": "ssc-notice-board",
+      "name": "SSC Official Notice Board",
+      "url": "https://ssc.gov.in/home/notice-board",
+      "kind": "html",
+      "allowed_hosts": [
+        "ssc.gov.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Dedicated official SSC notice-board page, added after the homepage scanner returned zero matching notices while the official board listed new November 2026 notices.",
+      "exam_category": "SSC / Central Recruitment",
+      "discover_listing_pages": true
+    },
+    {
+      "id": "ibps-recruitment",
+      "name": "IBPS Other Ongoing Recruitments",
+      "url": "https://www.ibps.in/index.php/recruitment/",
+      "kind": "html",
+      "allowed_hosts": [
+        "ibps.in",
+        "ibpsreg.ibps.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official IBPS ongoing-recruitments listing, including participating-bank and institution recruitment links.",
+      "exam_category": "Banking",
+      "discover_listing_pages": true
+    },
+    {
+      "id": "ibps-careers",
+      "name": "IBPS Careers",
+      "url": "https://www.ibps.in/index.php/careers/",
+      "kind": "html",
+      "allowed_hosts": [
+        "ibps.in",
+        "ibpsreg.ibps.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": null,
+      "coverage_note": "Official IBPS direct recruitment and careers notices.",
+      "exam_category": "Banking",
+      "discover_listing_pages": true
     }
   ]
 }
