@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-08T11:38:08.023799+00:00",
-  "scan_started_at": "2026-11-08T11:32:06.503044+00:00",
+  "last_checked_at": "2026-11-08T11:51:41.726661+00:00",
+  "scan_started_at": "2026-11-08T11:45:53.016856+00:00",
   "sources_enabled": 300,
-  "sources_succeeded": 153,
-  "sources_failed": 147,
+  "sources_succeeded": 154,
+  "sources_failed": 146,
   "new_candidates": 0,
   "recovered_records": 0,
-  "telegram_posts_sent": 10,
-  "alerts_pending": 5,
+  "telegram_posts_sent": 5,
+  "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 87, SSLError: 32, ConnectionError: 28, HTTPError: 17, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 87, SSLError: 32, ConnectionError: 26, HTTPError: 17, ReadTimeout: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
@@ -272,14 +272,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "indiapost-gds",
-      "error_type": "ReadTimeout"
-    },
-    {
-      "source_id": "indiapost-recruitment",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -380,6 +372,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "nagaland-psc",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "naval-coastguard-jobs",
       "error_type": "SSLError"
     },
@@ -442,10 +438,6 @@
     {
       "source_id": "osmania-university",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "ossc",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "osssc",
@@ -645,6 +637,10 @@
     },
     {
       "source_id": "upsc-final-results",
+      "error_type": "ReadTimeout"
+    },
+    {
+      "source_id": "upsc-recruitment",
       "error_type": "ReadTimeout"
     },
     {
