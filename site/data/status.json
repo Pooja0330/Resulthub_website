@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-08T11:51:41.726661+00:00",
-  "scan_started_at": "2026-11-08T11:45:53.016856+00:00",
+  "last_checked_at": "2026-11-08T12:05:19.908880+00:00",
+  "scan_started_at": "2026-11-08T12:01:22.860346+00:00",
   "sources_enabled": 300,
   "sources_succeeded": 154,
   "sources_failed": 146,
   "new_candidates": 0,
   "recovered_records": 0,
-  "telegram_posts_sent": 5,
+  "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 87, SSLError: 32, ConnectionError: 26, HTTPError: 17, ReadTimeout: 4",
+  "failure_types": "ConnectTimeout: 88, SSLError: 32, ConnectionError: 27, HTTPError: 17, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bssc",
@@ -162,6 +162,10 @@
     {
       "source_id": "esic-recruitment",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "goa-government",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "goa-technical-education-old-results",
@@ -372,10 +376,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "nagaland-psc",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "naval-coastguard-jobs",
       "error_type": "SSLError"
     },
@@ -442,6 +442,10 @@
     {
       "source_id": "osssc",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "panjab-university",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "patna-university",
@@ -637,10 +641,6 @@
     },
     {
       "source_id": "upsc-final-results",
-      "error_type": "ReadTimeout"
-    },
-    {
-      "source_id": "upsc-recruitment",
       "error_type": "ReadTimeout"
     },
     {
