@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-42842c28a52a5d33264c1b97",
+    "title": "प्रधानमंत्री ने राष्ट्रपति से मुलाकात की और उन्हें दिवाली की शुभकामनाएं दीं",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334203&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334203&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-08T16:09:21.174578+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-db6dc77ef64b9938b0ae29d8",
     "title": "प्रधानमंत्री ने बस्तर स्थित कोबरा ऑपरेशंस बेस पर जवानों के साथ मिठाइयां बांटकर दीपावली मनाई",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334200&lang=1",
@@ -285,23 +302,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-07T14:01:36.660734+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-600c2553c21a789e0d4c756b",
-    "title": "प्रधानमंत्री ने नागरिकों को दिवाली की शुभकामनाएं दीं और कहा कि यह पर्व अंधकार पर विजय पाने के संकल्प का प्रतीक है",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333997&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333997&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-07T13:39:14.459352+00:00",
     "archive": false,
     "verified": true
   },
