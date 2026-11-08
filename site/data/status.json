@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-08T05:09:37.148753+00:00",
-  "scan_started_at": "2026-11-08T05:01:21.905682+00:00",
+  "last_checked_at": "2026-11-08T05:23:25.135427+00:00",
+  "scan_started_at": "2026-11-08T05:15:50.419148+00:00",
   "sources_enabled": 297,
   "sources_succeeded": 155,
   "sources_failed": 142,
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ap-psc",

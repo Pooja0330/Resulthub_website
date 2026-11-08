@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-18b6a4e1394567d33cd5b7d2",
+    "title": "ईपीएफओ ने विशेष अभियान 6 सफलतापूर्वक संपन्न किया",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334077&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334077&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-08T05:23:30.639266+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-e2925d6c1a606df390c1d3f9",
     "title": "केन्द्रीय गृह एवं सहकारिता मंत्री श्री अमित शाह ने आज अहमदाबाद में उच्च स्तरीय बैठक में गुजरात की कानून-व्यवस्था एवं आंतरिक सुरक्षा की समीक्षा की",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334011&lang=1",
@@ -285,23 +302,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-07T04:23:43.908252+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-2882ce3a338db842f573e43e",
-    "title": "भारतीय वायुसेना के सॉफ्टवेयर डेवलपमेंट इंस्टीट्यूट और आईआईटी मद्रास प्रवर्तक टेक्नोलॉजीज फाउंडेशन ने हवाई प्लेटफॉर्म के लिए स्वदेशी डिजिटल सुरक्षित संचार प्रणाली विकसित करने के उद्देश्य से एक समझौता ज्ञापन पर हस्ताक्षर किए",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333792&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2333792&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-06T15:22:36.921634+00:00",
     "archive": false,
     "verified": true
   },
