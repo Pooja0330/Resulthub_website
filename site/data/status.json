@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-08T00:39:02.397303+00:00",
-  "scan_started_at": "2026-11-08T00:31:12.843241+00:00",
+  "last_checked_at": "2026-11-08T00:51:44.324268+00:00",
+  "scan_started_at": "2026-11-08T00:45:50.758585+00:00",
   "sources_enabled": 297,
-  "sources_succeeded": 152,
-  "sources_failed": 145,
+  "sources_succeeded": 154,
+  "sources_failed": 143,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, SSLError: 30, ConnectionError: 26, HTTPError: 17, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 91, SSLError: 29, ConnectionError: 24, HTTPError: 17, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -201,7 +201,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps",
@@ -368,10 +368,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "mumbai-university",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "nabard",
       "error_type": "ConnectTimeout"
     },
@@ -437,10 +433,6 @@
     },
     {
       "source_id": "osmania-university",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
