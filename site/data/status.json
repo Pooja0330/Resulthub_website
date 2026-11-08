@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-08T21:09:18.176891+00:00",
-  "scan_started_at": "2026-11-08T21:01:23.758461+00:00",
+  "last_checked_at": "2026-11-08T21:21:25.820186+00:00",
+  "scan_started_at": "2026-11-08T21:15:51.263081+00:00",
   "sources_enabled": 300,
-  "sources_succeeded": 154,
-  "sources_failed": 146,
+  "sources_succeeded": 153,
+  "sources_failed": 147,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, SSLError: 32, ConnectionError: 25, HTTPError: 17, ValueError: 3",
+  "failure_types": "ConnectTimeout: 90, SSLError: 32, ConnectionError: 25, HTTPError: 17, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -654,6 +654,10 @@
     {
       "source_id": "upsssc",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "utkal-university",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "uttarakhand-psc",
