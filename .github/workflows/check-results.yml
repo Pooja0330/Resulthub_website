@@ -133,6 +133,7 @@ jobs:
       - name: Update PIB news independently
         id: pib_update
         if: always()
+        continue-on-error: true
         run: python checker/update_pib.py
 
       - name: Rebuild SEO pages
