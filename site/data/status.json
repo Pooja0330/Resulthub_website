@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-08T23:53:07.295108+00:00",
-  "scan_started_at": "2026-11-08T23:45:51.555621+00:00",
+  "last_checked_at": "2026-11-09T00:07:34.045586+00:00",
+  "scan_started_at": "2026-11-09T00:01:23.178238+00:00",
   "sources_enabled": 300,
-  "sources_succeeded": 153,
-  "sources_failed": 147,
-  "new_candidates": 0,
+  "sources_succeeded": 151,
+  "sources_failed": 149,
+  "new_candidates": 1,
   "recovered_records": 0,
-  "telegram_posts_sent": 0,
+  "telegram_posts_sent": 1,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, SSLError: 32, ConnectionError: 26, HTTPError: 17, ValueError: 3",
+  "failure_types": "ConnectTimeout: 91, SSLError: 32, ConnectionError: 25, HTTPError: 17, ReadTimeout: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "apsc",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
@@ -240,6 +240,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "icmai",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "iiser-admissions",
       "error_type": "SSLError"
     },
@@ -278,10 +282,6 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "indiapost-recruitment",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -362,6 +362,10 @@
     {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "mizoram-board",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "mizoram-psc",
@@ -606,6 +610,10 @@
     {
       "source_id": "tnmrbrecruit",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "tnpsc",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "tnresults",
