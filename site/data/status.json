@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-09T08:52:13.397972+00:00",
-  "scan_started_at": "2026-11-09T08:45:53.056997+00:00",
+  "last_checked_at": "2026-11-09T09:05:47.453046+00:00",
+  "scan_started_at": "2026-11-09T09:01:51.998869+00:00",
   "sources_enabled": 300,
-  "sources_succeeded": 155,
-  "sources_failed": 145,
+  "sources_succeeded": 154,
+  "sources_failed": 146,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, SSLError: 32, ConnectionError: 27, HTTPError: 17, ValueError: 3",
+  "failure_types": "ConnectTimeout: 87, SSLError: 32, ConnectionError: 27, HTTPError: 17, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "apsc",
@@ -270,6 +270,10 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "indiapost-gds",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -581,7 +585,7 @@
     },
     {
       "source_id": "sikkim-university",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "tamilnadu-board-official",
