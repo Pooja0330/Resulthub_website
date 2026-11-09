@@ -231,14 +231,27 @@ class CheckerSafetyTests(unittest.TestCase):
             self.assertEqual(get_with_retries("https://example.gov.in/").status_code, 200)
             self.assertEqual(mocked.call_count, 2)
 
-    def test_tls_certificate_error_is_not_retried_or_ignored(self):
+    def test_tls_failure_retries_with_verified_system_ca_bundle(self):
         from unittest.mock import patch
         import requests
 
-        with patch("check.requests.get", side_effect=requests.exceptions.SSLError("CERTIFICATE_VERIFY_FAILED")) as mocked:
-            with self.assertRaises(requests.exceptions.SSLError):
-                get_with_retries("https://example.gov.in/")
-            self.assertEqual(mocked.call_count, 1)
+        response = requests.Response()
+        response.status_code = 200
+        response._content = b"verified"
+        with patch("check.os.path.isfile", return_value=True), patch(
+            "check.requests.get",
+            side_effect=[
+                requests.exceptions.SSLError("CERTIFICATE_VERIFY_FAILED"),
+                response,
+            ],
+        ) as mocked:
+            self.assertEqual(get_with_retries("https://example.gov.in/").text, "verified")
+            self.assertEqual(mocked.call_count, 2)
+            self.assertEqual(
+                mocked.call_args.kwargs["verify"],
+                "/etc/ssl/certs/ca-certificates.crt",
+            )
+
 
     def test_temporary_dns_failure_is_retried(self):
         from unittest.mock import patch
