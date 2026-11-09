@@ -372,14 +372,37 @@ def get_with_retries(url, headers=None):
                 continue
             response.raise_for_status()
             return response
+        except requests.exceptions.SSLError as exc:
+            # Some official portals present certificate chains that work with
+            # the runner's OS trust store but fail against certifi's bundle.
+            # Retry once with the OS CA bundle; TLS verification stays enabled.
+            # Never fall back to verify=False.
+            system_ca = next((
+                path for path in (
+                    "/etc/ssl/certs/ca-certificates.crt",
+                    "/etc/pki/tls/certs/ca-bundle.crt",
+                    "/etc/ssl/ca-bundle.pem",
+                )
+                if os.path.isfile(path)
+            ), None)
+            if attempt == 0 and system_ca:
+                print(f"Retrying TLS verification with system CA bundle for {urlparse(url).hostname}")
+                try:
+                    response = requests.get(
+                        url,
+                        headers=headers or HEADERS,
+                        timeout=(min(TIMEOUT, 10), min(TIMEOUT, 12)),
+                        allow_redirects=True,
+                        verify=system_ca,
+                    )
+                    response.raise_for_status()
+                    return response
+                except requests.exceptions.SSLError:
+                    raise exc
+            raise
         except (requests.Timeout, requests.ConnectionError) as exc:
             last_error = exc
-            error_text = str(exc)
-            # A certificate validation failure is a security failure, not a
-            # transient network condition. Keep verification enabled and fail
-            # this source safely; it will be checked again on the next run.
-            permanent = "CERTIFICATE_VERIFY_FAILED" in error_text
-            if permanent or attempt >= 1:
+            if attempt >= 1:
                 raise
             delay = 1
             print(f"Retrying source request (2/2) after {type(exc).__name__}; wait={delay}s")
