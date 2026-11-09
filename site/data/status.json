@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-09T07:50:26.485513+00:00",
-  "scan_started_at": "2026-11-09T07:45:49.365087+00:00",
+  "last_checked_at": "2026-11-09T08:06:14.221708+00:00",
+  "scan_started_at": "2026-11-09T08:01:46.690346+00:00",
   "sources_enabled": 300,
-  "sources_succeeded": 155,
-  "sources_failed": 145,
-  "new_candidates": 0,
+  "sources_succeeded": 154,
+  "sources_failed": 146,
+  "new_candidates": 1,
   "recovered_records": 0,
-  "telegram_posts_sent": 0,
+  "telegram_posts_sent": 1,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 87, SSLError: 33, ConnectionError: 26, HTTPError: 17, ValueError: 3",
+  "failure_types": "ConnectTimeout: 87, SSLError: 32, ConnectionError: 28, HTTPError: 17, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "apsc",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bssc",
@@ -597,7 +597,7 @@
     },
     {
       "source_id": "tnmrbrecruit",
-      "error_type": "SSLError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "tnresults",
@@ -637,6 +637,10 @@
     },
     {
       "source_id": "upsc-final-results",
+      "error_type": "ReadTimeout"
+    },
+    {
+      "source_id": "upsc-recruitment",
       "error_type": "ReadTimeout"
     },
     {
