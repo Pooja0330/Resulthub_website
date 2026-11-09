@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-1a52c779c1aa223fd797296f",
+    "title": "नशे की लत से मुक्ति",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334454&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334454&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-09T14:39:45.266979+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-38092ba2753c0989d153fe18",
     "title": "एमवाय भारत-एनएसएस ने मादक पदार्थों के सेवन-मुक्त उत्सव समारोहों को बढ़ावा देने के लिए राष्ट्रव्यापी ‘दिवाली स्नेह मिलन’ का आयोजन किया",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334441&lang=1",
@@ -319,23 +336,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-08T16:09:21.174578+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-76ef61103d8bdbc8113ffb55",
-    "title": "प्रधानमंत्री ने छत्तीसगढ़ के बस्तर स्थित करनपुर में कोबरा ऑपरेशंस बेस पर जवानों के साथ मनाई गई दिवाली की झलकियां साझा कीं",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334201&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334201&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-08T16:01:21.523066+00:00",
     "archive": false,
     "verified": true
   }
