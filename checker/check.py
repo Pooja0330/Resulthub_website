@@ -25,7 +25,7 @@ CHANNEL = os.getenv("TG_CHANNEL", "").strip()
 TG_RATE_LIMITED = False
 
 TIMEOUT = max(5, min(int(os.getenv("SOURCE_TIMEOUT_SECONDS", "20")), 30))
-# Scan more sources concurrently so a five-minute schedule is practical without letting one slow portal block the whole run.
+# Use moderate concurrency to reduce rate-limits and connection resets across government portals.
 WORKERS = max(1, min(int(os.getenv("SOURCE_WORKERS", "24")), 24))
 MAX_NEW_PER_SOURCE = max(1, min(int(os.getenv("MAX_NEW_PER_SOURCE", "20")), 20))
 MAX_ARCHIVE_PER_SOURCE = max(20, min(int(os.getenv("MAX_ARCHIVE_PER_SOURCE", "250")), 500))
@@ -357,7 +357,7 @@ def get_with_retries(url, headers=None):
             response = requests.get(
                 url,
                 headers=headers or HEADERS,
-                timeout=(min(TIMEOUT, 10), min(TIMEOUT, 12)),
+                timeout=(min(TIMEOUT, 15), min(TIMEOUT, 25)),
                 allow_redirects=True,
                 verify=certifi.where(),
             )
@@ -391,7 +391,7 @@ def get_with_retries(url, headers=None):
                     response = requests.get(
                         url,
                         headers=headers or HEADERS,
-                        timeout=(min(TIMEOUT, 10), min(TIMEOUT, 12)),
+                        timeout=(min(TIMEOUT, 15), min(TIMEOUT, 25)),
                         allow_redirects=True,
                         verify=system_ca,
                     )
