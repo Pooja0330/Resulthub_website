@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-e24c0dc6c89ddf313e65e29b",
+    "title": "केंद्रीय अल्पसंख्यक कार्य और संसदीय कार्य मंत्री श्री किरेन रिजिजू ने सऊदी अरब की यात्रा की",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334477&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334477&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-09T16:09:42.574196+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-10365bd95ca1bee108ae2f92",
     "title": "वित्तीय चुनौतियों से वैश्विक अनुसंधान के अवसरों तक",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334467&lang=1",
@@ -319,23 +336,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-09T08:22:26.808839+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-468b4fd73ca7f1c364f3eb47",
-    "title": "प्रधानमंत्री ने उत्तराखंड के लोगों को राज्य स्थापना दिवस पर शुभकामनाएं दीं",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334274&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334274&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-09T06:37:28.579772+00:00",
     "archive": false,
     "verified": true
   }
