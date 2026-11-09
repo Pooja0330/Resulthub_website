@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-09T09:37:34.231452+00:00",
-  "scan_started_at": "2026-11-09T09:31:13.354438+00:00",
+  "last_checked_at": "2026-11-09T09:53:26.750231+00:00",
+  "scan_started_at": "2026-11-09T09:45:53.822175+00:00",
   "sources_enabled": 300,
-  "sources_succeeded": 153,
-  "sources_failed": 147,
-  "new_candidates": 1,
+  "sources_succeeded": 155,
+  "sources_failed": 145,
+  "new_candidates": 0,
   "recovered_records": 0,
-  "telegram_posts_sent": 1,
+  "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 87, SSLError: 32, ConnectionError: 26, HTTPError: 17, ReadTimeout: 5",
+  "failure_types": "ConnectTimeout: 87, SSLError: 32, ConnectionError: 26, HTTPError: 17, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ap-psc",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -273,10 +273,6 @@
     },
     {
       "source_id": "indiapost-gds",
-      "error_type": "ReadTimeout"
-    },
-    {
-      "source_id": "indiapost-recruitment",
       "error_type": "ReadTimeout"
     },
     {
@@ -586,10 +582,6 @@
     {
       "source_id": "sikkim-psc",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "sikkim-university",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "tamilnadu-board-official",
