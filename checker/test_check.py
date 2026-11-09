@@ -56,6 +56,18 @@ class CheckerSafetyTests(unittest.TestCase):
         )
         self.assertEqual(len(found), 2)
 
+    def test_published_results_deduplicate_identical_official_urls(self):
+        from check import deduplicate_published_results
+
+        records = [
+            {"id": "first", "title": "Railway result notice", "url": "https://www.rrc-wr.com/"},
+            {"id": "duplicate", "title": "Another title for same page", "url": "https://rrc-wr.com/?utm_source=telegram"},
+            {"id": "distinct", "title": "Detailed result notice", "url": "https://rrc-wr.com/Results.aspx?id=123"},
+        ]
+        cleaned = deduplicate_published_results(records)
+        self.assertEqual([item["id"] for item in cleaned], ["first", "distinct"])
+
+
     def test_notice_url_keeps_content_identifiers(self):
         first = normalize_notice_url("https://www.example.gov.in/notice?id=123&utm_source=mail")
         second = normalize_notice_url("https://example.gov.in/notice?id=456")
