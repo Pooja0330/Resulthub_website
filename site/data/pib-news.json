@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-c4d01ac76659153b985db404",
+    "title": "आईएनएस सूरत ओमान के मस्कट पहुंचा",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334358&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334358&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-09T10:37:09.022098+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-741f2dbc180d9c1ff02440ed",
     "title": "विधि कार्य विभाग ने 'विशेष अभियान 6' के तहत महत्वपूर्ण उपलब्धियां हासिल की; 27,000 से अधिक भौतिक फाइलों की समीक्षा की, 15,679 फाइल हटाए गए और कबाड़ के निपटान से 4.71 लाख रुपये की कमाई की",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334347&lang=1",
@@ -319,23 +336,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-08T07:11:00.912965+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-e0767393f7c5f729f9e2923e",
-    "title": "प्रधानमंत्री श्री नरेन्द्र मोदी ने भारत रत्न श्री लाल कृष्ण आडवाणी जी को अपने जीवन के 100वें वर्ष में प्रवेश करने पर बधाई दी",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334087&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334087&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-08T06:31:10.028421+00:00",
     "archive": false,
     "verified": true
   }
