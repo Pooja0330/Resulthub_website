@@ -346,6 +346,21 @@ def normalize_notice_url(url):
         return ""
 
 
+def deduplicate_published_results(results):
+    """Keep the first record for each canonical official notice URL."""
+    unique = []
+    seen_urls = set()
+    for item in results:
+        if not isinstance(item, dict):
+            continue
+        normalized = normalize_notice_url(item.get("url") or item.get("official_url") or "")
+        if not normalized or normalized in seen_urls:
+            continue
+        seen_urls.add(normalized)
+        unique.append(item)
+    return unique
+
+
 def get_with_retries(url, headers=None):
     last_error = None
     # Keep each scheduled scan bounded: one short retry for transient network
@@ -1068,7 +1083,14 @@ def main():
         )
         cleaned_results.append(item)
     results = cleaned_results
-    print(f"Website data cleanup: removed {removed_result_rows} generic/irrelevant rows; {len(results)} remain")
+    before_dedupe = len(results)
+    results = deduplicate_published_results(results)
+    duplicate_rows_removed = before_dedupe - len(results)
+    removed_result_rows += duplicate_rows_removed
+    print(
+        f"Website data cleanup: removed {removed_result_rows} generic/irrelevant/duplicate rows; "
+        f"{len(results)} remain ({duplicate_rows_removed} duplicate URLs removed)"
+    )
 
     seen = state.setdefault("seen", {})
     health = state.setdefault("source_health", {})
