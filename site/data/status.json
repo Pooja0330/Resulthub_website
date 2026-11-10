@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-10T03:53:08.110320+00:00",
-  "scan_started_at": "2026-11-10T03:45:54.656019+00:00",
+  "last_checked_at": "2026-11-10T04:10:44.679684+00:00",
+  "scan_started_at": "2026-11-10T04:01:50.353912+00:00",
   "sources_enabled": 300,
-  "sources_succeeded": 155,
-  "sources_failed": 145,
+  "sources_succeeded": 156,
+  "sources_failed": 144,
   "new_candidates": 0,
   "recovered_records": 1,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, SSLError: 32, ConnectionError: 25, HTTPError: 17, ValueError: 3",
+  "failure_types": "ConnectTimeout: 88, SSLError: 32, ConnectionError: 25, HTTPError: 17, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -57,7 +57,7 @@
     },
     {
       "source_id": "arunachal-psc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "assam-board-official",
@@ -310,10 +310,6 @@
     {
       "source_id": "karnataka-results",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "keralapsc",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "keralaresults",
