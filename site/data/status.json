@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-10T03:21:42.004439+00:00",
-  "scan_started_at": "2026-11-10T03:15:49.284655+00:00",
+  "last_checked_at": "2026-11-10T03:39:44.396881+00:00",
+  "scan_started_at": "2026-11-10T03:31:38.768225+00:00",
   "sources_enabled": 300,
   "sources_succeeded": 155,
   "sources_failed": 145,
@@ -568,6 +568,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "sebi-careers",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "secl-careers",
       "error_type": "HTTPError"
     },
@@ -633,10 +637,6 @@
     },
     {
       "source_id": "upsc-final-results",
-      "error_type": "ReadTimeout"
-    },
-    {
-      "source_id": "upsc-recruitment",
       "error_type": "ReadTimeout"
     },
     {
