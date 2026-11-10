@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-6cace75323ee326a9e4588c2",
+    "title": "प्रधानमंत्री श्री नरेन्‍द्र मोदी ने गोवर्धन पूजा पर देशवासियों को शुभकामनाएं दीं",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334540&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334540&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-10T06:01:27.004198+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-836102261c3f372413e0d443",
     "title": "जहाँ मशरूम जड़ें जमाते हैं, वहाँ आजीविका आकार लेती है",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334520&lang=1",
@@ -319,23 +336,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-09T09:23:48.020546+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-2df44191f4cafc3d8c540ea5",
-    "title": "भारत-म्यांमार प्रथम द्विपक्षीय त्रि-सेना एचएडीआर अभ्यास ‘राहत मित्र’ चेन्नई में संपन्न",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334325&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334325&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-09T08:36:22.689232+00:00",
     "archive": false,
     "verified": true
   }
