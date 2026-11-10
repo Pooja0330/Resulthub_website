@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-5b5b9b8e215a07ae3a03d388",
+    "title": "प्रधानमंत्री श्री नरेन्‍द्र मोदी ने नूतन वर्ष के अवसर पर शुभकामनाएं दीं",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334544&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334544&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-10T06:11:23.046457+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-6cace75323ee326a9e4588c2",
     "title": "प्रधानमंत्री श्री नरेन्‍द्र मोदी ने गोवर्धन पूजा पर देशवासियों को शुभकामनाएं दीं",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334540&lang=1",
@@ -319,23 +336,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-09T10:08:43.992499+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-d28d8d7dce79ab3d6ac21af6",
-    "title": "राष्ट्रपति द्रौपदी मुर्मु 10वें स्वच्छ सर्वेक्षण 2025-26 पुरस्कार प्रदान करेंगी",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334339&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334339&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-09T09:23:48.020546+00:00",
     "archive": false,
     "verified": true
   }
