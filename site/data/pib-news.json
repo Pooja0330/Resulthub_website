@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-a8c469f4871aa9e3486826c3",
+    "title": "गृह मंत्रालय ने विशेष अभियान 6 को सफलतापूर्वक पूरा किया",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334708&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334708&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-10T11:54:57.751578+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-270b45ea966f5e03df40d8ee",
     "title": "राजस्व खुफिया निदेशालय ने जवाहरलाल नेहरू पोर्ट अथॉरिटी बंदरगाह पर 4 करोड़ रुपये से अधिक मूल्य की लगभग 13 हजार ई-सिगरेट जब्त कीं",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334658&lang=1",
@@ -319,23 +336,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-10T04:54:01.354514+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-e24c0dc6c89ddf313e65e29b",
-    "title": "केंद्रीय अल्पसंख्यक कार्य और संसदीय कार्य मंत्री श्री किरेन रिजिजू ने सऊदी अरब की यात्रा की",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334477&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334477&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-09T16:09:42.574196+00:00",
     "archive": false,
     "verified": true
   }
