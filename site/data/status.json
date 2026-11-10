@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-10T19:36:51.565954+00:00",
-  "scan_started_at": "2026-11-10T19:31:17.398153+00:00",
+  "last_checked_at": "2026-11-10T19:50:41.638078+00:00",
+  "scan_started_at": "2026-11-10T19:45:54.051461+00:00",
   "sources_enabled": 300,
-  "sources_succeeded": 149,
-  "sources_failed": 151,
+  "sources_succeeded": 150,
+  "sources_failed": 150,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, SSLError: 31, ConnectionError: 30, HTTPError: 18, ValueError: 3",
+  "failure_types": "ConnectTimeout: 92, SSLError: 32, ConnectionError: 25, HTTPError: 19, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
@@ -201,7 +201,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps",
@@ -282,6 +282,10 @@
     {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "jamia",
+      "error_type": "HTTPError"
     },
     {
       "source_id": "jkbose",
@@ -456,10 +460,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "panjab-university",
-      "error_type": "ConnectionError"
-    },
-    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -478,10 +478,6 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
@@ -609,7 +605,7 @@
     },
     {
       "source_id": "tamilnadu-board-official",
-      "error_type": "ConnectionError"
+      "error_type": "SSLError"
     },
     {
       "source_id": "telangana-board",
