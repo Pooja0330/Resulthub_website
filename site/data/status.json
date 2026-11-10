@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-10T20:37:04.976727+00:00",
-  "scan_started_at": "2026-11-10T20:31:41.671447+00:00",
+  "last_checked_at": "2026-11-10T20:50:51.410059+00:00",
+  "scan_started_at": "2026-11-10T20:45:57.657716+00:00",
   "sources_enabled": 300,
   "sources_succeeded": 148,
   "sources_failed": 152,
@@ -9,7 +9,7 @@
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, SSLError: 32, ConnectionError: 26, HTTPError: 18, ReadTimeout: 5",
+  "failure_types": "ConnectTimeout: 91, SSLError: 32, ConnectionError: 27, HTTPError: 18, ReadTimeout: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -201,7 +201,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ibps",
@@ -306,10 +306,6 @@
     {
       "source_id": "jkssb",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "jnu",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "karnataka-board",
@@ -485,6 +481,10 @@
     },
     {
       "source_id": "rajasthan-rssb",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
       "error_type": "ConnectTimeout"
     },
     {
