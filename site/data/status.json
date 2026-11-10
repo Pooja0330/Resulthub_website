@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-10T07:51:31.940011+00:00",
-  "scan_started_at": "2026-11-10T07:45:53.057268+00:00",
+  "last_checked_at": "2026-11-10T08:03:04.110505+00:00",
+  "scan_started_at": "2026-11-10T07:54:07.551209+00:00",
   "sources_enabled": 300,
   "sources_succeeded": 156,
   "sources_failed": 144,
@@ -9,7 +9,7 @@
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, SSLError: 32, ConnectionError: 24, HTTPError: 17, ValueError: 3",
+  "failure_types": "ConnectTimeout: 89, SSLError: 31, ConnectionError: 25, HTTPError: 17, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -332,6 +332,10 @@
       "error_type": "ValueError"
     },
     {
+      "source_id": "magadh-university",
+      "error_type": "ConnectionError"
+    },
+    {
       "source_id": "maha-rojgar",
       "error_type": "HTTPError"
     },
@@ -433,10 +437,6 @@
     },
     {
       "source_id": "osmania-university",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
