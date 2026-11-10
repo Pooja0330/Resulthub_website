@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-10T16:51:31.944368+00:00",
-  "scan_started_at": "2026-11-10T16:45:55.047744+00:00",
+  "last_checked_at": "2026-11-10T17:06:42.989620+00:00",
+  "scan_started_at": "2026-11-10T17:02:01.308860+00:00",
   "sources_enabled": 300,
-  "sources_succeeded": 151,
-  "sources_failed": 149,
-  "new_candidates": 0,
+  "sources_succeeded": 152,
+  "sources_failed": 148,
+  "new_candidates": 1,
   "recovered_records": 0,
-  "telegram_posts_sent": 0,
+  "telegram_posts_sent": 1,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, SSLError: 32, ConnectionError: 26, HTTPError: 18, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 90, SSLError: 32, ConnectionError: 26, HTTPError: 18, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -649,10 +649,6 @@
     },
     {
       "source_id": "upsc-final-results",
-      "error_type": "ReadTimeout"
-    },
-    {
-      "source_id": "upsc-recruitment",
       "error_type": "ReadTimeout"
     },
     {
