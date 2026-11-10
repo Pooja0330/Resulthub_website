@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-d5e2bf781113d42e03ce44db",
+    "title": "आर्थिक तंगी से लेकर वैश्विक स्तर की शिक्षा के अवसर तक का सफर",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334818&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334818&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-10T14:51:00.764445+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-2ec735b5262bc1835afe91ee",
     "title": "व्यावसायिक जोखिम से सुरक्षित आजीविका तक",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334805&lang=1",
@@ -251,23 +268,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-10T11:54:57.751578+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-01edcc16d71edd8397e267f2",
-    "title": "राजस्व खुफिया निदेशालय ने भोपाल में 6.642 किलोग्राम एम्फेटामाइन जब्त किया; ड्रग तस्कर गिरफ्तार",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334659&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334659&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-10T10:54:13.667577+00:00",
     "archive": false,
     "verified": true
   },
