@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-10T20:07:11.840448+00:00",
-  "scan_started_at": "2026-11-10T20:02:02.078818+00:00",
+  "last_checked_at": "2026-11-10T20:21:25.476365+00:00",
+  "scan_started_at": "2026-11-10T20:15:56.006208+00:00",
   "sources_enabled": 300,
-  "sources_succeeded": 150,
-  "sources_failed": 150,
+  "sources_succeeded": 149,
+  "sources_failed": 151,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, SSLError: 32, ConnectionError: 26, HTTPError: 18, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 92, SSLError: 32, ConnectionError: 25, HTTPError: 18, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -360,6 +360,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "manipur-university",
+      "error_type": "ChunkedEncodingError"
+    },
+    {
       "source_id": "mat-aima",
       "error_type": "HTTPError"
     },
@@ -474,10 +478,6 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
@@ -657,6 +657,10 @@
     },
     {
       "source_id": "upsc-final-results",
+      "error_type": "ReadTimeout"
+    },
+    {
+      "source_id": "upsc-recruitment",
       "error_type": "ReadTimeout"
     },
     {
