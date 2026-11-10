@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-10T05:08:52.046229+00:00",
-  "scan_started_at": "2026-11-10T05:01:53.438206+00:00",
+  "last_checked_at": "2026-11-10T05:23:20.373634+00:00",
+  "scan_started_at": "2026-11-10T05:15:54.104975+00:00",
   "sources_enabled": 300,
   "sources_succeeded": 150,
   "sources_failed": 150,
@@ -278,10 +278,6 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "indiapost-gds",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -582,6 +578,10 @@
     {
       "source_id": "rrb-trivandrum",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rrc-south-central",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rrcb-central",

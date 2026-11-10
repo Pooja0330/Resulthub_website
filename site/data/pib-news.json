@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-836102261c3f372413e0d443",
+    "title": "जहाँ मशरूम जड़ें जमाते हैं, वहाँ आजीविका आकार लेती है",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334520&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334520&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-10T05:23:24.832529+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-1b8a2d1bf5ba50e979af1984",
     "title": "दिल्ली हाट में आयोजित शिल्प समागम मेला 2026 में कुल 55.46 लाख रुपये से अधिक की बिक्री हुई, जो कारीगरों के प्रति जनता की उत्साहपूर्ण प्रतिक्रिया और बाजार के बढ़ते अवसरों को दर्शाती है",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334517&lang=1",
@@ -319,23 +336,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-09T08:36:22.689232+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-cbc7032389f1703b67d043cc",
-    "title": "1,364 एंटी-कैंसर फ़ॉर्मूलेशन की बदली हुई कीमत आज से लागू हो गई हैं",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334323&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2334323&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-09T08:22:26.808839+00:00",
     "archive": false,
     "verified": true
   }
