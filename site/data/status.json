@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-10T15:07:00.946058+00:00",
-  "scan_started_at": "2026-11-10T15:01:32.757533+00:00",
+  "last_checked_at": "2026-11-10T15:20:48.142352+00:00",
+  "scan_started_at": "2026-11-10T15:15:59.167679+00:00",
   "sources_enabled": 300,
   "sources_succeeded": 152,
   "sources_failed": 148,
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -205,7 +205,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ibps",
