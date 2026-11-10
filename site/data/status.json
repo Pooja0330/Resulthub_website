@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-10T06:54:10.402875+00:00",
-  "scan_started_at": "2026-11-10T06:45:53.494724+00:00",
+  "last_checked_at": "2026-11-10T07:07:33.995527+00:00",
+  "scan_started_at": "2026-11-10T07:02:01.895900+00:00",
   "sources_enabled": 300,
   "sources_succeeded": 155,
   "sources_failed": 145,
@@ -9,7 +9,7 @@
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, SSLError: 32, ConnectionError: 25, HTTPError: 17, ValueError: 3",
+  "failure_types": "ConnectTimeout: 89, SSLError: 32, ConnectionError: 26, HTTPError: 17, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bssc",
@@ -312,6 +312,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "keralapsc",
+      "error_type": "ConnectionError"
+    },
+    {
       "source_id": "keralaresults",
       "error_type": "ConnectionError"
     },
@@ -434,10 +438,6 @@
     {
       "source_id": "osmania-university",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "ossc",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "osssc",
