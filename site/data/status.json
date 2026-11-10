@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-10T17:51:05.184893+00:00",
-  "scan_started_at": "2026-11-10T17:45:57.640480+00:00",
+  "last_checked_at": "2026-11-10T18:07:05.688055+00:00",
+  "scan_started_at": "2026-11-10T18:01:57.729575+00:00",
   "sources_enabled": 300,
-  "sources_succeeded": 147,
-  "sources_failed": 153,
+  "sources_succeeded": 148,
+  "sources_failed": 152,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 95, SSLError: 30, ConnectionError: 27, HTTPError: 19, ValueError: 3",
+  "failure_types": "ConnectTimeout: 95, SSLError: 31, ConnectionError: 27, HTTPError: 18, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -209,7 +209,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ibps",
@@ -368,6 +368,10 @@
       "error_type": "HTTPError"
     },
     {
+      "source_id": "meghalaya-board",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -453,7 +457,7 @@
     },
     {
       "source_id": "osmania-university",
-      "error_type": "ReadTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "osssc",
@@ -462,10 +466,6 @@
     {
       "source_id": "patna-university",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "pondicherry-university-old-results",
-      "error_type": "HTTPError"
     },
     {
       "source_id": "punjab-psc",
@@ -482,10 +482,6 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "rajeduboard",
