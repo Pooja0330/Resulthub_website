@@ -1025,7 +1025,20 @@ def main():
         {"seen": {}, "source_health": {}, "pending_alerts": {}},
     )
     approval = load_json("checker/approved.json", {"pending": []})
-    results = load_json("site/data/results.json", [])
+    results_file = path("site/data/results.json")
+    legacy_results_file = path("site/results.json")
+    # Do not silently convert a zero-byte public feed into an empty feed.
+    # Prefer a non-empty legacy mirror when available; otherwise stop so the
+    # workflow cannot overwrite the last published data with [].
+    primary_text = results_file.read_text(encoding="utf-8").strip() if results_file.exists() else ""
+    legacy_text = legacy_results_file.read_text(encoding="utf-8").strip() if legacy_results_file.exists() else ""
+    if not primary_text and legacy_text:
+        results = load_json("site/results.json", [])
+        print("WARNING: primary exam feed was empty; restored records from legacy mirror.")
+    elif not primary_text and not legacy_text:
+        raise SystemExit("Both public exam feeds are empty. Refusing to publish an empty feed; restore a known-good snapshot first.")
+    else:
+        results = load_json("site/data/results.json", [])
 
     if not isinstance(registry, dict) or not isinstance(registry.get("sources"), list):
         raise SystemExit("Invalid checker/sources.json: expected a sources list")
