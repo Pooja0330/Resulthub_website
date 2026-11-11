@@ -44,7 +44,7 @@
     {
       "id": "ibps",
       "name": "Institute of Banking Personnel Selection",
-      "url": "https://www.ibps.in/index.html",
+      "url": "https://ibps.in/index.html",
       "kind": "html",
       "allowed_hosts": [
         "ibps.in",
@@ -4197,7 +4197,7 @@
     {
       "id": "ibps-recent-updates",
       "name": "IBPS Recent Updates",
-      "url": "https://www.ibps.in/index.php/crp-updates/",
+      "url": "https://ibps.in/index.php/crp-updates/",
       "kind": "html",
       "allowed_hosts": [
         "ibps.in"
@@ -4220,7 +4220,7 @@
     {
       "id": "ibps-po-mt",
       "name": "IBPS PO / Management Trainees",
-      "url": "https://www.ibps.in/index.php/management-trainees-xvi/",
+      "url": "https://ibps.in/index.php/management-trainees-xvi/",
       "kind": "html",
       "allowed_hosts": [
         "ibps.in"
@@ -6628,7 +6628,7 @@
     {
       "id": "ibps-spl-xvi",
       "name": "IBPS Specialist Officers XVI",
-      "url": "https://www.ibps.in/index.php/specialist-officers-xvi/",
+      "url": "https://ibps.in/index.php/specialist-officers-xvi/",
       "kind": "html",
       "allowed_hosts": [
         "ibps.in"
@@ -6651,7 +6651,7 @@
     {
       "id": "ibps-csa-xvi",
       "name": "IBPS CSA XVI",
-      "url": "https://www.ibps.in/index.php/clerical-cadre-xvi/",
+      "url": "https://ibps.in/index.php/clerical-cadre-xvi/",
       "kind": "html",
       "allowed_hosts": [
         "ibps.in"
@@ -6819,7 +6819,7 @@
     {
       "id": "ibps-recruitment",
       "name": "IBPS Other Ongoing Recruitments",
-      "url": "https://www.ibps.in/index.php/recruitment/",
+      "url": "https://ibps.in/index.php/recruitment/",
       "kind": "html",
       "allowed_hosts": [
         "ibps.in",
@@ -6843,7 +6843,7 @@
     {
       "id": "ibps-careers",
       "name": "IBPS Careers",
-      "url": "https://www.ibps.in/index.php/careers/",
+      "url": "https://ibps.in/index.php/careers/",
       "kind": "html",
       "allowed_hosts": [
         "ibps.in",
@@ -6987,7 +6987,7 @@
     {
       "id": "ibps-rrb-xv",
       "name": "IBPS Regional Rural Banks XV",
-      "url": "https://www.ibps.in/index.php/rural-bank-xv/",
+      "url": "https://ibps.in/index.php/rural-bank-xv/",
       "kind": "html",
       "allowed_hosts": [
         "ibps.in",
@@ -7007,6 +7007,29 @@
       "coverage_note": "Dedicated official CRP-RRBs-XV listing, including dated call letters, information handouts, scribe guidelines and mock tests.",
       "exam_category": "Banking",
       "discover_listing_pages": true
+    },
+    {
+      "id": "jkinfo-ibps-discovery",
+      "name": "JKINFO IBPS updates — discovery only, official links required",
+      "url": "https://jkinfo.in/page.php?b=IBPS",
+      "kind": "html",
+      "allowed_hosts": [
+        "jkinfo.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "discovery_only": true,
+      "exam_category": "Banking",
+      "coverage_note": "Secondary discovery index only. Publish only direct HTTPS links to an authority already allowlisted in the official source registry; never publish JKINFO URLs.",
+      "max_new": 20
     }
   ]
 }
