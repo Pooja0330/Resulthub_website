@@ -687,38 +687,36 @@ def fetch_source(source):
     # destination hosted by a domain already allowlisted in our official-source
     # registry. This borrows the discovery workflow, not its protected content.
     if source.get("discovery_only"):
-        # Treat ResultBharat's public category pages as a discovery catalogue.
-        # Do not require every catalogue item to contain a machine-readable
-        # official-domain button: many articles put the official application
-        # or result link inside the detail page, which is exactly why the old
-        # implementation accepted only a handful of notices.
+        # ResultBharat is discovery-only. Visit each listing article, extract
+        # the actual destination hosted by an independently registered exam
+        # authority, and publish ONLY that official destination. Never publish
+        # a ResultBharat/aggregator URL as a student's application link.
         listing = get_with_retries(url)
         if not host_allowed(listing.url, hosts):
             raise ValueError("Discovery listing redirected outside ResultBharat")
         soup = BeautifulSoup(listing.text, "html.parser")
         discovered = []
         seen_links = set()
-        limit = max(1, min(int(source.get("max_new", 100)), 150))
+        official_hosts = source.get("official_hosts", [])
+        authority_sources = source.get("authority_sources", [])
+        limit = max(1, min(int(source.get("max_new", 30)), 60))
+        article_limit = max(limit * 2, 40)
+        article_count = 0
         for anchor in soup.select("a[href]"):
             title = " ".join(anchor.get_text(" ", strip=True).split())
-            link = urljoin(listing.url, anchor.get("href", "")).split("#", 1)[0]
-            parsed = urlparse(link)
-            if parsed.scheme != "https" or not parsed.hostname:
-                continue
-            same_catalogue = (
-                parsed.hostname.lower() in hosts
-                or any(parsed.hostname.lower().endswith("." + host.lower()) for host in hosts)
-            )
-            if not same_catalogue:
+            article_url = urljoin(listing.url, anchor.get("href", "")).split("#", 1)[0]
+            parsed = urlparse(article_url)
+            host = (parsed.hostname or "").lower()
+            same_catalogue = host in hosts or any(host.endswith("." + h.lower()) for h in hosts)
+            if parsed.scheme != "https" or not same_catalogue:
                 continue
             category = classify(title)
             if not category or is_navigation_noise_title(title) or is_speculative_status_title(title):
                 continue
-            normalized = normalize_notice_url(link)
-            if not normalized or normalized in seen_links:
+            article_key = normalize_notice_url(article_url)
+            if not article_key or article_key in seen_links:
                 continue
-            # Preserve the newest items first; the category pages are already
-            # ordered newest-first. Capture nearby date text only when present.
+            seen_links.add(article_key)
             context = ""
             for parent in list(anchor.parents)[:8]:
                 if getattr(parent, "name", None) not in ("li", "tr", "article", "div", "section"):
@@ -728,27 +726,67 @@ def fetch_source(source):
                     context = candidate
                     break
             published = extract_notice_date(context) or extract_notice_date(title)
-            if is_stale_notice(title, published, link):
+            if is_stale_notice(title, published, article_url):
                 continue
-            seen_links.add(normalized)
-            discovered.append({
-                "title": title[:260],
-                # This is a reference article, not falsely labelled as an
-                # official destination. The article contains the issuing
-                # authority's application/result link for the student.
-                "url": link,
-                "official_url": "",
-                "category": category,
-                "source_name": f"ResultBharat · {name.replace('ResultBharat ', '')} (reference)",
-                "source_id": source.get("id", name),
-                "source_url": listing.url,
-                "published": published,
-                "reference_only": True,
-                "archive": False,
-            })
-            if len(discovered) >= limit:
+            article_count += 1
+            if article_count > article_limit:
                 break
-        print(f"ResultBharat catalogue {name}: {len(discovered)} recent reference notices collected")
+            try:
+                article = get_with_retries(article_url)
+                if not host_allowed(article.url, hosts):
+                    continue
+                article_soup = BeautifulSoup(article.text, "html.parser")
+                official_candidates = []
+                for out in article_soup.select("a[href]"):
+                    destination = urljoin(article.url, out.get("href", "")).split("#", 1)[0]
+                    if not host_allowed(destination, official_hosts):
+                        continue
+                    label = " ".join(out.get_text(" ", strip=True).split())
+                    href_lower = destination.lower()
+                    label_lower = label.lower()
+                    priority = 0
+                    if re.search(r"apply online|login|candidate login|registration|download admit|download call letter|view result|score card|download result", label_lower):
+                        priority = 5
+                    elif re.search(r"official website|official portal|click here|download|result|admit card|call letter|answer key|application", label_lower):
+                        priority = 3
+                    elif any(word in href_lower for word in ("login", "candidate", "registration", "apply", "admit", "result")):
+                        priority = 2
+                    if destination.lower().endswith((".jpg", ".jpeg", ".png", ".webp")):
+                        continue
+                    authority = next((s for s in authority_sources if host_allowed(destination, s.get("allowed_hosts", []))), None)
+                    if authority:
+                        official_candidates.append((priority, destination, authority, label))
+                if not official_candidates:
+                    continue
+                official_candidates.sort(key=lambda x: x[0], reverse=True)
+                _, official_url, authority, link_label = official_candidates[0]
+                normalized = normalize_notice_url(official_url)
+                if not normalized:
+                    continue
+                # Deduplicate by the actual official destination, not the
+                # discovery article. Keep source attribution with the issuer.
+                if normalized in seen_links:
+                    continue
+                seen_links.add(normalized)
+                discovered.append({
+                    "title": title[:260],
+                    "url": official_url,
+                    "official_url": official_url,
+                    "category": category,
+                    "source_name": authority.get("name", "Official authority"),
+                    "source_id": authority.get("id", ""),
+                    "source_url": official_url,
+                    "published": published,
+                    "reference_only": False,
+                    "discovered_via": "ResultBharat public catalogue",
+                    "archive": False,
+                })
+                if len(discovered) >= limit:
+                    break
+            except Exception as exc:
+                print(f"Could not resolve official destination for catalogue item {title[:90]}: {type(exc).__name__}")
+                continue
+        print(f"ResultBharat discovery {name}: {article_count} articles inspected; {len(discovered)} official destinations extracted")
         return discovered
 
     kind = str(source.get("kind", "html")).lower()
@@ -1010,6 +1048,23 @@ def main():
 
     source_by_id = {str(s.get("id", "")): s for s in registry["sources"] if s.get("id")}
     source_by_name = {str(s.get("name", "")).strip().lower(): s for s in registry["sources"] if s.get("name")}
+
+    # Give discovery workers the official host allowlist and matching source
+    # metadata. Third-party catalogue domains are deliberately excluded.
+    official_sources = [
+        s for s in registry["sources"]
+        if s.get("enabled", True) and not s.get("discovery_only")
+        and is_exam_alert_source(s) and s.get("allowed_hosts")
+    ]
+    official_hosts = sorted({
+        str(host).lower()
+        for s in official_sources for host in s.get("allowed_hosts", [])
+        if host
+    })
+    for discovery_source in registry["sources"]:
+        if discovery_source.get("discovery_only"):
+            discovery_source["official_hosts"] = official_hosts
+            discovery_source["authority_sources"] = official_sources
 
     # Clean old low-quality navigation links from the public website and keep
     # category labels aligned with the stricter title classifier.
