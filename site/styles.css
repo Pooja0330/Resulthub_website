@@ -330,3 +330,6 @@
 .card-actions .link.secondary{background:#f4f7fb;color:#24415f;border:1px solid #dce5ef}
 @media(max-width:1100px){.student-category-nav{grid-template-columns:repeat(5,minmax(0,1fr))}}
 @media(max-width:600px){.student-category-nav{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:8px}.student-category-nav button{min-height:58px;padding:7px 4px}.student-category-nav button strong{font-size:.68rem}.card-actions{align-items:stretch}.card-actions .link{flex:1}}
+
+/* Homepage layout request: latest updates first; hide search directories. */
+.hero .search,.exam-directory{display:none!important}
