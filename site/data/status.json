@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-11T03:21:23.885924+00:00",
-  "scan_started_at": "2026-11-11T03:15:54.145834+00:00",
+  "last_checked_at": "2026-11-11T03:35:59.138748+00:00",
+  "scan_started_at": "2026-11-11T03:31:10.544785+00:00",
   "sources_enabled": 300,
   "sources_succeeded": 155,
   "sources_failed": 145,
   "new_candidates": 0,
-  "recovered_records": 1,
+  "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 87, SSLError: 32, ConnectionError: 27, HTTPError: 18, ValueError: 3",
+  "failure_types": "ConnectTimeout: 87, SSLError: 32, ConnectionError: 26, HTTPError: 18, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ap-psc",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
