@@ -142,7 +142,8 @@ jobs:
         run: python checker/build_seo_pages.py
 
       - name: Validate generated exam data
-        if: steps.exam_checker.outcome == 'success'
+        id: validate_data
+        if: always()
         run: |
           python - <<'PY'
           import json
@@ -152,10 +153,12 @@ jobs:
           results = json.loads(Path("site/data/results.json").read_text(encoding="utf-8"))
           status = json.loads(Path("site/data/status.json").read_text(encoding="utf-8"))
           legacy_results = json.loads(Path("site/results.json").read_text(encoding="utf-8"))
-          if legacy_results != results:
-              raise SystemExit("Legacy /results.json must mirror /data/results.json")
           if not isinstance(results, list):
               raise SystemExit("results.json must contain a JSON array")
+          if not results:
+              raise SystemExit("Refusing to publish an empty homepage exam feed")
+          if legacy_results != results:
+              raise SystemExit("Legacy /results.json must mirror /data/results.json")
           seen_ids, seen_urls = set(), set()
           for index, item in enumerate(results):
               if not isinstance(item, dict) or not str(item.get("title", "")).strip():
@@ -188,7 +191,7 @@ jobs:
           PY
 
       - name: Commit updated data
-        if: success()
+        if: success() && steps.exam_checker.outcome == 'success' && steps.validate_data.outcome == 'success'
         id: commit
         run: |
           git config user.name "github-actions[bot]"
