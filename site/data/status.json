@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-11T07:06:20.048737+00:00",
-  "scan_started_at": "2026-11-11T07:01:26.703097+00:00",
+  "last_checked_at": "2026-11-11T07:11:18.893460+00:00",
+  "scan_started_at": "2026-11-11T07:06:58.264184+00:00",
   "sources_enabled": 300,
-  "sources_succeeded": 152,
-  "sources_failed": 148,
+  "sources_succeeded": 153,
+  "sources_failed": 147,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 85, SSLError: 34, ConnectionError: 27, HTTPError: 18, ValueError: 4",
+  "failure_types": "ConnectTimeout: 85, SSLError: 35, ConnectionError: 26, HTTPError: 18, ValueError: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
@@ -272,10 +272,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "indiapost-gds",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -313,6 +309,10 @@
     },
     {
       "source_id": "karnataka-results",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "kashmir-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -601,11 +601,7 @@
     },
     {
       "source_id": "tnmrbrecruit",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "tnpsc",
-      "error_type": "ReadTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "tnresults",
