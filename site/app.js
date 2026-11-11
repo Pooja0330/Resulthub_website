@@ -413,8 +413,15 @@ function renderPibNews(){
   return '<a class="pib-news-item" href="'+esc(detail)+'" title="'+esc(title)+'"><span class="pib-news-dot" aria-hidden="true"></span><span class="pib-news-title">'+esc(title)+'</span><span class="pib-news-arrow" aria-hidden="true">↗</span></a>';
  }).join(""):'<p class="pib-empty">No PIB press releases are available in the current feed. The panel refreshes automatically.</p>';
 }
+function renderBrowseCategoryCounts(){
+ const counts={all:allItems.filter(x=>!isPibItem(x)).length};
+ ["latest-results","admit-cards","answer-keys","recruitments","admissions","exam-calendar","boards","competitive"].forEach(key=>{counts[key]=allItems.filter(x=>!isPibItem(x)&&browseMatches(x,key)).length;});
+ document.querySelectorAll("[data-browse-count]").forEach(node=>{const key=node.dataset.browseCount;node.textContent=Number(counts[key]||0).toLocaleString("en-IN");});
+ document.querySelectorAll("[data-browse]").forEach(button=>{const active=(button.dataset.browse||"")===selectedBrowse;button.classList.toggle("active",active);button.setAttribute("aria-pressed",active?"true":"false");});
+}
 function render(){
  try{
+ renderBrowseCategoryCounts();
  renderStateSidebar();
   const list=filteredItems(), pages=Math.max(1,Math.ceil(list.length/PAGE_SIZE));
   renderStateResources();
@@ -422,12 +429,13 @@ function render(){
  const visible=list.slice((page-1)*PAGE_SIZE,page*PAGE_SIZE);
  $("#count").textContent=`${list.length} update${list.length===1?"":"s"}`;
   $("#updatesList").innerHTML=visible.map(x=>{
-   const url=safeUrl(x.url||x.official_url);
-   const sourceBadge=x.archive?"Historical archive":(x.verified===true?"✓ Verified official source":"Official website link");
+   const url=preferredOfficialUrl(x);
+   const detailUrl=detailPageUrl(x);
+   const sourceBadge=x.archive?"Historical archive":(x.verified===true?"✓ Verified official source":"Official source · verify notice");
    const explicitYear=x.exam_year||((String(x.title||x.exam||"").match(/\b20\d{2}\b/)||[])[0]||"");
    const noticeDate=x.published||"";
    const dateDetails=(explicitYear?`Exam year: ${esc(explicitYear)} · `:"")+(noticeDate?`Notice date: ${esc(noticeDate)} · `:"Notice date not shown by authority · ")+`Updated on GoResultHub: ${detectedTimeMarkup(updateTime(x))}`;
-   return `<article class="card"><div class="meta"><span class="tag">${esc(label(x.category))}</span><span class="unverified">${esc(sourceBadge)}</span></div><h3>${esc(displayTitle(x))}</h3><p>${esc(x.description||x.source_name||"View the official website for full details and eligibility.")}</p><div class="source">${esc(x.source_name||x.authority||"Issuing authority")} · ${dateDetails}</div>${url?(x.direct===true||/\/(?:login|candidate-login|candidatelogin|score.?display|result.?status)(?:[/?#]|$)/i.test(new URL(url).pathname)?` <a class="link secondary" href="${esc(url)}" target="_blank" rel="noopener noreferrer">Open official login ↗</a>`:` <a class="link secondary" href="${esc(detailPageUrl(x))}" rel="noopener">View update on GoResultHub ↗</a>`):`<span>Official link unavailable</span>`}<button type="button" class="share-update" data-share-title="${esc(x.title||x.exam||"Exam update")}" data-share-url="${esc("https://goresulthub.com/"+detailPageUrl(x))}">Share this update ↗</button></article>`;
+   return `<article class="card"><div class="meta"><span class="tag">${esc(label(x.category))}</span><span class="unverified">${esc(sourceBadge)}</span></div><h3>${esc(displayTitle(x))}</h3><p>${esc(x.description||x.source_name||"View the official website for full details and eligibility.")}</p><div class="source">${esc(x.source_name||x.authority||"Issuing authority")} · ${dateDetails}</div>${url?` <div class="card-actions"><a class="link primary" href="${esc(url)}" target="_blank" rel="noopener noreferrer">Open official notice ↗</a><a class="link secondary" href="${esc(detailUrl)}" rel="noopener">View details</a></div>`:`<span>Official link unavailable</span>`}<button type="button" class="share-update" data-share-title="${esc(x.title||x.exam||"Exam update")}" data-share-url="${esc("https://goresulthub.com/"+detailPageUrl(x))}">Share this update ↗</button></article>`;
   }).join("");
  $("#empty").classList.toggle("hidden",list.length>0);
  if(!list.length) $("#updatesList").innerHTML="";
