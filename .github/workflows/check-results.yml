@@ -29,12 +29,10 @@ concurrency:
 
 jobs:
   check:
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -245,11 +243,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: site
-      - name: Deploy updated exam feed and status
-        if: steps.commit.outputs.changed == 'true'
-        id: deployment
-        uses: actions/deploy-pages@v4
-
       - name: Notify admin if the checker workflow fails
         if: failure()
         env:
@@ -286,3 +279,18 @@ jobs:
           except Exception as exc:
               print("Could not send checker failure notification:", type(exc).__name__)
           PY
+
+  deploy:
+    needs: check
+    if: needs.check.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy updated exam feed and status
+        id: deployment
+        uses: actions/deploy-pages@v4
