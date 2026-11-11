@@ -68,6 +68,14 @@ class CheckerSafetyTests(unittest.TestCase):
         self.assertEqual([item["id"] for item in cleaned], ["first", "distinct"])
 
 
+    def test_jkinfo_discovery_source_is_restricted_to_official_destination_hosts(self):
+        authority_sources = [
+            {"id": "ibps", "name": "IBPS", "allowed_hosts": ["ibps.in", "ibpsreg.ibps.in"]}
+        ]
+        self.assertTrue(host_allowed("https://ibpsreg.ibps.in/rrbxvaug26/login.php", authority_sources[0]["allowed_hosts"]))
+        self.assertFalse(host_allowed("https://jkinfo.in/page.php?b=IBPS", authority_sources[0]["allowed_hosts"]))
+        self.assertFalse(host_allowed("https://ibpsreg.ibps.in.attacker.example/login", authority_sources[0]["allowed_hosts"]))
+
     def test_notice_url_keeps_content_identifiers(self):
         first = normalize_notice_url("https://www.example.gov.in/notice?id=123&utm_source=mail")
         second = normalize_notice_url("https://example.gov.in/notice?id=456")
