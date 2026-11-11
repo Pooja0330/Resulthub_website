@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-11T12:21:30.191356+00:00",
-  "scan_started_at": "2026-11-11T12:15:54.418008+00:00",
+  "last_checked_at": "2026-11-11T12:37:26.320519+00:00",
+  "scan_started_at": "2026-11-11T12:31:42.553724+00:00",
   "sources_enabled": 306,
-  "sources_succeeded": 148,
-  "sources_failed": 158,
+  "sources_succeeded": 158,
+  "sources_failed": 148,
   "new_candidates": 0,
-  "recovered_records": 1,
+  "recovered_records": 2,
   "telegram_posts_sent": 10,
-  "alerts_pending": 118,
+  "alerts_pending": 108,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 94, ConnectionError: 32, SSLError: 31, HTTPError: 19, ValueError: 4",
+  "failure_types": "ConnectTimeout: 85, SSLError: 34, ConnectionError: 28, HTTPError: 19, ValueError: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ap-psc",
@@ -76,20 +76,12 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "bihar-daroga",
-      "error_type": "ConnectionError"
-    },
-    {
-      "source_id": "bihar-police",
-      "error_type": "ConnectionError"
-    },
-    {
       "source_id": "bihar-state-health-society-results-archive",
-      "error_type": "ConnectionError"
+      "error_type": "SSLError"
     },
     {
       "source_id": "bpsc",
-      "error_type": "ConnectionError"
+      "error_type": "SSLError"
     },
     {
       "source_id": "bse-ap",
@@ -101,15 +93,11 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bssc",
-      "error_type": "ConnectionError"
-    },
-    {
-      "source_id": "btsc",
-      "error_type": "ConnectionError"
+      "error_type": "SSLError"
     },
     {
       "source_id": "cbse-previous-years-results",
@@ -158,14 +146,6 @@
     {
       "source_id": "coast-guard-recruitment",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "columbia-ciet-raipur",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "columbia-institute-pharmacy-raipur",
-      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "drdo-careers",
@@ -296,12 +276,12 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "jadavpur-university",
-      "error_type": "SSLError"
+      "source_id": "indiapost-gds",
+      "error_type": "ReadTimeout"
     },
     {
-      "source_id": "jharkhand-psc",
-      "error_type": "ConnectTimeout"
+      "source_id": "jadavpur-university",
+      "error_type": "SSLError"
     },
     {
       "source_id": "jkbose",
@@ -340,8 +320,8 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "kashmir-university",
-      "error_type": "ConnectTimeout"
+      "source_id": "keralapsc",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "keralaresults",
@@ -378,14 +358,6 @@
     {
       "source_id": "mat-aima",
       "error_type": "HTTPError"
-    },
-    {
-      "source_id": "meghalaya-board",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "meghalaya-psc",
-      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "merchant-navy-imu",
@@ -476,10 +448,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "osssc",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -500,16 +468,12 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "rajasthan-university",
-      "error_type": "ConnectionError"
-    },
-    {
       "source_id": "rajeduboard",
       "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ranchi-university",
-      "error_type": "ConnectTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "resultbharat-syllabus",
@@ -629,10 +593,6 @@
     },
     {
       "source_id": "sikkim-psc",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "sikkim-university",
       "error_type": "ConnectTimeout"
     },
     {
