@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-11T00:50:48.099864+00:00",
-  "scan_started_at": "2026-11-11T00:45:52.945914+00:00",
+  "last_checked_at": "2026-11-11T01:06:26.502997+00:00",
+  "scan_started_at": "2026-11-11T01:01:45.384973+00:00",
   "sources_enabled": 300,
   "sources_succeeded": 151,
   "sources_failed": 149,
@@ -201,7 +201,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps",
@@ -280,10 +280,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "indiapost-gds",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -322,6 +318,10 @@
     {
       "source_id": "karnataka-results",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "keralapsc",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "keralaresults",
@@ -473,7 +473,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ConnectTimeout"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
