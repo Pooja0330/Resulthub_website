@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-11T10:50:49.113738+00:00",
-  "scan_started_at": "2026-11-11T10:45:48.282030+00:00",
+  "last_checked_at": "2026-11-11T11:07:48.242531+00:00",
+  "scan_started_at": "2026-11-11T11:02:04.502532+00:00",
   "sources_enabled": 306,
-  "sources_succeeded": 157,
-  "sources_failed": 149,
+  "sources_succeeded": 159,
+  "sources_failed": 147,
   "new_candidates": 0,
-  "recovered_records": 1,
+  "recovered_records": 9,
   "telegram_posts_sent": 10,
-  "alerts_pending": 187,
+  "alerts_pending": 177,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 85, SSLError: 35, ConnectionError: 29, HTTPError: 19, ValueError: 4",
+  "failure_types": "ConnectTimeout: 87, SSLError: 32, ConnectionError: 26, HTTPError: 19, ValueError: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
@@ -276,6 +276,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "indiapost-gds",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -293,7 +297,7 @@
     },
     {
       "source_id": "jkssb",
-      "error_type": "SSLError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "karnataka-board",
@@ -314,10 +318,6 @@
     {
       "source_id": "karnataka-results",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "keralapsc",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "keralaresults",
@@ -441,15 +441,7 @@
     },
     {
       "source_id": "osmania-university",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ossc",
       "error_type": "ConnectionError"
-    },
-    {
-      "source_id": "osssc",
-      "error_type": "SSLError"
     },
     {
       "source_id": "patna-university",
