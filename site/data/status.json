@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-11T08:21:07.950485+00:00",
-  "scan_started_at": "2026-11-11T08:15:50.550560+00:00",
+  "last_checked_at": "2026-11-11T08:36:46.768693+00:00",
+  "scan_started_at": "2026-11-11T08:31:12.994383+00:00",
   "sources_enabled": 306,
-  "sources_succeeded": 158,
-  "sources_failed": 148,
+  "sources_succeeded": 159,
+  "sources_failed": 147,
   "new_candidates": 0,
-  "recovered_records": 1,
+  "recovered_records": 10,
   "telegram_posts_sent": 10,
-  "alerts_pending": 212,
+  "alerts_pending": 202,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 86, SSLError: 35, ConnectionError: 27, HTTPError: 19, ValueError: 4",
+  "failure_types": "ConnectTimeout: 84, SSLError: 34, ConnectionError: 28, HTTPError: 19, ValueError: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "andhra-university",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "apsc",
@@ -276,6 +276,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "indiapost-gds",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -314,10 +318,6 @@
     {
       "source_id": "karnataka-results",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "keralapsc",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "keralaresults",
@@ -441,10 +441,6 @@
     },
     {
       "source_id": "osmania-university",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
