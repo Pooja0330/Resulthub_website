@@ -708,7 +708,15 @@ def fetch_source(source):
             parsed = urlparse(article_url)
             host = (parsed.hostname or "").lower()
             same_catalogue = host in hosts or any(host.endswith("." + h.lower()) for h in hosts)
-            if parsed.scheme != "https" or not same_catalogue:
+            direct_authority = next(
+                (entry for entry in authority_sources if host_allowed(article_url, entry.get("allowed_hosts", []))),
+                None,
+            )
+            # Some trusted discovery indexes link straight to the issuing
+            # authority (for example, IBPS registration/call-letter portals)
+            # instead of an intermediate article. Accept only a registered
+            # official HTTPS host; never publish the discovery-site URL.
+            if parsed.scheme != "https" or (not same_catalogue and not direct_authority):
                 continue
             category = classify(title)
             if not category or is_navigation_noise_title(title) or is_speculative_status_title(title):
@@ -727,6 +735,28 @@ def fetch_source(source):
                     break
             published = extract_notice_date(context) or extract_notice_date(title)
             if is_stale_notice(title, published, article_url):
+                continue
+            if direct_authority:
+                official_url = article_url
+                normalized = normalize_notice_url(official_url)
+                if not normalized or normalized in seen_links:
+                    continue
+                seen_links.add(normalized)
+                discovered.append({
+                    "title": (context if len(title) < 12 and context else title)[:260],
+                    "url": official_url,
+                    "official_url": official_url,
+                    "category": category,
+                    "source_name": direct_authority.get("name", "Official authority"),
+                    "source_id": direct_authority.get("id", ""),
+                    "source_url": official_url,
+                    "published": published,
+                    "reference_only": False,
+                    "discovered_via": "JKINFO public catalogue (official destination)",
+                    "archive": False,
+                })
+                if len(discovered) >= limit:
+                    break
                 continue
             article_count += 1
             if article_count > article_limit:
