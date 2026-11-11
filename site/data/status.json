@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-11T06:35:59.632775+00:00",
-  "scan_started_at": "2026-11-11T06:31:10.115413+00:00",
+  "last_checked_at": "2026-11-11T06:51:06.542520+00:00",
+  "scan_started_at": "2026-11-11T06:45:56.409711+00:00",
   "sources_enabled": 300,
-  "sources_succeeded": 149,
-  "sources_failed": 151,
+  "sources_succeeded": 147,
+  "sources_failed": 153,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, SSLError: 33, ConnectionError: 28, HTTPError: 18, ValueError: 3",
+  "failure_types": "ConnectTimeout: 90, SSLError: 33, ConnectionError: 27, HTTPError: 18, ReadTimeout: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
@@ -280,6 +280,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "indiapost-gds",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -386,10 +390,6 @@
     {
       "source_id": "nabard",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "nagaland-psc",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "naval-coastguard-jobs",
@@ -644,6 +644,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "tripura-university",
+      "error_type": "ValueError"
+    },
+    {
       "source_id": "tspsc",
       "error_type": "ConnectionError"
     },
@@ -661,6 +665,10 @@
     },
     {
       "source_id": "upsc-final-results",
+      "error_type": "ReadTimeout"
+    },
+    {
+      "source_id": "upsc-recruitment",
       "error_type": "ReadTimeout"
     },
     {
