@@ -6793,7 +6793,8 @@
       "discovery_only": true,
       "exam_category": "Central Recruitment",
       "coverage_note": "Discovery index only. GoResultHub follows ResultBharat exam articles but publishes only HTTPS destinations whose hosts are already allowlisted as official sources. ResultBharat article links are never presented as official.",
-      "discover_listing_pages": false
+      "discover_listing_pages": false,
+      "max_new": 100
     },
     {
       "id": "ssc-notice-board",
@@ -6884,7 +6885,8 @@
       "enabled": true,
       "discovery_only": true,
       "exam_category": "Central Recruitment",
-      "coverage_note": "Discovery index only. Follow category listings for recent candidate notices, then publish only links that resolve to an allowlisted official authority. Never publish the ResultBharat article URL as the official notice."
+      "coverage_note": "Discovery index only. Follow category listings for recent candidate notices, then publish only links that resolve to an allowlisted official authority. Never publish the ResultBharat article URL as the official notice.",
+      "max_new": 100
     },
     {
       "id": "resultbharat-results",
@@ -6907,7 +6909,8 @@
       "enabled": true,
       "discovery_only": true,
       "exam_category": "Central Recruitment",
-      "coverage_note": "Discovery index only. Follow category listings for recent candidate notices, then publish only links that resolve to an allowlisted official authority. Never publish the ResultBharat article URL as the official notice."
+      "coverage_note": "Discovery index only. Follow category listings for recent candidate notices, then publish only links that resolve to an allowlisted official authority. Never publish the ResultBharat article URL as the official notice.",
+      "max_new": 100
     },
     {
       "id": "resultbharat-jobs",
@@ -6930,7 +6933,8 @@
       "enabled": true,
       "discovery_only": true,
       "exam_category": "Central Recruitment",
-      "coverage_note": "Discovery index only. Follow category listings for recent candidate notices, then publish only links that resolve to an allowlisted official authority. Never publish the ResultBharat article URL as the official notice."
+      "coverage_note": "Discovery index only. Follow category listings for recent candidate notices, then publish only links that resolve to an allowlisted official authority. Never publish the ResultBharat article URL as the official notice.",
+      "max_new": 100
     },
     {
       "id": "resultbharat-answer-keys",
@@ -6953,7 +6957,8 @@
       "enabled": true,
       "discovery_only": true,
       "exam_category": "Central Recruitment",
-      "coverage_note": "Discovery index only. Follow category listings for recent candidate notices, then publish only links that resolve to an allowlisted official authority. Never publish the ResultBharat article URL as the official notice."
+      "coverage_note": "Discovery index only. Follow category listings for recent candidate notices, then publish only links that resolve to an allowlisted official authority. Never publish the ResultBharat article URL as the official notice.",
+      "max_new": 100
     },
     {
       "id": "resultbharat-admissions",
@@ -6976,7 +6981,8 @@
       "enabled": true,
       "discovery_only": true,
       "exam_category": "Central Recruitment",
-      "coverage_note": "Discovery index only. Follow category listings for recent candidate notices, then publish only links that resolve to an allowlisted official authority. Never publish the ResultBharat article URL as the official notice."
+      "coverage_note": "Discovery index only. Follow category listings for recent candidate notices, then publish only links that resolve to an allowlisted official authority. Never publish the ResultBharat article URL as the official notice.",
+      "max_new": 100
     },
     {
       "id": "ibps-rrb-xv",
@@ -7001,6 +7007,44 @@
       "coverage_note": "Dedicated official CRP-RRBs-XV listing, including dated call letters, information handouts, scribe guidelines and mock tests.",
       "exam_category": "Banking",
       "discover_listing_pages": true
+    },
+    {
+      "id": "resultbharat-syllabus",
+      "name": "ResultBharat Syllabus",
+      "url": "https://www.resultbharat.com/syllabus.html",
+      "kind": "html",
+      "allowed_hosts": [
+        "resultbharat.com",
+        "www.resultbharat.com"
+      ],
+      "categories": [
+        "notification",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "discovery_only": true,
+      "max_new": 100,
+      "exam_category": "Central Recruitment",
+      "coverage_note": "Public catalogue discovery only; each item is labelled as a reference listing and is not represented as an official source."
+    },
+    {
+      "id": "resultbharat-top-online-forms",
+      "name": "ResultBharat Top Online Forms",
+      "url": "https://www.resultbharat.com/latestjobs_more.html",
+      "kind": "html",
+      "allowed_hosts": [
+        "resultbharat.com",
+        "www.resultbharat.com"
+      ],
+      "categories": [
+        "notification",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "discovery_only": true,
+      "max_new": 100,
+      "exam_category": "Central Recruitment",
+      "coverage_note": "Public catalogue discovery only; each item is labelled as a reference listing and is not represented as an official source."
     }
   ]
 }
