@@ -434,7 +434,7 @@ function render(){
   $("#updatesList").innerHTML=visible.map(x=>{
    const url=preferredOfficialUrl(x);
    const detailUrl=detailPageUrl(x);
-   const sourceBadge=x.archive?"Historical archive":(x.verified===true?"✓ Verified official source":"Official source · verify notice");
+   const sourceBadge=x.archive?"Historical archive":(x.reference_only?"Reference listing · verify official notice":(x.verified===true?"✓ Verified official source":"Official source · verify notice"));
    const explicitYear=x.exam_year||((String(x.title||x.exam||"").match(/\b20\d{2}\b/)||[])[0]||"");
    const noticeDate=x.published||"";
    const dateDetails=(explicitYear?`Exam year: ${esc(explicitYear)} · `:"")+(noticeDate?`Notice date: ${esc(noticeDate)} · `:"Notice date not shown by authority · ")+`Updated on GoResultHub: ${detectedTimeMarkup(updateTime(x))}`;
