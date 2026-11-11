@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-11T09:13:50.743189+00:00",
-  "scan_started_at": "2026-11-11T09:08:22.918245+00:00",
+  "last_checked_at": "2026-11-11T09:20:56.956014+00:00",
+  "scan_started_at": "2026-11-11T09:15:49.040496+00:00",
   "sources_enabled": 306,
-  "sources_succeeded": 157,
-  "sources_failed": 149,
+  "sources_succeeded": 153,
+  "sources_failed": 153,
   "new_candidates": 0,
   "recovered_records": 1,
   "telegram_posts_sent": 10,
-  "alerts_pending": 264,
+  "alerts_pending": 254,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 86, SSLError: 35, ConnectionError: 26, HTTPError: 19, ValueError: 4",
+  "failure_types": "ConnectTimeout: 91, SSLError: 33, ConnectionError: 27, HTTPError: 19, ValueError: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -148,6 +148,14 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "columbia-ciet-raipur",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "columbia-institute-pharmacy-raipur",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "drdo-careers",
       "error_type": "ConnectionError"
     },
@@ -280,6 +288,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "jharkhand-psc",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "jkbose",
       "error_type": "ConnectTimeout"
     },
@@ -316,6 +328,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "keralapsc",
+      "error_type": "ConnectionError"
+    },
+    {
       "source_id": "keralaresults",
       "error_type": "ConnectionError"
     },
@@ -350,6 +366,10 @@
     {
       "source_id": "mat-aima",
       "error_type": "HTTPError"
+    },
+    {
+      "source_id": "meghalaya-board",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "merchant-navy-imu",
@@ -440,10 +460,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "osssc",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -465,7 +481,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ConnectTimeout"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
@@ -473,7 +489,7 @@
     },
     {
       "source_id": "ranchi-university",
-      "error_type": "SSLError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "resultbharat-syllabus",
@@ -596,6 +612,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "sikkim-university",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "tamilnadu-board-official",
       "error_type": "SSLError"
     },
@@ -610,10 +630,6 @@
     {
       "source_id": "tnmrbrecruit",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "tnpsc",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "tnresults",
