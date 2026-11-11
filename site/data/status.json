@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-11T13:07:10.273381+00:00",
-  "scan_started_at": "2026-11-11T13:01:26.655397+00:00",
+  "last_checked_at": "2026-11-11T13:21:34.618019+00:00",
+  "scan_started_at": "2026-11-11T13:15:55.258692+00:00",
   "sources_enabled": 306,
   "sources_succeeded": 157,
   "sources_failed": 149,
   "new_candidates": 0,
-  "recovered_records": 2,
+  "recovered_records": 9,
   "telegram_posts_sent": 10,
-  "alerts_pending": 88,
+  "alerts_pending": 78,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 87, SSLError: 34, ConnectionError: 25, HTTPError: 19, ReadTimeout: 5",
+  "failure_types": "ConnectTimeout: 86, SSLError: 35, ConnectionError: 26, HTTPError: 20, ValueError: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bssc",
@@ -169,7 +169,7 @@
     },
     {
       "source_id": "goa-university",
-      "error_type": "ReadTimeout"
+      "error_type": "ValueError"
     },
     {
       "source_id": "gpsc",
@@ -276,10 +276,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "indiapost-gds",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -297,7 +293,7 @@
     },
     {
       "source_id": "jkssb",
-      "error_type": "ConnectTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "karnataka-board",
@@ -453,7 +449,7 @@
     },
     {
       "source_id": "pondicherry-university-old-results",
-      "error_type": "ReadTimeout"
+      "error_type": "HTTPError"
     },
     {
       "source_id": "punjab-psc",
@@ -657,6 +653,10 @@
     },
     {
       "source_id": "upsc-final-results",
+      "error_type": "ReadTimeout"
+    },
+    {
+      "source_id": "upsc-recruitment",
       "error_type": "ReadTimeout"
     },
     {
