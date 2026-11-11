@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-11T08:10:47.639475+00:00",
-  "scan_started_at": "2026-11-11T08:05:13.713138+00:00",
-  "sources_enabled": 308,
-  "sources_succeeded": 159,
-  "sources_failed": 149,
-  "new_candidates": 222,
-  "recovered_records": 23,
+  "last_checked_at": "2026-11-11T08:21:07.950485+00:00",
+  "scan_started_at": "2026-11-11T08:15:50.550560+00:00",
+  "sources_enabled": 306,
+  "sources_succeeded": 158,
+  "sources_failed": 148,
+  "new_candidates": 0,
+  "recovered_records": 1,
   "telegram_posts_sent": 10,
-  "alerts_pending": 222,
+  "alerts_pending": 212,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 85, SSLError: 35, ConnectionError: 26, HTTPError: 19, ValueError: 4",
+  "failure_types": "ConnectTimeout: 86, SSLError: 35, ConnectionError: 27, HTTPError: 19, ValueError: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bssc",
@@ -314,6 +314,10 @@
     {
       "source_id": "karnataka-results",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "keralapsc",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "keralaresults",
@@ -606,10 +610,6 @@
     {
       "source_id": "tnmrbrecruit",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "tnpsc",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "tnresults",
