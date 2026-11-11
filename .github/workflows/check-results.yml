@@ -112,6 +112,9 @@ jobs:
                 " and is allowed to post. Token and chat IDs were not printed.")
           PY
 
+      - name: Validate homepage JavaScript syntax
+        run: node --check site/app.js
+
       - name: Run offline checker regression tests
         run: python -m unittest discover -s checker -p "test_*.py" -v
 
