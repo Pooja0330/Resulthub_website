@@ -1285,6 +1285,11 @@ def main():
                     if not normalized_url:
                         continue
 
+                    # Discovery indexes can surface official notices. Attribute
+                    # state and exam filters to the issuing authority, not the
+                    # discovery site (e.g. ResultBharat -> IBPS).
+                    item_source = source_by_id.get(str(item.get("source_id", ""))) or source
+
                     key = hashlib.sha256(
                         normalized_url.encode("utf-8")
                     ).hexdigest()[:24]
@@ -1295,9 +1300,9 @@ def main():
                         if normalized_url in published_urls:
                             continue
                         item["id"] = key
-                        item["region"] = source.get("region", "Central")
-                        item["state"] = source.get("state", "")
-                        item["exam_category"] = source.get("exam_category", "University Results")
+                        item["region"] = item_source.get("region", "Central")
+                        item["state"] = item_source.get("state", "")
+                        item["exam_category"] = item_source.get("exam_category", "University Results")
                         item["archive"] = True
                         item["detected_at"] = checked_at
                         historical_candidates.append(item)
@@ -1320,12 +1325,12 @@ def main():
                         # restore the notice from its official source without
                         # queueing another Telegram message.
                         item["id"] = key
-                        item["region"] = source.get("region", "Central")
-                        item["state"] = source.get("state", "")
+                        item["region"] = item_source.get("region", "Central")
+                        item["state"] = item_source.get("state", "")
                         item["exam_category"] = source.get(
                             "exam_category",
                             infer_exam_category(item.get("title", ""), source.get("name", ""),
-                                                source.get("id", ""), source.get("state", "")),
+                                                source.get("id", ""), item_source.get("state", "")),
                         )
                         item["detected_at"] = seen.get(key, {}).get("first_seen", checked_at)
                         item["recovered"] = True
@@ -1336,12 +1341,12 @@ def main():
                         continue
 
                     item["id"] = key
-                    item["region"] = source.get("region", "Central")
-                    item["state"] = source.get("state", "")
+                    item["region"] = item_source.get("region", "Central")
+                    item["state"] = item_source.get("state", "")
                     item["exam_category"] = source.get(
                         "exam_category",
                         infer_exam_category(item.get("title", ""), source.get("name", ""),
-                                            source.get("id", ""), source.get("state", "")),
+                                            source.get("id", ""), item_source.get("state", "")),
                     )
                     item["detected_at"] = checked_at
 
