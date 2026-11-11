@@ -6862,6 +6862,145 @@
       "coverage_note": "Official IBPS direct recruitment and careers notices.",
       "exam_category": "Banking",
       "discover_listing_pages": true
+    },
+    {
+      "id": "resultbharat-admit-cards",
+      "name": "ResultBharat Admit Card index",
+      "url": "https://www.resultbharat.com/Admitcard_more.html",
+      "kind": "html",
+      "allowed_hosts": [
+        "resultbharat.com",
+        "www.resultbharat.com"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "discovery_only": true,
+      "exam_category": "Central Recruitment",
+      "coverage_note": "Discovery index only. Follow category listings for recent candidate notices, then publish only links that resolve to an allowlisted official authority. Never publish the ResultBharat article URL as the official notice."
+    },
+    {
+      "id": "resultbharat-results",
+      "name": "ResultBharat Results index",
+      "url": "https://www.resultbharat.com/latestresult_more.html",
+      "kind": "html",
+      "allowed_hosts": [
+        "resultbharat.com",
+        "www.resultbharat.com"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "discovery_only": true,
+      "exam_category": "Central Recruitment",
+      "coverage_note": "Discovery index only. Follow category listings for recent candidate notices, then publish only links that resolve to an allowlisted official authority. Never publish the ResultBharat article URL as the official notice."
+    },
+    {
+      "id": "resultbharat-jobs",
+      "name": "ResultBharat Latest Jobs index",
+      "url": "https://www.resultbharat.com/latestjobs_more.html",
+      "kind": "html",
+      "allowed_hosts": [
+        "resultbharat.com",
+        "www.resultbharat.com"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "discovery_only": true,
+      "exam_category": "Central Recruitment",
+      "coverage_note": "Discovery index only. Follow category listings for recent candidate notices, then publish only links that resolve to an allowlisted official authority. Never publish the ResultBharat article URL as the official notice."
+    },
+    {
+      "id": "resultbharat-answer-keys",
+      "name": "ResultBharat Answer Key index",
+      "url": "https://www.resultbharat.com/answerkey_more.html",
+      "kind": "html",
+      "allowed_hosts": [
+        "resultbharat.com",
+        "www.resultbharat.com"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "discovery_only": true,
+      "exam_category": "Central Recruitment",
+      "coverage_note": "Discovery index only. Follow category listings for recent candidate notices, then publish only links that resolve to an allowlisted official authority. Never publish the ResultBharat article URL as the official notice."
+    },
+    {
+      "id": "resultbharat-admissions",
+      "name": "ResultBharat Admissions index",
+      "url": "https://www.resultbharat.com/admission_more.html",
+      "kind": "html",
+      "allowed_hosts": [
+        "resultbharat.com",
+        "www.resultbharat.com"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "discovery_only": true,
+      "exam_category": "Central Recruitment",
+      "coverage_note": "Discovery index only. Follow category listings for recent candidate notices, then publish only links that resolve to an allowlisted official authority. Never publish the ResultBharat article URL as the official notice."
+    },
+    {
+      "id": "ibps-rrb-xv",
+      "name": "IBPS Regional Rural Banks XV",
+      "url": "https://www.ibps.in/index.php/rural-bank-xv/",
+      "kind": "html",
+      "allowed_hosts": [
+        "ibps.in",
+        "ibpsreg.ibps.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-11-11",
+      "coverage_note": "Dedicated official CRP-RRBs-XV listing, including dated call letters, information handouts, scribe guidelines and mock tests.",
+      "exam_category": "Banking",
+      "discover_listing_pages": true
     }
   ]
 }
