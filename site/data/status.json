@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-11T01:50:13.491189+00:00",
-  "scan_started_at": "2026-11-11T01:45:51.027056+00:00",
+  "last_checked_at": "2026-11-11T01:56:28.026111+00:00",
+  "scan_started_at": "2026-11-11T01:50:55.654816+00:00",
   "sources_enabled": 300,
-  "sources_succeeded": 152,
-  "sources_failed": 148,
+  "sources_succeeded": 153,
+  "sources_failed": 147,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, SSLError: 32, ConnectionError: 27, HTTPError: 18, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 87, SSLError: 32, ConnectionError: 28, HTTPError: 18, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "andhra-university",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "apsc",
@@ -466,10 +466,6 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
