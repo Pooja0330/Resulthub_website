@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-11T11:42:01.416349+00:00",
-  "scan_started_at": "2026-11-11T11:36:54.885337+00:00",
+  "last_checked_at": "2026-11-11T11:51:03.538441+00:00",
+  "scan_started_at": "2026-11-11T11:45:51.584646+00:00",
   "sources_enabled": 306,
-  "sources_succeeded": 157,
-  "sources_failed": 149,
+  "sources_succeeded": 158,
+  "sources_failed": 148,
   "new_candidates": 0,
   "recovered_records": 2,
   "telegram_posts_sent": 10,
-  "alerts_pending": 148,
+  "alerts_pending": 138,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, SSLError: 34, ConnectionError: 27, HTTPError: 19, ValueError: 4",
+  "failure_types": "ConnectTimeout: 86, SSLError: 34, ConnectionError: 25, HTTPError: 19, ReadTimeout: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
@@ -125,7 +125,7 @@
     },
     {
       "source_id": "chandigarh-administration",
-      "error_type": "ConnectTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "cisce",
@@ -146,10 +146,6 @@
     {
       "source_id": "coast-guard-recruitment",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "csir-hrdg",
-      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "drdo-careers",
@@ -278,6 +274,10 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "indiapost-gds",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -444,10 +444,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "osssc",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -465,10 +461,6 @@
     },
     {
       "source_id": "rajasthan-rssb",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -616,6 +608,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "tnpsc",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "tnresults",
       "error_type": "ConnectTimeout"
     },
@@ -669,7 +665,7 @@
     },
     {
       "source_id": "upsssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "uttarakhand-psc",
