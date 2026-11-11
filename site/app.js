@@ -387,6 +387,8 @@ function renderPriorityExamAlerts(){
   const source=String(x.exam_category||"");
   const category=String(x.category||"");
   if(isPibItem(x)||x.archive===true||!/^(result|notification|admit_card|answer_key|merit_list|cutoff|exam_schedule)$/.test(category))return false;
+  // When a student selects a category, keep the priority panel in sync too.
+  if(selectedBrowse&&!browseMatches(x,selectedBrowse))return false;
   if(/annual results old|old archive|historical|research project|sponsored project|project staff|project assistant|project fellow|families in transition|ice hockey association|sports association/i.test(title))return false;
   if(/^(?:download advertisement|apply online)\\b/i.test(title)&&!/\\b(post|officer|clerk|assistant|manager|engineer|probationary|junior associate|recruitment|vacanc(?:y|ies)|advertisement no)\\b/i.test(title))return false;
   if(source==="University Results"&&!/\\b(result|results|scorecard|marksheet|mark sheet|merit list|admission|admissions|entrance|counselling|counseling|examination|exam|semester|hall ticket|admit card|answer key|date sheet|time table|timetable|back paper|revaluation|supplementary)\\b/i.test(title))return false;
@@ -414,8 +416,9 @@ function renderPibNews(){
  }).join(""):'<p class="pib-empty">No PIB press releases are available in the current feed. The panel refreshes automatically.</p>';
 }
 function renderBrowseCategoryCounts(){
- const counts={all:allItems.filter(x=>!isPibItem(x)).length};
- ["latest-results","admit-cards","answer-keys","recruitments","admissions","exam-calendar","boards","competitive"].forEach(key=>{counts[key]=allItems.filter(x=>!isPibItem(x)&&browseMatches(x,key)).length;});
+ const clean=dedupeVisibleItems(allItems.filter(x=>!isPibItem(x)));
+ const counts={all:clean.length};
+ ["latest-results","admit-cards","answer-keys","recruitments","admissions","exam-calendar","boards","competitive"].forEach(key=>{counts[key]=dedupeVisibleItems(clean.filter(x=>browseMatches(x,key))).length;});
  document.querySelectorAll("[data-browse-count]").forEach(node=>{const key=node.dataset.browseCount;node.textContent=Number(counts[key]||0).toLocaleString("en-IN");});
  document.querySelectorAll("[data-browse]").forEach(button=>{const active=(button.dataset.browse||"")===selectedBrowse;button.classList.toggle("active",active);button.setAttribute("aria-pressed",active?"true":"false");});
 }
@@ -573,8 +576,12 @@ document.querySelectorAll("[data-browse]").forEach(button=>button.addEventListen
  selectedBrowse=button.dataset.browse||"";
  selectedState="";selectedRegion="";
  $("#region").value="";$("#q").value="";$("#category").value="";$("#examCategory").value="";
+ $("#examYear").value="";
+ if(quickSearch)quickSearch.value="";
  page=1;render();
- $("#updates").scrollIntoView({behavior:"smooth",block:"start"});
+ // Take the student to the filtered list itself, not back to the category controls.
+ const target=$("#updatesList")||$("#count")||$("#updates");
+ requestAnimationFrame(()=>target.scrollIntoView({behavior:"smooth",block:"start"}));
 }));
 
 document.addEventListener("click",event=>{
