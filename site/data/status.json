@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-11T02:07:02.121896+00:00",
-  "scan_started_at": "2026-11-11T02:01:24.470410+00:00",
+  "last_checked_at": "2026-11-11T02:20:39.243321+00:00",
+  "scan_started_at": "2026-11-11T02:15:52.392413+00:00",
   "sources_enabled": 300,
   "sources_succeeded": 152,
   "sources_failed": 148,
@@ -9,7 +9,7 @@
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, SSLError: 32, ConnectionError: 27, HTTPError: 18, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 89, SSLError: 32, ConnectionError: 26, HTTPError: 18, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -280,10 +280,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "indiapost-gds",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -470,6 +466,10 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
