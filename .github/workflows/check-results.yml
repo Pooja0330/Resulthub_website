@@ -236,10 +236,10 @@ jobs:
       # GITHUB_TOKEN pushes do not trigger another workflow's push event.
       # Deploy updated results.json and status.json in the same scan run.
       - name: Configure Pages
-        if: steps.commit.outputs.changed == 'true'
+        if: steps.commit.outputs.changed == 'true' || github.event_name == 'push'
         uses: actions/configure-pages@v5
       - name: Upload updated website
-        if: steps.commit.outputs.changed == 'true'
+        if: steps.commit.outputs.changed == 'true' || github.event_name == 'push'
         uses: actions/upload-pages-artifact@v3
         with:
           path: site
@@ -282,7 +282,7 @@ jobs:
 
   deploy:
     needs: check
-    if: needs.check.outputs.changed == 'true'
+    if: needs.check.outputs.changed == 'true' || github.event_name == 'push'
     runs-on: ubuntu-latest
     permissions:
       pages: write
