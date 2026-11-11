@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-11T17:39:25.317292+00:00",
-  "scan_started_at": "2026-11-11T17:31:12.830515+00:00",
+  "last_checked_at": "2026-11-11T17:53:06.923663+00:00",
+  "scan_started_at": "2026-11-11T17:45:48.477043+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 156,
-  "sources_failed": 151,
+  "sources_succeeded": 157,
+  "sources_failed": 150,
   "new_candidates": 0,
   "recovered_records": 2,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 96, ConnectionError: 27, SSLError: 26, HTTPError: 20, ValueError: 4",
+  "failure_types": "ConnectTimeout: 95, SSLError: 27, ConnectionError: 26, HTTPError: 20, ValueError: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -448,16 +448,12 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ossc",
-      "error_type": "ConnectionError"
-    },
-    {
       "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
       "source_id": "patna-university",
-      "error_type": "ConnectTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "pondicherry-university-old-results",
