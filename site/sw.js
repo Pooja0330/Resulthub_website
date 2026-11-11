@@ -1,4 +1,4 @@
-const CACHE_NAME = "goresult-hub-v19";
+const CACHE_NAME = "goresult-hub-v20";
 const DATA_PATHS = ["data/results.json", "data/status.json", "data/pib-news.json"];
 self.addEventListener("install", event => { self.skipWaiting(); });
 self.addEventListener("activate", event => {
