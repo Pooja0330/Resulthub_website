@@ -970,6 +970,8 @@ def build_result(item, detected_at):
         "description": (
             "Historical entry discovered on an official archive listing. Open the issuing authority link to confirm the year, notice details and availability."
             if item.get("archive") else
+            "Listed in the ResultBharat category catalogue as a discovery reference. Open this reference and follow its issuing authority link to confirm the notice, dates and eligibility."
+            if item.get("reference_only") else
             "Potential update detected on an allowlisted official website. Open the source to confirm the notice, dates and eligibility."
         ),
         "verified": False,
