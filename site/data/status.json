@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-11T11:07:48.242531+00:00",
-  "scan_started_at": "2026-11-11T11:02:04.502532+00:00",
+  "last_checked_at": "2026-11-11T11:20:32.235879+00:00",
+  "scan_started_at": "2026-11-11T11:15:47.915558+00:00",
   "sources_enabled": 306,
-  "sources_succeeded": 159,
-  "sources_failed": 147,
+  "sources_succeeded": 156,
+  "sources_failed": 150,
   "new_candidates": 0,
-  "recovered_records": 9,
-  "telegram_posts_sent": 10,
-  "alerts_pending": 177,
+  "recovered_records": 2,
+  "telegram_posts_sent": 9,
+  "alerts_pending": 168,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 87, SSLError: 32, ConnectionError: 26, HTTPError: 19, ValueError: 4",
+  "failure_types": "ConnectTimeout: 87, SSLError: 34, ConnectionError: 26, HTTPError: 19, ReadTimeout: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -276,10 +276,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "indiapost-gds",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -318,6 +314,10 @@
     {
       "source_id": "karnataka-results",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "keralapsc",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "keralaresults",
@@ -441,7 +441,11 @@
     },
     {
       "source_id": "osmania-university",
-      "error_type": "ConnectionError"
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "osssc",
+      "error_type": "SSLError"
     },
     {
       "source_id": "patna-university",
@@ -462,6 +466,10 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
@@ -649,6 +657,10 @@
     },
     {
       "source_id": "upsc-final-results",
+      "error_type": "ReadTimeout"
+    },
+    {
+      "source_id": "upsc-recruitment",
       "error_type": "ReadTimeout"
     },
     {
