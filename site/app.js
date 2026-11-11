@@ -394,7 +394,13 @@ function renderPriorityExamAlerts(){
   if(source==="University Results"&&!/\\b(result|results|scorecard|marksheet|mark sheet|merit list|admission|admissions|entrance|counselling|counseling|examination|exam|semester|hall ticket|admit card|answer key|date sheet|time table|timetable|back paper|revaluation|supplementary)\\b/i.test(title))return false;
   return true;
  }))
-  .sort((a,b)=>mainPriority(a)-mainPriority(b)||updateTimeValue(b)-updateTimeValue(a)).slice(0,50);
+  // The live monitor must show newly detected or newly delivered notices first.
+  // Government-source priority is only a tie-breaker; it must never bury newer alerts
+  // below older records from a preferred authority.
+  .sort((a,b)=>{
+   const liveTime=item=>Math.max(updateTimeValue(item),item.telegram_sent_at?new Date(item.telegram_sent_at).getTime()||0:0);
+   return liveTime(b)-liveTime(a)||mainPriority(a)-mainPriority(b);
+  }).slice(0,50);
  box.innerHTML=rows.length?rows.map(x=>{
   const url=safeUrl(x.url||x.official_url)||safeUrl(x.source_url);
   const category=label(x.category);
