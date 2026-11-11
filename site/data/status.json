@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-11T23:41:55.122472+00:00",
-  "scan_started_at": "2026-11-11T23:36:31.468246+00:00",
+  "last_checked_at": "2026-11-11T23:50:41.597883+00:00",
+  "scan_started_at": "2026-11-11T23:45:57.022052+00:00",
   "sources_enabled": 307,
   "sources_succeeded": 156,
   "sources_failed": 151,
@@ -9,7 +9,7 @@
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 85, SSLError: 35, ConnectionError: 29, HTTPError: 19, ValueError: 4",
+  "failure_types": "ConnectTimeout: 85, SSLError: 35, ConnectionError: 31, HTTPError: 19, ValueError: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "apsc",
@@ -324,6 +324,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "keralapsc",
+      "error_type": "ConnectionError"
+    },
+    {
       "source_id": "keralaresults",
       "error_type": "ConnectionError"
     },
@@ -473,7 +477,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "rajeduboard",
@@ -654,10 +658,6 @@
     {
       "source_id": "upsc-active-examinations",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "upsc-active-exams",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "upsc-exam-calendar",
