@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-12T03:21:15.693984+00:00",
-  "scan_started_at": "2026-11-12T03:15:56.837957+00:00",
+  "last_checked_at": "2026-11-12T03:36:39.712840+00:00",
+  "scan_started_at": "2026-11-12T03:31:37.397720+00:00",
   "sources_enabled": 307,
   "sources_succeeded": 154,
   "sources_failed": 153,
@@ -9,7 +9,7 @@
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 92, SSLError: 34, ConnectionError: 27, HTTPError: 19, ValueError: 3",
+  "failure_types": "ConnectTimeout: 93, SSLError: 34, ConnectionError: 25, HTTPError: 19, ValueError: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -57,7 +57,7 @@
     },
     {
       "source_id": "arunachal-psc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "assam-board-official",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
@@ -480,10 +480,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "rajeduboard",
       "error_type": "ConnectTimeout"
     },
@@ -592,6 +588,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "rrc-eastern",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "rrc-northern",
       "error_type": "HTTPError"
     },
@@ -653,7 +653,7 @@
     },
     {
       "source_id": "tripura-university",
-      "error_type": "ConnectTimeout"
+      "error_type": "ValueError"
     },
     {
       "source_id": "tspsc",
