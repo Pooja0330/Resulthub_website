@@ -3,7 +3,7 @@ name: Check Exam Results
 
 on:
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '2-59/5 * * * *'
   workflow_dispatch:
   push:
     branches: [main]
@@ -191,7 +191,10 @@ jobs:
           PY
 
       - name: Commit updated data
-        if: success() && steps.exam_checker.outcome == 'success' && steps.validate_data.outcome == 'success'
+        # Publish validated feed/status files even when the scanner reports partial source failures.
+        # The checker writes its health snapshot and preserves existing notices before returning non-zero
+        # when every source is temporarily unreachable; blocking this commit hid those diagnostics.
+        if: success() && steps.validate_data.outcome == 'success'
         id: commit
         run: |
           git config user.name "github-actions[bot]"
