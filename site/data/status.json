@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-12T00:06:39.409686+00:00",
-  "scan_started_at": "2026-11-12T00:01:57.284396+00:00",
+  "last_checked_at": "2026-11-12T00:20:26.350083+00:00",
+  "scan_started_at": "2026-11-12T00:15:54.439061+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 158,
-  "sources_failed": 149,
+  "sources_succeeded": 152,
+  "sources_failed": 155,
   "new_candidates": 0,
-  "recovered_records": 2,
+  "recovered_records": 1,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 86, SSLError: 34, ConnectionError: 28, HTTPError: 19, ValueError: 4",
+  "failure_types": "ConnectTimeout: 93, SSLError: 34, ConnectionError: 27, HTTPError: 19, ValueError: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -146,6 +146,14 @@
     {
       "source_id": "coast-guard-recruitment",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "columbia-ciet-raipur",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "columbia-institute-pharmacy-raipur",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "drdo-careers",
@@ -286,6 +294,10 @@
     {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "jharkhand-psc",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "jkbose",
@@ -448,6 +460,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "osssc",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -477,7 +493,7 @@
     },
     {
       "source_id": "ranchi-university",
-      "error_type": "SSLError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "resultbharat-syllabus",
@@ -580,6 +596,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "rrc-eastern",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "rrc-northern",
       "error_type": "HTTPError"
     },
@@ -597,6 +617,10 @@
     },
     {
       "source_id": "sikkim-psc",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "sikkim-university",
       "error_type": "ConnectTimeout"
     },
     {
