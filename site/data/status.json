@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-12T16:50:23.807229+00:00",
-  "scan_started_at": "2026-11-12T16:45:50.908317+00:00",
+  "last_checked_at": "2026-11-12T17:07:02.484256+00:00",
+  "scan_started_at": "2026-11-12T17:02:05.033240+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 151,
-  "sources_failed": 156,
+  "sources_succeeded": 150,
+  "sources_failed": 157,
   "new_candidates": 0,
   "recovered_records": 1,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 94, SSLError: 35, ConnectionError: 26, HTTPError: 20, ValueError: 3",
+  "failure_types": "ConnectTimeout: 93, SSLError: 34, ConnectionError: 29, HTTPError: 19, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "andhra-university",
@@ -385,7 +385,7 @@
     },
     {
       "source_id": "mizoram-university",
-      "error_type": "SSLError"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "mpesb",
@@ -473,7 +473,7 @@
     },
     {
       "source_id": "pondicherry-university-old-results",
-      "error_type": "HTTPError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "punjab-psc",
@@ -490,6 +490,10 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "rajeduboard",
