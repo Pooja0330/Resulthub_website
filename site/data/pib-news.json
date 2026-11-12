@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-7142405bdde1827457b6443a",
+    "title": "एक राष्‍ट्र, एक राशन कार्ड",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335308&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335308&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-12T06:36:34.047781+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-4a56fe910669ae0d9351fe64",
     "title": "जनजातीय गौरव पखवाड़ा 2026: जनजातीय विरासत के सम्मान, समुदायों के सशक्तीकरण और कल्याणकारी योजनाओं का लाभ अंतिम छोर तक पहुंचाने के लिए देशव्यापी आयोजन",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335294&lang=1",
@@ -319,23 +336,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-11T13:51:32.431748+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-23cc8d4c2c9eec5773e7d38f",
-    "title": "गुजरात के एकता नगर में ‘भारत पर्व 2026’ के माध्यम से भारत की समृद्ध सांस्कृतिक विरासत और विविधता हुई प्रदर्शित",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335152&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335152&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-11T13:07:14.813722+00:00",
     "archive": false,
     "verified": true
   }
