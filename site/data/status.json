@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-12T05:21:25.647032+00:00",
-  "scan_started_at": "2026-11-12T05:15:52.088182+00:00",
+  "last_checked_at": "2026-11-12T05:37:05.716769+00:00",
+  "scan_started_at": "2026-11-12T05:31:12.384937+00:00",
   "sources_enabled": 307,
   "sources_succeeded": 157,
   "sources_failed": 150,
   "new_candidates": 0,
-  "recovered_records": 3,
+  "recovered_records": 2,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
@@ -276,6 +276,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "indiapost-recruitment",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -314,6 +318,10 @@
     {
       "source_id": "karnataka-results",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "keralapsc",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "keralaresults",
@@ -374,10 +382,6 @@
     {
       "source_id": "nabard",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "nagaland-psc",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "naval-coastguard-jobs",
@@ -674,10 +678,6 @@
     {
       "source_id": "uttarakhand-psc",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "vtu",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "vyapam-cg",
