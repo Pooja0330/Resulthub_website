@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-b73af19445c330b17698e3bc",
+    "title": "स्वच्छ सर्वेक्षण पुरस्कार 2025-26",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335270&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335270&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-12T02:51:14.989584+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-2381edb09c22e78d22326561",
     "title": "भारतीय नौसेना के समन्वय से अखिल भारतीय तटीय रक्षा अभ्यास सी विजिल-26 के पांचवें संस्करण का आयोजन किया रहा है",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335269&lang=1",
@@ -319,23 +336,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-11T13:07:14.813722+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-9e22ed229338483bc21c9a43",
-    "title": "सड़क उपयोगकर्ता के साथ दुर्व्यवहार करने पर भारतीय राष्ट्रीय राजमार्ग प्राधिकरण (एनएचएआई) ने बिजवासन उपयोगकर्ता शुल्क संग्रहण एजेंसी को एक महीने के लिए प्रतिबंधित कर दिया है",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335090&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335090&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-11T11:51:07.818721+00:00",
     "archive": false,
     "verified": true
   }
