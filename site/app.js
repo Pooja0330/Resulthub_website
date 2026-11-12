@@ -374,7 +374,7 @@ function filteredItems(){
    return score;
   };
   list.sort((a,b)=>relevance(b)-relevance(a)||updateTimeValue(b)-updateTimeValue(a)||mainPriority(a)-mainPriority(b));
- }else list.sort((a,b)=>mainPriority(a)-mainPriority(b)||updateTimeValue(b)-updateTimeValue(a));
+ }else list.sort((a,b)=>Math.max(updateTimeValue(b),b.telegram_sent_at?new Date(b.telegram_sent_at).getTime()||0:0)-Math.max(updateTimeValue(a),a.telegram_sent_at?new Date(a.telegram_sent_at).getTime()||0:0)||mainPriority(a)-mainPriority(b));
  return list;
 }
 function renderPriorityExamAlerts(){
