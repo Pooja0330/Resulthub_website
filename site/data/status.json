@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-13T05:20:35.400980+00:00",
-  "scan_started_at": "2026-11-13T05:15:46.825176+00:00",
+  "last_checked_at": "2026-11-13T05:37:12.042665+00:00",
+  "scan_started_at": "2026-11-13T05:31:39.112610+00:00",
   "sources_enabled": 307,
   "sources_succeeded": 164,
   "sources_failed": 143,
@@ -9,7 +9,7 @@
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 87, SSLError: 28, ConnectionError: 25, HTTPError: 21, ValueError: 4",
+  "failure_types": "ConnectTimeout: 88, SSLError: 28, ConnectionError: 25, HTTPError: 21, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -198,10 +198,6 @@
     {
       "source_id": "hpsc",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "ibps",
-      "error_type": "SSLError"
     },
     {
       "source_id": "ibps-calendar",
@@ -444,6 +440,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "rajasthan-university",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "rajeduboard",
       "error_type": "ConnectTimeout"
     },
@@ -613,7 +613,7 @@
     },
     {
       "source_id": "tripura-university",
-      "error_type": "ValueError"
+      "error_type": "SSLError"
     },
     {
       "source_id": "tspsc",
