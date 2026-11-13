@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-ace552ac78487b9b27106b26",
+    "title": "एनपीपीए ने कैंसर-रोधी 137 दवाओं पर टीएमआर के कार्यान्वयन की कड़ी निगरानी के निर्देश दिए",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335751&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335751&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-13T08:06:48.222378+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-2390b54a0cfcab5b3b59046b",
     "title": "एएनआरएफ ने ब्रिक-एनआईपीजीआर में आईआरजी/ईएमईक्यू कॉन्क्लेव का आयोजन किया",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335743&lang=1",
@@ -285,23 +302,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-12T15:01:31.702267+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-0114c82ac7aba2994325baa7",
-    "title": "भारत के राष्ट्रपति ने राष्ट्रपति भवन में एकलव्य आदर्श आवासीय विद्यालय के मेधावी विद्यार्थियों से संवाद किया",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335571&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335571&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-12T13:35:26.444364+00:00",
     "archive": false,
     "verified": true
   },
