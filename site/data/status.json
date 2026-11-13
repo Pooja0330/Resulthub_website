@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-13T09:51:40.674094+00:00",
-  "scan_started_at": "2026-11-13T09:45:51.266583+00:00",
+  "last_checked_at": "2026-11-13T10:07:22.754469+00:00",
+  "scan_started_at": "2026-11-13T10:01:54.632524+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 164,
-  "sources_failed": 143,
-  "new_candidates": 2,
+  "sources_succeeded": 166,
+  "sources_failed": 141,
+  "new_candidates": 0,
   "recovered_records": 1,
-  "telegram_posts_sent": 2,
+  "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 84, ConnectionError: 32, SSLError: 28, HTTPError: 18, ValueError: 3",
+  "failure_types": "ConnectTimeout: 85, ConnectionError: 29, SSLError: 27, HTTPError: 18, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
@@ -284,8 +284,8 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "keralapsc",
-      "error_type": "ConnectionError"
+      "source_id": "kerala-devaswom",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "keralaresults",
@@ -306,10 +306,6 @@
     {
       "source_id": "kvs-recruitment",
       "error_type": "ValueError"
-    },
-    {
-      "source_id": "lakshadweep-administration",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "maha-rojgar",
@@ -413,10 +409,6 @@
     },
     {
       "source_id": "osmania-university",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
