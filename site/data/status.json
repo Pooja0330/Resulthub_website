@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-13T12:50:45.224040+00:00",
-  "scan_started_at": "2026-11-13T12:45:53.895030+00:00",
+  "last_checked_at": "2026-11-13T13:05:48.946723+00:00",
+  "scan_started_at": "2026-11-13T13:01:17.492424+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 164,
-  "sources_failed": 143,
+  "sources_succeeded": 165,
+  "sources_failed": 142,
   "new_candidates": 0,
   "recovered_records": 1,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 86, SSLError: 29, ConnectionError: 27, HTTPError: 19, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 89, SSLError: 28, ConnectionError: 24, HTTPError: 20, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -196,10 +196,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "ibps",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "ibps-calendar",
       "error_type": "SSLError"
     },
@@ -246,10 +242,6 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "indiapost-gds",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -397,11 +389,11 @@
     },
     {
       "source_id": "nvs",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "nvs-recruitment",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "odisha-board-official",
@@ -422,6 +414,10 @@
     {
       "source_id": "patna-university",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "pondicherry-university-old-results",
+      "error_type": "HTTPError"
     },
     {
       "source_id": "punjab-psc",
