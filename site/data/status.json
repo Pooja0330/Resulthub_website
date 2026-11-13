@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-13T23:06:34.420138+00:00",
-  "scan_started_at": "2026-11-13T23:01:23.739403+00:00",
+  "last_checked_at": "2026-11-13T23:20:42.066970+00:00",
+  "scan_started_at": "2026-11-13T23:15:48.536436+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 160,
-  "sources_failed": 147,
+  "sources_succeeded": 163,
+  "sources_failed": 144,
   "new_candidates": 0,
   "recovered_records": 1,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, ConnectionError: 28, SSLError: 28, HTTPError: 19, ValueError: 3",
+  "failure_types": "ConnectTimeout: 91, SSLError: 27, ConnectionError: 26, HTTPError: 19, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -424,14 +424,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ossc",
-      "error_type": "ConnectionError"
-    },
-    {
-      "source_id": "osssc",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -593,10 +585,6 @@
     },
     {
       "source_id": "telangana-results",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "telangana-tslprb",
       "error_type": "ConnectTimeout"
     },
     {
