@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-2833c5a2151476080273fa17",
+    "title": "राष्ट्रपति ने खेल एवं साहसिक पुरस्कार 2025 प्रदान किए",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335854&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335854&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-13T11:20:22.709911+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-b90ebcf34030e562efe41fda",
     "title": "ज्ञान प्रणाली समिति की प्रस्तुत रिपोर्ट पर प्रतिक्रिया और सुझाव आमंत्रित",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335836&lang=1",
@@ -103,7 +120,7 @@
   },
   {
     "id": "pib-ce2321a70d1127044cab8a49",
-    "title": "केंद्रीय स्वास्थ्य मंत्री श्री जे.पी. नड्डा ने क्षय रोग से होने वाली मृत्यु दर में कमी लाने में भारत की उल्लेखनीय प्रगति को रेखांकित किया; क्षय रोग-मुक्त भारत के संकल्प को दोहराया",
+    "title": "केंद्रीय स्वास्थ्य मंत्री श्री जे.पी. नड्डा ने क्षय रोग से होने वाली मृत्यु में कमी लाने में भारत की उल्लेखनीय प्रगति को रेखांकित किया; क्षय रोग-मुक्त भारत के संकल्प को दोहराया",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335795&lang=1",
     "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335795&lang=1",
     "source_id": "pib-independent-feed",
@@ -268,23 +285,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-13T05:07:16.759013+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-efd2cc5e57c41180bad1ff7e",
-    "title": "कैब को किराए पर लेने से संबंधित प्रस्तावित सुधारों से व्यावसायिक अवसर बढ़ेंगे और यात्री सेवाओं में सुधार होगा",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335669&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335669&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-13T02:35:40.572860+00:00",
     "archive": false,
     "verified": true
   },
