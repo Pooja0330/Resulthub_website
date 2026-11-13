@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-8ca0501c952d40fe9512a965",
+    "title": "स्वच्छ सर्वेक्षण 2025-26 के परिणामों की घोषणा",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336097&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336097&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-13T17:37:42.229854+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-c2fda6411e3df88b525adea6",
     "title": "प्रधानमंत्री ने असम के गोलाघाट जिले में हुए हादसे में हुई लोगों की मौत पर दुःख व्यक्त किया",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336085&lang=1",
@@ -319,23 +336,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-13T12:01:22.463938+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-f3f628edf905b108c6e82698",
-    "title": "बेंगलुरु में विभिन्न विकास परियोजनाओं के शिलान्यास एवं शुभारंभ के मौके पर प्रधानमंत्री के संबोधन का मूल पाठ",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335832&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335832&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-13T10:36:20.859418+00:00",
     "archive": false,
     "verified": true
   }
