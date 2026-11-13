@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-13T06:06:40.481284+00:00",
-  "scan_started_at": "2026-11-13T06:01:19.129083+00:00",
+  "last_checked_at": "2026-11-13T06:20:55.199048+00:00",
+  "scan_started_at": "2026-11-13T06:15:53.433085+00:00",
   "sources_enabled": 307,
   "sources_succeeded": 164,
   "sources_failed": 143,
@@ -9,7 +9,7 @@
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, SSLError: 28, ConnectionError: 25, HTTPError: 20, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 87, SSLError: 28, ConnectionError: 25, HTTPError: 19, ReadTimeout: 5",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -74,10 +74,6 @@
     {
       "source_id": "barc-recruitment",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "bihar-daroga",
-      "error_type": "HTTPError"
     },
     {
       "source_id": "bihar-state-health-society-results-archive",
@@ -352,6 +348,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "nagaland-university",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "naval-coastguard-jobs",
       "error_type": "SSLError"
     },
@@ -445,7 +445,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ConnectTimeout"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
