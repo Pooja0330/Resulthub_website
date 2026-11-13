@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-13T14:20:46.286758+00:00",
-  "scan_started_at": "2026-11-13T14:15:57.076370+00:00",
+  "last_checked_at": "2026-11-13T14:37:37.199820+00:00",
+  "scan_started_at": "2026-11-13T14:32:04.458429+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 160,
-  "sources_failed": 147,
+  "sources_succeeded": 164,
+  "sources_failed": 143,
   "new_candidates": 0,
   "recovered_records": 1,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 85, SSLError: 31, ConnectionError: 28, HTTPError: 20, ReadTimeout: 4",
+  "failure_types": "ConnectTimeout: 90, SSLError: 28, ConnectionError: 26, HTTPError: 18, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -136,10 +136,6 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "coal-india-careers",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "coast-guard-home",
       "error_type": "SSLError"
     },
@@ -192,23 +188,19 @@
       "error_type": "HTTPError"
     },
     {
+      "source_id": "hpbose-results",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "hpsc",
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "hpssc",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "ibps-calendar",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-careers",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-csa-xvi",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-recruitment",
       "error_type": "SSLError"
     },
     {
@@ -328,10 +320,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "mat-aima",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -449,7 +437,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "rajeduboard",
@@ -572,14 +560,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "sbi-current-openings",
-      "error_type": "ReadTimeout"
-    },
-    {
-      "source_id": "sbi-recruitment-results",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "secl-careers",
       "error_type": "HTTPError"
     },
@@ -649,6 +629,10 @@
     },
     {
       "source_id": "upsc-final-results",
+      "error_type": "ReadTimeout"
+    },
+    {
+      "source_id": "upsc-recruitment",
       "error_type": "ReadTimeout"
     },
     {
