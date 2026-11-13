@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-13T03:51:15.134510+00:00",
-  "scan_started_at": "2026-11-13T03:45:50.960475+00:00",
+  "last_checked_at": "2026-11-13T04:06:27.400951+00:00",
+  "scan_started_at": "2026-11-13T04:01:18.542120+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 167,
-  "sources_failed": 140,
+  "sources_succeeded": 162,
+  "sources_failed": 145,
   "new_candidates": 0,
-  "recovered_records": 2,
+  "recovered_records": 1,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 87, SSLError: 28, ConnectionError: 25, HTTPError: 19, ValueError: 3",
+  "failure_types": "ConnectTimeout: 92, SSLError: 27, ConnectionError: 26, HTTPError: 19, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bssc",
@@ -146,6 +146,14 @@
     {
       "source_id": "coast-guard-recruitment",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "columbia-ciet-raipur",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "columbia-institute-pharmacy-raipur",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "drdo-careers",
@@ -246,6 +254,10 @@
     {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "jharkhand-psc",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "jkbose",
@@ -432,12 +444,16 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "rajasthan-university",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "rajeduboard",
       "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ranchi-university",
-      "error_type": "SSLError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "resultbharat-syllabus",
@@ -561,6 +577,10 @@
     },
     {
       "source_id": "sikkim-psc",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "sikkim-university",
       "error_type": "ConnectTimeout"
     },
     {
