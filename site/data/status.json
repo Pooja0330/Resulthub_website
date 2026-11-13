@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-13T18:37:12.744872+00:00",
-  "scan_started_at": "2026-11-13T18:31:37.817636+00:00",
+  "last_checked_at": "2026-11-13T18:46:09.939215+00:00",
+  "scan_started_at": "2026-11-13T18:40:19.677400+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 159,
-  "sources_failed": 148,
+  "sources_succeeded": 155,
+  "sources_failed": 152,
   "new_candidates": 0,
   "recovered_records": 1,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, SSLError: 29, ConnectionError: 26, HTTPError: 19, ReadTimeout: 4",
+  "failure_types": "ConnectTimeout: 92, SSLError: 29, ConnectionError: 28, HTTPError: 20, ReadTimeout: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bssc",
@@ -212,7 +212,7 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-recent-updates",
+      "source_id": "ibps-csa-xvi",
       "error_type": "SSLError"
     },
     {
@@ -258,6 +258,14 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "indiapost-gds",
+      "error_type": "ReadTimeout"
+    },
+    {
+      "source_id": "indiapost-recruitment",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -380,6 +388,10 @@
       "error_type": "HTTPError"
     },
     {
+      "source_id": "niacl",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "nielit-recruitment",
       "error_type": "SSLError"
     },
@@ -428,6 +440,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "ossc",
+      "error_type": "ConnectionError"
+    },
+    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -453,7 +469,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "rajeduboard",
