@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-13T02:21:26.871634+00:00",
-  "scan_started_at": "2026-11-13T02:16:01.694848+00:00",
+  "last_checked_at": "2026-11-13T02:35:24.528689+00:00",
+  "scan_started_at": "2026-11-13T02:31:04.736674+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 166,
-  "sources_failed": 141,
+  "sources_succeeded": 167,
+  "sources_failed": 140,
   "new_candidates": 0,
   "recovered_records": 2,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, SSLError: 27, ConnectionError: 25, HTTPError: 17, ValueError: 4",
+  "failure_types": "ConnectTimeout: 87, SSLError: 27, ConnectionError: 26, HTTPError: 19, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "apsc",
@@ -136,6 +136,10 @@
       "error_type": "HTTPError"
     },
     {
+      "source_id": "coal-india-careers",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "coast-guard-home",
       "error_type": "SSLError"
     },
@@ -188,15 +192,7 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "hpbose-results",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "hpsc",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "hpssc",
       "error_type": "ConnectTimeout"
     },
     {
@@ -320,6 +316,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "mat-aima",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -405,10 +405,6 @@
     },
     {
       "source_id": "osmania-university",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
@@ -605,7 +601,7 @@
     },
     {
       "source_id": "tripura-university",
-      "error_type": "ValueError"
+      "error_type": "SSLError"
     },
     {
       "source_id": "tspsc",
