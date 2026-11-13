@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-13T16:06:13.682873+00:00",
-  "scan_started_at": "2026-11-13T16:01:22.203615+00:00",
+  "last_checked_at": "2026-11-13T16:21:18.557999+00:00",
+  "scan_started_at": "2026-11-13T16:15:55.590548+00:00",
   "sources_enabled": 307,
   "sources_succeeded": 161,
   "sources_failed": 146,
@@ -9,7 +9,7 @@
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 87, ConnectionError: 29, SSLError: 29, HTTPError: 20, ValueError: 3",
+  "failure_types": "ConnectTimeout: 88, SSLError: 29, ConnectionError: 28, HTTPError: 20, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
@@ -208,15 +208,11 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-csa-xvi",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-recruitment",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "ibps-rrb",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-rrb-xv",
       "error_type": "SSLError"
     },
     {
@@ -260,10 +256,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "indiapost-gds",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -302,6 +294,10 @@
     {
       "source_id": "karnataka-results",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "keralapsc",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "keralaresults",
@@ -428,6 +424,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "osssc",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -453,7 +453,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "rajeduboard",
