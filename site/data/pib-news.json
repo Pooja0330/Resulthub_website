@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-847686428f01a0a196ad2111",
+    "title": "प्रधानमंत्री का मनीला, फिलीपींस दौरा",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335676&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335676&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-13T05:07:16.759013+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-3561bfa16ee064aa631bef85",
     "title": "राष्ट्रीय डिजिटल जीवन प्रमाणपत्र अभियान 5.0 के तहत 20 लाख से अधिक रक्षा पेंशनभोगियों ने अपना डिजिटल जीवन प्रमाणन सत्यापित किया",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335670&lang=1",
@@ -132,23 +149,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-12T16:50:28.494951+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-a13135a09fb0078df54ce84a",
-    "title": "भारी उद्योग मंत्रालय को पीएलआईएसीसी योजना के अंतर्गत 10 गीगावॉट उन्नत रसायन सेल विनिर्माण क्षमता के लिए 22 निविदाएं प्राप्त हुई",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335618&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335618&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-12T15:50:51.936224+00:00",
     "archive": false,
     "verified": true
   },
