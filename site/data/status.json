@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-13T19:36:31.141713+00:00",
-  "scan_started_at": "2026-11-13T19:31:08.157846+00:00",
+  "last_checked_at": "2026-11-13T19:50:35.161346+00:00",
+  "scan_started_at": "2026-11-13T19:45:47.142768+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 158,
-  "sources_failed": 149,
+  "sources_succeeded": 157,
+  "sources_failed": 150,
   "new_candidates": 0,
   "recovered_records": 1,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, ConnectionError: 30, SSLError: 28, HTTPError: 19, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 92, SSLError: 30, ConnectionError: 25, HTTPError: 20, ReadTimeout: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -164,10 +164,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "gate",
-      "error_type": "ConnectionError"
-    },
-    {
       "source_id": "goa-technical-education-old-results",
       "error_type": "SSLError"
     },
@@ -205,10 +201,18 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "ibps",
+      "error_type": "HTTPError"
     },
     {
       "source_id": "ibps-calendar",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-csa-xvi",
       "error_type": "SSLError"
     },
     {
@@ -364,6 +368,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "nagaland-psc",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "naval-coastguard-jobs",
       "error_type": "SSLError"
     },
@@ -436,10 +444,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "pondicherry-university-old-results",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "punjab-psc",
       "error_type": "ConnectTimeout"
     },
@@ -457,7 +461,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ConnectTimeout"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
@@ -593,7 +597,7 @@
     },
     {
       "source_id": "tamilnadu-board-official",
-      "error_type": "ConnectionError"
+      "error_type": "SSLError"
     },
     {
       "source_id": "telangana-board",
