@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-2390b54a0cfcab5b3b59046b",
+    "title": "एएनआरएफ ने ब्रिक-एनआईपीजीआर में आईआरजी/ईएमईक्यू कॉन्क्लेव का आयोजन किया",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335743&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335743&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-13T07:51:26.178627+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-d246dc66624431ce51ee242f",
     "title": "दीपम ने स्वच्छता को संस्थागत बनाने और लंबित मामलों को कम करने के लिए विशेष अभियान 6 में हिस्‍सा लिया",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335717&lang=1",
@@ -268,23 +285,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-12T15:01:31.702267+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-d92e890653ad295d9f28c884",
-    "title": "केंद्रीय पर्यावरण मंत्री ने लीडआईटी के उद्योग सदस्यों और परियोजना के भागीदारों से बातचीत की",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335563&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335563&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-12T13:35:26.444384+00:00",
     "archive": false,
     "verified": true
   },
