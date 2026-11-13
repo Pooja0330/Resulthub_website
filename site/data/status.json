@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-13T17:50:22.058538+00:00",
-  "scan_started_at": "2026-11-13T17:45:49.870034+00:00",
+  "last_checked_at": "2026-11-13T18:06:45.301798+00:00",
+  "scan_started_at": "2026-11-13T18:02:01.081752+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 158,
-  "sources_failed": 149,
+  "sources_succeeded": 155,
+  "sources_failed": 152,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 93, ConnectionError: 27, SSLError: 27, HTTPError: 19, ReadTimeout: 4",
+  "failure_types": "ConnectTimeout: 94, SSLError: 29, ConnectionError: 28, HTTPError: 19, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -209,14 +209,22 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ibps-calendar",
       "error_type": "SSLError"
     },
     {
+      "source_id": "ibps-careers",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "ibps-rrb",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-spl-xvi",
       "error_type": "SSLError"
     },
     {
@@ -340,6 +348,10 @@
       "error_type": "HTTPError"
     },
     {
+      "source_id": "meghalaya-board",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -453,6 +465,10 @@
     },
     {
       "source_id": "rajasthan-rssb",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -606,10 +622,6 @@
     {
       "source_id": "tnmrbrecruit",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "tnpsc",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "tnresults",
