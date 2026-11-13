@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-13T16:51:07.393407+00:00",
-  "scan_started_at": "2026-11-13T16:45:51.461317+00:00",
+  "last_checked_at": "2026-11-13T17:06:17.577284+00:00",
+  "scan_started_at": "2026-11-13T17:01:22.546839+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 163,
-  "sources_failed": 144,
+  "sources_succeeded": 160,
+  "sources_failed": 147,
   "new_candidates": 0,
   "recovered_records": 1,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 87, ConnectionError: 29, SSLError: 28, HTTPError: 20, ValueError: 3",
+  "failure_types": "ConnectTimeout: 90, SSLError: 28, ConnectionError: 27, HTTPError: 20, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
@@ -164,6 +164,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "fci-recruitment",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "goa-technical-education-old-results",
       "error_type": "SSLError"
     },
@@ -201,7 +205,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ibps-calendar",
@@ -250,6 +254,10 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "indiapost-gds",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -373,7 +381,7 @@
     },
     {
       "source_id": "nift-admissions",
-      "error_type": "HTTPError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "nios",
@@ -649,6 +657,10 @@
     },
     {
       "source_id": "upsssc",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "utkal-university",
       "error_type": "ConnectTimeout"
     },
     {
