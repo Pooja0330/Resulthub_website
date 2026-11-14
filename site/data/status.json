@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-14T05:36:15.956075+00:00",
-  "scan_started_at": "2026-11-14T05:31:07.775952+00:00",
+  "last_checked_at": "2026-11-14T05:50:28.454984+00:00",
+  "scan_started_at": "2026-11-14T05:45:48.192493+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 161,
-  "sources_failed": 146,
+  "sources_succeeded": 162,
+  "sources_failed": 145,
   "new_candidates": 0,
   "recovered_records": 1,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, SSLError: 29, ConnectionError: 26, HTTPError: 19, ReadTimeout: 4",
+  "failure_types": "ConnectTimeout: 90, SSLError: 29, ConnectionError: 25, HTTPError: 19, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -244,10 +244,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "indiapost-recruitment",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -314,6 +310,10 @@
     {
       "source_id": "maha-rojgar",
       "error_type": "HTTPError"
+    },
+    {
+      "source_id": "maharashtra-cet-cell",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "mahresult",
@@ -446,10 +446,6 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
