@@ -1,9 +1,9 @@
 [
   {
-    "id": "pib-5cde065cf27d72a3b885f456",
-    "title": "‘नशा मुक्त युवा, विकसित भारत क्विज़’ में 28,876 नागरिकों ने भाग लिया",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336040&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336040&lang=1",
+    "id": "pib-f9e14f265d56a2254281ea2d",
+    "title": "भारतीय रेलवे ने नेपाल में जनकपुर धाम को भारत में अयोध्या से जोड़ने वाली साप्ताहिक ट्रेन सेवा को मंजूरी दी",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336250&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336250&lang=1",
     "source_id": "pib-independent-feed",
     "source_name": "Press Information Bureau (PIB) — Official Press Release",
     "authority": "Press Information Bureau (PIB)",
@@ -12,7 +12,24 @@
     "region": "Central",
     "state": "",
     "published": "",
-    "detected_at": "2026-11-14T12:31:13.497981+00:00",
+    "detected_at": "2026-11-14T12:51:26.305964+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
+    "id": "pib-6058e1132ad0c0b722c866e9",
+    "title": "प्रधानमंत्री 15 नवंबर को ‘जनजातीय गौरव दिवस’ कार्यक्रम में हिस्सा लेंगे",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336251&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336251&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-14T12:51:26.305916+00:00",
     "archive": false,
     "verified": true
   },
@@ -319,23 +336,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-13T17:06:22.334819+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-3606122703189e48f84c101e",
-    "title": "आर्थिक तंगी से शैक्षणिक उत्कृष्टता तक: एनएफएससी फेलोशिप ने एक शोधार्थी को सशक्त बनाया",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336043&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336043&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-13T15:51:19.845559+00:00",
     "archive": false,
     "verified": true
   }
