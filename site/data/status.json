@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-14T07:35:39.390993+00:00",
-  "scan_started_at": "2026-11-14T07:31:04.415980+00:00",
+  "last_checked_at": "2026-11-14T07:51:27.384520+00:00",
+  "scan_started_at": "2026-11-14T07:46:04.686106+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 160,
-  "sources_failed": 147,
+  "sources_succeeded": 164,
+  "sources_failed": 143,
   "new_candidates": 0,
   "recovered_records": 1,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 87, SSLError: 31, ConnectionError: 29, HTTPError: 19, ValueError: 3",
+  "failure_types": "ConnectTimeout: 90, SSLError: 29, ConnectionError: 26, HTTPError: 17, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
@@ -133,10 +133,6 @@
     },
     {
       "source_id": "cisce-results",
-      "error_type": "HTTPError"
-    },
-    {
-      "source_id": "coal-india-careers",
       "error_type": "HTTPError"
     },
     {
@@ -194,10 +190,6 @@
     {
       "source_id": "hpsc",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "ibps",
-      "error_type": "SSLError"
     },
     {
       "source_id": "ibps-calendar",
@@ -322,10 +314,6 @@
     {
       "source_id": "manipur-board",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "mat-aima",
-      "error_type": "HTTPError"
     },
     {
       "source_id": "merchant-navy-imu",
@@ -572,10 +560,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "sambalpur-university",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "secl-careers",
       "error_type": "HTTPError"
     },
@@ -601,7 +585,7 @@
     },
     {
       "source_id": "tnmrbrecruit",
-      "error_type": "SSLError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "tnresults",
