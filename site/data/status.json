@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-14T02:51:29.024944+00:00",
-  "scan_started_at": "2026-11-14T02:45:50.615401+00:00",
+  "last_checked_at": "2026-11-14T03:07:15.527798+00:00",
+  "scan_started_at": "2026-11-14T03:01:47.528525+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 164,
-  "sources_failed": 143,
+  "sources_succeeded": 161,
+  "sources_failed": 146,
   "new_candidates": 0,
   "recovered_records": 1,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 87, ConnectionError: 29, SSLError: 28, HTTPError: 19, ValueError: 3",
+  "failure_types": "ConnectTimeout: 89, SSLError: 29, ConnectionError: 28, HTTPError: 19, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
@@ -204,6 +204,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "ibps-spl-xvi",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "iiser-admissions",
       "error_type": "SSLError"
     },
@@ -282,6 +286,10 @@
     {
       "source_id": "karnataka-results",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "keralapsc",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "keralaresults",
@@ -437,6 +445,10 @@
     },
     {
       "source_id": "rajasthan-rssb",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
       "error_type": "ConnectTimeout"
     },
     {
