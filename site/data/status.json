@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-14T15:50:56.131018+00:00",
-  "scan_started_at": "2026-11-14T15:45:51.502817+00:00",
+  "last_checked_at": "2026-11-14T16:06:02.867884+00:00",
+  "scan_started_at": "2026-11-14T16:01:42.821460+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 160,
-  "sources_failed": 147,
+  "sources_succeeded": 157,
+  "sources_failed": 150,
   "new_candidates": 0,
   "recovered_records": 1,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, ConnectionError: 28, SSLError: 28, HTTPError: 20, ValueError: 3",
+  "failure_types": "ConnectTimeout: 91, SSLError: 30, ConnectionError: 28, HTTPError: 20, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ap-psc",
@@ -97,7 +97,7 @@
     },
     {
       "source_id": "bssc",
-      "error_type": "ReadTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "cbse-previous-years-results",
@@ -201,10 +201,14 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps-calendar",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-csa-xvi",
       "error_type": "SSLError"
     },
     {
@@ -456,6 +460,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "rajasthan-university",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "rajeduboard",
       "error_type": "ConnectTimeout"
     },
@@ -645,6 +653,10 @@
     },
     {
       "source_id": "upsc-final-results",
+      "error_type": "ReadTimeout"
+    },
+    {
+      "source_id": "upsc-recruitment",
       "error_type": "ReadTimeout"
     },
     {
