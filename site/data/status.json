@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-14T16:50:34.316052+00:00",
-  "scan_started_at": "2026-11-14T16:45:49.760385+00:00",
+  "last_checked_at": "2026-11-14T16:56:15.917109+00:00",
+  "scan_started_at": "2026-11-14T16:51:25.312026+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 158,
-  "sources_failed": 149,
+  "sources_succeeded": 157,
+  "sources_failed": 150,
   "new_candidates": 0,
   "recovered_records": 1,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, SSLError: 30, ConnectionError: 29, HTTPError: 20, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 90, SSLError: 29, ConnectionError: 28, HTTPError: 20, ReadTimeout: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -432,10 +432,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "osssc",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -457,6 +453,10 @@
     },
     {
       "source_id": "rajasthan-rssb",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -580,6 +580,14 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "sbi-current-openings",
+      "error_type": "ReadTimeout"
+    },
+    {
+      "source_id": "sbi-recruitment-results",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "secl-careers",
       "error_type": "HTTPError"
     },
@@ -606,10 +614,6 @@
     {
       "source_id": "tnmrbrecruit",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "tnpsc",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "tnresults",
