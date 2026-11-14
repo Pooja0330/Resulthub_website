@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-14T11:51:12.081269+00:00",
-  "scan_started_at": "2026-11-14T11:45:56.698868+00:00",
+  "last_checked_at": "2026-11-14T12:07:35.906075+00:00",
+  "scan_started_at": "2026-11-14T12:02:18.842818+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 163,
-  "sources_failed": 144,
+  "sources_succeeded": 160,
+  "sources_failed": 147,
   "new_candidates": 0,
   "recovered_records": 1,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, SSLError: 29, ConnectionError: 27, HTTPError: 19, ValueError: 3",
+  "failure_types": "ConnectTimeout: 91, SSLError: 31, ConnectionError: 26, HTTPError: 17, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -136,10 +136,6 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "coal-india-careers",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "coast-guard-home",
       "error_type": "SSLError"
     },
@@ -197,6 +193,14 @@
     },
     {
       "source_id": "ibps-calendar",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-careers",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-recent-updates",
       "error_type": "SSLError"
     },
     {
@@ -320,10 +324,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "mat-aima",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -441,6 +441,10 @@
     },
     {
       "source_id": "rajasthan-rssb",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -592,6 +596,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "tnpsc",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "tnresults",
       "error_type": "ConnectTimeout"
     },
@@ -633,6 +641,10 @@
     },
     {
       "source_id": "upsc-final-results",
+      "error_type": "ReadTimeout"
+    },
+    {
+      "source_id": "upsc-recruitment",
       "error_type": "ReadTimeout"
     },
     {
