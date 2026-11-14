@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-beaaa89d733190c11940ba80",
+    "title": "भारत की राष्ट्रपति की छठ पूजा पर शुभकामनाएं",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336232&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336232&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-14T12:01:30.909485+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-ee9e30e6a8efcf0a4a3a1e67",
     "title": "राष्ट्रीय जनजातीय साहित्य महोत्सव का समापन, मौखिक परंपराओं को बचाने और समकालीन जनजातीय साहित्य को बढ़ावा देने पर ज़ोर",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336219&lang=1",
@@ -285,23 +302,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-13T17:06:22.334819+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-f954e100859f7899af98bbf7",
-    "title": "प्रधानमंत्री श्री नरेन्द्र मोदी ने कर्नाटक के मैसूरु में भारत के पहले एलईडी डोम तारामंडल, 'कॉसमॉस-मैसूरु तारामंडल' का उद्घाटन किया",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336042&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336042&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-13T15:51:19.845677+00:00",
     "archive": false,
     "verified": true
   },
