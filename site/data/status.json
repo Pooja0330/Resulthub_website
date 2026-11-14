@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-14T16:21:13.882609+00:00",
-  "scan_started_at": "2026-11-14T16:15:52.915041+00:00",
+  "last_checked_at": "2026-11-14T16:36:34.240820+00:00",
+  "scan_started_at": "2026-11-14T16:31:15.607367+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 158,
-  "sources_failed": 149,
+  "sources_succeeded": 160,
+  "sources_failed": 147,
   "new_candidates": 0,
   "recovered_records": 1,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 92, SSLError: 29, ConnectionError: 28, HTTPError: 20, ValueError: 3",
+  "failure_types": "ConnectTimeout: 93, SSLError: 30, ConnectionError: 26, HTTPError: 18, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -136,10 +136,6 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "coal-india-careers",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "coast-guard-home",
       "error_type": "SSLError"
     },
@@ -201,7 +197,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps-calendar",
@@ -209,6 +205,10 @@
     },
     {
       "source_id": "ibps-rrb",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-spl-xvi",
       "error_type": "SSLError"
     },
     {
@@ -272,10 +272,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "jntuh",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "karnataka-board",
       "error_type": "ConnectTimeout"
     },
@@ -330,10 +326,6 @@
     {
       "source_id": "manipur-board",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "mat-aima",
-      "error_type": "HTTPError"
     },
     {
       "source_id": "merchant-navy-imu",
