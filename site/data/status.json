@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-14T12:51:09.754728+00:00",
-  "scan_started_at": "2026-11-14T12:45:50.833996+00:00",
+  "last_checked_at": "2026-11-14T13:06:53.335577+00:00",
+  "scan_started_at": "2026-11-14T13:01:31.913168+00:00",
   "sources_enabled": 307,
   "sources_succeeded": 161,
   "sources_failed": 146,
@@ -9,7 +9,7 @@
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, SSLError: 30, ConnectionError: 26, HTTPError: 19, ValueError: 3",
+  "failure_types": "ConnectTimeout: 90, SSLError: 29, ConnectionError: 26, HTTPError: 18, ReadTimeout: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -136,10 +136,6 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "coal-india-careers",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "coast-guard-home",
       "error_type": "SSLError"
     },
@@ -200,10 +196,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-recent-updates",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "ibps-rrb",
       "error_type": "SSLError"
     },
@@ -246,10 +238,6 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "indiapost-recruitment",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -326,10 +314,6 @@
     {
       "source_id": "manipur-board",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "mat-aima",
-      "error_type": "HTTPError"
     },
     {
       "source_id": "merchant-navy-imu",
@@ -416,6 +400,10 @@
       "error_type": "ConnectionError"
     },
     {
+      "source_id": "odisha-board",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "odisha-board-official",
       "error_type": "HTTPError"
     },
@@ -436,6 +424,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "pondicherry-university-old-results",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "punjab-psc",
       "error_type": "ConnectTimeout"
     },
@@ -450,6 +442,10 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "rajeduboard",
@@ -584,10 +580,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "sppu",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "tamilnadu-board-official",
       "error_type": "SSLError"
     },
@@ -642,6 +634,14 @@
     {
       "source_id": "upsc-exam-calendar",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "upsc-final-results",
+      "error_type": "ReadTimeout"
+    },
+    {
+      "source_id": "upsc-recruitment",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "upsc-results",
