@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-fb9009007e94f9ebd8121a29",
+    "title": "प्रधानमंत्री जनजातीय विकास मिशन",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336102&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336102&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-14T03:36:34.522843+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-c52eff5c987dc2a473aa3bdc",
     "title": "सूक्ष्म, लघु और मध्यम उद्यम मंत्रालय (एमएसएमई) ने विशेष अभियान 6.0 के समापन पर कार्यालयों से बाहर भी स्वच्छता अभियान को आगे बढ़ाया",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336098&lang=1",
@@ -268,23 +285,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-13T13:20:47.375980+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-51fcac9f31c89dc486ec6f01",
-    "title": "प्रधानमंत्री श्री नरेन्‍द्र मोदी ने बेंगलुरु में 15,600 करोड़ रुपये से अधिक की विभिन्न विकास परियोजनाओं का उद्घाटन किया, उन्हें राष्ट्र को समर्पित किया, आधारशिला रखी और उनकी शुरुआत की",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335964&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335964&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-13T12:50:49.763302+00:00",
     "archive": false,
     "verified": true
   },
