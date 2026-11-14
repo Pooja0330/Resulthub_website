@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-14T08:20:32.859378+00:00",
-  "scan_started_at": "2026-11-14T08:15:49.056939+00:00",
+  "last_checked_at": "2026-11-14T08:36:22.297355+00:00",
+  "scan_started_at": "2026-11-14T08:31:06.139522+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 163,
-  "sources_failed": 144,
+  "sources_succeeded": 162,
+  "sources_failed": 145,
   "new_candidates": 0,
   "recovered_records": 1,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, SSLError: 29, ConnectionError: 27, HTTPError: 19, ValueError: 3",
+  "failure_types": "ConnectTimeout: 90, SSLError: 30, ConnectionError: 25, HTTPError: 19, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
@@ -197,6 +197,10 @@
     },
     {
       "source_id": "ibps-calendar",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-csa-xvi",
       "error_type": "SSLError"
     },
     {
