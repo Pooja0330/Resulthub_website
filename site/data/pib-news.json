@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-92b47f07706a5ccfe06c1f15",
+    "title": "लोकसभा अध्यक्ष ने पंडित जवाहरलाल नेहरू को श्रद्धांजलि अर्पित की",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336194&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336194&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-14T10:06:17.322883+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-1e5f9d1cd50017a607721501",
     "title": "औद्योगिक विकास और पर्यावरण संरक्षण के बीच समन्वय ही विकसित भारत के निर्माण की नींव है: केंद्रीय कपड़ा मंत्री गिरिराज सिंह",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336191&lang=1",
@@ -319,23 +336,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-13T13:52:00.366117+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-7c83d30371f136ce77eab398",
-    "title": "दूरसंचार विभाग द्वारा नई दिल्ली में प्रथम अखिल भारतीय राजभाषा सम्मेलन 2026 का आयोजन",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335970&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335970&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-13T13:20:47.375980+00:00",
     "archive": false,
     "verified": true
   }
