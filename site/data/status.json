@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-14T13:36:46.923350+00:00",
-  "scan_started_at": "2026-11-14T13:31:49.864882+00:00",
+  "last_checked_at": "2026-11-14T13:50:41.624874+00:00",
+  "scan_started_at": "2026-11-14T13:45:49.247263+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 160,
-  "sources_failed": 147,
+  "sources_succeeded": 161,
+  "sources_failed": 146,
   "new_candidates": 0,
   "recovered_records": 1,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, SSLError: 28, ConnectionError: 26, HTTPError: 19, ReadTimeout: 5",
+  "failure_types": "ConnectTimeout: 89, SSLError: 28, ConnectionError: 27, HTTPError: 19, ReadTimeout: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ap-psc",
@@ -634,10 +634,6 @@
     {
       "source_id": "upsc-active-examinations",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "upsc-active-exams",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "upsc-exam-calendar",
