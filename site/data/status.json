@@ -1,9 +1,9 @@
 {
-  "last_checked_at": "2026-11-14T08:06:20.665447+00:00",
-  "scan_started_at": "2026-11-14T08:01:44.742626+00:00",
+  "last_checked_at": "2026-11-14T08:20:32.859378+00:00",
+  "scan_started_at": "2026-11-14T08:15:49.056939+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 162,
-  "sources_failed": 145,
+  "sources_succeeded": 163,
+  "sources_failed": 144,
   "new_candidates": 0,
   "recovered_records": 1,
   "telegram_posts_sent": 0,
@@ -633,10 +633,6 @@
     },
     {
       "source_id": "upsc-final-results",
-      "error_type": "ReadTimeout"
-    },
-    {
-      "source_id": "upsc-recruitment",
       "error_type": "ReadTimeout"
     },
     {
