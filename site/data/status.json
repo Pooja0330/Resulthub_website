@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-15T15:51:20.931833+00:00",
-  "scan_started_at": "2026-11-15T15:46:00.177003+00:00",
+  "last_checked_at": "2026-11-15T16:06:39.230184+00:00",
+  "scan_started_at": "2026-11-15T16:01:24.126624+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 157,
-  "sources_failed": 150,
+  "sources_succeeded": 158,
+  "sources_failed": 149,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, SSLError: 33, ConnectionError: 27, HTTPError: 18, ValueError: 3",
+  "failure_types": "ConnectTimeout: 93, SSLError: 29, ConnectionError: 27, HTTPError: 20, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bssc",
@@ -133,6 +133,10 @@
     },
     {
       "source_id": "cisce-results",
+      "error_type": "HTTPError"
+    },
+    {
+      "source_id": "coal-india-careers",
       "error_type": "HTTPError"
     },
     {
@@ -204,23 +208,7 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-csa-xvi",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-po-mt",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-recent-updates",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "ibps-rrb",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-spl-xvi",
       "error_type": "SSLError"
     },
     {
@@ -338,6 +326,10 @@
     {
       "source_id": "manipur-board",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "mat-aima",
+      "error_type": "HTTPError"
     },
     {
       "source_id": "merchant-navy-imu",
@@ -678,6 +670,10 @@
     {
       "source_id": "uttarakhand-psc",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "vtu",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "vyapam-cg",
