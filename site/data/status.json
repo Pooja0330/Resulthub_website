@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-15T01:06:06.639185+00:00",
-  "scan_started_at": "2026-11-15T01:01:45.709457+00:00",
+  "last_checked_at": "2026-11-15T01:20:12.629348+00:00",
+  "scan_started_at": "2026-11-15T01:15:49.127347+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 155,
-  "sources_failed": 152,
+  "sources_succeeded": 158,
+  "sources_failed": 149,
   "new_candidates": 0,
   "recovered_records": 1,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, SSLError: 31, ConnectionError: 29, HTTPError: 21, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 92, SSLError: 31, ConnectionError: 26, HTTPError: 19, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -201,11 +201,11 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps",
-      "error_type": "HTTPError"
+      "error_type": "SSLError"
     },
     {
       "source_id": "ibps-calendar",
@@ -213,10 +213,6 @@
     },
     {
       "source_id": "ibps-csa-xvi",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-po-mt",
       "error_type": "SSLError"
     },
     {
@@ -476,10 +472,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "rbi-opportunities",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "resultbharat-syllabus",
       "error_type": "HTTPError"
     },
@@ -661,10 +653,6 @@
     },
     {
       "source_id": "upsc-final-results",
-      "error_type": "ReadTimeout"
-    },
-    {
-      "source_id": "upsc-recruitment",
       "error_type": "ReadTimeout"
     },
     {
