@@ -124,6 +124,18 @@ class CheckerSafetyTests(unittest.TestCase):
             "merit_list",
         )
 
+    def test_classifies_ssc_city_intimation_and_admission_certificate_notice(self):
+        self.assertEqual(
+            classify("Information regarding the city of examination and admission certificate for candidates of Sub-Inspector Examination, 2026"),
+            "admit_card",
+        )
+
+    def test_classifies_ibps_pre_examination_training_update(self):
+        self.assertEqual(
+            classify("Online Pre-Examination Training for Candidates under CRP-RRBs-XV"),
+            "exam_schedule",
+        )
+
     def test_ignores_unrelated_cultural_event(self):
         self.assertIsNone(classify("Annual Cultural Festival 2026"))
 
