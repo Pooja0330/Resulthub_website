@@ -50,15 +50,15 @@ RULES = [
     ("cutoff", re.compile(
         r"\b(cut.?off marks?|qualifying marks?)\b", re.I)),
     ("admit_card", re.compile(
-        r"\b(admit cards?|hall tickets?|call letters?|exam city intimation|"
-        r"city intimation slip|download your admit card)\b", re.I)),
+        r"\b(admit cards?|hall tickets?|call letters?|admission certificates?|"
+        r"exam city intimation|city of examination|city intimation slip|download your admit card)\b", re.I)),
     ("answer_key", re.compile(
         r"\b(answer keys?|response sheets?|response sheet(?:s|\(s\))?|tentative answer keys?|objection tracker|challenge answer key)\b", re.I)),
     ("exam_schedule", re.compile(
         r"\b(exam date|examination date|exam schedule|examination schedule|"
         r"date sheet|exam calendar|exam postponement|exam rescheduled|"
         r"examination postponed|examination rescheduled|interview schedule|"
-        r"written examination schedule|revised exam date)\b", re.I)),
+        r"written examination schedule|revised exam date|pre-examination training|pre examination training)\b", re.I)),
     ("notification", re.compile(
         r"\b(exam notification|examination notification|recruitment notification|"
         r"recruitment advertisement|vacancy notification|information bulletin|"
