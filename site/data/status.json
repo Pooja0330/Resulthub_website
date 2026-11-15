@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-15T12:51:33.546799+00:00",
-  "scan_started_at": "2026-11-15T12:45:54.534383+00:00",
+  "last_checked_at": "2026-11-15T13:06:59.074095+00:00",
+  "scan_started_at": "2026-11-15T13:01:50.942991+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 158,
-  "sources_failed": 149,
+  "sources_succeeded": 156,
+  "sources_failed": 151,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, SSLError: 31, ConnectionError: 26, HTTPError: 20, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 91, SSLError: 31, ConnectionError: 26, HTTPError: 21, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -208,7 +208,7 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-recent-updates",
+      "source_id": "ibps-csa-xvi",
       "error_type": "SSLError"
     },
     {
@@ -256,10 +256,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "indiapost-recruitment",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -297,6 +293,10 @@
     },
     {
       "source_id": "karnataka-results",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "kerala-devaswom",
       "error_type": "ConnectTimeout"
     },
     {
@@ -442,6 +442,10 @@
     {
       "source_id": "patna-university",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "pondicherry-university-old-results",
+      "error_type": "HTTPError"
     },
     {
       "source_id": "punjab-psc",
@@ -653,6 +657,10 @@
     },
     {
       "source_id": "upsc-final-results",
+      "error_type": "ReadTimeout"
+    },
+    {
+      "source_id": "upsc-recruitment",
       "error_type": "ReadTimeout"
     },
     {
