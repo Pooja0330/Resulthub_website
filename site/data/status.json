@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-15T08:37:01.791826+00:00",
-  "scan_started_at": "2026-11-15T08:31:46.278276+00:00",
+  "last_checked_at": "2026-11-15T08:51:10.678227+00:00",
+  "scan_started_at": "2026-11-15T08:45:52.932709+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 160,
-  "sources_failed": 147,
+  "sources_succeeded": 159,
+  "sources_failed": 148,
   "new_candidates": 0,
-  "recovered_records": 1,
+  "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 87, SSLError: 32, ConnectionError: 28, HTTPError: 19, ValueError: 3",
+  "failure_types": "ConnectTimeout: 88, SSLError: 33, ConnectionError: 28, HTTPError: 18, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -197,18 +197,14 @@
     },
     {
       "source_id": "ibps",
-      "error_type": "HTTPError"
+      "error_type": "SSLError"
     },
     {
       "source_id": "ibps-calendar",
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-po-mt",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-recent-updates",
+      "source_id": "ibps-recruitment",
       "error_type": "SSLError"
     },
     {
@@ -432,6 +428,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "osssc",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -582,6 +582,10 @@
     {
       "source_id": "sikkim-psc",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "sikkim-university",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "tamilnadu-board-official",
