@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-9cb4ee702e434168e771a743",
+    "title": "केंद्रीय मंत्री डॉ. जितेंद्र सिंह ने कहा कि भारत इटली के 'इंटरनेशनल फिजिक्स सेंटर' के साथ संबंधों को मजबूत करेगा",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336602&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336602&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-15T13:36:03.529355+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-deac41db8baa84c0b105576a",
     "title": "भारत के अंतरिक्ष अर्थव्यवस्था के द्वार खोलना",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336575&lang=1",
@@ -217,23 +234,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-15T09:01:23.671535+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-14b64d57083c4e986fc732fd",
-    "title": "सेना प्रमुख जनरल धीरज सेठ चेक गणराज्य की आधिकारिक यात्रा पर रवाना हुए",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336482&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336482&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-15T08:51:14.564951+00:00",
     "archive": false,
     "verified": true
   },
