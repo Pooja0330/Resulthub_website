@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-15T09:20:50.719469+00:00",
-  "scan_started_at": "2026-11-15T09:15:52.889534+00:00",
+  "last_checked_at": "2026-11-15T09:36:12.848507+00:00",
+  "scan_started_at": "2026-11-15T09:31:10.075782+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 155,
-  "sources_failed": 152,
+  "sources_succeeded": 153,
+  "sources_failed": 154,
   "new_candidates": 0,
   "recovered_records": 0,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, SSLError: 33, ConnectionError: 30, HTTPError: 20, ValueError: 3",
+  "failure_types": "ConnectTimeout: 88, SSLError: 32, ConnectionError: 27, HTTPError: 22, ReadTimeout: 6",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -201,10 +201,18 @@
     },
     {
       "source_id": "ibps",
-      "error_type": "SSLError"
+      "error_type": "HTTPError"
     },
     {
       "source_id": "ibps-calendar",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-po-mt",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-recent-updates",
       "error_type": "SSLError"
     },
     {
@@ -213,10 +221,6 @@
     },
     {
       "source_id": "ibps-rrb",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-rrb-xv",
       "error_type": "SSLError"
     },
     {
@@ -260,8 +264,16 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "indiapost-gds",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "jharkhand-psc",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jkbose",
@@ -424,6 +436,10 @@
       "error_type": "ConnectionError"
     },
     {
+      "source_id": "odisha-board",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "odisha-board-official",
       "error_type": "HTTPError"
     },
@@ -433,14 +449,6 @@
     },
     {
       "source_id": "osmania-university",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ossc",
-      "error_type": "ConnectionError"
-    },
-    {
-      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
@@ -465,7 +473,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
@@ -601,7 +609,7 @@
     },
     {
       "source_id": "sikkim-university",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "tamilnadu-board-official",
