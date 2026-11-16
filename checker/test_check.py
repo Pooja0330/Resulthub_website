@@ -136,6 +136,16 @@ class CheckerSafetyTests(unittest.TestCase):
             "exam_schedule",
         )
 
+    def test_keeps_long_detailed_official_exam_notice_title(self):
+        from check import is_navigation_noise_title
+        title = (
+            "NOTICE: Candidates shortlisted for the written examination are informed that "
+            "document verification and medical examination will be conducted according to "
+            "the revised schedule published by the Commission for the recruitment process "
+            "and all eligible applicants must bring the required original certificates."
+        )
+        self.assertFalse(is_navigation_noise_title(title))
+
     def test_ignores_unrelated_cultural_event(self):
         self.assertIsNone(classify("Annual Cultural Festival 2026"))
 
