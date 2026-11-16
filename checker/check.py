@@ -557,9 +557,19 @@ def is_navigation_noise_title(title):
     if len(value) > 100 and hits >= 2:
         return True
 
-    # Do not reject a long title/notice solely because it contains detail.
-    # The specific navigation/menu checks above are safer; official notices
-    # often include long eligibility, exam-stage, and document-verification text.
+    # Reject long homepage summaries that combine unrelated campus topics.
+    # Keep long single-subject recruitment/exam notices; only suppress when
+    # several independent non-exam topics are bundled into one scraped title.
+    unrelated_topic_patterns = (
+        r"\bprincipals?\b", r"\bmanagement meeting\b", r"\bph\.?d\.?\b",
+        r"\bvisvesvaraya scheme\b", r"\bdeveloper group\b",
+        r"\bcampus news\b", r"\bactivities\b",
+    )
+    unrelated_hits = sum(bool(re.search(pattern, low, re.I)) for pattern in unrelated_topic_patterns)
+    if len(raw) > 180 and unrelated_hits >= 3:
+        return True
+
+    # Do not reject a long title merely because it contains detailed notice text.
     return False
 
 
