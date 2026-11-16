@@ -557,8 +557,10 @@ def is_navigation_noise_title(title):
     if len(value) > 100 and hits >= 2:
         return True
 
-    # Long multi-clause page summaries should not be treated as one notice.
-    return len(raw) > 260 and len(raw.split()) > 32
+    # Do not reject a long title/notice solely because it contains detail.
+    # The specific navigation/menu checks above are safer; official notices
+    # often include long eligibility, exam-stage, and document-verification text.
+    return False
 
 
 def is_stale_notice(title, published="", url=""):
