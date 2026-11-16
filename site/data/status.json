@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-16T13:36:49.852549+00:00",
-  "scan_started_at": "2026-11-16T13:32:24.583141+00:00",
+  "last_checked_at": "2026-11-16T13:51:18.733020+00:00",
+  "scan_started_at": "2026-11-16T13:45:58.401320+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 157,
-  "sources_failed": 150,
+  "sources_succeeded": 155,
+  "sources_failed": 152,
   "new_candidates": 0,
   "recovered_records": 3,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, SSLError: 30, ConnectionError: 28, HTTPError: 18, ReadTimeout: 4",
+  "failure_types": "ConnectTimeout: 89, ConnectionError: 29, SSLError: 29, HTTPError: 20, ReadTimeout: 6",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "andhra-university",
@@ -128,6 +128,10 @@
       "error_type": "HTTPError"
     },
     {
+      "source_id": "coal-india-careers",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "coast-guard-home",
       "error_type": "SSLError"
     },
@@ -196,10 +200,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-po-mt",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "ibps-rrb",
       "error_type": "SSLError"
     },
@@ -246,6 +246,14 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "indiapost-gds",
+      "error_type": "ReadTimeout"
+    },
+    {
+      "source_id": "indiapost-recruitment",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -326,6 +334,10 @@
     {
       "source_id": "manipur-board",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "mat-aima",
+      "error_type": "HTTPError"
     },
     {
       "source_id": "merchant-navy-imu",
@@ -449,10 +461,6 @@
     },
     {
       "source_id": "rajasthan-rssb",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
       "error_type": "ConnectTimeout"
     },
     {
