@@ -146,6 +146,25 @@ class CheckerSafetyTests(unittest.TestCase):
         )
         self.assertFalse(is_navigation_noise_title(title))
 
+    def test_rejects_bpsc_generic_navigation_cluster(self):
+        from check import is_navigation_noise_title
+        self.assertTrue(is_navigation_noise_title(
+            "All Notices Programs Interviews Results Advertisement"
+        ))
+        self.assertTrue(is_navigation_noise_title(
+            "Advertisements Online Application View Marksheet Interview Letters"
+        ))
+
+    def test_rejects_old_year_only_notice_from_latest_feed(self):
+        self.assertTrue(is_stale_notice(
+            "Railway Recruitment Cell Notice for Re-medical of candidates CEN02 of 2018"
+        ))
+
+    def test_keeps_recent_exam_year_notice(self):
+        self.assertFalse(is_stale_notice(
+            "UP Police Constable Score Card 2026"
+        ))
+
     def test_ignores_unrelated_cultural_event(self):
         self.assertIsNone(classify("Annual Cultural Festival 2026"))
 
