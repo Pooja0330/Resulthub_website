@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-16T15:50:37.823598+00:00",
-  "scan_started_at": "2026-11-16T15:45:52.204632+00:00",
+  "last_checked_at": "2026-11-16T16:20:40.669516+00:00",
+  "scan_started_at": "2026-11-16T16:15:53.953658+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 159,
-  "sources_failed": 148,
+  "sources_succeeded": 153,
+  "sources_failed": 154,
   "new_candidates": 0,
   "recovered_records": 3,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 92, ConnectionError: 28, SSLError: 27, HTTPError: 19, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 91, SSLError: 29, ConnectionError: 28, HTTPError: 20, ReadTimeout: 6",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "andhra-university",
@@ -204,7 +204,15 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "ibps-recruitment",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "ibps-rrb",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-rrb-xv",
       "error_type": "SSLError"
     },
     {
@@ -318,6 +326,10 @@
     {
       "source_id": "maha-rojgar",
       "error_type": "ConnectionError"
+    },
+    {
+      "source_id": "maharashtra-cet-cell",
+      "error_type": "ChunkedEncodingError"
     },
     {
       "source_id": "mahresult",
@@ -437,7 +449,7 @@
     },
     {
       "source_id": "pondicherry-university-old-results",
-      "error_type": "ReadTimeout"
+      "error_type": "HTTPError"
     },
     {
       "source_id": "punjab-psc",
@@ -457,7 +469,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
@@ -644,8 +656,16 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "upsc-active-exams",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "upsc-exam-calendar",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "upsc-final-results",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "upsc-recruitment",
@@ -654,6 +674,10 @@
     {
       "source_id": "upsc-results",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "upsc-whats-new",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "upsc-written-results-archive",
