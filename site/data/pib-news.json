@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-4f6a6057a9cac3d4a8484750",
+    "title": "भारत-म्यांमार नौसैनिक अभ्यास (आईएमएनईएक्स-26) का 8वां संस्करण विशाखापट्टनम में संपन्न",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337020&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337020&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-16T12:21:28.616995+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-fd049aba7ac8ac60be1af09f",
     "title": "45वें भारत अंतरराष्ट्रीय व्यापार मेले में विद्युत मंत्रालय का मंडप",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337014&lang=1",
@@ -302,23 +319,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-16T05:20:40.440100+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-30f845c50c70bf228ba84399",
-    "title": "फिलीपींस की यात्रा पर जाने से पूर्व प्रधानमंत्री नरेन्द्र मोदी का प्रस्थान वक्तव्य",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336719&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336719&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-16T03:51:11.328026+00:00",
     "archive": false,
     "verified": true
   },
