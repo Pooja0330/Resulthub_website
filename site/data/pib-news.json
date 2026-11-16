@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-43a0b74ee0a0bb04a0683853",
+    "title": "शराब की लत से आर्थिक स्थिरता तक",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337150&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337150&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-16T14:37:49.479094+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-7f7a5c98bd13fff0d59d13a0",
     "title": "भारत डाक ने बायोगैस प्रौद्योगिकी के अग्रदूत श्री राम बक्स सिंह के सम्मान में स्मारक डाक टिकट जारी किया",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337124&lang=1",
@@ -251,23 +268,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-16T13:31:20.464560+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-602b22768059163e9d9e23e7",
-    "title": "आवधिक श्रम बल सर्वेक्षण (पीएलएफएस) मासिक बुलेटिन, अक्टूबर 2026 पर प्रेस नोट",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337077&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337077&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-16T13:20:43.185255+00:00",
     "archive": false,
     "verified": true
   },
