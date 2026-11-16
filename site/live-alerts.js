@@ -18,6 +18,16 @@
 
   const isPib = item => /pib|press information bureau|press releases|government & pib/i.test([item.id,item.source_id,item.source_name,item.authority,item.exam_category].filter(Boolean).join(" "));
   const isExamPriority = item => !isPib(item) && item.archive !== true && /result|notification|admit_card|answer_key|merit_list|cutoff|exam_schedule/i.test(String(item.category||"")) && !/annual results old|old archive|historical|public notices information bulletin syllabus universities|home \/ annual results old/i.test(String(item.title||""));
+  const isObsoleteLiveAlert = item => {
+    const title = String(item.title || item.exam || "");
+    const years = [...title.matchAll(/\b(20\d{2})\b/g)].map(match => Number(match[1]));
+    // Keep historical archive entries in the directory, but do not surface
+    // clearly old notices as new live notifications.
+    if (years.length && Math.max(...years) <= new Date().getFullYear() - 2) return true;
+    const published = Date.parse(item.published || "");
+    if (Number.isFinite(published) && Date.now() - published > 90 * 24 * 60 * 60 * 1000) return true;
+    return false;
+  };
   const priorityScore = item => isExamPriority(item) ? 0 : isPib(item) ? 2 : 1;
   const itemKindLabel = item => isPib(item) ? "GOVERNMENT & PIB" : isExamPriority(item) ? "EXAM ALERT" : "OFFICIAL UPDATE";
   const itemKindClass = item => isPib(item) ? "is-pib" : isExamPriority(item) ? "is-exam" : "is-general";
@@ -26,7 +36,7 @@
   const isNoise = item => {
     const title=normalizedTitle(item);
     const url=String(item.url||item.official_url||item.source_url||"").toLowerCase();
-    if (!title || title.length<8) return true;
+    if (!title || title.length<8 || isObsoleteLiveAlert(item)) return true;
     // Suppress navigation/menu text scraped as if it were an announcement.
     const menuPatterns = [
       /\bhome current vacancies vacancies call letters results summer placements research internship scholarships post based rosters/,
