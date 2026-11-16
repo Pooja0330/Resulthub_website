@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-16T10:21:04.862345+00:00",
-  "scan_started_at": "2026-11-16T10:15:59.061206+00:00",
+  "last_checked_at": "2026-11-16T10:36:11.364360+00:00",
+  "scan_started_at": "2026-11-16T10:31:14.641387+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 148,
-  "sources_failed": 159,
-  "new_candidates": 2,
-  "recovered_records": 1,
+  "sources_succeeded": 154,
+  "sources_failed": 153,
+  "new_candidates": 0,
+  "recovered_records": 3,
   "telegram_posts_sent": 10,
-  "alerts_pending": 77,
+  "alerts_pending": 67,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 92, ConnectionError: 31, SSLError: 31, HTTPError: 19, ReadTimeout: 7",
+  "failure_types": "ConnectTimeout: 88, ConnectionError: 31, SSLError: 31, HTTPError: 19, ReadTimeout: 5",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -93,7 +93,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bssc",
@@ -142,14 +142,6 @@
     {
       "source_id": "coast-guard-recruitment",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "columbia-ciet-raipur",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "columbia-institute-pharmacy-raipur",
-      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "drdo-careers",
@@ -216,11 +208,11 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-rrb",
+      "source_id": "ibps-csa-xvi",
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-spl-xvi",
+      "source_id": "ibps-rrb",
       "error_type": "SSLError"
     },
     {
@@ -348,10 +340,6 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "meghalaya-board",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -378,10 +366,6 @@
     {
       "source_id": "nabard",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "nagaland-psc",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "naval-coastguard-jobs",
@@ -452,10 +436,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ossc",
-      "error_type": "ConnectionError"
-    },
-    {
       "source_id": "osssc",
       "error_type": "SSLError"
     },
@@ -481,7 +461,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "rajeduboard",
@@ -489,7 +469,7 @@
     },
     {
       "source_id": "ranchi-university",
-      "error_type": "ConnectTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "resultbharat-syllabus",
@@ -616,10 +596,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "sikkim-university",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "tamilnadu-board-official",
       "error_type": "SSLError"
     },
@@ -633,11 +609,11 @@
     },
     {
       "source_id": "tnmrbrecruit",
-      "error_type": "SSLError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "tnpsc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "tnresults",
