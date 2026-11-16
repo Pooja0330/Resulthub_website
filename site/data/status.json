@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-16T12:50:18.530022+00:00",
-  "scan_started_at": "2026-11-16T12:45:50.566514+00:00",
+  "last_checked_at": "2026-11-16T13:06:55.202601+00:00",
+  "scan_started_at": "2026-11-16T13:02:25.661961+00:00",
   "sources_enabled": 307,
   "sources_succeeded": 156,
   "sources_failed": 151,
   "new_candidates": 1,
-  "recovered_records": 3,
-  "telegram_posts_sent": 0,
+  "recovered_records": 1,
+  "telegram_posts_sent": 1,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, SSLError: 31, ConnectionError: 28, HTTPError: 19, ReadTimeout: 5",
+  "failure_types": "ConnectTimeout: 87, ConnectionError: 30, SSLError: 29, HTTPError: 18, ReadTimeout: 8",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "andhra-university",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "apsc",
@@ -128,10 +128,6 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "coal-india-careers",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "coast-guard-home",
       "error_type": "SSLError"
     },
@@ -197,14 +193,6 @@
     },
     {
       "source_id": "ibps-calendar",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-careers",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-csa-xvi",
       "error_type": "SSLError"
     },
     {
@@ -325,7 +313,7 @@
     },
     {
       "source_id": "maha-rojgar",
-      "error_type": "ConnectionError"
+      "error_type": "HTTPError"
     },
     {
       "source_id": "mahresult",
@@ -334,10 +322,6 @@
     {
       "source_id": "manipur-board",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "mat-aima",
-      "error_type": "HTTPError"
     },
     {
       "source_id": "merchant-navy-imu",
@@ -366,6 +350,10 @@
     {
       "source_id": "nabard",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "nagaland-psc",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "naval-coastguard-jobs",
@@ -444,6 +432,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "pondicherry-university-old-results",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "punjab-psc",
       "error_type": "ConnectTimeout"
     },
@@ -458,6 +450,10 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "rajeduboard",
@@ -590,6 +586,10 @@
     {
       "source_id": "sikkim-psc",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "sikkim-university",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "tamilnadu-board-official",
