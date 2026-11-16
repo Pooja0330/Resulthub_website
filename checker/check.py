@@ -522,9 +522,22 @@ def is_navigation_noise_title(title):
         "about us", "contact us", "tenders", "downloads", "login",
         "screen reader", "accessibility", "fee payment", "mail service",
         "viewing marks", "personal interview", "screening written examination",
+        "all notices", "programs", "view marksheet", "interview letters",
+        "online application", "advertisements",
     )
     menu_hits = sum(phrase in low for phrase in menu_phrases)
-    if menu_hits >= 2 and len(raw) > 55:
+    if menu_hits >= 2 and len(raw) > 45:
+        return True
+    generic_sections = (
+        "all notices", "programs", "interviews", "results", "advertisement",
+        "advertisements", "online application", "view marksheet",
+        "interview letters", "call letters", "downloads", "latest updates",
+    )
+    generic_hits = sum(phrase in low for phrase in generic_sections)
+    if len(raw) > 45 and generic_hits >= 3 and not re.search(
+        r"\b(?:bpsc|upsc|ssc|ibps|rrb|nta|jee|neet|cgl|chsl|mts|po|clerk|"
+        r"constable|officer|assistant|engineer|examination|exam|recruitment)\b", low
+    ):
         return True
 
     # Reject concatenated navigation labels that individually contain exam
@@ -577,6 +590,9 @@ def is_stale_notice(title, published="", url=""):
     """Reject clearly old notices when the title or feed gives an explicit date."""
     candidates = []
     text_value = str(title or "")
+    old_years = [int(year) for year in re.findall(r"\b(20\d{2})\b", text_value)]
+    if old_years and max(old_years) < datetime.now(timezone.utc).year - 1:
+        return True
     for match in re.finditer(
         r"\b(?:(?:posted|published|updated|uploaded|issued|dated|issue\s+date)\s*[:\-]?\s*(?:on\s+)?)"
         r"(\d{1,2}[./-]\d{1,2}[./-]\d{4}|"
