@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-9942e8611ef5e3f22745a1b3",
+    "title": "अक्टूबर 2026 के महीने के लिए थोक मूल्‍य सूचकांक, आउटपुट उत्‍पादक मूल्‍य सूचकांक और परीक्षण इनपुट उत्‍पादन मूल्‍य सूचकांक अनंतिम अनुमान तथा अगस्त 2026 के महीने के लिए अंतिम सूचकांक",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336879&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336879&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-16T09:50:46.498583+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-b8dbfc4e4b0b6fd9a4ee0310",
     "title": "एनआईसीडीसी ने विशाखापत्तनम में आयोजित 31वें सीआईआई पार्टनरशिप समिट 2026 में आंध्र प्रदेश की औद्योगिक प्रगति और निवेश के अवसरों को प्रदर्शित किया",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336857&lang=1",
@@ -319,23 +336,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-15T13:51:07.623318+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-9cb4ee702e434168e771a743",
-    "title": "केंद्रीय मंत्री डॉ. जितेंद्र सिंह ने कहा कि भारत इटली के 'इंटरनेशनल फिजिक्स सेंटर' के साथ संबंधों को मजबूत करेगा",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336602&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2336602&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-15T13:36:03.529355+00:00",
     "archive": false,
     "verified": true
   }
