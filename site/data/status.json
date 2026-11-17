@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-17T12:06:04.547081+00:00",
-  "scan_started_at": "2026-11-17T12:01:34.798761+00:00",
+  "last_checked_at": "2026-11-17T12:21:13.492814+00:00",
+  "scan_started_at": "2026-11-17T12:15:57.874591+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 162,
-  "sources_failed": 145,
+  "sources_succeeded": 159,
+  "sources_failed": 148,
   "new_candidates": 0,
   "recovered_records": 3,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, ConnectionError: 28, SSLError: 28, HTTPError: 17, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 91, ConnectionError: 28, SSLError: 28, HTTPError: 18, ReadTimeout: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -128,6 +128,10 @@
       "error_type": "HTTPError"
     },
     {
+      "source_id": "coal-india-careers",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "coast-guard-home",
       "error_type": "SSLError"
     },
@@ -186,10 +190,6 @@
     {
       "source_id": "hpsc",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "ibps",
-      "error_type": "HTTPError"
     },
     {
       "source_id": "ibps-calendar",
@@ -324,6 +324,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "mat-aima",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -341,6 +345,10 @@
     },
     {
       "source_id": "mppsc",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "mumbai-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -413,6 +421,10 @@
     },
     {
       "source_id": "osmania-university",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
@@ -609,7 +621,7 @@
     },
     {
       "source_id": "tripura-university",
-      "error_type": "SSLError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "tspsc",
