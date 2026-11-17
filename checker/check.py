@@ -590,7 +590,14 @@ def is_stale_notice(title, published="", url=""):
     """Reject clearly old notices when the title or feed gives an explicit date."""
     candidates = []
     text_value = str(title or "")
-    old_years = [int(year) for year in re.findall(r"\b(20\d{2})\b", text_value)]
+    # Archive/PDF URLs often carry the original publication year even when
+    # the scraped anchor title is generic (for example, "Timetable" linking
+    # to /old-results/2020/...). Treat an explicitly old URL year as stale too.
+    url_value = str(url or "")
+    old_years = [
+        int(year)
+        for year in re.findall(r"\b(20\d{2})\b", text_value + " " + url_value)
+    ]
     if old_years and max(old_years) < datetime.now(timezone.utc).year - 1:
         return True
     for match in re.finditer(
