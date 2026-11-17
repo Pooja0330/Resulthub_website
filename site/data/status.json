@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-17T00:50:37.682805+00:00",
-  "scan_started_at": "2026-11-17T00:46:06.379202+00:00",
+  "last_checked_at": "2026-11-17T01:07:23.783071+00:00",
+  "scan_started_at": "2026-11-17T01:02:02.078775+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 158,
-  "sources_failed": 149,
+  "sources_succeeded": 155,
+  "sources_failed": 152,
   "new_candidates": 0,
   "recovered_records": 3,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 30, SSLError: 29, HTTPError: 17, ReadTimeout: 5",
+  "failure_types": "ConnectTimeout: 91, ConnectionError: 29, SSLError: 28, HTTPError: 19, ReadTimeout: 6",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -128,6 +128,10 @@
       "error_type": "HTTPError"
     },
     {
+      "source_id": "coal-india-careers",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "coast-guard-home",
       "error_type": "SSLError"
     },
@@ -197,10 +201,6 @@
     },
     {
       "source_id": "ibps-calendar",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-careers",
       "error_type": "SSLError"
     },
     {
@@ -332,6 +332,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "mat-aima",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -428,6 +432,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "ossc",
+      "error_type": "ConnectionError"
+    },
+    {
       "source_id": "osssc",
       "error_type": "SSLError"
     },
@@ -450,6 +458,10 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university-old-results",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
