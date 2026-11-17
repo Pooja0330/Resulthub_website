@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-31e63a69b8be640310881f7b",
+    "title": "राज्यसभा के सभापति श्री सी.पी. राधाकृष्णन ने श्री हरदीप सिंह पुरी को शपथ दिलाई",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337379&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337379&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-17T09:36:34.013884+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-6f919b0b03ea270861f368d5",
     "title": "प्रधानमंत्री श्री नरेन्‍द्र मोदी ने फिलीपींस के मनीला में खालसा दीवान गुरुद्वारे का भ्रमण किया",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337368&lang=1",
@@ -35,7 +52,7 @@
   },
   {
     "id": "pib-cf5cb425c0381e9b6b7d7b40",
-    "title": "भारतीय नौसेना के जहाज सह्याद्री ने जापान समुद्री आत्मरक्षा बल के साथ द्विपक्षीय नौसेना अभ्यास जेएआईएमईएक्स 2026 में भाग लिया",
+    "title": "भारतीय नौसेना के जहाज सह्याद्री ने जापान समुद्री आत्मरक्षा बल के साथ द्विपक्षीय नौसैनिक अभ्यास जेएआईएमईएक्स 2026 में भाग लिया",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337370&lang=1",
     "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337370&lang=1",
     "source_id": "pib-independent-feed",
@@ -234,23 +251,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-17T03:50:44.290114+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-43c92723bab6724861fe8bbb",
-    "title": "45वें इंटरनैशनल ट्रैड फेयर 2026 में सामाजिक न्याय एवं अधिकारिता मंत्रालय की भागीदारी समावेशी आर्थिक सशक्तिकरण, उद्यमिता और स्थायी आजीविका के प्रति प्रतिबद्धता को मज़बूत करती है",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337231&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337231&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-16T16:50:28.744451+00:00",
     "archive": false,
     "verified": true
   },
