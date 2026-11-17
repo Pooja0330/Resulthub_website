@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-17T11:20:50.491448+00:00",
-  "scan_started_at": "2026-11-17T11:15:53.638734+00:00",
+  "last_checked_at": "2026-11-17T11:37:12.330258+00:00",
+  "scan_started_at": "2026-11-17T11:31:48.395650+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 160,
-  "sources_failed": 147,
+  "sources_succeeded": 162,
+  "sources_failed": 145,
   "new_candidates": 0,
   "recovered_records": 3,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, ConnectionError: 29, SSLError: 28, HTTPError: 19, ValueError: 3",
+  "failure_types": "ConnectTimeout: 90, SSLError: 29, ConnectionError: 27, HTTPError: 19, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -89,7 +89,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
@@ -200,11 +200,11 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-rrb",
+      "source_id": "ibps-csa-xvi",
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-rrb-xv",
+      "source_id": "ibps-rrb",
       "error_type": "SSLError"
     },
     {
@@ -428,6 +428,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "osssc",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -445,10 +449,6 @@
     },
     {
       "source_id": "rajasthan-rssb",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -636,16 +636,8 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "upsc-active-exams",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "upsc-exam-calendar",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "upsc-recruitment",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "upsc-results",
