@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-17T18:50:28.235662+00:00",
-  "scan_started_at": "2026-11-17T18:45:51.502887+00:00",
+  "last_checked_at": "2026-11-17T19:06:58.545111+00:00",
+  "scan_started_at": "2026-11-17T19:02:06.901567+00:00",
   "sources_enabled": 307,
   "sources_succeeded": 153,
   "sources_failed": 154,
   "new_candidates": 0,
-  "recovered_records": 3,
+  "recovered_records": 2,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 30, SSLError: 30, HTTPError: 20, ReadTimeout: 6",
+  "failure_types": "ConnectTimeout: 96, ConnectionError: 29, SSLError: 27, HTTPError: 19, ReadTimeout: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -89,7 +89,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bssc",
@@ -140,6 +140,14 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "columbia-ciet-raipur",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "columbia-institute-pharmacy-raipur",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "drdo-careers",
       "error_type": "ConnectionError"
     },
@@ -154,10 +162,6 @@
     {
       "source_id": "esic-recruitment",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "goa-government",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "goa-technical-education-old-results",
@@ -197,7 +201,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps",
@@ -208,24 +212,12 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-careers",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "ibps-po-mt",
       "error_type": "SSLError"
     },
     {
       "source_id": "ibps-rrb",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-rrb-xv",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "icsi",
-      "error_type": "HTTPError"
     },
     {
       "source_id": "iiser-admissions",
@@ -350,6 +342,10 @@
     {
       "source_id": "mat-aima",
       "error_type": "HTTPError"
+    },
+    {
+      "source_id": "meghalaya-board",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "merchant-navy-imu",
@@ -481,7 +477,7 @@
     },
     {
       "source_id": "ranchi-university",
-      "error_type": "SSLError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "resultbharat-syllabus",
@@ -605,6 +601,10 @@
     },
     {
       "source_id": "sikkim-psc",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "sikkim-university",
       "error_type": "ConnectTimeout"
     },
     {
