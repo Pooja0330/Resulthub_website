@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-f8aeb9dc545443c9fb341b60",
+    "title": "भारत के सौर ऊर्जा क्षेत्र में नए युग की शुरुआत",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337253&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337253&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-17T04:31:19.245889+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-b18f08ec8b22796839c95697",
     "title": "बागवानी फसलों में भारत की लंबी छलांग, केंद्रीय मंत्री श्री शिवराज सिंह चौहान ने जारी किए वर्ष 2025-26 के तृतीय अग्रिम अनुमान",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337249&lang=1",
@@ -217,23 +234,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-16T14:37:49.479094+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-484d46435eb47f2ecd6fb2cf",
-    "title": "57वें इफ्फी में मराठी सिनेमा पर खास फोकस",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337134&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337134&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-16T14:20:49.608133+00:00",
     "archive": false,
     "verified": true
   },
