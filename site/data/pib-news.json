@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-e33e648c0427a94e9ded526e",
+    "title": "एपीडा (APEDA) ने वाराणसी से मेडागास्कर के लिए बिस्कुट की पहली खेप के निर्यात में मदद की",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337669&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337669&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-17T16:21:34.622289+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-6c804eab2c2f4c9d4b569c35",
     "title": "परिणामों की सूची: प्रधानमंत्री की मनीला, फिलीपींस यात्रा (16–17 नवंबर, 2026)",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337644&lang=1",
@@ -217,23 +234,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-17T11:50:47.895148+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-cbb75cc86b89d1898a184f94",
-    "title": "राष्ट्रपति ने भारतीय चिकित्सा अनुसंधान परिषद-राष्ट्रीय मलेरिया अनुसंधान संस्थान के वर्ष भर चलने वाले स्वर्ण जयंती समारोहों का उद्घाटन किया",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337489&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337489&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-17T11:31:14.831818+00:00",
     "archive": false,
     "verified": true
   },
