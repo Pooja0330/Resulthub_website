@@ -165,6 +165,20 @@ class CheckerSafetyTests(unittest.TestCase):
             "UP Police Constable Score Card 2026"
         ))
 
+    def test_rejects_old_year_in_archive_url_even_when_title_is_generic(self):
+        self.assertTrue(is_stale_notice(
+            "Timetable",
+            "",
+            "https://www.pondiuni.edu.in/old-results/2020/timetable.pdf",
+        ))
+
+    def test_keeps_current_year_in_official_notice_url(self):
+        self.assertFalse(is_stale_notice(
+            "Timetable",
+            "",
+            "https://www.example.edu.in/notices/2026/timetable.pdf",
+        ))
+
     def test_ignores_unrelated_cultural_event(self):
         self.assertIsNone(classify("Annual Cultural Festival 2026"))
 
