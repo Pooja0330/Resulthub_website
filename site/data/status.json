@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-17T02:37:06.324410+00:00",
-  "scan_started_at": "2026-11-17T02:31:49.082623+00:00",
+  "last_checked_at": "2026-11-17T02:51:21.112009+00:00",
+  "scan_started_at": "2026-11-17T02:45:52.498366+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 156,
-  "sources_failed": 151,
+  "sources_succeeded": 158,
+  "sources_failed": 149,
   "new_candidates": 0,
   "recovered_records": 3,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 87, ConnectionError: 31, SSLError: 29, HTTPError: 19, ReadTimeout: 6",
+  "failure_types": "ConnectTimeout: 89, ConnectionError: 29, SSLError: 28, HTTPError: 19, ReadTimeout: 5",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ap-psc",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -89,7 +89,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bssc",
@@ -244,10 +244,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "indiapost-gds",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -290,10 +286,6 @@
     {
       "source_id": "karnataka-results",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "keralapsc",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "keralaresults",
@@ -457,7 +449,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
@@ -605,7 +597,7 @@
     },
     {
       "source_id": "tnmrbrecruit",
-      "error_type": "SSLError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "tnresults",
