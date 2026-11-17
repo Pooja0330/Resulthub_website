@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-17T02:06:16.556011+00:00",
-  "scan_started_at": "2026-11-17T02:01:39.643832+00:00",
+  "last_checked_at": "2026-11-17T02:20:48.390557+00:00",
+  "scan_started_at": "2026-11-17T02:15:58.288347+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 159,
-  "sources_failed": 148,
+  "sources_succeeded": 152,
+  "sources_failed": 155,
   "new_candidates": 0,
-  "recovered_records": 3,
+  "recovered_records": 2,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 92, SSLError: 29, ConnectionError: 28, HTTPError: 16, ReadTimeout: 4",
+  "failure_types": "ConnectTimeout: 96, ConnectionError: 29, SSLError: 28, HTTPError: 19, ReadTimeout: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "andhra-university",
@@ -128,12 +128,24 @@
       "error_type": "HTTPError"
     },
     {
+      "source_id": "coal-india-careers",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "coast-guard-home",
       "error_type": "SSLError"
     },
     {
       "source_id": "coast-guard-recruitment",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "columbia-ciet-raipur",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "columbia-institute-pharmacy-raipur",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "drdo-careers",
@@ -193,10 +205,14 @@
     },
     {
       "source_id": "ibps",
-      "error_type": "SSLError"
+      "error_type": "HTTPError"
     },
     {
       "source_id": "ibps-calendar",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-careers",
       "error_type": "SSLError"
     },
     {
@@ -204,7 +220,7 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-spl-xvi",
+      "source_id": "ibps-rrb-xv",
       "error_type": "SSLError"
     },
     {
@@ -328,6 +344,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "mat-aima",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -448,12 +468,16 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "rajasthan-university",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "rajeduboard",
       "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ranchi-university",
-      "error_type": "SSLError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "resultbharat-syllabus",
@@ -577,6 +601,10 @@
     },
     {
       "source_id": "sikkim-psc",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "sikkim-university",
       "error_type": "ConnectTimeout"
     },
     {
