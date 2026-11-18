@@ -4268,7 +4268,7 @@
     {
       "id": "sbi-recruitment-results",
       "name": "SBI Recruitment Results",
-      "url": "https://sbi.bank.in/en/web/careers/recruitment-results",
+      "url": "https://sbi.bank.in/web/careers/recruitment-results",
       "kind": "html",
       "allowed_hosts": [
         "sbi.bank.in",
@@ -4286,8 +4286,8 @@
       ],
       "exam_category": "Banking",
       "enabled": true,
-      "last_reviewed": "2026-10-16",
-      "coverage_note": "Dedicated official SBI recruitment-results page.",
+      "last_reviewed": "2026-11-18",
+      "coverage_note": "Verified live SBI recruitment-results listing; includes the Junior Associates (CRPD/CR/2026-27/17) preliminary result link.",
       "discover_listing_pages": true
     },
     {
