@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-18T07:07:05.426523+00:00",
-  "scan_started_at": "2026-11-18T07:01:54.764346+00:00",
+  "last_checked_at": "2026-11-18T07:20:47.355531+00:00",
+  "scan_started_at": "2026-11-18T07:16:09.398786+00:00",
   "sources_enabled": 307,
   "sources_succeeded": 146,
   "sources_failed": 161,
@@ -9,7 +9,7 @@
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 95, ConnectionError: 31, HTTPError: 26, SSLError: 26, ReadTimeout: 4",
+  "failure_types": "ConnectTimeout: 95, SSLError: 30, ConnectionError: 28, HTTPError: 24, ReadTimeout: 5",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -89,7 +89,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
@@ -133,10 +133,6 @@
     },
     {
       "source_id": "cisce-results",
-      "error_type": "HTTPError"
-    },
-    {
-      "source_id": "coal-india-careers",
       "error_type": "HTTPError"
     },
     {
@@ -208,7 +204,15 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-recruitment",
+      "source_id": "ibps-careers",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-csa-xvi",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-recent-updates",
       "error_type": "SSLError"
     },
     {
@@ -216,8 +220,8 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ignou",
-      "error_type": "ConnectionError"
+      "source_id": "ibps-spl-xvi",
+      "error_type": "SSLError"
     },
     {
       "source_id": "iiser-admissions",
@@ -308,10 +312,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "keralapsc",
-      "error_type": "ConnectionError"
-    },
-    {
       "source_id": "keralaresults",
       "error_type": "ConnectionError"
     },
@@ -348,10 +348,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "mat-aima",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -376,16 +372,16 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "mumbai-university",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "nabard",
       "error_type": "ConnectTimeout"
     },
     {
       "source_id": "nagaland-board",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "nagaland-psc",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "naval-coastguard-jobs",
@@ -456,6 +452,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "osssc",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "patna-university",
       "error_type": "ConnectTimeout"
     },
@@ -477,7 +477,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "rajeduboard",
