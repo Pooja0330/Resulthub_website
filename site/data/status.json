@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-18T11:21:27.951345+00:00",
-  "scan_started_at": "2026-11-18T11:15:54.753721+00:00",
+  "last_checked_at": "2026-11-18T11:36:37.781903+00:00",
+  "scan_started_at": "2026-11-18T11:31:13.261789+00:00",
   "sources_enabled": 307,
   "sources_succeeded": 158,
   "sources_failed": 149,
-  "new_candidates": 1,
+  "new_candidates": 2,
   "recovered_records": 2,
-  "telegram_posts_sent": 1,
+  "telegram_posts_sent": 2,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, SSLError: 30, ConnectionError: 27, HTTPError: 18, ReadTimeout: 4",
+  "failure_types": "ConnectTimeout: 90, ConnectionError: 29, SSLError: 29, HTTPError: 19, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "andhra-university",
@@ -89,7 +89,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bssc",
@@ -197,22 +197,18 @@
     },
     {
       "source_id": "ibps",
-      "error_type": "SSLError"
+      "error_type": "HTTPError"
     },
     {
       "source_id": "ibps-calendar",
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-careers",
+      "source_id": "ibps-recruitment",
       "error_type": "SSLError"
     },
     {
       "source_id": "ibps-rrb",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-rrb-xv",
       "error_type": "SSLError"
     },
     {
@@ -433,6 +429,10 @@
     },
     {
       "source_id": "osmania-university",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
