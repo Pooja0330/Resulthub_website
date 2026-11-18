@@ -314,17 +314,17 @@ function canonicalNoticeUrl(value){
    if(/^(utm_.+|fbclid|gclid|mc_cid|mc_eid|ref|source)$/i.test(key))parsed.searchParams.delete(key);
   }
   parsed.searchParams.sort();
-  parsed.hostname=parsed.hostname.toLowerCase().replace(/^www\\./,"");
-  parsed.pathname=parsed.pathname.replace(/\\/+$/,"")||"/";
+  parsed.hostname=parsed.hostname.toLowerCase().replace(/^www\./,"");
+  parsed.pathname=parsed.pathname.replace(/\/+$/,"")||"/";
   return parsed.origin+parsed.pathname+(parsed.search?parsed.search:"");
  }catch{return ""}
 }
 function dedupeVisibleItems(items, options={}){
  const seen=new Set();
  return items.filter(x=>{
-  let title=String(x.title||x.exam||"").toLowerCase().replace(/\\(with name\\)/g," ").replace(/\\b(with name|name wise|pdf)\\b/g," ").replace(/[^\\p{L}\\p{M}\\p{N}]+/gu," ").trim();
+  let title=String(x.title||x.exam||"").toLowerCase().replace(/\(with name\)/g," ").replace(/\b(with name|name wise|pdf)\b/g," ").replace(/[^\p{L}\p{M}\p{N}]+/gu," ").trim();
   if(options.titleOnly){
-   title=title.replace(/^(?:written\\s+)?(?:result|notification|admit\\s+card|answer\\s+key|merit\\s+list|cut\\s*off|exam\\s+schedule)\\s+/,"").replace(/\\b(?:released|declared|published|out now)\\b/g,"").replace(/\\s+/g," ").trim();
+   title=title.replace(/^(?:written\s+)?(?:result|notification|admit\s+card|answer\s+key|merit\s+list|cut\s*off|exam\s+schedule)\s+/,"").replace(/\b(?:released|declared|published|out now)\b/g,"").replace(/\s+/g," ").trim();
   }
   const source=String(x.source_name||x.authority||x.source_id||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
   const url=canonicalNoticeUrl(x.url||x.official_url||x.source_url);
@@ -332,7 +332,7 @@ function dedupeVisibleItems(items, options={}){
   // canonical URLs. Only tracking/fragment variants of the same URL collapse.
   const key=options.titleOnly?title:(source+"|"+title+(url?"|"+url:""));
   if(!title||!source||seen.has(key))return false;
-  if(options.requirePibReleaseUrl&&!/^https:\\/\\/(?:www\\.)?pib\\.gov\\.in\\/(?:PressReleaseIframePage|PressReleasePage|PressReleaseDetail)\\.aspx\\?[^#]*\\bPRID=\\d+/i.test(String(x.url||x.official_url||x.source_url||"").trim()))return false;
+  if(options.requirePibReleaseUrl&&!/^https:\/\/(?:www\.)?pib\.gov\.in\/(?:PressReleaseIframePage|PressReleasePage|PressReleaseDetail)\.aspx\?[^#]*\bPRID=\d+/i.test(String(x.url||x.official_url||x.source_url||"").trim()))return false;
   seen.add(key);return true;
  }); 
 }
