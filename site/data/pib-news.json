@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-25ace9efaf781d55d7b080a2",
+    "title": "वित्तीय चुनौतियों से लेकर शैक्षणिक आकांक्षाओं तक का सफर",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337969&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337969&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-18T11:50:30.671034+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-52c08c324caa24e09beafe85",
     "title": "भारत ने जलवायु अनुकूल इंफ्रास्ट्रक्चर के लिए सीडीआरआई को एक प्रमुख वैश्विक मंच के रूप में स्थापित किया; अंताल्या (तुर्किये) में सीओपी-31 के दौरान प्रतिबद्धताओं को ठोस कार्रवाई में बदलने का आह्वान किया",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337959&lang=1",
@@ -319,23 +336,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-18T05:07:00.657822+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-d8ee63873762b7a430f4bb5d",
-    "title": "श्री शिवराज सिंह चौहान 20 नवम्‍बर को भारत की पहली स्वदेशी एच5एन1 (क्लेड 2.3.2.1a) चिकन वैक्सीन करेंगे राष्‍ट्र को समर्पित",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337717&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337717&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-18T04:20:45.552510+00:00",
     "archive": false,
     "verified": true
   }
