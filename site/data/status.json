@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-18T12:36:39.207463+00:00",
-  "scan_started_at": "2026-11-18T12:31:55.096440+00:00",
+  "last_checked_at": "2026-11-18T12:52:32.599565+00:00",
+  "scan_started_at": "2026-11-18T12:45:54.809140+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 152,
-  "sources_failed": 155,
-  "new_candidates": 2,
+  "sources_succeeded": 158,
+  "sources_failed": 149,
+  "new_candidates": 20,
   "recovered_records": 2,
-  "telegram_posts_sent": 2,
-  "alerts_pending": 0,
+  "telegram_posts_sent": 10,
+  "alerts_pending": 10,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 93, ConnectionError: 29, SSLError: 27, HTTPError: 24, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 90, SSLError: 29, ConnectionError: 28, HTTPError: 18, ReadTimeout: 5",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -96,10 +96,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "calcutta-university",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "cbse-previous-years-results",
       "error_type": "ConnectionError"
     },
@@ -133,6 +129,10 @@
     },
     {
       "source_id": "cisce-results",
+      "error_type": "HTTPError"
+    },
+    {
+      "source_id": "coal-india-careers",
       "error_type": "HTTPError"
     },
     {
@@ -197,18 +197,18 @@
     },
     {
       "source_id": "ibps",
-      "error_type": "HTTPError"
+      "error_type": "SSLError"
     },
     {
       "source_id": "ibps-calendar",
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-po-mt",
+      "source_id": "ibps-rrb",
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-rrb",
+      "source_id": "ibps-rrb-xv",
       "error_type": "SSLError"
     },
     {
@@ -265,10 +265,6 @@
     },
     {
       "source_id": "jkbose-results",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "jkinfo-ibps-discovery",
       "error_type": "ConnectTimeout"
     },
     {
@@ -336,12 +332,12 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "merchant-navy-imu",
-      "error_type": "SSLError"
+      "source_id": "mat-aima",
+      "error_type": "HTTPError"
     },
     {
-      "source_id": "mizoram-board",
-      "error_type": "ConnectTimeout"
+      "source_id": "merchant-navy-imu",
+      "error_type": "SSLError"
     },
     {
       "source_id": "mizoram-psc",
@@ -360,11 +356,11 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "nabard",
+      "source_id": "mumbai-university",
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "nagaland-board",
+      "source_id": "nabard",
       "error_type": "ConnectTimeout"
     },
     {
@@ -441,7 +437,7 @@
     },
     {
       "source_id": "patna-university",
-      "error_type": "ConnectTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "punjab-psc",
@@ -460,36 +456,12 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "rajasthan-university",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "rajeduboard",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "ranchi-university",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "resultbharat-admissions",
-      "error_type": "HTTPError"
-    },
-    {
-      "source_id": "resultbharat-admit-cards",
-      "error_type": "HTTPError"
-    },
-    {
-      "source_id": "resultbharat-answer-keys",
-      "error_type": "HTTPError"
-    },
-    {
-      "source_id": "resultbharat-discovery",
-      "error_type": "HTTPError"
-    },
-    {
-      "source_id": "resultbharat-jobs",
-      "error_type": "HTTPError"
-    },
-    {
-      "source_id": "resultbharat-results",
-      "error_type": "HTTPError"
     },
     {
       "source_id": "resultbharat-syllabus",
@@ -653,7 +625,7 @@
     },
     {
       "source_id": "tripura-university",
-      "error_type": "ConnectTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "tspsc",
@@ -666,6 +638,10 @@
     {
       "source_id": "upsc-active-examinations",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "upsc-active-exams",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "upsc-exam-calendar",
