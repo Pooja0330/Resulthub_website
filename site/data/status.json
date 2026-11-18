@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-18T10:32:29.057361+00:00",
-  "scan_started_at": "2026-11-18T10:27:50.571001+00:00",
+  "last_checked_at": "2026-11-18T10:51:06.447533+00:00",
+  "scan_started_at": "2026-11-18T10:45:55.759911+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 155,
-  "sources_failed": 152,
-  "new_candidates": 1,
+  "sources_succeeded": 152,
+  "sources_failed": 155,
+  "new_candidates": 3,
   "recovered_records": 2,
   "telegram_posts_sent": 1,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 97, SSLError: 28, ConnectionError: 27, HTTPError: 20, ValueError: 3",
+  "failure_types": "ConnectTimeout: 97, SSLError: 29, ConnectionError: 28, HTTPError: 19, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -89,7 +89,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bssc",
@@ -212,11 +212,15 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-rrb",
+      "source_id": "ibps-careers",
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-spl-xvi",
+      "source_id": "ibps-po-mt",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-rrb",
       "error_type": "SSLError"
     },
     {
@@ -468,10 +472,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "rajasthan-university",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "rajeduboard",
       "error_type": "ConnectTimeout"
     },
@@ -580,6 +580,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "rrc-eastern",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "rrc-northern",
       "error_type": "HTTPError"
     },
@@ -624,10 +628,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "tnpsc",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "tnresults",
       "error_type": "ConnectTimeout"
     },
@@ -664,8 +664,20 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "upsc-active-exams",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "upsc-exam-calendar",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "upsc-final-results",
+      "error_type": "ReadTimeout"
+    },
+    {
+      "source_id": "upsc-recruitment",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "upsc-results",
