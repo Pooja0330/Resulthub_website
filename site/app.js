@@ -356,25 +356,7 @@ function filteredItems(){
  const matches=exact.length?exact:searchable.filter(row=>terms.some(term=>row.hay.includes(term)));
  const list=matches.map(row=>row.item);
  if($("#sort").value==="title") list.sort((a,b)=>(a.title||"").localeCompare(b.title||""));
- else if(terms.length){
-  const phrase=normalizeSearch(rawQuery);
-  const relevance=item=>{
-   const title=normalizeSearch([item.title,item.exam,item.exam_name,item.exam_title].join(" "));
-   const source=normalizeSearch([item.source_name,item.authority,item.source_id].join(" "));
-   const description=normalizeSearch([item.description,item.summary,item.keywords,item.tags,item.aliases].flat(Infinity).join(" "));
-   let score=0;
-   if(title===phrase)score+=1500;
-   if(title.includes(phrase))score+=700;
-   for(const term of terms){
-    if(title.split(" ").includes(term))score+=140;
-    else if(title.includes(term))score+=60;
-    if(source.includes(term))score+=20;
-    if(description.includes(term))score+=12;
-   }
-   return score;
-  };
-  list.sort((a,b)=>relevance(b)-relevance(a)||updateTimeValue(b)-updateTimeValue(a)||mainPriority(a)-mainPriority(b));
- }else list.sort((a,b)=>Math.max(updateTimeValue(b),b.telegram_sent_at?new Date(b.telegram_sent_at).getTime()||0:0)-Math.max(updateTimeValue(a),a.telegram_sent_at?new Date(a.telegram_sent_at).getTime()||0:0)||mainPriority(a)-mainPriority(b));
+ else list.sort((a,b)=>Math.max(updateTimeValue(b),b.telegram_sent_at?new Date(b.telegram_sent_at).getTime()||0:0)-Math.max(updateTimeValue(a),a.telegram_sent_at?new Date(a.telegram_sent_at).getTime()||0:0)||mainPriority(a)-mainPriority(b));
  return list;
 }
 function renderPriorityExamAlerts(){
@@ -543,6 +525,7 @@ function init(){
  // ordinary homepage visits clean.
  const initialQuery=new URLSearchParams(window.location.search).get("q")||"";
  $("#q").value=initialQuery;
+ if(latestSearchInput)latestSearchInput.value=initialQuery;
  if(window.location.search){history.replaceState(null,"",window.location.pathname+window.location.hash);}
  try{const cached=JSON.parse(localStorage.getItem("goresult-results-cache")||"null");if(Array.isArray(cached?.items)){allItems=current2026Items(cached.items);render()}}catch(e){}
  if(initialQuery&&quickSearch){quickSearch.value=initialQuery;filterQuickExams(initialQuery);}
@@ -566,8 +549,11 @@ function runSearch(scroll=true){
  filterQuickExams(term);page=1;render();
  if(scroll)$("#updates").scrollIntoView({behavior:"smooth",block:"start"});
 }
+const latestSearchInput=$("#latestSearchInput");
 $("#searchForm").addEventListener("submit",e=>{e.preventDefault();runSearch(true)});
-$("#q").addEventListener("input",()=>{clearUpdateFilters();if(quickSearch)quickSearch.value=$("#q").value;filterQuickExams($("#q").value);page=1;render()});
+$("#latestSearchForm")?.addEventListener("submit",e=>{e.preventDefault();$("#q").value=latestSearchInput.value;runSearch(false);$("#updatesList").scrollIntoView({behavior:"smooth",block:"start"});});
+$("#q").addEventListener("input",()=>{if(latestSearchInput)latestSearchInput.value=$("#q").value;clearUpdateFilters();if(quickSearch)quickSearch.value=$("#q").value;filterQuickExams($("#q").value);page=1;render()});
+latestSearchInput?.addEventListener("input",()=>{$("#q").value=latestSearchInput.value;clearUpdateFilters();if(quickSearch)quickSearch.value=latestSearchInput.value;filterQuickExams(latestSearchInput.value);page=1;render()});
  $("#q").addEventListener("keydown",event=>{if(event.key==="Enter"){event.preventDefault();runSearch(true);}});
 ["category","examCategory","region","sort","examYear"].forEach(id=>$("#"+id).addEventListener("change",()=>{if(id==="region"){const v=$("#region").value;selectedState=STATE_NAMES.includes(v)?v:"";selectedRegion=v==="Central"?"Central":"";}page=1;render()}));
  $("#clearFilters")?.addEventListener("click",()=>{$("#q").value="";$("#quickExamSearch").value="";$("#category").value="";$("#examCategory").value="";$("#region").value="";$("#examYear").value="";$("#sort").value="new";selectedState="";selectedRegion="";selectedBrowse="";filterQuickExams("");page=1;render();$("#updates").scrollIntoView({behavior:"smooth",block:"start"});});
