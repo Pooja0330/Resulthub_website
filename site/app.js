@@ -415,7 +415,7 @@ function render(){
  renderBrowseCategoryCounts();
  renderStateSidebar();
   const list=filteredItems(), pages=Math.max(1,Math.ceil(list.length/PAGE_SIZE));
-  renderStateResources();
+  if(!fastSearch)renderStateResources();
  page=Math.min(page,pages);
  const visible=list.slice((page-1)*PAGE_SIZE,page*PAGE_SIZE);
  $("#count").textContent=`${list.length} update${list.length===1?"":"s"}`;
