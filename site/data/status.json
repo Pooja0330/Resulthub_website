@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-18T22:21:37.723645+00:00",
-  "scan_started_at": "2026-11-18T22:16:08.051521+00:00",
+  "last_checked_at": "2026-11-18T22:40:16.747537+00:00",
+  "scan_started_at": "2026-11-18T22:31:49.148897+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 158,
-  "sources_failed": 149,
+  "sources_succeeded": 156,
+  "sources_failed": 151,
   "new_candidates": 0,
   "recovered_records": 2,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 93, ConnectionError: 29, SSLError: 27, HTTPError: 17, ReadTimeout: 4",
+  "failure_types": "ConnectTimeout: 94, ConnectionError: 29, SSLError: 24, HTTPError: 19, ReadTimeout: 6",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ap-psc",
@@ -132,6 +132,10 @@
       "error_type": "HTTPError"
     },
     {
+      "source_id": "coal-india-careers",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "coast-guard-home",
       "error_type": "SSLError"
     },
@@ -201,7 +205,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps",
@@ -212,15 +216,7 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-csa-xvi",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "ibps-rrb",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-spl-xvi",
       "error_type": "SSLError"
     },
     {
@@ -344,6 +340,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "mat-aima",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -361,6 +361,10 @@
     },
     {
       "source_id": "mppsc",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "mumbai-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -437,7 +441,7 @@
     },
     {
       "source_id": "osssc",
-      "error_type": "SSLError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "patna-university",
@@ -466,6 +470,10 @@
     {
       "source_id": "rajeduboard",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rbi-opportunities",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "resultbharat-syllabus",
