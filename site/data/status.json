@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-18T19:36:57.395702+00:00",
-  "scan_started_at": "2026-11-18T19:31:14.000001+00:00",
+  "last_checked_at": "2026-11-18T19:52:08.491733+00:00",
+  "scan_started_at": "2026-11-18T19:45:55.506014+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 152,
-  "sources_failed": 155,
+  "sources_succeeded": 156,
+  "sources_failed": 151,
   "new_candidates": 0,
   "recovered_records": 2,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 93, ConnectionError: 31, SSLError: 27, HTTPError: 20, ReadTimeout: 5",
+  "failure_types": "ConnectTimeout: 96, ConnectionError: 27, SSLError: 26, HTTPError: 19, ReadTimeout: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -209,14 +209,10 @@
     },
     {
       "source_id": "ibps",
-      "error_type": "HTTPError"
-    },
-    {
-      "source_id": "ibps-calendar",
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-csa-xvi",
+      "source_id": "ibps-calendar",
       "error_type": "SSLError"
     },
     {
@@ -225,10 +221,6 @@
     },
     {
       "source_id": "ibps-rrb",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-rrb-xv",
       "error_type": "SSLError"
     },
     {
@@ -384,10 +376,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "nagaland-psc",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "naval-coastguard-jobs",
       "error_type": "SSLError"
     },
@@ -456,10 +444,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "osssc",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -485,7 +469,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "rajeduboard",
@@ -617,7 +601,7 @@
     },
     {
       "source_id": "tamilnadu-board-official",
-      "error_type": "ConnectionError"
+      "error_type": "SSLError"
     },
     {
       "source_id": "telangana-board",
