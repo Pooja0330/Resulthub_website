@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-0fdfae2b7f8e0495ae5a0959",
+    "title": "भारत का पवन ऊर्जा परिवर्तन",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337737&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337737&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-18T05:36:48.417086+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-d72fce8b27556970bcb72e60",
     "title": "देशभर में जनजातीय गौरव दिवस 2026 मनाया गया",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337733&lang=1",
@@ -319,23 +336,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-17T13:37:02.534076+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-62bf0c74d3c145d9d0a258d9",
-    "title": "भारत गतिशील तटीय क्षेत्रों और महासागरों के लिए छोटे द्वीपीय विकासशील देशों (एसआईडीएस) के साथ साझेदारी को और गहरा करने के लिए प्रतिबद्ध है: अंताल्या (तुर्किये) में आयोजित सीओपी31 में श्री भूपेंद्र यादव का संबोधन",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337582&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2337582&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-17T12:50:37.740143+00:00",
     "archive": false,
     "verified": true
   }
