@@ -304,23 +304,37 @@ function isCurrent2026Update(item){
 }
 function current2026Items(items){return Array.isArray(items)?items.filter(isCurrent2026Update):[];}
 function displayTitle(x){return String(x.title||x.exam||"Exam update");}
+function canonicalNoticeUrl(value){
+ try{
+  const parsed=new URL(String(value||"").trim());
+  if(parsed.protocol!=="https:")return "";
+  parsed.hash="";
+  // Remove common tracking parameters but preserve meaningful notice IDs.
+  for(const key of [...parsed.searchParams.keys()]){
+   if(/^(utm_.+|fbclid|gclid|mc_cid|mc_eid|ref|source)$/i.test(key))parsed.searchParams.delete(key);
+  }
+  parsed.searchParams.sort();
+  parsed.hostname=parsed.hostname.toLowerCase().replace(/^www\\./,"");
+  parsed.pathname=parsed.pathname.replace(/\\/+$/,"")||"/";
+  return parsed.origin+parsed.pathname+(parsed.search?parsed.search:"");
+ }catch{return ""}
+}
 function dedupeVisibleItems(items, options={}){
  const seen=new Set();
  return items.filter(x=>{
-  let title=String(x.title||x.exam||"").toLowerCase().replace(/\(with name\)/g," ").replace(/\b(with name|name wise|pdf)\b/g," ").replace(/[^\p{L}\p{M}\p{N}]+/gu," ").trim();
+  let title=String(x.title||x.exam||"").toLowerCase().replace(/\\(with name\\)/g," ").replace(/\\b(with name|name wise|pdf)\\b/g," ").replace(/[^\\p{L}\\p{M}\\p{N}]+/gu," ").trim();
   if(options.titleOnly){
-   title=title.replace(/^(?:written\s+)?(?:result|notification|admit\s+card|answer\s+key|merit\s+list|cut\s*off|exam\s+schedule)\s+/,"").replace(/\b(?:released|declared|published|out now)\b/g,"").replace(/\s+/g," ").trim();
+   title=title.replace(/^(?:written\\s+)?(?:result|notification|admit\\s+card|answer\\s+key|merit\\s+list|cut\\s*off|exam\\s+schedule)\\s+/,"").replace(/\\b(?:released|declared|published|out now)\\b/g,"").replace(/\\s+/g," ").trim();
   }
   const source=String(x.source_name||x.authority||x.source_id||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
-  const url=String(x.url||x.official_url||x.source_url||"").trim().split("#")[0].toLowerCase();
-  // A source can expose the same notice through multiple URLs (for example,
-  // desktop/mobile links or tracking variants). Suppress repeated identical
-  // titles from the same authority; keep same-title notices from other sources.
-  const key=options.titleOnly?title:(source+"|"+title);
+  const url=canonicalNoticeUrl(x.url||x.official_url||x.source_url);
+  // Keep same-title notices from the same authority when they have distinct
+  // canonical URLs. Only tracking/fragment variants of the same URL collapse.
+  const key=options.titleOnly?title:(source+"|"+title+(url?"|"+url:""));
   if(!title||!source||seen.has(key))return false;
-  if(options.requirePibReleaseUrl&&!/^https:\/\/(?:www\.)?pib\.gov\.in\/(?:PressReleaseIframePage|PressReleasePage|PressReleaseDetail)\.aspx\?[^#]*\bPRID=\d+/i.test(url))return false;
+  if(options.requirePibReleaseUrl&&!/^https:\\/\\/(?:www\\.)?pib\\.gov\\.in\\/(?:PressReleaseIframePage|PressReleasePage|PressReleaseDetail)\\.aspx\\?[^#]*\\bPRID=\\d+/i.test(String(x.url||x.official_url||x.source_url||"").trim()))return false;
   seen.add(key);return true;
- });
+ }); 
 }
 function filteredItems(){
  const rawQuery=$("#q").value.trim();
