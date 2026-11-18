@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-18T21:52:52.580070+00:00",
-  "scan_started_at": "2026-11-18T21:45:56.057928+00:00",
+  "last_checked_at": "2026-11-18T22:07:16.556907+00:00",
+  "scan_started_at": "2026-11-18T22:01:21.559658+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 155,
-  "sources_failed": 152,
+  "sources_succeeded": 156,
+  "sources_failed": 151,
   "new_candidates": 0,
   "recovered_records": 2,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 94, ConnectionError: 28, SSLError: 27, HTTPError: 19, ReadTimeout: 5",
+  "failure_types": "ConnectTimeout: 92, ConnectionError: 31, SSLError: 25, HTTPError: 19, ReadTimeout: 5",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ap-psc",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "apsc",
@@ -173,7 +173,7 @@
     },
     {
       "source_id": "goa-university",
-      "error_type": "ValueError"
+      "error_type": "ChunkedEncodingError"
     },
     {
       "source_id": "gpsc",
@@ -217,14 +217,6 @@
     },
     {
       "source_id": "ibps-rrb",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-rrb-xv",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-spl-xvi",
       "error_type": "SSLError"
     },
     {
@@ -312,6 +304,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "keralapsc",
+      "error_type": "ConnectionError"
+    },
+    {
       "source_id": "keralaresults",
       "error_type": "ConnectionError"
     },
@@ -378,6 +374,10 @@
     {
       "source_id": "nabard",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "nagaland-psc",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "naval-coastguard-jobs",
@@ -634,10 +634,6 @@
     {
       "source_id": "tripura-psc",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "tripura-university",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "tspsc",
