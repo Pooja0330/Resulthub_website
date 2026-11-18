@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-18T18:46:52.214680+00:00",
-  "scan_started_at": "2026-11-18T18:39:54.107666+00:00",
+  "last_checked_at": "2026-11-18T18:52:43.919320+00:00",
+  "scan_started_at": "2026-11-18T18:47:36.910948+00:00",
   "sources_enabled": 307,
   "sources_succeeded": 155,
   "sources_failed": 152,
@@ -9,7 +9,7 @@
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 92, ConnectionError: 30, SSLError: 28, HTTPError: 19, ReadTimeout: 4",
+  "failure_types": "ConnectTimeout: 91, ConnectionError: 31, SSLError: 27, HTTPError: 20, ReadTimeout: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "apsc",
@@ -205,18 +205,14 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps",
-      "error_type": "SSLError"
+      "error_type": "HTTPError"
     },
     {
       "source_id": "ibps-calendar",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-csa-xvi",
       "error_type": "SSLError"
     },
     {
@@ -225,6 +221,10 @@
     },
     {
       "source_id": "ibps-rrb",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-rrb-xv",
       "error_type": "SSLError"
     },
     {
@@ -448,10 +448,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "osssc",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -474,6 +470,10 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "rajeduboard",
@@ -617,7 +617,7 @@
     },
     {
       "source_id": "tnmrbrecruit",
-      "error_type": "ConnectTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "tnresults",
