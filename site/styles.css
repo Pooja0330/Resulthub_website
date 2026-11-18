@@ -333,3 +333,5 @@
 
 /* Homepage layout request: latest updates first; hide search directories. */
 .hero .search,.exam-directory{display:none!important}
+
+.latest-search{display:flex;gap:8px;margin:0 0 18px;padding:6px;background:#fff;border:1px solid #dce6f2;border-radius:12px;box-shadow:0 4px 14px #14315c08}.latest-search input{flex:1;min-width:0;border:0;outline:0;padding:12px 14px;font:inherit;color:#24344d;background:transparent}.latest-search button{border:0;border-radius:9px;background:#174f9c;color:#fff;font-weight:800;padding:0 22px;cursor:pointer}@media(max-width:580px){.latest-search input{font-size:16px;padding:11px 9px}.latest-search button{padding:0 15px}}
