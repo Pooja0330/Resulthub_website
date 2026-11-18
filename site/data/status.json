@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-18T08:35:51.905632+00:00",
-  "scan_started_at": "2026-11-18T08:31:20.212018+00:00",
+  "last_checked_at": "2026-11-18T08:51:15.483850+00:00",
+  "scan_started_at": "2026-11-18T08:45:55.962878+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 150,
-  "sources_failed": 157,
+  "sources_succeeded": 159,
+  "sources_failed": 148,
   "new_candidates": 0,
   "recovered_records": 3,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 96, ConnectionError: 28, SSLError: 28, HTTPError: 23, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 90, SSLError: 30, ConnectionError: 27, HTTPError: 18, ReadTimeout: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -96,10 +96,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "calcutta-university",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "cbse-previous-years-results",
       "error_type": "ConnectionError"
     },
@@ -133,6 +129,10 @@
     },
     {
       "source_id": "cisce-results",
+      "error_type": "HTTPError"
+    },
+    {
+      "source_id": "coal-india-careers",
       "error_type": "HTTPError"
     },
     {
@@ -204,10 +204,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-careers",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "ibps-rrb",
       "error_type": "SSLError"
     },
@@ -265,10 +261,6 @@
     },
     {
       "source_id": "jkbose-results",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "jkinfo-ibps-discovery",
       "error_type": "ConnectTimeout"
     },
     {
@@ -336,12 +328,12 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "merchant-navy-imu",
-      "error_type": "SSLError"
+      "source_id": "mat-aima",
+      "error_type": "HTTPError"
     },
     {
-      "source_id": "mizoram-board",
-      "error_type": "ConnectTimeout"
+      "source_id": "merchant-navy-imu",
+      "error_type": "SSLError"
     },
     {
       "source_id": "mizoram-psc",
@@ -365,10 +357,6 @@
     },
     {
       "source_id": "nabard",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "nagaland-board",
       "error_type": "ConnectTimeout"
     },
     {
@@ -445,7 +433,7 @@
     },
     {
       "source_id": "patna-university",
-      "error_type": "ConnectTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "punjab-psc",
@@ -464,40 +452,12 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "rajasthan-university",
-      "error_type": "ConnectionError"
-    },
-    {
       "source_id": "rajeduboard",
       "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ranchi-university",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "resultbharat-admissions",
-      "error_type": "HTTPError"
-    },
-    {
-      "source_id": "resultbharat-admit-cards",
-      "error_type": "HTTPError"
-    },
-    {
-      "source_id": "resultbharat-answer-keys",
-      "error_type": "HTTPError"
-    },
-    {
-      "source_id": "resultbharat-discovery",
-      "error_type": "HTTPError"
-    },
-    {
-      "source_id": "resultbharat-jobs",
-      "error_type": "HTTPError"
-    },
-    {
-      "source_id": "resultbharat-results",
-      "error_type": "HTTPError"
     },
     {
       "source_id": "resultbharat-syllabus",
@@ -637,7 +597,7 @@
     },
     {
       "source_id": "tnmrbrecruit",
-      "error_type": "ConnectTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "tnresults",
@@ -661,7 +621,7 @@
     },
     {
       "source_id": "tripura-university",
-      "error_type": "ConnectTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "tspsc",
@@ -674,6 +634,10 @@
     {
       "source_id": "upsc-active-examinations",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "upsc-active-exams",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "upsc-exam-calendar",
