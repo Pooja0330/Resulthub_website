@@ -410,10 +410,9 @@ function renderBrowseCategoryCounts(){
  document.querySelectorAll("[data-browse-count]").forEach(node=>{const key=node.dataset.browseCount;node.textContent=Number(counts[key]||0).toLocaleString("en-IN");});
  document.querySelectorAll("[data-browse]").forEach(button=>{const active=(button.dataset.browse||"")===selectedBrowse;button.classList.toggle("active",active);button.setAttribute("aria-pressed",active?"true":"false");});
 }
-function render(){
+function render(fastSearch=false){
  try{
- renderBrowseCategoryCounts();
- renderStateSidebar();
+ if(!fastSearch){renderBrowseCategoryCounts();renderStateSidebar();}
   const list=filteredItems(), pages=Math.max(1,Math.ceil(list.length/PAGE_SIZE));
   if(!fastSearch)renderStateResources();
  page=Math.min(page,pages);
@@ -546,14 +545,14 @@ function clearUpdateFilters(){
 function runSearch(scroll=true){
  const term=$("#q").value.trim();clearUpdateFilters();
  if(quickSearch)quickSearch.value=term;
- filterQuickExams(term);page=1;render();
+ filterQuickExams(term);page=1;render(true);
  if(scroll)$("#updates").scrollIntoView({behavior:"smooth",block:"start"});
 }
 const latestSearchInput=$("#latestSearchInput");
 $("#searchForm").addEventListener("submit",e=>{e.preventDefault();runSearch(true)});
 $("#latestSearchForm")?.addEventListener("submit",e=>{e.preventDefault();$("#q").value=latestSearchInput.value;runSearch(false);$("#updatesList").scrollIntoView({behavior:"smooth",block:"start"});});
-$("#q").addEventListener("input",()=>{if(latestSearchInput)latestSearchInput.value=$("#q").value;clearUpdateFilters();if(quickSearch)quickSearch.value=$("#q").value;filterQuickExams($("#q").value);page=1;render()});
-latestSearchInput?.addEventListener("input",()=>{$("#q").value=latestSearchInput.value;clearUpdateFilters();if(quickSearch)quickSearch.value=latestSearchInput.value;filterQuickExams(latestSearchInput.value);page=1;render()});
+$("#q").addEventListener("input",()=>{if(latestSearchInput)latestSearchInput.value=$("#q").value;clearUpdateFilters();if(quickSearch)quickSearch.value=$("#q").value;filterQuickExams($("#q").value);page=1;render(true)});
+latestSearchInput?.addEventListener("input",()=>{$("#q").value=latestSearchInput.value;clearUpdateFilters();if(quickSearch)quickSearch.value=latestSearchInput.value;filterQuickExams(latestSearchInput.value);page=1;render(true)});
  $("#q").addEventListener("keydown",event=>{if(event.key==="Enter"){event.preventDefault();runSearch(true);}});
 ["category","examCategory","region","sort","examYear"].forEach(id=>$("#"+id).addEventListener("change",()=>{if(id==="region"){const v=$("#region").value;selectedState=STATE_NAMES.includes(v)?v:"";selectedRegion=v==="Central"?"Central":"";}page=1;render()}));
  $("#clearFilters")?.addEventListener("click",()=>{$("#q").value="";$("#quickExamSearch").value="";$("#category").value="";$("#examCategory").value="";$("#region").value="";$("#examYear").value="";$("#sort").value="new";selectedState="";selectedRegion="";selectedBrowse="";filterQuickExams("");page=1;render();$("#updates").scrollIntoView({behavior:"smooth",block:"start"});});
