@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-18T09:51:06.839319+00:00",
-  "scan_started_at": "2026-11-18T09:45:54.723681+00:00",
+  "last_checked_at": "2026-11-18T10:06:24.345653+00:00",
+  "scan_started_at": "2026-11-18T10:01:43.150300+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 152,
-  "sources_failed": 155,
-  "new_candidates": 0,
+  "sources_succeeded": 150,
+  "sources_failed": 157,
+  "new_candidates": 1,
   "recovered_records": 2,
-  "telegram_posts_sent": 0,
+  "telegram_posts_sent": 1,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 96, SSLError: 29, ConnectionError: 28, HTTPError: 18, ReadTimeout: 5",
+  "failure_types": "ConnectTimeout: 95, ConnectionError: 28, SSLError: 26, HTTPError: 24, ReadTimeout: 5",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -96,6 +96,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "calcutta-university",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "cbse-previous-years-results",
       "error_type": "ConnectionError"
     },
@@ -132,24 +136,12 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "coal-india-careers",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "coast-guard-home",
       "error_type": "SSLError"
     },
     {
       "source_id": "coast-guard-recruitment",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "columbia-ciet-raipur",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "columbia-institute-pharmacy-raipur",
-      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "drdo-careers",
@@ -204,15 +196,11 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "ibps",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "ibps-calendar",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-recent-updates",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-recruitment",
       "error_type": "SSLError"
     },
     {
@@ -273,6 +261,10 @@
     },
     {
       "source_id": "jkbose-results",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "jkinfo-ibps-discovery",
       "error_type": "ConnectTimeout"
     },
     {
@@ -340,16 +332,12 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "mat-aima",
-      "error_type": "HTTPError"
-    },
-    {
-      "source_id": "meghalaya-board",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "mizoram-board",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "mizoram-psc",
@@ -368,11 +356,11 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "mumbai-university",
+      "source_id": "nabard",
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "nabard",
+      "source_id": "nagaland-board",
       "error_type": "ConnectTimeout"
     },
     {
@@ -449,7 +437,7 @@
     },
     {
       "source_id": "patna-university",
-      "error_type": "SSLError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "punjab-psc",
@@ -469,7 +457,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "rajeduboard",
@@ -477,7 +465,31 @@
     },
     {
       "source_id": "ranchi-university",
-      "error_type": "ConnectTimeout"
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "resultbharat-admissions",
+      "error_type": "HTTPError"
+    },
+    {
+      "source_id": "resultbharat-admit-cards",
+      "error_type": "HTTPError"
+    },
+    {
+      "source_id": "resultbharat-answer-keys",
+      "error_type": "HTTPError"
+    },
+    {
+      "source_id": "resultbharat-discovery",
+      "error_type": "HTTPError"
+    },
+    {
+      "source_id": "resultbharat-jobs",
+      "error_type": "HTTPError"
+    },
+    {
+      "source_id": "resultbharat-results",
+      "error_type": "HTTPError"
     },
     {
       "source_id": "resultbharat-syllabus",
@@ -580,10 +592,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "rrc-eastern",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "rrc-northern",
       "error_type": "HTTPError"
     },
@@ -608,10 +616,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "sikkim-university",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "tamilnadu-board-official",
       "error_type": "SSLError"
     },
@@ -626,6 +630,10 @@
     {
       "source_id": "tnmrbrecruit",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "tnpsc",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "tnresults",
@@ -649,7 +657,7 @@
     },
     {
       "source_id": "tripura-university",
-      "error_type": "SSLError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "tspsc",
