@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-18T13:38:20.935992+00:00",
-  "scan_started_at": "2026-11-18T13:32:03.054955+00:00",
+  "last_checked_at": "2026-11-18T13:51:35.755683+00:00",
+  "scan_started_at": "2026-11-18T13:45:55.980513+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 158,
-  "sources_failed": 149,
+  "sources_succeeded": 159,
+  "sources_failed": 148,
   "new_candidates": 0,
   "recovered_records": 2,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 29, SSLError: 27, HTTPError: 20, ReadTimeout: 5",
+  "failure_types": "ConnectTimeout: 91, SSLError: 29, ConnectionError: 28, HTTPError: 19, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ap-psc",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -197,14 +197,14 @@
     },
     {
       "source_id": "ibps",
-      "error_type": "HTTPError"
+      "error_type": "SSLError"
     },
     {
       "source_id": "ibps-calendar",
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-csa-xvi",
+      "source_id": "ibps-po-mt",
       "error_type": "SSLError"
     },
     {
@@ -336,10 +336,6 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "meghalaya-board",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -436,6 +432,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "osssc",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -457,6 +457,10 @@
     },
     {
       "source_id": "rajasthan-rssb",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -640,16 +644,8 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "upsc-active-exams",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "upsc-exam-calendar",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "upsc-final-results",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "upsc-recruitment",
