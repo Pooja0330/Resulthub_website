@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-18T15:22:03.380189+00:00",
-  "scan_started_at": "2026-11-18T15:16:18.239795+00:00",
+  "last_checked_at": "2026-11-18T15:36:41.611017+00:00",
+  "scan_started_at": "2026-11-18T15:31:13.570361+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 152,
-  "sources_failed": 155,
-  "new_candidates": 6,
+  "sources_succeeded": 157,
+  "sources_failed": 150,
+  "new_candidates": 0,
   "recovered_records": 2,
-  "telegram_posts_sent": 6,
+  "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 94, ConnectionError: 30, SSLError: 28, HTTPError: 19, ReadTimeout: 5",
+  "failure_types": "ConnectTimeout: 91, ConnectionError: 32, SSLError: 27, HTTPError: 20, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "apsc",
@@ -89,7 +89,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "bssc",
@@ -129,6 +129,10 @@
     },
     {
       "source_id": "cisce-results",
+      "error_type": "HTTPError"
+    },
+    {
+      "source_id": "coal-india-careers",
       "error_type": "HTTPError"
     },
     {
@@ -193,7 +197,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ibps",
@@ -201,10 +205,6 @@
     },
     {
       "source_id": "ibps-calendar",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-po-mt",
       "error_type": "SSLError"
     },
     {
@@ -336,6 +336,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "mat-aima",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -353,6 +357,10 @@
     },
     {
       "source_id": "mppsc",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "mumbai-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -424,16 +432,8 @@
       "error_type": "ConnectionError"
     },
     {
-      "source_id": "opsc",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "osmania-university",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "ossc",
-      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "osssc",
@@ -462,10 +462,6 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
@@ -497,7 +493,7 @@
     },
     {
       "source_id": "rrb-bbs",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "rrb-bhopal",
@@ -593,7 +589,7 @@
     },
     {
       "source_id": "sbi-recruitment-results",
-      "error_type": "HTTPError"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "secl-careers",
@@ -622,10 +618,6 @@
     {
       "source_id": "tnmrbrecruit",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "tnpsc",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "tnresults",
@@ -664,20 +656,8 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "upsc-active-exams",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "upsc-exam-calendar",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "upsc-final-results",
-      "error_type": "ReadTimeout"
-    },
-    {
-      "source_id": "upsc-recruitment",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "upsc-results",
