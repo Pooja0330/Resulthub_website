@@ -340,16 +340,14 @@ function visibleAuthorityKey(item){
 function dedupeVisibleItems(items, options={}){
  const seen=new Set();
  return items.filter(x=>{
-  let title=String(x.title||x.exam||"").normalize("NFKC").toLocaleLowerCase().replace(/\(with name\)/g," ").replace(/\b(with name|name wise|pdf|new|latest|updated)\b/g," ").replace(/[^\p{L}\p{N}]+/gu," ").trim().replace(/\s+/g," ");
-  if(options.titleOnly){
-   title=title.replace(/^(?:written\s+)?(?:result|notification|admit\s+card|answer\s+key|merit\s+list|cut\s*off|exam\s+schedule)\s+/,"").replace(/\b(?:released|declared|published|out now)\b/g,"").replace(/\s+/g," ").trim();
-  }
-  const source=visibleAuthorityKey(x);
-  const category=String(x.category||"").toLocaleLowerCase().trim();
-  const key=options.titleOnly?title:(source+"|"+category+"|"+title);
-  if(!title||!source||seen.has(key))return false;
+  const url=canonicalNoticeUrl(x.url||x.official_url||x.source_url||"");
+  // Do not collapse different notices just because a portal reused a title.
+  // Keep URL-less entries rather than silently hiding a potentially genuine alert.
+  if(!url)return true;
   if(options.requirePibReleaseUrl&&!/^https:\/\/(?:www\.)?pib\.gov\.in\/(?:PressReleaseIframePage|PressReleasePage|PressReleaseDetail)\.aspx\?[^#]*\bPRID=\d+/i.test(String(x.url||x.official_url||x.source_url||"").trim()))return false;
-  seen.add(key);return true;
+  if(seen.has(url))return false;
+  seen.add(url);
+  return true;
  });
 }
 function filteredItems(){
