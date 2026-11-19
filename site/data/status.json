@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-19T20:11:02.057459+00:00",
-  "scan_started_at": "2026-11-19T20:02:22.744180+00:00",
+  "last_checked_at": "2026-11-19T20:25:02.613039+00:00",
+  "scan_started_at": "2026-11-19T20:16:00.061479+00:00",
   "sources_enabled": 309,
-  "sources_succeeded": 161,
-  "sources_failed": 148,
+  "sources_succeeded": 160,
+  "sources_failed": 149,
   "new_candidates": 0,
   "recovered_records": 4,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, ConnectionError: 31, HTTPError: 23, SSLError: 23, ValueError: 3",
+  "failure_types": "ConnectTimeout: 91, ConnectionError: 32, HTTPError: 23, SSLError: 22, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "andhra-university",
@@ -216,11 +216,11 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-po-mt",
+      "source_id": "ibps-rrb",
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-rrb",
+      "source_id": "ibps-rrb-xv",
       "error_type": "SSLError"
     },
     {
@@ -262,10 +262,6 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "indiapost-recruitment",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -312,6 +308,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "kerala-devaswom",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "keralaresults",
       "error_type": "ConnectionError"
     },
@@ -334,6 +334,10 @@
     {
       "source_id": "lakshadweep-administration",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "magadh-university",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "maha-rojgar",
@@ -449,11 +453,7 @@
     },
     {
       "source_id": "osmania-university",
-      "error_type": "ConnectionError"
-    },
-    {
-      "source_id": "osssc",
-      "error_type": "SSLError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "patna-university",
@@ -590,6 +590,10 @@
     {
       "source_id": "rrcb-central",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "sbi-current-openings",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "secl-careers",
