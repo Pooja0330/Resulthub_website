@@ -31,7 +31,11 @@
   const priorityScore = item => isExamPriority(item) ? 0 : isPib(item) ? 2 : 1;
   const itemKindLabel = item => isPib(item) ? "GOVERNMENT & PIB" : isExamPriority(item) ? "EXAM ALERT" : "OFFICIAL UPDATE";
   const itemKindClass = item => isPib(item) ? "is-pib" : isExamPriority(item) ? "is-exam" : "is-general";
-  const cleanTitle = item => String(item.title || item.exam || "Official exam update").replace(/\s+/g," ").replace(/\s*[|·•].*$/,"").trim();
+  const cleanTitle = item => {
+    const candidates=[item.title,item.exam,item.exam_name,item.exam_title,item.post_name].map(value=>String(value||"").replace(/\s+/g," ").replace(/\s*[|·•].*$/,"").trim()).filter(Boolean);
+    const generic=/^(result details|notification details|admit card details|answer key details|official update|exam update|latest updates?)$/i;
+    return candidates.find(value=>!generic.test(value))||"Official exam update";
+  };
   const normalizedTitle = item => cleanTitle(item).toLocaleLowerCase().normalize("NFKC").replace(/[^\p{L}\p{N}]+/gu," ").trim();
   const isNoise = item => {
     const title=normalizedTitle(item);
@@ -66,7 +70,9 @@
         if(prid)return "pib-prid:"+prid;
       }catch(_){}
     }
-    return normalizedTitle(item)+"|"+String(item.source_name||item.authority||item.source_id||"").toLowerCase().replace(/\s+/g," ").trim()+"|delivery:"+String(item.telegram_sent_at||"");
+    // Delivery timestamps can differ by seconds for duplicate copies of
+    // the same notice. Identity is the issuing source plus normalized title.
+    return normalizedTitle(item)+"|"+String(item.source_name||item.authority||item.source_id||"").toLowerCase().replace(/\s+/g," ").trim();
   };
   const uniqueItems = items => {
     const keys=new Set();
