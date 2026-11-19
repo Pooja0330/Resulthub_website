@@ -396,6 +396,16 @@ class CheckerSafetyTests(unittest.TestCase):
             "Recruitment Process Instructions to Applicants Apply for Job"
         ))
 
+    def test_published_results_deduplicate_same_authority_title_but_keep_distinct_notices(self):
+        records = [
+            {"id": "first", "title": "UPSC Recruitment Test Schedule 2026", "source_name": "UPSC", "category": "exam_schedule", "url": "https://upsc.gov.in/notices/one"},
+            {"id": "duplicate", "title": " UPSC Recruitment Test Schedule 2026 ", "source_name": "UPSC", "category": "exam_schedule", "url": "https://upsc.gov.in/notices/two?utm_source=telegram"},
+            {"id": "different", "title": "UPSC Civil Services Result 2026", "source_name": "UPSC", "category": "result", "url": "https://upsc.gov.in/notices/three"},
+            {"id": "other-authority", "title": "UPSC Recruitment Test Schedule 2026", "source_name": "State PSC", "category": "exam_schedule", "url": "https://statepsc.gov.in/notices/one"},
+        ]
+        cleaned = deduplicate_published_results(records)
+        self.assertEqual([item["id"] for item in cleaned], ["first", "different", "other-authority"])
+
 
 if __name__ == "__main__":
     unittest.main()
