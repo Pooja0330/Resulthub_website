@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-19T12:27:10.125222+00:00",
-  "scan_started_at": "2026-11-19T12:22:18.319201+00:00",
+  "last_checked_at": "2026-11-19T12:37:51.937675+00:00",
+  "scan_started_at": "2026-11-19T12:31:48.685959+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 154,
-  "sources_failed": 153,
+  "sources_succeeded": 157,
+  "sources_failed": 150,
   "new_candidates": 0,
-  "recovered_records": 358,
+  "recovered_records": 367,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 92, ConnectionError: 30, HTTPError: 25, SSLError: 24, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 87, ConnectionError: 30, HTTPError: 25, SSLError: 25, ReadTimeout: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "apsc",
@@ -144,14 +144,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "columbia-ciet-raipur",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "columbia-institute-pharmacy-raipur",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "drdo-careers",
       "error_type": "ConnectionError"
     },
@@ -220,6 +212,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "ibps-careers",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "ibps-rrb",
       "error_type": "SSLError"
     },
@@ -266,6 +262,10 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "indiapost-recruitment",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -380,6 +380,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "nagaland-psc",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "naval-coastguard-jobs",
       "error_type": "SSLError"
     },
@@ -445,10 +449,6 @@
     },
     {
       "source_id": "osmania-university",
-      "error_type": "ReadTimeout"
-    },
-    {
-      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
@@ -470,10 +470,6 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "rajeduboard",
@@ -580,10 +576,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "rrc-eastern",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "rrc-northern",
       "error_type": "HTTPError"
     },
@@ -605,10 +597,6 @@
     },
     {
       "source_id": "sikkim-psc",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "sikkim-university",
       "error_type": "ConnectTimeout"
     },
     {
