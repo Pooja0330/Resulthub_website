@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-19T15:49:02.794479+00:00",
-  "scan_started_at": "2026-11-19T15:40:04.525529+00:00",
+  "last_checked_at": "2026-11-19T15:58:28.103472+00:00",
+  "scan_started_at": "2026-11-19T15:50:14.612891+00:00",
   "sources_enabled": 309,
-  "sources_succeeded": 160,
-  "sources_failed": 149,
+  "sources_succeeded": 162,
+  "sources_failed": 147,
   "new_candidates": 0,
-  "recovered_records": 10,
+  "recovered_records": 4,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, ConnectionError: 32, HTTPError: 24, SSLError: 22, ValueError: 3",
+  "failure_types": "ConnectTimeout: 89, ConnectionError: 33, HTTPError: 24, SSLError: 22, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "andhra-university",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -216,6 +216,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "ibps-careers",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "ibps-rrb",
       "error_type": "SSLError"
     },
@@ -372,10 +376,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "nagaland-psc",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "naval-coastguard-jobs",
       "error_type": "SSLError"
     },
@@ -445,7 +445,7 @@
     },
     {
       "source_id": "osmania-university",
-      "error_type": "SSLError"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "patna-university",
@@ -469,10 +469,6 @@
     },
     {
       "source_id": "rajasthan-rssb",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -590,10 +586,6 @@
     {
       "source_id": "rrcb-central",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "sbi-current-openings",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "secl-careers",
