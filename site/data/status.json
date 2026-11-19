@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-19T14:39:35.786755+00:00",
-  "scan_started_at": "2026-11-19T14:32:02.374507+00:00",
-  "sources_enabled": 307,
-  "sources_succeeded": 155,
-  "sources_failed": 152,
-  "new_candidates": 2,
-  "recovered_records": 2,
-  "telegram_posts_sent": 2,
+  "last_checked_at": "2026-11-19T14:47:18.405082+00:00",
+  "scan_started_at": "2026-11-19T14:40:27.277020+00:00",
+  "sources_enabled": 309,
+  "sources_succeeded": 156,
+  "sources_failed": 153,
+  "new_candidates": 1,
+  "recovered_records": 8,
+  "telegram_posts_sent": 1,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, ConnectionError: 32, HTTPError: 25, SSLError: 23, ReadTimeout: 5",
+  "failure_types": "ConnectTimeout: 95, ConnectionError: 31, SSLError: 24, HTTPError: 23, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -144,6 +144,14 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "columbia-ciet-raipur",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "columbia-institute-pharmacy-raipur",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "drdo-careers",
       "error_type": "ConnectionError"
     },
@@ -208,10 +216,6 @@
       "error_type": "ConnectionError"
     },
     {
-      "source_id": "ibps",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "ibps-calendar",
       "error_type": "SSLError"
     },
@@ -262,14 +266,6 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "indiapost-gds",
-      "error_type": "ReadTimeout"
-    },
-    {
-      "source_id": "indiapost-recruitment",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -356,6 +352,10 @@
       "error_type": "HTTPError"
     },
     {
+      "source_id": "meghalaya-board",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -420,6 +420,10 @@
       "error_type": "ConnectionError"
     },
     {
+      "source_id": "nta-data-portal",
+      "error_type": "ConnectionError"
+    },
+    {
       "source_id": "nta-data-public-notices",
       "error_type": "ConnectionError"
     },
@@ -449,7 +453,7 @@
     },
     {
       "source_id": "osmania-university",
-      "error_type": "ReadTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "osssc",
@@ -461,7 +465,7 @@
     },
     {
       "source_id": "pondicherry-university-old-results",
-      "error_type": "ReadTimeout"
+      "error_type": "HTTPError"
     },
     {
       "source_id": "punjab-psc",
@@ -478,10 +482,6 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
@@ -588,6 +588,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "rrc-eastern",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "rrc-northern",
       "error_type": "HTTPError"
     },
@@ -609,6 +613,10 @@
     },
     {
       "source_id": "sikkim-psc",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "sikkim-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -660,15 +668,7 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "upsc-final-results",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "upsc-recruitment",
-      "error_type": "HTTPError"
-    },
-    {
-      "source_id": "upsc-results",
       "error_type": "HTTPError"
     },
     {
@@ -686,6 +686,10 @@
     {
       "source_id": "uttarakhand-psc",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "vtu",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "vyapam-cg",
