@@ -396,6 +396,16 @@ class CheckerSafetyTests(unittest.TestCase):
             "Recruitment Process Instructions to Applicants Apply for Job"
         ))
 
+    def test_upsc_whats_new_concatenated_menu_cluster_is_rejected(self):
+        from check import is_navigation_noise_title
+        title = (
+            "Status of Lateral Recruitment Cases (Advertisement-wise) "
+            "Applicants' List Notices Corrigendum Scrutiny Interview Schedules "
+            "Results Marks Information open_in_new Recruitment cases kept on hold "
+            "on account of Pending Litigations"
+        )
+        self.assertTrue(is_navigation_noise_title(title))
+
     def test_rejects_portal_menu_cluster_with_repeated_external_link_labels(self):
         from check import is_navigation_noise_title
         title = ("Recruitment Tests Schedule for Recruitment Tests and Interviews Notice "
