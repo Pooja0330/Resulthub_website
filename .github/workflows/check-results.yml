@@ -3,7 +3,7 @@ name: Check Exam Results
 
 on:
   schedule:
-    - cron: '2-59/5 * * * *'
+    - cron: '*/15 * * * *'
   workflow_dispatch:
   push:
     branches: [main]
@@ -126,7 +126,7 @@ jobs:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_ADMIN: ${{ secrets.TG_ADMIN }}
           TG_CHANNEL: ${{ secrets.TG_CHANNEL }}
-          SOURCE_TIMEOUT_SECONDS: "30"
+          SOURCE_TIMEOUT_SECONDS: "15"
           SOURCE_WORKERS: "12"
           MAX_NEW_PER_SOURCE: "20"
           MAX_PUBLIC_ALERTS_PER_RUN: "10"
