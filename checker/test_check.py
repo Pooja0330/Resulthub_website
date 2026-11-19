@@ -439,16 +439,17 @@ class CheckerSafetyTests(unittest.TestCase):
             normalize_notice_title("परीक्षा Result 2026")
         )
 
-    def test_published_results_deduplicate_same_authority_title_but_keep_distinct_notices(self):
+    def test_same_title_different_official_urls_are_preserved(self):
         records = [
             {"id": "first", "title": "UPSC Recruitment Test Schedule 2026", "source_name": "UPSC", "category": "exam_schedule", "url": "https://upsc.gov.in/notices/one"},
-            {"id": "duplicate", "title": " UPSC Recruitment Test Schedule 2026 ", "source_name": "UPSC", "category": "exam_schedule", "url": "https://upsc.gov.in/notices/two?utm_source=telegram"},
-            {"id": "alias-duplicate", "title": "UPSC Recruitment Test Schedule 2026", "source_name": "UPSC Active Examinations and notices", "category": "exam_schedule", "url": "https://upsc.gov.in/notices/four"},
-            {"id": "different", "title": "UPSC Civil Services Result 2026", "source_name": "UPSC", "category": "result", "url": "https://upsc.gov.in/notices/three"},
+            {"id": "second", "title": " UPSC Recruitment Test Schedule 2026 ", "source_name": "UPSC", "category": "exam_schedule", "url": "https://upsc.gov.in/notices/two"},
+            {"id": "alias-third", "title": "UPSC Recruitment Test Schedule 2026", "source_name": "UPSC Active Examinations and notices", "category": "exam_schedule", "url": "https://upsc.gov.in/notices/three"},
+            {"id": "different", "title": "UPSC Civil Services Result 2026", "source_name": "UPSC", "category": "result", "url": "https://upsc.gov.in/notices/four"},
             {"id": "other-authority", "title": "UPSC Recruitment Test Schedule 2026", "source_name": "State PSC", "category": "exam_schedule", "url": "https://statepsc.gov.in/notices/one"},
         ]
         cleaned = deduplicate_published_results(records)
-        self.assertEqual([item["id"] for item in cleaned], ["first", "different", "other-authority"])
+        self.assertEqual([item["id"] for item in cleaned], ["first", "second", "alias-third", "different", "other-authority"])
+
 
 
 if __name__ == "__main__":
