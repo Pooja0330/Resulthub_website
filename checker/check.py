@@ -529,7 +529,7 @@ def is_navigation_noise_title(title):
     raw = " ".join(str(title or "").split())
     low = raw.lower()
     # Some portals expose icon accessibility labels inside scraped menu clusters.
-    if len(raw) > 100 and len(re.findall(r"\bopen_in_new\\b", low)) >= 2:
+    if len(raw) > 100 and len(re.findall(r"\bopen_in_new\b", low)) >= 2:
         return True
     if re.match(r"^\s*(?:download advertisement|apply online)\b", low) and not re.search(
         r"\b(post|officer|clerk|assistant|manager|engineer|probationary|junior associate|"
