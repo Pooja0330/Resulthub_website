@@ -426,7 +426,10 @@ def get_with_retries(url, headers=None):
             response = requests.get(
                 url,
                 headers=headers or HEADERS,
-                timeout=(min(TIMEOUT, 10), min(TIMEOUT, 12)),
+                # The workflow supplies SOURCE_TIMEOUT_SECONDS=30. Keep a
+                # meaningful connect/read window instead of silently clipping
+                # every request to 10s/12s (which caused many false timeouts).
+                timeout=(min(TIMEOUT, 20), min(TIMEOUT, 25)),
                 allow_redirects=True,
                 verify=certifi.where(),
             )
@@ -460,7 +463,7 @@ def get_with_retries(url, headers=None):
                     response = requests.get(
                         url,
                         headers=headers or HEADERS,
-                        timeout=(min(TIMEOUT, 15), min(TIMEOUT, 25)),
+                        timeout=(min(TIMEOUT, 20), min(TIMEOUT, 25)),
                         allow_redirects=True,
                         verify=system_ca,
                     )
