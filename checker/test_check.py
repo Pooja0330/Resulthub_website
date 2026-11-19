@@ -396,10 +396,18 @@ class CheckerSafetyTests(unittest.TestCase):
             "Recruitment Process Instructions to Applicants Apply for Job"
         ))
 
+    def test_rejects_portal_menu_cluster_with_repeated_external_link_labels(self):
+        from check import is_navigation_noise_title
+        title = ("Recruitment Tests Schedule for Recruitment Tests and Interviews Notice "
+                 "e-admit Card open_in_new Results Cut-off Marks Result Details Answer Keys "
+                 "Marks Information open_in_new Question Papers Provisional Answer Key")
+        self.assertTrue(is_navigation_noise_title(title))
+
     def test_published_results_deduplicate_same_authority_title_but_keep_distinct_notices(self):
         records = [
             {"id": "first", "title": "UPSC Recruitment Test Schedule 2026", "source_name": "UPSC", "category": "exam_schedule", "url": "https://upsc.gov.in/notices/one"},
             {"id": "duplicate", "title": " UPSC Recruitment Test Schedule 2026 ", "source_name": "UPSC", "category": "exam_schedule", "url": "https://upsc.gov.in/notices/two?utm_source=telegram"},
+            {"id": "alias-duplicate", "title": "UPSC Recruitment Test Schedule 2026", "source_name": "UPSC Active Examinations and notices", "category": "exam_schedule", "url": "https://upsc.gov.in/notices/four"},
             {"id": "different", "title": "UPSC Civil Services Result 2026", "source_name": "UPSC", "category": "result", "url": "https://upsc.gov.in/notices/three"},
             {"id": "other-authority", "title": "UPSC Recruitment Test Schedule 2026", "source_name": "State PSC", "category": "exam_schedule", "url": "https://statepsc.gov.in/notices/one"},
         ]
