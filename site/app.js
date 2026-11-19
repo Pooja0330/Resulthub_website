@@ -271,7 +271,9 @@ function mainPriority(x){return governmentExamPriority(x);}
 function updateTime(x){return x.detected_at||x.date||x.published||x.telegram_sent_at||0;}
 function updateTimeValue(x){const n=new Date(updateTime(x)).getTime();return Number.isFinite(n)?n:0;}
 function isNavigationNoise(item){
- const title=String(item?.title||item?.exam||"").toLowerCase().replace(/[^a-z0-9]/g,"");
+ const rawTitle=String(item?.title||item?.exam||"");
+ if(rawTitle.length>160 && (rawTitle.match(/\b20\d{2}[-/]\d{1,2}[-/]\d{1,2}\b/g)||[]).length>=2)return true;
+ const title=rawTitle.toLowerCase().replace(/[^a-z0-9]/g,"");
  const blocked=new Set([
   "skiptocontent","accessibilitystatement","screenreaderaccess",
   "pressinformationbureau","aboutus","mainfunctions","sitemap",
@@ -327,7 +329,8 @@ function visibleAuthorityKey(item){
   [/\b(?:upsc|union public service commission)\b/i,"upsc"],
   [/\b(?:ssc|staff selection commission)\b/i,"ssc"],
   [/\b(?:ibps|institute of banking personnel selection)\b/i,"ibps"],
-  [/\b(?:sbi|state bank of india)\b/i,"sbi"]
+  [/\b(?:sbi|state bank of india)\b/i,"sbi"],
+  [/\b(?:rbi|reserve bank of india)\b/i,"rbi"]
  ];
  for(const [pattern,key] of aliases)if(pattern.test(value))return key;
  if(host)return host.toLowerCase();
