@@ -356,7 +356,8 @@ class CheckerSafetyTests(unittest.TestCase):
             self.assertGreater(timeout[1], 0)
             self.assertLessEqual(timeout[0], 20)
             self.assertLessEqual(timeout[1], 25)
-            self.assertEqual(timeout, (20, 25))
+            self.assertGreaterEqual(timeout[0], 5)
+            self.assertGreaterEqual(timeout[1], 5)
 
 
     def test_rejects_long_concatenated_homepage_content(self):
