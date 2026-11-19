@@ -319,22 +319,32 @@ function canonicalNoticeUrl(value){
   return parsed.origin+parsed.pathname+(parsed.search?parsed.search:"");
  }catch{return ""}
 }
+function visibleAuthorityKey(item){
+ const raw=String(item.source_name||item.authority||item.source_id||"").toLocaleLowerCase().normalize("NFKC").trim();
+ const host=(()=>{try{return new URL(item.url||item.official_url||item.source_url).hostname.replace(/^www\./,"")}catch{return ""}})();
+ const value=raw||host;
+ const aliases=[
+  [/\b(?:upsc|union public service commission)\b/i,"upsc"],
+  [/\b(?:ssc|staff selection commission)\b/i,"ssc"],
+  [/\b(?:ibps|institute of banking personnel selection)\b/i,"ibps"],
+  [/\b(?:sbi|state bank of india)\b/i,"sbi"]
+ ];
+ for(const [pattern,key] of aliases)if(pattern.test(value))return key;
+ return value.replace(/\b(active|current|openings?|recruitment|examinations?|notices?|official|website|portal|updates?)\b/g," ").replace(/[^\p{L}\p{N}]+/gu," ").trim().replace(/\s+/g," ");
+}
 function dedupeVisibleItems(items, options={}){
  const seen=new Set();
  return items.filter(x=>{
-  let title=String(x.title||x.exam||"").toLowerCase().replace(/\(with name\)/g," ").replace(/\b(with name|name wise|pdf)\b/g," ").replace(/[^\p{L}\p{M}\p{N}]+/gu," ").trim();
+  let title=String(x.title||x.exam||"").normalize("NFKC").toLocaleLowerCase().replace(/\(with name\)/g," ").replace(/\b(with name|name wise|pdf|new|latest|updated)\b/g," ").replace(/[^\p{L}\p{N}]+/gu," ").trim().replace(/\s+/g," ");
   if(options.titleOnly){
    title=title.replace(/^(?:written\s+)?(?:result|notification|admit\s+card|answer\s+key|merit\s+list|cut\s*off|exam\s+schedule)\s+/,"").replace(/\b(?:released|declared|published|out now)\b/g,"").replace(/\s+/g," ").trim();
   }
-  const source=String(x.source_name||x.authority||x.source_id||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
-  // The same issuing authority can expose one notice through several
-  // listing/detail URLs. For the public feed, an identical normalized title
-  // from the same source is one notice; preserve different titles.
-  const key=options.titleOnly?title:(source+"|"+title);
+  const source=visibleAuthorityKey(x);
+  const category=String(x.category||"").toLocaleLowerCase().trim();
+  const key=options.titleOnly?title:(source+"|"+category+"|"+title);
   if(!title||!source||seen.has(key))return false;
   if(options.requirePibReleaseUrl&&!/^https:\/\/(?:www\.)?pib\.gov\.in\/(?:PressReleaseIframePage|PressReleasePage|PressReleaseDetail)\.aspx\?[^#]*\bPRID=\d+/i.test(String(x.url||x.official_url||x.source_url||"").trim()))return false;
   seen.add(key);return true;
- }); 
 }
 function filteredItems(){
  const rawQuery=$("#q").value.trim();
