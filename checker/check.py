@@ -370,6 +370,12 @@ def normalize_notice_authority(item, normalized_url=""):
     for pattern, canonical in aliases:
         if re.search(pattern, raw, re.I):
             return canonical
+    # Different registry labels can point to the exact same official portal.
+    host = (urlparse(normalized_url).hostname or "").casefold()
+    if host.startswith("www."):
+        host = host[4:]
+    if host:
+        return host
     raw = re.sub(
         r"\b(?:active|current|openings?|recruitment|examinations?|notices?|official|website|portal|updates?)\b",
         " ", raw
