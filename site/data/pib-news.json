@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-8e317aebe839e8caf80e92ea",
+    "title": "भाषिणी ने दक्षिण 2026 में वॉयस-फर्स्ट एआई और बहुभाषी क्षमताओं का प्रदर्शन किया",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2338324&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2338324&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-19T07:51:53.193229+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-d2c4dd1e760fd011cc09b2aa",
     "title": "भविष्य के फिल्मकारों को संवारने की पहल: CMOT ने 57वें भारतीय अंतरराष्ट्रीय फिल्म महोत्सव (इफ्फी) में 100 युवा रचनात्मक प्रतिभाओं को मंच प्रदान किया",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2338300&lang=1",
@@ -319,23 +336,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-18T13:31:25.866454+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-742ab49b8dac9fed67eb8035",
-    "title": "केन्द्रीय गृह मंत्री श्री अमित शाह ने घाटी में लश्कर के अंतिम सक्रिय आतंकवादी, लतीफ भट को मार गिराने के लिए JKP, सेना, CRPF और खुफिया एजेंसियों के बहादुर जवानों को बधाई दी",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2338080&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2338080&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-18T13:21:51.686209+00:00",
     "archive": false,
     "verified": true
   }
