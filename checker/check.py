@@ -386,31 +386,20 @@ def normalize_notice_authority(item, normalized_url=""):
 
 def deduplicate_published_results(results):
     """
-    Remove duplicate official notices by canonical URL, then by exact normalized
-    title within the same issuing authority. Different titles remain separate,
-    even when they share an authority or exam family.
+    Remove only records that point to the same canonical official URL.
+    Different official URLs must remain visible even when their scraped titles
+    are identical: government portals often reuse generic titles such as
+    "Preliminary Exam Result" for different exams, posts or result documents.
     """
     unique = []
     seen_urls = set()
-    seen_authority_titles = set()
     for item in results:
         if not isinstance(item, dict):
             continue
         normalized_url = normalize_notice_url(item.get("url") or item.get("official_url") or "")
         if not normalized_url or normalized_url in seen_urls:
             continue
-
-        title_key = normalize_notice_title(item.get("title") or item.get("exam") or "")
-        source_key = normalize_notice_authority(item, normalized_url)
-        category_key = str(item.get("category") or "").casefold().strip()
-        authority_title_key = (source_key, category_key, title_key)
-
-        if title_key and authority_title_key in seen_authority_titles:
-            continue
-
         seen_urls.add(normalized_url)
-        if title_key:
-            seen_authority_titles.add(authority_title_key)
         unique.append(item)
     return unique
 
