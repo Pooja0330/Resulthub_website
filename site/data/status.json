@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-19T14:55:17.418127+00:00",
-  "scan_started_at": "2026-11-19T14:48:13.642586+00:00",
+  "last_checked_at": "2026-11-19T15:09:26.839076+00:00",
+  "scan_started_at": "2026-11-19T15:01:59.413846+00:00",
   "sources_enabled": 309,
   "sources_succeeded": 159,
   "sources_failed": 150,
@@ -9,7 +9,7 @@
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 32, SSLError: 25, HTTPError: 23, ValueError: 3",
+  "failure_types": "ConnectTimeout: 90, ConnectionError: 31, HTTPError: 24, SSLError: 24, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -209,22 +209,22 @@
     },
     {
       "source_id": "ibps",
-      "error_type": "SSLError"
+      "error_type": "HTTPError"
     },
     {
       "source_id": "ibps-calendar",
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-recent-updates",
+      "source_id": "ibps-csa-xvi",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-recruitment",
       "error_type": "SSLError"
     },
     {
       "source_id": "ibps-rrb",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-spl-xvi",
       "error_type": "SSLError"
     },
     {
