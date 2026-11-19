@@ -119,7 +119,8 @@ function stateForItem(x){
  for(const [name,pattern] of STATE_PATTERNS)if(pattern.test(hay))return name;
  return "Central";
 }
-function stateCount(name){return allItems.filter(x=>stateForItem(x)===name).length}
+function uniqueExamFeedItems(){return dedupeVisibleItems(allItems.filter(x=>!isPibItem(x)))}
+function stateCount(name){return uniqueExamFeedItems().filter(x=>stateForItem(x)===name).length}
 function renderStateSidebar(){
  const region=$("#region");
  if(region){
@@ -127,7 +128,7 @@ function renderStateSidebar(){
   region.innerHTML='<option value="">All India</option><option value="Central">Central</option>'+STATE_NAMES.map(n=>'<option value="'+esc(n)+'">'+esc(n)+'</option>').join("");
   region.value=current;
  }
- $("#allIndiaCount").textContent=allItems.length;
+ $("#allIndiaCount").textContent=uniqueExamFeedItems().length;
  $("#allStatesBtn").classList.toggle("active",!selectedState&&!selectedRegion);
  const stateQuery=($("#stateQuickSearch")?.value||"").trim().toLowerCase();
   const visibleStates=STATE_NAMES.filter(name=>!stateQuery||name.toLowerCase().includes(stateQuery));
