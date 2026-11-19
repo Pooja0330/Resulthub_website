@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-19T22:24:22.418290+00:00",
-  "scan_started_at": "2026-11-19T22:15:59.989604+00:00",
+  "last_checked_at": "2026-11-19T22:36:52.374767+00:00",
+  "scan_started_at": "2026-11-19T22:28:43.920464+00:00",
   "sources_enabled": 309,
   "sources_succeeded": 162,
   "sources_failed": 147,
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -205,7 +205,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ibps",
@@ -216,11 +216,15 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-rrb",
+      "source_id": "ibps-careers",
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-rrb-xv",
+      "source_id": "ibps-recruitment",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-rrb",
       "error_type": "SSLError"
     },
     {
@@ -445,10 +449,6 @@
     },
     {
       "source_id": "osmania-university",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
