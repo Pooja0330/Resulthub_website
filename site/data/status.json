@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-18T23:51:02.458043+00:00",
-  "scan_started_at": "2026-11-18T23:45:55.575678+00:00",
+  "last_checked_at": "2026-11-19T00:08:12.892988+00:00",
+  "scan_started_at": "2026-11-19T00:01:30.303735+00:00",
   "sources_enabled": 307,
   "sources_succeeded": 157,
   "sources_failed": 150,
@@ -9,7 +9,7 @@
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 93, ConnectionError: 29, SSLError: 25, HTTPError: 19, ReadTimeout: 5",
+  "failure_types": "ConnectTimeout: 94, ConnectionError: 29, SSLError: 26, HTTPError: 18, ReadTimeout: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -209,7 +209,7 @@
     },
     {
       "source_id": "ibps",
-      "error_type": "HTTPError"
+      "error_type": "SSLError"
     },
     {
       "source_id": "ibps-calendar",
@@ -301,6 +301,10 @@
     },
     {
       "source_id": "karnataka-results",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "kerala-devaswom",
       "error_type": "ConnectTimeout"
     },
     {
@@ -590,10 +594,6 @@
     {
       "source_id": "sikkim-psc",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "sikkim-university",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "tamilnadu-board-official",
