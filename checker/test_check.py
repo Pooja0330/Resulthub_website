@@ -415,14 +415,14 @@ class CheckerSafetyTests(unittest.TestCase):
                  "Marks Information open_in_new Question Papers Provisional Answer Key")
         self.assertTrue(is_navigation_noise_title(title))
 
-    def test_published_results_deduplicate_sbi_aliases_and_keep_distinct_categories(self):
+    def test_published_results_preserve_distinct_sbi_official_urls(self):
         records = [
             {"id": "first", "title": "RECRUITMENT OF SPECIALIST CADRE OFFICER", "source_name": "SBI Current Openings", "category": "notification", "url": "https://sbi.co.in/careers/one"},
             {"id": "duplicate", "title": "Recruitment of Specialist Cadre Officer", "source_name": "State Bank of India Recruitment", "category": "notification", "url": "https://sbi.co.in/careers/two"},
             {"id": "different-category", "title": "Recruitment of Specialist Cadre Officer", "source_name": "SBI Current Openings", "category": "result", "url": "https://sbi.co.in/careers/three"},
         ]
         cleaned = deduplicate_published_results(records)
-        self.assertEqual([item["id"] for item in cleaned], ["first", "different-category"])
+        self.assertEqual([item["id"] for item in cleaned], ["first", "duplicate", "different-category"])
 
     def test_published_results_deduplicate_different_registry_labels_on_same_host(self):
         records = [
