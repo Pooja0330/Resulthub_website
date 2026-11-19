@@ -42,6 +42,7 @@
     const url=String(item.url||item.official_url||item.source_url||"").toLowerCase();
     if (!title || title.length<8 || isObsoleteLiveAlert(item)) return true;
     const rawTitle=String(item.title||item.exam||"").toLowerCase();
+    if(rawTitle.length>160 && (rawTitle.match(/\b20\d{2}[-/]\d{1,2}[-/]\d{1,2}\b/g)||[]).length>=2)return true;
     const upscClusterLabels=["applicants' list","notices","corrigendum","scrutiny","interview schedules","results","marks information","recruitment cases","kept on hold"];
     if(rawTitle.length>120 && /\bopen_in_new\b/.test(rawTitle) && upscClusterLabels.filter(label=>rawTitle.includes(label)).length>=5)return true;
     if(rawTitle.length>100 && (rawTitle.match(/\bopen_in_new\b/g)||[]).length>=2)return true;
@@ -73,7 +74,8 @@
       [/\b(?:upsc|union public service commission)\b/i,"upsc"],
       [/\b(?:ssc|staff selection commission)\b/i,"ssc"],
       [/\b(?:ibps|institute of banking personnel selection)\b/i,"ibps"],
-      [/\b(?:sbi|state bank of india)\b/i,"sbi"]
+      [/\b(?:sbi|state bank of india)\b/i,"sbi"],
+      [/\b(?:rbi|reserve bank of india)\b/i,"rbi"]
     ];
     for(const [pattern,key] of aliases)if(pattern.test(raw))return key;
     return host||raw.replace(/\b(active|current|openings?|recruitment|examinations?|notices?|official|website|portal|updates?)\b/g," ").replace(/\s+/g," ").trim();
