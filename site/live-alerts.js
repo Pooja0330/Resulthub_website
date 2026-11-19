@@ -42,7 +42,6 @@
     const url=String(item.url||item.official_url||item.source_url||"").toLowerCase();
     if (!title || title.length<8 || isObsoleteLiveAlert(item)) return true;
     const rawTitle=String(item.title||item.exam||"").toLowerCase();
-    if(rawTitle.length>160 && (rawTitle.match(/\b20\d{2}[-/]\d{1,2}[-/]\d{1,2}\b/g)||[]).length>=2)return true;
     const upscClusterLabels=["applicants' list","notices","corrigendum","scrutiny","interview schedules","results","marks information","recruitment cases","kept on hold"];
     if(rawTitle.length>120 && /\bopen_in_new\b/.test(rawTitle) && upscClusterLabels.filter(label=>rawTitle.includes(label)).length>=5)return true;
     if(rawTitle.length>100 && (rawTitle.match(/\bopen_in_new\b/g)||[]).length>=2)return true;
@@ -94,7 +93,15 @@
     const keys=new Set();
     return items.filter(item=>{
       if(isNoise(item))return false;
-      const key=identity(item);
+      const raw=String(item.url||item.official_url||item.source_url||"");
+      let key=raw;
+      try{
+        const u=new URL(raw,location.href);u.hash="";
+        for(const k of [...u.searchParams.keys()])if(/^(utm_.+|fbclid|gclid|mc_cid|mc_eid|ref|source)$/i.test(k))u.searchParams.delete(k);
+        u.searchParams.sort();u.hostname=u.hostname.toLowerCase().replace(/^www\./,"");u.pathname=u.pathname.replace(/\/+$/,"")||"/";
+        key=u.origin+u.pathname+(u.search||"");
+      }catch(_){}
+      if(!key)key=identity(item);
       if(keys.has(key))return false;
       keys.add(key);return true;
     });
