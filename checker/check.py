@@ -535,8 +535,6 @@ def is_navigation_noise_title(title):
     """Reject scraped site menus and concatenated link clusters, not real notices."""
     raw = " ".join(str(title or "").split())
     low = raw.lower()
-    if len(raw) > 160 and len(re.findall(r"\b20\d{2}[-/]\d{1,2}[-/]\d{1,2}\b", low)) >= 2:
-        return True
     # Some portals expose icon accessibility labels inside scraped menu clusters.
     # UPSC What's New can collapse several menu/card headings plus a real notice
     # into one oversized anchor title. A single icon label is enough when many
