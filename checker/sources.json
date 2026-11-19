@@ -235,18 +235,18 @@
     {
       "id": "upsc-results",
       "name": "UPSC written results",
-      "url": "https://upsc.gov.in/exams-related-info/written-result",
+      "url": "https://cms.upsc.gov.in/results/examination-written-results/",
       "kind": "html",
       "allowed_hosts": [
-        "upsc.gov.in"
+        "cms.upsc.gov.in"
       ],
       "categories": [
         "result",
         "merit_list"
       ],
       "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Official landing page only; individual exam subpages, reachability, and redirects must be validated.",
+      "last_reviewed": "2026-11-19",
+      "coverage_note": "Current dedicated UPSC CMS examination written-results listing. Verified against the live official CMS results portal.",
       "exam_category": "UPSC / Central Recruitment",
       "discover_listing_pages": true
     },
@@ -3159,7 +3159,7 @@
     {
       "id": "icsi",
       "name": "Institute of Company Secretaries of India exams",
-      "url": "https://www.icsi.edu/",
+      "url": "https://www.icsi.edu/examination/results",
       "kind": "html",
       "allowed_hosts": [
         "icsi.edu"
@@ -3172,8 +3172,8 @@
         "merit_list"
       ],
       "enabled": true,
-      "last_reviewed": null,
-      "coverage_note": "Starter official landing page; verify live reachability and specific exam subpages.",
+      "last_reviewed": "2026-11-19",
+      "coverage_note": "Dedicated official ICSI examination results page for Executive, Professional and CSEET result announcements.",
       "exam_category": "Professional Exams",
       "discover_listing_pages": true
     },
@@ -6096,10 +6096,10 @@
     {
       "id": "upsc-whats-new",
       "name": "UPSC What’s New — official notices",
-      "url": "https://www.upsc.gov.in/whats-new",
+      "url": "https://cms.upsc.gov.in/",
       "kind": "html",
       "allowed_hosts": [
-        "upsc.gov.in"
+        "cms.upsc.gov.in"
       ],
       "categories": [
         "result",
@@ -6110,26 +6110,26 @@
         "exam_schedule"
       ],
       "enabled": true,
-      "last_reviewed": "2026-10-18",
-      "coverage_note": "Dedicated official UPSC What’s New listing; scanned separately from the homepage so current notices and direct notice links are not missed.",
+      "last_reviewed": "2026-11-19",
+      "coverage_note": "Current UPSC CMS homepage includes the What's New and Highlights listings with direct official notice links; old upsc.gov.in URL was returning navigation clusters.",
       "exam_category": "UPSC / Central Recruitment",
       "discover_listing_pages": true
     },
     {
       "id": "upsc-final-results",
       "name": "UPSC Final Results — official listing",
-      "url": "https://www.upsc.gov.in/recruitment/recruitment-test/results/final-result",
+      "url": "https://cms.upsc.gov.in/results/examination-final-results/",
       "kind": "html",
       "allowed_hosts": [
-        "upsc.gov.in"
+        "cms.upsc.gov.in"
       ],
       "categories": [
         "result",
         "merit_list"
       ],
       "enabled": true,
-      "last_reviewed": "2026-10-18",
-      "coverage_note": "Official UPSC final-result listing with dated uploads and direct document links.",
+      "last_reviewed": "2026-11-19",
+      "coverage_note": "Current dedicated UPSC CMS examination final-results listing. Verified against the live official CMS results portal.",
       "exam_category": "UPSC / Central Recruitment",
       "discover_listing_pages": true
     },
@@ -7030,6 +7030,50 @@
       "exam_category": "Banking",
       "coverage_note": "Secondary discovery index only. Publish only direct HTTPS links to an authority already allowlisted in the official source registry; never publish JKINFO URLs.",
       "max_new": 20
+    },
+    {
+      "id": "nta-data-portal",
+      "name": "National Testing Agency — Data Portal (official notices)",
+      "url": "https://data.nta.ac.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "nta.ac.in"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-11-19",
+      "exam_category": "Entrance & Eligibility",
+      "discover_listing_pages": true,
+      "coverage_note": "Official NTA data portal used as a second entry point for current public notices and result announcements when nta.ac.in is intermittently unreachable from automated runners."
+    },
+    {
+      "id": "icai-examinations",
+      "name": "Institute of Chartered Accountants of India — Examination Announcements",
+      "url": "https://www.icai.org/category/examination-students",
+      "kind": "html",
+      "allowed_hosts": [
+        "icai.org"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-11-19",
+      "exam_category": "Professional Exams",
+      "discover_listing_pages": true,
+      "coverage_note": "Official ICAI examination-students announcements page, including CA Foundation, Intermediate and Final results, schedules and exam notices."
     }
   ]
 }
