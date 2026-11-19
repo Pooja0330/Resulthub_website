@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-8533cded5ea41d57884f7b59",
+    "title": "अनुसूचित जाति के छात्रों के लिए राष्ट्रीय फेलोशिप के ज़रिए शैक्षणिक और शोध के अवसरों को और बेहतर बनाना",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2338729&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2338729&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-19T14:31:20.562640+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-c009f95ff75290aad25509c4",
     "title": "डॉ. जितेंद्र सिंह ने डिजिटल गवर्नेंस, उभरती प्रौद्योगिकियों और क्षमता निर्माण में भारत-मिस्र के बीच गहरे सहयोग की वकालत की",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2338714&lang=1",
@@ -319,23 +336,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-19T12:06:28.477641+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-de25a986ad94ed3ff407f246",
-    "title": "सड़क परिवहन और राजमार्ग मंत्रालय ने वाहनों की आयु और उत्सर्जन मानकों के आधार पर प्रदूषण नियंत्रण प्रमाणपत्रों की वैधता अवधि में संशोधन किया",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2338550&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2338550&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-19T11:52:08.582761+00:00",
     "archive": false,
     "verified": true
   }
