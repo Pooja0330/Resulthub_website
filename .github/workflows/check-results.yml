@@ -16,6 +16,8 @@ on:
       - "checker/sources.json"
       - "site/data/results.json"
       - "site/app.js"
+      - "site/index.html"
+      - "site/sw.js"
       - ".github/workflows/check-results.yml"
 
 permissions:
