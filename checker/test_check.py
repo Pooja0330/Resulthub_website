@@ -1,6 +1,6 @@
 import unittest
 
-from check import classify, discover_listing_urls, exam_year_from_title, extract_notice_date, get_with_retries, host_allowed, infer_exam_category, is_exam_alert_source, is_speculative_status_title, is_stale_notice, normalize_notice_url
+from check import classify, deduplicate_published_results, discover_listing_urls, exam_year_from_title, extract_notice_date, get_with_retries, host_allowed, infer_exam_category, is_exam_alert_source, is_speculative_status_title, is_stale_notice, normalize_notice_url
 from bs4 import BeautifulSoup
 
 
