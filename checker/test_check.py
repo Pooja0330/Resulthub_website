@@ -422,6 +422,15 @@ class CheckerSafetyTests(unittest.TestCase):
         cleaned = deduplicate_published_results(records)
         self.assertEqual([item["id"] for item in cleaned], ["first", "different-category"])
 
+    def test_published_results_deduplicate_different_registry_labels_on_same_host(self):
+        records = [
+            {"id": "first", "title": "JEE Main Session 1 Admit Card 2026", "source_name": "JEE Main", "category": "admit_card", "url": "https://jeemain.nta.nic.in/admit-card"},
+            {"id": "duplicate", "title": "JEE Main Session 1 Admit Card 2026", "source_name": "JEE Main public notices and results", "category": "admit_card", "url": "https://www.jeemain.nta.nic.in/admit-card?utm_source=telegram"},
+            {"id": "different-category", "title": "JEE Main Session 1 Admit Card 2026", "source_name": "JEE Main", "category": "result", "url": "https://jeemain.nta.nic.in/result"},
+        ]
+        cleaned = deduplicate_published_results(records)
+        self.assertEqual([item["id"] for item in cleaned], ["first", "different-category"])
+
     def test_notice_title_normalization_preserves_unicode_and_ignores_freshness_words(self):
         self.assertEqual(
             normalize_notice_title("Latest — परीक्षा Result 2026"),
