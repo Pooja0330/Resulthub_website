@@ -345,6 +345,7 @@ function dedupeVisibleItems(items, options={}){
   if(!title||!source||seen.has(key))return false;
   if(options.requirePibReleaseUrl&&!/^https:\/\/(?:www\.)?pib\.gov\.in\/(?:PressReleaseIframePage|PressReleasePage|PressReleaseDetail)\.aspx\?[^#]*\bPRID=\d+/i.test(String(x.url||x.official_url||x.source_url||"").trim()))return false;
   seen.add(key);return true;
+ });
 }
 function filteredItems(){
  const rawQuery=$("#q").value.trim();
