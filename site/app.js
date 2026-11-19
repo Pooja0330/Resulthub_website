@@ -327,10 +327,10 @@ function dedupeVisibleItems(items, options={}){
    title=title.replace(/^(?:written\s+)?(?:result|notification|admit\s+card|answer\s+key|merit\s+list|cut\s*off|exam\s+schedule)\s+/,"").replace(/\b(?:released|declared|published|out now)\b/g,"").replace(/\s+/g," ").trim();
   }
   const source=String(x.source_name||x.authority||x.source_id||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
-  const url=canonicalNoticeUrl(x.url||x.official_url||x.source_url);
-  // Keep same-title notices from the same authority when they have distinct
-  // canonical URLs. Only tracking/fragment variants of the same URL collapse.
-  const key=options.titleOnly?title:(source+"|"+title+(url?"|"+url:""));
+  // The same issuing authority can expose one notice through several
+  // listing/detail URLs. For the public feed, an identical normalized title
+  // from the same source is one notice; preserve different titles.
+  const key=options.titleOnly?title:(source+"|"+title);
   if(!title||!source||seen.has(key))return false;
   if(options.requirePibReleaseUrl&&!/^https:\/\/(?:www\.)?pib\.gov\.in\/(?:PressReleaseIframePage|PressReleasePage|PressReleaseDetail)\.aspx\?[^#]*\bPRID=\d+/i.test(String(x.url||x.official_url||x.source_url||"").trim()))return false;
   seen.add(key);return true;
