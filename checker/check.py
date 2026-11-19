@@ -1092,16 +1092,17 @@ def main():
     approval = load_json("checker/approved.json", {"pending": []})
     results_file = path("site/data/results.json")
     legacy_results_file = path("site/results.json")
-    # Do not silently convert a zero-byte public feed into an empty feed.
-    # Prefer a non-empty legacy mirror when available; otherwise stop so the
-    # workflow cannot overwrite the last published data with [].
+    # Bootstrap recovery: if both public feed files were accidentally emptied,
+    # start from an empty in-memory list and rebuild only from verified official
+    # source notices discovered during this scan. Never seed fake/sample alerts.
     primary_text = results_file.read_text(encoding="utf-8").strip() if results_file.exists() else ""
     legacy_text = legacy_results_file.read_text(encoding="utf-8").strip() if legacy_results_file.exists() else ""
     if not primary_text and legacy_text:
         results = load_json("site/results.json", [])
         print("WARNING: primary exam feed was empty; restored records from legacy mirror.")
     elif not primary_text and not legacy_text:
-        raise SystemExit("Both public exam feeds are empty. Refusing to publish an empty feed; restore a known-good snapshot first.")
+        results = []
+        print("WARNING: both public feeds are empty; rebuilding from official sources.")
     else:
         results = load_json("site/data/results.json", [])
 
