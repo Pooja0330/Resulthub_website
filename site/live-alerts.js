@@ -68,6 +68,7 @@
   const alertTimestamp = item => item.telegram_sent_at || item.detected_at || item.published || item.date || "";
   const authorityKey = item => {
     const raw=String(item.source_name||item.authority||item.source_id||"").toLocaleLowerCase().normalize("NFKC").trim();
+    const host=(()=>{try{return new URL(item.url||item.official_url||item.source_url,location.href).hostname.toLowerCase().replace(/^www\./,"")}catch(_){return ""}})();
     const aliases=[
       [/\b(?:upsc|union public service commission)\b/i,"upsc"],
       [/\b(?:ssc|staff selection commission)\b/i,"ssc"],
@@ -75,7 +76,7 @@
       [/\b(?:sbi|state bank of india)\b/i,"sbi"]
     ];
     for(const [pattern,key] of aliases)if(pattern.test(raw))return key;
-    return raw.replace(/\b(active|current|openings?|recruitment|examinations?|notices?|official|website|portal|updates?)\b/g," ").replace(/\s+/g," ").trim();
+    return host||raw.replace(/\b(active|current|openings?|recruitment|examinations?|notices?|official|website|portal|updates?)\b/g," ").replace(/\s+/g," ").trim();
   };
   const identity = item => {
     if(isPib(item)){
