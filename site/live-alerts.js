@@ -41,6 +41,10 @@
     const title=normalizedTitle(item);
     const url=String(item.url||item.official_url||item.source_url||"").toLowerCase();
     if (!title || title.length<8 || isObsoleteLiveAlert(item)) return true;
+    const rawTitle=String(item.title||item.exam||"").toLowerCase();
+    const upscClusterLabels=["applicants' list","notices","corrigendum","scrutiny","interview schedules","results","marks information","recruitment cases","kept on hold"];
+    if(rawTitle.length>120 && /\bopen_in_new\b/.test(rawTitle) && upscClusterLabels.filter(label=>rawTitle.includes(label)).length>=5)return true;
+    if(rawTitle.length>100 && (rawTitle.match(/\bopen_in_new\b/g)||[]).length>=2)return true;
     // Suppress navigation/menu text scraped as if it were an announcement.
     const menuPatterns = [
       /\bhome current vacancies vacancies call letters results summer placements research internship scholarships post based rosters/,
@@ -62,6 +66,17 @@
     return false;
   };
   const alertTimestamp = item => item.telegram_sent_at || item.detected_at || item.published || item.date || "";
+  const authorityKey = item => {
+    const raw=String(item.source_name||item.authority||item.source_id||"").toLocaleLowerCase().normalize("NFKC").trim();
+    const aliases=[
+      [/\b(?:upsc|union public service commission)\b/i,"upsc"],
+      [/\b(?:ssc|staff selection commission)\b/i,"ssc"],
+      [/\b(?:ibps|institute of banking personnel selection)\b/i,"ibps"],
+      [/\b(?:sbi|state bank of india)\b/i,"sbi"]
+    ];
+    for(const [pattern,key] of aliases)if(pattern.test(raw))return key;
+    return raw.replace(/\b(active|current|openings?|recruitment|examinations?|notices?|official|website|portal|updates?)\b/g," ").replace(/\s+/g," ").trim();
+  };
   const identity = item => {
     if(isPib(item)){
       const rawUrl=item.url||item.official_url||item.source_url||"";
@@ -70,9 +85,7 @@
         if(prid)return "pib-prid:"+prid;
       }catch(_){}
     }
-    // Delivery timestamps can differ by seconds for duplicate copies of
-    // the same notice. Identity is the issuing source plus normalized title.
-    return normalizedTitle(item)+"|"+String(item.source_name||item.authority||item.source_id||"").toLowerCase().replace(/\s+/g," ").trim();
+    return normalizedTitle(item)+"|"+authorityKey(item)+"|"+String(item.category||"").toLowerCase().trim();
   };
   const uniqueItems = items => {
     const keys=new Set();
