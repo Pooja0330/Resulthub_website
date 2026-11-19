@@ -330,7 +330,8 @@ function visibleAuthorityKey(item){
   [/\b(?:sbi|state bank of india)\b/i,"sbi"]
  ];
  for(const [pattern,key] of aliases)if(pattern.test(value))return key;
- return value.replace(/\b(active|current|openings?|recruitment|examinations?|notices?|official|website|portal|updates?)\b/g," ").replace(/[^\p{L}\p{N}]+/gu," ").trim().replace(/\s+/g," ");
+ if(host)return host.toLowerCase();
+ return value.replace(/\\b(active|current|openings?|recruitment|examinations?|notices?|official|website|portal|updates?)\\b/g," ").replace(/[^\\p{L}\\p{N}]+/gu," ").trim().replace(/\\s+/g," ");
 }
 function dedupeVisibleItems(items, options={}){
  const seen=new Set();
