@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-19T22:53:43.736434+00:00",
-  "scan_started_at": "2026-11-19T22:45:54.961830+00:00",
+  "last_checked_at": "2026-11-19T23:09:56.211862+00:00",
+  "scan_started_at": "2026-11-19T23:01:31.285804+00:00",
   "sources_enabled": 309,
-  "sources_succeeded": 161,
-  "sources_failed": 148,
+  "sources_succeeded": 156,
+  "sources_failed": 153,
   "new_candidates": 0,
   "recovered_records": 4,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 92, ConnectionError: 29, SSLError: 24, HTTPError: 23, ValueError: 3",
+  "failure_types": "ConnectTimeout: 95, ConnectionError: 31, HTTPError: 23, SSLError: 23, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "apsc",
@@ -144,6 +144,14 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "columbia-ciet-raipur",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "columbia-institute-pharmacy-raipur",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "drdo-careers",
       "error_type": "ConnectionError"
     },
@@ -205,7 +213,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ibps",
@@ -213,10 +221,6 @@
     },
     {
       "source_id": "ibps-calendar",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-recent-updates",
       "error_type": "SSLError"
     },
     {
@@ -264,7 +268,7 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "indiapost-gds",
+      "source_id": "indiapost-recruitment",
       "error_type": "ReadTimeout"
     },
     {
@@ -333,6 +337,10 @@
     },
     {
       "source_id": "lakshadweep-administration",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "magadh-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -580,6 +588,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "rrc-eastern",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "rrc-northern",
       "error_type": "HTTPError"
     },
@@ -592,6 +604,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "sbi-current-openings",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "secl-careers",
       "error_type": "HTTPError"
     },
@@ -601,6 +617,10 @@
     },
     {
       "source_id": "sikkim-psc",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "sikkim-university",
       "error_type": "ConnectTimeout"
     },
     {
