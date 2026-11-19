@@ -529,8 +529,19 @@ def is_navigation_noise_title(title):
     raw = " ".join(str(title or "").split())
     low = raw.lower()
     # Some portals expose icon accessibility labels inside scraped menu clusters.
+    # UPSC What's New can collapse several menu/card headings plus a real notice
+    # into one oversized anchor title. A single icon label is enough when many
+    # unrelated section headings have been concatenated.
     if len(raw) > 100 and len(re.findall(r"\bopen_in_new\b", low)) >= 2:
         return True
+    if len(raw) > 120 and len(re.findall(r"\bopen_in_new\b", low)) >= 1:
+        upsc_cluster_labels = (
+            "applicants' list", "notices", "corrigendum", "scrutiny",
+            "interview schedules", "results", "marks information",
+            "recruitment cases", "kept on hold",
+        )
+        if sum(label in low for label in upsc_cluster_labels) >= 5:
+            return True
     if re.match(r"^\s*(?:download advertisement|apply online)\b", low) and not re.search(
         r"\b(post|officer|clerk|assistant|manager|engineer|probationary|junior associate|"
         r"recruitment|vacanc(?:y|ies)|advertisement no)\b", low
