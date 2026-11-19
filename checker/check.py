@@ -346,17 +346,44 @@ def normalize_notice_url(url):
         return ""
 
 
+def normalize_notice_title(title):
+    """Normalize title wording for conservative same-authority duplicate checks."""
+    value = str(title or "").casefold()
+    value = re.sub(r"\\b(?:new|latest|updated)\\b", " ", value)
+    value = re.sub(r"[^a-z0-9]+", " ", value)
+    return " ".join(value.split())
+
+
 def deduplicate_published_results(results):
-    """Keep the first record for each canonical official notice URL."""
+    """
+    Remove duplicate official notices by canonical URL, then by exact normalized
+    title within the same issuing authority. Different titles remain separate,
+    even when they share an authority or exam family.
+    """
     unique = []
     seen_urls = set()
+    seen_authority_titles = set()
     for item in results:
         if not isinstance(item, dict):
             continue
-        normalized = normalize_notice_url(item.get("url") or item.get("official_url") or "")
-        if not normalized or normalized in seen_urls:
+        normalized_url = normalize_notice_url(item.get("url") or item.get("official_url") or "")
+        if not normalized_url or normalized_url in seen_urls:
             continue
-        seen_urls.add(normalized)
+
+        title_key = normalize_notice_title(item.get("title") or item.get("exam") or "")
+        source_key = " ".join(str(
+            item.get("source_name") or item.get("authority") or
+            item.get("source_id") or urlparse(normalized_url).hostname or ""
+        ).casefold().split())
+        category_key = str(item.get("category") or "").casefold().strip()
+        authority_title_key = (source_key, category_key, title_key)
+
+        if title_key and authority_title_key in seen_authority_titles:
+            continue
+
+        seen_urls.add(normalized_url)
+        if title_key:
+            seen_authority_titles.add(authority_title_key)
         unique.append(item)
     return unique
 
