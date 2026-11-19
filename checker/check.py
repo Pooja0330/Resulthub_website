@@ -6,6 +6,7 @@ import os
 import re
 import json
 import time
+import unicodedata
 import hashlib
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
@@ -347,11 +348,33 @@ def normalize_notice_url(url):
 
 
 def normalize_notice_title(title):
-    """Normalize title wording for conservative same-authority duplicate checks."""
-    value = str(title or "").casefold()
+    """Normalize punctuation, Unicode and harmless freshness labels for duplicate checks."""
+    value = unicodedata.normalize("NFKC", str(title or "")).casefold()
     value = re.sub(r"\b(?:new|latest|updated)\b", " ", value)
-    value = re.sub(r"[^a-z0-9]+", " ", value)
+    value = re.sub(r"[^\w]+", " ", value, flags=re.UNICODE).replace("_", " ")
     return " ".join(value.split())
+
+
+def normalize_notice_authority(item, normalized_url=""):
+    """Map common display-name variants to one stable issuing-authority key."""
+    raw = " ".join(str(
+        item.get("source_name") or item.get("authority") or item.get("source_id") or
+        urlparse(normalized_url).hostname or ""
+    ).casefold().split())
+    aliases = (
+        (r"\b(?:upsc|union public service commission)\b", "upsc"),
+        (r"\b(?:ssc|staff selection commission)\b", "ssc"),
+        (r"\b(?:ibps|institute of banking personnel selection)\b", "ibps"),
+        (r"\b(?:sbi|state bank of india)\b", "sbi"),
+    )
+    for pattern, canonical in aliases:
+        if re.search(pattern, raw, re.I):
+            return canonical
+    raw = re.sub(
+        r"\b(?:active|current|openings?|recruitment|examinations?|notices?|official|website|portal|updates?)\b",
+        " ", raw
+    )
+    return " ".join(raw.split())
 
 
 def deduplicate_published_results(results):
@@ -371,22 +394,7 @@ def deduplicate_published_results(results):
             continue
 
         title_key = normalize_notice_title(item.get("title") or item.get("exam") or "")
-        authority_text = " ".join(str(
-            item.get("source_name") or item.get("authority") or
-            item.get("source_id") or urlparse(normalized_url).hostname or ""
-        ).casefold().split())
-        # Collapse common aliases for the same national authority (for example,
-        # "UPSC" and "UPSC Active Examinations and notices").
-        authority_aliases = (
-            (r"\b(?:upsc|union public service commission)\b", "upsc"),
-            (r"\b(?:ssc|staff selection commission)\b", "ssc"),
-            (r"\b(?:ibps|institute of banking personnel selection)\b", "ibps"),
-        )
-        source_key = next(
-            (canonical for pattern, canonical in authority_aliases
-             if re.search(pattern, authority_text, re.I)),
-            re.sub(r"\b(?:active|examinations?|notices?|official|website|portal|updates?)\b", " ", authority_text).strip(),
-        )
+        source_key = normalize_notice_authority(item, normalized_url)
         category_key = str(item.get("category") or "").casefold().strip()
         authority_title_key = (source_key, category_key, title_key)
 
