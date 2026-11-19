@@ -555,6 +555,15 @@ def is_navigation_noise_title(title):
     ):
         return True
     value = re.sub(r"[^a-z0-9]+", "", low)
+    # These are UPSC navigation destinations, not individual examination notices.
+    # Exclude only exact generic labels; descriptive titles remain eligible.
+    if value in {
+        "corrigendum", "resultdetails", "provisionalanswerkey",
+        "applicantslist", "notices", "scrutiny", "interviewschedules",
+        "marksinformation", "recruitmentcaseskeptonhold",
+        "writtenresults", "finalresults",
+    }:
+        return True
 
     # A repeated generic landing-page heading is navigation, not a result.
     if value in {"resultsstatisticsresultsstatistics", "resultstatisticsresultstatistics"}:
