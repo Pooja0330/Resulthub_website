@@ -273,7 +273,6 @@ function updateTime(x){return x.detected_at||x.date||x.published||x.telegram_sen
 function updateTimeValue(x){const n=new Date(updateTime(x)).getTime();return Number.isFinite(n)?n:0;}
 function isNavigationNoise(item){
  const rawTitle=String(item?.title||item?.exam||"");
- if(rawTitle.length>160 && (rawTitle.match(/\b20\d{2}[-/]\d{1,2}[-/]\d{1,2}\b/g)||[]).length>=2)return true;
  const title=rawTitle.toLowerCase().replace(/[^a-z0-9]/g,"");
  const blocked=new Set([
   "skiptocontent","accessibilitystatement","screenreaderaccess",
