@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-19T09:37:04.729099+00:00",
-  "scan_started_at": "2026-11-19T09:31:37.564385+00:00",
+  "last_checked_at": "2026-11-19T09:51:01.320097+00:00",
+  "scan_started_at": "2026-11-19T09:45:52.934459+00:00",
   "sources_enabled": 307,
   "sources_succeeded": 157,
   "sources_failed": 150,
@@ -9,7 +9,7 @@
   "telegram_posts_sent": 1,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, ConnectionError: 30, SSLError: 26, HTTPError: 19, ReadTimeout: 5",
+  "failure_types": "ConnectTimeout: 94, ConnectionError: 28, SSLError: 26, HTTPError: 19, ReadTimeout: 4",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -89,7 +89,7 @@
     },
     {
       "source_id": "bseb",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bssc",
@@ -165,6 +165,10 @@
     },
     {
       "source_id": "esic-recruitment",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "goa-government",
       "error_type": "ConnectTimeout"
     },
     {
@@ -461,7 +465,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
@@ -606,10 +610,6 @@
     {
       "source_id": "tnmrbrecruit",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "tnpsc",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "tnresults",
