@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-19T18:58:14.409834+00:00",
-  "scan_started_at": "2026-11-19T18:51:01.333595+00:00",
+  "last_checked_at": "2026-11-19T19:09:21.698177+00:00",
+  "scan_started_at": "2026-11-19T19:02:06.325648+00:00",
   "sources_enabled": 309,
   "sources_succeeded": 161,
   "sources_failed": 148,
   "new_candidates": 0,
-  "recovered_records": 4,
+  "recovered_records": 2,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, ConnectionError: 31, SSLError: 24, HTTPError: 23, ValueError: 3",
+  "failure_types": "ConnectTimeout: 93, ConnectionError: 31, SSLError: 24, HTTPError: 21, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -132,10 +132,6 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "coal-india-careers",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "coast-guard-home",
       "error_type": "SSLError"
     },
@@ -205,7 +201,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps",
@@ -216,11 +212,7 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-careers",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-recruitment",
+      "source_id": "ibps-csa-xvi",
       "error_type": "SSLError"
     },
     {
@@ -230,6 +222,10 @@
     {
       "source_id": "ibps-spl-xvi",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "icsi",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "iiser-admissions",
@@ -352,10 +348,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "mat-aima",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -456,6 +448,10 @@
       "error_type": "ConnectionError"
     },
     {
+      "source_id": "osssc",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -473,6 +469,10 @@
     },
     {
       "source_id": "rajasthan-rssb",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
       "error_type": "ConnectTimeout"
     },
     {
