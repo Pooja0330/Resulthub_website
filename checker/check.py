@@ -371,10 +371,22 @@ def deduplicate_published_results(results):
             continue
 
         title_key = normalize_notice_title(item.get("title") or item.get("exam") or "")
-        source_key = " ".join(str(
+        authority_text = " ".join(str(
             item.get("source_name") or item.get("authority") or
             item.get("source_id") or urlparse(normalized_url).hostname or ""
         ).casefold().split())
+        # Collapse common aliases for the same national authority (for example,
+        # "UPSC" and "UPSC Active Examinations and notices").
+        authority_aliases = (
+            (r"\\b(?:upsc|union public service commission)\\b", "upsc"),
+            (r"\\b(?:ssc|staff selection commission)\\b", "ssc"),
+            (r"\\b(?:ibps|institute of banking personnel selection)\\b", "ibps"),
+        )
+        source_key = next(
+            (canonical for pattern, canonical in authority_aliases
+             if re.search(pattern, authority_text, re.I)),
+            re.sub(r"\\b(?:active|examinations?|notices?|official|website|portal|updates?)\\b", " ", authority_text).strip(),
+        )
         category_key = str(item.get("category") or "").casefold().strip()
         authority_title_key = (source_key, category_key, title_key)
 
@@ -516,6 +528,9 @@ def is_navigation_noise_title(title):
     """Reject scraped site menus and concatenated link clusters, not real notices."""
     raw = " ".join(str(title or "").split())
     low = raw.lower()
+    # Some portals expose icon accessibility labels inside scraped menu clusters.
+    if len(raw) > 100 and len(re.findall(r"\\bopen_in_new\\b", low)) >= 2:
+        return True
     if re.match(r"^\s*(?:download advertisement|apply online)\b", low) and not re.search(
         r"\b(post|officer|clerk|assistant|manager|engineer|probationary|junior associate|"
         r"recruitment|vacanc(?:y|ies)|advertisement no)\b", low
