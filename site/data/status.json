@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-19T11:52:04.114941+00:00",
-  "scan_started_at": "2026-11-19T11:45:54.169057+00:00",
+  "last_checked_at": "2026-11-19T12:06:22.583625+00:00",
+  "scan_started_at": "2026-11-19T12:01:25.976804+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 154,
-  "sources_failed": 153,
-  "new_candidates": 1,
-  "recovered_records": 387,
-  "telegram_posts_sent": 1,
-  "alerts_pending": 0,
+  "sources_succeeded": 158,
+  "sources_failed": 149,
+  "new_candidates": 18,
+  "recovered_records": 384,
+  "telegram_posts_sent": 10,
+  "alerts_pending": 8,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 30, SSLError: 27, HTTPError: 22, ReadTimeout: 6",
+  "failure_types": "ConnectTimeout: 90, ConnectionError: 30, SSLError: 24, HTTPError: 23, ReadTimeout: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -212,23 +212,11 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-po-mt",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-recent-updates",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-recruitment",
+      "source_id": "ibps-csa-xvi",
       "error_type": "SSLError"
     },
     {
       "source_id": "ibps-rrb",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-spl-xvi",
       "error_type": "SSLError"
     },
     {
@@ -270,14 +258,6 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "indiapost-gds",
-      "error_type": "ReadTimeout"
-    },
-    {
-      "source_id": "indiapost-recruitment",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -457,7 +437,7 @@
     },
     {
       "source_id": "osmania-university",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "osssc",
@@ -665,7 +645,7 @@
     },
     {
       "source_id": "upsc-final-results",
-      "error_type": "ReadTimeout"
+      "error_type": "HTTPError"
     },
     {
       "source_id": "upsc-recruitment",
@@ -690,6 +670,10 @@
     {
       "source_id": "uttarakhand-psc",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "vtu",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "vyapam-cg",
