@@ -365,7 +365,7 @@ def normalize_notice_authority(item, normalized_url=""):
         (r"\b(?:upsc|union public service commission)\b", "upsc"),
         (r"\b(?:ssc|staff selection commission)\b", "ssc"),
         (r"\b(?:ibps|institute of banking personnel selection)\b", "ibps"),
-        (r"\b(?:sbi|state bank of india)\b", "sbi"),,
+        (r"\b(?:sbi|state bank of india)\b", "sbi"),
         (r"\b(?:rbi|reserve bank of india)\b", "rbi"),
     )
     for pattern, canonical in aliases:
