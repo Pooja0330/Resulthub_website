@@ -349,7 +349,7 @@ def normalize_notice_url(url):
 def normalize_notice_title(title):
     """Normalize title wording for conservative same-authority duplicate checks."""
     value = str(title or "").casefold()
-    value = re.sub(r"\b(?:new|latest|updated)\\b", " ", value)
+    value = re.sub(r"\b(?:new|latest|updated)\b", " ", value)
     value = re.sub(r"[^a-z0-9]+", " ", value)
     return " ".join(value.split())
 
@@ -378,14 +378,14 @@ def deduplicate_published_results(results):
         # Collapse common aliases for the same national authority (for example,
         # "UPSC" and "UPSC Active Examinations and notices").
         authority_aliases = (
-            (r"\b(?:upsc|union public service commission)\\b", "upsc"),
-            (r"\b(?:ssc|staff selection commission)\\b", "ssc"),
-            (r"\b(?:ibps|institute of banking personnel selection)\\b", "ibps"),
+            (r"\b(?:upsc|union public service commission)\b", "upsc"),
+            (r"\b(?:ssc|staff selection commission)\b", "ssc"),
+            (r"\b(?:ibps|institute of banking personnel selection)\b", "ibps"),
         )
         source_key = next(
             (canonical for pattern, canonical in authority_aliases
              if re.search(pattern, authority_text, re.I)),
-            re.sub(r"\b(?:active|examinations?|notices?|official|website|portal|updates?)\\b", " ", authority_text).strip(),
+            re.sub(r"\b(?:active|examinations?|notices?|official|website|portal|updates?)\b", " ", authority_text).strip(),
         )
         category_key = str(item.get("category") or "").casefold().strip()
         authority_title_key = (source_key, category_key, title_key)
