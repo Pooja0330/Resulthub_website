@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-19T14:24:37.770302+00:00",
-  "scan_started_at": "2026-11-19T14:15:58.598230+00:00",
+  "last_checked_at": "2026-11-19T14:39:35.786755+00:00",
+  "scan_started_at": "2026-11-19T14:32:02.374507+00:00",
   "sources_enabled": 307,
-  "sources_succeeded": 159,
-  "sources_failed": 148,
-  "new_candidates": 1,
-  "recovered_records": 4,
-  "telegram_posts_sent": 1,
+  "sources_succeeded": 155,
+  "sources_failed": 152,
+  "new_candidates": 2,
+  "recovered_records": 2,
+  "telegram_posts_sent": 2,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 30, HTTPError: 26, SSLError: 24, ValueError: 3",
+  "failure_types": "ConnectTimeout: 88, ConnectionError: 32, HTTPError: 25, SSLError: 23, ReadTimeout: 5",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ap-psc",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "apsc",
@@ -197,11 +197,15 @@
     },
     {
       "source_id": "hpbose-results",
-      "error_type": "SSLError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "hpsc",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "hpssc",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ibps",
@@ -212,7 +216,7 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-csa-xvi",
+      "source_id": "ibps-recruitment",
       "error_type": "SSLError"
     },
     {
@@ -258,6 +262,14 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "indiapost-gds",
+      "error_type": "ReadTimeout"
+    },
+    {
+      "source_id": "indiapost-recruitment",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -437,7 +449,7 @@
     },
     {
       "source_id": "osmania-university",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "osssc",
@@ -449,7 +461,7 @@
     },
     {
       "source_id": "pondicherry-university-old-results",
-      "error_type": "HTTPError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "punjab-psc",
@@ -466,6 +478,10 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
