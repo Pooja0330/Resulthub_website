@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-19T18:10:31.541033+00:00",
-  "scan_started_at": "2026-11-19T18:01:30.969388+00:00",
+  "last_checked_at": "2026-11-19T18:23:36.203394+00:00",
+  "scan_started_at": "2026-11-19T18:16:06.153057+00:00",
   "sources_enabled": 309,
-  "sources_succeeded": 160,
-  "sources_failed": 149,
+  "sources_succeeded": 162,
+  "sources_failed": 147,
   "new_candidates": 0,
   "recovered_records": 4,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, ConnectionError: 31, HTTPError: 24, SSLError: 24, ValueError: 3",
+  "failure_types": "ConnectTimeout: 93, ConnectionError: 31, HTTPError: 22, SSLError: 22, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -132,10 +132,6 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "coal-india-careers",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "coast-guard-home",
       "error_type": "SSLError"
     },
@@ -165,6 +161,14 @@
     },
     {
       "source_id": "esic-recruitment",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "gate",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "gate-official",
       "error_type": "ConnectTimeout"
     },
     {
@@ -205,7 +209,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps",
@@ -216,16 +220,12 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-po-mt",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-recent-updates",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "ibps-rrb",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "icsi",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "iiser-admissions",
@@ -348,10 +348,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "mat-aima",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -369,10 +365,6 @@
     },
     {
       "source_id": "mppsc",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "mumbai-university",
       "error_type": "ConnectTimeout"
     },
     {
