@@ -135,6 +135,28 @@ function absoluteTimeText(v){if(!v)return "Exact detection time unavailable";con
 function relativeTimeText(v){if(!v)return "time unavailable";const d=new Date(v),ms=Date.now()-d.getTime();if(Number.isNaN(d.getTime()))return "time unavailable";if(ms<60_000)return "just now";if(ms<3_600_000){const n=Math.floor(ms/60_000);return n+" minute"+(n===1?"":"s")+" ago"}if(ms<86_400_000){const n=Math.floor(ms/3_600_000);return n+" hour"+(n===1?"":"s")+" ago"}const n=Math.floor(ms/86_400_000);return n===1?"yesterday":n+" days ago"}
 function detectedTimeMarkup(v){if(!v)return "Detection time not available";const d=new Date(v);if(Number.isNaN(d.getTime()))return "Detection time not available";return '<time class="relative-detection-time" datetime="'+esc(d.toISOString())+'" title="'+esc(absoluteTimeText(v))+'">'+esc(relativeTimeText(v))+'</time><span class="exact-detection-time"> · '+esc(absoluteTimeText(v))+'</span>'}
 function refreshRelativeTimes(){document.querySelectorAll("time.relative-detection-time").forEach(el=>{el.textContent=relativeTimeText(el.dateTime);el.title=absoluteTimeText(el.dateTime);});}
+function stateAuthorityKey(item){
+ const raw=String(item.source_name||item.authority||item.source_id||"").toLocaleLowerCase().normalize("NFKC").trim();
+ const host=(()=>{try{return new URL(item.url||item.official_url||item.source_url).hostname.toLowerCase().replace(/^www\./,"")}catch{return ""}})();
+ const aliases=[
+  [/\b(?:upsc|union public service commission)\b/i,"upsc"],
+  [/\b(?:ssc|staff selection commission)\b/i,"ssc"],
+  [/\b(?:ibps|institute of banking personnel selection)\b/i,"ibps"],
+  [/\b(?:sbi|state bank of india)\b/i,"sbi"]
+ ];
+ for(const [pattern,key] of aliases)if(pattern.test(raw))return key;
+ return host||raw.replace(/\b(active|current|openings?|recruitment|examinations?|notices?|official|website|portal|updates?)\b/g," ").replace(/\s+/g," ").trim();
+}
+function dedupeStateItems(items){
+ const seen=new Set();
+ return (Array.isArray(items)?items:[]).filter(item=>{
+  const title=String(item.title||item.exam||"").normalize("NFKC").toLocaleLowerCase().replace(/\b(new|latest|updated)\b/g," ").replace(/[^\p{L}\p{N}]+/gu," ").trim().replace(/\s+/g," ");
+  const source=stateAuthorityKey(item),category=String(item.category||"").toLowerCase().trim();
+  const key=source+"|"+category+"|"+title;
+  if(!title||!source||seen.has(key))return false;
+  seen.add(key);return true;
+ });
+}
 function stateCount(name){return allItems.filter(x=>stateForItem(x)===name).length}
 function renderStateLinks(){
  $("#stateDirectory").innerHTML=STATE_NAMES.map(n=>'<a class="state-directory-link'+(n===state?' active':'')+'" href="state.html?state='+encodeURIComponent(n)+'">'+esc(n)+' <span>'+stateCount(n)+'</span></a>').join("");
@@ -204,7 +226,7 @@ async function init(){
   const r=await fetch("data/results.json?v="+Date.now(),{cache:"no-store"});
   if(!r.ok)throw new Error("Feed unavailable");
   const data=await r.json(); if(!Array.isArray(data))throw new Error("Invalid feed");
-  allItems=data;
+  allItems=dedupeStateItems(data);
   renderStateLinks();
  }catch(e){
   $("#noStateUpdates").textContent="The updates feed is temporarily unavailable. Please retry later or use the official portals listed above.";
@@ -221,7 +243,7 @@ async function init(){
    if(!response.ok)throw new Error("Feed HTTP "+response.status);
    const fresh=await response.json();
    if(!Array.isArray(fresh))throw new Error("Invalid feed format");
-   allItems=fresh;
+   allItems=dedupeStateItems(fresh);
    renderStateLinks();
    if(valid)render();
   }catch(error){
