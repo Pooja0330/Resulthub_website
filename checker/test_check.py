@@ -408,6 +408,14 @@ class CheckerSafetyTests(unittest.TestCase):
         )
         self.assertTrue(is_navigation_noise_title(title))
 
+    def test_upsc_generic_navigation_destinations_are_not_exam_notices(self):
+        from check import is_navigation_noise_title
+        for title in ("Corrigendum", "Result Details", "Provisional Answer Key",
+                      "Applicants' List", "Interview Schedules"):
+            with self.subTest(title=title):
+                self.assertTrue(is_navigation_noise_title(title))
+        self.assertFalse(is_navigation_noise_title("Corrigendum to NDA Result 2026"))
+
     def test_rejects_portal_menu_cluster_with_repeated_external_link_labels(self):
         from check import is_navigation_noise_title
         title = ("Recruitment Tests Schedule for Recruitment Tests and Interviews Notice "
