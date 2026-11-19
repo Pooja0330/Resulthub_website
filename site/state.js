@@ -151,10 +151,16 @@ function stateAuthorityKey(item){
 function dedupeStateItems(items){
  const seen=new Set();
  return (Array.isArray(items)?items:[]).filter(item=>{
-  const title=String(item.title||item.exam||"").normalize("NFKC").toLocaleLowerCase().replace(/\b(new|latest|updated)\b/g," ").replace(/[^\p{L}\p{N}]+/gu," ").trim().replace(/\s+/g," ");
-  const source=stateAuthorityKey(item),category=String(item.category||"").toLowerCase().trim();
-  const key=source+"|"+category+"|"+title;
-  if(!title||!source||seen.has(key))return false;
+  const raw=String(item.url||item.official_url||item.source_url||"");
+  let key=raw;
+  try{
+   const u=new URL(raw,location.href);u.hash="";
+   for(const k of [...u.searchParams.keys()])if(/^(utm_.+|fbclid|gclid|mc_cid|mc_eid|ref|source)$/i.test(k))u.searchParams.delete(k);
+   u.searchParams.sort();u.hostname=u.hostname.toLowerCase().replace(/^www\./,"");u.pathname=u.pathname.replace(/\/+$/,"")||"/";
+   key=u.origin+u.pathname+(u.search||"");
+  }catch(_){}
+  if(!key)return true;
+  if(seen.has(key))return false;
   seen.add(key);return true;
  });
 }
