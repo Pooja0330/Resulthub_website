@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-0a34c9166dae102f082817aa",
+    "title": "एनएफडीसी ने स्वयं के साथ साझेदारी करके 57वें इफ्फी को सभी के लिए सुलभ और समावेशी बनाया।",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2338941&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2338941&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-20T08:01:34.916930+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-8fcbdd00ac80f33d44d4b88d",
     "title": "भारतीय खेतों से वैश्विक बाज़ारों तक: कृषि निर्यात में आई तेज़ी",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2338909&lang=1",
@@ -251,23 +268,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-19T15:58:33.150439+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-d0c3a924c75c36199e202dfc",
-    "title": "केंद्रीय मंत्री श्री नितिन गडकरी ने सड़क सुरक्षा, निर्माण गुणवत्ता और टिकाऊ तकनीकों पर अधिक ध्यान देने का आह्वान किया",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2338784&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2338784&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-19T15:49:06.196409+00:00",
     "archive": false,
     "verified": true
   },
