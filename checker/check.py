@@ -392,17 +392,22 @@ def is_auxiliary_sbi_attachment(item):
     source_name = str(item.get("source_name") or item.get("authority") or "").casefold()
     title = str(item.get("title") or item.get("exam") or "")
     url = str(item.get("url") or item.get("official_url") or "")
+    parsed = urlparse(url)
+    host = (parsed.hostname or "").casefold()
+    # Require an actual SBI-hosted document. A stale/mislabelled SBI source
+    # record must never cause an unrelated authority's biodata PDF to be hidden.
+    is_sbi_host = host == "sbi.bank.in" or host.endswith(".sbi.bank.in") or host == "sbi.co.in" or host.endswith(".sbi.co.in")
     is_sbi = (
         source_id.startswith("sbi-")
         or "state bank of india" in source_name
-        or re.search(r"\bsbi\b", source_name, re.I)
+        or re.search(r"\\bsbi\\b", source_name, re.I)
     )
     return bool(
         is_sbi
-        and re.search(r"\b(?:sco|specialist cadre officer)\b", title, re.I)
-        and re.search(r"bio[\W_]*data", urlparse(url).path, re.I)
+        and is_sbi_host
+        and re.search(r"\\b(?:sco|specialist cadre officer)\\b", title, re.I)
+        and re.search(r"bio[\\W_]*data", parsed.path, re.I)
     )
-
 
 def deduplicate_published_results(results):
     """Remove only exact canonical official URL duplicates; preserve distinct documents."""
