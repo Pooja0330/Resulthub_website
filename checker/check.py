@@ -383,22 +383,44 @@ def normalize_notice_authority(item, normalized_url=""):
     )
     return " ".join(raw.split())
 
+
+def notice_semantic_key(item):
+    """Identify two links scraped from the same official notice card."""
+    if not isinstance(item, dict):
+        return None
+    source_page = normalize_notice_url(item.get("source_url") or "")
+    title = normalize_notice_title(item.get("title") or item.get("exam") or "")
+    exam = normalize_notice_title(
+        item.get("exam") or item.get("exam_name") or item.get("exam_title") or ""
+    )
+    authority = normalize_notice_authority(item, source_page)
+    category = str(item.get("category") or "").strip().casefold()
+    if not (source_page and title and authority and category):
+        return None
+    return (source_page, authority, title, exam, category)
+
+
 def deduplicate_published_results(results):
     """
-    Remove only records that point to the same canonical official URL.
-    Different official URLs must remain visible even when their scraped titles
-    are identical: government portals often reuse generic titles such as
-    "Preliminary Exam Result" for different exams, posts or result documents.
+    Remove exact URL duplicates and repeated links scraped from one official
+    notice card. Distinct notices with the same headline remain when their
+    source listing pages differ or no shared source page is known.
     """
     unique = []
     seen_urls = set()
+    seen_notice_cards = set()
     for item in results:
         if not isinstance(item, dict):
             continue
         normalized_url = normalize_notice_url(item.get("url") or item.get("official_url") or "")
         if not normalized_url or normalized_url in seen_urls:
             continue
+        notice_key = notice_semantic_key(item)
+        if notice_key and notice_key in seen_notice_cards:
+            continue
         seen_urls.add(normalized_url)
+        if notice_key:
+            seen_notice_cards.add(notice_key)
         unique.append(item)
     return unique
 
@@ -533,6 +555,14 @@ def is_navigation_noise_title(title):
     """Reject scraped site menus and concatenated link clusters, not real notices."""
     raw = " ".join(str(title or "").split())
     low = raw.lower()
+    # GSEB and similar portals sometimes expose many unrelated navigation links
+    # as one oversized anchor. It is not a single exam notice.
+    if len(raw) > 150:
+        repeated_exam_labels = re.findall(
+            r"\b(?:registration|hall ticket|admit card|exam)\b", low
+        )
+        if len(repeated_exam_labels) >= 5:
+            return True
     # Some portals expose icon accessibility labels inside scraped menu clusters.
     # UPSC What's New can collapse several menu/card headings plus a real notice
     # into one oversized anchor title. A single icon label is enough when many
@@ -1254,6 +1284,10 @@ def main():
         )
         cleaned_results.append(item)
     results = cleaned_results
+    published_notice_keys = {
+        key for item in results if (key := notice_semantic_key(item))
+    }
+    candidate_notice_keys = set()
     before_dedupe = len(results)
     results = deduplicate_published_results(results)
     duplicate_rows_removed = before_dedupe - len(results)
@@ -1400,7 +1434,12 @@ def main():
                                 source_meta.get("id", ""), source_meta.get("state", "")),
         )
         detected = queued_item.get("detected_at") or pending_record.get("detected_at") or now_utc()
+        queued_notice_key = notice_semantic_key(queued_item)
+        if queued_notice_key and queued_notice_key in published_notice_keys:
+            continue
         results.append(build_result(queued_item, detected))
+        if queued_notice_key:
+            published_notice_keys.add(queued_notice_key)
         existing_ids.add(queued_id)
         existing_urls.add(normalized_queued_url)
         pending_restored += 1
@@ -1530,6 +1569,20 @@ def main():
                         )
                         continue
 
+                    candidate_notice_key = notice_semantic_key(item)
+                    if candidate_notice_key and (
+                        candidate_notice_key in published_notice_keys
+                        or candidate_notice_key in candidate_notice_keys
+                    ):
+                        seen.setdefault(key, {
+                            "first_seen": checked_at,
+                            "source_id": item.get("source_id", ""),
+                            "url": item.get("url", ""),
+                            "dedupe_reason": "same_official_notice_card",
+                        })
+                        continue
+                    if candidate_notice_key:
+                        candidate_notice_keys.add(candidate_notice_key)
                     pending[key] = {
                         "item": item,
                         "detected_at": checked_at,
@@ -1565,6 +1618,9 @@ def main():
         normalized_url = normalize_notice_url(item.get("url", ""))
         if item["id"] not in existing_ids and normalized_url not in published_urls:
             results.append(build_result(item, item["detected_at"]))
+            notice_key = notice_semantic_key(item)
+            if notice_key:
+                published_notice_keys.add(notice_key)
             existing_ids.add(item["id"])
             published_urls.add(normalized_url)
 
@@ -1843,6 +1899,8 @@ def main():
         "source_registry_count": len(sources),
     })
 
+    # A final safety pass also covers restored queue entries and candidates.
+    results = deduplicate_published_results(results)
     save_json("checker/state.json", state)
     save_json("checker/approved.json", {"pending": remaining_approved})
     save_json("site/data/results.json", results)
