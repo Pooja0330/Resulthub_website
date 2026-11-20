@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-20T00:10:37.453139+00:00",
-  "scan_started_at": "2026-11-20T00:02:02.231508+00:00",
+  "last_checked_at": "2026-11-20T00:25:06.841489+00:00",
+  "scan_started_at": "2026-11-20T00:15:56.166586+00:00",
   "sources_enabled": 309,
-  "sources_succeeded": 157,
-  "sources_failed": 152,
+  "sources_succeeded": 160,
+  "sources_failed": 149,
   "new_candidates": 0,
-  "recovered_records": 2,
+  "recovered_records": 4,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, ConnectionError: 32, SSLError: 26, HTTPError: 23, ValueError: 3",
+  "failure_types": "ConnectTimeout: 91, ConnectionError: 30, SSLError: 27, HTTPError: 22, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ap-psc",
@@ -205,22 +205,22 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps",
-      "error_type": "HTTPError"
+      "error_type": "SSLError"
     },
     {
       "source_id": "ibps-calendar",
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-careers",
+      "source_id": "ibps-csa-xvi",
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-po-mt",
+      "source_id": "ibps-recent-updates",
       "error_type": "SSLError"
     },
     {
@@ -228,7 +228,7 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-spl-xvi",
+      "source_id": "ibps-rrb-xv",
       "error_type": "SSLError"
     },
     {
@@ -270,10 +270,6 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "indiapost-gds",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -460,10 +456,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ossc",
-      "error_type": "ConnectionError"
-    },
-    {
       "source_id": "osssc",
       "error_type": "SSLError"
     },
@@ -485,10 +477,6 @@
     },
     {
       "source_id": "rajasthan-rssb",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
       "error_type": "ConnectTimeout"
     },
     {
