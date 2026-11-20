@@ -1,9 +1,9 @@
 {
-  "last_checked_at": "2026-11-20T21:53:58.362003+00:00",
-  "scan_started_at": "2026-11-20T21:45:51.627517+00:00",
+  "last_checked_at": "2026-11-20T22:14:31.110340+00:00",
+  "scan_started_at": "2026-11-20T22:02:08.942601+00:00",
   "sources_enabled": 309,
-  "sources_succeeded": 164,
-  "sources_failed": 145,
+  "sources_succeeded": 162,
+  "sources_failed": 147,
   "new_candidates": 0,
   "recovered_records": 2,
   "telegram_posts_sent": 0,
@@ -205,7 +205,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps-calendar",
@@ -254,6 +254,10 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "indiapost-gds",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -601,7 +605,7 @@
     },
     {
       "source_id": "telangana-results",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "tnmrbrecruit",
@@ -626,6 +630,10 @@
     {
       "source_id": "tripura-psc",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "tripura-university",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "tspsc",
