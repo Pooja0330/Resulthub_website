@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-20T06:09:52.630185+00:00",
-  "scan_started_at": "2026-11-20T06:01:31.236759+00:00",
+  "last_checked_at": "2026-11-20T06:23:48.366928+00:00",
+  "scan_started_at": "2026-11-20T06:15:51.229946+00:00",
   "sources_enabled": 309,
   "sources_succeeded": 158,
   "sources_failed": 151,
   "new_candidates": 0,
-  "recovered_records": 4,
+  "recovered_records": 2,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ap-psc",
@@ -217,10 +217,6 @@
     },
     {
       "source_id": "ibps-calendar",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-csa-xvi",
       "error_type": "SSLError"
     },
     {
@@ -460,6 +456,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "osssc",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -477,6 +477,10 @@
     },
     {
       "source_id": "rajasthan-rssb",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -581,10 +585,6 @@
     },
     {
       "source_id": "rrb-trivandrum",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rrc-eastern",
       "error_type": "ConnectTimeout"
     },
     {
