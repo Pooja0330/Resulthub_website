@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-20T01:54:04.911136+00:00",
-  "scan_started_at": "2026-11-20T01:45:53.333797+00:00",
+  "last_checked_at": "2026-11-20T02:09:51.080412+00:00",
+  "scan_started_at": "2026-11-20T02:01:53.963948+00:00",
   "sources_enabled": 309,
-  "sources_succeeded": 162,
-  "sources_failed": 147,
+  "sources_succeeded": 159,
+  "sources_failed": 150,
   "new_candidates": 0,
   "recovered_records": 4,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, ConnectionError: 32, SSLError: 25, HTTPError: 23, ValueError: 3",
+  "failure_types": "ConnectTimeout: 94, ConnectionError: 31, HTTPError: 23, SSLError: 23, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ap-psc",
@@ -144,6 +144,14 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "columbia-ciet-raipur",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "columbia-institute-pharmacy-raipur",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "drdo-careers",
       "error_type": "ConnectionError"
     },
@@ -216,7 +224,7 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-careers",
+      "source_id": "ibps-recruitment",
       "error_type": "SSLError"
     },
     {
@@ -297,7 +305,7 @@
     },
     {
       "source_id": "karnataka-kea",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "karnataka-kpsc",
@@ -448,10 +456,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "osssc",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -576,6 +580,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "rrc-eastern",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "rrc-northern",
       "error_type": "HTTPError"
     },
@@ -600,6 +608,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "sikkim-university",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "tamilnadu-board-official",
       "error_type": "SSLError"
     },
@@ -613,7 +625,7 @@
     },
     {
       "source_id": "tnmrbrecruit",
-      "error_type": "SSLError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "tnresults",
