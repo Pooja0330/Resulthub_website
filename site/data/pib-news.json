@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-2db6fa5378ee06db0a1655d1",
+    "title": "भारत का रुपांतरण, विकसित हो रहे स्टार्टअप इकोसिस्टम और युवाओं के लिए उपलब्ध अवसर देश की विकसित राष्ट्र बनने की यात्रा को दर्शाते हैं: दिल्ली विश्वविद्यालय के वार्षिक दीक्षांत समारोह में केंद्रीय वाणिज्य एवं उद्योग मंत्री श्री पीयूष गोयल का संबोधन",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2339218&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2339218&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-20T12:59:28.037209+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-70dded32c951469ef1fce587",
     "title": "लोक सभा अध्यक्ष ने रक्षा भूमि प्रबंधन को सुदृढ़ करने के लिए आधुनिक तकनीक और एआई (AI) के उपयोग का आह्वान किया",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2339210&lang=1",
@@ -285,23 +302,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-20T10:25:16.706722+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-54f77ddf0928602980818a9d",
-    "title": "प्रधानमंत्री ने किसानों की समृद्धि बढ़ाने और ग्रामीण भारत को सशक्त बनाने के लिए की गई परिवर्तनकारी पहलों पर एक लेख साझा किया",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2338983&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2338983&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-20T09:09:49.857158+00:00",
     "archive": false,
     "verified": true
   },
