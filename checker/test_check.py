@@ -155,6 +155,25 @@ class CheckerSafetyTests(unittest.TestCase):
             "Advertisements Online Application View Marksheet Interview Letters"
         ))
 
+    def test_rejects_repeated_gujarat_board_exam_registration_cluster(self):
+        from check import is_navigation_noise_title
+        title = (
+            "Board Website School Registration Teacher Registration SSC Exam Registration "
+            "February - March 2027 HSC General Exam Registration February - March 2027 "
+            "HSC Science Exam Registration February - March 2027 GSOS HSC GENERAL EXAM "
+            "HALL TICKET NOV-DEC-2026 GSOS SSC Exam"
+        )
+        self.assertTrue(is_navigation_noise_title(title))
+
+    def test_keeps_a_long_single_exam_notice(self):
+        from check import is_navigation_noise_title
+        title = (
+            "Gujarat Board announces the revised examination timetable for the 2027 "
+            "Higher Secondary School Certificate examination, including subject-wise "
+            "dates, reporting instructions and hall-ticket information for candidates."
+        )
+        self.assertFalse(is_navigation_noise_title(title))
+
     def test_rejects_old_year_only_notice_from_latest_feed(self):
         self.assertTrue(is_stale_notice(
             "Railway Recruitment Cell Notice for Re-medical of candidates CEN02 of 2018"
