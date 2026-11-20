@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-20T02:55:17.694201+00:00",
-  "scan_started_at": "2026-11-20T02:45:55.772146+00:00",
+  "last_checked_at": "2026-11-20T03:10:38.820417+00:00",
+  "scan_started_at": "2026-11-20T03:01:58.467000+00:00",
   "sources_enabled": 309,
-  "sources_succeeded": 164,
-  "sources_failed": 145,
+  "sources_succeeded": 161,
+  "sources_failed": 148,
   "new_candidates": 0,
   "recovered_records": 4,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, ConnectionError: 31, SSLError: 24, HTTPError: 23, ValueError: 3",
+  "failure_types": "ConnectTimeout: 91, ConnectionError: 29, SSLError: 27, HTTPError: 22, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -204,15 +204,23 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "ibps",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "ibps-calendar",
       "error_type": "SSLError"
     },
     {
+      "source_id": "ibps-csa-xvi",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-recent-updates",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "ibps-rrb",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-rrb-xv",
       "error_type": "SSLError"
     },
     {
@@ -338,6 +346,10 @@
     {
       "source_id": "mat-aima",
       "error_type": "HTTPError"
+    },
+    {
+      "source_id": "meghalaya-board",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "merchant-navy-imu",
@@ -649,7 +661,7 @@
     },
     {
       "source_id": "upsssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "utkal-university",
