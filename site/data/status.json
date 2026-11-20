@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-20T07:08:52.023471+00:00",
-  "scan_started_at": "2026-11-20T07:01:38.659846+00:00",
+  "last_checked_at": "2026-11-20T07:24:21.603971+00:00",
+  "scan_started_at": "2026-11-20T07:15:55.113656+00:00",
   "sources_enabled": 309,
-  "sources_succeeded": 165,
-  "sources_failed": 144,
+  "sources_succeeded": 159,
+  "sources_failed": 150,
   "new_candidates": 0,
   "recovered_records": 4,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 30, SSLError: 25, HTTPError: 20, ValueError: 3",
+  "failure_types": "ConnectTimeout: 91, ConnectionError: 29, SSLError: 27, HTTPError: 23, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -132,6 +132,10 @@
       "error_type": "HTTPError"
     },
     {
+      "source_id": "coal-india-careers",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "coast-guard-home",
       "error_type": "SSLError"
     },
@@ -162,6 +166,10 @@
     {
       "source_id": "esic-recruitment",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "fci-recruitment",
+      "error_type": "SSLError"
     },
     {
       "source_id": "goa-technical-education-old-results",
@@ -201,10 +209,14 @@
     },
     {
       "source_id": "ibps",
-      "error_type": "SSLError"
+      "error_type": "HTTPError"
     },
     {
       "source_id": "ibps-calendar",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-po-mt",
       "error_type": "SSLError"
     },
     {
@@ -212,8 +224,8 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ignou",
-      "error_type": "ReadTimeout"
+      "source_id": "ibps-rrb-xv",
+      "error_type": "SSLError"
     },
     {
       "source_id": "iiser-admissions",
@@ -324,6 +336,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "magadh-university",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "maha-rojgar",
       "error_type": "ConnectionError"
     },
@@ -334,6 +350,10 @@
     {
       "source_id": "manipur-board",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "mat-aima",
+      "error_type": "HTTPError"
     },
     {
       "source_id": "merchant-navy-imu",
@@ -626,6 +646,10 @@
     {
       "source_id": "tspsc",
       "error_type": "ConnectionError"
+    },
+    {
+      "source_id": "uppsc",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "upsc-active-exams",

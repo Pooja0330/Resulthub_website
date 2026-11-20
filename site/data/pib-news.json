@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-8fcbdd00ac80f33d44d4b88d",
+    "title": "भारतीय खेतों से वैश्विक बाज़ारों तक: कृषि निर्यात में आई तेज़ी",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2338909&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2338909&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-20T07:24:26.499035+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-18ae49eed1c1acc959287d16",
     "title": "जल शक्ति मंत्रालय ने विश्व शौचालय दिवस 2026 के अवसर पर ‘स्वच्छ शौचालय– गरिमामय भविष्य’ (एसएसजीबी) अभियान शुरू किया",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2338902&lang=1",
@@ -302,23 +319,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-19T14:55:21.150510+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-8a751cb46c9da67cd2892cc7",
-    "title": "लेंस के ज़रिए: गोवा के पणजी में 57वें भारतीय अंतर्राष्ट्रीय फिल्म महोत्सव (इफ्फी) की मेज़बानी के लिए तैयारियाँ ज़ोरों पर",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2338738&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2338738&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-19T14:39:40.163125+00:00",
     "archive": false,
     "verified": true
   },
