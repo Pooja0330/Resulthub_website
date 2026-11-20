@@ -384,43 +384,37 @@ def normalize_notice_authority(item, normalized_url=""):
     return " ".join(raw.split())
 
 
-def notice_semantic_key(item):
-    """Identify two links scraped from the same official notice card."""
+def is_auxiliary_sbi_attachment(item):
+    """Do not publish an SBI SCO biodata form as a second recruitment notice."""
     if not isinstance(item, dict):
-        return None
-    source_page = normalize_notice_url(item.get("source_url") or "")
-    title = normalize_notice_title(item.get("title") or item.get("exam") or "")
-    exam = normalize_notice_title(
-        item.get("exam") or item.get("exam_name") or item.get("exam_title") or ""
+        return False
+    source_id = str(item.get("source_id") or "").casefold()
+    source_name = str(item.get("source_name") or item.get("authority") or "").casefold()
+    title = str(item.get("title") or item.get("exam") or "")
+    url = str(item.get("url") or item.get("official_url") or "")
+    is_sbi = (
+        source_id.startswith("sbi-")
+        or "state bank of india" in source_name
+        or re.search(r"\bsbi\b", source_name, re.I)
     )
-    authority = normalize_notice_authority(item, source_page)
-    category = str(item.get("category") or "").strip().casefold()
-    if not (source_page and title and authority and category):
-        return None
-    return (source_page, authority, title, exam, category)
+    return bool(
+        is_sbi
+        and re.search(r"\b(?:sco|specialist cadre officer)\b", title, re.I)
+        and re.search(r"bio[\W_]*data", urlparse(url).path, re.I)
+    )
 
 
 def deduplicate_published_results(results):
-    """
-    Remove exact URL duplicates and repeated links scraped from one official
-    notice card. Distinct notices with the same headline remain when their
-    source listing pages differ or no shared source page is known.
-    """
+    """Remove only exact canonical official URL duplicates; preserve distinct documents."""
     unique = []
     seen_urls = set()
-    seen_notice_cards = set()
     for item in results:
         if not isinstance(item, dict):
             continue
         normalized_url = normalize_notice_url(item.get("url") or item.get("official_url") or "")
         if not normalized_url or normalized_url in seen_urls:
             continue
-        notice_key = notice_semantic_key(item)
-        if notice_key and notice_key in seen_notice_cards:
-            continue
         seen_urls.add(normalized_url)
-        if notice_key:
-            seen_notice_cards.add(notice_key)
         unique.append(item)
     return unique
 
@@ -1114,6 +1108,13 @@ def fetch_source(source):
     for title, link, published in links:
         title = " ".join(str(title or "").split())
         link = str(link or "").split("#")[0].strip()
+        if is_auxiliary_sbi_attachment({
+            "source_id": source.get("id", ""),
+            "source_name": source.get("name", ""),
+            "title": title,
+            "url": link,
+        }):
+            continue
         normalized = normalize_notice_url(link)
         if len(title) < 4 or not normalized or not host_allowed(link, hosts):
             continue
@@ -1246,6 +1247,9 @@ def main():
             removed_result_rows += 1
             continue
         title = str(item.get("title") or item.get("exam") or "").strip()
+        if is_auxiliary_sbi_attachment(item):
+            removed_result_rows += 1
+            continue
         # Keep GoResultHub links on GoResultHub; do not publish third-party aggregator links.
         source_id_value = str(item.get("source_id") or "").strip().lower()
         source_name_value = str(item.get("source_name") or item.get("authority") or "").strip().lower()
@@ -1284,10 +1288,6 @@ def main():
         )
         cleaned_results.append(item)
     results = cleaned_results
-    published_notice_keys = {
-        key for item in results if (key := notice_semantic_key(item))
-    }
-    candidate_notice_keys = set()
     before_dedupe = len(results)
     results = deduplicate_published_results(results)
     duplicate_rows_removed = before_dedupe - len(results)
@@ -1384,6 +1384,8 @@ def main():
             continue
         queued_title = str(queued_item.get("title") or "").strip()
         queued_url = str(queued_item.get("url") or queued_item.get("official_url") or "").strip()
+        if is_auxiliary_sbi_attachment(queued_item):
+            continue
         normalized_queued_url = normalize_notice_url(queued_url)
         if not queued_title or not normalized_queued_url:
             continue
@@ -1434,12 +1436,7 @@ def main():
                                 source_meta.get("id", ""), source_meta.get("state", "")),
         )
         detected = queued_item.get("detected_at") or pending_record.get("detected_at") or now_utc()
-        queued_notice_key = notice_semantic_key(queued_item)
-        if queued_notice_key and queued_notice_key in published_notice_keys:
-            continue
         results.append(build_result(queued_item, detected))
-        if queued_notice_key:
-            published_notice_keys.add(queued_notice_key)
         existing_ids.add(queued_id)
         existing_urls.add(normalized_queued_url)
         pending_restored += 1
@@ -1569,20 +1566,6 @@ def main():
                         )
                         continue
 
-                    candidate_notice_key = notice_semantic_key(item)
-                    if candidate_notice_key and (
-                        candidate_notice_key in published_notice_keys
-                        or candidate_notice_key in candidate_notice_keys
-                    ):
-                        seen.setdefault(key, {
-                            "first_seen": checked_at,
-                            "source_id": item.get("source_id", ""),
-                            "url": item.get("url", ""),
-                            "dedupe_reason": "same_official_notice_card",
-                        })
-                        continue
-                    if candidate_notice_key:
-                        candidate_notice_keys.add(candidate_notice_key)
                     pending[key] = {
                         "item": item,
                         "detected_at": checked_at,
@@ -1618,9 +1601,6 @@ def main():
         normalized_url = normalize_notice_url(item.get("url", ""))
         if item["id"] not in existing_ids and normalized_url not in published_urls:
             results.append(build_result(item, item["detected_at"]))
-            notice_key = notice_semantic_key(item)
-            if notice_key:
-                published_notice_keys.add(notice_key)
             existing_ids.add(item["id"])
             published_urls.add(normalized_url)
 
@@ -1633,6 +1613,9 @@ def main():
         item = record.get("item", {}) if isinstance(record, dict) else {}
         if not isinstance(item, dict):
             item = {}
+        if is_auxiliary_sbi_attachment(item):
+            pending.pop(key, None)
+            continue
         title = str(item.get("title", "")).strip()
         url = str(item.get("url", "")).strip()
         # Resolve by stable source ID first. Names can change or differ in
@@ -1791,6 +1774,8 @@ def main():
             remaining_approved.extend(approved_items[approved_index:])
             break
         if not isinstance(item, dict):
+            continue
+        if is_auxiliary_sbi_attachment(item):
             continue
 
         if item.get("approved") is not True:
