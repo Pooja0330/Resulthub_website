@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-20T06:53:42.459014+00:00",
-  "scan_started_at": "2026-11-20T06:45:55.840527+00:00",
+  "last_checked_at": "2026-11-20T07:08:52.023471+00:00",
+  "scan_started_at": "2026-11-20T07:01:38.659846+00:00",
   "sources_enabled": 309,
-  "sources_succeeded": 161,
-  "sources_failed": 148,
+  "sources_succeeded": 165,
+  "sources_failed": 144,
   "new_candidates": 0,
   "recovered_records": 4,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, ConnectionError: 29, SSLError: 27, HTTPError: 22, ValueError: 3",
+  "failure_types": "ConnectTimeout: 89, ConnectionError: 30, SSLError: 25, HTTPError: 20, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "andhra-university",
@@ -132,10 +132,6 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "coal-india-careers",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "coast-guard-home",
       "error_type": "SSLError"
     },
@@ -204,23 +200,15 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "ibps",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "ibps-calendar",
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-careers",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-po-mt",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "ibps-rrb",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-rrb-xv",
       "error_type": "SSLError"
     },
     {
@@ -346,10 +334,6 @@
     {
       "source_id": "manipur-board",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "mat-aima",
-      "error_type": "HTTPError"
     },
     {
       "source_id": "merchant-navy-imu",
