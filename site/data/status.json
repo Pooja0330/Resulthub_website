@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-20T18:25:55.387638+00:00",
-  "scan_started_at": "2026-11-20T18:15:59.717100+00:00",
+  "last_checked_at": "2026-11-20T18:43:05.279482+00:00",
+  "scan_started_at": "2026-11-20T18:31:18.408956+00:00",
   "sources_enabled": 309,
-  "sources_succeeded": 162,
-  "sources_failed": 147,
+  "sources_succeeded": 160,
+  "sources_failed": 149,
   "new_candidates": 0,
   "recovered_records": 2,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, ConnectionError: 31, HTTPError: 24, SSLError: 23, ValueError: 3",
+  "failure_types": "ConnectTimeout: 92, ConnectionError: 30, HTTPError: 24, SSLError: 24, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -212,6 +212,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "ibps-recruitment",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "ibps-rrb",
       "error_type": "SSLError"
     },
@@ -325,7 +329,7 @@
     },
     {
       "source_id": "maha-rojgar",
-      "error_type": "HTTPError"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "mahresult",
@@ -340,6 +344,10 @@
       "error_type": "HTTPError"
     },
     {
+      "source_id": "meghalaya-board",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -350,6 +358,10 @@
     {
       "source_id": "mizoram-university",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "mpbse",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "mpesb",
@@ -385,7 +397,7 @@
     },
     {
       "source_id": "niacl",
-      "error_type": "ConnectTimeout"
+      "error_type": "HTTPError"
     },
     {
       "source_id": "nielit-recruitment",
@@ -465,10 +477,6 @@
     },
     {
       "source_id": "rajasthan-rssb",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
       "error_type": "ConnectTimeout"
     },
     {
