@@ -283,7 +283,7 @@ function isNavigationNoise(item){
  const navigationTerms=["servicespayfeeonline","officialemailservice","jobsrecruitmentadvertisements","callletters","tendersnotices","employeeonlineservices","photogalleryconferences","virtualtour","esamikshya","epratikaar"];
  const navigationHits=navigationTerms.reduce((count,term)=>count+(title.includes(term)?1:0),0);
  const genericMenu=(title.length>100 && navigationHits>=3);
- const examClusterHits=(rawTitle.match(/\\b(?:registration|hall ticket|admit card|exam)\\b/gi)||[]).length;
+ const examClusterHits=(rawTitle.match(/\b(?:registration|hall ticket|admit card|exam)\b/gi)||[]).length;
  const concatenatedExamMenu=rawTitle.length>150 && examClusterHits>=5;
  return blocked.has(title) || title.includes("rtipolicyinformation") || title.includes("informationrtiofficers") || title.includes("rtirelatedcasedecisions") || genericMenu || concatenatedExamMenu;
 }
