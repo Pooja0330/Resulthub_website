@@ -339,17 +339,28 @@ function visibleAuthorityKey(item){
  return value.replace(/\b(active|current|openings?|recruitment|examinations?|notices?|official|website|portal|updates?)\b/g," ").replace(/[^\p{L}\p{N}]+/gu," ").trim().replace(/\s+/g," ");
 }
 function dedupeVisibleItems(items, options={}){
- const seen=new Set();
+ const seenUrls=new Set();
+ const seenNoticeCards=new Set();
+ const normalize=value=>String(value||"").toLocaleLowerCase().normalize("NFKC")
+  .replace(/\b(new|latest|updated)\b/g," ")
+  .replace(/[^\p{L}\p{M}\p{N}]+/gu," ").trim().replace(/\s+/g," ");
  return items.filter(x=>{
-  const url=canonicalNoticeUrl(x.url||x.official_url||x.source_url||"");
-  // Do not collapse different notices just because a portal reused a title.
-  // Keep URL-less entries rather than silently hiding a potentially genuine alert.
-  if(!url)return true;
-  if(options.requirePibReleaseUrl&&!/^https:\/\/(?:www\.)?pib\.gov\.in\/(?:PressReleaseIframePage|PressReleasePage|PressReleaseDetail)\.aspx\?[^#]*\bPRID=\d+/i.test(String(x.url||x.official_url||x.source_url||"").trim()))return false;
-  if(seen.has(url))return false;
-  seen.add(url);
+  const rawUrl=String(x.url||x.official_url||"").trim();
+  const url=canonicalNoticeUrl(rawUrl);
+  if(options.requirePibReleaseUrl&&!/^https:\/\/(?:www\.)?pib\.gov\.in\/(?:PressReleaseIframePage|PressReleasePage|PressReleaseDetail)\.aspx\?[^#]*\bPRID=\d+/i.test(rawUrl))return false;
+  if(url&&seenUrls.has(url))return false;
+  const sourcePage=canonicalNoticeUrl(x.source_url||"");
+  const title=normalize(x.title||x.exam||"");
+  const exam=normalize(x.exam||x.exam_name||x.exam_title||"");
+  const authority=visibleAuthorityKey(x);
+  const category=String(x.category||"").toLowerCase().trim();
+  const noticeCard=sourcePage&&title&&authority&&category
+   ?[sourcePage,authority,title,exam,category].join("|"):"";
+  if(noticeCard&&seenNoticeCards.has(noticeCard))return false;
+  if(url)seenUrls.add(url);
+  if(noticeCard)seenNoticeCards.add(noticeCard);
   return true;
- }); 
+ });
 }
 function filteredItems(){
  const rawQuery=$("#q").value.trim();
