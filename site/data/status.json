@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-20T19:41:17.590004+00:00",
-  "scan_started_at": "2026-11-20T19:31:20.230273+00:00",
+  "last_checked_at": "2026-11-20T19:57:46.127309+00:00",
+  "scan_started_at": "2026-11-20T19:45:57.583825+00:00",
   "sources_enabled": 309,
   "sources_succeeded": 162,
   "sources_failed": 147,
@@ -9,7 +9,7 @@
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 31, HTTPError: 24, SSLError: 23, ValueError: 3",
+  "failure_types": "ConnectTimeout: 90, ConnectionError: 31, HTTPError: 24, SSLError: 23, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -144,6 +144,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "columbia-ciet-raipur",
+      "error_type": "ConnectionError"
+    },
+    {
       "source_id": "drdo-careers",
       "error_type": "ConnectionError"
     },
@@ -208,6 +212,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "ibps",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "ibps-calendar",
       "error_type": "SSLError"
     },
@@ -254,10 +262,6 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "indiapost-recruitment",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -450,10 +454,6 @@
     {
       "source_id": "patna-university",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "pondicherry-university-old-results",
-      "error_type": "HTTPError"
     },
     {
       "source_id": "punjab-psc",
