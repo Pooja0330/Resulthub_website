@@ -594,7 +594,7 @@ def is_navigation_noise_title(title):
     # These clusters are not individual notices and should never reach the feed.
     if len(raw) > 150:
         cluster_terms = ("registration", "hall ticket", "admit card", "exam")
-        if sum(len(re.findall(r"\\b" + re.escape(term) + r"\\b", low)) for term in cluster_terms) >= 5:
+        if sum(len(re.findall(r"\b" + re.escape(term) + r"\b", low)) for term in cluster_terms) >= 5:
             return True
 
     menu_phrases = (
