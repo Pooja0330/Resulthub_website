@@ -356,9 +356,10 @@ def normalize_notice_title(title):
 
 
 def normalize_notice_authority(item, normalized_url=""):
-    """Use stable source identity first; fall back to the official host."""
+    """Map common display-name variants to one stable issuing-authority key."""
     raw = " ".join(str(
-        item.get("source_name") or item.get("authority") or item.get("source_id") or ""
+        item.get("source_name") or item.get("authority") or item.get("source_id") or
+        urlparse(normalized_url).hostname or ""
     ).casefold().split())
     aliases = (
         (r"\b(?:upsc|union public service commission)\b", "upsc"),
@@ -370,14 +371,17 @@ def normalize_notice_authority(item, normalized_url=""):
     for pattern, canonical in aliases:
         if re.search(pattern, raw, re.I):
             return canonical
-    if raw:
-        raw = re.sub(
-            r"\b(?:active|current|openings?|recruitment|examinations?|notices?|official|website|portal|updates?)\b",
-            " ", raw
-        )
-        return " ".join(raw.split())
+    # Different registry labels can point to the exact same official portal.
     host = (urlparse(normalized_url).hostname or "").casefold()
-    return host[4:] if host.startswith("www.") else host
+    if host.startswith("www."):
+        host = host[4:]
+    if host:
+        return host
+    raw = re.sub(
+        r"\b(?:active|current|openings?|recruitment|examinations?|notices?|official|website|portal|updates?)\b",
+        " ", raw
+    )
+    return " ".join(raw.split())
 
 def deduplicate_published_results(results):
     """
