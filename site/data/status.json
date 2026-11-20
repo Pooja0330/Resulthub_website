@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-20T11:26:26.319485+00:00",
-  "scan_started_at": "2026-11-20T11:16:03.225900+00:00",
+  "last_checked_at": "2026-11-20T11:39:32.576067+00:00",
+  "scan_started_at": "2026-11-20T11:31:16.232033+00:00",
   "sources_enabled": 309,
-  "sources_succeeded": 164,
-  "sources_failed": 145,
-  "new_candidates": 0,
+  "sources_succeeded": 159,
+  "sources_failed": 150,
+  "new_candidates": 1,
   "recovered_records": 2,
-  "telegram_posts_sent": 0,
+  "telegram_posts_sent": 1,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 30, SSLError: 24, HTTPError: 23, ValueError: 3",
+  "failure_types": "ConnectTimeout: 93, ConnectionError: 30, SSLError: 26, HTTPError: 22, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -144,6 +144,14 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "columbia-ciet-raipur",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "columbia-institute-pharmacy-raipur",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "drdo-careers",
       "error_type": "ConnectionError"
     },
@@ -205,10 +213,14 @@
     },
     {
       "source_id": "ibps",
-      "error_type": "HTTPError"
+      "error_type": "SSLError"
     },
     {
       "source_id": "ibps-calendar",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-careers",
       "error_type": "SSLError"
     },
     {
@@ -338,6 +350,10 @@
     {
       "source_id": "mat-aima",
       "error_type": "HTTPError"
+    },
+    {
+      "source_id": "meghalaya-board",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "merchant-navy-imu",
@@ -589,6 +605,10 @@
     },
     {
       "source_id": "sikkim-psc",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "sikkim-university",
       "error_type": "ConnectTimeout"
     },
     {
