@@ -146,6 +146,23 @@ class CheckerSafetyTests(unittest.TestCase):
         )
         self.assertFalse(is_navigation_noise_title(title))
 
+    def test_rejects_gseb_concatenated_registration_navigation_cluster(self):
+        from check import is_navigation_noise_title
+        title = (
+            "Board Website School Registration Teacher Registration SSC Exam Registration "
+            "February - March 2027 HSC General Exam Registration February - March 2027 "
+            "HSC Science Exam Registration February - March 2027 GSOS HSC GENERAL EXAM "
+            "HALL TICKET NOV-DEC-2026 GSOS SSC E"
+        )
+        self.assertTrue(is_navigation_noise_title(title))
+
+    def test_keeps_long_single_exam_notice(self):
+        from check import is_navigation_noise_title
+        self.assertFalse(is_navigation_noise_title(
+            "Gujarat Board publishes the revised 2027 Higher Secondary examination "
+            "timetable with subject-wise dates and candidate instructions."
+        ))
+
     def test_rejects_bpsc_generic_navigation_cluster(self):
         from check import is_navigation_noise_title
         self.assertTrue(is_navigation_noise_title(
@@ -465,6 +482,26 @@ class CheckerSafetyTests(unittest.TestCase):
             normalize_notice_title("Latest — परीक्षा Result 2026"),
             normalize_notice_title("परीक्षा Result 2026")
         )
+
+    def test_same_card_duplicate_links_are_deduplicated(self):
+        records = [
+            {
+                "id": "advertisement", "title": "SBI Specialist Cadre Officer Advertisement 2026",
+                "exam": "SBI Specialist Cadre Officer Advertisement 2026",
+                "source_name": "SBI Current Openings", "source_id": "sbi-current-openings",
+                "category": "notification", "source_url": "https://sbi.bank.in/en/web/careers/current-openings",
+                "url": "https://sbi.bank.in/documents/advertisement.pdf",
+            },
+            {
+                "id": "biodata", "title": "SBI Specialist Cadre Officer Advertisement 2026",
+                "exam": "SBI Specialist Cadre Officer Advertisement 2026",
+                "source_name": "SBI Current Openings", "source_id": "sbi-current-openings",
+                "category": "notification", "source_url": "https://sbi.bank.in/en/web/careers/current-openings",
+                "url": "https://sbi.bank.in/documents/biodata.pdf",
+            },
+        ]
+        cleaned = deduplicate_published_results(records)
+        self.assertEqual([item["id"] for item in cleaned], ["advertisement"])
 
     def test_same_title_different_official_urls_are_preserved(self):
         records = [
