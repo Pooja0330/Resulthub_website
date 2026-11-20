@@ -151,6 +151,14 @@ function stateAuthorityKey(item){
 function dedupeStateItems(items){
  const seen=new Set();
  return (Array.isArray(items)?items:[]).filter(item=>{
+  const title=String(item.title||item.exam||"").toLowerCase();
+  const examClusterHits=(title.match(/\b(registration|hall ticket|admit card|exam)\b/g)||[]).length;
+  if(title.length>150&&examClusterHits>=5)return false;
+  const sourceId=String(item.source_id||"").toLowerCase();
+  const sourceName=String(item.source_name||item.authority||"").toLowerCase();
+  const sourceUrl=String(item.url||item.official_url||"").toLowerCase();
+  const sbiBiodata=/^sbi-/.test(sourceId)||/state bank of india|\bsbi\b/.test(sourceName);
+  if(sbiBiodata&&/\b(?:sco|specialist cadre officer)\b/i.test(title)&&/bio[\W_]*data/i.test(sourceUrl))return false;
   const raw=String(item.url||item.official_url||item.source_url||"");
   let key=raw;
   try{
