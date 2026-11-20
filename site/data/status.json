@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-20T11:57:08.274751+00:00",
-  "scan_started_at": "2026-11-20T11:45:57.182442+00:00",
+  "last_checked_at": "2026-11-20T12:13:30.358200+00:00",
+  "scan_started_at": "2026-11-20T12:02:09.795033+00:00",
   "sources_enabled": 309,
-  "sources_succeeded": 162,
-  "sources_failed": 147,
+  "sources_succeeded": 164,
+  "sources_failed": 145,
   "new_candidates": 0,
-  "recovered_records": 2,
+  "recovered_records": 17,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, ConnectionError: 32, SSLError: 24, HTTPError: 23, ValueError: 3",
+  "failure_types": "ConnectTimeout: 87, ConnectionError: 32, HTTPError: 23, SSLError: 23, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "andhra-university",
@@ -196,10 +196,6 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "hpbose-results",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "hpsc",
       "error_type": "ConnectTimeout"
     },
@@ -213,10 +209,6 @@
     },
     {
       "source_id": "ibps-rrb",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-spl-xvi",
       "error_type": "SSLError"
     },
     {
@@ -258,6 +250,10 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "indiapost-gds",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -445,7 +441,7 @@
     },
     {
       "source_id": "osssc",
-      "error_type": "ConnectionError"
+      "error_type": "SSLError"
     },
     {
       "source_id": "patna-university",
@@ -610,10 +606,6 @@
     {
       "source_id": "tnmrbrecruit",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "tnpsc",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "tnresults",
