@@ -43,6 +43,11 @@
     if (!title || title.length<8 || isObsoleteLiveAlert(item)) return true;
     const rawTitle=String(item.title||item.exam||"").toLowerCase();
     if(rawTitle.length>150 && (rawTitle.match(/\b(registration|hall ticket|admit card|exam)\b/g)||[]).length>=5)return true;
+    const sourceId=String(item.source_id||"").toLowerCase();
+    const sourceName=String(item.source_name||item.authority||"").toLowerCase();
+    const sourceUrl=String(item.url||item.official_url||"").toLowerCase();
+    const sbiBiodata=/^sbi-/.test(sourceId)||/state bank of india|\bsbi\b/.test(sourceName);
+    if(sbiBiodata && /\b(?:sco|specialist cadre officer)\b/i.test(rawTitle) && /bio[\W_]*data/i.test(sourceUrl))return true;
     const upscClusterLabels=["applicants' list","notices","corrigendum","scrutiny","interview schedules","results","marks information","recruitment cases","kept on hold"];
     if(rawTitle.length>120 && /\bopen_in_new\b/.test(rawTitle) && upscClusterLabels.filter(label=>rawTitle.includes(label)).length>=5)return true;
     if(rawTitle.length>100 && (rawTitle.match(/\bopen_in_new\b/g)||[]).length>=2)return true;
@@ -91,37 +96,20 @@
     return normalizedTitle(item)+"|"+authorityKey(item)+"|"+String(item.category||"").toLowerCase().trim();
   };
   const uniqueItems = items => {
-    const seenUrls=new Set(),seenNoticeCards=new Set();
-    const normalize=value=>String(value||"").toLocaleLowerCase().normalize("NFKC")
-      .replace(/\b(new|latest|updated)\b/g," ")
-      .replace(/[^\p{L}\p{N}]+/gu," ").trim();
+    const keys=new Set();
     return items.filter(item=>{
       if(isNoise(item))return false;
       const raw=String(item.url||item.official_url||item.source_url||"");
-      let urlKey="";
+      let key=raw;
       try{
         const u=new URL(raw,location.href);u.hash="";
         for(const k of [...u.searchParams.keys()])if(/^(utm_.+|fbclid|gclid|mc_cid|mc_eid|ref|source)$/i.test(k))u.searchParams.delete(k);
         u.searchParams.sort();u.hostname=u.hostname.toLowerCase().replace(/^www\./,"");u.pathname=u.pathname.replace(/\/+$/,"")||"/";
-        urlKey=u.origin+u.pathname+(u.search||"");
+        key=u.origin+u.pathname+(u.search||"");
       }catch(_){}
-      if(urlKey&&seenUrls.has(urlKey))return false;
-      const sourcePage=String(item.source_url||"");
-      const title=normalize(item.title||item.exam||"");
-      const exam=normalize(item.exam||item.exam_name||item.exam_title||"");
-      const authority=authorityKey(item);
-      const category=String(item.category||"").toLowerCase().trim();
-      let sourcePageKey="";
-      try{
-        const u=new URL(sourcePage,location.href);u.hash="";u.hostname=u.hostname.toLowerCase().replace(/^www\./,"");u.pathname=u.pathname.replace(/\/+$/,"")||"/";
-        sourcePageKey=u.origin+u.pathname+(u.search||"");
-      }catch(_){}
-      const noticeCard=sourcePageKey&&title&&authority&&category
-        ?[sourcePageKey,authority,title,exam,category].join("|"):"";
-      if(noticeCard&&seenNoticeCards.has(noticeCard))return false;
-      if(urlKey)seenUrls.add(urlKey);
-      if(noticeCard)seenNoticeCards.add(noticeCard);
-      return true;
+      if(!key)key=identity(item);
+      if(keys.has(key))return false;
+      keys.add(key);return true;
     });
   };
   const readSeen = () => {
