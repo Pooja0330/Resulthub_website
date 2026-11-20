@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-20T07:24:21.603971+00:00",
-  "scan_started_at": "2026-11-20T07:15:55.113656+00:00",
+  "last_checked_at": "2026-11-20T07:41:29.006820+00:00",
+  "scan_started_at": "2026-11-20T07:31:57.777841+00:00",
   "sources_enabled": 309,
-  "sources_succeeded": 159,
-  "sources_failed": 150,
-  "new_candidates": 0,
-  "recovered_records": 4,
-  "telegram_posts_sent": 0,
+  "sources_succeeded": 162,
+  "sources_failed": 147,
+  "new_candidates": 2,
+  "recovered_records": 2,
+  "telegram_posts_sent": 2,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, ConnectionError: 29, SSLError: 27, HTTPError: 23, ValueError: 3",
+  "failure_types": "ConnectTimeout: 89, ConnectionError: 30, SSLError: 24, HTTPError: 23, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ap-psc",
@@ -168,10 +168,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "fci-recruitment",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "goa-technical-education-old-results",
       "error_type": "SSLError"
     },
@@ -216,7 +212,7 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-po-mt",
+      "source_id": "ibps-recruitment",
       "error_type": "SSLError"
     },
     {
@@ -224,8 +220,8 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-rrb-xv",
-      "error_type": "SSLError"
+      "source_id": "ignou",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "iiser-admissions",
@@ -333,10 +329,6 @@
     },
     {
       "source_id": "lakshadweep-administration",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "magadh-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -456,10 +448,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "osssc",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -478,6 +466,10 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
@@ -646,10 +638,6 @@
     {
       "source_id": "tspsc",
       "error_type": "ConnectionError"
-    },
-    {
-      "source_id": "uppsc",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "upsc-active-exams",
