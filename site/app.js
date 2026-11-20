@@ -337,15 +337,26 @@ function visibleAuthorityKey(item){
  return value.replace(/\b(active|current|openings?|recruitment|examinations?|notices?|official|website|portal|updates?)\b/g," ").replace(/[^\p{L}\p{N}]+/gu," ").trim().replace(/\s+/g," ");
 }
 function dedupeVisibleItems(items, options={}){
- const seen=new Set();
+ const seenUrls=new Set();
+ const seenAuthorityTitles=new Set();
+ const normalizeTitle=value=>String(value||"").toLocaleLowerCase().normalize("NFKC")
+  .replace(/\\b(new|latest|updated)\\b/g," ")
+  .replace(/[^\\p{L}\\p{M}\\p{N}]+/gu," ").trim().replace(/\\s+/g," ");
  return items.filter(x=>{
-  const url=canonicalNoticeUrl(x.url||x.official_url||x.source_url||"");
-  // Do not collapse different notices just because a portal reused a title.
-  // Keep URL-less entries rather than silently hiding a potentially genuine alert.
-  if(!url)return true;
-  if(options.requirePibReleaseUrl&&!/^https:\/\/(?:www\.)?pib\.gov\.in\/(?:PressReleaseIframePage|PressReleasePage|PressReleaseDetail)\.aspx\?[^#]*\bPRID=\d+/i.test(String(x.url||x.official_url||x.source_url||"").trim()))return false;
-  if(seen.has(url))return false;
-  seen.add(url);
+  const rawUrl=String(x.url||x.official_url||"").trim();
+  const url=canonicalNoticeUrl(rawUrl);
+  if(options.requirePibReleaseUrl&&!/^https:\/\/(?:www\.)?pib\.gov\.in\/(?:PressReleaseIframePage|PressReleasePage|PressReleaseDetail)\.aspx\?[^#]*\bPRID=\d+/i.test(rawUrl))return false;
+  if(url&&seenUrls.has(url))return false;
+
+  // A source may expose one notice through several different listing/page URLs.
+  // Collapse an identical normalized headline only within the same authority.
+  const title=normalizeTitle(x.title||x.exam||"");
+  const authority=visibleAuthorityKey(x);
+  const authorityTitle=authority&&title?authority+"|"+title:"";
+  if(authorityTitle&&seenAuthorityTitles.has(authorityTitle))return false;
+
+  if(url)seenUrls.add(url);
+  if(authorityTitle)seenAuthorityTitles.add(authorityTitle);
   return true;
  });
 }
