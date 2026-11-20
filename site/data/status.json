@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-20T18:58:01.327340+00:00",
-  "scan_started_at": "2026-11-20T18:45:58.725064+00:00",
+  "last_checked_at": "2026-11-20T19:09:44.783987+00:00",
+  "scan_started_at": "2026-11-20T19:01:25.846084+00:00",
   "sources_enabled": 309,
-  "sources_succeeded": 162,
-  "sources_failed": 147,
+  "sources_succeeded": 164,
+  "sources_failed": 145,
   "new_candidates": 0,
   "recovered_records": 2,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, ConnectionError: 32, HTTPError: 25, SSLError: 23, ValueError: 3",
+  "failure_types": "ConnectTimeout: 90, ConnectionError: 30, HTTPError: 24, SSLError: 22, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -205,7 +205,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps-calendar",
@@ -388,10 +388,6 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "niacl",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "nielit-recruitment",
       "error_type": "SSLError"
     },
@@ -441,10 +437,6 @@
     },
     {
       "source_id": "osmania-university",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
