@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-76ec7f6ddf73d37272343a16",
+    "title": "प्रधानमंत्री 21 नवम्‍बर को बिहार का दौरा करेंगे",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2339232&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2339232&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-20T13:14:04.313588+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-2db6fa5378ee06db0a1655d1",
     "title": "भारत का रुपांतरण, विकसित हो रहे स्टार्टअप इकोसिस्टम और युवाओं के लिए उपलब्ध अवसर देश की विकसित राष्ट्र बनने की यात्रा को दर्शाते हैं: दिल्ली विश्वविद्यालय के वार्षिक दीक्षांत समारोह में केंद्रीय वाणिज्य एवं उद्योग मंत्री श्री पीयूष गोयल का संबोधन",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2339218&lang=1",
@@ -319,23 +336,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-20T09:09:49.857054+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-94992f87e08cc96f425f4849",
-    "title": "भारतीय रेल द्वारा डिजिटल जीवन प्रमाण पत्र अभियान 5.0 के तहत नई दिल्ली में मेगा कैंप का आयोजन",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2338957&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2338957&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-20T08:24:12.971135+00:00",
     "archive": false,
     "verified": true
   }
