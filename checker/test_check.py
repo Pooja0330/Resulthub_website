@@ -483,25 +483,21 @@ class CheckerSafetyTests(unittest.TestCase):
             normalize_notice_title("परीक्षा Result 2026")
         )
 
-    def test_same_card_duplicate_links_are_deduplicated(self):
-        records = [
-            {
-                "id": "advertisement", "title": "SBI Specialist Cadre Officer Advertisement 2026",
-                "exam": "SBI Specialist Cadre Officer Advertisement 2026",
-                "source_name": "SBI Current Openings", "source_id": "sbi-current-openings",
-                "category": "notification", "source_url": "https://sbi.bank.in/en/web/careers/current-openings",
-                "url": "https://sbi.bank.in/documents/advertisement.pdf",
-            },
-            {
-                "id": "biodata", "title": "SBI Specialist Cadre Officer Advertisement 2026",
-                "exam": "SBI Specialist Cadre Officer Advertisement 2026",
-                "source_name": "SBI Current Openings", "source_id": "sbi-current-openings",
-                "category": "notification", "source_url": "https://sbi.bank.in/en/web/careers/current-openings",
-                "url": "https://sbi.bank.in/documents/biodata.pdf",
-            },
-        ]
-        cleaned = deduplicate_published_results(records)
-        self.assertEqual([item["id"] for item in cleaned], ["advertisement"])
+    def test_sbi_sco_biodata_attachment_is_not_a_separate_alert(self):
+        from check import is_auxiliary_sbi_attachment
+        item = {
+            "source_id": "sbi-current-openings",
+            "source_name": "SBI Current Openings",
+            "title": "RECRUITMENT OF SPECIALIST CADRE OFFICER ON REGULAR BASIS "
+                     "ADVERTISEMENT NO: CRPD/SCO/2026-27/31",
+            "url": "https://sbi.bank.in/documents/20112026_BIODATA_SCO-31.pdf",
+        }
+        self.assertTrue(is_auxiliary_sbi_attachment(item))
+        item["url"] = "https://sbi.bank.in/documents/20112026_Final_ADV_CRPD_SCO_31.pdf"
+        self.assertFalse(is_auxiliary_sbi_attachment(item))
+        item["source_id"] = "other-authority"
+        item["url"] = "https://other.gov.in/biodata.pdf"
+        self.assertFalse(is_auxiliary_sbi_attachment(item))
 
     def test_same_title_different_official_urls_are_preserved(self):
         records = [
