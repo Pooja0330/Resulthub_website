@@ -589,6 +589,14 @@ def is_navigation_noise_title(title):
     if repeated_heading and len(raw) > 65:
         return True
 
+    # Gujarat Board and similar portals sometimes expose an entire group of
+    # unrelated exam/registration links as one oversized scraped heading.
+    # These clusters are not individual notices and should never reach the feed.
+    if len(raw) > 150:
+        cluster_terms = ("registration", "hall ticket", "admit card", "exam")
+        if sum(len(re.findall(r"\\b" + re.escape(term) + r"\\b", low)) for term in cluster_terms) >= 5:
+            return True
+
     menu_phrases = (
         "apply for job", "instructions to applicants", "quick links",
         "online services", "employee online", "management quota",
