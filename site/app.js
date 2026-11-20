@@ -285,7 +285,12 @@ function isNavigationNoise(item){
  const genericMenu=(title.length>100 && navigationHits>=3);
  const examClusterHits=(rawTitle.match(/\b(?:registration|hall ticket|admit card|exam)\b/gi)||[]).length;
  const concatenatedExamMenu=rawTitle.length>150 && examClusterHits>=5;
- return blocked.has(title) || title.includes("rtipolicyinformation") || title.includes("informationrtiofficers") || title.includes("rtirelatedcasedecisions") || genericMenu || concatenatedExamMenu;
+ const sourceId=String(item?.source_id||"").toLowerCase();
+ const sourceName=String(item?.source_name||item?.authority||"").toLowerCase();
+ const sourceUrl=String(item?.url||item?.official_url||"").toLowerCase();
+ const sbiBiodata=/^sbi-/.test(sourceId)||/state bank of india|\bsbi\b/.test(sourceName);
+ const auxiliarySbiForm=sbiBiodata && /\b(?:sco|specialist cadre officer)\b/i.test(rawTitle) && /bio[\W_]*data/i.test(sourceUrl);
+ return blocked.has(title) || title.includes("rtipolicyinformation") || title.includes("informationrtiofficers") || title.includes("rtirelatedcasedecisions") || genericMenu || concatenatedExamMenu || auxiliarySbiForm;
 }
 function cleanResults(items){return Array.isArray(items)?items.filter(item=>!isNavigationNoise(item)):[];}
 function isCurrent2026Update(item){
@@ -339,26 +344,13 @@ function visibleAuthorityKey(item){
  return value.replace(/\b(active|current|openings?|recruitment|examinations?|notices?|official|website|portal|updates?)\b/g," ").replace(/[^\p{L}\p{N}]+/gu," ").trim().replace(/\s+/g," ");
 }
 function dedupeVisibleItems(items, options={}){
- const seenUrls=new Set();
- const seenNoticeCards=new Set();
- const normalize=value=>String(value||"").toLocaleLowerCase().normalize("NFKC")
-  .replace(/\b(new|latest|updated)\b/g," ")
-  .replace(/[^\p{L}\p{M}\p{N}]+/gu," ").trim().replace(/\s+/g," ");
+ const seen=new Set();
  return items.filter(x=>{
-  const rawUrl=String(x.url||x.official_url||"").trim();
-  const url=canonicalNoticeUrl(rawUrl);
-  if(options.requirePibReleaseUrl&&!/^https:\/\/(?:www\.)?pib\.gov\.in\/(?:PressReleaseIframePage|PressReleasePage|PressReleaseDetail)\.aspx\?[^#]*\bPRID=\d+/i.test(rawUrl))return false;
-  if(url&&seenUrls.has(url))return false;
-  const sourcePage=canonicalNoticeUrl(x.source_url||"");
-  const title=normalize(x.title||x.exam||"");
-  const exam=normalize(x.exam||x.exam_name||x.exam_title||"");
-  const authority=visibleAuthorityKey(x);
-  const category=String(x.category||"").toLowerCase().trim();
-  const noticeCard=sourcePage&&title&&authority&&category
-   ?[sourcePage,authority,title,exam,category].join("|"):"";
-  if(noticeCard&&seenNoticeCards.has(noticeCard))return false;
-  if(url)seenUrls.add(url);
-  if(noticeCard)seenNoticeCards.add(noticeCard);
+  const url=canonicalNoticeUrl(x.url||x.official_url||x.source_url||"");
+  if(!url)return true;
+  if(options.requirePibReleaseUrl&&!/^https:\/\/(?:www\.)?pib\.gov\.in\/(?:PressReleaseIframePage|PressReleasePage|PressReleaseDetail)\.aspx\?[^#]*\bPRID=\d+/i.test(String(x.url||x.official_url||x.source_url||"").trim()))return false;
+  if(seen.has(url))return false;
+  seen.add(url);
   return true;
  });
 }
