@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-20T14:06:09.945904+00:00",
-  "scan_started_at": "2026-11-20T13:54:11.189098+00:00",
+  "last_checked_at": "2026-11-20T15:02:08.698579+00:00",
+  "scan_started_at": "2026-11-20T14:51:04.943722+00:00",
   "sources_enabled": 309,
   "sources_succeeded": 159,
   "sources_failed": 150,
   "new_candidates": 0,
-  "recovered_records": 2,
+  "recovered_records": 4,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, ConnectionError: 32, SSLError: 26, HTTPError: 24, ValueError: 3",
+  "failure_types": "ConnectTimeout: 91, ConnectionError: 30, SSLError: 26, HTTPError: 24, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -196,31 +196,35 @@
       "error_type": "HTTPError"
     },
     {
+      "source_id": "hpbose-results",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "hpsc",
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "hpssc",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "ibps",
-      "error_type": "HTTPError"
+      "error_type": "SSLError"
     },
     {
       "source_id": "ibps-calendar",
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-csa-xvi",
+      "source_id": "ibps-careers",
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-recruitment",
+      "source_id": "ibps-recent-updates",
       "error_type": "SSLError"
     },
     {
       "source_id": "ibps-rrb",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-spl-xvi",
       "error_type": "SSLError"
     },
     {
@@ -333,7 +337,7 @@
     },
     {
       "source_id": "maha-rojgar",
-      "error_type": "ConnectionError"
+      "error_type": "HTTPError"
     },
     {
       "source_id": "mahresult",
@@ -474,10 +478,6 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
