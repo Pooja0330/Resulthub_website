@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-9a2d3a1c3278fe6810dd5a6c",
+    "title": "बुल्गारिया की विदेश मंत्री ने राष्ट्रपति से मुलाकात की",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2339359&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2339359&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-20T16:12:19.259236+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-03640eabb77f2c019fbf1443",
     "title": "नई दिल्ली के जखीरा स्थित एचआईएल भूखंड की ई-नीलामी हेतु एनएलएमसी ने भुगतान संबंधी संरचना में संशोधन किया",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2339332&lang=1",
@@ -98,23 +115,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-20T15:02:14.036256+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-937d19e5458eaf39b7bc0486",
-    "title": "पावेल पावलिकोव्स्की की फादरलैंड के भारत प्रीमियर के साथ 57वें इफ्फी की शुरुआत हुई, यह फिल्म दर्शकों को युद्ध के बाद बंटे हुए जर्मनी से रूबरू कराती है",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2339281&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2339281&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-20T14:31:45.578009+00:00",
     "archive": false,
     "verified": true
   },
