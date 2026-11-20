@@ -400,13 +400,13 @@ def is_auxiliary_sbi_attachment(item):
     is_sbi = (
         source_id.startswith("sbi-")
         or "state bank of india" in source_name
-        or re.search(r"\\bsbi\\b", source_name, re.I)
+        or re.search(r"\bsbi\b", source_name, re.I)
     )
     return bool(
         is_sbi
         and is_sbi_host
-        and re.search(r"\\b(?:sco|specialist cadre officer)\\b", title, re.I)
-        and re.search(r"bio[\\W_]*data", parsed.path, re.I)
+        and re.search(r"\b(?:sco|specialist cadre officer)\b", title, re.I)
+        and re.search(r"bio[\W_]*data", parsed.path, re.I)
     )
 
 def deduplicate_published_results(results):
