@@ -324,7 +324,6 @@ function canonicalNoticeUrl(value){
 function visibleAuthorityKey(item){
  const raw=String(item.source_name||item.authority||item.source_id||"").toLocaleLowerCase().normalize("NFKC").trim();
  const host=(()=>{try{return new URL(item.url||item.official_url||item.source_url).hostname.replace(/^www\./,"")}catch{return ""}})();
- const value=raw||host;
  const aliases=[
   [/\b(?:upsc|union public service commission)\b/i,"upsc"],
   [/\b(?:ssc|staff selection commission)\b/i,"ssc"],
@@ -332,34 +331,29 @@ function visibleAuthorityKey(item){
   [/\b(?:sbi|state bank of india)\b/i,"sbi"],
   [/\b(?:rbi|reserve bank of india)\b/i,"rbi"]
  ];
- for(const [pattern,key] of aliases)if(pattern.test(value))return key;
- if(host)return host.toLowerCase();
- return value.replace(/\b(active|current|openings?|recruitment|examinations?|notices?|official|website|portal|updates?)\b/g," ").replace(/[^\p{L}\p{N}]+/gu," ").trim().replace(/\s+/g," ");
+ for(const [pattern,key] of aliases)if(pattern.test(raw))return key;
+ if(raw)return raw.replace(/\b(active|current|openings?|recruitment|examinations?|notices?|official|website|portal|updates?)\b/g," ").replace(/[^\p{L}\p{N}]+/gu," ").trim().replace(/\s+/g," ");
+ return host.toLowerCase();
 }
 function dedupeVisibleItems(items, options={}){
  const seenUrls=new Set();
  const seenAuthorityTitles=new Set();
  const normalizeTitle=value=>String(value||"").toLocaleLowerCase().normalize("NFKC")
-  .replace(/\\b(new|latest|updated)\\b/g," ")
-  .replace(/[^\\p{L}\\p{M}\\p{N}]+/gu," ").trim().replace(/\\s+/g," ");
+  .replace(/\b(new|latest|updated)\b/g," ")
+  .replace(/[^\p{L}\p{M}\p{N}]+/gu," ").trim().replace(/\s+/g," ");
  return items.filter(x=>{
   const rawUrl=String(x.url||x.official_url||"").trim();
   const url=canonicalNoticeUrl(rawUrl);
   if(options.requirePibReleaseUrl&&!/^https:\/\/(?:www\.)?pib\.gov\.in\/(?:PressReleaseIframePage|PressReleasePage|PressReleaseDetail)\.aspx\?[^#]*\bPRID=\d+/i.test(rawUrl))return false;
   if(url&&seenUrls.has(url))return false;
-
-  // A source may expose one notice through several different listing/page URLs.
-  // Collapse an identical normalized headline only within the same authority.
   const title=normalizeTitle(x.title||x.exam||"");
   const authority=visibleAuthorityKey(x);
   const authorityTitle=authority&&title?authority+"|"+title:"";
   if(authorityTitle&&seenAuthorityTitles.has(authorityTitle))return false;
-
   if(url)seenUrls.add(url);
   if(authorityTitle)seenAuthorityTitles.add(authorityTitle);
   return true;
- });
-}
+});}
 function filteredItems(){
  const rawQuery=$("#q").value.trim();
  const normalizeSearch=value=>String(value||"").toLocaleLowerCase().normalize("NFKC").replace(/[’']/g," ").replace(/[^\p{L}\p{M}\p{N}]+/gu," ").trim().replace(/\s+/g," ");
