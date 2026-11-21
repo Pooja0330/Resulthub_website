@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-21T01:24:53.789095+00:00",
-  "scan_started_at": "2026-11-21T01:15:51.051406+00:00",
+  "last_checked_at": "2026-11-21T01:40:57.366577+00:00",
+  "scan_started_at": "2026-11-21T01:31:51.905016+00:00",
   "sources_enabled": 309,
-  "sources_succeeded": 164,
-  "sources_failed": 145,
+  "sources_succeeded": 165,
+  "sources_failed": 144,
   "new_candidates": 0,
   "recovered_records": 2,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, ConnectionError: 29, HTTPError: 23, SSLError: 23, ValueError: 3",
+  "failure_types": "ConnectTimeout: 92, ConnectionError: 28, SSLError: 23, HTTPError: 21, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -132,10 +132,6 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "coal-india-careers",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "coast-guard-home",
       "error_type": "SSLError"
     },
@@ -205,7 +201,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps-calendar",
@@ -336,10 +332,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "mat-aima",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -370,6 +362,10 @@
     {
       "source_id": "nabard",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "nagaland-psc",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "naval-coastguard-jobs",
