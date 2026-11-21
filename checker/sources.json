@@ -7182,6 +7182,35 @@
       "coverage_note": "Official National Scholarship Portal student announcements, scheme opening/closing dates and application updates. Scholarship notices are not classified as exam results.",
       "exam_category": "Scholarships & Student Benefits",
       "discover_listing_pages": true
+    },
+    {
+      "id": "bharatresultfind-discovery",
+      "name": "BharatResultFind — third-party discovery only",
+      "url": "https://bharatresultfind.com/",
+      "kind": "html",
+      "allowed_hosts": [
+        "bharatresultfind.com",
+        "www.bharatresultfind.com"
+      ],
+      "categories": [
+        "result",
+        "notification",
+        "admit_card",
+        "answer_key",
+        "merit_list",
+        "cutoff",
+        "exam_schedule",
+        "admission",
+        "scholarship"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-11-21",
+      "coverage_note": "Independent third-party discovery index for jobs, results, admit cards, answer keys, admissions and scholarships. Never treat its claims as official. If no allowlisted official destination is found, show only as a clearly marked unverified report and do not send Telegram/live-alert notifications.",
+      "exam_category": "Reported Updates",
+      "discover_listing_pages": false,
+      "discovery_only": true,
+      "max_new": 40,
+      "reporting_policy": "unverified_until_official"
     }
   ]
 }
