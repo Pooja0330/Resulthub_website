@@ -111,11 +111,7 @@ class CheckerSafetyTests(unittest.TestCase):
         }
         with patch("check.get_with_retries", return_value=FakeResponse()):
             found = fetch_source(source)
-        self.assertEqual(len(found), 1)
-        self.assertTrue(found[0]["reported_only"])
-        self.assertTrue(found[0]["reference_only"])
-        self.assertEqual(found[0]["source_id"], "resultbharat-jobs")
-        self.assertIn("resultbharat.com", found[0]["url"])
+        self.assertEqual(found, [])
 
     def test_scholarship_notices_have_a_separate_category(self):
         self.assertEqual(
