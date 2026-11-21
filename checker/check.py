@@ -926,6 +926,29 @@ def fetch_source(source):
                     if authority:
                         official_candidates.append((priority, destination, authority, label))
                 if not official_candidates:
+                    # Keep a third-party report visible as an explicitly unverified
+                    # lead. It is indexed on the website only; it never enters the
+                    # official alert queue or Telegram publisher.
+                    reported_key = normalize_notice_url(article_url)
+                    if reported_key and reported_key not in seen_links:
+                        seen_links.add(reported_key)
+                        discovered.append({
+                            "title": title[:260],
+                            "url": article_url,
+                            "official_url": "",
+                            "category": category,
+                            "source_name": name,
+                            "source_id": source.get("id", "reported-source"),
+                            "source_url": article_url,
+                            "published": published,
+                            "reference_only": True,
+                            "reported_only": True,
+                            "reported_by": name,
+                            "discovered_via": "Third-party report; official notice not yet located",
+                            "archive": False,
+                        })
+                    if len(discovered) >= limit:
+                        break
                     continue
                 official_candidates.sort(key=lambda x: x[0], reverse=True)
                 _, official_url, authority, link_label = official_candidates[0]
@@ -954,6 +977,23 @@ def fetch_source(source):
                     break
             except Exception as exc:
                 print(f"Could not resolve official destination for catalogue item {title[:90]}: {type(exc).__name__}")
+                # Preserve the listing as a reported lead when its article page
+                # is temporarily unreachable; never claim official verification.
+                reported_key = normalize_notice_url(article_url)
+                if reported_key and reported_key not in seen_links:
+                    seen_links.add(reported_key)
+                    discovered.append({
+                        "title": title[:260], "url": article_url, "official_url": "",
+                        "category": category, "source_name": name,
+                        "source_id": source.get("id", "reported-source"),
+                        "source_url": article_url, "published": published,
+                        "reference_only": True, "reported_only": True,
+                        "reported_by": name,
+                        "discovered_via": "Third-party report; official page could not be checked",
+                        "archive": False,
+                    })
+                if len(discovered) >= limit:
+                    break
                 continue
         print(f"ResultBharat discovery {name}: {article_count} articles inspected; {len(discovered)} official destinations extracted")
         return discovered
@@ -1218,6 +1258,9 @@ def build_result(item, detected_at):
         "url": item["url"],
         "official_url": item.get("official_url") or "",
         "reference_only": bool(item.get("reference_only", False)),
+        "reported_only": bool(item.get("reported_only", False)),
+        "reported_by": item.get("reported_by", ""),
+        "verification_status": "reported_unverified" if item.get("reported_only") else "official_source_unverified",
         "source_url": item.get("source_url", ""),
         "published": format_notice_date(item.get("published", "")),
         "exam_year": exam_year_from_title(item.get("title", "")),
@@ -1501,6 +1544,7 @@ def main():
     # Its all-releases feed contains general government press releases, not just exams.
     sources = coalesce_sources_by_url([s for s in registry["sources"] if is_exam_alert_source(s)])
     candidates = []
+    reported_candidates = []
     historical_candidates = []
     # Recover feed records if results.json was emptied or lost while state.json
     # still remembers previously delivered notices. Re-index them on the website
@@ -1541,6 +1585,25 @@ def main():
                     key = hashlib.sha256(
                         normalized_url.encode("utf-8")
                     ).hexdigest()[:24]
+
+                    # Third-party reports without a located official notice are
+                    # shown as unverified leads on the website only. They are not
+                    # added to the official pending queue and are never sent to Telegram.
+                    if item.get("reported_only"):
+                        if normalized_url in published_urls:
+                            continue
+                        item["id"] = key
+                        item["region"] = item_source.get("region", source.get("region", "Central"))
+                        item["state"] = item_source.get("state", source.get("state", ""))
+                        item["exam_category"] = item_source.get("exam_category") or source.get("exam_category") or infer_exam_category(
+                            item.get("title", ""), source.get("name", ""), source.get("id", ""),
+                            item.get("state", ""),
+                        )
+                        item["detected_at"] = checked_at
+                        item["reference_only"] = True
+                        item["verified"] = False
+                        reported_candidates.append(item)
+                        continue
 
                     # Historical archive entries are indexed as archive records,
                     # never placed in the live alert queue.
@@ -1651,7 +1714,7 @@ def main():
         for item in results if isinstance(item, dict)
     }
     published_urls.discard("")
-    for item in historical_candidates + recovered_candidates + candidates:
+    for item in historical_candidates + recovered_candidates + candidates + reported_candidates:
         normalized_url = normalize_notice_url(item.get("url", ""))
         if item["id"] not in existing_ids and normalized_url not in published_urls:
             results.append(build_result(item, item["detected_at"]))
