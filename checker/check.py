@@ -832,7 +832,7 @@ def fetch_source(source):
         # This source is discovery-only. Visit each listing article, extract
         # the actual destination hosted by an independently registered exam
         # authority, and publish ONLY that official destination. Never publish
-        # a ResultBharat/aggregator URL as a student's application link.
+        # a third-party aggregator URL as a student's official application link.
         listing = get_with_retries(url)
         if not host_allowed(listing.url, hosts):
             raise ValueError("Discovery listing redirected outside its configured allowlist")
@@ -972,7 +972,7 @@ def fetch_source(source):
                     "source_url": official_url,
                     "published": published,
                     "reference_only": False,
-                    "discovered_via": "ResultBharat public catalogue",
+                    "discovered_via": f"{name} public catalogue",
                     "archive": False,
                 })
                 if len(discovered) >= limit:
@@ -1423,7 +1423,7 @@ def main():
         state["pending_alerts"] = pending
 
     # Re-evaluate held discovery notices against the actual issuing authority.
-    # Older versions tagged every ResultBharat discovery with the discovery-source
+    # Older versions tagged every third-party discovery with the discovery-source
     # ID, so valid official URLs were incorrectly rejected by the queue validator.
     # Release only current, classifiable notices whose HTTPS host matches a
     # registered official source; leave every other held item untouched.
@@ -1590,7 +1590,7 @@ def main():
 
                     # Discovery indexes can surface official notices. Attribute
                     # state and exam filters to the issuing authority, not the
-                    # discovery site (e.g. ResultBharat -> IBPS).
+                    # discovery site (for example, a jobs index -> IBPS).
                     item_source = source_by_id.get(str(item.get("source_id", ""))) or source
 
                     key = hashlib.sha256(
