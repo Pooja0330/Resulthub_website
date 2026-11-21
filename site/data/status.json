@@ -1,9 +1,9 @@
 {
-  "last_checked_at": "2026-11-21T05:13:09.715208+00:00",
-  "scan_started_at": "2026-11-21T05:01:28.125751+00:00",
+  "last_checked_at": "2026-11-21T05:26:01.151809+00:00",
+  "scan_started_at": "2026-11-21T05:15:57.446063+00:00",
   "sources_enabled": 309,
-  "sources_succeeded": 164,
-  "sources_failed": 145,
+  "sources_succeeded": 163,
+  "sources_failed": 146,
   "new_candidates": 0,
   "recovered_records": 2,
   "telegram_posts_sent": 0,
@@ -144,6 +144,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "csir-careers",
+      "error_type": "ConnectionError"
+    },
+    {
       "source_id": "drdo-careers",
       "error_type": "ConnectionError"
     },
@@ -200,11 +204,11 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "ibps-calendar",
+      "source_id": "ibps",
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-po-mt",
+      "source_id": "ibps-calendar",
       "error_type": "SSLError"
     },
     {
@@ -250,10 +254,6 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "indiapost-gds",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -440,6 +440,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "osssc",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -458,6 +462,10 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
@@ -625,10 +633,6 @@
     },
     {
       "source_id": "tspsc",
-      "error_type": "ConnectionError"
-    },
-    {
-      "source_id": "uppsc",
       "error_type": "ConnectionError"
     },
     {
