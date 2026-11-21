@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-21T06:11:02.763496+00:00",
-  "scan_started_at": "2026-11-21T06:01:23.313752+00:00",
+  "last_checked_at": "2026-11-21T06:24:02.544621+00:00",
+  "scan_started_at": "2026-11-21T06:15:54.646838+00:00",
   "sources_enabled": 309,
-  "sources_succeeded": 164,
-  "sources_failed": 145,
+  "sources_succeeded": 166,
+  "sources_failed": 143,
   "new_candidates": 0,
   "recovered_records": 2,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 30, SSLError: 24, HTTPError: 22, ValueError: 3",
+  "failure_types": "ConnectTimeout: 90, ConnectionError: 29, SSLError: 23, HTTPError: 22, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -69,11 +69,11 @@
     },
     {
       "source_id": "barc-careers",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "barc-recruitment",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "bihar-state-health-society-results-archive",
@@ -208,10 +208,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-rrb-xv",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "iiser-admissions",
       "error_type": "SSLError"
     },
@@ -314,10 +310,6 @@
     {
       "source_id": "kvs-recruitment",
       "error_type": "ValueError"
-    },
-    {
-      "source_id": "lakshadweep-administration",
-      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "maha-rojgar",
@@ -461,7 +453,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "rajeduboard",
