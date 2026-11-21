@@ -99,17 +99,13 @@
     const keys=new Set();
     return items.filter(item=>{
       if(isNoise(item))return false;
-      const raw=String(item.url||item.official_url||item.source_url||"");
-      let key=raw;
-      try{
-        const u=new URL(raw,location.href);u.hash="";
-        for(const k of [...u.searchParams.keys()])if(/^(utm_.+|fbclid|gclid|mc_cid|mc_eid|ref|source)$/i.test(k))u.searchParams.delete(k);
-        u.searchParams.sort();u.hostname=u.hostname.toLowerCase().replace(/^www\./,"");u.pathname=u.pathname.replace(/\/+$/,"")||"/";
-        key=u.origin+u.pathname+(u.search||"");
-      }catch(_){}
-      if(!key)key=identity(item);
-      if(keys.has(key))return false;
-      keys.add(key);return true;
+      // identity() uses normalized title + issuing authority + category
+      // (and the official PIB release ID), so alternate links to one notice
+      // cannot create repeated cards or repeated floating alerts.
+      const key=identity(item);
+      if(!key||keys.has(key))return false;
+      keys.add(key);
+      return true;
     });
   };
   const readSeen = () => {
