@@ -101,8 +101,9 @@
         if(/^(utm_.+|fbclid|gclid|dclid|msclkid|yclid|mc_cid|mc_eid|ref_src)$/i.test(key))u.searchParams.delete(key);
       }
       u.searchParams.sort();
-      u.hostname=u.hostname.toLowerCase().replace(/^www\\./,"");
-      u.pathname=u.pathname.replace(/\\/+$/,"")||"/";
+      u.hostname=u.hostname.toLowerCase();
+      if(u.hostname.startsWith("www."))u.hostname=u.hostname.slice(4);
+      while(u.pathname.length>1&&u.pathname.endsWith("/"))u.pathname=u.pathname.slice(0,-1);
       return "notice-url:"+u.origin+u.pathname+(u.search||"");
     }catch(_){}
     return normalizedTitle(item)+"|"+authorityKey(item)+"|"+String(item.category||"").toLowerCase().trim();
