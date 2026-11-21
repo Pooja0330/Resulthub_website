@@ -344,19 +344,13 @@ function visibleAuthorityKey(item){
  return value.replace(/\b(active|current|openings?|recruitment|examinations?|notices?|official|website|portal|updates?)\b/g," ").replace(/[^\p{L}\p{N}]+/gu," ").trim().replace(/\s+/g," ");
 }
 function dedupeVisibleItems(items, options={}){
- const seenUrls=new Set(),seenNotices=new Set();
+ const seenUrls=new Set();
  return items.filter(x=>{
   const rawUrl=x.url||x.official_url||x.source_url||"";
   const url=canonicalNoticeUrl(rawUrl);
   if(options.requirePibReleaseUrl&&!/^https:\/\/(?:www\.)?pib\.gov\.in\/(?:PressReleaseIframePage|PressReleasePage|PressReleaseDetail)\.aspx\?[^#]*\bPRID=\d+/i.test(String(rawUrl).trim()))return false;
-  const title=String(x.title||x.exam||"").toLocaleLowerCase().normalize("NFKC")
-   .replace(/\b(?:new|latest|updated)\b/g," ")
-   .replace(/[^\p{L}\p{N}]+/gu," ").trim().replace(/\s+/g," ");
-  const noticeKey=title.length>=12
-   ?visibleAuthorityKey(x)+"|"+String(x.category||"").toLowerCase().trim()+"|"+title:"";
-  if((url&&seenUrls.has(url))||(noticeKey&&seenNotices.has(noticeKey)))return false;
+  if(url&&seenUrls.has(url))return false;
   if(url)seenUrls.add(url);
-  if(noticeKey)seenNotices.add(noticeKey);
   return true;
  });
 }
