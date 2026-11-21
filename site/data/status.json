@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-21T17:44:56.985356+00:00",
-  "scan_started_at": "2026-11-21T17:32:58.532723+00:00",
+  "last_checked_at": "2026-11-21T17:56:24.450487+00:00",
+  "scan_started_at": "2026-11-21T17:45:55.420992+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 164,
-  "sources_failed": 137,
+  "sources_succeeded": 161,
+  "sources_failed": 140,
   "new_candidates": 0,
   "recovered_records": 2,
   "telegram_posts_sent": 10,
-  "alerts_pending": 76,
+  "alerts_pending": 66,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 30, HTTPError: 24, SSLError: 22, ValueError: 3",
+  "failure_types": "ConnectTimeout: 90, ConnectionError: 29, SSLError: 24, HTTPError: 23, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -205,10 +205,14 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ibps-calendar",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-recruitment",
       "error_type": "SSLError"
     },
     {
@@ -254,6 +258,10 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "indiapost-gds",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -436,12 +444,12 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "patna-university",
+      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
-      "source_id": "pondicherry-university-old-results",
-      "error_type": "HTTPError"
+      "source_id": "patna-university",
+      "error_type": "SSLError"
     },
     {
       "source_id": "punjab-psc",
@@ -602,6 +610,10 @@
     {
       "source_id": "tnmrbrecruit",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "tnpsc",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "tnresults",
