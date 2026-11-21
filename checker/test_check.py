@@ -56,6 +56,37 @@ class CheckerSafetyTests(unittest.TestCase):
         )
         self.assertEqual(len(found), 2)
 
+    def test_source_registry_coalesces_same_official_url_and_preserves_coverage(self):
+        from check import coalesce_sources_by_url
+        sources = [
+            {"id": "jee-main", "name": "JEE Main", "url": "https://jeemain.nta.nic.in/",
+             "kind": "html", "categories": ["result", "notification"],
+             "exam_category": "Entrance & Eligibility", "allowed_hosts": ["nta.nic.in"]},
+            {"id": "jee-main-notices", "name": "JEE Main public notices", "url": "https://www.jeemain.nta.nic.in/?utm_source=feed",
+             "kind": "html", "categories": ["admit_card", "answer_key", "exam_schedule"],
+             "exam_category": "JEE Main", "allowed_hosts": ["jeemain.nta.nic.in"],
+             "discover_listing_pages": True},
+            {"id": "neet", "name": "NEET UG", "url": "https://neet.nta.nic.in/",
+             "kind": "html", "categories": ["result"], "exam_category": "NEET UG",
+             "allowed_hosts": ["nta.nic.in"]},
+        ]
+        merged = coalesce_sources_by_url(sources)
+        self.assertEqual(len(merged), 2)
+        jee = next(item for item in merged if item["id"] == "jee-main")
+        self.assertEqual(set(jee["categories"]), {"result", "notification", "admit_card", "answer_key", "exam_schedule"})
+        self.assertIn("jee-main-notices", jee["source_alias_ids"])
+        self.assertIn("JEE Main", jee["exam_categories"])
+        self.assertTrue(jee["discover_listing_pages"])
+        self.assertEqual(merged[1]["id"], "neet")
+
+    def test_source_registry_does_not_merge_different_notice_pages(self):
+        from check import coalesce_sources_by_url
+        sources = [
+            {"id": "sbi-careers", "name": "SBI Careers", "url": "https://sbi.bank.in/careers/"},
+            {"id": "sbi-results", "name": "SBI Results", "url": "https://sbi.bank.in/careers/results"},
+        ]
+        self.assertEqual([x["id"] for x in coalesce_sources_by_url(sources)], ["sbi-careers", "sbi-results"])
+
     def test_published_results_deduplicate_identical_official_urls(self):
         from check import deduplicate_published_results
 
