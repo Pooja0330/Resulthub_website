@@ -1891,6 +1891,13 @@ def main():
 
     # A final safety pass also covers restored queue entries and candidates.
     results = deduplicate_published_results(results)
+    # A valid pre-dedupe list is not enough: never overwrite the public feed
+    # if URL validation/deduplication removes every record.
+    if not results:
+        raise SystemExit(
+            "Refusing to publish an empty exam feed after canonical URL validation. "
+            "Existing published data is preserved; inspect candidate URLs and checker logs."
+        )
     save_json("checker/state.json", state)
     save_json("checker/approved.json", {"pending": remaining_approved})
     save_json("site/data/results.json", results)
