@@ -599,6 +599,24 @@ def is_navigation_noise_title(title):
     if value in {"resultsstatisticsresultsstatistics", "resultstatisticsresultstatistics"}:
         return True
 
+    # NTA/ICAR and similar WordPress portals can expose the entire exam
+    # activity panel as the text of every individual anchor. The same long
+    # concatenated heading then gets attached to several different URLs. Reject
+    # that container text, while keeping each separately named PG/PhD notice.
+    if len(raw) > 150:
+        notice_cluster_patterns = (
+            r"\badmit\s+card\b",
+            r"\bdownload\s+confirmation\s+page\b",
+            r"\badvance\s+city\s+intimation\b",
+            r"\bcorrection\s+window\b",
+            r"\bscore\s+cards?\b",
+            r"\bfinal\s+answer\s+keys?\b",
+            r"\bregistration\s+for\b",
+        )
+        cluster_hits = sum(len(re.findall(pattern, low, re.I)) for pattern in notice_cluster_patterns)
+        if cluster_hits >= 5:
+            return True
+
     # A notice may be detailed, but an anchor containing multiple independent
     # notice headings is almost always the text of a whole card/list container.
     repeated_heading = (
