@@ -438,12 +438,14 @@ def deduplicate_published_results(results):
             authority_key, category_key, title_key, published_key
         ) if authority_key and category_key and title_key else None
 
+        # Reserve the URL even when the semantic key already exists, so a
+        # later row cannot reintroduce that same URL under a different title.
+        seen_urls.add(normalized_url)
         if semantic_key and semantic_key in seen_notices:
             # The canonical URL is new, but this is the same notice copied
             # from another listing page/source alias. Do not publish it twice.
             continue
 
-        seen_urls.add(normalized_url)
         if semantic_key:
             seen_notices.add(semantic_key)
         unique.append(item)
