@@ -1160,6 +1160,48 @@ def is_exam_alert_source(source):
     )
 
 
+def coalesce_sources_by_url(sources):
+    """Scan an identical official listing URL once while retaining its coverage metadata."""
+    merged = []
+    positions = {}
+    for original in sources:
+        if not isinstance(original, dict):
+            continue
+        source = dict(original)
+        normalized = normalize_notice_url(source.get("url", ""))
+        # Invalid URLs must not be accidentally merged together.
+        key = (normalized, str(source.get("kind", "html")).lower()) if normalized else (
+            "source-id", str(source.get("id") or id(original))
+        )
+        if key not in positions:
+            source["source_alias_ids"] = list(source.get("source_alias_ids") or [])
+            source["source_alias_names"] = list(source.get("source_alias_names") or [])
+            source["exam_categories"] = list(source.get("exam_categories") or [])
+            if source.get("exam_category"):
+                source["exam_categories"].append(source["exam_category"])
+            positions[key] = len(merged)
+            merged.append(source)
+            continue
+
+        target = merged[positions[key]]
+        for field in ("categories", "allowed_hosts", "source_alias_ids", "source_alias_names", "exam_categories"):
+            values = list(target.get(field) or []) + list(source.get(field) or [])
+            target[field] = list(dict.fromkeys(str(value) for value in values if value))
+        source_id = str(source.get("id") or "").strip()
+        source_name = str(source.get("name") or "").strip()
+        if source_id and source_id != target.get("id") and source_id not in target["source_alias_ids"]:
+            target["source_alias_ids"].append(source_id)
+        if source_name and source_name != target.get("name") and source_name not in target["source_alias_names"]:
+            target["source_alias_names"].append(source_name)
+        if source.get("exam_category") and source["exam_category"] not in target["exam_categories"]:
+            target["exam_categories"].append(source["exam_category"])
+        target["max_new"] = max(int(target.get("max_new", 0) or 0), int(source.get("max_new", 0) or 0))
+        target["discover_listing_pages"] = bool(
+            target.get("discover_listing_pages") or source.get("discover_listing_pages")
+        )
+    return merged
+
+
 def build_result(item, detected_at):
     # Match the JSON fields consumed by site/app.js.
     return {
@@ -1457,7 +1499,7 @@ def main():
 
     # PIB has its own independent publisher and must never enter the exam-alert queue.
     # Its all-releases feed contains general government press releases, not just exams.
-    sources = [s for s in registry["sources"] if is_exam_alert_source(s)]
+    sources = coalesce_sources_by_url([s for s in registry["sources"] if is_exam_alert_source(s)])
     candidates = []
     historical_candidates = []
     # Recover feed records if results.json was emptied or lost while state.json
