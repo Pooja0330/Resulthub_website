@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-21T06:24:02.544621+00:00",
-  "scan_started_at": "2026-11-21T06:15:54.646838+00:00",
+  "last_checked_at": "2026-11-21T06:42:52.068600+00:00",
+  "scan_started_at": "2026-11-21T06:31:57.388817+00:00",
   "sources_enabled": 309,
-  "sources_succeeded": 166,
-  "sources_failed": 143,
+  "sources_succeeded": 167,
+  "sources_failed": 142,
   "new_candidates": 0,
   "recovered_records": 2,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, ConnectionError: 29, SSLError: 23, HTTPError: 22, ValueError: 3",
+  "failure_types": "ConnectTimeout: 89, ConnectionError: 29, SSLError: 23, HTTPError: 22, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -428,10 +428,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "osssc",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -597,7 +593,7 @@
     },
     {
       "source_id": "tnmrbrecruit",
-      "error_type": "ConnectTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "tnresults",
