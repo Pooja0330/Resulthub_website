@@ -56,6 +56,27 @@ class CheckerSafetyTests(unittest.TestCase):
         )
         self.assertEqual(len(found), 2)
 
+    def test_reported_only_result_is_explicitly_unverified(self):
+        from check import build_result
+        item = {
+            "id": "reported-123",
+            "title": "Example Recruitment Notification 2026",
+            "category": "notification",
+            "source_name": "ResultBharat — Latest Jobs",
+            "source_id": "resultbharat-jobs",
+            "url": "https://www.resultbharat.com/example-notice.html",
+            "source_url": "https://www.resultbharat.com/example-notice.html",
+            "reference_only": True,
+            "reported_only": True,
+            "reported_by": "ResultBharat",
+        }
+        result = build_result(item, "2026-11-21T00:00:00+00:00")
+        self.assertTrue(result["reported_only"])
+        self.assertTrue(result["reference_only"])
+        self.assertFalse(result["verified"])
+        self.assertEqual(result["verification_status"], "reported_unverified")
+        self.assertEqual(result["reported_by"], "ResultBharat")
+
     def test_source_registry_coalesces_same_official_url_and_preserves_coverage(self):
         from check import coalesce_sources_by_url
         sources = [
