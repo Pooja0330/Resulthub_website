@@ -117,6 +117,25 @@ class CheckerSafetyTests(unittest.TestCase):
         self.assertEqual(found[0]["source_id"], "resultbharat-jobs")
         self.assertIn("resultbharat.com", found[0]["url"])
 
+    def test_official_registry_covers_added_admissions_and_scholarship_sources(self):
+        import json
+        from pathlib import Path
+        registry_path = Path(__file__).resolve().parents[1] / "checker" / "sources.json"
+        registry = json.loads(registry_path.read_text(encoding="utf-8"))
+        by_id = {source["id"]: source for source in registry["sources"]}
+        expected = {
+            "ailet-nlu-delhi": "nationallawuniversitydelhi.in",
+            "josaa-counselling": "josaa.admissions.nic.in",
+            "nic-admissions-counselling": "admissions.nic.in",
+            "icar-nta-exams": "exams.nta.nic.in",
+            "national-scholarship-portal": "scholarships.gov.in",
+        }
+        for source_id, host in expected.items():
+            with self.subTest(source_id=source_id):
+                self.assertIn(source_id, by_id)
+                self.assertTrue(by_id[source_id]["enabled"])
+                self.assertIn(host, by_id[source_id]["allowed_hosts"])
+
     def test_reported_only_result_is_explicitly_unverified(self):
         from check import build_result
         item = {
