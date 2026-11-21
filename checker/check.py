@@ -1203,17 +1203,19 @@ def main():
     approval = load_json("checker/approved.json", {"pending": []})
     results_file = path("site/data/results.json")
     legacy_results_file = path("site/results.json")
-    # Bootstrap recovery: if both public feed files were accidentally emptied,
-    # start from an empty in-memory list and rebuild only from verified official
-    # source notices discovered during this scan. Never seed fake/sample alerts.
+    # Fail closed if both public feeds are missing/empty. Never rebuild the
+    # homepage from only the handful of notices discovered in one partial scan:
+    # that would silently erase the historical catalogue.
     primary_text = results_file.read_text(encoding="utf-8").strip() if results_file.exists() else ""
     legacy_text = legacy_results_file.read_text(encoding="utf-8").strip() if legacy_results_file.exists() else ""
     if not primary_text and legacy_text:
         results = load_json("site/results.json", [])
         print("WARNING: primary exam feed was empty; restored records from legacy mirror.")
     elif not primary_text and not legacy_text:
-        results = []
-        print("WARNING: both public feeds are empty; rebuilding from official sources.")
+        raise SystemExit(
+            "Refusing to run with both public exam feeds empty. Restore the last "
+            "known-good site/data/results.json and site/results.json before scanning."
+        )
     else:
         results = load_json("site/data/results.json", [])
 
@@ -1222,6 +1224,11 @@ def main():
 
     if not isinstance(results, list):
         raise SystemExit("Invalid site/data/results.json: expected a JSON list")
+    if not results:
+        raise SystemExit(
+            "Refusing to publish an empty exam feed. Restore the last known-good "
+            "feed before continuing; a partial source scan must never erase the catalogue."
+        )
 
     source_by_id = {str(s.get("id", "")): s for s in registry["sources"] if s.get("id")}
     source_by_name = {str(s.get("name", "")).strip().lower(): s for s in registry["sources"] if s.get("name")}
