@@ -525,6 +525,19 @@ class CheckerSafetyTests(unittest.TestCase):
         )
         self.assertTrue(is_navigation_noise_title(title))
 
+    def test_rejects_icar_exam_activity_panel_repeated_as_each_anchor_title(self):
+        from check import is_navigation_noise_title
+        title = (
+            "Admit Card for ICAR PG Admit Card for ICAR PhD "
+            "Download Confirmation Page – PG Download Confirmation Page – PhD "
+            "Advance City Intimation for ICAR PG Advance City Intimation for ICAR PhD "
+            "Correction Window for ICAR (PG) – 2026 Correction Window for ICAR (Ph.D.) – 2026"
+        )
+        self.assertTrue(is_navigation_noise_title(title))
+        self.assertFalse(is_navigation_noise_title("Admit Card for ICAR PG"))
+        self.assertFalse(is_navigation_noise_title("Admit Card for ICAR PhD"))
+        self.assertFalse(is_navigation_noise_title("Correction Window for ICAR (PG) – 2026"))
+
     def test_keeps_a_legitimate_detailed_notice_title(self):
         from check import is_navigation_noise_title
         self.assertFalse(is_navigation_noise_title(
