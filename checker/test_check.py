@@ -113,6 +113,19 @@ class CheckerSafetyTests(unittest.TestCase):
             found = fetch_source(source)
         self.assertEqual(found, [])
 
+    def test_nta_icar_page_wide_activity_panel_is_rejected(self):
+        from check import is_navigation_noise_title
+        malformed = (
+            "Admit Card for ICAR PG Admit Card for ICAR PhD Download Confirmation Page – PG "
+            "Download Confirmation Page – PhD Advance City Intimation for ICAR PG "
+            "Advance City Intimation for ICAR PhD Correction Window for ICAR (PG) – 2026 "
+            "Correction Window for ICAR (Ph.D.) – 2026"
+        )
+        self.assertTrue(is_navigation_noise_title(malformed))
+        self.assertFalse(is_navigation_noise_title("Admit Card for ICAR PG"))
+        self.assertFalse(is_navigation_noise_title("Admit Card for ICAR PhD"))
+        self.assertFalse(is_navigation_noise_title("Correction Window for ICAR (PG) – 2026"))
+
     def test_scholarship_notices_have_a_separate_category(self):
         self.assertEqual(
             classify("National Talent Scholarship application open for 2026"),
