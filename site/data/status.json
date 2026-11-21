@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-21T04:25:15.344811+00:00",
-  "scan_started_at": "2026-11-21T04:16:05.558000+00:00",
+  "last_checked_at": "2026-11-21T04:42:29.380326+00:00",
+  "scan_started_at": "2026-11-21T04:31:51.369497+00:00",
   "sources_enabled": 309,
-  "sources_succeeded": 166,
-  "sources_failed": 143,
+  "sources_succeeded": 165,
+  "sources_failed": 144,
   "new_candidates": 0,
   "recovered_records": 2,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 28, SSLError: 24, HTTPError: 21, ValueError: 3",
+  "failure_types": "ConnectTimeout: 91, ConnectionError: 28, HTTPError: 23, SSLError: 23, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -132,6 +132,10 @@
       "error_type": "HTTPError"
     },
     {
+      "source_id": "coal-india-careers",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "coast-guard-home",
       "error_type": "SSLError"
     },
@@ -201,10 +205,6 @@
     },
     {
       "source_id": "ibps-rrb",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-rrb-xv",
       "error_type": "SSLError"
     },
     {
@@ -328,6 +328,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "mat-aima",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -352,12 +356,12 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "nabard",
+      "source_id": "mumbai-university",
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "nagaland-psc",
-      "error_type": "ReadTimeout"
+      "source_id": "nabard",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "naval-coastguard-jobs",
@@ -453,7 +457,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "rajeduboard",
