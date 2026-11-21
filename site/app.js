@@ -165,7 +165,7 @@ let refreshTimer = null;
 const label = s => String(s||"update").replace(/_/g," ").replace(/\b\w/g,c=>c.toUpperCase());
 function safeUrl(u){try{const x=new URL(u);return x.protocol==="https:"?x.href:null}catch{return null}}
 function isThirdPartyDiscoveryUrl(u){try{const h=new URL(u).hostname.toLowerCase();return h==="resultbharat.com"||h.endsWith(".resultbharat.com")||h==="bharatresultfind.com"||h.endsWith(".bharatresultfind.com")||h==="indiaresults.com"||h.endsWith(".indiaresults.com")}catch{return false}}
-function preferredOfficialUrl(item){const rawCandidate=safeUrl(item?.url||item?.official_url),portalCandidate=safeUrl(item?.source_url),applyCandidate=safeUrl(item?.application_url||item?.apply_url||item?.registration_url||item?.portal_url),raw=rawCandidate&&!isThirdPartyDiscoveryUrl(rawCandidate)?rawCandidate:null,portal=portalCandidate&&!isThirdPartyDiscoveryUrl(portalCandidate)?portalCandidate:null,apply=applyCandidate&&!isThirdPartyDiscoveryUrl(applyCandidate)?applyCandidate:null,pdf=u=>!!u&&/\.pdf(?:$|[?#])/i.test(u);return apply||(pdf(raw)&&portal&&!pdf(portal)?portal:raw)||portal;}
+function preferredOfficialUrl(item){const candidates=[item?.login_url,item?.candidate_login_url,item?.application_url,item?.apply_url,item?.registration_url,item?.portal_url,item?.url,item?.official_url,item?.source_url].map(safeUrl).filter(u=>u&&!isThirdPartyDiscoveryUrl(u));const apply=candidates.find(u=>/login|candidate|apply|application|registration|sign.?in/i.test(u));const raw=candidates.find(u=>u===safeUrl(item?.url)||u===safeUrl(item?.official_url));const portal=candidates.find(u=>u===safeUrl(item?.source_url));const pdf=u=>!!u&&/\.pdf(?:$|[?#])/i.test(u);return apply||(pdf(raw)&&portal&&!pdf(portal)?portal:raw)||portal||candidates[0]||null;}
 function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
 function dateText(v){if(!v)return "Date not supplied";const d=new Date(v);return Number.isNaN(d.getTime())?"Date not supplied":d.toLocaleDateString("en-IN",{day:"numeric",month:"short",year:"numeric"})}
 function absoluteTimeText(v){if(!v)return "Exact detection time unavailable";const d=new Date(v);if(Number.isNaN(d.getTime()))return "Exact detection time unavailable";return d.toLocaleString("en-IN",{day:"numeric",month:"short",year:"numeric",hour:"numeric",minute:"2-digit",second:"2-digit",hour12:true,timeZone:"Asia/Kolkata"})+" IST"}
@@ -291,9 +291,31 @@ function isNavigationNoise(item){
  const sourceUrl=String(item?.url||item?.official_url||"").toLowerCase();
  const sbiBiodata=/^sbi-/.test(sourceId)||/state bank of india|\bsbi\b/.test(sourceName);
  const auxiliarySbiForm=sbiBiodata && /\b(?:sco|specialist cadre officer)\b/i.test(rawTitle) && /bio[\W_]*data/i.test(sourceUrl);
- return blocked.has(title) || title.includes("rtipolicyinformation") || title.includes("informationrtiofficers") || title.includes("rtirelatedcasedecisions") || genericMenu || concatenatedExamMenu || auxiliarySbiForm;
+ const ntaActivityLabels=["admit card","download confirmation page","advance city intimation","correction window","score card","final answer key","candidate activity"];
+ const ntaActivityHits=ntaActivityLabels.filter(label=>rawTitle.toLowerCase().includes(label)).length;
+ const concatenatedNtaActivity=rawTitle.length>150 && ntaActivityHits>=3;
+ return blocked.has(title) || title.includes("rtipolicyinformation") || title.includes("informationrtiofficers") || title.includes("rtirelatedcasedecisions") || genericMenu || concatenatedExamMenu || concatenatedNtaActivity || auxiliarySbiForm;
 }
-function cleanResults(items){return Array.isArray(items)?items.filter(item=>!isNavigationNoise(item)):[];}
+function isThirdPartyDiscoveryUrl(value){
+ try{const host=new URL(String(value||"")).hostname.toLowerCase();return host==="resultbharat.com"||host.endsWith(".resultbharat.com")||host==="bharatresultfind.com"||host.endsWith(".bharatresultfind.com")||host==="indiaresults.com"||host.endsWith(".indiaresults.com")}catch{return false}
+}
+function directOfficialCandidates(item){
+ return [item?.login_url,item?.candidate_login_url,item?.application_url,item?.apply_url,item?.registration_url,item?.portal_url,item?.url,item?.official_url,item?.source_url]
+  .map(safeUrl).filter(value=>value&&!isThirdPartyDiscoveryUrl(value));
+}
+function cleanResults(items){
+ return Array.isArray(items)?items.filter(item=>{
+  if(isNavigationNoise(item))return false;
+  const source=String(item?.source_id||"").toLowerCase();
+  const sourceName=String(item?.source_name||item?.authority||"").toLowerCase();
+  const discoverySource=/^(resultbharat|bharatresultfind|indiaresults)-/.test(source)||/^(resultbharat|bharatresultfind|indiaresults)/.test(sourceName);
+  const hasThirdParty=[item?.url,item?.official_url,item?.source_url].some(isThirdPartyDiscoveryUrl);
+  const direct=directOfficialCandidates(item);
+  if(discoverySource&&!direct.length)return false;
+  if(hasThirdParty&&!direct.length)return false;
+  return true;
+ }):[];
+}
 function isCurrent2026Update(item){
  if(!item || item.archive===true) return false;
  const title=String(item.title||item.exam||"").toLowerCase();
