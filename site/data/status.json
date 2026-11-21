@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-21T03:58:37.606193+00:00",
-  "scan_started_at": "2026-11-21T03:45:55.808459+00:00",
+  "last_checked_at": "2026-11-21T04:11:26.115670+00:00",
+  "scan_started_at": "2026-11-21T04:02:06.032744+00:00",
   "sources_enabled": 309,
-  "sources_succeeded": 164,
-  "sources_failed": 145,
+  "sources_succeeded": 170,
+  "sources_failed": 139,
   "new_candidates": 0,
   "recovered_records": 2,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, ConnectionError: 28, SSLError: 25, HTTPError: 23, ValueError: 3",
+  "failure_types": "ConnectTimeout: 89, ConnectionError: 28, SSLError: 22, HTTPError: 21, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -132,10 +132,6 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "coal-india-careers",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "coast-guard-home",
       "error_type": "SSLError"
     },
@@ -201,14 +197,6 @@
     },
     {
       "source_id": "ibps-calendar",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-careers",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-po-mt",
       "error_type": "SSLError"
     },
     {
@@ -336,10 +324,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "mat-aima",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -361,10 +345,6 @@
     },
     {
       "source_id": "mppsc",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "mumbai-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -437,10 +417,6 @@
     },
     {
       "source_id": "osmania-university",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
