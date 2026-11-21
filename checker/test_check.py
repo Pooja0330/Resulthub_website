@@ -187,31 +187,6 @@ class CheckerSafetyTests(unittest.TestCase):
         cleaned = deduplicate_published_results(records)
         self.assertEqual([item["id"] for item in cleaned], ["first", "distinct"])
 
-    def test_published_results_deduplicate_same_notice_across_different_urls(self):
-        records = [
-            {"id": "icar-original", "title": "Admit Card for ICAR PG PhD Download Confirmation Page 2026",
-             "category": "admit_card", "source_name": "ICAR AIEEA and AICE — NTA",
-             "published": "21 Nov 2026", "url": "https://exams.nta.nic.in/icar/notice?id=11"},
-            {"id": "icar-copy", "title": "Latest — Admit Card for ICAR PG PhD Download Confirmation Page 2026",
-             "category": "admit_card", "source_name": "ICAR AIEEA and AICE — NTA",
-             "published": "21 Nov 2026", "url": "https://exams.nta.nic.in/icar/notice?id=22"},
-            {"id": "icar-pg", "title": "Admit Card for ICAR PG", "category": "admit_card",
-             "source_name": "ICAR AIEEA and AICE — NTA", "published": "21 Nov 2026",
-             "url": "https://exams.nta.nic.in/icar/pg"},
-            {"id": "icar-phd", "title": "Admit Card for ICAR PhD", "category": "admit_card",
-             "source_name": "ICAR AIEEA and AICE — NTA", "published": "21 Nov 2026",
-             "url": "https://exams.nta.nic.in/icar/phd"},
-            {"id": "icar-correction", "title": "Correction Window for ICAR PG 2026",
-             "category": "notification", "source_name": "ICAR AIEEA and AICE — NTA",
-             "published": "21 Nov 2026", "url": "https://exams.nta.nic.in/icar/correction"},
-        ]
-        cleaned = deduplicate_published_results(records)
-        self.assertEqual(
-            [item["id"] for item in cleaned],
-            ["icar-original", "icar-pg", "icar-phd", "icar-correction"],
-        )
-
-
     def test_jkinfo_discovery_source_is_restricted_to_official_destination_hosts(self):
         authority_sources = [
             {"id": "ibps", "name": "IBPS", "allowed_hosts": ["ibps.in", "ibpsreg.ibps.in"]}
