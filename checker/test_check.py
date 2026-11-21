@@ -117,6 +117,16 @@ class CheckerSafetyTests(unittest.TestCase):
         self.assertEqual(found[0]["source_id"], "resultbharat-jobs")
         self.assertIn("resultbharat.com", found[0]["url"])
 
+    def test_scholarship_notices_have_a_separate_category(self):
+        self.assertEqual(
+            classify("National Talent Scholarship application open for 2026"),
+            "scholarship",
+        )
+        self.assertEqual(
+            classify("Post-Matric Scholarship renewal application 2026"),
+            "scholarship",
+        )
+
     def test_reported_only_result_is_explicitly_unverified(self):
         from check import build_result
         item = {
