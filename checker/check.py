@@ -60,6 +60,9 @@ RULES = [
         r"date sheet|exam calendar|exam postponement|exam rescheduled|"
         r"examination postponed|examination rescheduled|interview schedule|"
         r"written examination schedule|revised exam date|pre-examination training|pre examination training)\b", re.I)),
+    ("scholarship", re.compile(
+        r"\b(scholarships?|fellowships?|stipends?|student financial assistance|"
+        r"national talent scholarship|post.?matric scholarship|pre.?matric scholarship)\b", re.I)),
     ("notification", re.compile(
         r"\b(exam notification|examination notification|recruitment notification|"
         r"recruitment advertisement|vacancy notification|information bulletin|"
@@ -821,18 +824,18 @@ def fetch_source(source):
     if not url or not hosts or not host_allowed(url, hosts):
         raise ValueError("Source URL is missing or not allowlisted")
 
-    # ResultBharat is used only as a discovery index. Its own article URLs
+    # Third-party discovery sources are used only as discovery indexes. Their article URLs
     # are never published as official links: each candidate must contain a
     # destination hosted by a domain already allowlisted in our official-source
     # registry. This borrows the discovery workflow, not its protected content.
     if source.get("discovery_only"):
-        # ResultBharat is discovery-only. Visit each listing article, extract
+        # This source is discovery-only. Visit each listing article, extract
         # the actual destination hosted by an independently registered exam
         # authority, and publish ONLY that official destination. Never publish
         # a ResultBharat/aggregator URL as a student's application link.
         listing = get_with_retries(url)
         if not host_allowed(listing.url, hosts):
-            raise ValueError("Discovery listing redirected outside ResultBharat")
+            raise ValueError("Discovery listing redirected outside its configured allowlist")
         soup = BeautifulSoup(listing.text, "html.parser")
         discovered = []
         seen_links = set()
@@ -993,7 +996,7 @@ def fetch_source(source):
                 if len(discovered) >= limit:
                     break
                 continue
-        print(f"ResultBharat discovery {name}: {article_count} articles inspected; {len(discovered)} official destinations extracted")
+        print(f"Discovery index {name}: {article_count} articles inspected; {len(discovered)} official or reported leads extracted")
         return discovered
 
     kind = str(source.get("kind", "html")).lower()
