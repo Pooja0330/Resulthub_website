@@ -88,6 +88,35 @@ class CheckerSafetyTests(unittest.TestCase):
         self.assertEqual(len(merged), 1)
         self.assertNotIn("max_new", merged[0])
 
+    def test_discovery_index_without_official_link_creates_unverified_report_only(self):
+        from unittest.mock import patch
+        from check import fetch_source
+        class FakeResponse:
+            url = "https://www.resultbharat.com/latestjobs_more.html"
+            text = '<a href="/example-notice.html">SSC CGL Recruitment Notification 2026</a>'
+            content = text.encode("utf-8")
+            headers = {"content-type": "text/html"}
+        source = {
+            "id": "resultbharat-jobs",
+            "name": "ResultBharat Latest Jobs index",
+            "url": "https://www.resultbharat.com/latestjobs_more.html",
+            "allowed_hosts": ["resultbharat.com", "www.resultbharat.com"],
+            "discovery_only": True,
+            "official_hosts": ["ssc.gov.in"],
+            "authority_sources": [{
+                "id": "ssc", "name": "Staff Selection Commission",
+                "allowed_hosts": ["ssc.gov.in"],
+            }],
+            "max_new": 5,
+        }
+        with patch("check.get_with_retries", return_value=FakeResponse()):
+            found = fetch_source(source)
+        self.assertEqual(len(found), 1)
+        self.assertTrue(found[0]["reported_only"])
+        self.assertTrue(found[0]["reference_only"])
+        self.assertEqual(found[0]["source_id"], "resultbharat-jobs")
+        self.assertIn("resultbharat.com", found[0]["url"])
+
     def test_reported_only_result_is_explicitly_unverified(self):
         from check import build_result
         item = {
