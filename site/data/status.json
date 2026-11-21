@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-21T03:39:20.878600+00:00",
-  "scan_started_at": "2026-11-21T03:31:11.898919+00:00",
+  "last_checked_at": "2026-11-21T03:58:37.606193+00:00",
+  "scan_started_at": "2026-11-21T03:45:55.808459+00:00",
   "sources_enabled": 309,
-  "sources_succeeded": 166,
-  "sources_failed": 143,
+  "sources_succeeded": 164,
+  "sources_failed": 145,
   "new_candidates": 0,
   "recovered_records": 2,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, ConnectionError: 28, HTTPError: 23, SSLError: 23, ValueError: 3",
+  "failure_types": "ConnectTimeout: 90, ConnectionError: 28, SSLError: 25, HTTPError: 23, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -201,6 +201,14 @@
     },
     {
       "source_id": "ibps-calendar",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-careers",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-po-mt",
       "error_type": "SSLError"
     },
     {
