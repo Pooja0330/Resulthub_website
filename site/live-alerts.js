@@ -86,22 +86,33 @@
     return host||raw.replace(/\b(active|current|openings?|recruitment|examinations?|notices?|official|website|portal|updates?)\b/g," ").replace(/\s+/g," ").trim();
   };
   const identity = item => {
+    const rawUrl=item.url||item.official_url||item.source_url||"";
     if(isPib(item)){
-      const rawUrl=item.url||item.official_url||item.source_url||"";
       try{
         const prid=new URL(rawUrl,location.href).searchParams.get("PRID");
         if(prid)return "pib-prid:"+prid;
       }catch(_){}
     }
+    // Distinct official URLs may contain different notices with identical titles.
+    // Canonicalize tracking parameters, but never collapse by title alone.
+    try{
+      const u=new URL(rawUrl,location.href);u.hash="";
+      for(const key of [...u.searchParams.keys()]){
+        if(/^(utm_.+|fbclid|gclid|mc_cid|mc_eid)$/i.test(key))u.searchParams.delete(key);
+      }
+      u.searchParams.sort();
+      u.hostname=u.hostname.toLowerCase().replace(/^www\./,"");
+      u.pathname=u.pathname.replace(/\/+$/,"")||"/";
+      return "notice-url:"+u.origin+u.pathname+(u.search||"");
+    }catch(_){}
     return normalizedTitle(item)+"|"+authorityKey(item)+"|"+String(item.category||"").toLowerCase().trim();
   };
   const uniqueItems = items => {
     const keys=new Set();
     return items.filter(item=>{
       if(isNoise(item))return false;
-      // identity() uses normalized title + issuing authority + category
-      // (and the official PIB release ID), so alternate links to one notice
-      // cannot create repeated cards or repeated floating alerts.
+      // identity() uses canonical official notice URLs (or PIB release IDs).
+      // Different official URLs remain separate even when their titles match.
       const key=identity(item);
       if(!key||keys.has(key))return false;
       keys.add(key);
