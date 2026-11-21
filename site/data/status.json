@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-21T08:57:34.311205+00:00",
-  "scan_started_at": "2026-11-21T08:45:59.276078+00:00",
+  "last_checked_at": "2026-11-21T09:13:24.467677+00:00",
+  "scan_started_at": "2026-11-21T09:01:30.248706+00:00",
   "sources_enabled": 309,
-  "sources_succeeded": 167,
-  "sources_failed": 142,
+  "sources_succeeded": 166,
+  "sources_failed": 143,
   "new_candidates": 0,
   "recovered_records": 2,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, ConnectionError: 28, SSLError: 23, HTTPError: 22, ValueError: 3",
+  "failure_types": "ConnectTimeout: 88, ConnectionError: 29, SSLError: 25, HTTPError: 22, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -37,7 +37,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ap-psc",
@@ -201,6 +201,10 @@
     },
     {
       "source_id": "ibps-calendar",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-csa-xvi",
       "error_type": "SSLError"
     },
     {
@@ -593,7 +597,7 @@
     },
     {
       "source_id": "tnmrbrecruit",
-      "error_type": "ConnectTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "tnresults",
