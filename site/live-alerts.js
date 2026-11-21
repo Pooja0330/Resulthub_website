@@ -38,6 +38,9 @@
   };
   const normalizedTitle = item => cleanTitle(item).toLocaleLowerCase().normalize("NFKC").replace(/[^\p{L}\p{N}]+/gu," ").trim();
   const isNoise = item => {
+    // Report-only leads are visible in the website feed with an unverified
+    // label, but are not promoted to real-time exam-alert popups.
+    if(item.reported_only===true)return true;
     const title=normalizedTitle(item);
     const url=String(item.url||item.official_url||item.source_url||"").toLowerCase();
     if (!title || title.length<8 || isObsoleteLiveAlert(item)) return true;
