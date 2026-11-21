@@ -86,13 +86,25 @@
     return host||raw.replace(/\b(active|current|openings?|recruitment|examinations?|notices?|official|website|portal|updates?)\b/g," ").replace(/\s+/g," ").trim();
   };
   const identity = item => {
+    const rawUrl=item.url||item.official_url||"";
     if(isPib(item)){
-      const rawUrl=item.url||item.official_url||item.source_url||"";
       try{
         const prid=new URL(rawUrl,location.href).searchParams.get("PRID");
         if(prid)return "pib-prid:"+prid;
       }catch(_){}
     }
+    // A notice is identified by its own official URL, not its headline.
+    // This preserves separate notices with identical titles from the same authority.
+    try{
+      const u=new URL(rawUrl,location.href);u.hash="";
+      for(const key of [...u.searchParams.keys()]){
+        if(/^(utm_.+|fbclid|gclid|dclid|msclkid|yclid|mc_cid|mc_eid|ref_src)$/i.test(key))u.searchParams.delete(key);
+      }
+      u.searchParams.sort();
+      u.hostname=u.hostname.toLowerCase().replace(/^www\\./,"");
+      u.pathname=u.pathname.replace(/\\/+$/,"")||"/";
+      return "notice-url:"+u.origin+u.pathname+(u.search||"");
+    }catch(_){}
     return normalizedTitle(item)+"|"+authorityKey(item)+"|"+String(item.category||"").toLowerCase().trim();
   };
   const uniqueItems = items => {
