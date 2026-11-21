@@ -413,16 +413,39 @@ def is_auxiliary_sbi_attachment(item):
     )
 
 def deduplicate_published_results(results):
-    """Remove only exact canonical official URL duplicates; preserve distinct documents."""
+    """Remove repeated URLs and repeated copies of the same authority notice.
+
+    Semantic matching is deliberately strict: authority, category, normalized
+    title and (when supplied) publication date must agree. This catches copied
+    listings with different tracking/CMS URLs without merging distinct PG/PhD,
+    result/admit-card, or separately dated notices.
+    """
     unique = []
     seen_urls = set()
+    seen_notices = set()
     for item in results:
         if not isinstance(item, dict):
             continue
         normalized_url = normalize_notice_url(item.get("url") or item.get("official_url") or "")
         if not normalized_url or normalized_url in seen_urls:
             continue
+
+        title_key = normalize_notice_title(item.get("title") or item.get("exam") or "")
+        authority_key = normalize_notice_authority(item, normalized_url)
+        category_key = str(item.get("category") or "").strip().casefold()
+        published_key = format_notice_date(item.get("published") or "").casefold()
+        semantic_key = (
+            authority_key, category_key, title_key, published_key
+        ) if authority_key and category_key and title_key else None
+
+        if semantic_key and semantic_key in seen_notices:
+            # The canonical URL is new, but this is the same notice copied
+            # from another listing page/source alias. Do not publish it twice.
+            continue
+
         seen_urls.add(normalized_url)
+        if semantic_key:
+            seen_notices.add(semantic_key)
         unique.append(item)
     return unique
 
