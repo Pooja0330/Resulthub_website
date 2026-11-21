@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-21T07:43:59.599616+00:00",
-  "scan_started_at": "2026-11-21T07:31:13.889691+00:00",
+  "last_checked_at": "2026-11-21T07:54:20.563747+00:00",
+  "scan_started_at": "2026-11-21T07:45:54.406487+00:00",
   "sources_enabled": 309,
-  "sources_succeeded": 166,
-  "sources_failed": 143,
+  "sources_succeeded": 160,
+  "sources_failed": 149,
   "new_candidates": 0,
   "recovered_records": 2,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, ConnectionError: 29, SSLError: 23, HTTPError: 22, ValueError: 3",
+  "failure_types": "ConnectTimeout: 94, ConnectionError: 28, SSLError: 25, HTTPError: 22, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -144,6 +144,14 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "columbia-ciet-raipur",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "columbia-institute-pharmacy-raipur",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "drdo-careers",
       "error_type": "ConnectionError"
     },
@@ -204,7 +212,15 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "ibps-careers",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "ibps-rrb",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-spl-xvi",
       "error_type": "SSLError"
     },
     {
@@ -326,6 +342,10 @@
     {
       "source_id": "mat-aima",
       "error_type": "HTTPError"
+    },
+    {
+      "source_id": "meghalaya-board",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "merchant-navy-imu",
@@ -453,7 +473,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
@@ -581,6 +601,10 @@
     },
     {
       "source_id": "sikkim-psc",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "sikkim-university",
       "error_type": "ConnectTimeout"
     },
     {
