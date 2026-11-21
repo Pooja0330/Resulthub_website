@@ -7074,6 +7074,114 @@
       "exam_category": "Professional Exams",
       "discover_listing_pages": true,
       "coverage_note": "Official ICAI examination-students announcements page, including CA Foundation, Intermediate and Final results, schedules and exam notices."
+    },
+    {
+      "id": "ailet-nlu-delhi",
+      "name": "AILET — National Law University Delhi",
+      "url": "https://nationallawuniversitydelhi.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "nationallawuniversitydelhi.in"
+      ],
+      "categories": [
+        "notification",
+        "admit_card",
+        "answer_key",
+        "result",
+        "merit_list",
+        "exam_schedule",
+        "admission"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-11-21",
+      "coverage_note": "Official NLU Delhi AILET portal. Tracks admission notices, application extensions, admit cards, answer keys, results and counselling/merit updates.",
+      "exam_category": "Law Entrance Exams",
+      "discover_listing_pages": true
+    },
+    {
+      "id": "josaa-counselling",
+      "name": "JoSAA — Joint Seat Allocation Authority",
+      "url": "https://josaa.admissions.nic.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "josaa.admissions.nic.in",
+        "josaa.nic.in"
+      ],
+      "categories": [
+        "notification",
+        "result",
+        "merit_list",
+        "admission",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-11-21",
+      "coverage_note": "Official Ministry of Education counselling portal for IITs, NITs, IIITs and GFTIs. Tracks seat allocation, schedules, business rules and notices.",
+      "exam_category": "Counselling & Admissions",
+      "discover_listing_pages": true
+    },
+    {
+      "id": "nic-admissions-counselling",
+      "name": "NIC Admissions and Counselling Portal",
+      "url": "https://admissions.nic.in/",
+      "kind": "html",
+      "allowed_hosts": [
+        "admissions.nic.in"
+      ],
+      "categories": [
+        "notification",
+        "result",
+        "merit_list",
+        "admission",
+        "exam_schedule"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-11-21",
+      "coverage_note": "Government of India central admissions and counselling index covering engineering, medical and state counselling bodies. Each candidate link must remain on an allowlisted official destination.",
+      "exam_category": "Counselling & Admissions",
+      "discover_listing_pages": true
+    },
+    {
+      "id": "icar-nta-exams",
+      "name": "ICAR AIEEA and AICE — NTA",
+      "url": "https://exams.nta.nic.in/icar/",
+      "kind": "html",
+      "allowed_hosts": [
+        "exams.nta.nic.in",
+        "nta.ac.in"
+      ],
+      "categories": [
+        "notification",
+        "admit_card",
+        "answer_key",
+        "result",
+        "merit_list",
+        "exam_schedule",
+        "admission"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-11-21",
+      "coverage_note": "Official NTA portal for ICAR AIEEA PG and AICE JRF/SRF PhD examination updates and admissions.",
+      "exam_category": "Agriculture Entrance & Eligibility",
+      "discover_listing_pages": true
+    },
+    {
+      "id": "national-scholarship-portal",
+      "name": "National Scholarship Portal",
+      "url": "https://scholarships.gov.in/Students",
+      "kind": "html",
+      "allowed_hosts": [
+        "scholarships.gov.in"
+      ],
+      "categories": [
+        "notification",
+        "admission"
+      ],
+      "enabled": true,
+      "last_reviewed": "2026-11-21",
+      "coverage_note": "Official National Scholarship Portal student announcements, scheme opening/closing dates and application updates. Scholarship notices are not classified as exam results.",
+      "exam_category": "Scholarships & Student Benefits",
+      "discover_listing_pages": true
     }
   ]
 }
