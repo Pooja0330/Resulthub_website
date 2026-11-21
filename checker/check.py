@@ -409,17 +409,36 @@ def is_auxiliary_sbi_attachment(item):
         and re.search(r"bio[\W_]*data", parsed.path, re.I)
     )
 
+def notice_dedupe_key(item, normalized_url=""):
+    """Stable identity for the same notice exposed through multiple official listing links."""
+    title = normalize_notice_title(item.get("title") or item.get("exam") or "")
+    if len(title) < 12:
+        return ""
+    authority = normalize_notice_authority(item, normalized_url)
+    category = str(item.get("category") or "").casefold().strip()
+    if not authority:
+        return ""
+    return f"{authority}|{category}|{title}"
+
+
 def deduplicate_published_results(results):
-    """Remove only exact canonical official URL duplicates; preserve distinct documents."""
+    """Remove duplicate URLs and repeated same-authority notice titles, preserving distinct notices."""
     unique = []
     seen_urls = set()
+    seen_notices = set()
     for item in results:
         if not isinstance(item, dict):
             continue
         normalized_url = normalize_notice_url(item.get("url") or item.get("official_url") or "")
-        if not normalized_url or normalized_url in seen_urls:
+        notice_key = notice_dedupe_key(item, normalized_url)
+        if normalized_url and normalized_url in seen_urls:
             continue
-        seen_urls.add(normalized_url)
+        if notice_key and notice_key in seen_notices:
+            continue
+        if normalized_url:
+            seen_urls.add(normalized_url)
+        if notice_key:
+            seen_notices.add(notice_key)
         unique.append(item)
     return unique
 
