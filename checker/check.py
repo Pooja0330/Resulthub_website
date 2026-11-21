@@ -947,28 +947,11 @@ def fetch_source(source):
                     if authority:
                         official_candidates.append((priority, destination, authority, label))
                 if not official_candidates:
-                    # Keep a third-party report visible as an explicitly unverified
-                    # lead. It is indexed on the website only; it never enters the
-                    # official alert queue or Telegram publisher.
-                    reported_key = normalize_notice_url(article_url)
-                    if reported_key:
-                        discovered.append({
-                            "title": title[:260],
-                            "url": article_url,
-                            "official_url": "",
-                            "category": category,
-                            "source_name": name,
-                            "source_id": source.get("id", "reported-source"),
-                            "source_url": article_url,
-                            "published": published,
-                            "reference_only": True,
-                            "reported_only": True,
-                            "reported_by": name,
-                            "discovered_via": "Third-party report; official notice not yet located",
-                            "archive": False,
-                        })
-                    if len(discovered) >= limit:
-                        break
+                    # Discovery sites are research inputs only. Never publish their
+                    # article URL as a student-facing destination. If no allowlisted
+                    # official destination/login is present, skip this lead until it
+                    # can be resolved to the issuing authority.
+                    print(f"SKIP third-party lead without direct official destination: {title[:100]}")
                     continue
                 official_candidates.sort(key=lambda x: x[0], reverse=True)
                 _, official_url, authority, link_label = official_candidates[0]
@@ -1380,10 +1363,17 @@ def main():
         source_id_value = str(item.get("source_id") or "").strip().lower()
         source_name_value = str(item.get("source_name") or item.get("authority") or "").strip().lower()
         source_meta_for_cleanup = source_by_id.get(source_id_value, {})
+        item_url_host = (urlparse(str(item.get("url") or item.get("official_url") or "")).hostname or "").lower()
+        third_party_discovery_host = (
+            item_url_host == "resultbharat.com" or item_url_host.endswith(".resultbharat.com")
+            or item_url_host == "bharatresultfind.com" or item_url_host.endswith(".bharatresultfind.com")
+            or item_url_host == "indiaresults.com" or item_url_host.endswith(".indiaresults.com")
+        )
         if (
-            source_id_value.startswith("indiaresults-")
+            source_id_value.startswith(("indiaresults-", "resultbharat-", "bharatresultfind-"))
+            or third_party_discovery_host
             or "indiaresults.com" in source_name_value
-            or source_name_value.startswith("indiaresults")
+            or source_name_value.startswith(("indiaresults", "resultbharat", "bharatresultfind"))
             or source_id_value.startswith("pib-")
             or source_meta_for_cleanup.get("include_all_items", False)
             or source_name_value.startswith("press information bureau")
