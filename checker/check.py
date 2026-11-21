@@ -930,8 +930,7 @@ def fetch_source(source):
                     # lead. It is indexed on the website only; it never enters the
                     # official alert queue or Telegram publisher.
                     reported_key = normalize_notice_url(article_url)
-                    if reported_key and reported_key not in seen_links:
-                        seen_links.add(reported_key)
+                    if reported_key:
                         discovered.append({
                             "title": title[:260],
                             "url": article_url,
@@ -980,8 +979,7 @@ def fetch_source(source):
                 # Preserve the listing as a reported lead when its article page
                 # is temporarily unreachable; never claim official verification.
                 reported_key = normalize_notice_url(article_url)
-                if reported_key and reported_key not in seen_links:
-                    seen_links.add(reported_key)
+                if reported_key:
                     discovered.append({
                         "title": title[:260], "url": article_url, "official_url": "",
                         "category": category, "source_name": name,
