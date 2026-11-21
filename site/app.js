@@ -538,7 +538,7 @@ async function loadResults(){
     knownResultKeys.add(key);
    }
    allItems=current2026Items(cleanResults(data));
-   try{localStorage.setItem("goresult-results-cache",JSON.stringify({savedAt:Date.now(),items:data}))}catch(e){}
+   try{localStorage.setItem("goresult-results-cache",JSON.stringify({savedAt:Date.now(),items:cleanResults(data)}))}catch(e){}
    page=1;render();
    if(resultsFeedInitialized&&freshExamItems.length)showLiveFeedToast(freshExamItems[0],"exam",freshExamItems.length);
    resultsFeedInitialized=true;
@@ -588,7 +588,7 @@ function init(){
  $("#q").value=initialQuery;
  if(latestSearchInput)latestSearchInput.value=initialQuery;
  if(window.location.search){history.replaceState(null,"",window.location.pathname+window.location.hash);}
- try{const cached=JSON.parse(localStorage.getItem("goresult-results-cache")||"null");if(Array.isArray(cached?.items)){allItems=current2026Items(cached.items);render()}}catch(e){}
+ try{const cached=JSON.parse(localStorage.getItem("goresult-results-cache")||"null");if(Array.isArray(cached?.items)){allItems=current2026Items(cleanResults(cached.items));render()}}catch(e){}
  if(initialQuery&&quickSearch){quickSearch.value=initialQuery;filterQuickExams(initialQuery);}
  refresh();
  if(refreshTimer)clearInterval(refreshTimer);
