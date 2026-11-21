@@ -42,9 +42,17 @@
     // label, but are not promoted to real-time exam-alert popups.
     if(item.reported_only===true)return true;
     const title=normalizedTitle(item);
+    const rawTitle=String(item.title||item.exam||"").toLowerCase();
+    const sourceId=String(item.source_id||"").toLowerCase();
+    const sourceName=String(item.source_name||item.authority||"").toLowerCase();
+    const hosts=[item.url,item.official_url,item.source_url].map(value=>{try{return new URL(value).hostname.toLowerCase()}catch(_){return ""}});
+    const thirdParty=hosts.some(host=>host==="resultbharat.com"||host.endsWith(".resultbharat.com")||host==="bharatresultfind.com"||host.endsWith(".bharatresultfind.com")||host==="indiaresults.com"||host.endsWith(".indiaresults.com"));
+    const discoverySource=/^(resultbharat|bharatresultfind|indiaresults)-/.test(sourceId)||/^(resultbharat|bharatresultfind|indiaresults)/.test(sourceName);
+    const ntaLabels=["admit card","download confirmation page","advance city intimation","correction window","score card","final answer key","candidate activity"];
+    const ntaCluster=rawTitle.length>150&&ntaLabels.filter(label=>rawTitle.includes(label)).length>=3;
+    if(thirdParty||discoverySource||ntaCluster)return true;
     const url=String(item.url||item.official_url||item.source_url||"").toLowerCase();
     if (!title || title.length<8 || isObsoleteLiveAlert(item)) return true;
-    const rawTitle=String(item.title||item.exam||"").toLowerCase();
     if(rawTitle.length>150 && (rawTitle.match(/\b(registration|hall ticket|admit card|exam)\b/g)||[]).length>=5)return true;
     const sourceId=String(item.source_id||"").toLowerCase();
     const sourceName=String(item.source_name||item.authority||"").toLowerCase();
