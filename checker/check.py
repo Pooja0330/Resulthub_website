@@ -1235,7 +1235,14 @@ def coalesce_sources_by_url(sources):
             target["source_alias_names"].append(source_name)
         if source.get("exam_category") and source["exam_category"] not in target["exam_categories"]:
             target["exam_categories"].append(source["exam_category"])
-        target["max_new"] = max(int(target.get("max_new", 0) or 0), int(source.get("max_new", 0) or 0))
+        limits = [
+            int(value) for value in (target.get("max_new"), source.get("max_new"))
+            if value is not None and str(value).strip() and int(value) > 0
+        ]
+        if limits:
+            target["max_new"] = max(limits)
+        else:
+            target.pop("max_new", None)
         target["discover_listing_pages"] = bool(
             target.get("discover_listing_pages") or source.get("discover_listing_pages")
         )
