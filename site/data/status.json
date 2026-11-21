@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-21T02:11:03.605400+00:00",
-  "scan_started_at": "2026-11-21T01:58:09.235759+00:00",
+  "last_checked_at": "2026-11-21T02:22:02.442570+00:00",
+  "scan_started_at": "2026-11-21T02:11:54.855197+00:00",
   "sources_enabled": 309,
-  "sources_succeeded": 164,
-  "sources_failed": 145,
+  "sources_succeeded": 160,
+  "sources_failed": 149,
   "new_candidates": 0,
   "recovered_records": 2,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, ConnectionError: 29, HTTPError: 23, SSLError: 23, ValueError: 3",
+  "failure_types": "ConnectTimeout: 95, ConnectionError: 29, HTTPError: 23, SSLError: 23, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -144,6 +144,14 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "columbia-ciet-raipur",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "columbia-institute-pharmacy-raipur",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "drdo-careers",
       "error_type": "ConnectionError"
     },
@@ -216,10 +224,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-spl-xvi",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "iiser-admissions",
       "error_type": "SSLError"
     },
@@ -282,6 +286,10 @@
     {
       "source_id": "jkssb",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "jntuh",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "karnataka-board",
@@ -444,6 +452,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "osssc",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -589,6 +601,10 @@
     },
     {
       "source_id": "sikkim-psc",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "sikkim-university",
       "error_type": "ConnectTimeout"
     },
     {
