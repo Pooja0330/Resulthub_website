@@ -410,16 +410,17 @@ def is_auxiliary_sbi_attachment(item):
     )
 
 def deduplicate_published_results(results):
-    """Remove only exact canonical official URL duplicates; preserve distinct documents."""
+    """Remove only duplicate canonical official notice URLs; distinct URLs remain distinct notices."""
     unique = []
     seen_urls = set()
     for item in results:
         if not isinstance(item, dict):
             continue
         normalized_url = normalize_notice_url(item.get("url") or item.get("official_url") or "")
-        if not normalized_url or normalized_url in seen_urls:
+        if normalized_url and normalized_url in seen_urls:
             continue
-        seen_urls.add(normalized_url)
+        if normalized_url:
+            seen_urls.add(normalized_url)
         unique.append(item)
     return unique
 

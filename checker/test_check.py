@@ -76,6 +76,33 @@ class CheckerSafetyTests(unittest.TestCase):
         self.assertFalse(host_allowed("https://jkinfo.in/page.php?b=IBPS", authority_sources[0]["allowed_hosts"]))
         self.assertFalse(host_allowed("https://ibpsreg.ibps.in.attacker.example/login", authority_sources[0]["allowed_hosts"]))
 
+    def test_published_results_preserve_same_title_across_distinct_official_urls(self):
+        records = [
+            {"id": "first", "title": "Recruitment of Specialist Cadre Officer 2026",
+             "category": "notification", "source_name": "State Bank of India",
+             "url": "https://bank.sbi/careers/notice-a"},
+            {"id": "second", "title": "RECRUITMENT OF SPECIALIST CADRE OFFICER 2026",
+             "category": "notification", "source_name": "State Bank of India",
+             "url": "https://bank.sbi/careers/notice-b?utm_source=feed"},
+            {"id": "other-authority", "title": "Recruitment of Specialist Cadre Officer 2026",
+             "category": "notification", "source_name": "Another Bank",
+             "url": "https://otherbank.gov.in/careers/notice"},
+        ]
+        cleaned = deduplicate_published_results(records)
+        self.assertEqual([item["id"] for item in cleaned], ["first", "second", "other-authority"])
+
+    def test_published_results_keep_same_title_in_distinct_categories(self):
+        records = [
+            {"id": "result", "title": "Recruitment Officer Examination 2026",
+             "category": "result", "source_name": "Example Authority",
+             "url": "https://example.gov.in/results/1"},
+            {"id": "schedule", "title": "Recruitment Officer Examination 2026",
+             "category": "exam_schedule", "source_name": "Example Authority",
+             "url": "https://example.gov.in/schedule/1"},
+        ]
+        cleaned = deduplicate_published_results(records)
+        self.assertEqual([item["id"] for item in cleaned], ["result", "schedule"])
+
     def test_notice_url_keeps_content_identifiers(self):
         first = normalize_notice_url("https://www.example.gov.in/notice?id=123&utm_source=mail")
         second = normalize_notice_url("https://example.gov.in/notice?id=456")
