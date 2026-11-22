@@ -1,9 +1,9 @@
 {
-  "last_checked_at": "2026-11-22T12:54:11.081138+00:00",
-  "scan_started_at": "2026-11-22T12:45:53.207059+00:00",
+  "last_checked_at": "2026-11-22T13:12:08.210284+00:00",
+  "scan_started_at": "2026-11-22T13:01:56.564873+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 166,
-  "sources_failed": 135,
+  "sources_succeeded": 165,
+  "sources_failed": 136,
   "new_candidates": 0,
   "recovered_records": 2,
   "telegram_posts_sent": 0,
@@ -434,6 +434,10 @@
     {
       "source_id": "patna-university",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "pondicherry-university-old-results",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "punjab-psc",
