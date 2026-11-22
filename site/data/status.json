@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-22T09:25:12.836060+00:00",
-  "scan_started_at": "2026-11-22T09:15:54.599457+00:00",
+  "last_checked_at": "2026-11-22T09:43:01.344210+00:00",
+  "scan_started_at": "2026-11-22T09:31:19.421506+00:00",
   "sources_enabled": 301,
   "sources_succeeded": 164,
   "sources_failed": 137,
@@ -9,7 +9,7 @@
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 29, SSLError: 24, HTTPError: 23, ValueError: 3",
+  "failure_types": "ConnectTimeout: 89, ConnectionError: 28, SSLError: 24, HTTPError: 23, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -204,7 +204,7 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-po-mt",
+      "source_id": "ibps-careers",
       "error_type": "SSLError"
     },
     {
@@ -362,10 +362,6 @@
     {
       "source_id": "nabard",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "national-scholarship-portal",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "naval-coastguard-jobs",
@@ -602,6 +598,10 @@
     {
       "source_id": "tnmrbrecruit",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "tnpsc",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "tnresults",
