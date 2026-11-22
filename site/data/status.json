@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-22T00:10:45.767776+00:00",
-  "scan_started_at": "2026-11-22T00:01:40.109624+00:00",
+  "last_checked_at": "2026-11-22T00:24:02.326934+00:00",
+  "scan_started_at": "2026-11-22T00:15:52.833902+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 165,
-  "sources_failed": 136,
+  "sources_succeeded": 164,
+  "sources_failed": 137,
   "new_candidates": 0,
   "recovered_records": 2,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, ConnectionError: 28, SSLError: 23, HTTPError: 22, ValueError: 3",
+  "failure_types": "ConnectTimeout: 90, ConnectionError: 29, HTTPError: 23, SSLError: 23, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -205,10 +205,14 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ibps-calendar",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-careers",
       "error_type": "SSLError"
     },
     {
@@ -332,6 +336,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "mat-aima",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -429,10 +437,6 @@
     },
     {
       "source_id": "osmania-university",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
