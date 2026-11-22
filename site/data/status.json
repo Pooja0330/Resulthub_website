@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-22T11:25:41.200825+00:00",
-  "scan_started_at": "2026-11-22T11:15:55.616492+00:00",
+  "last_checked_at": "2026-11-22T11:43:32.214649+00:00",
+  "scan_started_at": "2026-11-22T11:31:47.794628+00:00",
   "sources_enabled": 301,
   "sources_succeeded": 166,
   "sources_failed": 135,
@@ -9,7 +9,7 @@
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, ConnectionError: 28, SSLError: 24, HTTPError: 23, ValueError: 3",
+  "failure_types": "ConnectTimeout: 89, ConnectionError: 28, HTTPError: 23, SSLError: 23, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -593,7 +593,7 @@
     },
     {
       "source_id": "tnmrbrecruit",
-      "error_type": "SSLError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "tnresults",
