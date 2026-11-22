@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-22T18:54:02.161752+00:00",
-  "scan_started_at": "2026-11-22T18:45:51.055569+00:00",
+  "last_checked_at": "2026-11-22T19:10:44.676741+00:00",
+  "scan_started_at": "2026-11-22T19:01:22.856800+00:00",
   "sources_enabled": 301,
   "sources_succeeded": 162,
   "sources_failed": 139,
@@ -9,7 +9,7 @@
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, ConnectionError: 30, HTTPError: 24, SSLError: 23, ValueError: 3",
+  "failure_types": "ConnectTimeout: 90, ConnectionError: 29, HTTPError: 24, SSLError: 22, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -205,7 +205,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ibps-calendar",
@@ -300,10 +300,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "kashmir-university",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "keralaresults",
       "error_type": "ConnectionError"
     },
@@ -372,6 +368,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "national-scholarship-portal",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "naval-coastguard-jobs",
       "error_type": "SSLError"
     },
@@ -437,7 +437,7 @@
     },
     {
       "source_id": "osmania-university",
-      "error_type": "SSLError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "osssc",
