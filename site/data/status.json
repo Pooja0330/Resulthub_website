@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-22T00:24:02.326934+00:00",
-  "scan_started_at": "2026-11-22T00:15:52.833902+00:00",
+  "last_checked_at": "2026-11-22T00:39:44.875701+00:00",
+  "scan_started_at": "2026-11-22T00:31:39.789612+00:00",
   "sources_enabled": 301,
   "sources_succeeded": 164,
   "sources_failed": 137,
@@ -209,10 +209,6 @@
     },
     {
       "source_id": "ibps-calendar",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-careers",
       "error_type": "SSLError"
     },
     {
@@ -437,6 +433,10 @@
     },
     {
       "source_id": "osmania-university",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
