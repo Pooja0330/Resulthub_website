@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-22T05:27:11.653215+00:00",
-  "scan_started_at": "2026-11-22T05:15:57.182268+00:00",
+  "last_checked_at": "2026-11-22T05:40:27.518183+00:00",
+  "scan_started_at": "2026-11-22T05:31:38.438781+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 158,
-  "sources_failed": 143,
+  "sources_succeeded": 161,
+  "sources_failed": 140,
   "new_candidates": 0,
   "recovered_records": 2,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 94, ConnectionError: 30, HTTPError: 23, SSLError: 23, ValueError: 3",
+  "failure_types": "ConnectTimeout: 94, ConnectionError: 28, HTTPError: 23, SSLError: 23, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -216,6 +216,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "ibps-spl-xvi",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "iiser-admissions",
       "error_type": "SSLError"
     },
@@ -372,10 +376,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "nagaland-psc",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "naval-coastguard-jobs",
       "error_type": "SSLError"
     },
@@ -444,14 +444,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ossc",
-      "error_type": "ConnectionError"
-    },
-    {
-      "source_id": "osssc",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -473,7 +465,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "rajeduboard",
@@ -577,10 +569,6 @@
     },
     {
       "source_id": "rrb-trivandrum",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rrc-eastern",
       "error_type": "ConnectTimeout"
     },
     {
