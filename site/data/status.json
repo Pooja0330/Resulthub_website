@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-22T07:41:00.459043+00:00",
-  "scan_started_at": "2026-11-22T07:32:00.144570+00:00",
+  "last_checked_at": "2026-11-22T07:54:41.518867+00:00",
+  "scan_started_at": "2026-11-22T07:45:54.760029+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 165,
-  "sources_failed": 136,
+  "sources_succeeded": 166,
+  "sources_failed": 135,
   "new_candidates": 0,
   "recovered_records": 2,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 28, SSLError: 24, HTTPError: 22, ValueError: 3",
+  "failure_types": "ConnectTimeout: 89, ConnectionError: 29, HTTPError: 23, SSLError: 22, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -208,10 +208,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-spl-xvi",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "iiser-admissions",
       "error_type": "SSLError"
     },
@@ -328,6 +324,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "mat-aima",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -360,8 +360,8 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "nagaland-psc",
-      "error_type": "ReadTimeout"
+      "source_id": "national-scholarship-portal",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "naval-coastguard-jobs",
@@ -429,10 +429,6 @@
     },
     {
       "source_id": "osmania-university",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
