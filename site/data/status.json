@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-22T13:12:08.210284+00:00",
-  "scan_started_at": "2026-11-22T13:01:56.564873+00:00",
+  "last_checked_at": "2026-11-22T13:27:29.359597+00:00",
+  "scan_started_at": "2026-11-22T13:15:59.095563+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 165,
-  "sources_failed": 136,
+  "sources_succeeded": 164,
+  "sources_failed": 137,
   "new_candidates": 0,
   "recovered_records": 2,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 28, HTTPError: 23, SSLError: 23, ValueError: 3",
+  "failure_types": "ConnectTimeout: 89, ConnectionError: 29, HTTPError: 24, SSLError: 23, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -428,6 +428,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "ossc",
+      "error_type": "ConnectionError"
+    },
+    {
       "source_id": "osssc",
       "error_type": "SSLError"
     },
@@ -437,7 +441,7 @@
     },
     {
       "source_id": "pondicherry-university-old-results",
-      "error_type": "ReadTimeout"
+      "error_type": "HTTPError"
     },
     {
       "source_id": "punjab-psc",
