@@ -1,9 +1,9 @@
 {
-  "last_checked_at": "2026-11-22T12:43:32.772482+00:00",
-  "scan_started_at": "2026-11-22T12:31:19.805922+00:00",
+  "last_checked_at": "2026-11-22T12:54:11.081138+00:00",
+  "scan_started_at": "2026-11-22T12:45:53.207059+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 164,
-  "sources_failed": 137,
+  "sources_succeeded": 166,
+  "sources_failed": 135,
   "new_candidates": 0,
   "recovered_records": 2,
   "telegram_posts_sent": 0,
@@ -246,10 +246,6 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "indiapost-gds",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -582,10 +578,6 @@
     {
       "source_id": "sikkim-psc",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "sikkim-university",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "tamilnadu-board-official",
