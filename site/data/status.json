@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-22T14:25:50.488665+00:00",
-  "scan_started_at": "2026-11-22T14:15:58.604598+00:00",
+  "last_checked_at": "2026-11-22T14:41:27.142108+00:00",
+  "scan_started_at": "2026-11-22T14:32:03.173480+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 161,
-  "sources_failed": 140,
+  "sources_succeeded": 162,
+  "sources_failed": 139,
   "new_candidates": 0,
   "recovered_records": 2,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 29, SSLError: 25, HTTPError: 24, ValueError: 3",
+  "failure_types": "ConnectTimeout: 91, ConnectionError: 30, HTTPError: 23, SSLError: 23, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -74,6 +74,10 @@
     {
       "source_id": "barc-recruitment",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "bharatresultfind-discovery",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bihar-state-health-society-results-archive",
@@ -196,19 +200,19 @@
       "error_type": "HTTPError"
     },
     {
+      "source_id": "hpbose-results",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "hpsc",
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "hpssc",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "ibps-calendar",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-csa-xvi",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-po-mt",
       "error_type": "SSLError"
     },
     {
@@ -254,10 +258,6 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "indiapost-gds",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -334,10 +334,6 @@
     {
       "source_id": "manipur-board",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "mat-aima",
-      "error_type": "HTTPError"
     },
     {
       "source_id": "merchant-navy-imu",
