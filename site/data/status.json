@@ -1,9 +1,9 @@
 {
-  "last_checked_at": "2026-11-22T09:12:53.177410+00:00",
-  "scan_started_at": "2026-11-22T09:02:09.861294+00:00",
+  "last_checked_at": "2026-11-22T09:25:12.836060+00:00",
+  "scan_started_at": "2026-11-22T09:15:54.599457+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 163,
-  "sources_failed": 138,
+  "sources_succeeded": 164,
+  "sources_failed": 137,
   "new_candidates": 0,
   "recovered_records": 2,
   "telegram_posts_sent": 0,
@@ -204,7 +204,7 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-recruitment",
+      "source_id": "ibps-po-mt",
       "error_type": "SSLError"
     },
     {
@@ -364,8 +364,8 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "nagaland-psc",
-      "error_type": "ReadTimeout"
+      "source_id": "national-scholarship-portal",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "naval-coastguard-jobs",
@@ -586,10 +586,6 @@
     {
       "source_id": "sikkim-psc",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "sikkim-university",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "tamilnadu-board-official",
