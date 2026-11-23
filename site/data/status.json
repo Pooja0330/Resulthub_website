@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-23T16:12:27.192307+00:00",
-  "scan_started_at": "2026-11-23T16:02:21.469865+00:00",
+  "last_checked_at": "2026-11-23T16:22:25.647629+00:00",
+  "scan_started_at": "2026-11-23T16:15:59.235117+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 156,
-  "sources_failed": 145,
+  "sources_succeeded": 158,
+  "sources_failed": 143,
   "new_candidates": 0,
-  "recovered_records": 375,
+  "recovered_records": 376,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 94, ConnectionError: 30, HTTPError: 24, SSLError: 23, ValueError: 3",
+  "failure_types": "ConnectTimeout: 89, ConnectionError: 32, HTTPError: 24, SSLError: 24, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -144,14 +144,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "columbia-ciet-raipur",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "columbia-institute-pharmacy-raipur",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "drdo-careers",
       "error_type": "ConnectionError"
     },
@@ -174,10 +166,6 @@
     {
       "source_id": "esic-recruitment",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "goa-government",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "goa-technical-education-old-results",
@@ -218,6 +206,10 @@
     {
       "source_id": "hpssc",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "ibps",
+      "error_type": "SSLError"
     },
     {
       "source_id": "ibps-calendar",
@@ -268,12 +260,12 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "jadavpur-university",
-      "error_type": "SSLError"
+      "source_id": "indiapost-gds",
+      "error_type": "ReadTimeout"
     },
     {
-      "source_id": "jharkhand-psc",
-      "error_type": "ConnectTimeout"
+      "source_id": "jadavpur-university",
+      "error_type": "SSLError"
     },
     {
       "source_id": "jkbose",
@@ -348,10 +340,6 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "meghalaya-board",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -382,6 +370,10 @@
     {
       "source_id": "nabard",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "national-scholarship-portal",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "naval-coastguard-jobs",
@@ -450,6 +442,10 @@
     {
       "source_id": "osmania-university",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "ossc",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "osssc",
@@ -609,10 +605,6 @@
     },
     {
       "source_id": "sikkim-psc",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "sikkim-university",
       "error_type": "ConnectTimeout"
     },
     {
