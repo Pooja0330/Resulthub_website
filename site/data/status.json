@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-23T20:12:46.049513+00:00",
-  "scan_started_at": "2026-11-23T20:02:13.184543+00:00",
+  "last_checked_at": "2026-11-23T20:24:29.888550+00:00",
+  "scan_started_at": "2026-11-23T20:16:02.580556+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 163,
-  "sources_failed": 138,
+  "sources_succeeded": 164,
+  "sources_failed": 137,
   "new_candidates": 0,
-  "recovered_records": 396,
+  "recovered_records": 401,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
@@ -326,10 +326,6 @@
     {
       "source_id": "manipur-board",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "manipur-university",
-      "error_type": "ChunkedEncodingError"
     },
     {
       "source_id": "mat-aima",
