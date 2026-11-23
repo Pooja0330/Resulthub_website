@@ -57,3 +57,16 @@ class SeoQualityTests(unittest.TestCase):
         page = render_hub(HUBS[0], [{"id": "abc123456789", "title": "Sample Result 2026", "source_name": "Board"}])
         self.assertIn("ItemList", page)
         self.assertIn("updates/abc123456789.html", page)
+
+
+class LiveListQualityTests(unittest.TestCase):
+    def test_nav_junk_scholarships_and_duplicates_are_excluded(self):
+        from build_seo_pages import is_live_item, dedupe_by_title
+        junk = {"id": "j" * 12, "category": "notification",
+                "title": "Accreditations Mandatory Disclosure NBA ISO Certificate Student Activities Syllabus Time Table Prospectus"}
+        scholarship = {"id": "s" * 12, "category": "scholarship", "title": "Merit Scholarship 2026 Notification"}
+        good = {"id": "g" * 12, "category": "result", "title": "SSC CGL Final Result 2026"}
+        self.assertFalse(is_live_item(junk))
+        self.assertFalse(is_live_item(scholarship))
+        self.assertTrue(is_live_item(good))
+        self.assertEqual(len(dedupe_by_title([good, dict(good, id="h" * 12)])), 1)

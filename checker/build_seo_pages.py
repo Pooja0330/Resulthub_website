@@ -14,6 +14,7 @@ from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / "site"
 BASE = "https://goresulthub.com"
+HUB_CATEGORIES = {"result", "merit_list", "cutoff", "admit_card", "answer_key", "notification", "exam_schedule"}
 HUBS = [
     # slug, categories, H1, title tag, meta description, blurb
     ("latest-results.html", {"result", "merit_list", "cutoff"}, "Latest Exam Results",
@@ -68,6 +69,7 @@ def date_value(value):
         return ""
 
 BOILERPLATE = "potential update detected"
+NAV_RE = re.compile(r"accreditations?|mandatory disclosure|syllabus|time table|prospectus|scholarships?|about us|contact us|\\bfaq\\b|\\bhome\\b|nba|iso certificate", re.I)
 NOISE_RE = re.compile(r"open_in_new|\bhome\b.*\babout us\b|\bcontact us\b.*\bfaq\b", re.I)
 
 def is_boilerplate(item):
@@ -94,7 +96,20 @@ def is_live_item(item):
     ident = str(item.get("id") or "")
     if item.get("archive") or item.get("reported_only") or ident.startswith("pib-"):
         return False
-    return 8 <= len(title) <= 200 and not NOISE_RE.search(title)
+    if str(item.get("category") or "") not in HUB_CATEGORIES:
+        return False
+    nav_hits = len(NAV_RE.findall(title))
+    return 8 <= len(title) <= 200 and not NOISE_RE.search(title) and nav_hits < 3
+
+def dedupe_by_title(items):
+    """Keep the newest item per normalised title (input must be newest-first)."""
+    seen, out = set(), []
+    for it in items:
+        key = re.sub(r"[^a-z0-9]+", " ", str(it.get("title") or it.get("exam") or "").lower()).strip()
+        if key and key not in seen:
+            seen.add(key)
+            out.append(it)
+    return out
 
 def sort_key(item):
     return str(item.get("detected_at") or item.get("published") or "")
@@ -292,7 +307,7 @@ def build():
             if ident and ident not in unique:
                 unique[ident] = item
     urls = {BASE + path: "" for path in BASE_SITEMAP}
-    live = sorted((i for i in unique.values() if is_live_item(i)), key=sort_key, reverse=True)
+    live = dedupe_by_title(sorted((i for i in unique.values() if is_live_item(i)), key=sort_key, reverse=True))
     by_cat = {}
     for it in live:
         by_cat.setdefault(str(it.get("category") or ""), []).append(it)
