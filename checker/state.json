@@ -28744,33 +28744,63 @@
       "source_id": "rajiv-gandhi-university",
       "url": "https://rgu.ac.in/uploads/exam-results/Notificaiton ( MBBS Phase -II Supplementary ) Nov. 2026_0001.pdf",
       "telegram_sent_at": "2026-11-23T09:54:57.380707+00:00"
+    },
+    "166cb52801958d6dab796d16": {
+      "first_seen": "2026-11-23T10:31:58.192135+00:00",
+      "source_id": "sbi-recruitment-results",
+      "url": "https://sbi.bank.in/documents/77530/57941334/FINAL++ADVT++CRPD_SCO_2026-27_13.pdf/64d9efd8-2a64-ad88-d4a1-0ae1a5e2fb4b?t=1786026587436",
+      "telegram_sent_at": "2026-11-23T10:41:09.017682+00:00"
+    },
+    "8a96b345803b57070ee9c199": {
+      "first_seen": "2026-11-23T10:31:58.192135+00:00",
+      "source_id": "sbi-recruitment-results",
+      "url": "https://sbi.bank.in/documents/77530/57941334/CTC+Negotiation+Form.pdf/95dc0284-0527-cfdb-1ec3-0135e5cbc5b9?t=1786026646351",
+      "telegram_sent_at": "2026-11-23T10:41:10.639028+00:00"
+    },
+    "14ff40a30b46f207b1ac3c53": {
+      "first_seen": "2026-11-23T10:31:58.192135+00:00",
+      "source_id": "sbi-recruitment-results",
+      "url": "https://sbi.bank.in/documents/77530/57941334/19112026_SCO_13_INT_SCH_DYCTO.pdf/5d43a3b4-4527-ba83-9b47-37e0925fdcc0?t=1795087239884",
+      "telegram_sent_at": "2026-11-23T10:41:12.463052+00:00"
+    },
+    "93d7324d1012eef992ea9e94": {
+      "first_seen": "2026-11-23T10:31:58.192135+00:00",
+      "source_id": "sbi-recruitment-results",
+      "url": "https://sbi.bank.in/documents/77530/57941334/SCO_13_Select+List_VP.pdf/60627ca4-d4f7-2c65-c159-01edef3ba67f?t=1795416585312",
+      "telegram_sent_at": "2026-11-23T10:41:14.089990+00:00"
+    },
+    "5ab0b04b4266c77f5756ed52": {
+      "first_seen": "2026-11-23T10:31:58.192135+00:00",
+      "source_id": "sbi-recruitment-results",
+      "url": "https://recruitment.sbi.bank.in/crpd-sco-2026-27-13/apply",
+      "telegram_sent_at": "2026-11-23T10:41:15.724408+00:00"
     }
   },
-  "last_run": "2026-11-23T10:16:03.814772+00:00",
+  "last_run": "2026-11-23T10:31:58.192135+00:00",
   "source_health": {
     "jeemain": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "ugcnet": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "gate": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "ibps": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "rbi-opportunities": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "rrb-bbs": {
@@ -28786,22 +28816,22 @@
     },
     "neet": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "cuet": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "ssc": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "cbse": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "nta": {
@@ -28812,7 +28842,7 @@
     },
     "sbi-careers": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "mpbse": {
@@ -28841,22 +28871,22 @@
     },
     "gseb": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "odisha-board": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "upsc": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "upsc-results": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "rrb-sec": {
@@ -28879,17 +28909,17 @@
     },
     "up-board": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "haryana-board": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "punjab-board": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "tnresults": {
@@ -28906,7 +28936,7 @@
     },
     "assam-board": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "karnataka-board": {
@@ -28917,7 +28947,7 @@
     },
     "bpsc": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "bseb": {
@@ -28940,7 +28970,7 @@
     },
     "mpsc": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "jkbose": {
@@ -28992,17 +29022,17 @@
     },
     "keralapsc": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "tnpsc": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "opsc": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "rbi-careers": {
@@ -29012,7 +29042,7 @@
     },
     "lic-careers": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "wbpsc": {
@@ -29029,7 +29059,7 @@
     },
     "uppsc": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "nta-ugcnet": {
@@ -29039,7 +29069,7 @@
     },
     "jeeadv": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "epfindia": {
@@ -29050,7 +29080,7 @@
     },
     "nta-exams": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "gate-iitg": {
@@ -29065,7 +29095,7 @@
     },
     "nta-cuetpg": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "hpsc": {
@@ -29076,17 +29106,17 @@
     },
     "nta-csirnet": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "nta-nchm": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "ctet": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "nabard": {
@@ -29127,7 +29157,7 @@
     },
     "niacl": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "rrb-ajmer": {
@@ -29186,7 +29216,7 @@
     },
     "rrc-central": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "rrb-guwahati": {
@@ -29221,7 +29251,7 @@
     },
     "rrc-western": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "rrb-muzaffarpur": {
@@ -29238,7 +29268,7 @@
     },
     "rrc-eastern": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "mizoram-psc": {
@@ -29265,22 +29295,22 @@
     },
     "manipur-psc": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "nagaland-psc": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "meghalaya-psc": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "jharkhand-psc": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "jkssb": {
@@ -29315,12 +29345,12 @@
     },
     "hssc": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "hpssc": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "sikkim-psc": {
@@ -29342,8 +29372,8 @@
     },
     "osssc": {
       "status": "failed",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
-      "fail_streak": 2,
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
+      "fail_streak": 3,
       "error": "SSLError: HTTPSConnectionPool(host='www.osssc.gov.in', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: un"
     },
     "mpsc-maha": {
@@ -29353,7 +29383,7 @@
     },
     "btsc": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "uttarakhand-psc": {
@@ -29387,27 +29417,27 @@
     },
     "dsssb": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "bihar-police": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "bihar-daroga": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "up-police": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "ossc": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "rajasthan-police": {
@@ -29436,7 +29466,7 @@
     },
     "kerala-devaswom": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "tnusrb": {
@@ -29459,12 +29489,12 @@
     },
     "karnataka-police": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "telangana-tslprb": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "karnataka-kea": {
@@ -29475,7 +29505,7 @@
     },
     "wbssc": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "vyapam-cg": {
@@ -29503,7 +29533,7 @@
     },
     "nios-results": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "ap-psc": {
@@ -29530,7 +29560,7 @@
     },
     "maharashtra-board": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "odisha-psc": {
@@ -29540,7 +29570,7 @@
     },
     "ipu": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "haryana-psc": {
@@ -29550,7 +29580,7 @@
     },
     "ignou": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "assam-direct": {
@@ -29589,7 +29619,7 @@
     },
     "bhu": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "jkbose-results": {
@@ -29599,7 +29629,7 @@
     },
     "nmc": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "punjab-sssb": {
@@ -29610,12 +29640,12 @@
     },
     "du": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "icai": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "odisha-results": {
@@ -29626,12 +29656,12 @@
     },
     "icmai": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "icsi": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "telangana-results": {
@@ -29648,19 +29678,18 @@
     },
     "upsc-online-ora": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "indiapost-gds": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "indiapost-recruitment": {
-      "status": "failed",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
-      "fail_streak": 1,
-      "error": "ReadTimeout: HTTPSConnectionPool(host='www.indiapost.gov.in', port=443): Read timed out. (read timeout=15)"
+      "status": "ok",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
+      "new_candidates": 0
     },
     "rrcb-central": {
       "status": "failed",
@@ -29682,17 +29711,17 @@
     },
     "fci-recruitment": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "aiims-exams": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "isro-careers": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "drdo-rac": {
@@ -29703,12 +29732,12 @@
     },
     "sebi-careers": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "irdai-careers": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "indian-airforce-afcat": {
@@ -29719,7 +29748,7 @@
     },
     "pfrda-careers": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "nielit-recruitment": {
@@ -29730,12 +29759,12 @@
     },
     "csir-hrdg": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "sidbi-careers": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "cbse-results-official": {
@@ -29756,17 +29785,17 @@
     },
     "crpf-results": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "ssb-recruitment": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "crpf-recruitment": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "coast-guard-recruitment": {
@@ -29842,12 +29871,12 @@
     },
     "hpbose-results": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "ubse-results": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "bseh-results": {
@@ -29877,12 +29906,12 @@
     },
     "mizoram-board": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "nagaland-board": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "cgbse-results": {
@@ -29904,7 +29933,7 @@
     },
     "goa-board": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "maharashtra-board-official": {
@@ -29924,7 +29953,7 @@
     },
     "kerala-board-official": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "tripura-board": {
@@ -29952,7 +29981,7 @@
     },
     "meghalaya-board": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "westbengal-board-official": {
@@ -29968,27 +29997,27 @@
     },
     "ibps-recent-updates": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "ibps-po-mt": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "sbi-current-openings": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "sbi-recruitment-results": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
-      "new_candidates": 0
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
+      "new_candidates": 5
     },
     "goa-government": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "chandigarh-administration": {
@@ -29999,22 +30028,22 @@
     },
     "dnh-dd-administration": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "ladakh-administration": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "lakshadweep-administration": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "puducherry-government": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "andaman-administration": {
@@ -30045,27 +30074,27 @@
     },
     "mpsc-announcements": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "mpsc-merit-lists": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "mpsc-final-recommendations": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "mpsc-answer-keys": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "mpsc-interview-schedules": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "maharashtra-ssc-results": {
@@ -30075,12 +30104,12 @@
     },
     "maharashtra-cet-cell": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "maharashtra-hsc-results": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "upsc-exam-calendar": {
@@ -30097,22 +30126,22 @@
     },
     "upsc-active-examinations": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "portal-maharashtra-www-mahahsscboard-in": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "portal-maharashtra-maharashtra-gov-in": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "portal-delhi-delhi-gov-in": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "du-exam-branch": {
@@ -30129,17 +30158,17 @@
     },
     "jnu": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "sppu": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "calcutta-university": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "jadavpur-university": {
@@ -30150,17 +30179,17 @@
     },
     "gauhati-university": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "dibrugarh-university": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "jamia": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "mumbai-university": {
@@ -30171,12 +30200,12 @@
     },
     "calicut-university": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "anna-university": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "vtu": {
@@ -30187,7 +30216,7 @@
     },
     "kerala-university": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "patna-university": {
@@ -30204,12 +30233,12 @@
     },
     "ranchi-university": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "panjab-university": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "osmania-university": {
@@ -30220,27 +30249,27 @@
     },
     "jammu-university": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "jntua": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "jntuh": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "gujarat-university": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "hptu": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "goa-university": {
@@ -30257,22 +30286,22 @@
     },
     "kumaun-university": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "sambalpur-university": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "magadh-university": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "tripura-university": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "mizoram-university": {
@@ -30283,22 +30312,22 @@
     },
     "manipur-university": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "nagaland-university": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "rajiv-gandhi-university": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "nehu": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "kurukshetra-university-results-archive": {
@@ -30315,12 +30344,12 @@
     },
     "sikkim-university": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "lucknow-university-old-results": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "hp-university": {
@@ -30331,7 +30360,7 @@
     },
     "rajasthan-university-old-results": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "goa-technical-education-old-results": {
@@ -30348,14 +30377,13 @@
     },
     "pondicherry-university-old-results": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "rajasthan-university": {
-      "status": "failed",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
-      "fail_streak": 1,
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='www.uniraj.ac.in', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.uniraj.ac.in', port=443) at 0x7cf48c180e90>, 'Connect"
+      "status": "ok",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
+      "new_candidates": 0
     },
     "bihar-state-health-society-results-archive": {
       "status": "failed",
@@ -30377,12 +30405,12 @@
     },
     "dsssb-old-results-archive": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "kashmir-university": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "pib-press-releases": {
@@ -30397,7 +30425,7 @@
     },
     "ssc-northern-region-whats-new": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "nta-data-public-notices": {
@@ -30425,7 +30453,7 @@
     },
     "upsc-final-results": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "pib-english-regional-releases": {
@@ -30456,7 +30484,7 @@
     },
     "ccl-careers": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "barc-careers": {
@@ -30479,12 +30507,12 @@
     },
     "cat-iim": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "clat-consortium": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "mat-aima": {
@@ -30505,7 +30533,7 @@
     },
     "xat-exam": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "nift-admissions": {
@@ -30542,7 +30570,7 @@
     },
     "icmr-careers": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "indian-airforce-jobs": {
@@ -30552,94 +30580,93 @@
     },
     "tcs-ions-nqt": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "csir-careers": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "ibps-spl-xvi": {
-      "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
-      "new_candidates": 0
+      "status": "failed",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
+      "fail_streak": 1,
+      "error": "SSLError: HTTPSConnectionPool(host='ibps.in', port=443): Max retries exceeded with url: /index.php/specialist-officers-xvi/ (Caused by SSLError(SSLError(1, '[SSL: UNEXPECTED_MESSAGE] unexpected message (_ssl.c:"
     },
     "ibps-csa-xvi": {
-      "status": "failed",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
-      "fail_streak": 1,
-      "error": "SSLError: HTTPSConnectionPool(host='ibps.in', port=443): Max retries exceeded with url: /index.php/clerical-cadre-xvi/ (Caused by SSLError(SSLError(1, '[SSL: UNEXPECTED_MESSAGE] unexpected message (_ssl.c:1011)"
+      "status": "ok",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
+      "new_candidates": 0
     },
     "csvtu-university": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "cgdte-admissions": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "columbia-institute-pharmacy-raipur": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "columbia-ciet-raipur": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "resultbharat-discovery": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "ibps-recruitment": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "ssc-notice-board": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "ibps-careers": {
-      "status": "failed",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
-      "fail_streak": 1,
-      "error": "SSLError: HTTPSConnectionPool(host='ibps.in', port=443): Max retries exceeded with url: /index.php/careers/ (Caused by SSLError(SSLError(1, '[SSL: UNEXPECTED_MESSAGE] unexpected message (_ssl.c:1011)')))"
+      "status": "ok",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
+      "new_candidates": 0
     },
     "resultbharat-admissions": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "ibps-rrb-xv": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "resultbharat-jobs": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "resultbharat-results": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "resultbharat-admit-cards": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "resultbharat-answer-keys": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "resultbharat-syllabus": {
@@ -30654,12 +30681,12 @@
     },
     "jkinfo-ibps-discovery": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "icai-examinations": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "nta-data-portal": {
@@ -30669,41 +30696,41 @@
     },
     "ailet-nlu-delhi": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "josaa-counselling": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "nic-admissions-counselling": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "icar-nta-exams": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "national-scholarship-portal": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     },
     "bharatresultfind-discovery": {
       "status": "ok",
-      "checked_at": "2026-11-23T10:16:03.814772+00:00",
+      "checked_at": "2026-11-23T10:31:58.192135+00:00",
       "new_candidates": 0
     }
   },
-  "last_run_failures": 139,
-  "last_run_new_candidates": 0,
+  "last_run_failures": 136,
+  "last_run_new_candidates": 5,
   "source_registry_count": 301,
-  "last_run_successful_sources": 162,
+  "last_run_successful_sources": 165,
   "pending_alerts": {},
-  "last_run_public_posts": 0,
+  "last_run_public_posts": 5,
   "pending_alert_count": 0,
   "held_alerts": {
     "2be931567883981de36c35cf": {
@@ -38362,12 +38389,12 @@
         "region": "Ladakh",
         "state": "Ladakh",
         "exam_category": "State PSC / Recruitment",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-10-26T05:08:01.546077+00:00",
       "held_at": "2026-10-26T05:08:01.546077+00:00",
       "hold_reason": "Generic, irrelevant, or unclassifiable title; held for review.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "b2c53246eac6f98103ca7b30": {
       "item": {
@@ -38383,12 +38410,12 @@
         "region": "Ladakh",
         "state": "Ladakh",
         "exam_category": "State PSC / Recruitment",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-10-26T05:08:01.546077+00:00",
       "held_at": "2026-10-26T05:08:01.546077+00:00",
       "hold_reason": "Generic, irrelevant, or unclassifiable title; held for review.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "32c2e2a16cbf717e7758474f": {
       "item": {
@@ -38444,12 +38471,12 @@
         "region": "Central",
         "state": "",
         "exam_category": "Entrance & Eligibility",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-10-30T18:49:07.356609+00:00",
       "held_at": "2026-10-30T18:49:07.356609+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "38a7e27081af47deb6cc7223": {
       "item": {
@@ -39736,12 +39763,12 @@
         "region": "Bihar",
         "state": "Bihar",
         "exam_category": "Central Recruitment",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-11T08:44:15.403937+00:00",
       "held_at": "2026-11-11T08:44:15.403937+00:00",
       "hold_reason": "Explicitly dated notice is outside the live 90-day window.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "0187f501b2a2797e70bdb6b6": {
       "item": {
@@ -39930,12 +39957,12 @@
         "region": "Nagaland",
         "state": "Nagaland",
         "exam_category": "School Board Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-16T08:23:52.549835+00:00",
       "held_at": "2026-11-16T08:23:52.549835+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "0119e4644288adc458e27016": {
       "item": {
@@ -39951,12 +39978,12 @@
         "region": "Assam",
         "state": "Assam",
         "exam_category": "University Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-16T08:23:52.549835+00:00",
       "held_at": "2026-11-16T08:23:52.549835+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "e500d87cb0d03603da9568f1": {
       "item": {
@@ -39972,12 +39999,12 @@
         "region": "Assam",
         "state": "Assam",
         "exam_category": "University Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-16T08:23:52.549835+00:00",
       "held_at": "2026-11-16T08:23:52.549835+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "be22888ccf168ecbec36524e": {
       "item": {
@@ -39993,12 +40020,12 @@
         "region": "Assam",
         "state": "Assam",
         "exam_category": "University Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-16T08:23:52.549835+00:00",
       "held_at": "2026-11-16T08:23:52.549835+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "99ace7d40f06ebecae9a8463": {
       "item": {
@@ -40014,12 +40041,12 @@
         "region": "Assam",
         "state": "Assam",
         "exam_category": "University Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-16T08:23:52.549835+00:00",
       "held_at": "2026-11-16T08:23:52.549835+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "63d2cef53e1637e966a0db50": {
       "item": {
@@ -40035,12 +40062,12 @@
         "region": "Assam",
         "state": "Assam",
         "exam_category": "University Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-16T08:23:52.549835+00:00",
       "held_at": "2026-11-16T08:23:52.549835+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "c8f1be4a17d89b83c2c8a19e": {
       "item": {
@@ -40056,12 +40083,12 @@
         "region": "Assam",
         "state": "Assam",
         "exam_category": "University Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-16T08:23:52.549835+00:00",
       "held_at": "2026-11-16T08:23:52.549835+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "68ba1a04115d596f286c1221": {
       "item": {
@@ -40077,12 +40104,12 @@
         "region": "Assam",
         "state": "Assam",
         "exam_category": "University Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-16T08:23:52.549835+00:00",
       "held_at": "2026-11-16T08:23:52.549835+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "95b348cfc7cc387d6b085d4f": {
       "item": {
@@ -40290,12 +40317,12 @@
         "region": "Central",
         "state": "",
         "exam_category": "Central Recruitment",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-16T12:45:50.566514+00:00",
       "held_at": "2026-11-16T12:45:50.566514+00:00",
       "hold_reason": "Explicitly dated notice is outside the live 90-day window.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "889267f39cd4c5badd740f38": {
       "item": {
@@ -40521,12 +40548,12 @@
         "region": "Punjab",
         "state": "Punjab",
         "exam_category": "School Board Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-21T17:09:44.354693+00:00",
       "held_at": "2026-11-21T17:09:44.354693+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "19c12e6df8807ab3840cf932": {
       "item": {
@@ -40542,12 +40569,12 @@
         "region": "Punjab",
         "state": "Punjab",
         "exam_category": "School Board Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-21T17:09:44.354693+00:00",
       "held_at": "2026-11-21T17:09:44.354693+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "2614f305af5fd030a2ce93e9": {
       "item": {
@@ -40563,12 +40590,12 @@
         "region": "Punjab",
         "state": "Punjab",
         "exam_category": "School Board Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-21T17:09:44.354693+00:00",
       "held_at": "2026-11-21T17:09:44.354693+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "4c581ca25040d720428862de": {
       "item": {
@@ -40584,12 +40611,12 @@
         "region": "Punjab",
         "state": "Punjab",
         "exam_category": "School Board Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-21T17:09:44.354693+00:00",
       "held_at": "2026-11-21T17:09:44.354693+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "b81d6691d72764b963a4fd58": {
       "item": {
@@ -40605,12 +40632,12 @@
         "region": "Punjab",
         "state": "Punjab",
         "exam_category": "School Board Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-21T17:09:44.354693+00:00",
       "held_at": "2026-11-21T17:09:44.354693+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "63332ab8b84679334b549bf9": {
       "item": {
@@ -40626,12 +40653,12 @@
         "region": "Punjab",
         "state": "Punjab",
         "exam_category": "School Board Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-21T17:09:44.354693+00:00",
       "held_at": "2026-11-21T17:09:44.354693+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "2bf97b2067cdf09ff41ef3e5": {
       "item": {
@@ -40647,12 +40674,12 @@
         "region": "Punjab",
         "state": "Punjab",
         "exam_category": "School Board Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-21T17:09:44.354693+00:00",
       "held_at": "2026-11-21T17:09:44.354693+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "4aba95ca33c163fe4a907f8c": {
       "item": {
@@ -40668,12 +40695,12 @@
         "region": "Punjab",
         "state": "Punjab",
         "exam_category": "School Board Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-21T17:09:44.354693+00:00",
       "held_at": "2026-11-21T17:09:44.354693+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "31f8293e56e3451180068c68": {
       "item": {
@@ -40689,12 +40716,12 @@
         "region": "Punjab",
         "state": "Punjab",
         "exam_category": "School Board Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-21T17:09:44.354693+00:00",
       "held_at": "2026-11-21T17:09:44.354693+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "2c375434430d2d60805e1019": {
       "item": {
@@ -40710,12 +40737,12 @@
         "region": "Punjab",
         "state": "Punjab",
         "exam_category": "School Board Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-21T17:09:44.354693+00:00",
       "held_at": "2026-11-21T17:09:44.354693+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "ac72acc84f5805fded94569c": {
       "item": {
@@ -40731,12 +40758,12 @@
         "region": "Punjab",
         "state": "Punjab",
         "exam_category": "School Board Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-21T17:09:44.354693+00:00",
       "held_at": "2026-11-21T17:09:44.354693+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "8c51706e31e3bc780e1ac778": {
       "item": {
@@ -40752,12 +40779,12 @@
         "region": "Punjab",
         "state": "Punjab",
         "exam_category": "School Board Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-21T17:09:44.354693+00:00",
       "held_at": "2026-11-21T17:09:44.354693+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "a97857c8cb9d10c5eb57759c": {
       "item": {
@@ -40773,12 +40800,12 @@
         "region": "Punjab",
         "state": "Punjab",
         "exam_category": "School Board Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-21T17:09:44.354693+00:00",
       "held_at": "2026-11-21T17:09:44.354693+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "fa4d7d349cb4f059aa9b024f": {
       "item": {
@@ -40794,12 +40821,12 @@
         "region": "Punjab",
         "state": "Punjab",
         "exam_category": "School Board Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-21T17:09:44.354693+00:00",
       "held_at": "2026-11-21T17:09:44.354693+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "ac0c64759d0174b3dc80115c": {
       "item": {
@@ -40815,12 +40842,12 @@
         "region": "Punjab",
         "state": "Punjab",
         "exam_category": "School Board Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-21T17:09:44.354693+00:00",
       "held_at": "2026-11-21T17:09:44.354693+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "fc3ceaf5c750b7138028972b": {
       "item": {
@@ -40836,12 +40863,12 @@
         "region": "Punjab",
         "state": "Punjab",
         "exam_category": "School Board Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-21T17:09:44.354693+00:00",
       "held_at": "2026-11-21T17:09:44.354693+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "b02e1ee2cd4942481b7bc36b": {
       "item": {
@@ -40857,12 +40884,12 @@
         "region": "Punjab",
         "state": "Punjab",
         "exam_category": "School Board Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-21T17:09:44.354693+00:00",
       "held_at": "2026-11-21T17:09:44.354693+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "57cb51f14d41331ff103e2fe": {
       "item": {
@@ -40878,12 +40905,12 @@
         "region": "Delhi",
         "state": "Delhi",
         "exam_category": "University Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-21T17:09:44.354693+00:00",
       "held_at": "2026-11-21T17:09:44.354693+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "08f10305be8f2ae18d2ddf58": {
       "item": {
@@ -40899,12 +40926,12 @@
         "region": "Delhi",
         "state": "Delhi",
         "exam_category": "University Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-21T17:09:44.354693+00:00",
       "held_at": "2026-11-21T17:09:44.354693+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "931ea6d419ea4489ad177432": {
       "item": {
@@ -40920,12 +40947,12 @@
         "region": "Delhi",
         "state": "Delhi",
         "exam_category": "University Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-21T17:09:44.354693+00:00",
       "held_at": "2026-11-21T17:09:44.354693+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "cdc0b477fc65c6784756d393": {
       "item": {
@@ -40941,12 +40968,12 @@
         "region": "Delhi",
         "state": "Delhi",
         "exam_category": "University Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-21T17:09:44.354693+00:00",
       "held_at": "2026-11-21T17:09:44.354693+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "63ef7e93ac643cc93abbbdde": {
       "item": {
@@ -40962,12 +40989,12 @@
         "region": "Delhi",
         "state": "Delhi",
         "exam_category": "University Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-21T17:09:44.354693+00:00",
       "held_at": "2026-11-21T17:09:44.354693+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "913a0fdeb734a698ebd3a1c4": {
       "item": {
@@ -40983,12 +41010,12 @@
         "region": "Delhi",
         "state": "Delhi",
         "exam_category": "University Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-21T17:09:44.354693+00:00",
       "held_at": "2026-11-21T17:09:44.354693+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "77f4c1dfd6a91801c29d331b": {
       "item": {
@@ -41004,12 +41031,12 @@
         "region": "Delhi",
         "state": "Delhi",
         "exam_category": "University Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-21T17:09:44.354693+00:00",
       "held_at": "2026-11-21T17:09:44.354693+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "0844987da8d3ab0968dd0b5f": {
       "item": {
@@ -41025,12 +41052,12 @@
         "region": "Delhi",
         "state": "Delhi",
         "exam_category": "University Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-21T17:09:44.354693+00:00",
       "held_at": "2026-11-21T17:09:44.354693+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "d2f242083370092baebae5a5": {
       "item": {
@@ -41046,12 +41073,12 @@
         "region": "Delhi",
         "state": "Delhi",
         "exam_category": "University Results",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-21T17:09:44.354693+00:00",
       "held_at": "2026-11-21T17:09:44.354693+00:00",
       "hold_reason": "Generic, irrelevant, speculative, or unclassifiable title.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "f5e70af4a4369ee71ecd059a": {
       "item": {
@@ -41070,12 +41097,12 @@
         "region": "Bihar",
         "state": "Bihar",
         "exam_category": "Reported Updates",
-        "detected_at": "2026-11-23T10:16:03.814772+00:00"
+        "detected_at": "2026-11-23T10:31:58.192135+00:00"
       },
       "detected_at": "2026-11-21T17:09:44.354693+00:00",
       "held_at": "2026-11-21T17:09:44.354693+00:00",
       "hold_reason": "Explicitly dated notice is outside the live 90-day window.",
-      "refreshed_at": "2026-11-23T10:16:03.814772+00:00"
+      "refreshed_at": "2026-11-23T10:31:58.192135+00:00"
     },
     "c8fb722b9ab2b4d0975244c4": {
       "item": {
@@ -41239,5 +41266,5 @@
     }
   },
   "held_for_review_count": 539,
-  "last_run_recovered_records": 409
+  "last_run_recovered_records": 417
 }

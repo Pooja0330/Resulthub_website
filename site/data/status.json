@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-23T10:22:56.804294+00:00",
-  "scan_started_at": "2026-11-23T10:16:03.814772+00:00",
+  "last_checked_at": "2026-11-23T10:41:15.896068+00:00",
+  "scan_started_at": "2026-11-23T10:31:58.192135+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 162,
-  "sources_failed": 139,
-  "new_candidates": 0,
-  "recovered_records": 409,
-  "telegram_posts_sent": 0,
+  "sources_succeeded": 165,
+  "sources_failed": 136,
+  "new_candidates": 5,
+  "recovered_records": 417,
+  "telegram_posts_sent": 5,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, ConnectionError: 29, SSLError: 25, HTTPError: 23, ValueError: 3",
+  "failure_types": "ConnectTimeout: 87, ConnectionError: 29, SSLError: 24, HTTPError: 23, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -204,15 +204,11 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-careers",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-csa-xvi",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "ibps-rrb",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-spl-xvi",
       "error_type": "SSLError"
     },
     {
@@ -254,10 +250,6 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "indiapost-recruitment",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -457,10 +449,6 @@
     },
     {
       "source_id": "rajasthan-rssb",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
       "error_type": "ConnectTimeout"
     },
     {
