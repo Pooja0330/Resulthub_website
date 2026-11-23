@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-884fbd75756bd760a708c809",
+    "title": "'नशा मुक्त युवा, विकसित भारत क्विज़' में 60,693 नागरिकों ने हिस्सा लिया",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2340624&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2340624&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-23T15:53:40.389666+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-801effe853da9470e25097f3",
     "title": "प्रधानमंत्री श्री नरेन्द्र मोदी ने नौ महीने से भी कम समय में एचपीवी वैक्सीन की 1 करोड़ से अधिक टीके लगाने की भारत की उपलब्धि की सराहना की",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2340590&lang=1",
@@ -234,23 +251,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-23T13:39:46.156316+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-bf79fbe7c97af34622044463",
-    "title": "नेपाल के प्रधानमंत्री की भारत की राजकीय यात्रा के दौरान संयुक्त प्रेस विज्ञप्ति",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2340486&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2340486&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-23T13:24:00.833206+00:00",
     "archive": false,
     "verified": true
   },
