@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-23T12:21:48.422084+00:00",
-  "scan_started_at": "2026-11-23T12:16:10.929890+00:00",
+  "last_checked_at": "2026-11-23T12:42:25.721382+00:00",
+  "scan_started_at": "2026-11-23T12:31:22.812933+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 165,
-  "sources_failed": 136,
+  "sources_succeeded": 163,
+  "sources_failed": 138,
   "new_candidates": 0,
   "recovered_records": 410,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 87, ConnectionError: 30, HTTPError: 23, SSLError: 23, ValueError: 3",
+  "failure_types": "ConnectTimeout: 87, ConnectionError: 30, SSLError: 25, HTTPError: 23, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -204,7 +204,15 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "ibps-csa-xvi",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "ibps-rrb",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-rrb-xv",
       "error_type": "SSLError"
     },
     {
