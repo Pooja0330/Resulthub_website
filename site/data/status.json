@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-23T21:46:01.434016+00:00",
-  "scan_started_at": "2026-11-23T21:37:12.419182+00:00",
+  "last_checked_at": "2026-11-23T21:55:53.065137+00:00",
+  "scan_started_at": "2026-11-23T21:46:55.560095+00:00",
   "sources_enabled": 301,
   "sources_succeeded": 163,
   "sources_failed": 138,
@@ -9,7 +9,7 @@
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 30, HTTPError: 24, SSLError: 23, ValueError: 3",
+  "failure_types": "ConnectTimeout: 88, ConnectionError: 30, HTTPError: 24, SSLError: 23, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -625,7 +625,7 @@
     },
     {
       "source_id": "tripura-university",
-      "error_type": "ConnectTimeout"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "tspsc",
