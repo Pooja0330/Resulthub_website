@@ -432,6 +432,30 @@ def deduplicate_published_results(results):
         unique.append(item)
     return unique
 
+def dedupe_same_title_same_source(results, min_title_len=15):
+    """Collapse records that show the SAME headline from the SAME source.
+
+    Many portals repeat one menu/heading text next to many different links, which
+    produced 17 identical rows for a single source. The earliest record is kept
+    (stable ids, no churn); PIB press releases and very short generic titles are
+    left alone."""
+    kept, seen = [], set()
+    for item in results:
+        if not isinstance(item, dict):
+            continue
+        ident = str(item.get("id") or "")
+        title = re.sub(r"[^a-z0-9]+", " ", str(item.get("title") or item.get("exam") or "").lower()).strip()
+        source = str(item.get("source_id") or item.get("source_name") or item.get("authority") or "").lower()
+        if ident.startswith("pib-") or len(title) < min_title_len or not source:
+            kept.append(item)
+            continue
+        key = (title, source)
+        if key in seen:
+            continue
+        seen.add(key)
+        kept.append(item)
+    return kept
+
 def get_with_retries(url, headers=None):
     last_error = None
     # Keep each scheduled scan bounded: one short retry for transient network
@@ -1411,7 +1435,7 @@ def main():
         cleaned_results.append(item)
     results = cleaned_results
     before_dedupe = len(results)
-    results = deduplicate_published_results(results)
+    results = dedupe_same_title_same_source(deduplicate_published_results(results))
     duplicate_rows_removed = before_dedupe - len(results)
     removed_result_rows += duplicate_rows_removed
     print(
@@ -2053,7 +2077,7 @@ def main():
     })
 
     # A final safety pass also covers restored queue entries and candidates.
-    results = deduplicate_published_results(results)
+    results = dedupe_same_title_same_source(deduplicate_published_results(results))
     # A valid pre-dedupe list is not enough: never overwrite the public feed
     # if URL validation/deduplication removes every record.
     if not results:

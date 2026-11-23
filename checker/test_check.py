@@ -655,3 +655,18 @@ class CheckerSafetyTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class SameTitleDedupeTests(unittest.TestCase):
+    def test_same_headline_from_same_source_is_collapsed_keeping_first(self):
+        from check import dedupe_same_title_same_source
+        recs = [
+            {"id": "a", "title": "Examination Schedule Date Sheets", "source_id": "hptu", "url": "https://x.in/1"},
+            {"id": "b", "title": "Examination  schedule date sheets", "source_id": "hptu", "url": "https://x.in/2"},
+            {"id": "c", "title": "Examination Schedule Date Sheets", "source_id": "other", "url": "https://y.in/1"},
+            {"id": "d", "title": "Result", "source_id": "hptu", "url": "https://x.in/3"},
+            {"id": "e", "title": "Result", "source_id": "hptu", "url": "https://x.in/4"},
+            {"id": "pib-1", "title": "Same press release headline text", "source_id": "pib", "url": "https://pib.gov.in/1"},
+            {"id": "pib-2", "title": "Same press release headline text", "source_id": "pib", "url": "https://pib.gov.in/2"},
+        ]
+        self.assertEqual([r["id"] for r in dedupe_same_title_same_source(recs)], ["a", "c", "d", "e", "pib-1", "pib-2"])

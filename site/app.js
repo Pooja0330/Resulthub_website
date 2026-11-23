@@ -373,7 +373,19 @@ function visibleAuthorityKey(item){
 }
 function dedupeVisibleItems(items, options={}){
  const seen=new Set();
+ const seenTitles=new Set();
  return items.filter(x=>{
+  // Same headline from the same source is the same notice to a reader, even when a
+  // portal attaches it to several different links.
+  if(!options.titleOnly){
+   const t=String(x.title||x.exam||"").toLowerCase().replace(/[^a-z0-9\u0900-\u097f]+/g," ").trim();
+   const src=String(x.source_id||x.source_name||x.authority||"").toLowerCase();
+   if(t.length>=15&&src&&!/^pib-/.test(String(x.id||""))){
+    const tk=t+"|"+src;
+    if(seenTitles.has(tk))return false;
+    seenTitles.add(tk);
+   }
+  }
   const url=canonicalNoticeUrl(x.url||x.official_url||x.source_url||"");
   if(!url)return true;
   if(options.requirePibReleaseUrl&&!/^https:\/\/(?:www\.)?pib\.gov\.in\/(?:PressReleaseIframePage|PressReleasePage|PressReleaseDetail)\.aspx\?[^#]*\bPRID=\d+/i.test(String(x.url||x.official_url||x.source_url||"").trim()))return false;
