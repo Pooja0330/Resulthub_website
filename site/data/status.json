@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-23T15:53:35.932673+00:00",
-  "scan_started_at": "2026-11-23T15:45:58.990850+00:00",
+  "last_checked_at": "2026-11-23T16:12:27.192307+00:00",
+  "scan_started_at": "2026-11-23T16:02:21.469865+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 161,
-  "sources_failed": 140,
+  "sources_succeeded": 156,
+  "sources_failed": 145,
   "new_candidates": 0,
-  "recovered_records": 396,
+  "recovered_records": 375,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 31, HTTPError: 24, SSLError: 23, ValueError: 3",
+  "failure_types": "ConnectTimeout: 94, ConnectionError: 30, HTTPError: 24, SSLError: 23, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -144,6 +144,14 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "columbia-ciet-raipur",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "columbia-institute-pharmacy-raipur",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "drdo-careers",
       "error_type": "ConnectionError"
     },
@@ -166,6 +174,10 @@
     {
       "source_id": "esic-recruitment",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "goa-government",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "goa-technical-education-old-results",
@@ -260,6 +272,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "jharkhand-psc",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "jkbose",
       "error_type": "ConnectTimeout"
     },
@@ -330,6 +346,10 @@
     {
       "source_id": "mat-aima",
       "error_type": "HTTPError"
+    },
+    {
+      "source_id": "meghalaya-board",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "merchant-navy-imu",
@@ -442,10 +462,6 @@
     {
       "source_id": "pondicherry-university-old-results",
       "error_type": "HTTPError"
-    },
-    {
-      "source_id": "portal-delhi-delhi-gov-in",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "punjab-psc",
@@ -593,6 +609,10 @@
     },
     {
       "source_id": "sikkim-psc",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "sikkim-university",
       "error_type": "ConnectTimeout"
     },
     {
