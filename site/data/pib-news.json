@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-01a32772071abab9f07bec84",
+    "title": "प्रधानमंत्री ने समृद्धि को बनाए रखने वाले आवश्यक गुणों को उजागर करने वाला संस्कृत सुभाषितम् साझा किया",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2340336&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2340336&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-23T10:31:20.560034+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-7f2c4806fa0b1f874a64fcd6",
     "title": "केंद्रीय पर्यावरण मंत्री ने राष्ट्रीय वन्यजीव बोर्ड की स्थायी समिति की 92वीं बैठक की अध्यक्षता की",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2340311&lang=1",
@@ -234,23 +251,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-22T17:11:21.618794+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-828514a23b14f84edf745230",
-    "title": "प्रधानमंत्री श्री नरेन्द्र मोदी ने लखनऊ, उत्तर प्रदेश में 5वें कौशल दीक्षांत समारोह में भाग लिया",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2340113&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2340113&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-22T16:42:00.208425+00:00",
     "archive": false,
     "verified": true
   },
