@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-1b849a6c549d35ad0c1a590a",
+    "title": "भारत अंतरराष्ट्रीय व्यापार मेले 2026 में आयुष मंडप प्रमुख आकर्षण बना",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2340261&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2340261&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-23T07:43:44.718411+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-fa7fa3ce0dd44076ba8553c2",
     "title": "नई चेतना 5.0 का 25 नवंबर को शुभारंभ किया जाएगा",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2340244&lang=1",
@@ -319,23 +336,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-22T13:12:12.695001+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-3f045cb9c7be710f265c4bc1",
-    "title": "लघु जलविद्युत क्षमता का दोहन",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2339976&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2339976&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-22T12:54:15.302910+00:00",
     "archive": false,
     "verified": true
   }
