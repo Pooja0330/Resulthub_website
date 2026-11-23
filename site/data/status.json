@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-23T16:41:35.242313+00:00",
-  "scan_started_at": "2026-11-23T16:32:17.913012+00:00",
+  "last_checked_at": "2026-11-23T16:53:47.006198+00:00",
+  "scan_started_at": "2026-11-23T16:45:58.268564+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 161,
-  "sources_failed": 140,
+  "sources_succeeded": 163,
+  "sources_failed": 138,
   "new_candidates": 0,
-  "recovered_records": 380,
+  "recovered_records": 396,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 31, HTTPError: 24, SSLError: 24, ValueError: 3",
+  "failure_types": "ConnectTimeout: 89, ConnectionError: 30, HTTPError: 24, SSLError: 23, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -213,10 +213,6 @@
     },
     {
       "source_id": "ibps-rrb",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-rrb-xv",
       "error_type": "SSLError"
     },
     {
@@ -434,10 +430,6 @@
     {
       "source_id": "osmania-university",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "ossc",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "osssc",
