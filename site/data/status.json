@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-23T01:41:11.211524+00:00",
-  "scan_started_at": "2026-11-23T01:32:02.488733+00:00",
+  "last_checked_at": "2026-11-23T01:57:31.907530+00:00",
+  "scan_started_at": "2026-11-23T01:45:55.562217+00:00",
   "sources_enabled": 301,
   "sources_succeeded": 162,
   "sources_failed": 139,
@@ -9,7 +9,7 @@
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, ConnectionError: 28, SSLError: 26, HTTPError: 22, ValueError: 3",
+  "failure_types": "ConnectTimeout: 91, ConnectionError: 28, HTTPError: 24, SSLError: 23, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -212,18 +212,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-csa-xvi",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-recent-updates",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-recruitment",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "ibps-rrb",
       "error_type": "SSLError"
     },
@@ -266,6 +254,10 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "irdai-careers",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -344,6 +336,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "mat-aima",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -365,6 +361,10 @@
     },
     {
       "source_id": "mppsc",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "mumbai-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -461,10 +461,6 @@
     },
     {
       "source_id": "rajasthan-rssb",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -662,6 +658,10 @@
     {
       "source_id": "uttarakhand-psc",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "vtu",
+      "error_type": "HTTPError"
     },
     {
       "source_id": "vyapam-cg",
