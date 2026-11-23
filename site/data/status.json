@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-23T16:22:25.647629+00:00",
-  "scan_started_at": "2026-11-23T16:15:59.235117+00:00",
+  "last_checked_at": "2026-11-23T16:41:35.242313+00:00",
+  "scan_started_at": "2026-11-23T16:32:17.913012+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 158,
-  "sources_failed": 143,
+  "sources_succeeded": 161,
+  "sources_failed": 140,
   "new_candidates": 0,
-  "recovered_records": 376,
+  "recovered_records": 380,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 32, HTTPError: 24, SSLError: 24, ValueError: 3",
+  "failure_types": "ConnectTimeout: 89, ConnectionError: 31, HTTPError: 24, SSLError: 24, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -29,7 +29,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -49,7 +49,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "apsc",
@@ -208,15 +208,15 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "ibps",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "ibps-calendar",
       "error_type": "SSLError"
     },
     {
       "source_id": "ibps-rrb",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-rrb-xv",
       "error_type": "SSLError"
     },
     {
@@ -258,10 +258,6 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "indiapost-gds",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -370,10 +366,6 @@
     {
       "source_id": "nabard",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "national-scholarship-portal",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "naval-coastguard-jobs",
@@ -674,10 +666,6 @@
     {
       "source_id": "uttarakhand-psc",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "vtu",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "vyapam-cg",
