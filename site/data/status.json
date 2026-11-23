@@ -1,9 +1,9 @@
 {
-  "last_checked_at": "2026-11-23T21:55:53.065137+00:00",
-  "scan_started_at": "2026-11-23T21:46:55.560095+00:00",
+  "last_checked_at": "2026-11-23T22:09:53.720156+00:00",
+  "scan_started_at": "2026-11-23T22:01:26.839751+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 163,
-  "sources_failed": 138,
+  "sources_succeeded": 164,
+  "sources_failed": 137,
   "new_candidates": 0,
   "recovered_records": 401,
   "telegram_posts_sent": 0,
@@ -622,10 +622,6 @@
     {
       "source_id": "tripura-psc",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "tripura-university",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "tspsc",
