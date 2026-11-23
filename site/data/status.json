@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-23T13:57:05.393626+00:00",
-  "scan_started_at": "2026-11-23T13:46:02.741654+00:00",
+  "last_checked_at": "2026-11-23T14:08:36.089567+00:00",
+  "scan_started_at": "2026-11-23T14:02:44.392288+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 163,
-  "sources_failed": 138,
+  "sources_succeeded": 164,
+  "sources_failed": 137,
   "new_candidates": 0,
   "recovered_records": 409,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, ConnectionError: 30, HTTPError: 24, SSLError: 23, ValueError: 3",
+  "failure_types": "ConnectTimeout: 87, ConnectionError: 30, HTTPError: 24, SSLError: 23, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -206,10 +206,6 @@
     {
       "source_id": "ibps-rrb",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-spl-xvi",
-      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "iiser-admissions",
