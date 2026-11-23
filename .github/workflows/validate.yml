@@ -41,6 +41,7 @@ jobs:
           node --check site/app.js
           node --check site/state.js
           node --check site/live-alerts.js
+          node --check site/sw.js
 
       - name: Run offline regression tests
         run: python -m unittest discover -s checker -p "test_*.py" -v

@@ -37,13 +37,16 @@ jobs:
       - name: Fetch official PIB releases
         run: python checker/update_pib.py
       - name: Generate crawlable notice pages and sitemap
-        run: python checker/build_seo_pages.py
+        run: |
+          python checker/build_seo_pages.py
+          python checker/write_version.py
       - name: Commit PIB feed if changed
         id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add site/data/pib-news.json
+          git add site/data/version.json
           git add site/updates/
           git add site/sitemap.xml
           if git diff --cached --quiet; then

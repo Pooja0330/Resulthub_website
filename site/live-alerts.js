@@ -4,7 +4,8 @@
   const PIB_FEED_URL = "data/pib-news.json";
   const STORAGE_KEY = "grh_seen_official_updates_v4";
   const MAX_SEEN = 500;
-  const POLL_MS = 15000;
+  const POLL_MS = 20000;
+  let lastHash = "";
   const $ = (s) => document.querySelector(s);
   const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const safeUrl = (value) => {
@@ -177,6 +178,16 @@
     if (busy) return;
     busy = true;
     try {
+      // Cheap heartbeat first: skip the 1.8 MB feed download when nothing changed.
+      let currentHash = "";
+      try {
+        const vr = await fetch("data/version.json?v=" + Date.now(), { cache: "no-store" });
+        if (vr.ok) { const vj = await vr.json(); currentHash = String(vj.hash || ""); }
+      } catch (_) {}
+      if (initialized && currentHash && currentHash === lastHash) {
+        status.textContent = allItems.length + " indexed updates · last checked " + new Date().toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"});
+        return;
+      }
       const fetchFeed=async url=>{
         const response=await fetch(url+"?v="+Date.now(),{cache:"no-store"});
         if(!response.ok)throw new Error("Feed request failed ("+response.status+")");
@@ -187,6 +198,7 @@
       const feedResults=await Promise.allSettled([fetchFeed(FEED_URL),fetchFeed(PIB_FEED_URL)]);
       const successfulFeeds=feedResults.filter(result=>result.status==="fulfilled");
       if(!successfulFeeds.length)throw new Error("Both live feeds failed");
+      if(successfulFeeds.length===2)lastHash=currentHash;
       const data=successfulFeeds.flatMap(result=>result.value);
       const sorted=uniqueItems(data).sort((a,b)=>String(alertTimestamp(b)).localeCompare(String(alertTimestamp(a)))||priorityScore(a)-priorityScore(b));
       allItems.splice(0,allItems.length,...sorted);

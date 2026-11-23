@@ -3,7 +3,12 @@ name: Check Exam Results
 
 on:
   schedule:
-    - cron: '*/15 * * * *'
+    # GitHub's scheduler is best-effort and often skips/delays runs (observed gaps of 1h+).
+    # This is only the BACKUP trigger. The reliable trigger is an external pinger that calls
+    # the repository_dispatch API every 5 minutes - see UPDATE_SPEED_GUIDE.md.
+    - cron: '7,22,37,52 * * * *'
+  repository_dispatch:
+    types: [scan]
   workflow_dispatch:
   push:
     branches: [main]
@@ -15,6 +20,7 @@ on:
       - "checker/test_build_seo_pages.py"
       - "checker/sources.json"
       - "site/data/results.json"
+      - "checker/write_version.py"
       - "site/app.js"
       - "site/index.html"
       - "site/sw.js"
@@ -34,7 +40,7 @@ jobs:
     outputs:
       changed: ${{ steps.commit.outputs.changed }}
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 15
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -128,8 +134,10 @@ jobs:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_ADMIN: ${{ secrets.TG_ADMIN }}
           TG_CHANNEL: ${{ secrets.TG_CHANNEL }}
-          SOURCE_TIMEOUT_SECONDS: "30"
-          SOURCE_WORKERS: "12"
+          SOURCE_TIMEOUT_SECONDS: "15"
+          SOURCE_WORKERS: "24"
+          PARK_AFTER_FAILURES: "3"
+          PARK_RETRY_HOURS: "6"
           MAX_NEW_PER_SOURCE: "20"
           MAX_PUBLIC_ALERTS_PER_RUN: "10"
         run: python checker/check.py
@@ -142,9 +150,14 @@ jobs:
         continue-on-error: true
         run: python checker/update_pib.py
 
+      # Rebuild even if PIB failed: new exam notices need their pages, hubs and sitemap too.
       - name: Rebuild SEO pages
-        if: always() && steps.pib_update.outcome == 'success'
+        if: always()
         run: python checker/build_seo_pages.py
+
+      - name: Write feed heartbeat (version.json)
+        if: always()
+        run: python checker/write_version.py
 
       - name: Validate generated exam data
         id: validate_data
@@ -211,8 +224,10 @@ jobs:
           git add site/data/pib-news.json
           git add site/results.json
           git add site/data/status.json
+          git add site/data/version.json
           git add site/updates/
           git add site/sitemap.xml
+          git add site/index.html site/latest-results.html site/admit-cards.html site/answer-keys.html site/latest-jobs.html
 
           if git diff --cached --quiet; then
             echo "No data changes to commit"

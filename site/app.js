@@ -261,7 +261,7 @@ function recordYear(x){
 function renderYearBrowser(){
  const box=$("#yearBrowser");if(!box)return;const selected=$("#examYear").value,counts={};
  allItems.forEach(item=>{const year=recordYear(item);if(year)counts[year]=(counts[year]||0)+1;});
- box.innerHTML=Array.from({length:27},(_,i)=>2026-i).map(year=>'<button type="button" class="year-chip'+(selected===String(year)?' active':'')+'" data-year="'+year+'" aria-pressed="'+(selected===String(year)?'true':'false')+'"><span>'+year+'</span><small>'+(counts[String(year)]||0)+'</small></button>').join('')+'<button type="button" class="year-chip'+(!selected?' active':'')+'" data-year="" aria-pressed="'+(!selected?'true':'false')+'"><span>All years</span><small>'+allItems.length+'</small></button>';
+ box.innerHTML=Array.from({length:27},(_,i)=>new Date().getFullYear()-i).map(year=>'<button type="button" class="year-chip'+(selected===String(year)?' active':'')+'" data-year="'+year+'" aria-pressed="'+(selected===String(year)?'true':'false')+'"><span>'+year+'</span><small>'+(counts[String(year)]||0)+'</small></button>').join('')+'<button type="button" class="year-chip'+(!selected?' active':'')+'" data-year="" aria-pressed="'+(!selected?'true':'false')+'"><span>All years</span><small>'+allItems.length+'</small></button>';
  box.querySelectorAll("[data-year]").forEach(button=>button.addEventListener("click",()=>{$("#examYear").value=button.dataset.year;page=1;render();$("#updates").scrollIntoView({behavior:"smooth",block:"start"});}));
 }
 function renderYearArchiveHelp(){
@@ -539,10 +539,12 @@ async function loadResults(){
    }
    allItems=current2026Items(cleanResults(data));
    try{localStorage.setItem("goresult-results-cache",JSON.stringify({savedAt:Date.now(),items:cleanResults(data)}))}catch(e){}
+   lastResultsOk=true;
    page=1;render();
    if(resultsFeedInitialized&&freshExamItems.length)showLiveFeedToast(freshExamItems[0],"exam",freshExamItems.length);
    resultsFeedInitialized=true;
   }catch(e){
+   lastResultsOk=false;
    if(!allItems.length){
     try{const cached=JSON.parse(localStorage.getItem("goresult-results-cache")||"null");if(Array.isArray(cached?.items)){allItems=current2026Items(cleanResults(cached.items));try{localStorage.setItem("goresult-results-cache",JSON.stringify({savedAt:Date.now(),items:allItems}))}catch(ignore){}render();$("#monitorDetail").textContent="Showing the last saved updates because the live feed is temporarily unavailable."}}catch(ignore){}
    }
@@ -573,7 +575,28 @@ async function loadPibResults(){
   // Keep the independent feed's last successful in-memory view on temporary network errors.
  }
 }
-async function refresh(){if(document.visibilityState==="visible")await Promise.all([loadResults(),loadStatus(),loadPibResults()])}
+let lastFeedHash="",lastResultsOk=false,refreshTick=0;
+async function readFeedVersion(){
+ try{
+  const r=await fetch("data/version.json?v="+Date.now(),{cache:"no-store"});
+  if(!r.ok)return null;
+  const v=await r.json();
+  return v&&typeof v.hash==="string"?v:null;
+ }catch(e){return null}
+}
+// Poll a ~250-byte heartbeat file; download the big feeds only when they changed.
+// This keeps new notices appearing within seconds without hammering GitHub Pages.
+async function refresh(){
+ if(document.visibilityState!=="visible")return;
+ refreshTick++;
+ const version=await readFeedVersion();
+ const changed=!version||version.hash!==lastFeedHash||!lastResultsOk;
+ const jobs=[];
+ if(changed){jobs.push(loadResults(),loadPibResults())}
+ if(changed||refreshTick%9===0||!lastStatus)jobs.push(loadStatus());
+ await Promise.all(jobs);
+ if(version&&lastResultsOk)lastFeedHash=version.hash;
+}
 function resetUpdateFilters(){
  $("#category").value="";$("#examCategory").value="";$("#region").value="";$("#examYear").value="";$("#sort").value="new";
  selectedState="";selectedRegion="";selectedBrowse="";page=1;
@@ -592,7 +615,7 @@ function init(){
  if(initialQuery&&quickSearch){quickSearch.value=initialQuery;filterQuickExams(initialQuery);}
  refresh();
  if(refreshTimer)clearInterval(refreshTimer);
- refreshTimer=setInterval(refresh,15*1000);
+ refreshTimer=setInterval(refresh,20*1000);
  document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")refresh()});
  window.addEventListener("focus",()=>refresh());
  window.addEventListener("online",()=>refresh());

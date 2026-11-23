@@ -30,3 +30,30 @@ class BuildSeoPagesTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class SeoQualityTests(unittest.TestCase):
+    def test_boilerplate_description_is_replaced_and_article_schema_used(self):
+        from build_seo_pages import render_detail
+        item = {"id": "abc123456789", "title": "SSC CGL Result 2026", "category": "result",
+                "source_name": "Staff Selection Commission", "url": "https://ssc.gov.in/results",
+                "description": "Potential update detected on an allowlisted official website.",
+                "detected_at": "2026-11-20T10:00:00+00:00"}
+        page = render_detail(item)
+        self.assertNotIn("Potential update detected", page)
+        self.assertIn('"@type":"NewsArticle"', page)
+        self.assertIn("BreadcrumbList", page)
+
+    def test_old_boilerplate_pages_are_noindex_but_fresh_ones_indexed(self):
+        from build_seo_pages import is_indexable
+        old = {"id": "a" * 12, "description": "Potential update detected", "detected_at": "2020-01-01T00:00:00+00:00"}
+        fresh = {"id": "b" * 12, "description": "Potential update detected",
+                 "detected_at": __import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat()}
+        self.assertFalse(is_indexable(old))
+        self.assertTrue(is_indexable(fresh))
+
+    def test_hub_page_lists_items_with_item_list_schema(self):
+        from build_seo_pages import render_hub, HUBS
+        page = render_hub(HUBS[0], [{"id": "abc123456789", "title": "Sample Result 2026", "source_name": "Board"}])
+        self.assertIn("ItemList", page)
+        self.assertIn("updates/abc123456789.html", page)

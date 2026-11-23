@@ -37,7 +37,9 @@ jobs:
         with:
           python-version: "3.12"
       - name: Generate crawlable update pages and sitemap
-        run: python checker/build_seo_pages.py
+        run: |
+          python checker/build_seo_pages.py
+          python checker/write_version.py
       - uses: actions/configure-pages@v5
       - name: Upload website
         uses: actions/upload-pages-artifact@v3

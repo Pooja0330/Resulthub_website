@@ -191,7 +191,7 @@ function recordYear(x){
 function renderStateYearBrowser(){
  const box=$("#stateYearBrowser");if(!box)return;const selected=$("#stateExamYear").value,counts={};
  allItems.filter(x=>stateForItem(x)===state).forEach(item=>{const year=recordYear(item);if(year)counts[year]=(counts[year]||0)+1;});
- box.innerHTML=Array.from({length:27},(_,i)=>2026-i).map(year=>'<button type="button" class="year-chip'+(selected===String(year)?' active':'')+'" data-year="'+year+'" aria-pressed="'+(selected===String(year)?'true':'false')+'"><span>'+year+'</span><small>'+(counts[String(year)]||0)+'</small></button>').join('')+'<button type="button" class="year-chip'+(!selected?' active':'')+'" data-year="" aria-pressed="'+(!selected?'true':'false')+'"><span>All years</span><small>'+allItems.filter(x=>stateForItem(x)===state).length+'</small></button>';
+ box.innerHTML=Array.from({length:27},(_,i)=>new Date().getFullYear()-i).map(year=>'<button type="button" class="year-chip'+(selected===String(year)?' active':'')+'" data-year="'+year+'" aria-pressed="'+(selected===String(year)?'true':'false')+'"><span>'+year+'</span><small>'+(counts[String(year)]||0)+'</small></button>').join('')+'<button type="button" class="year-chip'+(!selected?' active':'')+'" data-year="" aria-pressed="'+(!selected?'true':'false')+'"><span>All years</span><small>'+allItems.filter(x=>stateForItem(x)===state).length+'</small></button>';
  box.querySelectorAll("[data-year]").forEach(button=>button.addEventListener("click",()=>{$("#stateExamYear").value=button.dataset.year;page=1;render();$("#stateUpdates").scrollIntoView({behavior:"smooth",block:"start"});}));
 }
 function stateGovernmentPriority(x){

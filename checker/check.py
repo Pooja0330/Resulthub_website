@@ -28,6 +28,12 @@ TG_RATE_LIMITED = False
 TIMEOUT = max(5, min(int(os.getenv("SOURCE_TIMEOUT_SECONDS", "20")), 30))
 # Use moderate concurrency to reduce rate-limits and connection resets across government portals.
 WORKERS = max(1, min(int(os.getenv("SOURCE_WORKERS", "24")), 24))
+# Circuit breaker: sources that keep failing (many Indian government sites block
+# or time out requests from GitHub's overseas servers) are parked and retried only
+# every PARK_RETRY_HOURS. Without this, ~130 dead sources each burn 40-60s of
+# timeouts and make every scan 3-4x slower, which delays NEW notices on the site.
+PARK_AFTER_FAILURES = max(1, int(os.getenv("PARK_AFTER_FAILURES", "3")))
+PARK_RETRY_HOURS = max(1, int(os.getenv("PARK_RETRY_HOURS", "6")))
 MAX_NEW_PER_SOURCE = max(1, min(int(os.getenv("MAX_NEW_PER_SOURCE", "20")), 20))
 MAX_ARCHIVE_PER_SOURCE = max(20, min(int(os.getenv("MAX_ARCHIVE_PER_SOURCE", "250")), 500))
 MAX_AGE_DAYS = 90
@@ -1575,8 +1581,31 @@ def main():
 
     print(f"GoResultHub checker: {len(sources)} sources enabled")
 
+    def _is_parked(source):
+        record = health.get(str(source.get("id", source.get("name", ""))), {})
+        if record.get("status") != "failed":
+            return False
+        if int(record.get("fail_streak", 0) or 0) < PARK_AFTER_FAILURES:
+            return False
+        try:
+            last = datetime.fromisoformat(str(record.get("checked_at", "")).replace("Z", "+00:00"))
+            if last.tzinfo is None:
+                last = last.replace(tzinfo=timezone.utc)
+        except ValueError:
+            return False
+        return datetime.now(timezone.utc) - last < timedelta(hours=PARK_RETRY_HOURS)
+
+    active_sources = [s for s in sources if not _is_parked(s)]
+    parked_sources = [s for s in sources if _is_parked(s)]
+    if parked_sources:
+        print(f"Parked {len(parked_sources)} repeatedly failing sources "
+              f"(retry every {PARK_RETRY_HOURS}h); scanning {len(active_sources)} active sources")
+    # Parked sources keep their last failed health record and still count as failed
+    # in status.json so the public health numbers stay honest and consistent.
+    failures += len(parked_sources)
+
     with ThreadPoolExecutor(max_workers=WORKERS) as executor:
-        jobs = {executor.submit(fetch_source, s): s for s in sources}
+        jobs = {executor.submit(fetch_source, s): s for s in active_sources}
 
         for future in as_completed(jobs):
             source = jobs[future]
@@ -1714,9 +1743,12 @@ def main():
 
             except Exception as exc:
                 failures += 1
+                previous_streak = int(health.get(sid, {}).get("fail_streak", 0) or 0) \
+                    if health.get(sid, {}).get("status") == "failed" else 0
                 health[sid] = {
                     "status": "failed",
                     "checked_at": checked_at,
+                    "fail_streak": previous_streak + 1,
                     "error": f"{type(exc).__name__}: {str(exc)[:200]}",
                 }
                 print(f"FAIL {source.get('name', sid)}: {type(exc).__name__}: {str(exc)[:180]}")
