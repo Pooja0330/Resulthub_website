@@ -69,7 +69,7 @@ def date_value(value):
         return ""
 
 BOILERPLATE = "potential update detected"
-NAV_RE = re.compile(r"accreditations?|mandatory disclosure|syllabus|time table|prospectus|scholarships?|about us|contact us|\\bfaq\\b|\\bhome\\b|nba|iso certificate", re.I)
+NAV_RE = re.compile(r"accreditations?|mandatory disclosure|syllabus|time table|prospectus|scholarships?|about us|contact us|\bfaq\b|\bhome\b|\bnba\b|iso certificate", re.I)
 NOISE_RE = re.compile(r"open_in_new|\bhome\b.*\babout us\b|\bcontact us\b.*\bfaq\b", re.I)
 
 def is_boilerplate(item):
