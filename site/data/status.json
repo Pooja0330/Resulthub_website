@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-23T11:54:54.283365+00:00",
-  "scan_started_at": "2026-11-23T11:46:01.511302+00:00",
+  "last_checked_at": "2026-11-23T12:11:07.435724+00:00",
+  "scan_started_at": "2026-11-23T12:01:31.375626+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 165,
-  "sources_failed": 136,
-  "new_candidates": 3,
-  "recovered_records": 409,
-  "telegram_posts_sent": 3,
+  "sources_succeeded": 164,
+  "sources_failed": 137,
+  "new_candidates": 0,
+  "recovered_records": 410,
+  "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 87, ConnectionError: 30, HTTPError: 23, SSLError: 23, ValueError: 3",
+  "failure_types": "ConnectTimeout: 87, ConnectionError: 31, HTTPError: 23, SSLError: 23, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -74,6 +74,10 @@
     {
       "source_id": "barc-recruitment",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "bharatresultfind-discovery",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bihar-state-health-society-results-archive",
