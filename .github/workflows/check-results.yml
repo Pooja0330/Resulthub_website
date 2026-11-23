@@ -134,7 +134,7 @@ jobs:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_ADMIN: ${{ secrets.TG_ADMIN }}
           TG_CHANNEL: ${{ secrets.TG_CHANNEL }}
-          SOURCE_TIMEOUT_SECONDS: "15"
+          SOURCE_TIMEOUT_SECONDS: "25"
           SOURCE_WORKERS: "24"
           PARK_AFTER_FAILURES: "3"
           PARK_RETRY_HOURS: "6"
