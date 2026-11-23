@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-23T19:23:40.889559+00:00",
-  "scan_started_at": "2026-11-23T19:16:01.692461+00:00",
+  "last_checked_at": "2026-11-23T19:41:39.160375+00:00",
+  "scan_started_at": "2026-11-23T19:32:02.096488+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 160,
-  "sources_failed": 141,
+  "sources_succeeded": 161,
+  "sources_failed": 140,
   "new_candidates": 0,
-  "recovered_records": 396,
+  "recovered_records": 390,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 29, HTTPError: 24, SSLError: 24, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 90, ConnectionError: 29, HTTPError: 25, SSLError: 24, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -212,11 +212,11 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-rrb",
+      "source_id": "ibps-recruitment",
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-rrb-xv",
+      "source_id": "ibps-rrb",
       "error_type": "SSLError"
     },
     {
@@ -260,16 +260,12 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "indiapost-gds",
-      "error_type": "ReadTimeout"
-    },
-    {
-      "source_id": "indiapost-recruitment",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "jamia",
+      "error_type": "HTTPError"
     },
     {
       "source_id": "jkbose",
@@ -376,10 +372,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "nagaland-psc",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "naval-coastguard-jobs",
       "error_type": "SSLError"
     },
@@ -473,6 +465,10 @@
     },
     {
       "source_id": "rajasthan-rssb",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
       "error_type": "ConnectTimeout"
     },
     {
