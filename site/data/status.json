@@ -1,12 +1,12 @@
 {
-  "last_checked_at": "2026-11-23T09:24:13.889631+00:00",
-  "scan_started_at": "2026-11-23T09:15:54.575928+00:00",
+  "last_checked_at": "2026-11-23T09:54:57.544595+00:00",
+  "scan_started_at": "2026-11-23T09:46:01.327376+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 167,
-  "sources_failed": 134,
-  "new_candidates": 0,
-  "recovered_records": 2,
-  "telegram_posts_sent": 0,
+  "sources_succeeded": 166,
+  "sources_failed": 135,
+  "new_candidates": 2,
+  "recovered_records": 420,
+  "telegram_posts_sent": 2,
   "alerts_pending": 0,
   "status": "partial",
   "failure_types": "ConnectTimeout: 88, ConnectionError: 28, HTTPError: 23, SSLError: 22, ValueError: 3",
@@ -642,6 +642,10 @@
     {
       "source_id": "uttarakhand-psc",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "vtu",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "vyapam-cg",
