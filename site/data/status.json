@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-23T10:41:15.896068+00:00",
-  "scan_started_at": "2026-11-23T10:31:58.192135+00:00",
+  "last_checked_at": "2026-11-23T10:55:33.568247+00:00",
+  "scan_started_at": "2026-11-23T10:46:01.231540+00:00",
   "sources_enabled": 301,
   "sources_succeeded": 165,
   "sources_failed": 136,
-  "new_candidates": 5,
-  "recovered_records": 417,
-  "telegram_posts_sent": 5,
+  "new_candidates": 0,
+  "recovered_records": 419,
+  "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 87, ConnectionError: 29, SSLError: 24, HTTPError: 23, ValueError: 3",
+  "failure_types": "ConnectTimeout: 87, ConnectionError: 29, HTTPError: 23, SSLError: 23, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -205,10 +205,6 @@
     },
     {
       "source_id": "ibps-rrb",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-spl-xvi",
       "error_type": "SSLError"
     },
     {
@@ -450,6 +446,10 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university-old-results",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
