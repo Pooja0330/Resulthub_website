@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-2c9500ab7fe340df83446d30",
+    "title": "मैनुअल सीवर सफाई से रोबोटिक सैनिटेशन संचालन तक",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2340512&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2340512&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-23T13:57:10.038708+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-720a04de09bfd53c6e728419",
     "title": "केंद्रीय स्वास्थ्य सचिव श्रीमती पुण्य सलिला श्रीवास्तव ने क्रिश्चियन मेडिकल कॉलेज (सीएमसी), वेल्लोर में देश की पहली समर्पित मानव मेटाबॉलिक चैंबर सुविधा का उद्घाटन किया",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2340496&lang=1",
@@ -319,23 +336,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-23T08:57:23.358777+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-a77822ba70ca9bd3fc85e913",
-    "title": "देश की धरती से वैश्विक बाजारों तक फूलों का सफर",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2340274&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2340274&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-23T08:25:21.191525+00:00",
     "archive": false,
     "verified": true
   }
