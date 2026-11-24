@@ -1,9 +1,9 @@
 {
-  "last_checked_at": "2026-11-24T07:12:26.399072+00:00",
-  "scan_started_at": "2026-11-24T07:02:18.342279+00:00",
+  "last_checked_at": "2026-11-24T07:24:32.104162+00:00",
+  "scan_started_at": "2026-11-24T07:15:57.054737+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 165,
-  "sources_failed": 136,
+  "sources_succeeded": 166,
+  "sources_failed": 135,
   "new_candidates": 0,
   "recovered_records": 404,
   "telegram_posts_sent": 0,
@@ -246,10 +246,6 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "indiapost-gds",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
