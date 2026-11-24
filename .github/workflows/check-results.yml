@@ -6,7 +6,7 @@ on:
     # GitHub's scheduler is best-effort and often skips/delays runs (observed gaps of 1h+).
     # This is only the BACKUP trigger. The reliable trigger is an external pinger that calls
     # the repository_dispatch API every 5 minutes - see UPDATE_SPEED_GUIDE.md.
-    - cron: '7,22,37,52 * * * *'
+    - cron: '*/5 * * * *'
   repository_dispatch:
     types: [scan]
   workflow_dispatch:
