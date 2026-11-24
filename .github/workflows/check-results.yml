@@ -39,7 +39,10 @@ jobs:
   check:
     outputs:
       changed: ${{ steps.commit.outputs.changed }}
-    runs-on: ubuntu-latest
+    # Many .gov.in sites block GitHub's overseas servers. Set the repository variable
+    # CHECK_RUNNER=self-hosted (after registering an Indian server, see
+    # INDIAN_RUNNER_SETUP.md) to scan from India. Delete the variable to fall back.
+    runs-on: ${{ vars.CHECK_RUNNER || 'ubuntu-latest' }}
     timeout-minutes: 15
     steps:
       - name: Checkout repository
