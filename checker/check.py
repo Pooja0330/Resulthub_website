@@ -576,6 +576,14 @@ def telegram_send(chat_id, message, reply_markup=None):
 def is_speculative_status_title(title):
     """Reject editorial placeholders that are not official notices."""
     value = " ".join(str(title or "").lower().split())
+    if re.search(
+        r"\b(placement drives?|campus recruitment drive|food stalls?|eye care|vaccination drive|"
+        r"tenders?|quotations?|e-?auction|cultural (?:fest|festival|programme)|swachh|blood donation)\b",
+        value,
+    ):
+        # General government/university news, not an exam notice - keep it out of the
+        # website feed and the Telegram channel.
+        return True
     return bool(re.search(
         r"\b(awaiting official update|expected soon|result expected soon|"
         r"result not yet declared|not yet declared by the authority)\b",

@@ -186,7 +186,7 @@ def render_detail(item, related=None):
 <meta name="robots" content="{robots}"><link rel="canonical" href="{esc(canonical)}">
 <meta property="og:type" content="article"><meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(description)}"><meta property="og:url" content="{esc(canonical)}">
-<meta name="twitter:card" content="summary"><meta name="twitter:title" content="{esc(title)}">
+<meta name="twitter:card" content="summary_large_image"><meta property="og:image" content="{BASE}/og-image.png"><meta name="twitter:image" content="{BASE}/og-image.png"><meta name="twitter:title" content="{esc(title)}">
 <script type="application/ld+json">{schema_text}</script>
 <script type="application/ld+json">{crumbs_text}</script>
 <link rel="icon" type="image/svg+xml" href="../favicon.svg"><link rel="stylesheet" href="../styles.css">
@@ -247,7 +247,7 @@ def render_hub(hub, items):
 <title>{esc(title_tag)}</title><meta name="description" content="{esc(meta)}">
 <meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="{esc(canonical)}">
 <meta property="og:type" content="website"><meta property="og:title" content="{esc(title_tag)}"><meta property="og:description" content="{esc(meta)}"><meta property="og:url" content="{esc(canonical)}">
-<meta name="twitter:card" content="summary"><script type="application/ld+json">{item_list}</script>
+<meta name="twitter:card" content="summary_large_image"><meta property="og:image" content="{BASE}/og-image.png"><meta name="twitter:image" content="{BASE}/og-image.png"><script type="application/ld+json">{item_list}</script>
 <link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="stylesheet" href="styles.css">
 <style>.seo-wrap{{max-width:960px;margin:32px auto 56px;padding:0 18px}}.seo-card{{background:#fff;border:1px solid #dce6f2;border-radius:19px;padding:clamp(22px,4vw,42px)}}
 .seo-card h1{{font-size:clamp(1.7rem,4vw,2.5rem);color:#17345b;margin:8px 0}}.seo-hubnav{{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}}

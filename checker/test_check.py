@@ -670,3 +670,12 @@ class SameTitleDedupeTests(unittest.TestCase):
             {"id": "pib-2", "title": "Same press release headline text", "source_id": "pib", "url": "https://pib.gov.in/2"},
         ]
         self.assertEqual([r["id"] for r in dedupe_same_title_same_source(recs)], ["a", "c", "d", "e", "pib-1", "pib-2"])
+
+
+class NonExamTopicTests(unittest.TestCase):
+    def test_general_news_is_rejected_but_exam_notices_are_not(self):
+        from check import is_speculative_status_title
+        self.assertTrue(is_speculative_status_title("Applications Invited For Food Stalls At Lokotsav 2027"))
+        self.assertTrue(is_speculative_status_title("Result of the placement drive of company KPMG"))
+        self.assertFalse(is_speculative_status_title("SSC CGL Final Result 2026"))
+        self.assertFalse(is_speculative_status_title("UPSSSC Excise Constable Answer Key Objection 2026"))

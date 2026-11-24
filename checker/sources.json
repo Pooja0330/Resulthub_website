@@ -1293,7 +1293,9 @@
       "url": "https://kvsangathan.nic.in/",
       "kind": "html",
       "allowed_hosts": [
-        "kvsangathan.nic.in"
+        "kvsangathan.nic.in",
+        "kvs.gov.in",
+        "www.kvs.gov.in"
       ],
       "categories": [
         "result",
@@ -5404,7 +5406,8 @@
       "url": "https://www.unigoa.ac.in/",
       "kind": "html",
       "allowed_hosts": [
-        "www.unigoa.ac.in"
+        "www.unigoa.ac.in",
+        "unigoa.ac.in"
       ],
       "categories": [
         "result",
@@ -6535,7 +6538,9 @@
       "url": "https://kvsangathan.nic.in/",
       "kind": "html",
       "allowed_hosts": [
-        "kvsangathan.nic.in"
+        "kvsangathan.nic.in",
+        "kvs.gov.in",
+        "www.kvs.gov.in"
       ],
       "categories": [
         "notification",
