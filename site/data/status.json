@@ -1,12 +1,12 @@
 {
-  "last_checked_at": "2026-11-24T14:50:29.945449+00:00",
-  "scan_started_at": "2026-11-24T14:41:49.041184+00:00",
+  "last_checked_at": "2026-11-24T23:46:59.438612+00:00",
+  "scan_started_at": "2026-11-24T23:37:59.663486+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 164,
-  "sources_failed": 137,
-  "new_candidates": 0,
-  "recovered_records": 409,
-  "telegram_posts_sent": 0,
+  "sources_succeeded": 166,
+  "sources_failed": 135,
+  "new_candidates": 3,
+  "recovered_records": 403,
+  "telegram_posts_sent": 3,
   "alerts_pending": 0,
   "alerts_held_for_review": 539,
   "held_alert_reasons": {
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 68
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, ConnectionError: 29, HTTPError: 24, SSLError: 22, ReadTimeout: 2",
+  "failure_types": "ConnectTimeout: 89, ConnectionError: 30, HTTPError: 23, SSLError: 23, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -38,7 +38,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "andhra-university",
@@ -46,7 +46,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ap-psc",
@@ -261,14 +261,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "indiapost-gds",
-      "error_type": "ReadTimeout"
-    },
-    {
-      "source_id": "indiapost-recruitment",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -441,12 +433,12 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "patna-university",
+      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
-      "source_id": "pondicherry-university-old-results",
-      "error_type": "HTTPError"
+      "source_id": "patna-university",
+      "error_type": "SSLError"
     },
     {
       "source_id": "punjab-psc",
@@ -466,7 +458,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "rajeduboard",
