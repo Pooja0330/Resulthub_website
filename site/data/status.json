@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-24T01:08:10.626960+00:00",
-  "scan_started_at": "2026-11-24T01:01:41.375882+00:00",
+  "last_checked_at": "2026-11-24T01:26:27.391751+00:00",
+  "scan_started_at": "2026-11-24T01:15:57.664938+00:00",
   "sources_enabled": 301,
   "sources_succeeded": 162,
   "sources_failed": 139,
@@ -212,7 +212,7 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-careers",
+      "source_id": "ibps-recruitment",
       "error_type": "SSLError"
     },
     {
