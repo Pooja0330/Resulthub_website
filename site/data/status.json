@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-24T12:11:56.074841+00:00",
-  "scan_started_at": "2026-11-24T12:02:05.447026+00:00",
+  "last_checked_at": "2026-11-24T12:24:53.332184+00:00",
+  "scan_started_at": "2026-11-24T12:15:58.221708+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 166,
-  "sources_failed": 135,
-  "new_candidates": 0,
-  "recovered_records": 419,
-  "telegram_posts_sent": 0,
+  "sources_succeeded": 168,
+  "sources_failed": 133,
+  "new_candidates": 1,
+  "recovered_records": 415,
+  "telegram_posts_sent": 1,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 29, SSLError: 24, HTTPError: 23, ValueError: 1",
+  "failure_types": "ConnectTimeout: 90, ConnectionError: 27, HTTPError: 23, SSLError: 23, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -176,10 +176,6 @@
       "error_type": "ConnectionError"
     },
     {
-      "source_id": "gseb",
-      "error_type": "ConnectionError"
-    },
-    {
       "source_id": "gujarat-gsssb",
       "error_type": "ConnectionError"
     },
@@ -201,10 +197,6 @@
     },
     {
       "source_id": "ibps-calendar",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-careers",
       "error_type": "SSLError"
     },
     {
@@ -449,7 +441,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "rajeduboard",
