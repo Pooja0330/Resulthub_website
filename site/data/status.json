@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-24T05:50:30.485089+00:00",
-  "scan_started_at": "2026-11-24T05:45:57.944049+00:00",
+  "last_checked_at": "2026-11-24T06:12:32.797811+00:00",
+  "scan_started_at": "2026-11-24T06:02:17.309344+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 162,
-  "sources_failed": 139,
+  "sources_succeeded": 165,
+  "sources_failed": 136,
   "new_candidates": 0,
-  "recovered_records": 398,
+  "recovered_records": 404,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, ConnectionError: 27, SSLError: 26, HTTPError: 23, ReadTimeout: 3",
+  "failure_types": "ConnectTimeout: 88, ConnectionError: 27, SSLError: 24, HTTPError: 23, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -200,15 +200,7 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "ibps",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "ibps-calendar",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-csa-xvi",
       "error_type": "SSLError"
     },
     {
@@ -257,10 +249,6 @@
     },
     {
       "source_id": "indiapost-gds",
-      "error_type": "ReadTimeout"
-    },
-    {
-      "source_id": "indiapost-recruitment",
       "error_type": "ReadTimeout"
     },
     {
