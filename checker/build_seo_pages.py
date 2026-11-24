@@ -18,20 +18,20 @@ HUB_CATEGORIES = {"result", "merit_list", "cutoff", "admit_card", "answer_key", 
 HUBS = [
     # slug, categories, H1, title tag, meta description, blurb
     ("latest-results.html", {"result", "merit_list", "cutoff"}, "Latest Exam Results",
-     "Latest Exam Results, Merit Lists & Cutoffs | GoResultHub",
-     "Newest exam results, merit lists and cutoff announcements from UPSC, SSC, banking, railway, state boards and universities, each linked to the official website.",
+     "Exam Results & Merit Lists | GoResultHub",
+     "Latest UPSC, SSC, railway, banking and state exam results with official result links.",
      "Newest results, merit lists and cutoffs detected on official examination websites."),
     ("admit-cards.html", {"admit_card"}, "Latest Admit Cards & Hall Tickets",
-     "Latest Admit Cards, Hall Tickets & Call Letters | GoResultHub",
-     "Newest admit cards, hall tickets, call letters and city-intimation slips for government and entrance exams, linked to the official download pages.",
+     "Admit Cards & Hall Tickets | GoResultHub",
+     "Latest government and entrance exam admit cards, hall tickets and city slips with official links.",
      "Admit cards, hall tickets and call letters as soon as they appear on official sites."),
     ("answer-keys.html", {"answer_key"}, "Latest Answer Keys & Response Sheets",
-     "Latest Answer Keys & Response Sheets | GoResultHub",
-     "Newest provisional and final answer keys, response sheets and objection windows from SSC, UPSC, NTA, banking and state recruitment bodies.",
+     "Exam Answer Keys & Response Sheets | GoResultHub",
+     "Latest provisional and final answer keys and response sheets from SSC, UPSC, NTA and state boards.",
      "Provisional and final answer keys with links to the issuing authority."),
     ("latest-jobs.html", {"notification", "exam_schedule"}, "Latest Government Job Notifications & Exam Schedules",
-     "Latest Government Job Notifications & Exam Dates | GoResultHub",
-     "Newest recruitment notifications, vacancies and exam schedules from central and state government bodies, linked to the official notice.",
+     "Government Job Notifications & Exam Dates | GoResultHub",
+     "Latest central and state government recruitment notices, vacancies and exam schedules with official links.",
      "Recruitment notifications and exam schedules published by official authorities."),
 ]
 BASE_SITEMAP = [
@@ -143,7 +143,7 @@ def render_detail(item, related=None):
         description = (f"{authority} has listed \u201c{short(title, 140)}\u201d in its {category.lower()} section. "
                        f"GoResultHub detected this listing on {when}. Open the official link to read the full notice "
                        f"and confirm dates, eligibility and instructions.")
-    description = re.sub(r"\s+", " ", description)[:300]
+    description = short(re.sub(r"\s+", " ", description), 155)
     published_date = date_value(published) or date_value(detected)
     robots = "index,follow,max-image-preview:large" if is_indexable(item) else "noindex,follow"
     schema = {
@@ -173,7 +173,7 @@ def render_detail(item, related=None):
         rows = "".join(f'<li><a href="{esc(str(r.get("id")))}.html">{esc(short(r.get("title") or r.get("exam"), 120))}</a></li>'
                        for r in related)
         related_html = f'<h2>More recent exam updates</h2><ul class="seo-related">{rows}</ul>'
-    title_tag = short(title, 62)
+    title_tag = short(f"{title} - {authority}", 44)
     official_link = (f'<a class="seo-primary" href="{esc(primary)}" rel="nofollow noopener">'
                      + ("Open official application / webpage ↗" if application or (primary and primary != official) else "Open official notice / result ↗") + "</a>" if primary else "")
     pdf_link = (f'<a class="seo-secondary" href="{esc(pdf_notice)}" rel="nofollow noopener">Download official PDF notice ↗</a>'
