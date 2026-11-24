@@ -2123,6 +2123,15 @@ def main():
         for kind, count in sorted(failure_types.items(), key=lambda pair: (-pair[1], pair[0]))[:5]
     ) or "none"
 
+    held_reason_counts = {}
+    for held_record in held.values():
+        reason = str(held_record.get("hold_reason") or "Unspecified hold reason") if isinstance(held_record, dict) else "Invalid held record"
+        held_reason_counts[reason] = held_reason_counts.get(reason, 0) + 1
+    held_reason_summary = ", ".join(
+        f"{reason}: {count}"
+        for reason, count in sorted(held_reason_counts.items(), key=lambda pair: (-pair[1], pair[0]))[:5]
+    ) or "none"
+
     # Public, non-sensitive health snapshot for the website live status panel.
     save_json("site/data/status.json", {
         "last_checked_at": now_utc(),
@@ -2134,6 +2143,8 @@ def main():
         "recovered_records": len(recovered_candidates),
         "telegram_posts_sent": public_sent,
         "alerts_pending": len(pending),
+        "alerts_held_for_review": len(held),
+        "held_alert_reasons": held_reason_counts,
         "status": "healthy" if successful > 0 and failures == 0 else ("partial" if successful > 0 else "unavailable"),
         "failure_types": failure_breakdown,
         # Small, safe diagnostic sample makes recurring source failures actionable
@@ -2162,6 +2173,7 @@ def main():
         f"Main-channel alerts sent: {public_sent}\n"
         f"Alerts pending delivery: {len(pending)}\n"
         f"Older alerts held for review: {len(held)}\n"
+        f"Top hold reasons: {held_reason_summary}\n"
     )
 
     if failures:
