@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-24T10:42:08.838100+00:00",
-  "scan_started_at": "2026-11-24T10:32:10.343158+00:00",
+  "last_checked_at": "2026-11-24T10:52:02.748903+00:00",
+  "scan_started_at": "2026-11-24T10:46:09.287719+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 165,
-  "sources_failed": 136,
-  "new_candidates": 4,
-  "recovered_records": 417,
-  "telegram_posts_sent": 4,
+  "sources_succeeded": 166,
+  "sources_failed": 135,
+  "new_candidates": 0,
+  "recovered_records": 414,
+  "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, ConnectionError: 31, SSLError: 24, HTTPError: 23, ValueError: 1",
+  "failure_types": "ConnectTimeout: 89, ConnectionError: 30, HTTPError: 23, SSLError: 23, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -204,10 +204,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-csa-xvi",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "ibps-rrb",
       "error_type": "SSLError"
     },
@@ -356,10 +352,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "national-scholarship-portal",
-      "error_type": "ConnectionError"
-    },
-    {
       "source_id": "naval-coastguard-jobs",
       "error_type": "SSLError"
     },
@@ -449,6 +441,10 @@
     },
     {
       "source_id": "rajasthan-rssb",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
       "error_type": "ConnectTimeout"
     },
     {
