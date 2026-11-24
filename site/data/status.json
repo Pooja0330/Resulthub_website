@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-24T01:37:44.742656+00:00",
-  "scan_started_at": "2026-11-24T01:32:01.400766+00:00",
+  "last_checked_at": "2026-11-24T01:55:14.950270+00:00",
+  "scan_started_at": "2026-11-24T01:45:56.045605+00:00",
   "sources_enabled": 301,
   "sources_succeeded": 163,
   "sources_failed": 138,
   "new_candidates": 0,
-  "recovered_records": 389,
+  "recovered_records": 384,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, ConnectionError: 28, HTTPError: 24, SSLError: 23, ValueError: 3",
+  "failure_types": "ConnectTimeout: 90, ConnectionError: 28, HTTPError: 23, SSLError: 23, ValueError: 3",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -364,6 +364,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "nagaland-psc",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "naval-coastguard-jobs",
       "error_type": "SSLError"
     },
@@ -438,10 +442,6 @@
     {
       "source_id": "patna-university",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "pondicherry-university-old-results",
-      "error_type": "HTTPError"
     },
     {
       "source_id": "punjab-psc",
