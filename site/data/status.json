@@ -1,9 +1,9 @@
 {
-  "last_checked_at": "2026-11-24T02:08:47.126509+00:00",
-  "scan_started_at": "2026-11-24T02:02:06.763169+00:00",
+  "last_checked_at": "2026-11-24T02:23:34.572511+00:00",
+  "scan_started_at": "2026-11-24T02:15:55.174962+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 163,
-  "sources_failed": 138,
+  "sources_succeeded": 162,
+  "sources_failed": 139,
   "new_candidates": 0,
   "recovered_records": 388,
   "telegram_posts_sent": 0,
@@ -212,11 +212,11 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-recent-updates",
+      "source_id": "ibps-rrb",
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-rrb",
+      "source_id": "ibps-rrb-xv",
       "error_type": "SSLError"
     },
     {
@@ -258,6 +258,10 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "indiapost-gds",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
