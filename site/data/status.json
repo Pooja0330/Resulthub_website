@@ -1,15 +1,15 @@
 {
-  "last_checked_at": "2026-11-24T11:08:16.235569+00:00",
-  "scan_started_at": "2026-11-24T11:01:25.479970+00:00",
+  "last_checked_at": "2026-11-24T11:23:01.146698+00:00",
+  "scan_started_at": "2026-11-24T11:16:06.166339+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 164,
-  "sources_failed": 137,
+  "sources_succeeded": 167,
+  "sources_failed": 134,
   "new_candidates": 0,
-  "recovered_records": 408,
+  "recovered_records": 423,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, ConnectionError: 31, HTTPError: 24, SSLError: 24, ValueError: 1",
+  "failure_types": "ConnectTimeout: 88, ConnectionError: 29, SSLError: 24, HTTPError: 23, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -204,7 +204,7 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-recent-updates",
+      "source_id": "ibps-po-mt",
       "error_type": "SSLError"
     },
     {
@@ -318,10 +318,6 @@
     {
       "source_id": "manipur-board",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "manipur-university",
-      "error_type": "HTTPError"
     },
     {
       "source_id": "mat-aima",
@@ -452,10 +448,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "rajasthan-university",
-      "error_type": "ConnectionError"
-    },
-    {
       "source_id": "rajeduboard",
       "error_type": "ConnectTimeout"
     },
@@ -582,10 +574,6 @@
     {
       "source_id": "sikkim-psc",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "sikkim-university",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "tamilnadu-board-official",
