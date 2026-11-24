@@ -33,7 +33,7 @@ WORKERS = max(1, min(int(os.getenv("SOURCE_WORKERS", "24")), 24))
 # every PARK_RETRY_HOURS. Without this, ~130 dead sources each burn 40-60s of
 # timeouts and make every scan 3-4x slower, which delays NEW notices on the site.
 PARK_AFTER_FAILURES = max(1, int(os.getenv("PARK_AFTER_FAILURES", "3")))
-PARK_RETRY_HOURS = max(1, int(os.getenv("PARK_RETRY_HOURS", "6")))
+PARK_RETRY_HOURS = max(1, int(os.getenv("PARK_RETRY_HOURS", "2")))
 MAX_NEW_PER_SOURCE = max(1, min(int(os.getenv("MAX_NEW_PER_SOURCE", "20")), 20))
 MAX_ARCHIVE_PER_SOURCE = max(20, min(int(os.getenv("MAX_ARCHIVE_PER_SOURCE", "250")), 500))
 MAX_AGE_DAYS = 90
@@ -1619,6 +1619,16 @@ def main():
             return False
         if int(record.get("fail_streak", 0) or 0) < PARK_AFTER_FAILURES:
             return False
+        # A source that worked recently is merely flaky, not dead: keep scanning it
+        # every run so a notice is not missed while it happens to be reachable.
+        try:
+            last_ok = datetime.fromisoformat(str(record.get("last_ok_at", "")).replace("Z", "+00:00"))
+            if last_ok.tzinfo is None:
+                last_ok = last_ok.replace(tzinfo=timezone.utc)
+            if datetime.now(timezone.utc) - last_ok < timedelta(days=3):
+                return False
+        except ValueError:
+            pass
         try:
             last = datetime.fromisoformat(str(record.get("checked_at", "")).replace("Z", "+00:00"))
             if last.tzinfo is None:
@@ -1649,6 +1659,7 @@ def main():
                 health[sid] = {
                     "status": "ok",
                     "checked_at": checked_at,
+                    "last_ok_at": checked_at,
                     "new_candidates": 0,
                 }
 
@@ -1781,6 +1792,7 @@ def main():
                     "status": "failed",
                     "checked_at": checked_at,
                     "fail_streak": previous_streak + 1,
+                    "last_ok_at": health.get(sid, {}).get("last_ok_at", ""),
                     "error": f"{type(exc).__name__}: {str(exc)[:200]}",
                 }
                 print(f"FAIL {source.get('name', sid)}: {type(exc).__name__}: {str(exc)[:180]}")

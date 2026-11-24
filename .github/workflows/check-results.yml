@@ -137,7 +137,7 @@ jobs:
           SOURCE_TIMEOUT_SECONDS: "25"
           SOURCE_WORKERS: "24"
           PARK_AFTER_FAILURES: "3"
-          PARK_RETRY_HOURS: "6"
+          PARK_RETRY_HOURS: "2"
           MAX_NEW_PER_SOURCE: "20"
           MAX_PUBLIC_ALERTS_PER_RUN: "10"
         run: python checker/check.py
