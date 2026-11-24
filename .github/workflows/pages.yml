@@ -48,3 +48,11 @@ jobs:
       - name: Deploy website
         id: deployment
         uses: actions/deploy-pages@v4
+        continue-on-error: true
+      - name: Wait before retrying deploy
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 60
+      - name: Retry deploy once (another Pages deployment may have been in progress)
+        if: steps.deployment.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
