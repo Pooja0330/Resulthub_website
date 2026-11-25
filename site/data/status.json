@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-25T16:12:37.743059+00:00",
-  "scan_started_at": "2026-11-25T16:04:22.547401+00:00",
+  "last_checked_at": "2026-11-25T16:23:46.488770+00:00",
+  "scan_started_at": "2026-11-25T16:14:38.673326+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 163,
-  "sources_failed": 138,
+  "sources_succeeded": 166,
+  "sources_failed": 135,
   "new_candidates": 0,
-  "recovered_records": 378,
+  "recovered_records": 384,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 539,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 68
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 94, ConnectionError: 29, HTTPError: 23, SSLError: 22, ValueError: 1",
+  "failure_types": "ConnectTimeout: 90, ConnectionError: 29, HTTPError: 23, SSLError: 22, ReadTimeout: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -153,14 +153,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "columbia-ciet-raipur",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "columbia-institute-pharmacy-raipur",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "drdo-careers",
       "error_type": "ConnectionError"
     },
@@ -269,12 +261,12 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "jadavpur-university",
-      "error_type": "SSLError"
+      "source_id": "indiapost-recruitment",
+      "error_type": "ReadTimeout"
     },
     {
-      "source_id": "jharkhand-psc",
-      "error_type": "ConnectTimeout"
+      "source_id": "jadavpur-university",
+      "error_type": "SSLError"
     },
     {
       "source_id": "jkbose",
@@ -594,10 +586,6 @@
     },
     {
       "source_id": "sikkim-psc",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "sikkim-university",
       "error_type": "ConnectTimeout"
     },
     {
