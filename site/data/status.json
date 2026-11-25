@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-25T19:33:03.572006+00:00",
-  "scan_started_at": "2026-11-25T19:26:29.940434+00:00",
+  "last_checked_at": "2026-11-25T19:42:27.180453+00:00",
+  "scan_started_at": "2026-11-25T19:33:57.507737+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 165,
-  "sources_failed": 136,
+  "sources_succeeded": 166,
+  "sources_failed": 135,
   "new_candidates": 0,
-  "recovered_records": 391,
+  "recovered_records": 396,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 539,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 68
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, ConnectionError: 29, HTTPError: 23, SSLError: 22, ReadTimeout: 2",
+  "failure_types": "ConnectTimeout: 90, ConnectionError: 28, HTTPError: 23, SSLError: 23, ReadTimeout: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -213,11 +213,19 @@
       "error_type": "ConnectionError"
     },
     {
+      "source_id": "ibps",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "ibps-calendar",
       "error_type": "SSLError"
     },
     {
       "source_id": "ibps-rrb",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-spl-xvi",
       "error_type": "SSLError"
     },
     {
@@ -259,10 +267,6 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "indiapost-gds",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -433,10 +437,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "osssc",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -463,10 +463,6 @@
     {
       "source_id": "rajeduboard",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "resultbharat-discovery",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "resultbharat-syllabus",
