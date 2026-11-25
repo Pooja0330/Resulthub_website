@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-25T17:57:23.449172+00:00",
-  "scan_started_at": "2026-11-25T17:48:15.549194+00:00",
+  "last_checked_at": "2026-11-25T18:04:37.391507+00:00",
+  "scan_started_at": "2026-11-25T17:58:32.463090+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 166,
-  "sources_failed": 135,
+  "sources_succeeded": 170,
+  "sources_failed": 131,
   "new_candidates": 0,
-  "recovered_records": 399,
+  "recovered_records": 402,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 539,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 68
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, ConnectionError: 27, HTTPError: 23, SSLError: 23, ReadTimeout: 1",
+  "failure_types": "ConnectTimeout: 90, ConnectionError: 28, SSLError: 22, HTTPError: 21, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -85,6 +85,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "bharatresultfind-discovery",
+      "error_type": "ConnectionError"
+    },
+    {
       "source_id": "bihar-state-health-society-results-archive",
       "error_type": "SSLError"
     },
@@ -138,10 +142,6 @@
     },
     {
       "source_id": "cisce-results",
-      "error_type": "HTTPError"
-    },
-    {
-      "source_id": "coal-india-careers",
       "error_type": "HTTPError"
     },
     {
@@ -217,10 +217,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-po-mt",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "ibps-rrb",
       "error_type": "SSLError"
     },
@@ -263,10 +259,6 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "indiapost-gds",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -337,10 +329,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "mat-aima",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -362,10 +350,6 @@
     },
     {
       "source_id": "mppsc",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "mumbai-university",
       "error_type": "ConnectTimeout"
     },
     {
