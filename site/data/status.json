@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-25T19:25:40.311052+00:00",
-  "scan_started_at": "2026-11-25T19:18:04.439258+00:00",
+  "last_checked_at": "2026-11-25T19:33:03.572006+00:00",
+  "scan_started_at": "2026-11-25T19:26:29.940434+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 163,
-  "sources_failed": 138,
+  "sources_succeeded": 165,
+  "sources_failed": 136,
   "new_candidates": 0,
-  "recovered_records": 387,
+  "recovered_records": 391,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 539,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 68
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 94, ConnectionError: 29, HTTPError: 23, SSLError: 21, ReadTimeout: 1",
+  "failure_types": "ConnectTimeout: 90, ConnectionError: 29, HTTPError: 23, SSLError: 22, ReadTimeout: 2",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -153,14 +153,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "columbia-ciet-raipur",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "columbia-institute-pharmacy-raipur",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "drdo-careers",
       "error_type": "ConnectionError"
     },
@@ -275,10 +267,6 @@
     {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "jharkhand-psc",
-      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "jkbose",
@@ -445,6 +433,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "osssc",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -466,11 +458,15 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "resultbharat-discovery",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "resultbharat-syllabus",
@@ -594,10 +590,6 @@
     },
     {
       "source_id": "sikkim-psc",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "sikkim-university",
       "error_type": "ConnectTimeout"
     },
     {
