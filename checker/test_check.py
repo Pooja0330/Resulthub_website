@@ -329,6 +329,11 @@ class CheckerSafetyTests(unittest.TestCase):
             "UP Police Constable Score Card 2026"
         ))
 
+    def test_rejects_previous_calendar_year_notice(self):
+        from datetime import datetime, timezone
+        previous_year = datetime.now(timezone.utc).year - 1
+        self.assertTrue(is_stale_notice(f"UP Police Constable Score Card {previous_year}"))
+
     def test_rejects_old_year_in_archive_url_even_when_title_is_generic(self):
         self.assertTrue(is_stale_notice(
             "Timetable",
