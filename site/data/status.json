@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-25T22:39:08.003226+00:00",
-  "scan_started_at": "2026-11-25T22:30:27.204287+00:00",
+  "last_checked_at": "2026-11-25T22:46:15.968778+00:00",
+  "scan_started_at": "2026-11-25T22:40:10.799170+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 167,
-  "sources_failed": 134,
+  "sources_succeeded": 168,
+  "sources_failed": 133,
   "new_candidates": 0,
-  "recovered_records": 396,
+  "recovered_records": 387,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 539,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 68
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, ConnectionError: 27, HTTPError: 23, SSLError: 23, ValueError: 1",
+  "failure_types": "ConnectTimeout: 91, ConnectionError: 28, SSLError: 23, HTTPError: 21, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -141,10 +141,6 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "coal-india-careers",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "coast-guard-home",
       "error_type": "SSLError"
     },
@@ -214,10 +210,6 @@
     },
     {
       "source_id": "ibps-calendar",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-csa-xvi",
       "error_type": "SSLError"
     },
     {
@@ -317,6 +309,10 @@
       "error_type": "HTTPError"
     },
     {
+      "source_id": "kvs",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "kvs-recruitment",
       "error_type": "ValueError"
     },
@@ -331,10 +327,6 @@
     {
       "source_id": "manipur-board",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "mat-aima",
-      "error_type": "HTTPError"
     },
     {
       "source_id": "merchant-navy-imu",
@@ -455,6 +447,10 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "rajeduboard",
