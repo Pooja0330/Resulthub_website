@@ -1,12 +1,12 @@
 {
-  "last_checked_at": "2026-11-25T15:24:31.617611+00:00",
-  "scan_started_at": "2026-11-25T15:15:18.858350+00:00",
+  "last_checked_at": "2026-11-25T15:32:03.887426+00:00",
+  "scan_started_at": "2026-11-25T15:25:27.679453+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 168,
-  "sources_failed": 133,
-  "new_candidates": 1,
-  "recovered_records": 399,
-  "telegram_posts_sent": 1,
+  "sources_succeeded": 166,
+  "sources_failed": 135,
+  "new_candidates": 0,
+  "recovered_records": 390,
+  "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 539,
   "held_alert_reasons": {
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 68
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 29, HTTPError: 23, SSLError: 22, ValueError: 1",
+  "failure_types": "ConnectTimeout: 89, ConnectionError: 30, HTTPError: 23, SSLError: 22, ReadTimeout: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -261,6 +261,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "indiapost-gds",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -451,6 +455,10 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "rajeduboard",
