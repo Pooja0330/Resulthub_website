@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-25T20:06:33.491255+00:00",
-  "scan_started_at": "2026-11-25T19:58:43.816533+00:00",
+  "last_checked_at": "2026-11-25T20:16:14.091592+00:00",
+  "scan_started_at": "2026-11-25T20:07:34.340738+00:00",
   "sources_enabled": 301,
   "sources_succeeded": 166,
   "sources_failed": 135,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 68
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 92, ConnectionError: 27, HTTPError: 23, SSLError: 23, ValueError: 1",
+  "failure_types": "ConnectTimeout: 90, ConnectionError: 29, HTTPError: 23, SSLError: 23, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -210,7 +210,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ibps-calendar",
@@ -458,7 +458,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "rajeduboard",
