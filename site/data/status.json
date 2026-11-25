@@ -1,12 +1,12 @@
 {
-  "last_checked_at": "2026-11-25T16:39:24.588615+00:00",
-  "scan_started_at": "2026-11-25T16:32:46.820841+00:00",
+  "last_checked_at": "2026-11-25T16:47:41.285090+00:00",
+  "scan_started_at": "2026-11-25T16:40:21.306745+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 170,
-  "sources_failed": 131,
-  "new_candidates": 2,
-  "recovered_records": 393,
-  "telegram_posts_sent": 2,
+  "sources_succeeded": 168,
+  "sources_failed": 133,
+  "new_candidates": 0,
+  "recovered_records": 399,
+  "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 539,
   "held_alert_reasons": {
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 68
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, ConnectionError: 27, SSLError: 22, HTTPError: 21, ReadTimeout: 1",
+  "failure_types": "ConnectTimeout: 91, ConnectionError: 27, HTTPError: 23, SSLError: 22, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -138,6 +138,10 @@
     },
     {
       "source_id": "cisce-results",
+      "error_type": "HTTPError"
+    },
+    {
+      "source_id": "coal-india-careers",
       "error_type": "HTTPError"
     },
     {
@@ -325,6 +329,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "mat-aima",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -346,6 +354,10 @@
     },
     {
       "source_id": "mppsc",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "mumbai-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -439,10 +451,6 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
