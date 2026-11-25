@@ -67,6 +67,28 @@ def item_record(title, raw_url, base, published=""):
     }
 
 
+def is_current_year_release(item):
+    """Keep current-year PIB notices; reject releases explicitly dated in prior years."""
+    current_year = datetime.now(timezone.utc).year
+    title = str(item.get("title") or "")
+    published = str(item.get("published") or "").strip()
+    years = [int(year) for year in re.findall(r"\\b(20\\d{2})\\b", title)]
+    if years and max(years) < current_year:
+        return False
+    if published:
+        parsed = None
+        try:
+            parsed = datetime.fromisoformat(published.replace("Z", "+00:00"))
+        except (TypeError, ValueError):
+            try:
+                parsed = parsedate_to_datetime(published)
+            except (TypeError, ValueError, OverflowError):
+                parsed = None
+        if parsed and parsed.year < current_year:
+            return False
+    return True
+
+
 def main():
     session = requests.Session()
     session.headers.update(HEADERS)
@@ -108,6 +130,12 @@ def main():
                 found[item["url"]] = item
     except Exception as exc:
         errors.append("AllRelease: " + type(exc).__name__)
+
+    before_year_filter = len(found)
+    found = {url: item for url, item in found.items() if is_current_year_release(item)}
+    rejected_old_year = before_year_filter - len(found)
+    if rejected_old_year:
+        print(f"Filtered {rejected_old_year} PIB release(s) from years before {datetime.now(timezone.utc).year}.")
 
     if not found:
         # Keep last known-good data instead of replacing it with an empty feed
