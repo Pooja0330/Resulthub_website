@@ -761,7 +761,7 @@ def is_stale_notice(title, published="", url=""):
         int(year)
         for year in re.findall(r"\b(20\d{2})\b", text_value + " " + url_value)
     ]
-    if old_years and max(old_years) < datetime.now(timezone.utc).year - 1:
+    if old_years and max(old_years) < datetime.now(timezone.utc).year:
         return True
     for match in re.finditer(
         r"\b(?:(?:posted|published|updated|uploaded|issued|dated|issue\s+date)\s*[:\-]?\s*(?:on\s+)?)"
@@ -1430,7 +1430,7 @@ def main():
         # Keep curated archive landing pages, but remove dated non-archive
         # notices outside the live 90-day window.
         if (not category or is_navigation_noise_title(title) or is_speculative_status_title(title)
-                or (not item.get("archive", False) and is_stale_notice(title, item.get("published", ""), item.get("url") or item.get("official_url", "")))):
+                or is_stale_notice(title, item.get("published", ""), item.get("url") or item.get("official_url", ""))):
             removed_result_rows += 1
             continue
         item["title"] = title
@@ -1992,6 +1992,12 @@ def main():
 
         if item.get("approved") is not True:
             remaining_approved.append(item)
+            continue
+
+        approved_title = str(item.get("title") or "").strip()
+        approved_url = str(item.get("url") or item.get("official_url") or "").strip()
+        if is_stale_notice(approved_title, item.get("published", ""), approved_url):
+            print("Dropped outdated pre-approved Telegram alert: " + approved_title[:140])
             continue
 
         source = next(
