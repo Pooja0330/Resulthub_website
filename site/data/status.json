@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-25T20:52:21.243332+00:00",
-  "scan_started_at": "2026-11-25T20:45:51.464109+00:00",
+  "last_checked_at": "2026-11-25T21:01:18.577712+00:00",
+  "scan_started_at": "2026-11-25T20:53:19.258399+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 170,
-  "sources_failed": 131,
+  "sources_succeeded": 167,
+  "sources_failed": 134,
   "new_candidates": 0,
-  "recovered_records": 394,
+  "recovered_records": 391,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 539,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 68
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, ConnectionError: 27, SSLError: 22, HTTPError: 21, ValueError: 1",
+  "failure_types": "ConnectTimeout: 91, ConnectionError: 28, HTTPError: 23, SSLError: 22, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -141,6 +141,10 @@
       "error_type": "HTTPError"
     },
     {
+      "source_id": "coal-india-careers",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "coast-guard-home",
       "error_type": "SSLError"
     },
@@ -206,7 +210,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ibps-calendar",
@@ -325,6 +329,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "mat-aima",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -346,6 +354,10 @@
     },
     {
       "source_id": "mppsc",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "mumbai-university",
       "error_type": "ConnectTimeout"
     },
     {
