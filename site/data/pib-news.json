@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-450b9280678ab4767ad01dec",
+    "title": "अमेरिकी व्यापार प्रतिनिधि (यूएसटीआर) की धारा 301 के तहत लिए गए निर्णय पर भारत का वक्तव्य",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2341700&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2341700&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-26T01:48:32.838198+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-146c0db99ce32d48103ccd0d",
     "title": "20वें वेव्स फिल्म बाजार में 54 देशों के 2,288 प्रतिनिधियों ने हिस्सा लिया",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2341695&lang=1",
@@ -251,23 +268,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-25T15:14:20.981581+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-51c28a33307f06e9983ed81c",
-    "title": "जब शब्द कम पड़ जाएं, तो संगीत बोलता है: 57वें आईएफएफआई में गायिका के.एस. चित्रा ने लता मंगेशकर, आशा भोसले और एस. जानकी की आवाज़ों को याद किया",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2341544&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2341544&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-25T15:01:41.015795+00:00",
     "archive": false,
     "verified": true
   },
