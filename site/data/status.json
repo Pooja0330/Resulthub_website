@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-26T05:57:30.167664+00:00",
-  "scan_started_at": "2026-11-26T05:48:02.594121+00:00",
+  "last_checked_at": "2026-11-26T06:05:12.492777+00:00",
+  "scan_started_at": "2026-11-26T05:58:21.889240+00:00",
   "sources_enabled": 301,
   "sources_succeeded": 168,
   "sources_failed": 133,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 68
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 27, HTTPError: 23, SSLError: 23, ReadTimeout: 1",
+  "failure_types": "ConnectTimeout: 90, ConnectionError: 27, HTTPError: 23, SSLError: 23, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -209,12 +209,12 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-careers",
+      "source_id": "ibps-rrb",
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-rrb",
-      "error_type": "SSLError"
+      "source_id": "icmai",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "iiser-admissions",
@@ -310,7 +310,7 @@
     },
     {
       "source_id": "kvs",
-      "error_type": "ReadTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "kvs-recruitment",
