@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-26T06:36:12.373816+00:00",
-  "scan_started_at": "2026-11-26T06:26:52.007817+00:00",
+  "last_checked_at": "2026-11-26T06:43:54.082729+00:00",
+  "scan_started_at": "2026-11-26T06:37:01.869431+00:00",
   "sources_enabled": 301,
   "sources_succeeded": 168,
   "sources_failed": 133,
   "new_candidates": 0,
-  "recovered_records": 414,
+  "recovered_records": 403,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 539,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 68
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 27, SSLError: 24, HTTPError: 23, ValueError: 1",
+  "failure_types": "ConnectTimeout: 89, ConnectionError: 27, HTTPError: 23, SSLError: 23, ReadTimeout: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -206,10 +206,6 @@
     },
     {
       "source_id": "ibps-calendar",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-recruitment",
       "error_type": "SSLError"
     },
     {
@@ -619,6 +615,10 @@
     {
       "source_id": "tspsc",
       "error_type": "ConnectionError"
+    },
+    {
+      "source_id": "uppsc",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "upsc-active-exams",
