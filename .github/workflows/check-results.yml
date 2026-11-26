@@ -54,17 +54,11 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - name: Set up Python on non-Windows runners
-        if: runner.os != 'Windows'
+      - name: Set up Python 3.12
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
-      - name: Use installed Python on Windows runner
-        if: runner.os == 'Windows'
-        run: |
-          # GITHUB_PATH takes effect in subsequent steps, not in this step.
-          echo 'C:\Program Files\Python312' >> "$GITHUB_PATH"
+          architecture: "x64"
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
