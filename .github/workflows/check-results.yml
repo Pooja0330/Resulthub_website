@@ -43,7 +43,7 @@ jobs:
     # CHECK_RUNNER=self-hosted (after registering an Indian server, see
     # INDIAN_RUNNER_SETUP.md) to scan from India. Delete the variable to fall back.
     runs-on: ${{ vars.CHECK_RUNNER || 'ubuntu-latest' }}
-    timeout-minutes: 15
+    timeout-minutes: 40
     defaults:
       run:
         shell: bash
