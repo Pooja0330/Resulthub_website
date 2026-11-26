@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-26T06:05:12.492777+00:00",
-  "scan_started_at": "2026-11-26T05:58:21.889240+00:00",
+  "last_checked_at": "2026-11-26T06:14:39.742148+00:00",
+  "scan_started_at": "2026-11-26T06:06:08.357908+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 168,
-  "sources_failed": 133,
+  "sources_succeeded": 167,
+  "sources_failed": 134,
   "new_candidates": 0,
-  "recovered_records": 412,
+  "recovered_records": 401,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 539,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 68
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, ConnectionError: 27, HTTPError: 23, SSLError: 23, ValueError: 1",
+  "failure_types": "ConnectTimeout: 89, ConnectionError: 28, SSLError: 24, HTTPError: 23, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -205,16 +205,16 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "ibps",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "ibps-calendar",
       "error_type": "SSLError"
     },
     {
       "source_id": "ibps-rrb",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "icmai",
-      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "iiser-admissions",
@@ -451,6 +451,10 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "rajeduboard",
