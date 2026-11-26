@@ -63,8 +63,8 @@ jobs:
       - name: Use installed Python on Windows runner
         if: runner.os == 'Windows'
         run: |
+          # GITHUB_PATH takes effect in subsequent steps, not in this step.
           echo 'C:\Program Files\Python312' >> "$GITHUB_PATH"
-          python --version
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
