@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-26T03:44:02.515450+00:00",
-  "scan_started_at": "2026-11-26T03:35:35.732113+00:00",
+  "last_checked_at": "2026-11-26T03:49:20.425695+00:00",
+  "scan_started_at": "2026-11-26T03:44:49.866162+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 165,
-  "sources_failed": 136,
+  "sources_succeeded": 167,
+  "sources_failed": 134,
   "new_candidates": 0,
-  "recovered_records": 390,
+  "recovered_records": 401,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 539,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 68
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, ConnectionError: 27, SSLError: 24, HTTPError: 23, ReadTimeout: 2",
+  "failure_types": "ConnectTimeout: 90, ConnectionError: 28, HTTPError: 23, SSLError: 23, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -83,6 +83,10 @@
     {
       "source_id": "barc-recruitment",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "bharatresultfind-discovery",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bihar-state-health-society-results-archive",
@@ -205,10 +209,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "ibps",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "ibps-calendar",
       "error_type": "SSLError"
     },
@@ -297,10 +297,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "kashmir-university",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "keralaresults",
       "error_type": "ConnectionError"
     },
@@ -367,10 +363,6 @@
     {
       "source_id": "nabard",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "nagaland-psc",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "naval-coastguard-jobs",
@@ -458,6 +450,10 @@
     },
     {
       "source_id": "rajasthan-rssb",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -575,10 +571,6 @@
     {
       "source_id": "rrcb-central",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "sebi-careers",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "secl-careers",
