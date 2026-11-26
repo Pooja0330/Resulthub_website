@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-26T03:19:14.412542+00:00",
-  "scan_started_at": "2026-11-26T03:12:07.120311+00:00",
+  "last_checked_at": "2026-11-26T03:26:54.529194+00:00",
+  "scan_started_at": "2026-11-26T03:20:07.142398+00:00",
   "sources_enabled": 301,
   "sources_succeeded": 169,
   "sources_failed": 132,
   "new_candidates": 0,
-  "recovered_records": 400,
+  "recovered_records": 405,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 539,
@@ -445,6 +445,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "rajasthan-university",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "rajeduboard",
       "error_type": "ConnectTimeout"
     },
@@ -587,10 +591,6 @@
     {
       "source_id": "tnmrbrecruit",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "tnpsc",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "tnresults",
