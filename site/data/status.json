@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-26T09:21:03.655236+00:00",
-  "scan_started_at": "2026-11-26T09:10:18.926684+00:00",
+  "last_checked_at": "2026-11-26T09:31:37.549060+00:00",
+  "scan_started_at": "2026-11-26T09:21:55.780688+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 168,
-  "sources_failed": 133,
+  "sources_succeeded": 167,
+  "sources_failed": 134,
   "new_candidates": 0,
-  "recovered_records": 397,
+  "recovered_records": 405,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 539,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 68
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 28, HTTPError: 23, SSLError: 22, ReadTimeout: 1",
+  "failure_types": "ConnectTimeout: 88, ConnectionError: 27, SSLError: 25, HTTPError: 23, ReadTimeout: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -210,6 +210,10 @@
     },
     {
       "source_id": "ibps-rrb",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-rrb-xv",
       "error_type": "SSLError"
     },
     {
@@ -425,8 +429,8 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ossc",
-      "error_type": "ConnectionError"
+      "source_id": "osssc",
+      "error_type": "SSLError"
     },
     {
       "source_id": "patna-university",
@@ -594,7 +598,7 @@
     },
     {
       "source_id": "tnmrbrecruit",
-      "error_type": "ConnectTimeout"
+      "error_type": "SSLError"
     },
     {
       "source_id": "tnresults",
