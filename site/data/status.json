@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-26T09:31:37.549060+00:00",
-  "scan_started_at": "2026-11-26T09:21:55.780688+00:00",
+  "last_checked_at": "2026-11-26T09:38:43.259310+00:00",
+  "scan_started_at": "2026-11-26T09:32:43.471761+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 167,
-  "sources_failed": 134,
+  "sources_succeeded": 168,
+  "sources_failed": 133,
   "new_candidates": 0,
-  "recovered_records": 405,
+  "recovered_records": 397,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 539,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 68
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, ConnectionError: 27, SSLError: 25, HTTPError: 23, ReadTimeout: 1",
+  "failure_types": "ConnectTimeout: 88, ConnectionError: 27, SSLError: 26, HTTPError: 21, ReadTimeout: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -141,10 +141,6 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "coal-india-careers",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "coast-guard-home",
       "error_type": "SSLError"
     },
@@ -209,11 +205,15 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-rrb",
+      "source_id": "ibps-po-mt",
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-rrb-xv",
+      "source_id": "ibps-recruitment",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-rrb",
       "error_type": "SSLError"
     },
     {
@@ -329,10 +329,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "mat-aima",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -354,10 +350,6 @@
     },
     {
       "source_id": "mppsc",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "mumbai-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -454,7 +446,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "rajeduboard",
@@ -623,6 +615,10 @@
     {
       "source_id": "tspsc",
       "error_type": "ConnectionError"
+    },
+    {
+      "source_id": "uppsc",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "upsc-active-exams",
