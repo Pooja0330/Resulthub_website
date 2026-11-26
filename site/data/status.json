@@ -1,12 +1,12 @@
 {
-  "last_checked_at": "2026-11-26T10:02:11.323939+00:00",
-  "scan_started_at": "2026-11-26T09:54:59.650886+00:00",
+  "last_checked_at": "2026-11-26T10:12:40.399376+00:00",
+  "scan_started_at": "2026-11-26T10:03:03.686026+00:00",
   "sources_enabled": 301,
   "sources_succeeded": 168,
   "sources_failed": 133,
-  "new_candidates": 1,
-  "recovered_records": 410,
-  "telegram_posts_sent": 1,
+  "new_candidates": 0,
+  "recovered_records": 401,
+  "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 539,
   "held_alert_reasons": {
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 68
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, ConnectionError: 27, SSLError: 25, HTTPError: 23, ValueError: 1",
+  "failure_types": "ConnectTimeout: 89, ConnectionError: 27, SSLError: 24, HTTPError: 23, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -210,10 +210,6 @@
     },
     {
       "source_id": "ibps-rrb",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-rrb-xv",
       "error_type": "SSLError"
     },
     {
@@ -450,6 +446,10 @@
     },
     {
       "source_id": "rajasthan-rssb",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
       "error_type": "ConnectTimeout"
     },
     {
