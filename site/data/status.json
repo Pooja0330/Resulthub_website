@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-26T08:41:19.541588+00:00",
-  "scan_started_at": "2026-11-26T08:31:38.917862+00:00",
+  "last_checked_at": "2026-11-26T08:51:47.472817+00:00",
+  "scan_started_at": "2026-11-26T08:42:15.715921+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 168,
-  "sources_failed": 133,
+  "sources_succeeded": 162,
+  "sources_failed": 139,
   "new_candidates": 0,
-  "recovered_records": 414,
+  "recovered_records": 398,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 539,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 68
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 27, HTTPError: 23, SSLError: 23, ReadTimeout: 1",
+  "failure_types": "ConnectTimeout: 91, ConnectionError: 31, HTTPError: 23, SSLError: 23, ReadTimeout: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -85,8 +85,20 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "bihar-daroga",
+      "error_type": "ConnectionError"
+    },
+    {
+      "source_id": "bihar-police",
+      "error_type": "ConnectionError"
+    },
+    {
       "source_id": "bihar-state-health-society-results-archive",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "bpsc",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "bse-ap",
@@ -103,6 +115,10 @@
     {
       "source_id": "bssc",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "btsc",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "cbse-previous-years-results",
@@ -253,10 +269,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "indiapost-recruitment",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -297,6 +309,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "kashmir-university",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "keralaresults",
       "error_type": "ConnectionError"
     },
@@ -331,6 +347,10 @@
     {
       "source_id": "mat-aima",
       "error_type": "HTTPError"
+    },
+    {
+      "source_id": "meghalaya-psc",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "merchant-navy-imu",
@@ -451,6 +471,10 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
