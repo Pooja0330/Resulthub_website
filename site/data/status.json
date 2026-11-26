@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-26T07:01:09.614791+00:00",
-  "scan_started_at": "2026-11-26T06:53:59.456446+00:00",
+  "last_checked_at": "2026-11-26T07:11:46.654292+00:00",
+  "scan_started_at": "2026-11-26T07:02:12.072906+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 168,
-  "sources_failed": 133,
+  "sources_succeeded": 167,
+  "sources_failed": 134,
   "new_candidates": 0,
-  "recovered_records": 405,
+  "recovered_records": 395,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 539,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 68
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 27, HTTPError: 23, SSLError: 23, ReadTimeout: 1",
+  "failure_types": "ConnectTimeout: 90, ConnectionError: 27, SSLError: 24, HTTPError: 23, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -209,6 +209,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "ibps-csa-xvi",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "ibps-rrb",
       "error_type": "SSLError"
     },
@@ -290,6 +294,10 @@
     },
     {
       "source_id": "karnataka-results",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "kerala-devaswom",
       "error_type": "ConnectTimeout"
     },
     {
@@ -447,10 +455,6 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
