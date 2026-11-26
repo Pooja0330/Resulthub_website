@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-26T02:16:42.108696+00:00",
-  "scan_started_at": "2026-11-26T02:10:22.601561+00:00",
+  "last_checked_at": "2026-11-26T02:27:07.468727+00:00",
+  "scan_started_at": "2026-11-26T02:17:40.653004+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 168,
-  "sources_failed": 133,
+  "sources_succeeded": 164,
+  "sources_failed": 137,
   "new_candidates": 0,
-  "recovered_records": 382,
+  "recovered_records": 365,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 539,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 68
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, ConnectionError: 27, SSLError: 23, HTTPError: 21, ReadTimeout: 1",
+  "failure_types": "ConnectTimeout: 92, ConnectionError: 28, SSLError: 24, HTTPError: 23, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -141,6 +141,10 @@
       "error_type": "HTTPError"
     },
     {
+      "source_id": "coal-india-careers",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "coast-guard-home",
       "error_type": "SSLError"
     },
@@ -207,6 +211,10 @@
     {
       "source_id": "hpssc",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "ibps",
+      "error_type": "SSLError"
     },
     {
       "source_id": "ibps-calendar",
@@ -329,6 +337,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "mat-aima",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -353,12 +365,12 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "nabard",
+      "source_id": "mumbai-university",
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "nagaland-psc",
-      "error_type": "ReadTimeout"
+      "source_id": "nabard",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "naval-coastguard-jobs",
@@ -423,6 +435,10 @@
     {
       "source_id": "osmania-university",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "ossc",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "osssc",
