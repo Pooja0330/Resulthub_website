@@ -1,9 +1,9 @@
 {
-  "last_checked_at": "2026-11-26T04:48:03.653533+00:00",
-  "scan_started_at": "2026-11-26T04:38:49.641909+00:00",
+  "last_checked_at": "2026-11-26T04:57:31.316637+00:00",
+  "scan_started_at": "2026-11-26T04:48:55.977471+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 168,
-  "sources_failed": 133,
+  "sources_succeeded": 166,
+  "sources_failed": 135,
   "new_candidates": 0,
   "recovered_records": 410,
   "telegram_posts_sent": 0,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 68
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 27, HTTPError: 23, SSLError: 23, ReadTimeout: 1",
+  "failure_types": "ConnectTimeout: 89, ConnectionError: 27, SSLError: 25, HTTPError: 24, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -210,6 +210,14 @@
     },
     {
       "source_id": "ibps-rrb",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-rrb-xv",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-spl-xvi",
       "error_type": "SSLError"
     },
     {
@@ -434,7 +442,7 @@
     },
     {
       "source_id": "pondicherry-university-old-results",
-      "error_type": "ReadTimeout"
+      "error_type": "HTTPError"
     },
     {
       "source_id": "punjab-psc",
