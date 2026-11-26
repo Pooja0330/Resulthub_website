@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-26T06:53:05.406373+00:00",
-  "scan_started_at": "2026-11-26T06:44:47.147098+00:00",
+  "last_checked_at": "2026-11-26T07:01:09.614791+00:00",
+  "scan_started_at": "2026-11-26T06:53:59.456446+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 162,
-  "sources_failed": 139,
+  "sources_succeeded": 168,
+  "sources_failed": 133,
   "new_candidates": 0,
-  "recovered_records": 401,
+  "recovered_records": 405,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 539,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 68
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, ConnectionError: 31, HTTPError: 23, SSLError: 23, ReadTimeout: 1",
+  "failure_types": "ConnectTimeout: 89, ConnectionError: 27, HTTPError: 23, SSLError: 23, ReadTimeout: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -85,20 +85,8 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "bihar-daroga",
-      "error_type": "ConnectionError"
-    },
-    {
-      "source_id": "bihar-police",
-      "error_type": "ConnectionError"
-    },
-    {
       "source_id": "bihar-state-health-society-results-archive",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "bpsc",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "bse-ap",
@@ -115,10 +103,6 @@
     {
       "source_id": "bssc",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "btsc",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "cbse-previous-years-results",
@@ -309,10 +293,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "kashmir-university",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "keralaresults",
       "error_type": "ConnectionError"
     },
@@ -349,10 +329,6 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "meghalaya-psc",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -383,10 +359,6 @@
     {
       "source_id": "nabard",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "nagaland-psc",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "naval-coastguard-jobs",
@@ -475,6 +447,10 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
