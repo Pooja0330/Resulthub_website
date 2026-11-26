@@ -44,6 +44,9 @@ jobs:
     # INDIAN_RUNNER_SETUP.md) to scan from India. Delete the variable to fall back.
     runs-on: ${{ vars.CHECK_RUNNER || 'ubuntu-latest' }}
     timeout-minutes: 15
+    defaults:
+      run:
+        shell: bash
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -55,6 +58,11 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
 
       - name: Install dependencies
         run: |
