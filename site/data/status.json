@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-27T16:57:05.269354+00:00",
-  "scan_started_at": "2026-11-27T16:49:41.663882+00:00",
+  "last_checked_at": "2026-11-27T17:03:51.302889+00:00",
+  "scan_started_at": "2026-11-27T16:58:08.218259+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 160,
-  "sources_failed": 141,
+  "sources_succeeded": 159,
+  "sources_failed": 142,
   "new_candidates": 0,
-  "recovered_records": 393,
+  "recovered_records": 390,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 93, ConnectionError: 31, HTTPError: 25, SSLError: 22, ValueError: 1",
+  "failure_types": "ConnectTimeout: 89, ConnectionError: 33, HTTPError: 25, SSLError: 23, ReadTimeout: 2",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -38,7 +38,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "andhra-university",
@@ -58,7 +58,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "apsc",
@@ -157,10 +157,6 @@
       "error_type": "ConnectionError"
     },
     {
-      "source_id": "columbia-institute-pharmacy-raipur",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "drdo-careers",
       "error_type": "ConnectionError"
     },
@@ -218,18 +214,18 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ibps-calendar",
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-recent-updates",
+      "source_id": "ibps-rrb",
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-rrb",
+      "source_id": "ibps-rrb-xv",
       "error_type": "SSLError"
     },
     {
@@ -271,6 +267,10 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "indiapost-recruitment",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -350,7 +350,7 @@
     },
     {
       "source_id": "meghalaya-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "merchant-navy-imu",
@@ -446,6 +446,10 @@
     },
     {
       "source_id": "osmania-university",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
@@ -614,7 +618,7 @@
     },
     {
       "source_id": "sikkim-university",
-      "error_type": "ConnectTimeout"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "tamilnadu-board-official",
