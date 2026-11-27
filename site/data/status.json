@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-27T16:22:11.570642+00:00",
-  "scan_started_at": "2026-11-27T16:16:37.553535+00:00",
+  "last_checked_at": "2026-11-27T16:28:12.239017+00:00",
+  "scan_started_at": "2026-11-27T16:23:15.763620+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 156,
-  "sources_failed": 145,
+  "sources_succeeded": 159,
+  "sources_failed": 142,
   "new_candidates": 0,
-  "recovered_records": 359,
+  "recovered_records": 373,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, ConnectionError: 37, HTTPError: 25, SSLError: 24, ReadTimeout: 1",
+  "failure_types": "ConnectTimeout: 93, ConnectionError: 32, HTTPError: 25, SSLError: 22, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -38,7 +38,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -46,7 +46,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -221,19 +221,11 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "ibps",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "ibps-calendar",
       "error_type": "SSLError"
     },
     {
       "source_id": "ibps-rrb",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-rrb-xv",
       "error_type": "SSLError"
     },
     {
@@ -282,7 +274,7 @@
     },
     {
       "source_id": "jharkhand-psc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "jkbose",
@@ -594,7 +586,7 @@
     },
     {
       "source_id": "rrc-eastern",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "rrc-northern",
@@ -626,7 +618,7 @@
     },
     {
       "source_id": "sikkim-university",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "tamilnadu-board-official",
@@ -639,10 +631,6 @@
     {
       "source_id": "telangana-results",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "tnpsc",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "tnresults",
