@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-27T19:49:12.328759+00:00",
-  "scan_started_at": "2026-11-27T19:44:21.237280+00:00",
+  "last_checked_at": "2026-11-27T19:56:54.331196+00:00",
+  "scan_started_at": "2026-11-27T19:50:36.557105+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 166,
-  "sources_failed": 135,
+  "sources_succeeded": 170,
+  "sources_failed": 131,
   "new_candidates": 0,
-  "recovered_records": 396,
+  "recovered_records": 413,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 29, HTTPError: 24, SSLError: 23, ValueError: 1",
+  "failure_types": "ConnectTimeout: 89, ConnectionError: 27, HTTPError: 23, SSLError: 22, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -141,10 +141,6 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "coal-india-careers",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "coast-guard-home",
       "error_type": "SSLError"
     },
@@ -210,11 +206,11 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps",
-      "error_type": "SSLError"
+      "error_type": "HTTPError"
     },
     {
       "source_id": "ibps-calendar",
@@ -333,10 +329,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "mat-aima",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -358,10 +350,6 @@
     },
     {
       "source_id": "mppsc",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "mumbai-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -575,10 +563,6 @@
     {
       "source_id": "rrcb-central",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "sebi-careers",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "secl-careers",
