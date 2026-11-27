@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-27T12:06:29.047462+00:00",
-  "scan_started_at": "2026-11-27T12:01:20.682026+00:00",
+  "last_checked_at": "2026-11-27T12:13:35.071116+00:00",
+  "scan_started_at": "2026-11-27T12:07:43.403197+00:00",
   "sources_enabled": 301,
   "sources_succeeded": 171,
   "sources_failed": 130,
   "new_candidates": 0,
-  "recovered_records": 416,
+  "recovered_records": 410,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, ConnectionError: 27, HTTPError: 23, SSLError: 22, ValueError: 1",
+  "failure_types": "ConnectTimeout: 87, ConnectionError: 28, SSLError: 23, HTTPError: 21, ReadTimeout: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -141,10 +141,6 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "coal-india-careers",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "coast-guard-home",
       "error_type": "SSLError"
     },
@@ -206,6 +202,10 @@
     },
     {
       "source_id": "ibps-calendar",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-recent-updates",
       "error_type": "SSLError"
     },
     {
@@ -321,10 +321,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "mat-aima",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -346,10 +342,6 @@
     },
     {
       "source_id": "mppsc",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "mumbai-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -443,6 +435,10 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
@@ -571,6 +567,10 @@
     {
       "source_id": "sikkim-psc",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "sikkim-university",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "tamilnadu-board-official",
