@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-27T11:16:02.947045+00:00",
-  "scan_started_at": "2026-11-27T11:06:18.284435+00:00",
+  "last_checked_at": "2026-11-27T11:23:09.630485+00:00",
+  "scan_started_at": "2026-11-27T11:17:10.419918+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 168,
-  "sources_failed": 133,
+  "sources_succeeded": 172,
+  "sources_failed": 129,
   "new_candidates": 0,
-  "recovered_records": 404,
+  "recovered_records": 407,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 27, SSLError: 24, HTTPError: 23, ValueError: 1",
+  "failure_types": "ConnectTimeout: 88, ConnectionError: 27, SSLError: 23, HTTPError: 21, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -141,10 +141,6 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "coal-india-careers",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "coast-guard-home",
       "error_type": "SSLError"
     },
@@ -205,15 +201,15 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "ibps",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "ibps-calendar",
       "error_type": "SSLError"
     },
     {
       "source_id": "ibps-rrb",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-spl-xvi",
       "error_type": "SSLError"
     },
     {
@@ -309,10 +305,6 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "kvs",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "kvs-recruitment",
       "error_type": "ValueError"
     },
@@ -327,10 +319,6 @@
     {
       "source_id": "manipur-board",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "mat-aima",
-      "error_type": "HTTPError"
     },
     {
       "source_id": "merchant-navy-imu",
@@ -354,10 +342,6 @@
     },
     {
       "source_id": "mppsc",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "mumbai-university",
       "error_type": "ConnectTimeout"
     },
     {
