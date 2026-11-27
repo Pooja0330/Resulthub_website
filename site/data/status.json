@@ -1,12 +1,12 @@
 {
-  "last_checked_at": "2026-11-27T09:42:24.275242+00:00",
-  "scan_started_at": "2026-11-27T09:33:21.931250+00:00",
+  "last_checked_at": "2026-11-27T09:54:06.952489+00:00",
+  "scan_started_at": "2026-11-27T09:43:26.567297+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 168,
-  "sources_failed": 133,
-  "new_candidates": 1,
+  "sources_succeeded": 169,
+  "sources_failed": 132,
+  "new_candidates": 0,
   "recovered_records": 399,
-  "telegram_posts_sent": 1,
+  "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
   "held_alert_reasons": {
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, ConnectionError: 28, SSLError: 24, HTTPError: 23, ValueError: 1",
+  "failure_types": "ConnectTimeout: 88, ConnectionError: 27, HTTPError: 23, SSLError: 23, ReadTimeout: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -206,10 +206,6 @@
     },
     {
       "source_id": "ibps-calendar",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-recruitment",
       "error_type": "SSLError"
     },
     {
@@ -454,7 +450,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
