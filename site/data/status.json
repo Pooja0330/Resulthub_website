@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-27T20:13:49.704072+00:00",
-  "scan_started_at": "2026-11-27T20:05:02.641859+00:00",
+  "last_checked_at": "2026-11-27T20:22:14.116089+00:00",
+  "scan_started_at": "2026-11-27T20:14:46.141818+00:00",
   "sources_enabled": 301,
   "sources_succeeded": 163,
   "sources_failed": 138,
   "new_candidates": 0,
-  "recovered_records": 371,
+  "recovered_records": 387,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, ConnectionError: 30, HTTPError: 25, SSLError: 23, ValueError: 1",
+  "failure_types": "ConnectTimeout: 90, ConnectionError: 28, HTTPError: 25, SSLError: 23, ReadTimeout: 2",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -38,7 +38,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -58,7 +58,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -221,7 +221,7 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-recent-updates",
+      "source_id": "ibps-csa-xvi",
       "error_type": "SSLError"
     },
     {
@@ -269,6 +269,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "indiapost-recruitment",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -306,10 +310,6 @@
     },
     {
       "source_id": "karnataka-results",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "kerala-devaswom",
       "error_type": "ConnectTimeout"
     },
     {
@@ -470,7 +470,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ConnectTimeout"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
