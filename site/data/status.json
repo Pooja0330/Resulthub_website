@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-27T15:33:02.309879+00:00",
-  "scan_started_at": "2026-11-27T15:23:55.293789+00:00",
+  "last_checked_at": "2026-11-27T15:42:06.146533+00:00",
+  "scan_started_at": "2026-11-27T15:34:08.957343+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 166,
-  "sources_failed": 135,
+  "sources_succeeded": 162,
+  "sources_failed": 139,
   "new_candidates": 0,
-  "recovered_records": 386,
+  "recovered_records": 383,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, ConnectionError: 30, HTTPError: 24, SSLError: 22, ReadTimeout: 1",
+  "failure_types": "ConnectTimeout: 88, ConnectionError: 32, HTTPError: 25, SSLError: 23, ReadTimeout: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -38,7 +38,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "andhra-university",
@@ -46,7 +46,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -153,6 +153,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "columbia-ciet-raipur",
+      "error_type": "ConnectionError"
+    },
+    {
       "source_id": "drdo-careers",
       "error_type": "ConnectionError"
     },
@@ -218,6 +222,10 @@
     },
     {
       "source_id": "ibps-rrb",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-spl-xvi",
       "error_type": "SSLError"
     },
     {
@@ -465,6 +473,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "ranchi-university",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "resultbharat-syllabus",
       "error_type": "HTTPError"
     },
@@ -591,6 +603,10 @@
     {
       "source_id": "sikkim-psc",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "sikkim-university",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "tamilnadu-board-official",
