@@ -1,12 +1,12 @@
 {
-  "last_checked_at": "2026-11-27T12:39:47.314260+00:00",
-  "scan_started_at": "2026-11-27T12:33:50.876207+00:00",
+  "last_checked_at": "2026-11-27T12:49:54.491966+00:00",
+  "scan_started_at": "2026-11-27T12:40:52.972052+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 169,
-  "sources_failed": 132,
-  "new_candidates": 0,
-  "recovered_records": 413,
-  "telegram_posts_sent": 0,
+  "sources_succeeded": 168,
+  "sources_failed": 133,
+  "new_candidates": 1,
+  "recovered_records": 405,
+  "telegram_posts_sent": 1,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
   "held_alert_reasons": {
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 87, ConnectionError: 29, HTTPError: 24, SSLError: 22, ValueError: 1",
+  "failure_types": "ConnectTimeout: 87, ConnectionError: 29, HTTPError: 24, SSLError: 22, ReadTimeout: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -46,7 +46,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ap-psc",
@@ -58,7 +58,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -206,7 +206,7 @@
     },
     {
       "source_id": "ibps",
-      "error_type": "SSLError"
+      "error_type": "HTTPError"
     },
     {
       "source_id": "ibps-calendar",
@@ -255,6 +255,10 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "indiapost-recruitment",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -425,6 +429,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "osssc",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -451,10 +459,6 @@
     {
       "source_id": "rajeduboard",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "ranchi-university",
-      "error_type": "HTTPError"
     },
     {
       "source_id": "resultbharat-syllabus",
