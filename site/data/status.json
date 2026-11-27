@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-27T23:03:38.862848+00:00",
-  "scan_started_at": "2026-11-27T22:55:47.535320+00:00",
+  "last_checked_at": "2026-11-27T23:11:20.700313+00:00",
+  "scan_started_at": "2026-11-27T23:04:42.275899+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 166,
-  "sources_failed": 135,
+  "sources_succeeded": 164,
+  "sources_failed": 137,
   "new_candidates": 0,
-  "recovered_records": 390,
+  "recovered_records": 385,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, ConnectionError: 29, HTTPError: 24, SSLError: 22, ValueError: 1",
+  "failure_types": "ConnectTimeout: 89, ConnectionError: 30, HTTPError: 24, SSLError: 22, ReadTimeout: 2",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -74,7 +74,7 @@
     },
     {
       "source_id": "assam-direct",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "barc-careers",
@@ -210,15 +210,23 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps-calendar",
       "error_type": "SSLError"
     },
     {
+      "source_id": "ibps-recent-updates",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "ibps-rrb",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "icmr-careers",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "iiser-admissions",
@@ -259,6 +267,10 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "indiapost-recruitment",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -429,10 +441,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "osssc",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -458,7 +466,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "rajeduboard",
