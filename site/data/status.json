@@ -1,13 +1,13 @@
 {
-  "last_checked_at": "2026-11-27T06:23:23.591804+00:00",
-  "scan_started_at": "2026-11-27T06:14:09.993926+00:00",
+  "last_checked_at": "2026-11-27T06:29:12.141740+00:00",
+  "scan_started_at": "2026-11-27T06:24:23.641947+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 168,
-  "sources_failed": 133,
-  "new_candidates": 9,
-  "recovered_records": 395,
+  "sources_succeeded": 164,
+  "sources_failed": 137,
+  "new_candidates": 0,
+  "recovered_records": 381,
   "telegram_posts_sent": 10,
-  "alerts_pending": 200,
+  "alerts_pending": 190,
   "alerts_held_for_review": 558,
   "held_alert_reasons": {
     "Pre-launch backlog: publication date/current status not independently verified; review before public posting.": 17,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, ConnectionError: 26, SSLError: 24, HTTPError: 23, ValueError: 1",
+  "failure_types": "ConnectTimeout: 94, ConnectionError: 26, HTTPError: 23, SSLError: 23, ReadTimeout: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -153,6 +153,14 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "columbia-ciet-raipur",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "columbia-institute-pharmacy-raipur",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "drdo-careers",
       "error_type": "ConnectionError"
     },
@@ -209,10 +217,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-careers",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "ibps-rrb",
       "error_type": "SSLError"
     },
@@ -259,6 +263,10 @@
     {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "jharkhand-psc",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "jkbose",
@@ -331,6 +339,10 @@
     {
       "source_id": "mat-aima",
       "error_type": "HTTPError"
+    },
+    {
+      "source_id": "meghalaya-board",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "merchant-navy-imu",
@@ -454,7 +466,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ConnectTimeout"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
@@ -582,6 +594,10 @@
     },
     {
       "source_id": "sikkim-psc",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "sikkim-university",
       "error_type": "ConnectTimeout"
     },
     {
