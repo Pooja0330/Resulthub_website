@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-27T13:29:23.012920+00:00",
-  "scan_started_at": "2026-11-27T13:22:31.338976+00:00",
+  "last_checked_at": "2026-11-27T13:40:31.792546+00:00",
+  "scan_started_at": "2026-11-27T13:30:26.531048+00:00",
   "sources_enabled": 301,
   "sources_succeeded": 169,
   "sources_failed": 132,
   "new_candidates": 0,
-  "recovered_records": 411,
+  "recovered_records": 408,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 27, HTTPError: 24, SSLError: 21, ReadTimeout: 1",
+  "failure_types": "ConnectTimeout: 88, ConnectionError: 28, HTTPError: 24, SSLError: 22, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -357,10 +357,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "nagaland-psc",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "naval-coastguard-jobs",
       "error_type": "SSLError"
     },
@@ -425,6 +421,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "osssc",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -450,7 +450,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "rajeduboard",
