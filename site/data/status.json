@@ -1,9 +1,9 @@
 {
-  "last_checked_at": "2026-11-27T20:29:47.541917+00:00",
-  "scan_started_at": "2026-11-27T20:23:16.613169+00:00",
+  "last_checked_at": "2026-11-27T20:40:33.678347+00:00",
+  "scan_started_at": "2026-11-27T20:30:49.089106+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 164,
-  "sources_failed": 137,
+  "sources_succeeded": 165,
+  "sources_failed": 136,
   "new_candidates": 0,
   "recovered_records": 387,
   "telegram_posts_sent": 0,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 29, HTTPError: 25, SSLError: 22, ReadTimeout: 2",
+  "failure_types": "ConnectTimeout: 90, ConnectionError: 28, HTTPError: 25, SSLError: 22, ReadTimeout: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -210,7 +210,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps",
@@ -263,10 +263,6 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "indiapost-recruitment",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
