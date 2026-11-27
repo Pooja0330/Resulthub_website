@@ -1,12 +1,12 @@
 {
-  "last_checked_at": "2026-11-27T12:32:50.002999+00:00",
-  "scan_started_at": "2026-11-27T12:23:34.098229+00:00",
+  "last_checked_at": "2026-11-27T12:39:47.314260+00:00",
+  "scan_started_at": "2026-11-27T12:33:50.876207+00:00",
   "sources_enabled": 301,
   "sources_succeeded": 169,
   "sources_failed": 132,
-  "new_candidates": 3,
-  "recovered_records": 407,
-  "telegram_posts_sent": 3,
+  "new_candidates": 0,
+  "recovered_records": 413,
+  "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
   "held_alert_reasons": {
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, ConnectionError: 27, HTTPError: 23, SSLError: 22, ReadTimeout: 2",
+  "failure_types": "ConnectTimeout: 87, ConnectionError: 29, HTTPError: 24, SSLError: 22, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -58,7 +58,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "apsc",
@@ -203,6 +203,10 @@
     {
       "source_id": "hpsc",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "ibps",
+      "error_type": "SSLError"
     },
     {
       "source_id": "ibps-calendar",
@@ -421,10 +425,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "osssc",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -446,11 +446,15 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "rajeduboard",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "ranchi-university",
+      "error_type": "HTTPError"
     },
     {
       "source_id": "resultbharat-syllabus",
@@ -575,10 +579,6 @@
     {
       "source_id": "sikkim-psc",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "sikkim-university",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "tamilnadu-board-official",
