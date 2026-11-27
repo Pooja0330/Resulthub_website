@@ -1,9 +1,9 @@
 {
-  "last_checked_at": "2026-11-27T15:48:20.746249+00:00",
-  "scan_started_at": "2026-11-27T15:43:05.214415+00:00",
+  "last_checked_at": "2026-11-27T15:56:19.981885+00:00",
+  "scan_started_at": "2026-11-27T15:49:21.693266+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 160,
-  "sources_failed": 141,
+  "sources_succeeded": 159,
+  "sources_failed": 142,
   "new_candidates": 0,
   "recovered_records": 381,
   "telegram_posts_sent": 0,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, ConnectionError: 33, HTTPError: 25, SSLError: 22, ReadTimeout: 1",
+  "failure_types": "ConnectTimeout: 95, ConnectionError: 29, HTTPError: 25, SSLError: 23, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -46,7 +46,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -154,7 +154,7 @@
     },
     {
       "source_id": "columbia-ciet-raipur",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "drdo-careers",
@@ -214,10 +214,14 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps-calendar",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-csa-xvi",
       "error_type": "SSLError"
     },
     {
@@ -342,7 +346,7 @@
     },
     {
       "source_id": "meghalaya-board",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "merchant-navy-imu",
@@ -470,7 +474,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "rajeduboard",
