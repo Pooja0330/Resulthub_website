@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-27T21:06:57.366318+00:00",
-  "scan_started_at": "2026-11-27T20:57:18.608371+00:00",
+  "last_checked_at": "2026-11-27T21:15:28.721409+00:00",
+  "scan_started_at": "2026-11-27T21:07:58.028606+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 166,
-  "sources_failed": 135,
+  "sources_succeeded": 167,
+  "sources_failed": 134,
   "new_candidates": 0,
-  "recovered_records": 396,
+  "recovered_records": 404,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 29, HTTPError: 25, SSLError: 22, ValueError: 1",
+  "failure_types": "ConnectTimeout: 89, ConnectionError: 29, HTTPError: 24, SSLError: 22, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -214,7 +214,7 @@
     },
     {
       "source_id": "ibps",
-      "error_type": "HTTPError"
+      "error_type": "SSLError"
     },
     {
       "source_id": "ibps-calendar",
@@ -430,10 +430,6 @@
     },
     {
       "source_id": "osmania-university",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
