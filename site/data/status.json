@@ -1,13 +1,13 @@
 {
-  "last_checked_at": "2026-11-27T08:14:13.139093+00:00",
-  "scan_started_at": "2026-11-27T08:02:04.042248+00:00",
+  "last_checked_at": "2026-11-27T08:23:35.712505+00:00",
+  "scan_started_at": "2026-11-27T08:15:06.651874+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 167,
-  "sources_failed": 134,
+  "sources_succeeded": 169,
+  "sources_failed": 132,
   "new_candidates": 0,
-  "recovered_records": 399,
-  "telegram_posts_sent": 9,
-  "alerts_pending": 83,
+  "recovered_records": 407,
+  "telegram_posts_sent": 10,
+  "alerts_pending": 73,
   "alerts_held_for_review": 558,
   "held_alert_reasons": {
     "Pre-launch backlog: publication date/current status not independently verified; review before public posting.": 17,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, ConnectionError: 28, SSLError: 25, HTTPError: 23, ValueError: 1",
+  "failure_types": "ConnectTimeout: 89, ConnectionError: 28, HTTPError: 23, SSLError: 22, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -185,6 +185,10 @@
       "error_type": "ConnectionError"
     },
     {
+      "source_id": "gseb",
+      "error_type": "ConnectionError"
+    },
+    {
       "source_id": "gujarat-gsssb",
       "error_type": "ConnectionError"
     },
@@ -206,14 +210,6 @@
     },
     {
       "source_id": "ibps-calendar",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-careers",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-csa-xvi",
       "error_type": "SSLError"
     },
     {
@@ -414,7 +410,7 @@
     },
     {
       "source_id": "nvs",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "nvs-recruitment",
@@ -430,10 +426,6 @@
     },
     {
       "source_id": "osmania-university",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
