@@ -27,7 +27,8 @@ permissions:
   id-token: write
 
 concurrency:
-  group: goresult-hub-publish-queue
+  # New group releases any stale runs queued under the old self-hosted runner.
+  group: goresult-hub-publish-queue-ubuntu-v2
   cancel-in-progress: false
 
 jobs:
