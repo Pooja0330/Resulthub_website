@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-27T19:29:03.073711+00:00",
-  "scan_started_at": "2026-11-27T19:22:14.686348+00:00",
+  "last_checked_at": "2026-11-27T19:37:05.557227+00:00",
+  "scan_started_at": "2026-11-27T19:30:00.877245+00:00",
   "sources_enabled": 301,
   "sources_succeeded": 164,
   "sources_failed": 137,
   "new_candidates": 0,
-  "recovered_records": 390,
+  "recovered_records": 376,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, ConnectionError: 30, HTTPError: 24, SSLError: 23, ValueError: 1",
+  "failure_types": "ConnectTimeout: 90, ConnectionError: 31, HTTPError: 24, SSLError: 22, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -177,6 +177,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "gate",
+      "error_type": "ConnectionError"
+    },
+    {
       "source_id": "goa-technical-education-old-results",
       "error_type": "SSLError"
     },
@@ -218,10 +222,6 @@
     },
     {
       "source_id": "ibps-rrb",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-rrb-xv",
       "error_type": "SSLError"
     },
     {
