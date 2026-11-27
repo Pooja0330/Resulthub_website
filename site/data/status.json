@@ -1,13 +1,13 @@
 {
-  "last_checked_at": "2026-11-27T10:09:36.731735+00:00",
-  "scan_started_at": "2026-11-27T10:00:38.437319+00:00",
+  "last_checked_at": "2026-11-27T10:17:12.541393+00:00",
+  "scan_started_at": "2026-11-27T10:10:32.563202+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 168,
-  "sources_failed": 133,
-  "new_candidates": 4,
-  "recovered_records": 397,
-  "telegram_posts_sent": 4,
-  "alerts_pending": 0,
+  "sources_succeeded": 167,
+  "sources_failed": 134,
+  "new_candidates": 2,
+  "recovered_records": 401,
+  "telegram_posts_sent": 1,
+  "alerts_pending": 1,
   "alerts_held_for_review": 558,
   "held_alert_reasons": {
     "Pre-launch backlog: publication date/current status not independently verified; review before public posting.": 17,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 88, ConnectionError: 27, HTTPError: 24, SSLError: 24, ValueError: 1",
+  "failure_types": "ConnectTimeout: 87, ConnectionError: 27, HTTPError: 24, SSLError: 24, ReadTimeout: 2",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -66,7 +66,7 @@
     },
     {
       "source_id": "arunachal-psc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "assam-board-official",
@@ -205,11 +205,15 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "ibps",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "ibps-calendar",
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-recent-updates",
+      "source_id": "ibps-recruitment",
       "error_type": "SSLError"
     },
     {
@@ -453,6 +457,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "rajasthan-university",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "rajeduboard",
       "error_type": "ConnectTimeout"
     },
@@ -615,10 +623,6 @@
     {
       "source_id": "tspsc",
       "error_type": "ConnectionError"
-    },
-    {
-      "source_id": "uppsc",
-      "error_type": "HTTPError"
     },
     {
       "source_id": "upsc-active-exams",
