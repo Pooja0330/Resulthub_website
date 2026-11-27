@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-27T13:56:34.582257+00:00",
-  "scan_started_at": "2026-11-27T13:50:39.452288+00:00",
+  "last_checked_at": "2026-11-27T14:07:11.756452+00:00",
+  "scan_started_at": "2026-11-27T13:57:37.034188+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 170,
-  "sources_failed": 131,
+  "sources_succeeded": 168,
+  "sources_failed": 133,
   "new_candidates": 0,
-  "recovered_records": 417,
+  "recovered_records": 411,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 87, ConnectionError: 28, HTTPError: 24, SSLError: 22, ValueError: 1",
+  "failure_types": "ConnectTimeout: 87, ConnectionError: 28, HTTPError: 25, SSLError: 23, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -209,6 +209,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "ibps-recent-updates",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "ibps-rrb",
       "error_type": "SSLError"
     },
@@ -251,6 +255,10 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "irdai-careers",
+      "error_type": "HTTPError"
     },
     {
       "source_id": "jadavpur-university",
