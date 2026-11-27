@@ -1,13 +1,13 @@
 {
-  "last_checked_at": "2026-11-27T08:41:54.772804+00:00",
-  "scan_started_at": "2026-11-27T08:34:36.483912+00:00",
+  "last_checked_at": "2026-11-27T08:49:25.284346+00:00",
+  "scan_started_at": "2026-11-27T08:42:59.262030+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 167,
-  "sources_failed": 134,
-  "new_candidates": 1,
-  "recovered_records": 399,
+  "sources_succeeded": 169,
+  "sources_failed": 132,
+  "new_candidates": 0,
+  "recovered_records": 402,
   "telegram_posts_sent": 10,
-  "alerts_pending": 54,
+  "alerts_pending": 44,
   "alerts_held_for_review": 558,
   "held_alert_reasons": {
     "Pre-launch backlog: publication date/current status not independently verified; review before public posting.": 17,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 27, SSLError: 24, HTTPError: 23, ReadTimeout: 1",
+  "failure_types": "ConnectTimeout: 88, ConnectionError: 28, SSLError: 25, HTTPError: 21, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -141,10 +141,6 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "coal-india-careers",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "coast-guard-home",
       "error_type": "SSLError"
     },
@@ -209,11 +205,15 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-recruitment",
+      "source_id": "ibps-csa-xvi",
       "error_type": "SSLError"
     },
     {
       "source_id": "ibps-rrb",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-rrb-xv",
       "error_type": "SSLError"
     },
     {
@@ -255,10 +255,6 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "indiapost-gds",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -331,10 +327,6 @@
     {
       "source_id": "manipur-board",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "mat-aima",
-      "error_type": "HTTPError"
     },
     {
       "source_id": "merchant-navy-imu",
@@ -458,7 +450,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "rajeduboard",
