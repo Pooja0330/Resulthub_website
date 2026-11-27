@@ -1,13 +1,13 @@
 {
-  "last_checked_at": "2026-11-27T09:08:26.021002+00:00",
-  "scan_started_at": "2026-11-27T09:00:46.431848+00:00",
+  "last_checked_at": "2026-11-27T09:15:56.584411+00:00",
+  "scan_started_at": "2026-11-27T09:09:29.100462+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 169,
-  "sources_failed": 132,
+  "sources_succeeded": 171,
+  "sources_failed": 130,
   "new_candidates": 0,
-  "recovered_records": 399,
+  "recovered_records": 402,
   "telegram_posts_sent": 10,
-  "alerts_pending": 24,
+  "alerts_pending": 14,
   "alerts_held_for_review": 558,
   "held_alert_reasons": {
     "Pre-launch backlog: publication date/current status not independently verified; review before public posting.": 17,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 27, HTTPError: 23, SSLError: 23, ValueError: 1",
+  "failure_types": "ConnectTimeout: 87, ConnectionError: 27, SSLError: 24, HTTPError: 21, ReadTimeout: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -141,10 +141,6 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "coal-india-careers",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "coast-guard-home",
       "error_type": "SSLError"
     },
@@ -206,6 +202,10 @@
     },
     {
       "source_id": "ibps-calendar",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-recruitment",
       "error_type": "SSLError"
     },
     {
@@ -325,10 +325,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "mat-aima",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -350,10 +346,6 @@
     },
     {
       "source_id": "mppsc",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "mumbai-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -450,7 +442,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ConnectTimeout"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
