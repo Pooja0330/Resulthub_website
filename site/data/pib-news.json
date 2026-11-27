@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-8d33f70fb38d7a7e98fec674",
+    "title": "भारत 29 नवंबर को फिट इंडिया संडे ऑन साइकिल के 100वें संस्करण के लिए तैयार",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2342530&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2342530&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-27T10:32:01.665510+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-61111a174035db9eacc0374a",
     "title": "उपराष्ट्रपति ने नई दिल्ली स्थित होली फैमिली अस्‍पताल के नए सुपर स्पेशियलिटी ब्लॉक का उद्घाटन किया",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2342520&lang=1",
@@ -251,23 +268,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-26T15:42:01.583453+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-76608725e397a4e0fad5ee5b",
-    "title": "भारत की राष्ट्रपति भारत के उच्चतम न्यायालय द्वारा आयोजित संविधान दिवस समारोह में शामिल हुईं",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2342201&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2342201&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-26T15:42:01.583392+00:00",
     "archive": false,
     "verified": true
   },
