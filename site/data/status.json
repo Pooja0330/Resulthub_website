@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-27T17:03:51.302889+00:00",
-  "scan_started_at": "2026-11-27T16:58:08.218259+00:00",
+  "last_checked_at": "2026-11-27T17:09:50.525824+00:00",
+  "scan_started_at": "2026-11-27T17:04:49.090765+00:00",
   "sources_enabled": 301,
   "sources_succeeded": 159,
   "sources_failed": 142,
   "new_candidates": 0,
-  "recovered_records": 390,
+  "recovered_records": 371,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 33, HTTPError: 25, SSLError: 23, ReadTimeout: 2",
+  "failure_types": "ConnectTimeout: 90, ConnectionError: 34, HTTPError: 24, SSLError: 22, ReadTimeout: 2",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -157,6 +157,10 @@
       "error_type": "ConnectionError"
     },
     {
+      "source_id": "csvtu-university",
+      "error_type": "ConnectionError"
+    },
+    {
       "source_id": "drdo-careers",
       "error_type": "ConnectionError"
     },
@@ -214,7 +218,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps-calendar",
@@ -222,10 +226,6 @@
     },
     {
       "source_id": "ibps-rrb",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-rrb-xv",
       "error_type": "SSLError"
     },
     {
@@ -269,16 +269,12 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "indiapost-recruitment",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
     {
       "source_id": "jharkhand-psc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "jkbose",
@@ -350,7 +346,7 @@
     },
     {
       "source_id": "meghalaya-board",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "merchant-navy-imu",
@@ -477,12 +473,16 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "rajasthan-university",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "rajeduboard",
       "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ranchi-university",
-      "error_type": "HTTPError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "resultbharat-syllabus",
@@ -586,7 +586,7 @@
     },
     {
       "source_id": "rrc-eastern",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rrc-northern",
@@ -618,7 +618,7 @@
     },
     {
       "source_id": "sikkim-university",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "tamilnadu-board-official",
