@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-27T16:02:19.362466+00:00",
-  "scan_started_at": "2026-11-27T15:57:16.931694+00:00",
+  "last_checked_at": "2026-11-27T16:10:38.663968+00:00",
+  "scan_started_at": "2026-11-27T16:03:27.492862+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 159,
-  "sources_failed": 142,
+  "sources_succeeded": 160,
+  "sources_failed": 141,
   "new_candidates": 0,
-  "recovered_records": 371,
+  "recovered_records": 378,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, ConnectionError: 33, HTTPError: 25, SSLError: 22, ReadTimeout: 1",
+  "failure_types": "ConnectTimeout: 91, ConnectionError: 31, HTTPError: 25, SSLError: 22, ReadTimeout: 2",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -46,7 +46,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -154,10 +154,6 @@
     },
     {
       "source_id": "columbia-ciet-raipur",
-      "error_type": "ConnectionError"
-    },
-    {
-      "source_id": "csvtu-university",
       "error_type": "ConnectionError"
     },
     {
@@ -274,7 +270,7 @@
     },
     {
       "source_id": "jharkhand-psc",
-      "error_type": "ConnectionError"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jkbose",
@@ -346,7 +342,7 @@
     },
     {
       "source_id": "meghalaya-board",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "merchant-navy-imu",
@@ -474,7 +470,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ConnectTimeout"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
@@ -586,7 +582,7 @@
     },
     {
       "source_id": "rrc-eastern",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "rrc-northern",
@@ -618,7 +614,7 @@
     },
     {
       "source_id": "sikkim-university",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "tamilnadu-board-official",
