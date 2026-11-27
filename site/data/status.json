@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-27T22:00:18.740175+00:00",
-  "scan_started_at": "2026-11-27T21:51:42.128219+00:00",
+  "last_checked_at": "2026-11-27T22:07:34.117160+00:00",
+  "scan_started_at": "2026-11-27T22:01:20.179144+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 166,
-  "sources_failed": 135,
+  "sources_succeeded": 169,
+  "sources_failed": 132,
   "new_candidates": 0,
-  "recovered_records": 396,
+  "recovered_records": 400,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, ConnectionError: 28, HTTPError: 25, SSLError: 22, ValueError: 1",
+  "failure_types": "ConnectTimeout: 90, ConnectionError: 27, HTTPError: 23, SSLError: 22, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -138,10 +138,6 @@
     },
     {
       "source_id": "cisce-results",
-      "error_type": "HTTPError"
-    },
-    {
-      "source_id": "coal-india-careers",
       "error_type": "HTTPError"
     },
     {
@@ -333,10 +329,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "mat-aima",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -358,10 +350,6 @@
     },
     {
       "source_id": "mppsc",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "mumbai-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -458,6 +446,10 @@
     },
     {
       "source_id": "rajasthan-rssb",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -575,10 +567,6 @@
     {
       "source_id": "rrcb-central",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "sebi-careers",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "secl-careers",
