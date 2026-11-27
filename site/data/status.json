@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-27T16:15:23.687884+00:00",
-  "scan_started_at": "2026-11-27T16:11:34.099061+00:00",
+  "last_checked_at": "2026-11-27T16:22:11.570642+00:00",
+  "scan_started_at": "2026-11-27T16:16:37.553535+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 158,
-  "sources_failed": 143,
+  "sources_succeeded": 156,
+  "sources_failed": 145,
   "new_candidates": 0,
-  "recovered_records": 378,
+  "recovered_records": 359,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 93, ConnectionError: 31, HTTPError: 25, SSLError: 23, ReadTimeout: 1",
+  "failure_types": "ConnectTimeout: 88, ConnectionError: 37, HTTPError: 25, SSLError: 24, ReadTimeout: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -38,7 +38,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "andhra-university",
@@ -46,7 +46,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ap-psc",
@@ -58,7 +58,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "apsc",
@@ -157,6 +157,10 @@
       "error_type": "ConnectionError"
     },
     {
+      "source_id": "columbia-institute-pharmacy-raipur",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "drdo-careers",
       "error_type": "ConnectionError"
     },
@@ -217,15 +221,19 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "ibps",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "ibps-calendar",
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-po-mt",
+      "source_id": "ibps-rrb",
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-rrb",
+      "source_id": "ibps-rrb-xv",
       "error_type": "SSLError"
     },
     {
@@ -310,10 +318,6 @@
     },
     {
       "source_id": "karnataka-results",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "kashmir-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -478,7 +482,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "rajeduboard",
@@ -590,7 +594,7 @@
     },
     {
       "source_id": "rrc-eastern",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "rrc-northern",
@@ -622,7 +626,7 @@
     },
     {
       "source_id": "sikkim-university",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "tamilnadu-board-official",
@@ -635,6 +639,10 @@
     {
       "source_id": "telangana-results",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "tnpsc",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "tnresults",
