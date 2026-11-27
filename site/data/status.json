@@ -1,13 +1,13 @@
 {
-  "last_checked_at": "2026-11-27T06:59:59.121781+00:00",
-  "scan_started_at": "2026-11-27T06:50:15.851580+00:00",
+  "last_checked_at": "2026-11-27T07:07:58.424962+00:00",
+  "scan_started_at": "2026-11-27T07:00:56.797559+00:00",
   "sources_enabled": 301,
   "sources_succeeded": 169,
   "sources_failed": 132,
   "new_candidates": 0,
-  "recovered_records": 395,
+  "recovered_records": 399,
   "telegram_posts_sent": 10,
-  "alerts_pending": 160,
+  "alerts_pending": 150,
   "alerts_held_for_review": 558,
   "held_alert_reasons": {
     "Pre-launch backlog: publication date/current status not independently verified; review before public posting.": 17,
