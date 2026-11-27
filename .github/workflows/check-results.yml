@@ -34,10 +34,10 @@ jobs:
   check:
     outputs:
       changed: ${{ steps.commit.outputs.changed }}
-    # Many .gov.in sites block GitHub's overseas servers. Set the repository variable
-    # CHECK_RUNNER=self-hosted (after registering an Indian server, see
-    # INDIAN_RUNNER_SETUP.md) to scan from India. Delete the variable to fall back.
-    runs-on: ${{ vars.CHECK_RUNNER || 'ubuntu-latest' }}
+    # Use GitHub-hosted Ubuntu so setup-python provisions a complete Python
+    # environment (including pip). The previous Windows self-hosted runner had
+    # an incomplete Python install and could not install checker dependencies.
+    runs-on: ubuntu-latest
     timeout-minutes: 40
     defaults:
       run:
