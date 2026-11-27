@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-27T17:44:07.183447+00:00",
-  "scan_started_at": "2026-11-27T17:37:37.485888+00:00",
+  "last_checked_at": "2026-11-27T17:50:24.211157+00:00",
+  "scan_started_at": "2026-11-27T17:45:10.429556+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 159,
-  "sources_failed": 142,
+  "sources_succeeded": 158,
+  "sources_failed": 143,
   "new_candidates": 1,
-  "recovered_records": 390,
+  "recovered_records": 393,
   "telegram_posts_sent": 1,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, ConnectionError: 35, HTTPError: 25, SSLError: 22, ValueError: 1",
+  "failure_types": "ConnectTimeout: 94, ConnectionError: 31, HTTPError: 25, SSLError: 21, ReadTimeout: 2",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -58,7 +58,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "apsc",
@@ -155,6 +155,10 @@
     {
       "source_id": "columbia-ciet-raipur",
       "error_type": "ConnectionError"
+    },
+    {
+      "source_id": "columbia-institute-pharmacy-raipur",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "drdo-careers",
@@ -265,12 +269,20 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "indiapost-gds",
+      "error_type": "ReadTimeout"
+    },
+    {
+      "source_id": "indiapost-recruitment",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
     {
       "source_id": "jharkhand-psc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "jkbose",
@@ -342,7 +354,7 @@
     },
     {
       "source_id": "meghalaya-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "merchant-navy-imu",
@@ -445,20 +457,12 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "osssc",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
     {
       "source_id": "pondicherry-university-old-results",
       "error_type": "HTTPError"
-    },
-    {
-      "source_id": "portal-maharashtra-maharashtra-gov-in",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "punjab-psc",
