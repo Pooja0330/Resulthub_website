@@ -1,5 +1,22 @@
 [
   {
+    "id": "pib-4dcbdfabcfdd8faf936ff592",
+    "title": "भारत की राष्ट्रपति ने एझिमाला स्थित भारतीय नौसेना अकादमी में ऑटम टर्म 2026 की पासिंग आउट परेड का निरीक्षण किया",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2342975&lang=1",
+    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2342975&lang=1",
+    "source_id": "pib-independent-feed",
+    "source_name": "Press Information Bureau (PIB) — Official Press Release",
+    "authority": "Press Information Bureau (PIB)",
+    "exam_category": "Government & PIB Updates",
+    "category": "notification",
+    "region": "Central",
+    "state": "",
+    "published": "",
+    "detected_at": "2026-11-28T06:57:54.790870+00:00",
+    "archive": false,
+    "verified": true
+  },
+  {
     "id": "pib-5002b94710c0036fce32ea49",
     "title": "इंस्टीट्यूट ऑफ एयरोस्पेस मेडिसिन ने इंडियन सोसाइटी ऑफ एयरोस्पेस मेडिसिन (आईएसएएम) के 65वें वार्षिक सम्मेलन का आयोजन किया",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2342965&lang=1",
@@ -319,23 +336,6 @@
     "state": "",
     "published": "",
     "detected_at": "2026-11-27T14:07:17.320588+00:00",
-    "archive": false,
-    "verified": true
-  },
-  {
-    "id": "pib-3b22334d5b2f6e1e5167b753",
-    "title": "केंद्र सरकार के विभिन्न पदों पर सीधी भर्ती",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2342727&lang=1",
-    "official_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2342727&lang=1",
-    "source_id": "pib-independent-feed",
-    "source_name": "Press Information Bureau (PIB) — Official Press Release",
-    "authority": "Press Information Bureau (PIB)",
-    "exam_category": "Government & PIB Updates",
-    "category": "notification",
-    "region": "Central",
-    "state": "",
-    "published": "",
-    "detected_at": "2026-11-27T13:14:17.522593+00:00",
     "archive": false,
     "verified": true
   }
