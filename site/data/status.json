@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-28T01:36:36.170124+00:00",
-  "scan_started_at": "2026-11-28T01:26:56.768247+00:00",
+  "last_checked_at": "2026-11-28T01:46:09.941830+00:00",
+  "scan_started_at": "2026-11-28T01:37:34.924951+00:00",
   "sources_enabled": 301,
   "sources_succeeded": 166,
   "sources_failed": 135,
@@ -210,7 +210,7 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ibps-calendar",
@@ -458,7 +458,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "rajeduboard",
