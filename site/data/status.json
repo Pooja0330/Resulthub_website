@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-28T16:54:27.720759+00:00",
-  "scan_started_at": "2026-11-28T16:46:26.491959+00:00",
+  "last_checked_at": "2026-11-28T17:04:09.332872+00:00",
+  "scan_started_at": "2026-11-28T16:55:26.257528+00:00",
   "sources_enabled": 301,
   "sources_succeeded": 160,
   "sources_failed": 141,
   "new_candidates": 0,
-  "recovered_records": 395,
+  "recovered_records": 390,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
@@ -159,10 +159,6 @@
     {
       "source_id": "drdo-rac",
       "error_type": "ConnectionError"
-    },
-    {
-      "source_id": "du",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "du-exam-branch",
@@ -459,6 +455,10 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
