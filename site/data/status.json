@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-28T12:39:16.960805+00:00",
-  "scan_started_at": "2026-11-28T12:33:13.970397+00:00",
+  "last_checked_at": "2026-11-28T12:47:05.079291+00:00",
+  "scan_started_at": "2026-11-28T12:40:16.831894+00:00",
   "sources_enabled": 301,
   "sources_succeeded": 172,
   "sources_failed": 129,
   "new_candidates": 0,
-  "recovered_records": 414,
+  "recovered_records": 413,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
@@ -433,10 +433,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "rajasthan-university",
-      "error_type": "ConnectionError"
-    },
-    {
       "source_id": "rajeduboard",
       "error_type": "ConnectTimeout"
     },
@@ -551,6 +547,10 @@
     {
       "source_id": "rrcb-central",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "sebi-careers",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "secl-careers",
