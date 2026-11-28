@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-28T10:43:33.132999+00:00",
-  "scan_started_at": "2026-11-28T10:34:35.680316+00:00",
+  "last_checked_at": "2026-11-28T10:53:32.726241+00:00",
+  "scan_started_at": "2026-11-28T10:44:39.611281+00:00",
   "sources_enabled": 301,
   "sources_succeeded": 168,
   "sources_failed": 133,
   "new_candidates": 0,
-  "recovered_records": 403,
+  "recovered_records": 406,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
@@ -253,6 +253,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "irdai-careers",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -443,10 +447,6 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
