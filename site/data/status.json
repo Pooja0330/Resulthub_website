@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-28T16:29:37.318639+00:00",
-  "scan_started_at": "2026-11-28T16:22:04.920958+00:00",
+  "last_checked_at": "2026-11-28T16:37:12.121450+00:00",
+  "scan_started_at": "2026-11-28T16:30:37.578112+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 163,
-  "sources_failed": 138,
+  "sources_succeeded": 166,
+  "sources_failed": 135,
   "new_candidates": 0,
-  "recovered_records": 392,
+  "recovered_records": 401,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, ConnectionError: 28, HTTPError: 24, SSLError: 23, ReadTimeout: 2",
+  "failure_types": "ConnectTimeout: 90, ConnectionError: 29, HTTPError: 22, SSLError: 22, ReadTimeout: 2",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -141,10 +141,6 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "coal-india-careers",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "coast-guard-home",
       "error_type": "SSLError"
     },
@@ -217,7 +213,7 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-recent-updates",
+      "source_id": "ibps-po-mt",
       "error_type": "SSLError"
     },
     {
@@ -263,10 +259,6 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "indiapost-gds",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -337,10 +329,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "mat-aima",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -362,10 +350,6 @@
     },
     {
       "source_id": "mppsc",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "mumbai-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -434,10 +418,6 @@
     },
     {
       "source_id": "osmania-university",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
@@ -641,12 +621,20 @@
       "error_type": "ConnectionError"
     },
     {
+      "source_id": "upsc-active-examinations",
+      "error_type": "ReadTimeout"
+    },
+    {
       "source_id": "upsc-active-exams",
       "error_type": "HTTPError"
     },
     {
       "source_id": "upsc-exam-calendar",
       "error_type": "HTTPError"
+    },
+    {
+      "source_id": "upsc-final-results",
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "upsc-recruitment",
