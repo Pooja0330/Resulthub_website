@@ -1,9 +1,9 @@
 {
-  "last_checked_at": "2026-11-28T10:23:30.454027+00:00",
-  "scan_started_at": "2026-11-28T10:15:47.627550+00:00",
+  "last_checked_at": "2026-11-28T10:33:40.594642+00:00",
+  "scan_started_at": "2026-11-28T10:24:34.548338+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 169,
-  "sources_failed": 132,
+  "sources_succeeded": 168,
+  "sources_failed": 133,
   "new_candidates": 0,
   "recovered_records": 411,
   "telegram_posts_sent": 0,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, ConnectionError: 28, HTTPError: 23, SSLError: 21, ValueError: 1",
+  "failure_types": "ConnectTimeout: 90, ConnectionError: 28, HTTPError: 23, SSLError: 22, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -206,6 +206,10 @@
     },
     {
       "source_id": "ibps-calendar",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-recent-updates",
       "error_type": "SSLError"
     },
     {
