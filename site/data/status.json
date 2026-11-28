@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-28T15:50:44.377846+00:00",
-  "scan_started_at": "2026-11-28T15:44:14.905825+00:00",
+  "last_checked_at": "2026-11-28T15:58:21.884737+00:00",
+  "scan_started_at": "2026-11-28T15:51:40.470007+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 165,
-  "sources_failed": 136,
+  "sources_succeeded": 162,
+  "sources_failed": 139,
   "new_candidates": 0,
-  "recovered_records": 392,
+  "recovered_records": 401,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 91, ConnectionError: 28, HTTPError: 24, SSLError: 22, ReadTimeout: 1",
+  "failure_types": "ConnectTimeout: 90, ConnectionError: 29, HTTPError: 24, SSLError: 24, ReadTimeout: 2",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -58,7 +58,7 @@
     },
     {
       "source_id": "appsc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "apsc",
@@ -217,7 +217,15 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "ibps-careers",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "ibps-rrb",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-spl-xvi",
       "error_type": "SSLError"
     },
     {
@@ -259,6 +267,14 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "indiapost-gds",
+      "error_type": "ReadTimeout"
+    },
+    {
+      "source_id": "indiapost-recruitment",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -455,10 +471,6 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
