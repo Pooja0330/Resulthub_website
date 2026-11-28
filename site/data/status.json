@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-11-28T14:24:39.286896+00:00",
-  "scan_started_at": "2026-11-28T14:15:51.948574+00:00",
+  "last_checked_at": "2026-11-28T14:33:03.456632+00:00",
+  "scan_started_at": "2026-11-28T14:25:34.732403+00:00",
   "sources_enabled": 301,
   "sources_succeeded": 167,
   "sources_failed": 134,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 28, HTTPError: 23, SSLError: 22, ReadTimeout: 2",
+  "failure_types": "ConnectTimeout: 89, ConnectionError: 29, HTTPError: 24, SSLError: 22, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -38,7 +38,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "andhra-university",
@@ -430,7 +430,7 @@
     },
     {
       "source_id": "pondicherry-university-old-results",
-      "error_type": "ReadTimeout"
+      "error_type": "HTTPError"
     },
     {
       "source_id": "punjab-psc",
@@ -450,7 +450,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "rajeduboard",
