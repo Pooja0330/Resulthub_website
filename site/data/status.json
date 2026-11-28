@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-28T15:25:18.287416+00:00",
-  "scan_started_at": "2026-11-28T15:19:19.770482+00:00",
+  "last_checked_at": "2026-11-28T15:35:15.866318+00:00",
+  "scan_started_at": "2026-11-28T15:26:16.221799+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 166,
-  "sources_failed": 135,
+  "sources_succeeded": 163,
+  "sources_failed": 138,
   "new_candidates": 0,
-  "recovered_records": 396,
+  "recovered_records": 392,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 31, HTTPError: 24, SSLError: 21, ValueError: 1",
+  "failure_types": "ConnectTimeout: 91, ConnectionError: 29, HTTPError: 24, SSLError: 24, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -38,7 +38,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -210,14 +210,22 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ibps-calendar",
       "error_type": "SSLError"
     },
     {
+      "source_id": "ibps-recent-updates",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "ibps-rrb",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "ibps-rrb-xv",
       "error_type": "SSLError"
     },
     {
@@ -426,6 +434,10 @@
     },
     {
       "source_id": "osmania-university",
+      "error_type": "SSLError"
+    },
+    {
+      "source_id": "osssc",
       "error_type": "SSLError"
     },
     {
