@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-28T16:37:12.121450+00:00",
-  "scan_started_at": "2026-11-28T16:30:37.578112+00:00",
+  "last_checked_at": "2026-11-28T16:45:24.610660+00:00",
+  "scan_started_at": "2026-11-28T16:38:12.628277+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 166,
-  "sources_failed": 135,
+  "sources_succeeded": 156,
+  "sources_failed": 145,
   "new_candidates": 0,
-  "recovered_records": 401,
+  "recovered_records": 385,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, ConnectionError: 29, HTTPError: 22, SSLError: 22, ReadTimeout: 2",
+  "failure_types": "ConnectTimeout: 99, ConnectionError: 30, HTTPError: 24, SSLError: 22, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -141,12 +141,24 @@
       "error_type": "HTTPError"
     },
     {
+      "source_id": "coal-india-careers",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "coast-guard-home",
       "error_type": "SSLError"
     },
     {
       "source_id": "coast-guard-recruitment",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "columbia-ciet-raipur",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "columbia-institute-pharmacy-raipur",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "drdo-careers",
@@ -206,14 +218,10 @@
     },
     {
       "source_id": "hpssc",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ibps-calendar",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-po-mt",
       "error_type": "SSLError"
     },
     {
@@ -263,6 +271,10 @@
     {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
+    },
+    {
+      "source_id": "jharkhand-psc",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "jkbose",
@@ -329,6 +341,14 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "mat-aima",
+      "error_type": "HTTPError"
+    },
+    {
+      "source_id": "meghalaya-board",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -350,6 +370,10 @@
     },
     {
       "source_id": "mppsc",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "mumbai-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -421,6 +445,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "osssc",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -443,10 +471,6 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
@@ -581,6 +605,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "sikkim-university",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "tamilnadu-board-official",
       "error_type": "SSLError"
     },
@@ -621,8 +649,12 @@
       "error_type": "ConnectionError"
     },
     {
+      "source_id": "upsc",
+      "error_type": "ConnectTimeout"
+    },
+    {
       "source_id": "upsc-active-examinations",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "upsc-active-exams",
@@ -634,11 +666,19 @@
     },
     {
       "source_id": "upsc-final-results",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "upsc-online-ora",
       "error_type": "ConnectionError"
     },
     {
       "source_id": "upsc-recruitment",
       "error_type": "HTTPError"
+    },
+    {
+      "source_id": "upsc-results",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "upsc-written-results-archive",
