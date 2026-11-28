@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-28T09:27:31.744775+00:00",
-  "scan_started_at": "2026-11-28T09:20:31.213505+00:00",
+  "last_checked_at": "2026-11-28T09:37:45.201487+00:00",
+  "scan_started_at": "2026-11-28T09:28:29.459734+00:00",
   "sources_enabled": 301,
   "sources_succeeded": 166,
   "sources_failed": 135,
   "new_candidates": 0,
-  "recovered_records": 384,
+  "recovered_records": 389,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 90, ConnectionError: 29, HTTPError: 23, SSLError: 23, ValueError: 1",
+  "failure_types": "ConnectTimeout: 90, ConnectionError: 28, HTTPError: 23, SSLError: 23, ReadTimeout: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -205,11 +205,11 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "ibps",
+      "source_id": "ibps-calendar",
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-calendar",
+      "source_id": "ibps-recent-updates",
       "error_type": "SSLError"
     },
     {
@@ -425,10 +425,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ossc",
-      "error_type": "ConnectionError"
-    },
-    {
       "source_id": "osssc",
       "error_type": "SSLError"
     },
@@ -603,6 +599,10 @@
     {
       "source_id": "tnmrbrecruit",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "tnpsc",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "tnresults",
