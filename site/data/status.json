@@ -1,12 +1,12 @@
 {
-  "last_checked_at": "2026-11-28T05:47:53.084160+00:00",
-  "scan_started_at": "2026-11-28T05:41:19.282795+00:00",
+  "last_checked_at": "2026-11-28T05:58:59.773311+00:00",
+  "scan_started_at": "2026-11-28T05:48:55.526082+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 173,
-  "sources_failed": 128,
-  "new_candidates": 1,
-  "recovered_records": 421,
-  "telegram_posts_sent": 1,
+  "sources_succeeded": 167,
+  "sources_failed": 134,
+  "new_candidates": 0,
+  "recovered_records": 399,
+  "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
   "held_alert_reasons": {
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 87, ConnectionError: 27, SSLError: 22, HTTPError: 21, ReadTimeout: 1",
+  "failure_types": "ConnectTimeout: 88, ConnectionError: 28, HTTPError: 23, SSLError: 23, ReadTimeout: 2",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -141,6 +141,10 @@
       "error_type": "HTTPError"
     },
     {
+      "source_id": "coal-india-careers",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "coast-guard-home",
       "error_type": "SSLError"
     },
@@ -205,6 +209,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "ibps-careers",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "ibps-rrb",
       "error_type": "SSLError"
     },
@@ -247,6 +255,10 @@
     {
       "source_id": "indian-navy-jobs",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "indiapost-recruitment",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "jadavpur-university",
@@ -317,6 +329,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "mat-aima",
+      "error_type": "HTTPError"
+    },
+    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -341,12 +357,12 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "nabard",
+      "source_id": "mumbai-university",
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "nagaland-psc",
-      "error_type": "ReadTimeout"
+      "source_id": "nabard",
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "naval-coastguard-jobs",
@@ -553,6 +569,10 @@
       "error_type": "ConnectTimeout"
     },
     {
+      "source_id": "sebi-careers",
+      "error_type": "ConnectionError"
+    },
+    {
       "source_id": "secl-careers",
       "error_type": "HTTPError"
     },
@@ -575,6 +595,10 @@
     {
       "source_id": "telangana-results",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "tnpsc",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "tnresults",
