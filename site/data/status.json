@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-28T06:28:39.901044+00:00",
-  "scan_started_at": "2026-11-28T06:19:48.125825+00:00",
+  "last_checked_at": "2026-11-28T06:36:31.390934+00:00",
+  "scan_started_at": "2026-11-28T06:29:37.370427+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 163,
-  "sources_failed": 138,
+  "sources_succeeded": 169,
+  "sources_failed": 132,
   "new_candidates": 0,
-  "recovered_records": 376,
+  "recovered_records": 413,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 93, ConnectionError: 28, HTTPError: 23, SSLError: 22, ReadTimeout: 2",
+  "failure_types": "ConnectTimeout: 88, ConnectionError: 28, HTTPError: 23, SSLError: 23, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -153,14 +153,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "columbia-ciet-raipur",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "columbia-institute-pharmacy-raipur",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "drdo-careers",
       "error_type": "ConnectionError"
     },
@@ -217,6 +209,10 @@
       "error_type": "SSLError"
     },
     {
+      "source_id": "ibps-recruitment",
+      "error_type": "SSLError"
+    },
+    {
       "source_id": "ibps-rrb",
       "error_type": "SSLError"
     },
@@ -263,10 +259,6 @@
     {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "jharkhand-psc",
-      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "jkbose",
@@ -335,10 +327,6 @@
     {
       "source_id": "mat-aima",
       "error_type": "HTTPError"
-    },
-    {
-      "source_id": "meghalaya-board",
-      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "merchant-navy-imu",
@@ -459,10 +447,6 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
@@ -597,10 +581,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "sikkim-university",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "tamilnadu-board-official",
       "error_type": "SSLError"
     },
@@ -611,10 +591,6 @@
     {
       "source_id": "telangana-results",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "tnpsc",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "tnresults",
