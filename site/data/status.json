@@ -1,12 +1,12 @@
 {
-  "last_checked_at": "2026-11-28T11:13:38.331612+00:00",
-  "scan_started_at": "2026-11-28T11:04:34.395374+00:00",
+  "last_checked_at": "2026-11-28T11:22:07.022711+00:00",
+  "scan_started_at": "2026-11-28T11:14:34.541485+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 166,
-  "sources_failed": 135,
-  "new_candidates": 0,
-  "recovered_records": 400,
-  "telegram_posts_sent": 0,
+  "sources_succeeded": 168,
+  "sources_failed": 133,
+  "new_candidates": 5,
+  "recovered_records": 403,
+  "telegram_posts_sent": 5,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
   "held_alert_reasons": {
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 29, SSLError: 24, HTTPError: 23, ValueError: 1",
+  "failure_types": "ConnectTimeout: 89, ConnectionError: 29, HTTPError: 23, SSLError: 22, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -38,7 +38,7 @@
     },
     {
       "source_id": "andhra-board",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "andhra-university",
@@ -46,7 +46,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectTimeout"
+      "error_type": "ConnectionError"
     },
     {
       "source_id": "ap-psc",
@@ -205,15 +205,7 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "ibps",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "ibps-calendar",
-      "error_type": "SSLError"
-    },
-    {
-      "source_id": "ibps-recruitment",
       "error_type": "SSLError"
     },
     {
