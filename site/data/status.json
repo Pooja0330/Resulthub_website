@@ -1,12 +1,12 @@
 {
-  "last_checked_at": "2026-11-28T11:22:07.022711+00:00",
-  "scan_started_at": "2026-11-28T11:14:34.541485+00:00",
+  "last_checked_at": "2026-11-28T11:30:29.470152+00:00",
+  "scan_started_at": "2026-11-28T11:23:09.886676+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 168,
-  "sources_failed": 133,
-  "new_candidates": 5,
-  "recovered_records": 403,
-  "telegram_posts_sent": 5,
+  "sources_succeeded": 173,
+  "sources_failed": 128,
+  "new_candidates": 0,
+  "recovered_records": 427,
+  "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
   "held_alert_reasons": {
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 29, HTTPError: 23, SSLError: 22, ValueError: 1",
+  "failure_types": "ConnectTimeout: 88, ConnectionError: 27, HTTPError: 21, SSLError: 21, ReadTimeout: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -46,7 +46,7 @@
     },
     {
       "source_id": "ap-police",
-      "error_type": "ConnectionError"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "ap-psc",
@@ -138,10 +138,6 @@
     },
     {
       "source_id": "cisce-results",
-      "error_type": "HTTPError"
-    },
-    {
-      "source_id": "coal-india-careers",
       "error_type": "HTTPError"
     },
     {
@@ -321,10 +317,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "mat-aima",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "merchant-navy-imu",
       "error_type": "SSLError"
     },
@@ -346,10 +338,6 @@
     },
     {
       "source_id": "mppsc",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "mumbai-university",
       "error_type": "ConnectTimeout"
     },
     {
@@ -421,10 +409,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "osssc",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "patna-university",
       "error_type": "SSLError"
     },
@@ -446,7 +430,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ConnectTimeout"
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
@@ -563,10 +547,6 @@
     {
       "source_id": "rrcb-central",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "sebi-careers",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "secl-careers",
