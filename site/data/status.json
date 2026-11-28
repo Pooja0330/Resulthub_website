@@ -1,9 +1,9 @@
 {
-  "last_checked_at": "2026-11-28T07:15:01.568073+00:00",
-  "scan_started_at": "2026-11-28T07:07:22.031618+00:00",
+  "last_checked_at": "2026-11-28T07:25:47.724365+00:00",
+  "scan_started_at": "2026-11-28T07:16:07.968640+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 166,
-  "sources_failed": 135,
+  "sources_succeeded": 167,
+  "sources_failed": 134,
   "new_candidates": 0,
   "recovered_records": 404,
   "telegram_posts_sent": 0,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 28, HTTPError: 23, SSLError: 23, ReadTimeout: 2",
+  "failure_types": "ConnectTimeout: 90, ConnectionError: 28, HTTPError: 23, SSLError: 22, ReadTimeout: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -209,10 +209,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "ibps-careers",
-      "error_type": "SSLError"
-    },
-    {
       "source_id": "ibps-rrb",
       "error_type": "SSLError"
     },
@@ -257,7 +253,7 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "indiapost-gds",
+      "source_id": "indiapost-recruitment",
       "error_type": "ReadTimeout"
     },
     {
@@ -454,7 +450,7 @@
     },
     {
       "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
+      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "rajeduboard",
