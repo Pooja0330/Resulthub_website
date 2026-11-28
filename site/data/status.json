@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-28T02:33:13.655900+00:00",
-  "scan_started_at": "2026-11-28T02:24:18.479963+00:00",
+  "last_checked_at": "2026-11-28T02:41:53.551935+00:00",
+  "scan_started_at": "2026-11-28T02:34:20.903793+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 166,
-  "sources_failed": 135,
+  "sources_succeeded": 170,
+  "sources_failed": 131,
   "new_candidates": 0,
-  "recovered_records": 394,
+  "recovered_records": 412,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 89, ConnectionError: 29, HTTPError: 24, SSLError: 22, ReadTimeout: 1",
+  "failure_types": "ConnectTimeout: 88, ConnectionError: 28, HTTPError: 23, SSLError: 22, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -201,16 +201,8 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "hpbose-results",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "hpsc",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "hpssc",
-      "error_type": "ConnectionError"
     },
     {
       "source_id": "ibps-calendar",
@@ -437,10 +429,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "pondicherry-university-old-results",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "punjab-psc",
       "error_type": "ConnectTimeout"
     },
@@ -455,10 +443,6 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "rajasthan-university",
-      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
