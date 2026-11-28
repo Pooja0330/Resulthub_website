@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-28T15:43:14.882210+00:00",
-  "scan_started_at": "2026-11-28T15:36:28.612408+00:00",
+  "last_checked_at": "2026-11-28T15:50:44.377846+00:00",
+  "scan_started_at": "2026-11-28T15:44:14.905825+00:00",
   "sources_enabled": 301,
   "sources_succeeded": 165,
   "sources_failed": 136,
   "new_candidates": 0,
-  "recovered_records": 401,
+  "recovered_records": 392,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
@@ -261,10 +261,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "indiapost-gds",
-      "error_type": "ReadTimeout"
-    },
-    {
       "source_id": "jadavpur-university",
       "error_type": "SSLError"
     },
@@ -459,6 +455,10 @@
     {
       "source_id": "rajasthan-rssb",
       "error_type": "ConnectTimeout"
+    },
+    {
+      "source_id": "rajasthan-university",
+      "error_type": "ReadTimeout"
     },
     {
       "source_id": "rajeduboard",
