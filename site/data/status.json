@@ -1,11 +1,11 @@
 {
-  "last_checked_at": "2026-11-28T13:46:21.618124+00:00",
-  "scan_started_at": "2026-11-28T13:36:50.769835+00:00",
+  "last_checked_at": "2026-11-28T13:53:25.406704+00:00",
+  "scan_started_at": "2026-11-28T13:47:23.725247+00:00",
   "sources_enabled": 301,
-  "sources_succeeded": 163,
-  "sources_failed": 138,
+  "sources_succeeded": 170,
+  "sources_failed": 131,
   "new_candidates": 0,
-  "recovered_records": 396,
+  "recovered_records": 417,
   "telegram_posts_sent": 0,
   "alerts_pending": 0,
   "alerts_held_for_review": 558,
@@ -18,7 +18,7 @@
     "Explicitly dated notice is outside the live 90-day window.": 77
   },
   "status": "partial",
-  "failure_types": "ConnectTimeout: 94, ConnectionError: 28, HTTPError: 24, SSLError: 22, ValueError: 1",
+  "failure_types": "ConnectTimeout: 90, ConnectionError: 27, HTTPError: 22, SSLError: 22, ValueError: 1",
   "failed_source_samples": [
     {
       "source_id": "airforce-afcat",
@@ -141,24 +141,12 @@
       "error_type": "HTTPError"
     },
     {
-      "source_id": "coal-india-careers",
-      "error_type": "HTTPError"
-    },
-    {
       "source_id": "coast-guard-home",
       "error_type": "SSLError"
     },
     {
       "source_id": "coast-guard-recruitment",
       "error_type": "SSLError"
-    },
-    {
-      "source_id": "columbia-ciet-raipur",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "columbia-institute-pharmacy-raipur",
-      "error_type": "ConnectTimeout"
     },
     {
       "source_id": "drdo-careers",
@@ -265,10 +253,6 @@
       "error_type": "SSLError"
     },
     {
-      "source_id": "jharkhand-psc",
-      "error_type": "ConnectTimeout"
-    },
-    {
       "source_id": "jkbose",
       "error_type": "ConnectTimeout"
     },
@@ -330,14 +314,6 @@
     },
     {
       "source_id": "manipur-board",
-      "error_type": "ConnectTimeout"
-    },
-    {
-      "source_id": "mat-aima",
-      "error_type": "HTTPError"
-    },
-    {
-      "source_id": "meghalaya-board",
       "error_type": "ConnectTimeout"
     },
     {
@@ -581,10 +557,6 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "sebi-careers",
-      "error_type": "ConnectionError"
-    },
-    {
       "source_id": "secl-careers",
       "error_type": "HTTPError"
     },
@@ -597,7 +569,7 @@
       "error_type": "ConnectTimeout"
     },
     {
-      "source_id": "sikkim-university",
+      "source_id": "ssc-northern-region-whats-new",
       "error_type": "ConnectTimeout"
     },
     {
